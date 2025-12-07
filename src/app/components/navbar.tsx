@@ -48,7 +48,7 @@ const loginOptions = [
 
 // 2. MENU ITEMS
 const topMenuItems = [
-    { label: 'Become a', href: '/sellerHomepage', content: 'Supplier', icon: UserCheck2Icon },
+    { label: 'New Factories', href: '/sellerHomepage', content: 'Supplier', icon: UserCheck2Icon },
     { label: 'Request for', href: '#', content: 'Quotations', icon: BookAIcon },
     { label: 'Welcome', href: '#', content: 'Sign In/Register', icon: User, isLogin: true }
 ];
@@ -104,6 +104,7 @@ const Navbar = () => {
                                     {/* Logo 2: Fabricator */}
                                     <Image src={'/logo fabricator.jpeg'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                     {/* Logo 3: Forge */}
+                                    <Image src={'/logo fabricator.jpeg'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                     <Image src={'/logo forge.jpeg'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
                                     {/* Logo 4: Canada */}
                                     <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
@@ -207,7 +208,7 @@ const Navbar = () => {
 
                             </div>
 
-                            <div className="h-12 w-[1px] bg-gray-200"></div>
+                            <div className="h-12 w-px bg-gray-200"></div>
 
                             {/* Right Logos Group */}
                             <div className="hidden lg:flex items-center gap-4">

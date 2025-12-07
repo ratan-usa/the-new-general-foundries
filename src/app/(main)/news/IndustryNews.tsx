@@ -8,7 +8,7 @@ import { newsArticles } from '@/lib/newsData'; // <--- IMPORT HERE
 export default function IndustryNews() {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-10  mx-auto">
           
         <h2 className="text-2xl font-bold text-gray-900 mb-8 border-l-4 border-[#cc2221] pl-4">
           Industry News

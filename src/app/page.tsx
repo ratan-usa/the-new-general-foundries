@@ -15,7 +15,7 @@ import { newInnovationData } from "@/lib/newsData";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       <div className="relative z-10 container mx-auto px-4 text-center">
         <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
           MEGA FOUNDRIES | the best industry services
@@ -23,7 +23,7 @@ export default function Home() {
         <div className="relative z-10 container mx-auto px-4 text-center">
 
           <h1 className="text-[30px] lg:text-[40px] font-bold leading-tight tracking-tight">
-            The World's Largest and Advanced <br />
+            The World's Largest and Advanced  
             Consortium of
             <span className="block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
               Foundries, Forge Shops & Fabricators

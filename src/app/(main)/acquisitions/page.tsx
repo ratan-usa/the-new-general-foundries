@@ -4,6 +4,9 @@ import { FeatureBlockItem } from "@/app/components/FeatureBlock";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Star, Users, Globe } from "lucide-react";
 import Image from "next/image";
+import PledgeAndOffer from "./PledgeAndOffer";
+import HotProductVideos from "../category/HotProductVideos";
+import { paving_riser } from "@/lib/newsData";
 const allFeatureBlocks = [
   liveChatData[0],
 ];
@@ -51,6 +54,11 @@ const AboutSection = () => {
           Streamline your entire material procurement process with intelligent AI automation
         </h3>
       </div>
+      <PledgeAndOffer />
+      <HotProductVideos
+        title={paving_riser.title}
+        videos={paving_riser.videos}
+      />
       <div className="relative z-10  mx-auto px-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {features.map((feature, index) => (

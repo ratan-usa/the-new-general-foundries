@@ -1,7 +1,6 @@
 'use client';
 
 import { HandFist, MapPinIcon, Radar, Target } from 'lucide-react';
-import React from 'react'
 interface ProductItemCardProps {
     count: string;
     label: string;
@@ -18,7 +17,7 @@ const MetricSection = () => {
         { icon: MapPinIcon, value: "4000", label: "countries and regions" },
     ];
     return (
-        <section className="  max-w-5xl mx-auto">
+        <section className="max-w-5xl mx-auto">
             <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
                 <h2 className="text-[30px] text-white font-extrabold text-center mb-16 max-w-3xl mx-auto">
                     Boundless patterns and innovations
@@ -49,7 +48,7 @@ const ProductItemCard = ({ count, label }: ProductItemCardProps) => (
     <div
         className={`
             shrink-0 border border-gray-200 rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-white
-            w-[220px] h-[100px] flex flex-col justify-center items-center shadow-sm  cursor-pointer
+            w-full h-[100px] flex flex-col justify-center items-center shadow-sm  cursor-pointer
         `}
     >
         <p className={`font-extrabold text-[#cc2221] text-xl mb-1`}>{count}</p>

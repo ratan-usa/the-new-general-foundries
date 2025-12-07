@@ -36,7 +36,7 @@ export default function HotProductVideos({ title, videos }: HotProductVideosProp
 
   return (
     <section className="py-12 bg-white border-t border-gray-100">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-10  mx-auto">
 
         <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-6">
           {title} Videos

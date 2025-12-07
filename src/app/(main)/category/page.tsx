@@ -16,7 +16,7 @@ export default function CategoryList() {
     return (
         <div className="min-h-screen bg-white py-8">
  
-            <div className="max-w-[1600px] mx-auto px-4 mb-6">
+            <div className="w-full px-4 sm:px-6 lg:px-10  mx-auto">
                 <p className="text-sm font-bold text-gray-700">
                     <Link href={'/'} className="hover:text-[#cc2221]">Home</Link>
                     <span className="mx-2">/</span>
@@ -24,7 +24,7 @@ export default function CategoryList() {
                 </p>
             </div>
 
-            <div className="max-w-[1600px] mx-auto px-4 space-y-12">
+            <div className="w-full px-4 sm:px-6 lg:px-10  mx-auto">
 
                 {categories.map((category) => (
                     <div key={category.id} className="bg-white rounded-3xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col lg:flex-row h-auto lg:h-[600px]">
