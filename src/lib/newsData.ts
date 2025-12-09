@@ -150,28 +150,47 @@ export const newInnovationData = {
 };
 
 
-export const piving_riser = {
-  title: "piving Riser",
+export const paving_riser = {
+  title: "paving Riser",
   videos: [
     {
       id: 1,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/piving_riser/9013 A Mega.467.mp4",
+      videoUrl: "/video/paving_riser/9013 A Mega.467.mp4",
     },
     {
       id: 2,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/piving_riser/FV0 Mega.469.mp4",
+      videoUrl: "/video/paving_riser/FV0 Mega.469.mp4",
     }
     ,
     {
       id: 3,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/piving_riser/piving riser 1.5216.mp4",
+      videoUrl: "/video/paving_riser/paving riser 1.5216.mp4",
     }, {
       id: 4,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/piving_riser/piving riser 1.5217.mp4",
+      videoUrl: "/video/paving_riser/paving riser 1.5217.mp4",
+    }, {
+      id: 5,
+      title: "Cross Sectional / CORE LV CABLES",
+      videoUrl: "/video/paving_riser/Fire Dumper Mega.470.mp4",
+    },
+    {
+      id: 6,
+      title: "AUXILIARY CABLES (CONTROL)",
+      videoUrl: "/video/paving_riser/MJ-MJ TEES.970.mp4",
+    }
+    ,
+    {
+      id: 7,
+      title: "AUXILIARY CABLES (CONTROL)",
+      videoUrl: "/video/paving_riser/paving riser 1.5223.mp4",
+    }, {
+      id: 8,
+      title: "Cross Sectional / CORE LV CABLES",
+      videoUrl: "/video/paving_riser/5073 Empire state.471.mp4",
     },
   ]
 };

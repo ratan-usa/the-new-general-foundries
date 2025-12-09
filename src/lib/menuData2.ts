@@ -952,6 +952,61 @@ export const menuData = {
     color: 'bg-[#cc2221] text-white',
     categories: []
   },
+  custom_offerings: {
+    id: 'custom_offerings',
+    label: 'CUSTOM OFFERINGS',
+    icon: Hammer, // or any lucide icon you prefer
+    bannerImage: '/assets/image10.jpeg',
+    color: 'bg-purple-100 text-purple-900',
+    categories: [
+      {
+        name: "Bespoke Casting Solutions",
+        slug: "bespoke-casting-solutions",
+        image: "/assets/image10.jpeg",
+        description:
+          "Tailor-made casting solutions designed to meet unique project requirements and industrial applications.",
+        items: [
+          "Custom geometry castings",
+          "Special grade alloy castings",
+          "Rapid prototype castings",
+          "Small-batch / trial cast production"
+        ]
+      },
+      {
+        name: "Precision Machining & Fabrication",
+        slug: "precision-machining-fabrication",
+        image: "/assets/image10.jpeg",
+        description:
+          "High-precision machining and fabrication services engineered for accuracy, strength, and long-term performance.",
+        items: []
+      },
+      {
+        name: "OEM / Private Label Manufacturing",
+        slug: "oem-private-label-manufacturing",
+        image: "/assets/image10.jpeg",
+        description:
+          "Custom OEM production services for companies seeking branding, packaging, and dedicated product development.",
+        items: []
+      },
+      {
+        name: "Reverse Engineering",
+        slug: "reverse-engineering",
+        image: "/assets/image10.jpeg",
+        description:
+          "Accurate reverse engineering for discontinued, legacy, and rare industrial components.",
+        items: []
+      },
+      {
+        name: "Project-Based Manufacturing",
+        slug: "project-based-manufacturing",
+        image: "/assets/image10.jpeg",
+        description:
+          "Turnkey project-based industrial manufacturing tailored to large-scale infrastructure and engineering needs.",
+        items: []
+      }
+    ]
+  }
+
 };
 // export const footerColumns = [
 //   {
