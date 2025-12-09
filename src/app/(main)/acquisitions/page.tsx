@@ -6,7 +6,7 @@ import { Star, Users, Globe } from "lucide-react";
 import Image from "next/image";
 import PledgeAndOffer from "./PledgeAndOffer";
 import HotProductVideos from "../category/HotProductVideos";
-import { paving_riser } from "@/lib/newsData";
+import { piving_riser } from "@/lib/newsData";
 const allFeatureBlocks = [
   liveChatData[0],
 ];
@@ -56,8 +56,8 @@ const AboutSection = () => {
       </div>
       <PledgeAndOffer />
       <HotProductVideos
-        title={paving_riser.title}
-        videos={paving_riser.videos}
+        title={piving_riser.title}
+        videos={piving_riser.videos}
       />
       <div className="relative z-10  mx-auto px-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">

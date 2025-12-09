@@ -382,7 +382,7 @@ export const menuData = {
                 image: "/assets/image1.jpeg",
                 description: "Aesthetic molds built for landscape projects and urban beautification with architectural precision.",
                 items: [
-                    "Paving block molds",
+                    "piving block molds",
                     "Planter molds",
                     "Tree guard molds",
                     "Decorative wall molds",

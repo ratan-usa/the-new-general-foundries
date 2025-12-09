@@ -64,7 +64,7 @@ export const allSeries = [
   {
     title: "9000 SERIES",
     items: [
-      "Paving risers", "Extension rings", "Bollards cast iron", "Cast iron dampers",
+      "piving risers", "Extension rings", "Bollards cast iron", "Cast iron dampers",
       "Adjustable extension rings", "Catch basin hoods", "Catch basin traps",
       "Trench grates", "Ash dumps"
     ]
@@ -79,7 +79,7 @@ export const allSeries = [
   {
     title: "11000 SERIES",
     items: [
-      "ALL TYPE OF TRENCH", 
+      "ALL TYPE OF TRENCH",
       "Precast trenches", "Cast iron trenches", "Steel trenches",
       "Polymer", "Fiber glass", "Aluminium", "Ductile iron", "Stainless steel"
     ]

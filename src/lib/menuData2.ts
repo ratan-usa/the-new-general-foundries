@@ -382,7 +382,7 @@ export const menuData = {
         image: "/assets/image1.jpeg",
         description: "Aesthetic molds built for landscape projects and urban beautification with architectural precision.",
         items: [
-          "Paving block molds",
+          "piving block molds",
           "Planter molds",
           "Tree guard molds",
           "Decorative wall molds",
@@ -743,6 +743,67 @@ export const menuData = {
       }
     ]
   },
+  piving_risers: {
+    id: 'piving_risers',
+    label: 'PIVING RISERS',
+    icon: Cog,
+    bannerImage: '/assets/piving-RISERS/piving riser 1.5200.png',
+    color: 'bg-[#cc2221] text-white',
+    categories: [
+      {
+        name: "ADJUSTABLE piving RISERS",
+        slug: "adjustable-piving-risers",
+        image: "/assets/piving-RISERS/piving riser 1.5201.png",
+        description: "Height-adjustable pedestal risers for outdoor piving applications, ensuring precise leveling and strong load-bearing support.",
+        items: [
+          "Standard adjustable risers",
+          "Heavy-duty pedestal risers",
+          "Self-levelling risers",
+          "Slope-compensation risers",
+          "Acoustic & shock absorber pads"
+        ]
+      },
+      {
+        name: "FIXED HEIGHT RISERS",
+        slug: "fixed-height-risers",
+        image: "/assets/piving-RISERS/piving riser 1.5203.png",
+        description: "Fixed-height pedestal systems suitable for balconies, terraces, swimming pool decks and light-weight flooring installations.",
+        items: [
+          "15 mm risers",
+          "25 mm risers",
+          "35 mm risers",
+          "50 mm risers",
+          "Load-bearing pads"
+        ]
+      },
+      {
+        name: "TILE & PAVER SUPPORT ACCESSORIES",
+        slug: "tile-and-paver-support-accessories",
+        image: "/assets/piving-RISERS/piving riser 1.5204.png",
+        description: "Accessories for installation accuracy, anti-slip finish and vibration control during piving projects.",
+        items: [
+          "Spacer tabs",
+          "Edge finish supports",
+          "Anti-slip rubber base pads",
+          "Height extension shims",
+          "Noise-reduction gaskets"
+        ]
+      },
+      {
+        name: "DECKING & OUTDOOR FLOORING SOLUTIONS",
+        slug: "decking-and-outdoor-flooring-solutions",
+        image: "/assets/piving-RISERS/piving riser 1.5205.png",
+        description: "Pedestal support systems compatible with composite decking, ceramic outdoor tiles, stone slabs and raised exterior flooring.",
+        items: [
+          "Composite deck pedestal systems",
+          "Porcelain & ceramic tile pedestal systems",
+          "Natural stone slab support systems",
+          "Raised garden walkway supports",
+          "Swimming pool platform supports"
+        ]
+      }
+    ]
+  },
   fabrication: {
     id: 'fabrication',
     label: 'FABRICATION',
@@ -751,6 +812,73 @@ export const menuData = {
     color: 'bg-[#cc2221] text-white',
     categories: []
   },
+  water_works: {
+    id: 'water_works',
+    label: 'WATER WORKS',
+    icon: Droplets, // use any lucide icon
+    bannerImage: '/assets/waterworks-banner.jpeg',
+    color: 'bg-blue-100 text-blue-900',
+    categories: [
+      {
+        name: "MECHANICAL JOINT FITTINGS",
+        slug: "mechanical-joint-fittings",
+        image: "/assets/mechanical-joint-fittings.jpeg",
+        description:
+          "Mechanical joint fittings designed for secure and leak-free underground and above-ground water distribution networks.",
+        items: [
+          "C153 MJ Fittings",
+          "C110 MJ Fittings",
+          "C110 Flange Fittings",
+          "C153 Push-On Fittings",
+          "C110 Push-On Fittings"
+        ]
+      },
+      {
+        name: "VALVE, CURB, METER BOXES & ACCESSORIES",
+        slug: "valve-curb-meter-boxes-accessories",
+        image: "/assets/valve-meter-boxes.jpeg",
+        description:
+          "High-performance valve and meter box assemblies engineered for efficient water control and distribution.",
+        items: []
+      },
+      {
+        name: "RESTRAINTS",
+        slug: "restraints",
+        image: "/assets/restraints.jpeg",
+        description:
+          "Safety-focused restraints for pipeline protection and axial movement control.",
+        items: [
+          "Pipe Restraints",
+          "Flange Restraints"
+        ]
+      },
+      {
+        name: "MECHANICAL JOINT ACCESSORIES",
+        slug: "mechanical-joint-accessories",
+        image: "/assets/mj-accessories.jpeg",
+        description:
+          "Supporting components to enhance durability and sealing of mechanical joint assemblies.",
+        items: []
+      },
+      {
+        name: "MECHANICAL JOINT CONNECTORS",
+        slug: "mechanical-joint-connectors",
+        image: "/assets/mj-connectors.jpeg",
+        description:
+          "Heavy-duty connectors designed to withstand high pressure in municipal water networks.",
+        items: []
+      },
+      {
+        name: "WATER WORKS TOOLS",
+        slug: "water-works-tools",
+        image: "/assets/water-works-tools.jpeg",
+        description:
+          "Trusted water-line tools for installation, repair and maintenance of water infrastructure.",
+        items: []
+      }
+    ]
+  }
+  ,
   foundry_equipments: {
     id: 'foundry_equipments',
     label: 'FOUNDRY EQUIPMENTS',
@@ -815,67 +943,7 @@ export const menuData = {
     color: 'bg-[#cc2221] text-white',
     categories: []
   },
-  paving_risers: {
-    id: 'paving_risers',
-    label: 'PAVING RISERS',
-    icon: Cog,
-    bannerImage: '/assets/PAVING-RISERS/paving riser 1.5200.png',
-    color: 'bg-[#cc2221] text-white',
-    categories: [
-      {
-        name: "ADJUSTABLE PAVING RISERS",
-        slug: "adjustable-paving-risers",
-        image: "/assets/PAVING-RISERS/paving riser 1.5201.png",
-        description: "Height-adjustable pedestal risers for outdoor paving applications, ensuring precise leveling and strong load-bearing support.",
-        items: [
-          "Standard adjustable risers",
-          "Heavy-duty pedestal risers",
-          "Self-levelling risers",
-          "Slope-compensation risers",
-          "Acoustic & shock absorber pads"
-        ]
-      },
-      {
-        name: "FIXED HEIGHT RISERS",
-        slug: "fixed-height-risers",
-        image: "/assets/PAVING-RISERS/paving riser 1.5203.png",
-        description: "Fixed-height pedestal systems suitable for balconies, terraces, swimming pool decks and light-weight flooring installations.",
-        items: [
-          "15 mm risers",
-          "25 mm risers",
-          "35 mm risers",
-          "50 mm risers",
-          "Load-bearing pads"
-        ]
-      },
-      {
-        name: "TILE & PAVER SUPPORT ACCESSORIES",
-        slug: "tile-and-paver-support-accessories",
-        image: "/assets/PAVING-RISERS/paving riser 1.5204.png",
-        description: "Accessories for installation accuracy, anti-slip finish and vibration control during paving projects.",
-        items: [
-          "Spacer tabs",
-          "Edge finish supports",
-          "Anti-slip rubber base pads",
-          "Height extension shims",
-          "Noise-reduction gaskets"
-        ]
-      },
-      {
-        name: "DECKING & OUTDOOR FLOORING SOLUTIONS",
-        slug: "decking-and-outdoor-flooring-solutions",
-        image: "/assets/PAVING-RISERS/paving riser 1.5205.png",
-        description: "Pedestal support systems compatible with composite decking, ceramic outdoor tiles, stone slabs and raised exterior flooring.",
-        items: [
-          "Composite deck pedestal systems",
-          "Porcelain & ceramic tile pedestal systems",
-          "Natural stone slab support systems",
-          "Raised garden walkway supports",
-          "Swimming pool platform supports"
-        ]
-      }
-    ]
-  },
+
   snow_plough: {
     id: 'snow_plough',
     label: 'SNOW PLOUGH',

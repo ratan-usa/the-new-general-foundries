@@ -150,28 +150,28 @@ export const newInnovationData = {
 };
 
 
-export const paving_riser = {
-  title: "Paving Riser",
+export const piving_riser = {
+  title: "piving Riser",
   videos: [
     {
       id: 1,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/paving_riser/9013 A Mega.467.mp4",
+      videoUrl: "/video/piving_riser/9013 A Mega.467.mp4",
     },
     {
       id: 2,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/paving_riser/FV0 Mega.469.mp4",
+      videoUrl: "/video/piving_riser/FV0 Mega.469.mp4",
     }
     ,
     {
       id: 3,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/paving_riser/paving riser 1.5216.mp4",
+      videoUrl: "/video/piving_riser/piving riser 1.5216.mp4",
     }, {
       id: 4,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/paving_riser/paving riser 1.5217.mp4",
+      videoUrl: "/video/piving_riser/piving riser 1.5217.mp4",
     },
   ]
 };

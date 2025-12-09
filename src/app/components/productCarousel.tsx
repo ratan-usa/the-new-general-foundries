@@ -48,7 +48,7 @@ const ProductItemCard = ({ count, label }: ProductItemCardProps) => (
     <div
         className={`
             shrink-0 border border-gray-200 rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-white
-            w-full h-[100px] flex flex-col justify-center items-center shadow-sm  cursor-pointer
+            w-[250px] h-[100px] flex flex-col justify-center items-center shadow-sm  cursor-pointer
         `}
     >
         <p className={`font-extrabold text-[#cc2221] text-xl mb-1`}>{count}</p>
@@ -93,7 +93,7 @@ const ProductCarousel = () => {
     return (
         <section className="py-10 bg-[#cc2221] ">
             <MetricSection />
-            <div className="space-y-4">
+            <div className="space-y-4 w-full">
                 <div
                     className="relative flex overflow-x-hidden"
                     style={{
