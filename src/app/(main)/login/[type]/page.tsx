@@ -1,194 +1,59 @@
-import React from 'react';
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import Image from 'next/image';
+'use client';
+
+import { useActionState, useEffect } from 'react';
+import { useRouter } from 'next/navigation'; 
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import {
-  Users,
-  Hammer,
-  Anvil,
-  Truck,
-  Factory,
-  HardHat,
-  Briefcase,
-  Store
-} from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import { loginUser } from '@/lib/api';
 
-const loginConfig: Record<string, any> = {
-  "team": {
-    title: "Team Mega Login",
-    description: "Internal portal for Mega Foundries employees and administrators.",
-    icon: Users,
-    roleId: "admin"
-  },
-  "engineer": {
-    title: "Engineer / Architect",
-    description: "Access technical blueprints, CAD revisions, and project specs.",
-    icon: HardHat,
-    roleId: "engineer"
-  },
-  "customer": {
-    title: "Customer Portal",
-    description: "Track your orders, view invoices, and manage RFQs.",
-    icon: Briefcase,
-    roleId: "customer"
-  },
-  "logistics": {
-    title: "Logistics Partner",
-    description: "Manage shipments, update tracking, and view delivery manifests.",
-    icon: Truck,
-    roleId: "logistics"
-  },
-  "foundry": {
-    title: "Foundry Partner",
-    description: "Manage casting orders, update capacity, and certifications.",
-    icon: Anvil,
-    roleId: "foundry"
-  },
-  "forge": {
-    title: "Forge Shop Portal",
-    description: "Portal for forging partners to manage heat codes and production.",
-    icon: Hammer,
-    roleId: "forge"
-  },
-  "fabricator": {
-    title: "Fabricator Login",
-    description: "Access fabrication drawings and assembly requirements.",
-    icon: Factory,
-    roleId: "fabricator"
-  },
-  "vendor": {
-    title: "Vendor / Supplier",
-    description: "General portal for raw material suppliers and tooling vendors.",
-    icon: Store,
-    roleId: "vendor"
-  }
-};
+export default function LoginPage({ params }: { params: { type: string } }) {
+  const { type } = params;
+  const router = useRouter();
+  const [state, formAction, isPending] = useActionState(loginUser, null);
 
-interface PageProps {
-  params: Promise<{ type: string }>; // Updated for Next.js 15
-}
-
-export default async function DynamicLoginPage({ params }: PageProps) {
-  // 1. Get the type from the URL (e.g., "foundry", "customer")
-  const resolvedParams = await params;
-  const type = resolvedParams.type;
-
-  // 2. Look up the configuration
-  const config = loginConfig[type];
-
-  if (!config) {
-    return notFound();
-  }
-
-  const Icon = config.icon;
+  // If login (step 1) is successful, redirect to OTP page
+  useEffect(() => {
+    if (state?.success) {
+      // Pass the tenant and maybe a temporary email/id via query params to the verify page
+      router.push(`/login/verify?tenant=${type}`); 
+    }
+  }, [state, router, type]);
 
   return (
-    <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
-
-      <div className="w-full max-w-md relative z-10">
-
-        {/* Logo Section */}
-        <div className="flex justify-center mb-8 gap-4">
-          <Link href="/">
-            <Image
-              src="/Mega-foundries-logo.PNG"
-              alt="Logo"
-              width={80}
-              height={80}
-              className="object-contain"
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="/Mega-foundries-logo.PNG"
-              alt="Logo"
-              width={80}
-              height={80}
-              className="object-contain"
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="/Mega-foundries-logo.PNG"
-              alt="Logo"
-              width={80}
-              height={80}
-              className="object-contain"
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="/Mega-foundries-logo.PNG"
-              alt="Logo"
-              width={80}
-              height={80}
-              className="object-contain"
-            />
-          </Link>
-        </div>
-
-        <Card className="shadow-xl border-slate-200">
-          <CardHeader className="space-y-1 text-center">
-            <div className="mx-auto bg-red-50 w-12 h-12 rounded-full flex items-center justify-center mb-2">
-              <Icon className="w-6 h-6 text-[#cc2221]" />
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
+      <Card className="max-w-md w-full shadow-xl">
+        <CardHeader>
+          <CardTitle className="text-center text-2xl">Login to {type.toUpperCase()}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <form action={formAction} className="space-y-4">
+            <input type="hidden" name="tenantCode" value={type} />
+            
+            <div className="space-y-2">
+              <Label>Email</Label>
+              <Input name="email" type="email" required />
             </div>
-            <CardTitle className="text-2xl font-bold text-slate-900">
-              {config.title}
-            </CardTitle>
-            <CardDescription className="text-slate-500">
-              {config.description}
-            </CardDescription>
-          </CardHeader>
-
-          <CardContent className="grid gap-4">
-
-            {/* --- THE LOGIN FORM --- */}
-            <form>
-              {/* Hidden field to tell backend which role is logging in */}
-              <input type="hidden" name="role" value={config.roleId} />
-
-              <div className="grid gap-2 mb-4">
-                <Label htmlFor="email">Email or User ID</Label>
-                <Input id="email" type="email" placeholder="name@company.com" required />
-              </div>
-
-              <div className="grid gap-2 mb-6">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="password">Password</Label>
-                  <Link href="/login/reset" className="text-xs text-[#cc2221] hover:underline">
-                    Forgot password?
-                  </Link>
-                </div>
-                <Input id="password" type="password" required />
-              </div>
-
-              <Button type="submit" className="w-full bg-[#cc2221] hover:bg-red-700 text-white font-bold py-5">
-                Sign In to {config.title}
-              </Button>
-            </form>
-
-          </CardContent>
-          <CardFooter className="flex flex-col gap-2">
-            <div className="text-center text-sm text-slate-500">
-              Not a registered partner yet?
+            
+            <div className="space-y-2">
+              <Label>Password</Label>
+              <Input name="password" type="password" required />
             </div>
-            <Link href="/partner" className="w-full">
-              <Button variant="outline" className="w-full border-slate-300">
-                Apply for Partnership
-              </Button>
-            </Link>
-          </CardFooter>
-        </Card>
 
-        <p className="text-center text-xs text-slate-400 mt-6">
-          Protected by Mega Foundries Security Systems. <br />
-          <Link href="/" className="hover:text-slate-600">Back to Home</Link>
-        </p>
-      </div>
+            {state?.success === false && (
+              <p className="text-red-500 text-sm">{state.message}</p>
+            )}
+
+            <Button className="w-full bg-[#cc2221] hover:bg-red-700" disabled={isPending}>
+              {isPending ? "Verifying..." : "Login"}
+            </Button>
+          </form>
+        </CardContent>
+        <CardFooter className="justify-center">
+            <a href={`/signup/${type}`} className="text-sm text-slate-500 hover:text-red-600">Need an account?</a>
+        </CardFooter>
+      </Card>
     </div>
   );
 }

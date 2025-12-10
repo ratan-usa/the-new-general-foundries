@@ -12,6 +12,7 @@ import EngagementAnalytics from "./components/EngagementAnalytics";
 import IndustryNews from "./(main)/news/IndustryNews";
 import HotProductVideos from "./(main)/category/HotProductVideos";
 import { newInnovationData } from "@/lib/newsData";
+import MarketplacePage from "./(main)/productCat/page";
 
 export default function Home() {
   return (
@@ -58,6 +59,7 @@ export default function Home() {
       <SourcingRequest />
       <EngagementAnalytics />
       <IndustryNews />
+      {/* <MarketplacePage/> */}
       <FloatingQuoteBtn />
       <HotProductVideos
         title={newInnovationData.title}
