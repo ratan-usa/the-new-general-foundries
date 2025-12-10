@@ -1,23 +1,22 @@
 'use client';
 
-import { useActionState, useEffect } from 'react';
-import { useRouter } from 'next/navigation'; 
+import { useActionState, useEffect, use } from 'react';
+import { useRouter } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { loginUser } from '@/lib/api';
 
-export default function LoginPage({ params }: { params: { type: string } }) {
-  const { type } = params;
+export default function LoginPage({ params }: { params: Promise<{ type: string }> }) {
+  const { type } = use(params);
   const router = useRouter();
   const [state, formAction, isPending] = useActionState(loginUser, null);
 
-  // If login (step 1) is successful, redirect to OTP page
   useEffect(() => {
     if (state?.success) {
-      // Pass the tenant and maybe a temporary email/id via query params to the verify page
-      router.push(`/login/verify?tenant=${type}`); 
+      // Redirect to OTP page with the tenant code
+      router.push(`/login/verify?tenant=${type}`);
     }
   }, [state, router, type]);
 
@@ -30,28 +29,26 @@ export default function LoginPage({ params }: { params: { type: string } }) {
         <CardContent>
           <form action={formAction} className="space-y-4">
             <input type="hidden" name="tenantCode" value={type} />
-            
             <div className="space-y-2">
               <Label>Email</Label>
               <Input name="email" type="email" required />
             </div>
-            
             <div className="space-y-2">
               <Label>Password</Label>
               <Input name="password" type="password" required />
             </div>
-
             {state?.success === false && (
-              <p className="text-red-500 text-sm">{state.message}</p>
+              <p className="text-red-500 text-sm font-medium">{state.message}</p>
             )}
-
             <Button className="w-full bg-[#cc2221] hover:bg-red-700" disabled={isPending}>
               {isPending ? "Verifying..." : "Login"}
             </Button>
           </form>
         </CardContent>
-        <CardFooter className="justify-center">
-            <a href={`/signup/${type}`} className="text-sm text-slate-500 hover:text-red-600">Need an account?</a>
+        <CardFooter className="justify-center border-t pt-4">
+          <a href={`/signup/${type}`} className="text-sm text-slate-500 hover:text-[#cc2221]">
+            Need an account? Sign up
+          </a>
         </CardFooter>
       </Card>
     </div>

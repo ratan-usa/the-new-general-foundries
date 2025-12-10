@@ -1,71 +1,77 @@
 'use client';
 
 import { HandFist, MapPinIcon, Radar, Target } from 'lucide-react';
-
 interface ProductItemCardProps {
-    id: number;
     count: string;
     label: string;
-    index: number; // Added index to determine color
 }
-
 interface ScrollRowProps {
-    data: Omit<ProductItemCardProps, 'index'>[]; // Data doesn't have index yet
+    data: ProductItemCardProps[];
     duration: number;
 }
-
 const MetricSection = () => {
-    // ... (MetricSection code remains unchanged)
+    const metrics = [
+        { icon: Target, value: "2000", label: "Products" },
+        { icon: HandFist, value: "1000", label: "Suppliers" },
+        { icon: Radar, value: "12000", label: "Product Categories" },
+        { icon: MapPinIcon, value: "4000", label: "countries and regions" },
+    ];
     return (
         <section className="max-w-5xl mx-auto">
             <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
                 <h2 className="text-[30px] text-white font-extrabold text-center mb-16 max-w-3xl mx-auto">
                     Boundless patterns and innovations
                 </h2>
+
+                {/* Metrics Grid */}
+                {/* <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-4 py-8">
+                    {metrics.map((metric, index) => (
+                        <div key={index} className="flex flex-col items-center p-4">
+                            <div className="relative p-3 rounded-full bg-neutral-100/50 mb-3">
+                                 <metric.icon className="w-6 h-6 text-neutral-800" />
+                                 <div className="absolute inset-0 border border-neutral-300 rounded-full"></div>
+                            </div>
+
+                            <div className="text-[14px] font-extrabold text-[#cc2221] mb-1">{metric.value}</div>
+                            <p className="text-[10px] text-neutral-600 text-center">{metric.label}</p>
+                        </div>
+                    ))}
+                </div> */}
             </div>
         </section>
     );
 };
 
-// --- PRODUCT CAROUSEL COMPONENTS ---
+// --- PRODUCT CAROUSEL COMPONENTS (Updated for Auto-Scrolling and Mask) ---
 
-const ProductItemCard = ({ count, label, index }: ProductItemCardProps) => {
-    // Logic: Even index = Red, Odd index = Dark/Black
-    // We use neutral-900 instead of pure black so it stands out from the section bg
-    const isRed = index % 2 === 0;
-
-    return (
-        <div
-            className={`
-            shrink-0 rounded-xl p-4 transition-transform duration-300 hover:scale-105
-            w-[250px] h-[100px] flex flex-col justify-center items-center shadow-sm cursor-pointer border border-white/10
-            ${isRed ? 'bg-[#cc2221]' : 'bg-neutral-900'} 
+const ProductItemCard = ({ count, label }: ProductItemCardProps) => (
+    <div
+        className={`
+            shrink-0   rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-[#cc2221]
+            w-[250px] h-[100px] flex flex-col justify-center items-center shadow-sm  cursor-pointer
         `}
-        >
-            <p className="font-extrabold text-white text-xl mb-1">{count}</p>
-            <p className="text-center text-white text-[13px] leading-tight opacity-90">{label}</p>
-        </div>
-    );
-};
+    >
+        <p className={`font-extrabold text-white text-xl mb-1`}>{count}</p>
+        <p className={`text-center text-white text-[13px] leading-tight`}>{label}</p>
+    </div>
+);
 
 const ProductCarousel = () => {
     const productData = [
-        { id: 1, count: "1200+", label: "Manholes Patterns" },
-        { id: 2, count: "4000+", label: "Curb Inlet Patterns" }, // Fixed typo "Intet" -> "Inlet"
-        { id: 3, count: "3000+", label: "Catch Basin Patterns" },
-        { id: 4, count: "1500+", label: "Water Works Patterns" },
-        { id: 5, count: "200+", label: "Cleanout Patterns" },
-        { id: 6, count: "5000+", label: "Trench Patterns" },
+        { count: "1200+", label: "Manholes Patterns" },
+        { count: "4000+", label: "Curb Intet Patterns" },
+        { count: "3000+", label: "Catch Basin Patterns" },
+        { count: "1500+", label: "Water Works Patterns" },
+        { count: "200+", label: "Cleanout Patterns" },
+        { count: "5000+", label: "Trench Patterns" },
     ];
 
-    // Create an array that is duplicated so the scrolling is seamless
+    // Create an array that is duplicated so the scrolling is seamless (Infinite Marquee)
     const scrollingData = [...productData, ...productData];
 
-    const cardWidth = 236; 
+    const cardWidth = 236; // 220px card width + 16px margin (w-[220px] + space-x-4)
     const totalItems = productData.length;
-    // Note: scrollDistance needs to be calculated based on the FULL width of the unique set
-    // totalItems (6) * cardWidth.
-    const scrollDistance = totalItems * cardWidth; 
+    const scrollDistance = totalItems * cardWidth; // 12 * 236 = 2832px
 
     const ScrollRow = ({ data, duration }: ScrollRowProps) => (
         <div
@@ -77,69 +83,65 @@ const ProductCarousel = () => {
             {data.map((item, index) => (
                 <ProductItemCard
                     key={`${item.label}-${index}`}
-                    id={item.id}
                     count={item.count}
                     label={item.label}
-                    index={index} // Pass index here to control color
                 />
             ))}
         </div>
     );
 
     return (
-        <section className="py-10 bg-black">
+        <section className="py-10 bg-black/80 ">
             <MetricSection />
             <div className="space-y-4 w-full">
-                {/* Row 1 */}
                 <div
                     className="relative flex overflow-x-hidden"
                     style={{
-                        maskImage: `linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)`,
-                        WebkitMaskImage: `linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)`,
+                        maskImage: `linear-gradient(to right, 
+                            rgba(0,0,0,0) 20%, 
+                            rgba(0,0,0,1) 55%, 
+                            rgba(0,0,0,1) 95%, 
+                            rgba(0,0,0,0) 100%)`,
+                        WebkitMaskImage: `linear-gradient(to right, 
+                            rgba(0,0,0,0) 0%, 
+                            rgba(0,0,0,1) 5%, 
+                            rgba(0,0,0,1) 95%, 
+                            rgba(0,0,0,0) 100%)`,
                     }}
                 >
-                    <ScrollRow data={scrollingData} duration={30} />
+                    <ScrollRow data={scrollingData.slice(0, totalItems)} duration={60} />
+                    <ScrollRow data={scrollingData.slice(0, totalItems)} duration={60} />
                 </div>
 
-                {/* Row 2 (Optional: Reverse direction or just another row) */}
-                {/* To make this interesting, we can offset the index on the second row so the colors are swapped vertically */}
                 <div
                     className="relative flex overflow-x-hidden"
                     style={{
-                        maskImage: `linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)`,
-                        WebkitMaskImage: `linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)`,
+                        maskImage: `linear-gradient(to right, 
+                            rgba(0,0,0,0) 0%, 
+                            rgba(0,0,0,1) 5%, 
+                            rgba(0,0,0,1) 95%, 
+                            rgba(0,0,0,0) 100%)`,
+                        WebkitMaskImage: `linear-gradient(to right, 
+                            rgba(0,0,0,0) 0%, 
+                            rgba(0,0,0,1) 5%, 
+                            rgba(0,0,0,1) 95%, 
+                            rgba(0,0,0,0) 100%)`,
                     }}
                 >
-                     {/* We pass a modified data set or just rely on the same logic. 
-                         If you want the second row to start with Black instead of Red, 
-                         we can pass index + 1 logic inside, but simpler is just to render it. */}
-                    <div
-                        className="flex space-x-4 pb-4 px-1 whitespace-nowrap"
-                        style={{
-                            animation: `marquee ${35}s linear infinite reverse` // Added reverse for visual variety
-                        }}
-                    >
-                         {scrollingData.map((item, index) => (
-                            <ProductItemCard
-                                key={`${item.label}-${index}-row2`}
-                                id={item.id}
-                                count={item.count}
-                                label={item.label}
-                                index={index + 1} // Offset by 1 so the colors are opposite to the top row
-                            />
-                        ))}
-                    </div>
+                    {/* We can use the same data source but it runs in a separate row */}
+                    <ScrollRow data={scrollingData.slice(totalItems)} duration={60} />
+                    <ScrollRow data={scrollingData.slice(totalItems)} duration={60} />
                 </div>
             </div>
 
             <style jsx global>{`
+                /* Define the CSS keyframes for the continuous horizontal scroll */
                 @keyframes marquee {
                     0% { transform: translateX(0); }
-                    100% { transform: translateX(-${scrollDistance}px); }
+                    100% { transform: translateX(-${scrollDistance}px); } /* Translate by the full width of the original data set */
                 }
             `}</style>
         </section>
     );
 };
-
-export default ProductCarousel;
+export default ProductCarousel
