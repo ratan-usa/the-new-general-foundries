@@ -91,7 +91,7 @@ const ProductCarousel = () => {
     );
 
     return (
-        <section className="py-10 bg-black/80 ">
+        <section className="py-10 bg-black ">
             <MetricSection />
             <div className="space-y-4 w-full">
                 <div
