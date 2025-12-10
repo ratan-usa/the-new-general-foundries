@@ -1,178 +1,153 @@
 'use client';
 
-import { useState, use } from 'react';
-import { useRouter } from 'next/navigation';
+import React, { useState, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
  import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
-import { Loader2, LogIn, LockKeyhole, ArrowLeft } from 'lucide-react';
-import { loginUser, verifyTwoFactor } from '@/lib/api';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { Loader2, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { completeRegistration } from '@/lib/api';
 
-export default function LoginPage({ params }: { params: Promise<{ type: string }> }) {
-  // 1. Unwrap params safely
-  const unwrappedParams = use(params);
-  const type = unwrappedParams?.type || 'portal'; // Fallback to prevent crash
-
+function RegisterForm() {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  
+  // 1. Get params from URL
+  const clientId = searchParams.get('clientId');
+  const emailParam = searchParams.get('email') || '';
+  const tenantSlug = searchParams.get('tenant') || 'foundry'; 
 
-  const [step, setStep] = useState<'credentials' | 'otp'>('credentials');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  
-  const [formData, setFormData] = useState({ email: '', password: '' });
-  const [otp, setOtp] = useState('');
+  const [success, setSuccess] = useState(false);
 
-  const handleLogin = async (e: React.FormEvent) => {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
     setError('');
 
-    // Pass the safe 'type' variable
-    const res = await loginUser(formData.email, formData.password, type);
-
-    if (res.success) {
-      setStep('otp');
+    if (!clientId) {
+      setError("Invalid Registration Link (Missing Client ID)");
       setLoading(false);
-    } else {
-      setError(res.message || "Invalid email or password.");
-      setLoading(false);
-    }
-  };
-
-  const handleVerify = async () => {
-    if (otp.length < 6) {
-      setError("Please enter the full 6-digit code.");
       return;
     }
-    setLoading(true);
-    setError('');
 
-    const res = await verifyTwoFactor(formData.email, formData.password, otp, type);
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    if (data.password !== data.retype) {
+      setError("Passwords do not match.");
+      setLoading(false);
+      return;
+    }
+
+    if ((data.password as string).length < 6) {
+      setError("Password must be at least 6 characters.");
+      setLoading(false);
+      return;
+    }
+
+    // ✅ FIX: Include 'email' in the payload
+    const res = await completeRegistration(clientId, tenantSlug, {
+      fullName: data.fullname,
+      username: emailParam, // Using Email as Username
+      email: emailParam,    // <--- THIS WAS MISSING
+      password: data.password
+    });
 
     if (res.success) {
-      router.push('/dashboard'); 
+      setSuccess(true);
+      setTimeout(() => {
+        router.push(`/login/${tenantSlug}`);
+      }, 2000);
     } else {
-      setError(res.message || "Verification failed. Please try again.");
+      setError(res.message || "Registration failed. Please try again.");
       setLoading(false);
     }
-  };
+  }
 
-  // Helper to safely uppercase the title
-  const displayTitle = type ? type.toUpperCase() : 'PORTAL';
+  if (success) {
+    return (
+      <div className="flex flex-col items-center justify-center p-8 text-center bg-green-50 border border-green-200 rounded-xl">
+        <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+          <CheckCircle2 className="w-8 h-8 text-green-600" />
+        </div>
+        <h2 className="text-xl font-bold text-green-800 mb-2">Registration Complete!</h2>
+        <p className="text-green-700">Redirecting you to login...</p>
+      </div>
+    );
+  }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
-      <Card className="max-w-md w-full shadow-xl border-t-4 border-t-[#cc2221]">
-        
-        <CardHeader className="text-center">
-          <div className="mx-auto bg-red-50 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-            {step === 'credentials' ? (
-               <LogIn className="w-6 h-6 text-[#cc2221]" />
-            ) : (
-               <LockKeyhole className="w-6 h-6 text-[#cc2221]" />
-            )}
+    <Card className="max-w-lg w-full shadow-xl border-t-4 border-t-[#cc2221]">
+      <CardHeader className="text-center pb-2">
+         <div className="mx-auto bg-red-50 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+           <ShieldCheck className="w-6 h-6 text-[#cc2221]" />
+         </div>
+        <CardTitle className="text-2xl">Complete Your Profile</CardTitle>
+        <CardDescription>
+          Finalizing account for <strong>{tenantSlug.toUpperCase()}</strong>
+        </CardDescription>
+      </CardHeader>
+      
+      <CardContent className="pt-6">
+        <form onSubmit={handleSubmit} className="space-y-4">
+          
+          <div className="space-y-2">
+            <Label htmlFor="email">Email Address</Label>
+            <Input 
+              id="email" 
+              name="email" 
+              value={emailParam} 
+              disabled 
+              className="bg-slate-100 text-slate-500 cursor-not-allowed"
+            />
           </div>
-          <CardTitle className="text-2xl font-bold">
-            {/* ✅ SAFE RENDERING HERE */}
-            {step === 'credentials' ? `Login to ${displayTitle}` : 'Two-Factor Auth'}
-          </CardTitle>
-          <CardDescription>
-            {step === 'credentials' 
-              ? "Enter your credentials to continue." 
-              : `Enter the code sent to ${formData.email}`
-            }
-          </CardDescription>
-        </CardHeader>
 
-        <CardContent>
-          {step === 'credentials' && (
-            <form onSubmit={handleLogin} className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  required 
-                  placeholder="name@company.com" 
-                  value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  disabled={loading}
-                />
-              </div>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="password">Password</Label>
-                  <a href="#" className="text-xs text-[#cc2221] hover:underline">Forgot password?</a>
-                </div>
-                <Input 
-                  id="password" 
-                  type="password" 
-                  required 
-                  value={formData.password}
-                  onChange={(e) => setFormData({...formData, password: e.target.value})}
-                  disabled={loading}
-                />
-              </div>
+          <div className="space-y-2">
+            <Label htmlFor="fullname">Full Name</Label>
+            <Input id="fullname" name="fullname" required placeholder="John Doe" disabled={loading} />
+          </div>
 
-              {error && (
-                <p className="text-red-500 text-sm font-medium bg-red-50 p-2 rounded text-center border border-red-100">
-                  {error}
-                </p>
-              )}
-
-              <Button className="w-full bg-[#cc2221] hover:bg-red-700 py-6 text-md font-bold" disabled={loading}>
-                {loading ? <Loader2 className="animate-spin mr-2" /> : "Sign In"}
-              </Button>
-            </form>
-          )}
-
-          {step === 'otp' && (
-            <div className="flex flex-col items-center gap-6">
-              <div className="flex justify-center">
-                <InputOTP maxLength={6} value={otp} onChange={(val) => setOtp(val)}>
-                  <InputOTPGroup>
-                    {[0, 1, 2, 3, 4, 5].map((idx) => (
-                      <InputOTPSlot key={idx} index={idx} className="w-10 h-10 sm:w-12 sm:h-12 text-lg border-slate-300" />
-                    ))}
-                  </InputOTPGroup>
-                </InputOTP>
-              </div>
-
-              {error && (
-                <p className="text-red-500 text-sm font-medium bg-red-50 px-4 py-2 rounded">
-                    {error}
-                </p>
-              )}
-
-              <Button 
-                onClick={handleVerify} 
-                className="w-full bg-[#cc2221] hover:bg-red-700 py-6 text-lg font-bold"
-                disabled={loading}
-              >
-                {loading ? <Loader2 className="animate-spin mr-2" /> : "Verify & Login"}
-              </Button>
-              
-              <button 
-                onClick={() => { setStep('credentials'); setError(''); }} 
-                className="flex items-center text-sm text-slate-500 hover:text-slate-800"
-              >
-                <ArrowLeft className="w-3 h-3 mr-1" /> Back to Login
-              </button>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-2">
+                <Label htmlFor="password">Password</Label>
+                <Input id="password" name="password" type="password" required disabled={loading} />
             </div>
-          )}
-        </CardContent>
+            <div className="space-y-2">
+                <Label htmlFor="retype">Confirm</Label>
+                <Input id="retype" name="retype" type="password" required disabled={loading} />
+            </div>
+          </div>
 
-        {step === 'credentials' && (
-           <CardFooter className="justify-center border-t pt-4">
-              <p className="text-sm text-slate-500">
-                  {/* ✅ Safe URL generation */}
-                  Don't have an account? <a href={`/signup/${type || 'customer'}`} className="text-[#cc2221] font-semibold hover:underline">Sign up</a>
-              </p>
-          </CardFooter>
-        )}
-      </Card>
+          {error && (
+            <p className="text-red-600 text-sm font-medium bg-red-50 p-2 rounded border border-red-100 text-center">
+              {error}
+            </p>
+          )}
+
+          <Button className="w-full bg-[#cc2221] hover:bg-red-700 py-6 text-md font-bold" disabled={loading}>
+            {loading ? (
+              <>
+                <Loader2 className="animate-spin mr-2 h-5 w-5" /> Creating Account...
+              </>
+            ) : (
+              "Create Account"
+            )}
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
+  );
+}
+
+export default function RegisterPage() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
+      <Suspense fallback={<div className="text-center">Loading registration form...</div>}>
+        <RegisterForm />
+      </Suspense>
     </div>
   );
 }
