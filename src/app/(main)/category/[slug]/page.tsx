@@ -3,11 +3,13 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
-import { menuData } from '@/lib/menuData2';
+import { menuData } from '@/lib/menuData2'; // Ensure this path is correct
 import CategoryProductLinks from '../CategoryProductLinks';
 import HotProductVideos from '../HotProductVideos';
 import IndustryNews from '../../news/IndustryNews';
 import { hotProductsData } from '@/lib/newsData';
+
+// --- HELPER FUNCTIONS ---
 
 function getMainCategory(slug: string) {
   return Object.values(menuData).find((cat) => cat.id === slug);
@@ -24,15 +26,15 @@ function getSubCategory(slug: string) {
         title: subCat.name,
         description: subCat.description,
         parent: mainCat.label,
-        parentId: mainCat.id,
+        parentId: mainCat.id, // We need this ID to find siblings
         items: subCat.items,
-        image: subCat.image
+        image: subCat.image,
+        videoUrl: subCat.videoUrl,
       };
     }
   }
   return null;
 }
-
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -42,12 +44,15 @@ export default async function CategoryDetailPage({ params }: PageProps) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
 
+  // 1. CHECK IF IT IS A MAIN CATEGORY PAGE
   const mainCategory = getMainCategory(slug);
 
   if (mainCategory) {
+    // 
+    // ... (Your Main Category Render Logic - kept same as before) ...
     return (
       <div className="min-h-screen bg-white w-full px-4 sm:px-6 lg:px-10 py-3">
-
+        {/* Banner Section */}
         <div className="relative h-[300px] w-full">
           <Image
             src={mainCategory.bannerImage}
@@ -68,19 +73,16 @@ export default async function CategoryDetailPage({ params }: PageProps) {
             </div>
           </div>
         </div>
+
         <div className='text-center pt-4'>
-          <h2 className='text-xl font-bold'>We are the nucleus of the metal world with the world of metals</h2>
-          <p className='text-sm pt-4 '>Elastic energy is a form of potential energy stored in an object when it is stretched, compressed, or deformed, and returns to its original shape when the force is removed. Common examples include a stretched rubber band, a compressed spring, or a bent diving board. The energy is stored due to the material's elasticity, and it is released when the object returns to its natural shape. Elastic energy plays an important role in various applications, from mechanical systems and toys to biological functions and sports equipment.</p>
+           <h2 className='text-xl font-bold'>We are the nucleus of the metal world...</h2>
+           <p className='text-sm pt-4 '>Elastic energy description...</p>
         </div>
+
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {mainCategory.categories.map((sub, index) => (
-              <Link
-                // Use the explicit slug from data
-                href={`/category/${sub.slug}`}
-                key={index}
-                className="group block h-full"
-              >
+              <Link href={`/category/${sub.slug}`} key={index} className="group block h-full">
                 <div className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
@@ -111,13 +113,31 @@ export default async function CategoryDetailPage({ params }: PageProps) {
     );
   }
 
+  // 2. CHECK IF IT IS A SUB-CATEGORY PAGE
   const subCategoryData = getSubCategory(slug);
 
   if (subCategoryData) {
+    // ✅ NEW LOGIC: Get ALL videos from the parent category
+    const parentCategory = Object.values(menuData).find(cat => cat.id === subCategoryData.parentId);
+    
+    // Create the list of ALL videos in this main category
+    const allRelatedVideos = parentCategory 
+      ? parentCategory.categories
+          .filter(cat => cat.videoUrl) // Only include items that have a video
+          .map((cat, index) => ({
+            id: index,
+            title: cat.name,
+            videoUrl: cat.videoUrl
+          }))
+      : []; 
+      // If parent not found (rare), fallback to just the current video
+      // : [{ id: 1, title: subCategoryData.title, videoUrl: subCategoryData.videoUrl }];
+
     return (
       <div className="min-h-screen bg-gray-50 py-12">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
 
+          {/* Back Button & Title */}
           <div className="mb-8">
             <Link href={`/category/${subCategoryData.parentId}`} className="inline-flex items-center text-sm text-gray-500 hover:text-[#cc2221] mb-4">
               <ArrowLeft className="w-4 h-4 mr-1" /> Back to {subCategoryData.parent}
@@ -128,6 +148,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
             <p className="text-gray-500 mt-2 max-w-3xl text-lg">{subCategoryData.description}</p>
           </div>
 
+          {/* Product Items Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {subCategoryData.items && subCategoryData.items.length > 0 ? (
               subCategoryData.items.map((item, index) => (
@@ -149,7 +170,6 @@ export default async function CategoryDetailPage({ params }: PageProps) {
                       src={subCategoryData.image}
                       alt={subCategoryData.title}
                       height={100} width={100}
-                      className=" "
                     />
                   </div>
                   <p className="text-sm text-gray-400 mt-4 flex items-center font-medium">
@@ -164,15 +184,20 @@ export default async function CategoryDetailPage({ params }: PageProps) {
               </div>
             )}
           </div>
+
           <CategoryProductLinks items={subCategoryData.items} />
+          
+          {/* ✅ VIDEO SECTION UPDATED: Passes ALL videos from the parent category */}
           <HotProductVideos
             title={hotProductsData.title}
-            videos={hotProductsData.videos}
+            videos={allRelatedVideos} 
           />
+          
           <IndustryNews />
         </div>
       </div>
     );
   }
+
   return notFound();
 }

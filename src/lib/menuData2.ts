@@ -1,4 +1,4 @@
-import { Zap, Factory, Settings, ShieldCheck, Leaf, Sun, Droplets, Gauge, Cog, Anvil, Hammer, Shield, Bolt, Building, Flame, Wrench, Cuboid } from 'lucide-react';
+import { Zap, Factory, Settings, ShieldCheck, Leaf, Sun, Droplets, Gauge, Cog, Anvil, Hammer, Shield, Bolt, Building, Flame, Wrench, Cuboid, Anchor } from 'lucide-react';
 export const menuData = {
   irrigation: {
     id: 'irrigation_products',
@@ -12,6 +12,7 @@ export const menuData = {
         slug: "water-control",
         image: "/assets/image1.jpeg",
         description: "Smart water flow management components designed for precise control, distribution and regulation of irrigation water.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Solenoid valves",
           "Gate & butterfly valves",
@@ -25,6 +26,7 @@ export const menuData = {
         slug: "agriculture-tools-and-accessories",
         image: "/assets/image1.jpeg",
         description: "Wide range of agricultural tools and accessories improving field productivity, water usage efficiency and system maintenance.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Drip punch tools",
           "Pipe cutters",
@@ -38,6 +40,7 @@ export const menuData = {
         slug: "pipes-and-fittings",
         image: "/assets/image1.jpeg",
         description: "High-performance irrigation pipes and fittings built for long-term durability and leak-proof water flow in agricultural and commercial farming applications.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "HDPE pipes",
           "PVC pipes",
@@ -51,6 +54,7 @@ export const menuData = {
         slug: "sprinkler-system",
         image: "/assets/image1.jpeg",
         description: "Efficient sprinkler irrigation systems designed to distribute precise water coverage across large farming and landscaping areas.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Impact sprinklers",
           "Rain-gun sprinklers",
@@ -65,6 +69,7 @@ export const menuData = {
         slug: "pumping-solution",
         image: "/assets/image1.jpeg",
         description: "Reliable pumping systems optimized for agricultural water lifting, high-pressure irrigation and industrial water circulation.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Centrifugal pumps",
           "Submersible pumps",
@@ -79,6 +84,7 @@ export const menuData = {
         slug: "landscape-and-garden",
         image: "/assets/image1.jpeg",
         description: "Irrigation solutions crafted for parks, home gardens, resorts, golf courses and urban landscaping projects.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Micro sprinkler systems",
           "Garden drip kits",
@@ -92,6 +98,7 @@ export const menuData = {
         slug: "industrial-and-large-scale",
         image: "/assets/image1.jpeg",
         description: "Heavy-duty irrigation solutions engineered for commercial farming, greenhouses, agro-industries and smart irrigation automation.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "High-pressure filtration systems",
           "Industrial irrigation controllers",
@@ -114,6 +121,7 @@ export const menuData = {
         slug: "bucket-teeth-and-adaptors",
         image: "/assets/image1.jpeg",
         description: "High-strength bucket teeth and adaptors engineered for superior digging performance and extended wear life.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Excavator bucket teeth",
           "Loader bucket teeth",
@@ -127,6 +135,7 @@ export const menuData = {
         slug: "cutting-edges-and-end-bits",
         image: "/assets/image1.jpeg",
         description: "Durable cutting edges and end bits for bulldozers, graders and loaders to deliver smooth and efficient earth cutting.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Bolt-on cutting edges",
           "Grader end bits",
@@ -140,6 +149,7 @@ export const menuData = {
         slug: "rollers-and-sprockets",
         image: "/assets/image1.jpeg",
         description: "High-precision rollers and sprockets built to withstand extreme working conditions and heavy operational loads.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Top carrier rollers",
           "Bottom track rollers",
@@ -153,6 +163,7 @@ export const menuData = {
         slug: "couplers-and-attachments",
         image: "/assets/image1.jpeg",
         description: "Heavy-duty couplers and attachments designed for fast tool change and increased job-site versatility.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Quick couplers",
           "Ripper attachments",
@@ -166,6 +177,7 @@ export const menuData = {
         slug: "hydraulic-cylinder-components",
         image: "/assets/image1.jpeg",
         description: "Precision-engineered hydraulic cylinder components delivering high power output and smooth motion control.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Cylinder tubes & rods",
           "Piston & gland assemblies",
@@ -179,6 +191,7 @@ export const menuData = {
         slug: "cab-and-body-parts",
         image: "/assets/image1.jpeg",
         description: "High-quality cabin and body components providing durability, operator comfort, and safety on heavy machines.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Operator cabins",
           "Seat assemblies",
@@ -192,6 +205,7 @@ export const menuData = {
         slug: "drive-train-components",
         image: "/assets/image1.jpeg",
         description: "Heavy-duty drive train components engineered for maximum power transmission and long service life in construction machinery.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Axles & shafts",
           "Transmission gear sets",
@@ -205,6 +219,7 @@ export const menuData = {
         slug: "undercarriage-components",
         image: "/assets/image1.jpeg",
         description: "Robust undercarriage components designed to withstand rocky, abrasive, and high-impact terrains.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Track chains",
           "Track shoes",
@@ -228,6 +243,7 @@ export const menuData = {
         slug: "zinc-aluminium-cast-anodes",
         image: "/assets/image1.jpeg",
         description: "High-purity zinc and aluminium cast anodes designed for long-term corrosion prevention in marine and industrial environments.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Zinc slab anodes",
           "Aluminium block anodes",
@@ -241,6 +257,7 @@ export const menuData = {
         slug: "coated-titanium-anodes",
         image: "/assets/image1.jpeg",
         description: "Mixed-metal oxide (MMO) coated titanium anodes built for high-performance cathodic protection with minimal maintenance.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "MMO rod anodes",
           "MMO mesh anodes",
@@ -254,6 +271,7 @@ export const menuData = {
         slug: "magnesium-anodes",
         image: "/assets/image1.jpeg",
         description: "Premium magnesium anodes designed for cathodic protection in underground and freshwater applications.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "High potential magnesium anodes",
           "AZ63 magnesium rods",
@@ -267,6 +285,7 @@ export const menuData = {
         slug: "transformers-rectifiers",
         image: "/assets/image1.jpeg",
         description: "Reliable transformers and rectifiers engineered to deliver controlled DC output for cathodic protection systems.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Transformer rectifier units (TRU)",
           "Digital automatic rectifiers",
@@ -280,6 +299,7 @@ export const menuData = {
         slug: "junction-boxes",
         image: "/assets/image1.jpeg",
         description: "Industrial-grade junction boxes designed for safe and secure connectivity in cathodic protection setups.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Test station junction boxes",
           "Current distribution boxes",
@@ -293,6 +313,7 @@ export const menuData = {
         slug: "monitoring-equipments",
         image: "/assets/image1.jpeg",
         description: "Advanced monitoring equipment for tracking, measuring and maintaining optimal cathodic protection levels.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Reference electrodes",
           "Remote monitoring units (RMU)",
@@ -306,6 +327,7 @@ export const menuData = {
         slug: "cales-and-wiring-systems",
         image: "/assets/image1.jpeg",
         description: "Durable cabling and wiring systems engineered for cathodic protection installations in challenging conditions.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Anode lead wires",
           "High molecular weight polyethylene cables",
@@ -329,6 +351,7 @@ export const menuData = {
         slug: "precast-concrete-molds",
         image: "/assets/image1.jpeg",
         description: "High-precision molds designed for producing durable and uniform concrete elements for large-scale infrastructure and commercial applications.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Slab molds",
           "Beam & column molds",
@@ -342,6 +365,7 @@ export const menuData = {
         slug: "precast-road-and-highway-molds",
         image: "/assets/image1.jpeg",
         description: "Specialized molds engineered for constructing safe and long-lasting roads, bridges, and traffic systems.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "New Jersey barrier molds",
           "Curbstone molds",
@@ -355,6 +379,7 @@ export const menuData = {
         slug: "precast-pipe-molds",
         image: "/assets/image1.jpeg",
         description: "High-strength molds for manufacturing RCC and concrete pipes with leak-proof joints and extreme load resistance.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "RCC hume pipe molds",
           "Box culvert pipe molds",
@@ -368,6 +393,7 @@ export const menuData = {
         slug: "precast-building-components",
         image: "/assets/image1.jpeg",
         description: "Molds for precast structures used in commercial, industrial and residential building applications.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Staircase molds",
           "Wall panel molds",
@@ -381,6 +407,7 @@ export const menuData = {
         slug: "landscape-and-urban-molds",
         image: "/assets/image1.jpeg",
         description: "Aesthetic molds built for landscape projects and urban beautification with architectural precision.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "piving block molds",
           "Planter molds",
@@ -394,6 +421,7 @@ export const menuData = {
         slug: "utility-and-municipal-precast-molds",
         image: "/assets/image1.jpeg",
         description: "Heavy-duty molds for public utility components used in municipal and smart-city infrastructure.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Manhole cover molds",
           "Drain channel molds",
@@ -407,6 +435,7 @@ export const menuData = {
         slug: "wall-and-boundary-molds",
         image: "/assets/image1.jpeg",
         description: "Molds engineered for manufacturing compound walls and boundary structures with maximum durability.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Precast wall panel molds",
           "Post & column molds",
@@ -420,6 +449,7 @@ export const menuData = {
         slug: "industrial-precast-molds",
         image: "/assets/image1.jpeg",
         description: "High-end molds designed for industrial precast products used in factories, warehouses and heavy plants.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Machine foundation molds",
           "Cable tray molds",
@@ -433,6 +463,7 @@ export const menuData = {
         slug: "agriculture-precast-molds",
         image: "/assets/image1.jpeg",
         description: "Reliable mold systems for agricultural infrastructure supporting farm automation and irrigation systems.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Cow shed molds",
           "Irrigation canal molds",
@@ -446,6 +477,7 @@ export const menuData = {
         slug: "modular-molds-systems",
         image: "/assets/image1.jpeg",
         description: "Easy-to-assemble modular mold systems that reduce production time and increase productivity for multiple precast applications.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Adjustable shuttering systems",
           "Steel modular mold panels",
@@ -459,6 +491,7 @@ export const menuData = {
         slug: "molds-accessories",
         image: "/assets/image1.jpeg",
         description: "A complete range of precision accessories that improve mold performance and lifespan during precast manufacturing.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Lifting anchors",
           "Vibration mechanisms",
@@ -482,6 +515,7 @@ export const menuData = {
         slug: "mining-products",
         image: "/assets/image1.jpeg",
         description: "A complete range of rugged mining components engineered for high wear resistance, longer service life and maximum productivity across quarrying and mineral processing operations.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Crusher Parts",
           "Screen Panels",
@@ -497,6 +531,7 @@ export const menuData = {
         slug: "crusher-parts",
         image: "/assets/image1.jpeg",
         description: "Heavy-duty crusher components designed for high-impact crushing environments to ensure uninterrupted production and reduced downtime.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Jaw plates",
           "Mantles & concaves",
@@ -510,6 +545,7 @@ export const menuData = {
         slug: "screen-panels",
         image: "/assets/image1.jpeg",
         description: "High-efficiency screen panels engineered for superior separation, reduced clogging and longer wear life in material screening applications.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Polyurethane screen panels",
           "Rubber screen panels",
@@ -523,6 +559,7 @@ export const menuData = {
         slug: "idlers-and-rollers",
         image: "/assets/image1.jpeg",
         description: "Reliable conveyor idlers and rollers built to withstand abrasive mining environments and ensure smooth bulk handling operations.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Carrying idlers",
           "Impact idlers",
@@ -536,6 +573,7 @@ export const menuData = {
         slug: "bits-and-drill-rods",
         image: "/assets/image1.jpeg",
         description: "Rock-drilling tools made for deep penetration, fast drilling rates and maximum wear resistance across surface and underground mining.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Tungsten carbide drill bits",
           "Button bits",
@@ -549,6 +587,7 @@ export const menuData = {
         slug: "blocks-and-wear-parts",
         image: "/assets/image1.jpeg",
         description: "Premium wear-resistant blocks and liners designed to protect mining machinery from extreme abrasion and impact environments.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Wear blocks",
           "Chocky bars",
@@ -562,6 +601,7 @@ export const menuData = {
         slug: "teeth-and-adaptors",
         image: "/assets/image1.jpeg",
         description: "High-strength bucket teeth and adaptors that ensure excellent digging performance, easy replacement and long operational life.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Excavator bucket teeth",
           "Loader bucket teeth",
@@ -575,6 +615,7 @@ export const menuData = {
         slug: "utility-components",
         image: "/assets/image1.jpeg",
         description: "Specialized mining utility components that enhance the efficiency, safety and durability of mining and bulk-handling systems.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Fasteners & locking systems",
           "Hydraulic wear components",
@@ -598,6 +639,7 @@ export const menuData = {
         slug: "metals-and-alloys",
         image: "/assets/image1.jpeg",
         description: "A broad portfolio of engineered metal and alloy products designed for industrial, mechanical and structural applications with superior performance and reliability.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Ductile iron castings",
           "High manganese steel parts",
@@ -616,6 +658,7 @@ export const menuData = {
         slug: "ductile-iron-castings",
         image: "/assets/image1.jpeg",
         description: "Precision ductile iron castings offering superior ductility, fatigue strength and impact resistance for heavy-duty applications.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Pump casings",
           "Gearbox housings",
@@ -629,6 +672,7 @@ export const menuData = {
         slug: "high-manganese-steel-parts",
         image: "/assets/image1.jpeg",
         description: "Extremely wear-resistant manganese steel components developed for high impact and abrasive industrial environments.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Crusher liners",
           "Hammers",
@@ -642,6 +686,7 @@ export const menuData = {
         slug: "stainless-steel-components",
         image: "/assets/image1.jpeg",
         description: "Corrosion-resistant stainless steel components designed for hygienic, high-pressure and industrial applications.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Food processing parts",
           "Pump impellers",
@@ -655,6 +700,7 @@ export const menuData = {
         slug: "alloy-steel-forged-parts",
         image: "/assets/image1.jpeg",
         description: "High-strength alloy steel forgings engineered to withstand heavy loads, extreme temperatures and repeated stress.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Gears & pinions",
           "Crankshafts",
@@ -668,6 +714,7 @@ export const menuData = {
         slug: "aluminium-and-brass-components",
         image: "/assets/image1.jpeg",
         description: "Lightweight aluminium and brass components widely used in automotive, electrical, construction and precision industries.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Automotive housings",
           "Electrical terminals",
@@ -681,6 +728,7 @@ export const menuData = {
         slug: "white-iron-castings",
         image: "/assets/image1.jpeg",
         description: "Ultra wear-resistant white iron castings engineered for abrasion-heavy industries demanding long service life.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Liners & lifter bars",
           "Pump sleeves",
@@ -694,6 +742,7 @@ export const menuData = {
         slug: "copper-and-bronze-precision-parts",
         image: "/assets/image1.jpeg",
         description: "Electrically conductive and corrosion-resistant copper and bronze components built for mechanical and electrical performance.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Bushings & bearings",
           "Worm gear wheels",
@@ -707,6 +756,7 @@ export const menuData = {
         slug: "electrical-component-alloys",
         image: "/assets/image1.jpeg",
         description: "Premium electrical-grade alloys for high-efficiency current conduction, heat resistance and long service life.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Busbar alloys",
           "Contact terminals",
@@ -720,6 +770,7 @@ export const menuData = {
         slug: "metal-fabricated-items",
         image: "/assets/image1.jpeg",
         description: "Custom fabricated metal components tailored to industrial projects requiring structural accuracy and durability.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Welded assemblies",
           "Structural brackets",
@@ -733,6 +784,7 @@ export const menuData = {
         slug: "pipes-tubes-and-fittings",
         image: "/assets/image1.jpeg",
         description: "Industrial-grade metal pipes, tubes and fittings designed for fluid handling, HVAC, chemical and mechanical applications.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Seamless steel pipes",
           "Stainless steel tubes",
@@ -755,6 +807,7 @@ export const menuData = {
         slug: "adjustable-piving-risers",
         image: "/assets/piving-RISERS/piving riser 1.5201.png",
         description: "Height-adjustable pedestal risers for outdoor piving applications, ensuring precise leveling and strong load-bearing support.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Standard adjustable risers",
           "Heavy-duty pedestal risers",
@@ -768,6 +821,7 @@ export const menuData = {
         slug: "fixed-height-risers",
         image: "/assets/piving-RISERS/piving riser 1.5203.png",
         description: "Fixed-height pedestal systems suitable for balconies, terraces, swimming pool decks and light-weight flooring installations.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "15 mm risers",
           "25 mm risers",
@@ -781,6 +835,7 @@ export const menuData = {
         slug: "tile-and-paver-support-accessories",
         image: "/assets/piving-RISERS/piving riser 1.5204.png",
         description: "Accessories for installation accuracy, anti-slip finish and vibration control during piving projects.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Spacer tabs",
           "Edge finish supports",
@@ -794,6 +849,7 @@ export const menuData = {
         slug: "decking-and-outdoor-flooring-solutions",
         image: "/assets/piving-RISERS/piving riser 1.5205.png",
         description: "Pedestal support systems compatible with composite decking, ceramic outdoor tiles, stone slabs and raised exterior flooring.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Composite deck pedestal systems",
           "Porcelain & ceramic tile pedestal systems",
@@ -825,6 +881,7 @@ export const menuData = {
         image: "/assets/mechanical-joint-fittings.jpeg",
         description:
           "Mechanical joint fittings designed for secure and leak-free underground and above-ground water distribution networks.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "C153 MJ Fittings",
           "C110 MJ Fittings",
@@ -839,6 +896,7 @@ export const menuData = {
         image: "/assets/valve-meter-boxes.jpeg",
         description:
           "High-performance valve and meter box assemblies engineered for efficient water control and distribution.",
+        videoUrl: "/video/video1.mp4",
         items: []
       },
       {
@@ -847,6 +905,7 @@ export const menuData = {
         image: "/assets/restraints.jpeg",
         description:
           "Safety-focused restraints for pipeline protection and axial movement control.",
+        videoUrl: "/video/video1.mp4",
         items: [
           "Pipe Restraints",
           "Flange Restraints"
@@ -858,6 +917,7 @@ export const menuData = {
         image: "/assets/mj-accessories.jpeg",
         description:
           "Supporting components to enhance durability and sealing of mechanical joint assemblies.",
+        videoUrl: "/video/video1.mp4",
         items: []
       },
       {
@@ -866,6 +926,7 @@ export const menuData = {
         image: "/assets/mj-connectors.jpeg",
         description:
           "Heavy-duty connectors designed to withstand high pressure in municipal water networks.",
+        videoUrl: "/video/video1.mp4",
         items: []
       },
       {
@@ -874,11 +935,11 @@ export const menuData = {
         image: "/assets/water-works-tools.jpeg",
         description:
           "Trusted water-line tools for installation, repair and maintenance of water infrastructure.",
+        videoUrl: "/video/video1.mp4",
         items: []
       }
     ]
-  }
-  ,
+  },
   foundry_equipments: {
     id: 'foundry_equipments',
     label: 'FOUNDRY EQUIPMENTS',
@@ -943,7 +1004,6 @@ export const menuData = {
     color: 'bg-[#cc2221] text-white',
     categories: []
   },
-
   snow_plough: {
     id: 'snow_plough',
     label: 'SNOW PLOUGH',
@@ -965,6 +1025,7 @@ export const menuData = {
         image: "/assets/image10.jpeg",
         description:
           "Tailor-made casting solutions designed to meet unique project requirements and industrial applications.",
+        videoUrl: "/video/custom solutions/5900-E CN tower Brick.478.mp4",
         items: [
           "Custom geometry castings",
           "Special grade alloy castings",
@@ -978,6 +1039,7 @@ export const menuData = {
         image: "/assets/image10.jpeg",
         description:
           "High-precision machining and fabrication services engineered for accuracy, strength, and long-term performance.",
+        videoUrl: "/video/custom solutions/5900-E CN tower Brick.478.mp4",
         items: []
       },
       {
@@ -986,6 +1048,7 @@ export const menuData = {
         image: "/assets/image10.jpeg",
         description:
           "Custom OEM production services for companies seeking branding, packaging, and dedicated product development.",
+        videoUrl: "/video/custom solutions/5900-E CN tower Brick.478.mp4",
         items: []
       },
       {
@@ -994,6 +1057,7 @@ export const menuData = {
         image: "/assets/image10.jpeg",
         description:
           "Accurate reverse engineering for discontinued, legacy, and rare industrial components.",
+        videoUrl: "/video/custom solutions/5900-E CN tower Brick.478.mp4",
         items: []
       },
       {
@@ -1002,164 +1066,98 @@ export const menuData = {
         image: "/assets/image10.jpeg",
         description:
           "Turnkey project-based industrial manufacturing tailored to large-scale infrastructure and engineering needs.",
+        videoUrl: "/video/custom solutions/5900-E CN tower Brick.478.mp4",
         items: []
       }
     ]
-  }
+  },
+  marine_castings: {
+    id: 'marine_castings',
+    label: 'MARINE CASTINGS',
+    icon: Anchor, // you can change icon if needed
+    bannerImage: '/assets/image18.jpeg',
+    color: 'bg-blue-100 text-blue-900',
+    categories: [
+      {
+        name: "Marine Propellers & Impellers",
+        slug: "marine-propellers-impellers",
+        image: "/assets/image18.jpeg",
+        description:
+          "High-precision bronze and stainless-steel propellers for marine vessels, ensuring superior thrust, durability, and hydrodynamic efficiency.",
+        videoUrl: "/video/marine_castings/marine_castings1.mp4",
+        items: [
+          "Fixed pitch propellers",
+          "Controllable pitch propellers",
+          "High-strength impellers",
+          "Custom-designed propeller blades",
+          "Propeller hubs & assemblies"
+        ]
+      },
+      {
+        name: "Marine Body & Hull Castings",
+        slug: "marine-body-hull-castings",
+        image: "/assets/image18.jpeg",
+        description:
+          "Durable corrosion-resistant cast components built for harsh marine environments, structural integrity, and long-term reliability.",
+        videoUrl: "/video/marine_castings/marine_castings1.mp4",
+        items: [
+          "Deck fittings",
+          "Anchor housings",
+          "Rudder components",
+          "Keel inserts",
+          "Hull reinforcement castings"
+        ]
+      },
+      {
+        name: "Corrosion-Resistant Marine Hardware",
+        slug: "corrosion-resistant-marine-hardware",
+        image: "/assets/image18.jpeg",
+        description:
+          "Cast components engineered using marine-grade alloys for exceptional resistance to corrosion, seawater, and environmental wear.",
+        videoUrl: "/video/marine_castings/marine_castings2.mp4",
+        items: [
+          "Marine hinges & brackets",
+          "Stainless steel cleats",
+          "Bow & stern hardware",
+          "Handrail fittings",
+          "Custom hardware components"
+        ]
+      },
+      {
+        name: "Marine Pump & Valve Castings",
+        slug: "marine-pump-valve-castings",
+        image: "/assets/image18.jpeg",
+        description:
+          "Precision cast pump and valve components widely used in marine cooling systems, bilge systems, and ballast operations.",
+        videoUrl: "/video/marine_castings/marine_castings1.mp4",
+        items: [
+          "Pump casings",
+          "Impeller housings",
+          "Valve bodies",
+          "Flanged pump fittings",
+          "Pressure-resistant cast assemblies"
+        ]
+      },
+      {
+        name: "Offshore & Underwater Equipment Castings",
+        slug: "offshore-underwater-equipment-castings",
+        image: "/assets/image18.jpeg",
+        description:
+          "Heavy-duty castings designed for offshore platforms, underwater operations, and deep-sea applications.",
+        videoUrl: "/video/marine_castings/marine_castings1.mp4",
+        items: [
+          "Underwater housing castings",
+          "Sonar equipment casings",
+          "Offshore platform fittings",
+          "Buoyancy equipment castings",
+          "Subsea structural components"
+        ]
+      }
+    ]
+  },
+
 
 };
-// export const footerColumns = [
-//   {
-//     "id": "corporate",
-//     "title": "Corporate",
-//     "links": [
-//       { "label": "Customer Services", "href": "/footerPages/customer-services" },
-//       { "label": "Accounts Dept.", "href": "/footerPages/accounts-dept" },
-//       { "label": "Awards & Achievements", "href": "/footerPages/awards-achievements" },
-//       { "label": "Leadership Team", "href": "/footerPages/leadership-team" },
-//       { "label": "Our Values", "href": "/footerPages/our-values" },
-//       { "label": "Current Events", "href": "/footerPages/current-events" },
-//       { "label": "Global Presence", "href": "/footerPages/global-presence" },
-//       { "label": "Executive Committee", "href": "/footerPages/executive-committee" },
-//       { "label": "Our Foundation", "href": "/footerPages/our-foundation" },
-//       { "label": "Human Resources", "href": "/footerPages/human-resources" },
-//       { "label": "Mission & Vision", "href": "/footerPages/mission-vision" },
-//       { "label": "Monthly Raffle", "href": "/footerPages/monthly-raffle" },
-//       { "label": "Organizational Structure", "href": "/footerPages/organizational-structure" },
-//       { "label": "Scholarships", "href": "/footerPages/scholarships" },
-//       { "label": "Testimonials", "href": "/footerPages/testimonials" },
-//       { "label": "Our Milestones", "href": "/footerPages/our-milestones" },
-//       { "label": "Industrial Articles", "href": "/footerPages/industrial-articles" },
-//       { "label": "Trade Shows", "href": "/footerPages/trade-shows" }
-//     ]
-//   },
-//   {
-//     "id": "resources",
-//     "title": "Resources",
-//     "links": [
-//       { "label": "Products Pricing", "href": "/footerPages/products-pricing" },
-//       { "label": "Exports/Imports", "href": "/footerPages/exports-imports" },
-//       { "label": "Media Managements", "href": "/footerPages/media-managements" },
-//       { "label": "Animations & Videos", "href": "/footerPages/animations-videos" },
-//       { "label": "Product Catalogs", "href": "/footerPages/product-catalogs" },
-//       { "label": "Installation Guide", "href": "/footerPages/installation-guide" },
-//       { "label": "Data Center", "href": "/footerPages/data-center" },
-//       { "label": "Sales Team", "href": "/footerPages/sales-team" },
-//       { "label": "Follow Your Order", "href": "/footerPages/follow-your-order" },
-//       { "label": "On Going Projects", "href": "/footerPages/on-going-projects" },
-//       { "label": "Request for Delivery", "href": "/footerPages/request-for-delivery" },
-//       { "label": "Request for Quote", "href": "/footerPages/request-for-quote" },
-//       { "label": "Logistics", "href": "/footerPages/logistics" },
-//       { "label": "Webinars", "href": "/footerPages/webinars" },
-//       { "label": "Certifications", "href": "/footerPages/certifications" },
-//       { "label": "Design Resources", "href": "/footerPages/design-resources" },
-//       { "label": "Compliances", "href": "/footerPages/compliances" },
-//       { "label": "FAQs", "href": "/footerPages/faqs" }
-//     ]
-//   },
-//   {
-//     "id": "engineering",
-//     "title": "Engineering",
-//     "links": [
-//       { "label": "Market Analysis", "href": "/footerPages/market-analysis" },
-//       { "label": "Case Studies", "href": "/footerPages/case-studies" },
-//       { "label": "Specifications", "href": "/footerPages/specifications" },
-//       { "label": "Standards", "href": "/footerPages/standards" },
-//       { "label": "Submittals", "href": "/footerPages/submittals" },
-//       { "label": "Shop Drawings", "href": "/footerPages/shop-drawings" },
-//       { "label": "Engineering Drawings", "href": "/footerPages/engineering-drawings" },
-//       { "label": "Data Sheets", "href": "/footerPages/data-sheets" },
-//       { "label": "Engineers & Architects", "href": "/footerPages/engineers-architects" },
-//       { "label": "IT Department", "href": "/footerPages/it-department" },
-//       { "label": "Innovations", "href": "/footerPages/innovations" },
-//       { "label": "Customizations", "href": "/footerPages/customizations" },
-//       { "label": "Quality Control", "href": "/footerPages/quality-control" },
-//       { "label": "CRM System", "href": "/footerPages/crm-system" },
-//       { "label": "Manufacturing", "href": "/footerPages/manufacturing" },
-//       { "label": "Approvals", "href": "/footerPages/approvals" },
-//       { "label": "Latest Technologies", "href": "/footerPages/latest-technologies" }
-//     ]
-//   },
-//   {
-//     "id": "product-categories",
-//     "title": "Product Categories",
-//     "links": [
-//       { "label": "Irrigation Products", "href": "/footerPages/irrigation-products" },
-//       { "label": "Earth Moving Equipments", "href": "/footerPages/earth-moving-equipments" },
-//       { "label": "Cathodic Protection", "href": "/footerPages/cathodic-protection" },
-//       { "label": "Precast & Molds", "href": "/footerPages/precast-molds" },
-//       { "label": "Mining Products", "href": "/footerPages/mining-products" },
-//       { "label": "Metals & Alloys", "href": "/footerPages/metals-alloys" },
-//       { "label": "Fabrication", "href": "/footerPages/fabrication" },
-//       { "label": "Foundry Equipments", "href": "/footerPages/foundry-equipments" },
-//       { "label": "Oil & Gas Industries Products", "href": "/footerPages/oil-gas-products" },
-//       { "label": "Construction & Infrastructure", "href": "/footerPages/construction-infrastructure" },
-//       { "label": "Utility & Power Energy", "href": "/footerPages/utility-power-energy" },
-//       { "label": "Defence & Aerospace", "href": "/footerPages/defence-aerospace" },
-//       { "label": "Custom Manufacturing", "href": "/footerPages/custom-manufacturing" },
-//       { "label": "Forge Shop Products", "href": "/footerPages/forge-shop-products" },
-//       { "label": "Industrial Machinery", "href": "/footerPages/industrial-machinery" },
-//       { "label": "Wind & Solar", "href": "/footerPages/wind-solar" }
-//     ]
-//   },
-//   {
-//     "id": "policies",
-//     "title": "Policies",
-//     "links": [
-//       { "label": "Government Policy", "href": "/footerPages/government-policy" },
-//       { "label": "Privacy Policy", "href": "/footerPages/privacy-policy" },
-//       { "label": "Terms & Conditions", "href": "/footerPages/terms-conditions" },
-//       { "label": "Security & Maintenance", "href": "/footerPages/security-maintenance" },
-//       { "label": "Credit Application", "href": "/footerPages/credit-application" },
-//       { "label": "Corporate Social Responsibility", "href": "/footerPages/corporate-social-responsibility" },
-//       { "label": "Non Disclosure Agreement", "href": "/footerPages/non-disclosure-agreement" },
-//       { "label": "Approvals", "href": "/footerPages/approvals" },
-//       { "label": "Return Policy", "href": "/footerPages/return-policy" },
-//       { "label": "Warranties", "href": "/footerPages/warranties" },
-//       { "label": "Product Liabilities", "href": "/footerPages/product-liabilities" },
-//       { "label": "Confidentiality", "href": "/footerPages/confidentiality" },
-//       { "label": "Sustainability", "href": "/footerPages/sustainability" },
-//       { "label": "Insurances", "href": "/footerPages/insurances" },
-//       { "label": "Complaints", "href": "/footerPages/complaints" },
-//       { "label": "Patents", "href": "/footerPages/patents" }
-//     ]
-//   },
-//   {
-//     "id": "support-quality",
-//     "title": "Support & Services & Quality & Compliances",
-//     "columns": [
-//       {
-//         "sectionTitle": "Support & Services",
-//         "links": [
-//           { "label": "Technical Support", "href": "/footerPages/technical-support" },
-//           { "label": "Customer Support", "href": "/footerPages/customer-support" },
-//           { "label": "Engineering Consultancy", "href": "/footerPages/engineering-consultancy" },
-//           { "label": "After Sales Services", "href": "/footerPages/after-sales-services" },
-//           { "label": "Installation Support", "href": "/footerPages/installation-support" },
-//           { "label": "Custom Support", "href": "/footerPages/custom-support" },
-//           { "label": "Live Solutions", "href": "/footerPages/live-solutions" }
-//         ]
-//       },
-//       {
-//         "sectionTitle": "Quality & Compliances",
-//         "links": [
-//           { "label": "Chemical Testing", "href": "/footerPages/chemical-testing" },
-//           { "label": "Physical Testing", "href": "/footerPages/physical-testing" },
-//           { "label": "Manual Testing", "href": "/footerPages/manual-testing" },
-//           { "label": "Testing & Inspection", "href": "/footerPages/testing-inspection" },
-//           { "label": "Material Analysis", "href": "/footerPages/material-analysis" },
-//           { "label": "Quality Control Process", "href": "/footerPages/quality-control-process" },
-//           { "label": "Approval & Certification", "href": "/footerPages/approval-certification" }
-//         ]
-//       }
-//     ]
-//     ,
-//   }
-
-
-// ]
-
-// 1. Define Types (If using TypeScript)
 export type FooterLink = { label: string; href: string };
 
 export type FooterSection = {
