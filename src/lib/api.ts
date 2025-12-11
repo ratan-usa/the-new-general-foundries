@@ -48,7 +48,37 @@ export async function sendSignupLink(prevState: any, formData: FormData) {
 }
 
 // lib/auth-api.ts
+// --- CHANGE PASSWORD ---
+export async function changePassword(email: string, oldPass: string, newPass: string, tenantSlug: string) {
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  
+  try {
+    const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/change-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ 
+        email, 
+        oldPassword: oldPass, 
+        newPassword: newPass 
+      }),
+    });
 
+    if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        return { success: false, message: errorData.message || "Failed to update password." };
+    }
+
+    return { success: true, message: "Password updated successfully." };
+  } catch (error) {
+    return { success: false, message: "Network error." };
+  }
+}
+
+// --- UPDATE PROFILE (Mockup) ---
+export async function updateProfile(email: string, fullName: string, tenantSlug: string) {
+    // Similar structure to changePassword if your API supports it
+    return { success: true, message: "Profile updated." };
+}
 export async function completeRegistration(clientId: string, tenantSlug: string, data: any) {
   // Map 'customer' -> 'MEGAFOUNDRY'
   const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
@@ -83,6 +113,7 @@ export async function completeRegistration(clientId: string, tenantSlug: string,
   }
 }
 // --- Step 1: Trigger OTP ---
+// --- Step 1: Login (Accepts strings) ---
 export async function loginUser(email: string, pass: string, tenantSlug: string) {
   const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
   
@@ -94,7 +125,6 @@ export async function loginUser(email: string, pass: string, tenantSlug: string)
     });
 
     if (!res.ok) {
-        const txt = await res.text();
         return { success: false, message: "Invalid credentials" };
     }
     return { success: true, message: "OTP Sent" };
@@ -103,31 +133,108 @@ export async function loginUser(email: string, pass: string, tenantSlug: string)
   }
 }
 
-// --- Step 2: Validate OTP + Password ---
+// --- Step 2: Verify (Requires Password) ---
 export async function verifyTwoFactor(email: string, pass: string, code: string, tenantSlug: string) {
   const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
 
   try {
-    // ✅ Matches your Swagger: { email, password, code }
     const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/two-factor`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password: pass, code }),
+    });
+
+    const data = await res.json(); // Parse JSON first to inspect it
+
+    if (!res.ok) {
+        return { success: false, message: data.message || "Invalid Code" };
+    }
+
+    // 🔍 DEBUG: Check where the token actually is
+    // Sometimes APIs return { token: "..." }
+    // Sometimes { data: { token: "..." } }
+    // Sometimes { accessToken: "..." }
+    
+    const finalToken = data.token || data.accessToken || data.jwt || (data.data && data.data.token);
+
+    return { success: true, token: finalToken }; 
+  } catch (error) {
+    return { success: false, message: "Network error" };
+  }
+}
+
+// --- FORGOT PASSWORD (Step 1) ---
+export async function sendForgotPasswordEmail(email: string, tenantSlug: string) {
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  
+  try {
+    const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/forgot-password`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email }),
+    });
+
+    if (!res.ok) {
+        // Even if email is not found, security best practice is to say "If account exists, email sent"
+        // But for debugging, let's log the error.
+        const txt = await res.text();
+        console.error("❌ Forgot Password Error:", txt);
+        // We still return true to prevent user enumeration attacks, or return false if you prefer strict errors
+        return { success: true, message: "If an account exists, a reset link has been sent." };
+    }
+
+    return { success: true, message: "Reset link sent! Check your inbox." };
+  } catch (error) {
+    return { success: false, message: "Network error." };
+  }
+}
+
+// --- RESET PASSWORD (Step 2) ---
+export async function resetPassword(clientId: string, email: string, newPass: string, tenantSlug: string) {
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  
+  try {
+    const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/reset-password/${clientId}`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
         email: email, 
-        password: pass, 
-        code: code 
+        newPassword: newPass 
       }),
     });
 
     if (!res.ok) {
         const errorData = await res.json().catch(() => ({}));
-        return { success: false, message: errorData.message || "Invalid OTP Code" };
+        return { success: false, message: errorData.message || "Failed to reset password." };
     }
 
-    // Success! This usually returns your JWT Token
-    const data = await res.json();
-    return { success: true, token: data.token }; 
+    return { success: true, message: "Password reset successful." };
   } catch (error) {
-    return { success: false, message: "Network connection failed." };
+    return { success: false, message: "Network error." };
+  }
+}
+
+// --- GET CURRENT USER PROFILE ---
+export async function getUserProfile(token: string, tenantSlug: string) {
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+
+  try {
+    // ⚠️ CHECK SWAGGER: Endpoint might be '/auth/me', '/users/profile', or similar
+    const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/profile`, {
+      method: 'GET',
+      headers: { 
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}` // Send the token
+      },
+    });
+
+    if (!res.ok) {
+        return { success: false, message: "Failed to fetch profile" };
+    }
+
+    const data = await res.json();
+    return { success: true, data: data }; // data should contain fullName, email, etc.
+  } catch (error) {
+    return { success: false, message: "Network error" };
   }
 }

@@ -1,19 +1,19 @@
-import HeroSection from "./components/hero";
-import BusinessSolutions from "./components/busineesSolution";
-import ProductCarousel from "./components/productCarousel";
-import ChatBlog from "./components/chatBlog";
-import CosmoBlog from "./components/cosmoBlog";
-import Taglines from "./components/tagline/page";
-import SourcingRequest from "./components/SourcingRequest";
-import FloatingQuoteBtn from "./components/FloatingQuoteBtn";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import EngagementAnalytics from "./components/EngagementAnalytics";
-import IndustryNews from "./(main)/news/IndustryNews";
-import HotProductVideos from "./(main)/category/HotProductVideos";
+import HeroSection from "../components/hero";
+import BusinessSolutions from "../components/busineesSolution";
+import CosmoBlog from "../components/cosmoBlog";
+import ChatBlog from "../components/chatBlog";
+import ProductCarousel from "../components/productCarousel";
+import Taglines from "../components/tagline/page";
+import SourcingRequest from "../components/SourcingRequest";
+import EngagementAnalytics from "./sellerHomepage/EngagementAnalytics";
+import IndustryNews from "./news/IndustryNews";
+import FloatingQuoteBtn from "../components/FloatingQuoteBtn";
+import HotProductVideos from "./category/HotProductVideos";
 import { newInnovationData } from "@/lib/newsData";
-import MarketplacePage from "./(main)/productCat/page";
 
+ 
 export default function Home() {
   return (
     <div className="">
