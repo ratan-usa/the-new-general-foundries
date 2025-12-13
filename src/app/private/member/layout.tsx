@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation'; // Added useRouter
+import { usePathname, useRouter } from 'next/navigation'; 
 import {
   LayoutDashboard,
   Package,
@@ -12,7 +12,8 @@ import {
   Menu,
   Users,
   Truck,
-  Factory
+  Factory,
+  Store
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -25,30 +26,14 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
+// ✅ Import the robust API helper we created
 import { getUserProfile } from '@/lib/api';
 
-// Import API function 
-
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
-
   const pathname = usePathname();
-  const router = useRouter(); // Initialize Router for logout redirect
-  useEffect(() => {
-    // 1. Check if we are in the browser
-    if (typeof window === 'undefined') return;
-
-    const token = localStorage.getItem('authToken');
-
-    if (!token) {
-      // Only redirect if there is DEFINITELY no token
-      console.log("⛔ No token found, redirecting to login...");
-      const tenant = localStorage.getItem('tenantSlug') || 'team';
-      router.push(`/login/${tenant}`);
-      return;
-    }
-
-    // ... rest of fetch profile code
-  }, [router]);
+  const router = useRouter(); 
+  
   // --- STATE FOR USER PROFILE ---
   const [user, setUser] = useState({
     name: "Loading...",
@@ -58,22 +43,29 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   // --- 1. FETCH PROFILE ON LOAD ---
   useEffect(() => {
-    async function fetchProfile() {
+    async function initLayout() {
+      // 1. Safety Check: Browser Env
+      if (typeof window === 'undefined') return;
+
       const token = localStorage.getItem('authToken');
       const tenant = localStorage.getItem('tenantSlug') || 'team';
 
+      // 2. Redirect if no token
       if (!token) {
-        // If no token, force logout/redirect
+        console.log("⛔ No token found in Layout, redirecting...");
         router.push(`/login/${tenant}`);
         return;
       }
 
+      // 3. Fetch Real User Data
       const res = await getUserProfile(token, tenant);
 
       if (res.success && res.data) {
+        console.log("✅ Layout loaded for:", res.data.fullName);
+        
         const fullName = res.data.fullName || res.data.name || "User";
 
-        // Calculate Initials (e.g., "Ratan Prajapati" -> "RP")
+        // Calculate Initials
         const initials = fullName
           .split(' ')
           .map((n: string) => n[0])
@@ -83,29 +75,31 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
         setUser({
           name: fullName,
-          email: res.data.email || res.data.username,
-          initials: initials || "US"
+          email: res.data.email || res.data.username || "",
+          initials: initials || "ME"
         });
       }
     }
 
-    fetchProfile();
+    initLayout();
   }, [router]);
 
   // --- 2. LOGOUT FUNCTION ---
   const handleLogout = () => {
-    // Clear storage
+    // Clear ALL related storage
     localStorage.removeItem('authToken');
     localStorage.removeItem('tenantSlug');
-    localStorage.removeItem('userInfo');
+    localStorage.removeItem('currentUserId');
+    localStorage.removeItem('isVendor');
 
-    // Redirect to home or login
-    router.push('/');
+    // Redirect
+    router.push('/login/foundry'); 
   };
 
   // Navigation Links
   const navItems = [
     { href: '/private/member', label: 'Overview', icon: LayoutDashboard },
+    { href: '/private/member/onboarding', label: 'Become a Vendor', icon: Store }, 
     { href: '/private/member/orders', label: 'Orders', icon: Package },
     { href: '/private/member/rfqs', label: 'RFQs & Quotes', icon: FileText },
     { href: '/private/member/inventory', label: 'Inventory', icon: Factory },
@@ -129,8 +123,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             return (
               <Link key={item.href} href={item.href}>
                 <span className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${isActive
-                    ? 'bg-[#cc2221] text-white'
-                    : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                  ? 'bg-[#cc2221] text-white'
+                  : 'text-slate-400 hover:text-white hover:bg-slate-800'
                   }`}>
                   <item.icon className="w-4 h-4" />
                   {item.label}
@@ -185,9 +179,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="relative h-9 w-9 rounded-full">
                   <Avatar className="h-9 w-9 border border-slate-200">
-                    {/* If you have an image URL in API, use it here, otherwise fallback */}
                     <AvatarImage src="" alt={user.name} />
-                    <AvatarFallback className="bg-slate-900 text-white">
+                    <AvatarFallback className="bg-slate-900 text-white font-semibold">
                       {user.initials}
                     </AvatarFallback>
                   </Avatar>
@@ -221,7 +214,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </div>
         </header>
 
-        {/* DYNAMIC PAGE CONTENT */}
+        {/* PAGE CONTENT */}
         <main className="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
           {children}
         </main>

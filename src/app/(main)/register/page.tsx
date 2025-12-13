@@ -2,7 +2,7 @@
 
 import React, { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
- import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -27,6 +27,7 @@ function RegisterForm() {
     setLoading(true);
     setError('');
 
+    // Safety Check
     if (!clientId) {
       setError("Invalid Registration Link (Missing Client ID)");
       setLoading(false);
@@ -36,6 +37,7 @@ function RegisterForm() {
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
 
+    // Password Validation
     if (data.password !== data.retype) {
       setError("Passwords do not match.");
       setLoading(false);
@@ -48,18 +50,20 @@ function RegisterForm() {
       return;
     }
 
-    // ✅ FIX: Include 'email' in the payload
+    // Call API
     const res = await completeRegistration(clientId, tenantSlug, {
       fullName: data.fullname,
-      username: emailParam, // Using Email as Username
-      email: emailParam,    // <--- THIS WAS MISSING
+      username: emailParam, 
+      email: emailParam,    
       password: data.password
     });
 
     if (res.success) {
       setSuccess(true);
       setTimeout(() => {
-        router.push(`/login/${tenantSlug}`);
+        // ✅ FIX: Pass clientId and email to the Login Page
+        // This ensures the login page knows who just registered
+        router.push(`/login/${tenantSlug}?clientId=${clientId}&email=${encodeURIComponent(emailParam)}`);
       }, 2000);
     } else {
       setError(res.message || "Registration failed. Please try again.");

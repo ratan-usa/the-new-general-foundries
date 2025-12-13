@@ -4,7 +4,7 @@
 export const dynamic = 'force-dynamic';
 
 import { useState, use } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -13,7 +13,7 @@ import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp
 import { Loader2, LogIn, LockKeyhole, ArrowLeft } from 'lucide-react';
 
 // Import functions from your library
-import { loginUser, verifyTwoFactor } from '@/lib/api'; 
+import { loginUser, verifyTwoFactor } from '@/lib/api';
 
 export default function LoginPage({ params }: { params: Promise<{ type: string }> }) {
   const unwrappedParams = use(params);
@@ -24,9 +24,10 @@ export default function LoginPage({ params }: { params: Promise<{ type: string }
   const [step, setStep] = useState<'credentials' | 'otp'>('credentials');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  
+  const searchParams = useSearchParams();
+  const urlEmail = searchParams.get('email') || '';
   // Store email/pass here so we can use them in Step 2
-  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [formData, setFormData] = useState({ email: urlEmail, password: '' });
   const [otp, setOtp] = useState('');
 
   // --- Step 1: Handle Login ---
@@ -48,9 +49,9 @@ export default function LoginPage({ params }: { params: Promise<{ type: string }
   };
 
   // --- Step 2: Handle Verification ---
-// app/login/[type]/page.tsx
+  // app/login/[type]/page.tsx
 
-const handleVerify = async () => {
+  const handleVerify = async () => {
     if (otp.length < 6) {
       setError("Please enter the full 6-digit code.");
       return;
@@ -65,45 +66,45 @@ const handleVerify = async () => {
     if (res.success) {
       // CHECK IF TOKEN EXISTS BEFORE SAVING
       if (!res.token) {
-          console.error("❌ ERROR: Login successful, but NO TOKEN found in response!");
-          setError("System Error: No access token received.");
-          setLoading(false);
-          return;
+        console.error("❌ ERROR: Login successful, but NO TOKEN found in response!");
+        setError("System Error: No access token received.");
+        setLoading(false);
+        return;
       }
 
       console.log("✅ SAVING TOKEN:", res.token);
-      
+
       // Save to Storage
       localStorage.setItem('authToken', res.token);
       localStorage.setItem('tenantSlug', type);
-      
+
       router.push('/private/member'); // Redirect to dashboard
     } else {
       setError(res.message || "Verification failed.");
       setLoading(false);
     }
-};
+  };
 
   const displayTitle = type ? type.toUpperCase() : 'PORTAL';
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
       <Card className="max-w-md w-full shadow-xl border-t-4 border-t-[#cc2221]">
-        
+
         <CardHeader className="text-center">
           <div className="mx-auto bg-red-50 w-12 h-12 rounded-full flex items-center justify-center mb-4">
             {step === 'credentials' ? (
-               <LogIn className="w-6 h-6 text-[#cc2221]" />
+              <LogIn className="w-6 h-6 text-[#cc2221]" />
             ) : (
-               <LockKeyhole className="w-6 h-6 text-[#cc2221]" />
+              <LockKeyhole className="w-6 h-6 text-[#cc2221]" />
             )}
           </div>
           <CardTitle className="text-2xl font-bold">
             {step === 'credentials' ? `Login to ${displayTitle}` : 'Two-Factor Auth'}
           </CardTitle>
           <CardDescription>
-            {step === 'credentials' 
-              ? "Enter your credentials to continue." 
+            {step === 'credentials'
+              ? "Enter your credentials to continue."
               : `Enter the code sent to ${formData.email}`
             }
           </CardDescription>
@@ -115,13 +116,13 @@ const handleVerify = async () => {
             <form onSubmit={handleLogin} className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
-                <Input 
-                  id="email" 
-                  type="email" 
-                  required 
-                  placeholder="name@company.com" 
+                <Input
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="name@company.com"
                   value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   disabled={loading}
                 />
               </div>
@@ -130,12 +131,12 @@ const handleVerify = async () => {
                   <Label htmlFor="password">Password</Label>
                   <a href="#" className="text-xs text-[#cc2221] hover:underline">Forgot password?</a>
                 </div>
-                <Input 
-                  id="password" 
-                  type="password" 
-                  required 
+                <Input
+                  id="password"
+                  type="password"
+                  required
                   value={formData.password}
-                  onChange={(e) => setFormData({...formData, password: e.target.value})}
+                  onChange={(e) => setFormData({ ...formData, password: e.target.value })}
                   disabled={loading}
                 />
               </div>
@@ -167,20 +168,20 @@ const handleVerify = async () => {
 
               {error && (
                 <p className="text-red-500 text-sm font-medium bg-red-50 px-4 py-2 rounded">
-                    {error}
+                  {error}
                 </p>
               )}
 
-              <Button 
-                onClick={handleVerify} 
+              <Button
+                onClick={handleVerify}
                 className="w-full bg-[#cc2221] hover:bg-red-700 py-6 text-lg font-bold"
                 disabled={loading}
               >
                 {loading ? <Loader2 className="animate-spin mr-2" /> : "Verify & Login"}
               </Button>
-              
-              <button 
-                onClick={() => { setStep('credentials'); setError(''); }} 
+
+              <button
+                onClick={() => { setStep('credentials'); setError(''); }}
                 className="flex items-center text-sm text-slate-500 hover:text-slate-800"
               >
                 <ArrowLeft className="w-3 h-3 mr-1" /> Back to Login
@@ -190,10 +191,10 @@ const handleVerify = async () => {
         </CardContent>
 
         {step === 'credentials' && (
-           <CardFooter className="justify-center border-t pt-4">
-              <p className="text-sm text-slate-500">
-                  Don't have an account? <a href={`/signup/${type || 'customer'}`} className="text-[#cc2221] font-semibold hover:underline">Sign up</a>
-              </p>
+          <CardFooter className="justify-center border-t pt-4">
+            <p className="text-sm text-slate-500">
+              Don't have an account? <a href={`/signup/${type || 'customer'}`} className="text-[#cc2221] font-semibold hover:underline">Sign up</a>
+            </p>
           </CardFooter>
         )}
       </Card>
