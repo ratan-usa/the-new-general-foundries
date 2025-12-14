@@ -12,8 +12,9 @@ import IndustryNews from "./news/IndustryNews";
 import FloatingQuoteBtn from "../components/FloatingQuoteBtn";
 import HotProductVideos from "./category/HotProductVideos";
 import { newInnovationData } from "@/lib/newsData";
+import VerticalAccordion from "../components/VerticalAccordion";
 
- 
+
 export default function Home() {
   return (
     <div className="">
@@ -24,7 +25,7 @@ export default function Home() {
         <div className="relative z-10 container mx-auto px-4 text-center">
 
           <h1 className="text-[30px] lg:text-[40px] font-bold leading-tight tracking-tight">
-            The World's Largest and Advanced  
+            The World's Largest and Advanced
             Consortium of
             <span className="block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
               Foundries, Forge Shops & Fabricators
@@ -47,7 +48,7 @@ export default function Home() {
           </div>
         </div>
         <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">
-         Engage with dedicated experts
+          Engage with dedicated experts
         </p>
       </div>
       <HeroSection />
@@ -65,6 +66,7 @@ export default function Home() {
         title={newInnovationData.title}
         videos={newInnovationData.videos}
       />
+      <VerticalAccordion />
     </div>
   );
 }
