@@ -12,7 +12,8 @@ import IndustryNews from "./news/IndustryNews";
 import FloatingQuoteBtn from "../components/FloatingQuoteBtn";
 import HotProductVideos from "./category/HotProductVideos";
 import { newInnovationData } from "@/lib/newsData";
-import VerticalAccordion from "../components/VerticalAccordion";
+import { MegaStories } from "../components/mega-stories";
+import { VerticalAccordion } from "../components/VerticalAccordion";
 
 
 export default function Home() {
@@ -52,6 +53,7 @@ export default function Home() {
         </p>
       </div>
       <HeroSection />
+      <MegaStories />
       <BusinessSolutions />
       <CosmoBlog />
       <ChatBlog />

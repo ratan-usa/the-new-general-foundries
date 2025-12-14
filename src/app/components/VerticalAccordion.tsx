@@ -2,7 +2,11 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { cn } from '@/lib/utils'; // Assuming you have shadcn utils, or remove this and use template literals
+import { cn } from '@/lib/utils';
+import { 
+  Zap, Settings, Cuboid, Sun, Droplets, Cog, Wrench, 
+  Anchor, Flame, Building, Bolt, Shield, Hammer 
+} from 'lucide-react';
 
 // --- DATA MODEL ---
 interface AccordionItem {
@@ -11,139 +15,241 @@ interface AccordionItem {
     category: string;
     description: string;
     image: string;
-    color: string; // Background color for the active card
+    color: string; 
+    icon?: React.ElementType;
 }
 
+// 16 Items based on your Mega Products / Industrial Data
 const items: AccordionItem[] = [
     {
         id: "1",
-        category: "Heavy Casting",
-        title: "Mega Cast™ Iron",
-        description: "High-durability grey and ductile iron castings engineered for extreme industrial environments.",
-        image: "/assets/image12.jpg", // Foundry/Sparks
-        color: "bg-[#cc2221]" // Red for Tech/Highlight
+        category: "Irrigation",
+        title: "Water Control Systems",
+        description: "Smart water flow management components designed for precise control and regulation.",
+        image: "/assets/image10.jpeg",
+        color: "bg-[#cc2221]", // Active Red
+        icon: Zap
     },
     {
         id: "2",
-        category: "Precision Forging",
-        title: "Mega Forge X",
-        description: "Custom drop and press forging solutions providing superior structural integrity for automotive parts.",
-        image: "/assets/image13.jpg",
-        color: "bg-[#cc2221]" // Red for Tech/Highlight
+        category: "Earth Moving",
+        title: "Bucket Teeth & Adaptors",
+        description: "High-strength bucket teeth engineered for superior digging performance.",
+        image: "/assets/image1.jpeg",
+        color: "bg-[#cc2221]",
+        icon: Settings
     },
     {
         id: "3",
-        category: "CNC Machining",
-        title: "Precision Pro",
-        description: "State-of-the-art 5-axis CNC machining ensuring micron-level tolerance for aerospace components.",
-        image: "/assets/image14.jpeg",
-        color: "bg-[#cc2221]" // Red for Tech/Highlight
+        category: "Cathodic",
+        title: "Zinc Anodes Protection",
+        description: "High-purity zinc and aluminium cast anodes for corrosion prevention.",
+        image: "/assets/image18.jpeg",
+        color: "bg-[#cc2221]",
+        icon: Shield
     },
     {
         id: "4",
-        category: "Precast Systems",
-        title: "Mega Wall Panels",
-        description: "Modular precast concrete walls designed for rapid construction and thermal efficiency.",
+        category: "Precast",
+        title: "Concrete Molds",
+        description: "High-precision molds for producing durable infrastructure elements.",
         image: "/assets/image15.jpg",
-        color: "bg-[#cc2221]" // Red for Tech/Highlight
+        color: "bg-[#cc2221]",
+        icon: Cuboid
     },
     {
         id: "5",
-        category: "Industrial IoT",
-        title: "Smart Foundry Connect",
-        description: "Real-time sensor networks for monitoring furnace temperatures and production line efficiency.",
+        category: "Mining",
+        title: "Crusher Wear Parts",
+        description: "Heavy-duty components designed for high-impact crushing environments.",
         image: "/assets/image16.jpg",
-        color: "bg-[#cc2221]" // Red for Tech/Highlight
+        color: "bg-[#cc2221]",
+        icon: Sun
     },
     {
         id: "6",
-        category: "Supply Chain",
-        title: "Mega Logistics Fleet",
-        description: "Integrated freight and warehousing solutions ensuring just-in-time delivery for raw materials.",
-        image: "/assets/image17.jpg",
-        color: "bg-[#cc2221]" // Red for Tech/Highlight
+        category: "Alloys",
+        title: "Metals & Castings",
+        description: "Engineered metal and alloy products for industrial applications.",
+        image: "/assets/image14.jpeg",
+        color: "bg-[#cc2221]",
+        icon: Droplets
     },
     {
         id: "7",
-        category: "Engineering",
-        title: "CAD/CAM Services",
-        description: "Full-cycle product design, from 3D prototyping to mold flow analysis and optimization.",
-        image: "/assets/image18.jpeg",
-        color: "bg-[#cc2221]" // Red for Tech/Highlight
+        category: "Paving",
+        title: "Adjustable Risers",
+        description: "Height-adjustable pedestal risers for outdoor paving applications.",
+        image: "/assets/image12.jpg",
+        color: "bg-[#cc2221]",
+        icon: Cog
     },
     {
         id: "8",
-        category: "Green Tech",
-        title: "Eco-Alloy Recycling",
-        description: "Sustainable metal recycling processes that reduce carbon footprint without compromising quality.",
-        image: "/assets/image19.jpeg",
-        color: "bg-[#cc2221]" // Red for Tech/Highlight
+        category: "Water Works",
+        title: "Joint Fittings",
+        description: "Mechanical joint fittings for secure water distribution networks.",
+        image: "/assets/image13.jpg",
+        color: "bg-[#cc2221]",
+        icon: Droplets
+    },
+    {
+        id: "9",
+        category: "Fabrication",
+        title: "Custom Metal Works",
+        description: "High-precision machining and fabrication services engineered for accuracy.",
+        image: "/assets/image10.jpeg",
+        color: "bg-[#cc2221]",
+        icon: Wrench
+    },
+    {
+        id: "10",
+        category: "Foundry",
+        title: "Equipment & Tools",
+        description: "State-of-the-art tools ensuring micron-level tolerance for components.",
+        image: "/assets/image12.jpg",
+        color: "bg-[#cc2221]",
+        icon: Flame
+    },
+    {
+        id: "11",
+        category: "Oil & Gas",
+        title: "High Pressure Valves",
+        description: "Components built for harsh marine and high-pressure environments.",
+        image: "/assets/image16.jpg",
+        color: "bg-[#cc2221]",
+        icon: Flame
+    },
+    {
+        id: "12",
+        category: "Infrastructure",
+        title: "Construction Parts",
+        description: "Heavy-duty scaffolding and infrastructure support components.",
+        image: "/assets/image15.jpg",
+        color: "bg-[#cc2221]",
+        icon: Building
+    },
+    {
+        id: "13",
+        category: "Utility",
+        title: "Power Energy",
+        description: "Reliable components for power transmission and energy sectors.",
+        image: "/assets/image14.jpeg",
+        color: "bg-[#cc2221]",
+        icon: Bolt
+    },
+    {
+        id: "14",
+        category: "Defence",
+        title: "Aerospace Grade",
+        description: "Certified high-grade materials for defence and aerospace contracts.",
+        image: "/assets/image18.jpeg",
+        color: "bg-[#cc2221]",
+        icon: Shield
+    },
+    {
+        id: "15",
+        category: "Manufacturing",
+        title: "Custom OEM",
+        description: "Tailor-made casting solutions to meet unique project requirements.",
+        image: "/assets/image1.jpeg",
+        color: "bg-[#cc2221]",
+        icon: Hammer
+    },
+    {
+        id: "16",
+        category: "Snow Plough",
+        title: "Winter Equipment",
+        description: "Industrial grade snow clearing attachments and machinery parts.",
+        image: "/assets/image9.jpeg",
+        color: "bg-[#cc2221]",
+        icon: Cog
     }
 ];
 
-export default function VerticalAccordion() {
-    // Default to the middle one open, or null if you want them all closed initially
-    const [activeId, setActiveId] = useState<string | null>("5");
+export function VerticalAccordion() {
+    // Open the first item by default
+    const [activeId, setActiveId] = useState<string | null>("1");
 
     return (
-        <div className="w-full flex justify-center items-center py-10 bg-slate-50">
-            {/* Container Height determines the height of the accordion */}
-            <div className="flex w-full max-w-7xl h-[600px] overflow-hidden shadow-2xl rounded-xl">
+        <div className="w-full flex justify-center items-center py-10 bg-white">
+            {/* w-full: Full Width
+                h-[600px]: Fixed height for the bookshelf effect
+            */}
+            <div className="flex w-full h-[900px] overflow-hidden border-y border-zinc-200">
 
                 {items.map((item) => {
                     const isActive = activeId === item.id;
+                    const Icon = item.icon || Zap;
 
                     return (
                         <div
                             key={item.id}
                             onMouseEnter={() => setActiveId(item.id)}
                             className={cn(
-                                "relative flex-1 cursor-pointer overflow-hidden transition-all duration-500 ease-in-out border-r border-white/20 last:border-r-0",
-                                // Active state: grow flex, change background
-                                isActive ? `flex-[4] ${item.color}` : "flex-[1] bg-[#00338D] hover:bg-[#002266]"
+                                "relative transition-all duration-500 ease-in-out border-r border-zinc-800 last:border-r-0 cursor-pointer overflow-hidden",
+                                // Active: Grow to flex-5 (takes up 5x space) with RED background
+                                // Inactive: Shrink to flex-1 (takes up 1x space) with BLACK background (No Blue)
+                                isActive 
+                                    ? `flex-[5] ${item.color}` 
+                                    : "flex-[1] bg-zinc-900 hover:bg-zinc-800"
                             )}
                         >
-                            {/* --- CONTENT WHEN EXPANDED --- */}
+                            {/* --- CONTENT WHEN EXPANDED (VISIBLE ONLY ON ACTIVE) --- */}
                             <div
                                 className={cn(
-                                    "absolute inset-0 flex flex-col justify-between transition-opacity duration-300 delay-100",
+                                    "absolute inset-0 flex flex-col justify-between transition-opacity duration-300 delay-75",
                                     isActive ? "opacity-100 visible" : "opacity-0 invisible"
                                 )}
                             >
-                                {/* Top Image */}
-                                <div className="relative h-[45%] w-full overflow-hidden">
+                                {/* Top Image Section */}
+                                <div className="relative h-[55%] w-full overflow-hidden">
+                                    <div className="absolute inset-0 bg-black/20 z-10" />
                                     <Image
                                         src={item.image}
                                         alt={item.title}
                                         fill
                                         className="object-cover"
                                     />
+                                    <div className="absolute top-6 left-6 z-20 bg-black/50 backdrop-blur-md p-2 rounded-lg text-white">
+                                        <Icon className="w-6 h-6" />
+                                    </div>
                                 </div>
 
-                                {/* Text Content */}
-                                <div className="flex flex-col items-center text-center px-6 py-4 text-white h-full justify-center">
-                                    <h3 className="text-xl font-bold mb-3">{item.category}</h3>
-                                    <p className="text-sm leading-relaxed max-w-md">
+                                {/* Text Content Section */}
+                                <div className="flex flex-col px-6 py-6 text-white h-[45%] bg-gradient-to-t from-black/20 to-transparent">
+                                    <div className="flex items-center gap-2 mb-2 opacity-80">
+                                        <span className="text-xs font-bold tracking-widest uppercase border border-white/30 px-2 py-1 rounded">
+                                            {item.category}
+                                        </span>
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-3 leading-tight">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-sm leading-relaxed opacity-90 line-clamp-3">
                                         {item.description}
                                     </p>
-                                </div>
-
-                                {/* Red Footer Bar */}
-                                <div className="w-full bg-red-600 py-3 text-center text-white font-bold uppercase tracking-wide text-sm mt-auto">
-                                    {item.category}
+                                    
+                                    <div className="mt-auto pt-4 flex items-center text-xs font-bold uppercase tracking-wider gap-2">
+                                        View Products <span className="text-lg">→</span>
+                                    </div>
                                 </div>
                             </div>
 
-                            {/* --- VERTICAL TEXT (When Collapsed) --- */}
+                            {/* --- VERTICAL TEXT (VISIBLE ONLY WHEN COLLAPSED) --- */}
                             <div
                                 className={cn(
-                                    "absolute inset-0 flex items-center justify-center transition-opacity duration-300",
-                                    isActive ? "opacity-0 invisible" : "opacity-100 visible"
+                                    "absolute inset-0 flex items-center justify-center transition-all duration-300",
+                                    isActive ? "opacity-0 -translate-x-10" : "opacity-100 translate-x-0"
                                 )}
                             >
                                 <h3
-                                    className="text-white whitespace-nowrap text-lg font-medium tracking-wide"
-                                    style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
+                                    className="text-white/60 hover:text-white whitespace-nowrap text-sm font-bold tracking-[0.2em] uppercase transition-colors"
+                                    style={{ 
+                                        writingMode: 'vertical-rl', 
+                                        transform: 'rotate(180deg)',
+                                        textShadow: '0px 0px 10px rgba(0,0,0,0.5)'
+                                    }}
                                 >
                                     {item.category}
                                 </h3>
@@ -151,13 +257,6 @@ export default function VerticalAccordion() {
                         </div>
                     );
                 })}
-
-                {/* Right Label (From your image "Precast Engineering" floating on right) */}
-                {/* This is stylistic optional based on your screenshot */}
-                <div className="absolute right-10 top-1/2 -translate-y-1/2 pointer-events-none hidden xl:block">
-                    <div className="text-right text-slate-800">
-                    </div>
-                </div>
 
             </div>
         </div>
