@@ -155,7 +155,7 @@ const Footer = () => {
             <div className="flex gap-4">
               <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada Foundries' fill className="object-contain" />
+                  <Image src={'/CANADA-FOUNDRIES.png'} alt='Canada Foundries' fill className="object-contain" />
                 </Link>
               </div>
               <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">

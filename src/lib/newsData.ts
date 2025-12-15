@@ -145,7 +145,41 @@ export const newInnovationData = {
       id: 4,
       title: "Cross Sectional / CORE LV CABLES",
       videoUrl: "/video/newInnovation/video4.mp4",
+    }, {
+      id: 5,
+      title: "Cross Sectional / CORE LV CABLES",
+      videoUrl: "/video/newInnovation/video5.mp4",
     },
+    {
+      id: 6,
+      title: "AUXILIARY CABLES (CONTROL)",
+      videoUrl: "/video/newInnovation/video6.mp4",
+    }
+    ,
+    {
+      id: 7,
+      title: "AUXILIARY CABLES (CONTROL)",
+      videoUrl: "/video/newInnovation/video7.mp4",
+    }, {
+      id: 8,
+      title: "Cross Sectional / CORE LV CABLES",
+      videoUrl: "/video/newInnovation/video8.mp4",
+    }, {
+      id: 9,
+      title: "Cross Sectional / CORE LV CABLES",
+      videoUrl: "/video/newInnovation/video9.mp4",
+    },
+    {
+      id: 10,
+      title: "AUXILIARY CABLES (CONTROL)",
+      videoUrl: "/video/newInnovation/video10.mp4",
+    }
+    ,
+    {
+      id: 11,
+      title: "AUXILIARY CABLES (CONTROL)",
+      videoUrl: "/video/newInnovation/video11.mp4",
+    }
   ]
 };
 

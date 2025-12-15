@@ -133,7 +133,7 @@ const Navbar = () => {
                                 <Image src={'/MEGA-MINING-LOGO.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                 <Image src={'/logo forge.jpeg'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
                                 {/* Logo 4: Canada */}
-                                <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
+                                <Image src={'/CANADA-FOUNDRIES.png'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
                             </div>
                         </div>
                         {/* Mobile Toggle */}
@@ -163,7 +163,7 @@ const Navbar = () => {
                                     <Image src={'/logo forge.jpeg'} alt='Forge Shop' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                                 <Link href={'/'} className="shrink-0">
-                                    <Image src={'/Canada-foundries-logo1.PNG'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
+                                    <Image src={'/CANADA-FOUNDRIES.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                             </div>
                             <div className="flex items-center space-x-6">
