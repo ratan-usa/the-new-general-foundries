@@ -77,7 +77,7 @@ const Navbar = () => {
                             <div className="items-center gap-4 hidden lg:flex">
                                 <Link href={'/'} className="shrink-0">
                                     <Image
-                                        src={'/Mega-foundries-logo.PNG'}
+                                        src={'/MEGA FOUNDRIES.png'}
                                         alt='Mega Foundries'
                                         height={80}
                                         width={80}
@@ -86,7 +86,7 @@ const Navbar = () => {
                                 </Link>
                                 <Link href={'/'} className="shrink-0 ">
                                     <Image
-                                        src={'/logo fabricator.jpeg'}
+                                        src={'/MEGA FABRICATORS.png'}
                                         alt='Fabricator'
                                         height={80}
                                         width={80}
@@ -95,7 +95,7 @@ const Navbar = () => {
                                 </Link>
                                 <Link href={'/'} className="shrink-0 ">
                                     <Image
-                                        src={'/MEGA-METALS-LOGO.png'}
+                                        src={'/MEGA METALS.png'}
                                         alt='Fabricator'
                                         height={80}
                                         width={80}
@@ -124,16 +124,16 @@ const Navbar = () => {
                         <div className="pt-2 lg:hidden">
                             <div className="grid grid-cols-7 gap-4 items-center justify-items-center">
                                 {/* Logo 1: Mega */}
-                                <Image src={'/Mega-foundries-logo.PNG'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
+                                <Image src={'/MEGA FOUNDRIES.png'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
                                 {/* Logo 2: Fabricator */}
-                                <Image src={'/logo fabricator.jpeg'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
+                                <Image src={'/MEGA FABRICATORS.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                 {/* Logo 3: Forge */}
                                 <Image src={'/MEGA-INDUSTRIES-LOGO.PNG'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
-                                <Image src={'/MEGA-METALS-LOGO.png'} alt='Fabricator' width={100} height={100} className="object-contain h-24 w-24" />
+                                <Image src={'/MEGA METALS.png'} alt='Fabricator' width={100} height={100} className="object-contain h-24 w-24" />
                                 <Image src={'/MEGA-MINING-LOGO.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
-                                <Image src={'/logo forge.jpeg'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
+                                <Image src={'/MEGA FORGE.png'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
                                 {/* Logo 4: Canada */}
-                                <Image src={'/CANADA-FOUNDRIES.png'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
+                                <Image src={'/MEGA MOLDS.png'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
                             </div>
                         </div>
                         {/* Mobile Toggle */}
@@ -160,10 +160,10 @@ const Navbar = () => {
                                     <Image src={'/MEGA-MINING-LOGO.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                                 <Link href={'/'} className="shrink-0">
-                                    <Image src={'/logo forge.jpeg'} alt='Forge Shop' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
+                                    <Image src={'/MEGA FORGE.png'} alt='Forge Shop' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                                 <Link href={'/'} className="shrink-0">
-                                    <Image src={'/CANADA-FOUNDRIES.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
+                                    <Image src={'/MEGA MOLDS.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                             </div>
                             <div className="flex items-center space-x-6">

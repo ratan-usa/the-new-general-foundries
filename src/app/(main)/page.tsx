@@ -14,6 +14,7 @@ import HotProductVideos from "./category/HotProductVideos";
 import { newInnovationData } from "@/lib/newsData";
 import { MegaStories } from "../components/mega-stories";
 import { VerticalAccordion } from "../components/VerticalAccordion";
+import { DesignCapabilities } from "../components/design-capabilities";
 
 
 export default function Home() {
@@ -58,7 +59,8 @@ export default function Home() {
       <CosmoBlog />
       <ChatBlog />
       <ProductCarousel />
-      <Taglines />
+      {/* <Taglines /> */}
+      <DesignCapabilities/>
       <SourcingRequest />
       <EngagementAnalytics />
       <IndustryNews />

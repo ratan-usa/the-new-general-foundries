@@ -7,7 +7,7 @@ const cosmoBlogContent = [
     icon: CheckCircle,
     title: 'Lead Management',
     description: 'Easily organize, track, and nurture leads for better conversions and growth.'
-  },
+  },  
   {
     icon: CheckCircle,
     title: 'Automated Workflows',

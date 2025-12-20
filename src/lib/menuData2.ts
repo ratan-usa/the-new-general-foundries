@@ -1,8 +1,8 @@
 import { Zap, Factory, Settings, ShieldCheck, Leaf, Sun, Droplets, Gauge, Cog, Anvil, Hammer, Shield, Bolt, Building, Flame, Wrench, Cuboid, Anchor } from 'lucide-react';
 export const menuData = {
-  irrigation: {
-    id: 'irrigation_products',
-    label: 'IRRIGATION PRODUCTS',
+  construction_castings: {
+    id: 'construction_castings',
+    label: 'CONSTRUCTION CASTING',
     icon: Zap,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
@@ -109,9 +109,9 @@ export const menuData = {
       }
     ]
   },
-  earth_moving_equipments: {
-    id: 'earth_moving_equipments',
-    label: 'EARTH MOVING EQUIPMENTS',
+  water_works_casting: {
+    id: 'water_works_casting',
+    label: 'WATER WORKS CASTING',
     icon: Zap,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
@@ -231,9 +231,9 @@ export const menuData = {
     ]
 
   },
-  cathodic_protection: {
-    id: 'cathodic_protection',
-    label: 'CATHODIC PROTECTION',
+  trench_products: {
+    id: 'trench_products',
+    label: 'TRENCH PRODUCTS',
     icon: Settings,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
@@ -341,7 +341,7 @@ export const menuData = {
   },
   precast_molds: {
     id: 'precast_molds',
-    label: 'PRECAST & MOLDS',
+    label: 'PRECAST MOLDS',
     icon: Cuboid,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
@@ -503,9 +503,9 @@ export const menuData = {
     ]
 
   },
-  mining_products: {
-    id: 'mining_products',
-    label: 'MINING PRODUCTS',
+  buildings_supply: {
+    id: 'buildings_supply',
+    label: 'BUILDING SUPPLY',
     icon: Sun,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
@@ -627,9 +627,9 @@ export const menuData = {
     ]
 
   },
-  metals_alloys: {
-    id: 'metals_alloys',
-    label: 'METALS & ALLOYS',
+  tree_grates: {
+    id: 'tree_grates',
+    label: 'TREE GRATES',
     icon: Droplets,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
@@ -795,9 +795,9 @@ export const menuData = {
       }
     ]
   },
-  piving_risers: {
-    id: 'piving_risers',
-    label: 'PIVING RISERS',
+  fabrication_products: {
+    id: 'fabrication_products',
+    label: 'FABRICATOIN PRODUCTS',
     icon: Cog,
     bannerImage: '/assets/PAVING-RISERS/paving riser 1.5200.png',
     color: 'bg-[#cc2221] text-white',
@@ -874,17 +874,17 @@ export const menuData = {
       }
     ]
   },
-  fabrication: {
-    id: 'fabrication',
-    label: 'FABRICATION',
+  paving_risers: {
+    id: 'paving_risers',
+    label: 'PAVING RISERS',
     icon: Wrench,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
     categories: []
   },
-  water_works: {
-    id: 'water_works',
-    label: 'WATER WORKS',
+  petro_products: {
+    id: 'petro_products',
+    label: 'PETRO PRODUCTS',
     icon: Droplets, // use any lucide icon
     bannerImage: '/assets/waterworks-banner.jpeg',
     color: 'bg-blue-100 text-blue-900',
@@ -954,41 +954,41 @@ export const menuData = {
       }
     ]
   },
-  foundry_equipments: {
-    id: 'foundry_equipments',
-    label: 'FOUNDRY EQUIPMENTS',
+  monitoring_wells: {
+    id: 'monitoring_wells',
+    label: 'MONITORING WELLS',
     icon: Factory,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
     categories: []
   },
-  oil_gas_industries_products: {
-    id: 'oil_gas_industries_products',
-    label: 'OIL & GAS INDUSTRIES PRODUCTS',
+  water_works_tools: {
+    id: 'water_works_tools',
+    label: 'WATER WORKS TOOLS',
     icon: Flame,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
     categories: []
   },
-  construction_infrastructure: {
-    id: 'construction_infrastructure',
-    label: 'CONSTRUCTION & INFRASTRUCTURE',
+  irrigation_products: {
+    id: 'irrigation_products',
+    label: 'IRRIGATION PRODUCTS',
     icon: Building,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
     categories: []
   },
-  utility_power_energy: {
-    id: 'utility_power_energy',
-    label: 'UTILITY & POWER ENERGY',
+  forgings: {
+    id: 'forgings',
+    label: 'FORGINGS',
     icon: Bolt,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
     categories: []
   },
-  defence_aerospace: {
-    id: 'defence_aerospace',
-    label: 'DEFENCE & AEROSPACE',
+  marine_casting: {
+    id: 'marine_casting',
+    label: 'MARINE CASTING',
     icon: Shield,
     bannerImage: '/assets/image10.jpeg',
     color: 'bg-[#cc2221] text-white',
