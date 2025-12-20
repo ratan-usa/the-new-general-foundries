@@ -130,7 +130,7 @@ const Navbar = () => {
                                 {/* Logo 3: Forge */}
                                 <Image src={'/MEGA-INDUSTRIES-LOGO.PNG'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                 <Image src={'/MEGA METALS.png'} alt='Fabricator' width={100} height={100} className="object-contain h-24 w-24" />
-                                <Image src={'/MEGA-MINING-LOGO.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
+                                <Image src={'/CANADA FOUNDRIES.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                 <Image src={'/MEGA FORGE.png'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
                                 {/* Logo 4: Canada */}
                                 <Image src={'/MEGA MOLDS.png'} alt='Canada' width={60} height={60} className="object-contain h-12 w-12" />
@@ -157,7 +157,7 @@ const Navbar = () => {
                             {/* Right Logos Group */}
                             <div className="hidden lg:flex items-center gap-4">
                                 <Link href={'/'} className="shrink-0">
-                                    <Image src={'/MEGA-MINING-LOGO.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
+                                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                                 <Link href={'/'} className="shrink-0">
                                     <Image src={'/MEGA FORGE.png'} alt='Forge Shop' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
