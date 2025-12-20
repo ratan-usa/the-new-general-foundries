@@ -2,7 +2,9 @@
 
 // --- CONFIGURATION ---
 const BASE_URL = "https://precastxchange-api.azurewebsites.net/api/v1";
-
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api/v1';
+import axios from 'axios';
+const DEFAULT_TENANT = "MEGAFOUNDRY";
 // ✅ UPDATED: All paths now point to "MEGAFOUNDRY"
 const TENANT_ID_MAP: Record<string, string> = {
   "team":           "MEGAFOUNDRY",
@@ -344,6 +346,133 @@ export async function registerVendor(data: any) {
   return await fetchWithAuth('vendors', 'POST', data);
 }
 
-export async function getVendorProfile(vendorId: string) {
-    return await fetchWithAuth(`vendors/${vendorId}/profile`, 'GET');
-}
+// export async function getVendorProfile(vendorId: string) {
+//     return await fetchWithAuth(`vendors/${vendorId}/profile`, 'GET');
+// }
+// --- 1. CORE VENDOR (List, Create, Delete) ---
+
+// GET /api/v1/{tenantCode}/vendors
+export const getVendors = async (tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.get(`${API_URL}/${tenantCode}/vendors`);
+  return res.data;
+};
+
+// POST /api/v1/{tenantCode}/vendors
+export const createVendor = async (data: any, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.post(`${API_URL}/${tenantCode}/vendors`, data);
+  return res.data;
+};
+
+// PUT /api/v1/{tenantCode}/vendors/{id}
+export const updateVendor = async (vendorId: string, data: any, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.put(`${API_URL}/${tenantCode}/vendors/${vendorId}`, data);
+  return res.data;
+};
+
+// DELETE /api/v1/{tenantCode}/vendors/{id}
+export const deleteVendor = async (vendorId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.delete(`${API_URL}/${tenantCode}/vendors/${vendorId}`);
+  return res.data;
+};
+
+
+// --- 2. PROFILE & MARKETPLACE (Showcase) ---
+
+// GET & PUT /profile
+export const getVendorProfile = async (vendorId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.get(`${API_URL}/${tenantCode}/vendors/${vendorId}/profile`);
+  return res.data;
+};
+
+export const updateVendorProfile = async (vendorId: string, data: any, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.put(`${API_URL}/${tenantCode}/vendors/${vendorId}/profile`, data);
+  return res.data;
+};
+
+// GET & PUT /marketplace
+export const getVendorMarketplace = async (vendorId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.get(`${API_URL}/${tenantCode}/vendors/${vendorId}/marketplace`);
+  return res.data;
+};
+
+export const updateVendorMarketplace = async (vendorId: string, data: any, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.put(`${API_URL}/${tenantCode}/vendors/${vendorId}/marketplace`, data);
+  return res.data;
+};
+
+
+// --- 3. DETAILS (Contact, Address, Compliance) ---
+
+// GET & PUT /contact
+export const getVendorContact = async (vendorId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.get(`${API_URL}/${tenantCode}/vendors/${vendorId}/contact`);
+  return res.data;
+};
+
+export const updateVendorContact = async (vendorId: string, data: any, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.put(`${API_URL}/${tenantCode}/vendors/${vendorId}/contact`, data);
+  return res.data;
+};
+
+// GET & PUT /address
+export const getVendorAddress = async (vendorId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.get(`${API_URL}/${tenantCode}/vendors/${vendorId}/address`);
+  return res.data;
+};
+
+export const updateVendorAddress = async (vendorId: string, data: any, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.put(`${API_URL}/${tenantCode}/vendors/${vendorId}/address`, data);
+  return res.data;
+};
+
+// GET & PUT /compliance (Status)
+export const getVendorCompliance = async (vendorId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.get(`${API_URL}/${tenantCode}/vendors/${vendorId}/compliance`);
+  return res.data;
+};
+
+export const updateVendorCompliance = async (vendorId: string, data: any, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.put(`${API_URL}/${tenantCode}/vendors/${vendorId}/compliance`, data);
+  return res.data;
+};
+
+
+// --- 4. SUB-RESOURCES (Locations, Documents) ---
+
+// GET /locations
+export const getVendorLocations = async (vendorId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.get(`${API_URL}/${tenantCode}/vendors/${vendorId}/locations`);
+  return res.data;
+};
+
+// POST /locations
+export const addVendorLocation = async (vendorId: string, locationData: any, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.post(`${API_URL}/${tenantCode}/vendors/${vendorId}/locations`, locationData);
+  return res.data;
+};
+
+// DELETE /locations/{locationId}
+export const deleteVendorLocation = async (vendorId: string, locationId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.delete(`${API_URL}/${tenantCode}/vendors/${vendorId}/locations/${locationId}`);
+  return res.data;
+};
+
+// GET /compliance-documents
+export const getVendorDocuments = async (vendorId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.get(`${API_URL}/${tenantCode}/vendors/${vendorId}/compliance-documents`);
+  return res.data;
+};
+
+// POST /compliance-documents (Upload)
+export const uploadVendorDocument = async (vendorId: string, formData: FormData, tenantCode: string = DEFAULT_TENANT) => {
+  // Note: Ensure your axios headers are set to 'multipart/form-data' if needed, 
+  // but usually axios handles FormData automatically.
+  const res = await axios.post(`${API_URL}/${tenantCode}/vendors/${vendorId}/compliance-documents`, formData);
+  return res.data;
+};
+
+// DELETE /compliance-documents/{documentId}
+export const deleteVendorDocument = async (vendorId: string, documentId: string, tenantCode: string = DEFAULT_TENANT) => {
+  const res = await axios.delete(`${API_URL}/${tenantCode}/vendors/${vendorId}/compliance-documents/${documentId}`);
+  return res.data;
+};
