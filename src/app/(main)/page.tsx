@@ -29,10 +29,10 @@ export default function Home() {
           <h1 className="text-[30px] lg:text-[40px] font-bold leading-tight tracking-tight">
             The World's Largest and Advanced
             Consortium of
-            <span className="block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
+            <span className="text-[15px] lg:text-[25px] block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
               Foundries, Forge Shops & Fabricators
             </span>
-            <span className="block mt-2 text-2xl  md:text-4xl font-light ">
+            <span className="block mt-2 text-2xl  text-[40px] lg:text-[50px] font-light ">
               Under One Universe
             </span>
           </h1>

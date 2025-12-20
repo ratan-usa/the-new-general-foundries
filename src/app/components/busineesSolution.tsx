@@ -30,8 +30,8 @@ const BusinessSolutions = () => {
         <section className="py-12 bg-white">
 
             {/* Title Section */}
-            <h2 className="text-xl  font-extrabold text-neutral-800 text-center mb-12 mx-auto">
-                Connecting Businesses Worldwide Through B2B Solutions
+            <h2 className="text-5xl  font-extrabold text-[#cc2221] text-center mb-12 mx-auto">
+                World of Metals
             </h2>
             <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
                 {/* Cards Grid */}

@@ -136,11 +136,11 @@ export function DesignCapabilities() {
         </h2>
 
         {/* The Grid Layout (2 Columns) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1  md:grid-cols-2 gap-24">
           {tagLines.map((item) => (
             <div 
               key={item.id} 
-              className="group flex flex-row bg-white border border-zinc-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 min-h-[240px]"
+              className="group  flex flex-row bg-white border border-zinc-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 min-h-[240px]"
             >
               {/* Left Side: Image (Approx 35% width) */}
               <div className="relative w-[35%] min-w-[35%] bg-zinc-100">

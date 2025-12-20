@@ -128,7 +128,7 @@ const Navbar = () => {
                                 {/* Logo 2: Fabricator */}
                                 <Image src={'/MEGA FABRICATORS.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                 {/* Logo 3: Forge */}
-                                <Image src={'/MEGA-INDUSTRIES-LOGO.PNG'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
+                                <Image src={'/MEGA INDUSTRIES.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                 <Image src={'/MEGA METALS.png'} alt='Fabricator' width={100} height={100} className="object-contain h-24 w-24" />
                                 <Image src={'/CANADA FOUNDRIES.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                 <Image src={'/MEGA FORGE.png'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
@@ -149,7 +149,7 @@ const Navbar = () => {
 
                     <div className="hidden lg:block items-center gap-4">
                         <Link href={'/'} className="shrink-0">
-                            <Image src={'/MEGA-INDUSTRIES-LOGO.png'} alt='Canada Foundries' height={160} width={300} className="object-contain h-30 w-30 md:w-90 lg:h-44 lg:110  " />
+                            <Image src={'/MEGA INDUSTRIES.png'} alt='Canada Foundries' height={160} width={300} className="object-contain h-30 w-30 md:w-90 lg:h-44 lg:110  " />
                         </Link>
                     </div>
                     <div className="hidden lg:block shrink-0 items-center space-x-6">
@@ -315,7 +315,7 @@ const Navbar = () => {
                             {Object.values(menuData).map((section) => (
                                 <MenubarMenu key={section.id}>
                                     <MenubarTrigger className="
-                            flex items-center gap-2 text-[#cc2221] cursor-pointer transition-colors text-sm font-semibold px-3 py-1.5 rounded-md  
+                            flex items-center text-sm gap-2 text-[#cc2221] cursor-pointer transition-colors text-sm font-semibold px-3 py-1.5 rounded-md  
                             hover:text-[#cc2221] hover:bg-red-50
                             focus:bg-red-50 focus:text-[#cc2221]
                             data-[state=open]:bg-red-50 data-[state=open]:text-[#cc2221]
