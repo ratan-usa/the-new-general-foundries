@@ -86,7 +86,7 @@ const Navbar = () => {
                                 </Link>
                                 <Link href={'/'} className="shrink-0 ">
                                     <Image
-                                        src={'/MEGA FABRICATORS.png'}
+                                        src={'/MEGA METALS.png'}
                                         alt='Fabricator'
                                         height={80}
                                         width={80}
@@ -95,7 +95,7 @@ const Navbar = () => {
                                 </Link>
                                 <Link href={'/'} className="shrink-0 ">
                                     <Image
-                                        src={'/MEGA METALS.png'}
+                                        src={'/MEGA FABRICATORS.png'}
                                         alt='Fabricator'
                                         height={80}
                                         width={80}
@@ -157,13 +157,13 @@ const Navbar = () => {
                             {/* Right Logos Group */}
                             <div className="hidden lg:flex items-center gap-4">
                                 <Link href={'/'} className="shrink-0">
-                                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
+                                    <Image src={'/MEGA MOLDS.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                                 <Link href={'/'} className="shrink-0">
                                     <Image src={'/MEGA FORGE.png'} alt='Forge Shop' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                                 <Link href={'/'} className="shrink-0">
-                                    <Image src={'/MEGA MOLDS.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
+                                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>
                             </div>
                             <div className="flex items-center space-x-6">
