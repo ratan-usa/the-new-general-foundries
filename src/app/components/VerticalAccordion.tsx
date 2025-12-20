@@ -176,7 +176,7 @@ export function VerticalAccordion() {
             {/* w-full: Full Width
                 h-[600px]: Fixed height for the bookshelf effect
             */}
-            <div className="flex w-full h-[900px] overflow-hidden border-y border-zinc-200">
+            <div className="flex w-full h-[700px] overflow-hidden border-y border-zinc-200">
 
                 {items.map((item) => {
                     const isActive = activeId === item.id;

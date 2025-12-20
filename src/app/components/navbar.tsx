@@ -69,7 +69,7 @@ const Navbar = () => {
 
     return (
         <header className="bg-white shadow-md z-50 sticky top-0">
-            <div className="w-full   px-4 sm:px-6 lg:px-10">
+            <div className="w-full px-4 sm:px-6 lg:px-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
                     <div className="w-full lg:w-auto flex justify-between item-start gap-6 shrink-0">
 
@@ -149,10 +149,10 @@ const Navbar = () => {
 
                     <div className="hidden lg:block items-center gap-4">
                         <Link href={'/'} className="shrink-0">
-                            <Image src={'/MEGA INDUSTRIES.png'} alt='Canada Foundries' height={160} width={300} className="object-contain h-30 w-30 md:w-90 lg:h-44 lg:110  " />
+                            <Image src={'/MEGA INDUSTRIES.png'} alt='Canada Foundries' height={120} width={300} className="object-contain h-30 w-30 md:w-90 lg:h-44   " />
                         </Link>
                     </div>
-                    <div className="hidden lg:block shrink-0 items-center space-x-6">
+                    <div className="hidden align-end lg:block shrink-0 items-center space-x-6">
                         <div>
                             {/* Right Logos Group */}
                             <div className="hidden lg:flex items-center gap-4">
@@ -315,7 +315,7 @@ const Navbar = () => {
                             {Object.values(menuData).map((section) => (
                                 <MenubarMenu key={section.id}>
                                     <MenubarTrigger className="
-                            flex items-center text-sm gap-2 text-[#cc2221] cursor-pointer transition-colors text-sm font-semibold px-3 py-1.5 rounded-md  
+                            flex items-center text-[12px] gap-2 text-[#cc2221] cursor-pointer transition-color font-semibold px-3 py-1.5 rounded-md  
                             hover:text-[#cc2221] hover:bg-red-50
                             focus:bg-red-50 focus:text-[#cc2221]
                             data-[state=open]:bg-red-50 data-[state=open]:text-[#cc2221]

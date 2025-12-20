@@ -131,19 +131,19 @@ export function DesignCapabilities() {
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
         
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-10 border-l-4 border-[#cc2221] pl-4">
+        <h2 className="text-3xl  md:text-4xl font-bold text-zinc-900 mb-10 border-l-4 border-[#cc2221] pl-4">
           The Mega Philosophy
         </h2>
 
         {/* The Grid Layout (2 Columns) */}
-        <div className="grid grid-cols-1  md:grid-cols-2 gap-24">
+        <div className="grid  grid-cols-1  md:grid-cols-2 gap-24">
           {tagLines.map((item) => (
             <div 
               key={item.id} 
-              className="group  flex flex-row bg-white border border-zinc-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 min-h-[240px]"
+              className="group  flex flex-row bg-gray-200 border-b border-zinc-800   overflow-hidden hover:shadow-xl transition-shadow duration-300 min-h-[240px] "
             >
               {/* Left Side: Image (Approx 35% width) */}
-              <div className="relative w-[35%] min-w-[35%] bg-zinc-100">
+              <div className="relative  w-[35%] min-w-[35%] bg-zinc-100">
                 <Image
                   src={item.imgUrl} 
                   alt={item.lines}
