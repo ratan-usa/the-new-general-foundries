@@ -1,7 +1,13 @@
 import { Amphora, ChevronsRight, Droplets, Factory, TowerControl } from 'lucide-react';
 import Link from 'next/link';
-
-
+import localFont from 'next/font/local'
+ // 1. Load the local font file
+const apricotsFont = localFont({
+    // Go up two levels (../../) to get out of /components and /app, then into /lib/fonts
+    // src: '../../lib/fonts/Apricots.otf', 
+    src: '../../lib/fonts/brione-demo.regular.otf', 
+    display: 'swap',
+})
 const BusinessSolutions = () => {
     const services = [
         {
@@ -29,8 +35,8 @@ const BusinessSolutions = () => {
     return (
         <section className="py-12 bg-white">
 
-            {/* Title Section */}
-            <h2 className="text-7xl  font-extrabold text-[#cc2221] text-center mb-12 mx-auto">
+            {/* Using the Custom Apricots Font */}
+            <h2 className={`text-[60px] lg:text-[90px] text-[#cc2221] text-center mb-12 mx-auto ${apricotsFont.className}`}>
                 World of Metals
             </h2>
             <div className="w-full px-4 sm:px-6 lg:px-10 py-3">

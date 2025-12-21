@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="">
       <div className="relative z-10 container mx-auto px-4 text-center">
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+        <p className="text-[16px] pt-4 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
           MEGA FOUNDRIES | the best industry services
         </p>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -32,7 +32,7 @@ export default function Home() {
             <span className="text-[15px] lg:text-[25px] block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
               Foundries, Forge Shops & Fabricators
             </span>
-            <span className="block mt-2    text-[50px] lg:text-[60px] font-light ">
+            <span className="block mt-2 text-[60px] lg:text-[70px] font-light ">
               Under One Universe
             </span>
           </h1>

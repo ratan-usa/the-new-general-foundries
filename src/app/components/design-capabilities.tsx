@@ -140,7 +140,7 @@ export function DesignCapabilities() {
           {tagLines.map((item) => (
             <div 
               key={item.id} 
-              className="group  flex flex-row   border-b border-r border-zinc-800   overflow-hidden hover:shadow-xl transition-shadow duration-300 min-h-[240px] "
+              className="group  flex flex-row   border border-[#cccccc] shadow-xl  overflow-hidden hover:shadow-none transition-shadow duration-300 min-h-[240px] "
             >
               {/* Left Side: Image (Approx 35% width) */}
               <div className="relative  w-[35%] min-w-[35%] bg-zinc-100">

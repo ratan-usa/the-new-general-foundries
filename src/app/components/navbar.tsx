@@ -298,7 +298,7 @@ const Navbar = () => {
                     <div className="
             w-full md:w-auto 
             overflow-x-auto 
-            pb-2 md:pb-0
+             md:pb-0
             
             /* === SCROLLBAR STYLING === */
             /* Height of the scrollbar */
@@ -315,7 +315,7 @@ const Navbar = () => {
                             {Object.values(menuData).map((section) => (
                                 <MenubarMenu key={section.id}>
                                     <MenubarTrigger className="
-                            flex items-center text-[12px] gap-2 text-[#cc2221] cursor-pointer transition-color font-semibold px-3 py-1.5 rounded-md  
+                            flex items-center text-[10px] gap-2 text-neutral-700 cursor-pointer transition-color font-semibold px-3 py-1.5 rounded-md  
                             hover:text-[#cc2221] hover:bg-red-50
                             focus:bg-red-50 focus:text-[#cc2221]
                             data-[state=open]:bg-red-50 data-[state=open]:text-[#cc2221]
@@ -353,9 +353,9 @@ const Navbar = () => {
                     </div>
 
                     {/* View All Button */}
-                    <div className="flex items-center pl-0 md:pl-2 pt-2 md:pt-0 shrink-0">
-                        <Link href="/category/list" className='text-xs font-semibold text-neutral-700 flex items-center gap-2 hover:text-[#cc2221] transition-colors'>
-                            <Menu className='h-3.5 w-3.5' /> View All Categories
+                    <div className="flex items-center pl-0 md:pl-2  shrink-0">
+                        <Link href="/category/list" className='text-[10px] pb-2 font-semibold text-neutral-700 flex items-center gap-2 hover:text-[#cc2221] transition-colors'>
+                            <Menu className='h-3.5 w-3.5' /> VIEW ALL CATEGORIES
                         </Link>
                     </div>
                 </div>
