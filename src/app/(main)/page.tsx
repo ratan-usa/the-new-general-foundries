@@ -32,7 +32,7 @@ export default function Home() {
             <span className="text-[15px] lg:text-[25px] block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
               Foundries, Forge Shops & Fabricators
             </span>
-            <span className="block mt-2 text-2xl  text-[40px] lg:text-[50px] font-light ">
+            <span className="block mt-2    text-[50px] lg:text-[60px] font-light ">
               Under One Universe
             </span>
           </h1>

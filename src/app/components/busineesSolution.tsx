@@ -30,14 +30,14 @@ const BusinessSolutions = () => {
         <section className="py-12 bg-white">
 
             {/* Title Section */}
-            <h2 className="text-5xl  font-extrabold text-[#cc2221] text-center mb-12 mx-auto">
+            <h2 className="text-7xl  font-extrabold text-[#cc2221] text-center mb-12 mx-auto">
                 World of Metals
             </h2>
             <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
                 {/* Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {services.map((service, index) => (
-                        <div key={index} className="p-6 text-center lg:text-left">
+                        <div key={index} className="p-6 text-start border border-[#cc2221] rounded-2xl">
                             <div className="flex justify-center lg:justify-start mb-4">
                                 {/* The icon in the image uses a red container/base */}
                                 <div className="relative p-2 rounded-full  ">
