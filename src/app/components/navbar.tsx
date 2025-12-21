@@ -152,10 +152,10 @@ const Navbar = () => {
                             <Image src={'/MEGA INDUSTRIES.png'} alt='Canada Foundries' height={120} width={300} className="object-contain h-30 w-30 md:w-90 lg:h-44   " />
                         </Link>
                     </div>
-                    <div className="hidden align-end lg:block shrink-0 items-center space-x-6">
+                    <div className="hidden justify-end lg:block shrink-0 items-center space-x-6">
                         <div>
                             {/* Right Logos Group */}
-                            <div className="hidden lg:flex items-center gap-4">
+                            <div className="hidden lg:flex items-center gap-6 justify-end">
                                 <Link href={'/'} className="shrink-0">
                                     <Image src={'/MEGA MOLDS.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-20 lg:w-20" />
                                 </Link>

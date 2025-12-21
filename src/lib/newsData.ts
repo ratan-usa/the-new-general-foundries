@@ -185,6 +185,11 @@ export const newInnovationData = {
       id: 12,
       title: "AUXILIARY CABLES (CONTROL)",
       videoUrl: "/video/newInnovation/PAM ring mold.mp4",
+    },
+    {
+      id: 13,
+      title: "AUXILIARY CABLES (CONTROL)",
+      videoUrl: "/video/newInnovation/video12.mp4",
     }
   ]
 };
