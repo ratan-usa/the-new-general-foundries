@@ -1,39 +1,88 @@
 'use client'
 import { Button } from '@/components/ui/button';
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { menuData } from '@/lib/menuData2';
-import { ChevronDown, Search } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import React, { useState } from 'react'
 
 const SearchBar = () => {
-    const [selectedCategory, setSelectedCategory] = useState("All Categories");
+    // State to track the selected category ID
+    const [selectedId, setSelectedId] = useState("all");
+
+    // Helper function to get the label of the selected category
+    const getSelectedLabel = () => {
+        if (selectedId === "all") return "All";
+        const category = Object.values(menuData).find((item) => item.id === selectedId);
+        return category ? category.label : "All";
+    };
 
     return (
         <div className="hidden md:flex max-w-xl w-full mx-4 h-10 items-center border border-red-200 rounded-md overflow-hidden bg-white">
 
-            {/* === 1. COMPACT CATEGORY DROPDOWN === */}
-            <div className="relative h-full shrink-0 border-r border-neutral-200 bg-neutral-50/50">
-                <select
+            {/* === 1. CUSTOM DROPDOWN === */}
+            <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                    <button
+                        className="
+                            relative h-full shrink-0 border-r border-red-400 bg-[#cc2221]
+                            pl-3 pr-7 
+                            text-xs font-semibold text-white 
+                            focus:outline-none cursor-pointer 
+                            hover:bg-red-700 
+                            transition-colors
+                            w-[130px] text-left
+                        "
+                    >
+                        <span className="block w-full truncate">
+                            {getSelectedLabel()}
+                        </span>
+                        {/* Chevron Icon */}
+                        <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-white pointer-events-none" />
+                    </button>
+                </DropdownMenuTrigger>
+
+                {/* Dropdown Content - Square Borders */}
+                <DropdownMenuContent
+                    align="start"
                     className="
-                h-full pl-3 pr-7 
-                text-xs font-medium text-neutral-600 
-                bg-transparent 
-                focus:outline-none appearance-none 
-                cursor-pointer 
-                hover:text-[#cc2221] hover:bg-red-50 
-                transition-colors
-                w-[110px] truncate
-            "
-                    defaultValue="all"
+                        w-[200px] max-h-[300px] overflow-y-auto 
+                        bg-white p-0 shadow-lg border border-gray-200 z-[60]
+                        rounded-none 
+                    "
                 >
-                    <option value="all">All</option>
+                    {/* "All" Option */}
+                    <DropdownMenuItem
+                        onClick={() => setSelectedId("all")}
+                        className="
+                            cursor-pointer text-xs font-semibold px-3 py-2 text-neutral-800
+                            rounded-none
+                            focus:bg-[#cc2221] focus:text-white
+                        "
+                    >
+                        All
+                    </DropdownMenuItem>
+
+                    {/* Menu Items */}
                     {Object.values(menuData).map((section) => (
-                        <option key={section.id} value={section.id}>
+                        <DropdownMenuItem
+                            key={section.id}
+                            onClick={() => setSelectedId(section.id)}
+                            className="
+                                cursor-pointer text-xs font-semibold px-3 py-2 text-neutral-800
+                                rounded-none
+                                focus:bg-[#cc2221] focus:text-white
+                            "
+                        >
                             {section.label}
-                        </option>
+                        </DropdownMenuItem>
                     ))}
-                </select>
-                <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-neutral-400 pointer-events-none" />
-            </div>
+                </DropdownMenuContent>
+            </DropdownMenu>
 
             {/* === 2. INPUT === */}
             <input

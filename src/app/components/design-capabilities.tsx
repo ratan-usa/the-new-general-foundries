@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { cn } from "@/lib/utils"
+import { menuData } from "@/lib/menuData2" // 1. Import menuData
 
 // Data modeled after your "Mega Foundries" capabilities
 const tagLines = [
@@ -126,45 +127,62 @@ const tagLines = [
 ];
 
 export function DesignCapabilities() {
+  
+  // 2. Extract all Category Names into a single list
+  const allCategories = Object.values(menuData).flatMap(section => 
+    section.categories.map(cat => cat.name)
+  );
+
   return (
     <section className="w-full py-16 px-4 md:px-8 bg-zinc-50">
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
         
         {/* Section Heading */}
-        <h2 className="text-3xl  md:text-4xl font-bold text-zinc-900 mb-10 border-l-4 border-[#cc2221] pl-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-10 border-l-4 border-[#cc2221] pl-4">
           The Mega Philosophy
         </h2>
 
         {/* The Grid Layout (2 Columns) */}
-        <div className="grid  grid-cols-1  md:grid-cols-2 gap-24">
-          {tagLines.map((item) => (
-            <div 
-              key={item.id} 
-              className="group  flex flex-row   border border-[#cccccc] shadow-xl  overflow-hidden hover:shadow-none transition-shadow duration-300 min-h-[240px] "
-            >
-              {/* Left Side: Image (Approx 35% width) */}
-              <div className="relative  w-[35%] min-w-[35%] bg-zinc-100">
-                <Image
-                  src={item.imgUrl} 
-                  alt={item.lines}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                {/* Optional dark overlay on hover */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-              </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+          {tagLines.map((item, index) => {
+             // 3. Get category name (Loop if we run out of categories)
+             const categoryTitle = allCategories[index % allCategories.length];
 
-              {/* Right Side: Content (Approx 65% width) */}
-              <div className="w-[65%] p-6 flex flex-col justify-center">
-                <h3 className="text-lg md:text-xl font-bold text-zinc-900 mb-3 leading-tight group-hover:text-[#cc2221] transition-colors">
-                  {item.lines}
-                </h3>
-                <p className="text-sm text-zinc-600 leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          ))}
+             return (
+                <div 
+                  key={item.id} 
+                  className="group flex flex-row border border-[#cccccc] shadow-xl overflow-hidden hover:shadow-none transition-shadow duration-300 min-h-[240px] bg-white"
+                >
+                  {/* Left Side: Image (Approx 35% width) */}
+                  <div className="relative w-[35%] min-w-[35%] bg-zinc-100">
+                    <Image
+                      src={item.imgUrl} 
+                      alt={item.lines}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Optional dark overlay on hover */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                  </div>
+
+                  {/* Right Side: Content (Approx 65% width) */}
+                  <div className="w-[65%] p-6 flex flex-col justify-center">
+                    
+                    {/* 4. Display the Category Title (From Menu Data) */}
+                    <span className="text-xs font-bold text-[#cc2221] uppercase tracking-wider mb-2 block">
+                       {categoryTitle}
+                    </span>
+
+                    <h3 className="text-lg md:text-xl font-bold text-zinc-900 mb-3 leading-tight group-hover:text-[#cc2221] transition-colors">
+                      {item.lines}
+                    </h3>
+                    <p className="text-sm text-zinc-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+             );
+          })}
         </div>
       </div>
     </section>
