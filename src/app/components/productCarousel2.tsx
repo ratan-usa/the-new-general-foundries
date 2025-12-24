@@ -39,10 +39,10 @@ export default function AssociationsCarousel() {
   return (
     <section className="w-full py-2 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-4 mb-10 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-blue-700 uppercase tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#cc2221] uppercase tracking-wide">
           Associations & Standards
         </h2>
-        <div className="w-24 h-1 bg-[#cc2221] mx-auto mt-4 rounded-full"></div>
+        {/* <div className="w-24 h-1 bg-[#cc2221] mx-auto mt-4 rounded-full"></div> */}
       </div>
 
       {/* === CAROUSEL WRAPPER === */}
@@ -116,9 +116,9 @@ function LogoCard({ item }: { item: { name: string; src: string } }) {
        <Image 
             src={item.src} 
             alt={item.name} 
-            width={140} 
-            height={70} 
-            className="object-contain max-h-[70px] max-w-[150px] p-2" 
+            width={200} 
+            height={120} 
+            className="object-contain max-h-[120px] max-w-[200px] p-2" 
         />
     </div>
   );
