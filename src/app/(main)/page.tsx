@@ -20,73 +20,83 @@ import AssociationsCarousel from "../components/productCarousel2";
 
 export default function Home() {
   return (
-<div className="">
-  <div className="relative z-10 container mx-auto px-1 text-center">
-    
-    {/* 1. Top Line */}
-    {/* Mobile: 9px | Desktop: 16px (Restored your size) */}
-    <p className="text-[9px] md:text-[16px] pt-4 font-semibold uppercase tracking-widest text-[#cc2221] mb-2 whitespace-nowrap">
-      MEGA FOUNDRIES | the best industry services
-    </p>
-
-    <div className="relative z-10 container mx-auto px-1 text-center">
-
-      {/* 2. Main Heading Wrapper */}
-      {/* Mobile: 14px | Desktop: 40px */}
-      <h1 className="text-[14px] lg:text-[40px] font-bold leading-tight tracking-tight">
+    <div className="">
+<div className="relative w-full overflow-hidden flex items-center justify-center min-h-[500px] md:min-h-[700px]">
         
-        {/* Line 1: Forces one line on mobile */}
-        <span className="block whitespace-nowrap">
-          The World's Largest and Advanced
-        </span>
+        {/* === 1. BACKGROUND VIDEO (Fixed z-0) === */}
+        <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
+        >
+            {/* Replace with your video path */}
+            <source src="/video/282244_small.mp4" type="video/mp4" />
+        </video>
+
+        {/* === 2. RED OVERLAY (Stronger on mobile for readability) === */}
+        <div className="absolute inset-0 bg-[#cc2221]/10 md:bg-[#cc2221]/30 z-0 pointer-events-none" />
         
-        {/* Line 2 */}
-        <span className="block whitespace-nowrap">
-          Consortium of
-        </span>
+        {/* === 3. CONTENT WRAPPER === */}
+        <div className="relative z-10 container mx-auto px-4 py-12 md:py-24 text-center">
+            
+            {/* MOBILE CARD EFFECT: Adds a white glass box on mobile only so text is readable */}
+            <div className="inline-block md:inline w-full md:w-auto bg-white/60 md:bg-transparent backdrop-blur-md md:backdrop-blur-none rounded-xl p-6 md:p-0 shadow-lg md:shadow-none border border-white/50 md:border-none">
 
-        {/* 3. Sub Heading (Foundries...) */}
-        {/* Mobile: 10px | Desktop: 25px */}
-        <span className="block mt-1 lg:mt-2 text-[10px] lg:text-[25px] text-[#cc2221] uppercase tracking-wide drop-shadow-lg whitespace-nowrap">
-          Foundries, Forge Shops & Fabricators
-        </span>
+                {/* Top Label */}
+                <p className="text-[8px] md:text-[16px] font-bold uppercase tracking-widest text-[#cc2221] mb-2 md:mb-4 bg-white/80 md:bg-white/90 px-3 py-2 rounded-full inline-block shadow-sm">
+                    MEGA FOUNDRIES | the best industry services
+                </p>
 
-        {/* 4. Big Heading (Universe) */}
-        {/* Mobile: 24px (Small enough to fit 1 line) | Desktop: 70px (Your original big size) */}
-        <span className="block mt-1 lg:mt-2 text-[24px] lg:text-[70px] font-light whitespace-nowrap">
-          Under One Universe
-        </span>
-      </h1>
+                {/* HEADINGS */}
+                <h1 className="text-gray-800 md:text-white font-bold leading-tight tracking-tight mt-2">
+                    
+                    {/* Line 1 */}
+                    <span className="block text-[18px] md:text-[40px] whitespace-normal md:whitespace-nowrap">
+                        The World's Largest and Advanced
+                    </span>
+                    
+                    {/* Line 2 */}
+                    <span className="block text-[18px] md:text-[40px]">
+                        Consortium of
+                    </span>
 
-      {/* 5. Quote */}
-      {/* Mobile: 14px | Desktop: 22px */}
-      <p className="text-[14px] md:text-[22px] text-[#cc2221] font-medium italic mt-2">
-        "Think Fast and Succeed Faster"
-      </p>
+                    {/* Highlighted Line */}
+                    <span className="block mt-2 text-[10px] py-2 md:text-[28px] text-[#cc2221] uppercase tracking-wide font-black drop-shadow-sm bg-white/50 md:bg-transparent rounded px-2">
+                        Foundries, Forge Shops & Fabricators
+                    </span>
 
-      {/* 6. Buttons */}
-      {/* Mobile: Small padding/text | Desktop: Your original px-10 py-7 text-xl */}
-      <div className="flex flex-col py-4 sm:flex-row items-center justify-center gap-3 mt-4 lg:mt-8">
-        <Button className="w-full sm:w-auto bg-[#cc2221] hover:bg-red-700 text-white rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105 
-          px-6 py-3 text-sm 
-          lg:px-10 lg:py-7 lg:text-xl">
-          Explore Capabilities
-        </Button>
-        
-        <Button variant="outline" className="w-full sm:w-auto text-[#cc2221] border-2 border-[#cc2221] hover:bg-white/10 backdrop-blur-sm 
-          px-6 py-3 text-sm 
-          lg:px-10 lg:py-7 lg:text-xl">
-          <Link href={'/sellerHomepage'}>Succeed With Us</Link>
-        </Button>
-      </div>
+                    {/* Big Finish */}
+                    <span className="block mt-2 text-[28px] md:text-[70px] font-light text-gray-800 md:text-white">
+                        Under One Universe
+                    </span>
+                </h1>
 
+                {/* Quote */}
+                <p className="text-[14px] md:text-[22px] text-[#cc2221] font-medium italic mt-4 mb-6">
+                    "Think Fast and Succeed Faster"
+                </p>
+
+                {/* BUTTONS */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full">
+                    <Button className="w-full sm:w-auto bg-[#cc2221] hover:bg-red-700 text-white rounded-md font-bold shadow-lg md:px-10 md:py-7 md:text-xl">
+                        Explore Capabilities
+                    </Button>
+                    
+                    <Button variant="outline" className="w-full sm:w-auto text-[#cc2221] border-2 border-[#cc2221] bg-white/80 hover:bg-white backdrop-blur-sm md:px-10 md:py-7 md:text-xl">
+                        <Link href={'/sellerHomepage'}>Succeed With Us</Link>
+                    </Button>
+                </div>
+
+                {/* Bottom Text */}
+                <p className="text-[11px] md:text-[18px] text-gray-800 md:text-white mt-6 font-semibold uppercase tracking-wide">
+                    Engage with dedicated experts
+                </p>
+            </div>
+
+        </div>
     </div>
-
-    {/* 7. Bottom Text */}
-    <p className="text-[12px] md:text-[18px] text-gray-700 max-w-4xl mx-auto mb-8 lg:mb-16">
-      Engage with dedicated experts
-    </p>
-  </div> 
       <HeroSection />
       <MegaStories />
       <BusinessSolutions />
@@ -94,7 +104,7 @@ export default function Home() {
       <ChatBlog />
       <ProductCarousel />
       {/* <Taglines /> */}
-      <DesignCapabilities/>
+      <DesignCapabilities />
       <SourcingRequest />
       <EngagementAnalytics />
       <IndustryNews />
