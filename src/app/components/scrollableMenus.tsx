@@ -7,15 +7,22 @@ import React from 'react'
 const ScrollableMenu = () => {
     return (
         <div className="border-t border-neutral-100 bg-neutral-50/50">
-            <div className="w-full px-4 sm:px-6 lg:px-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-2 md:gap-0">
-                {/* Scroll Wrapper */}
-                <div className="w-full md:w-auto overflow-x-auto md:pb-0 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent">
+            {/* Reduced outer padding on mobile (px-2) */}
+            <div className="w-full px-2 sm:px-6 lg:px-10 flex flex-row items-center justify-between gap-2 md:gap-4">
+                
+                {/* Scroll Wrapper: flex-1 ensures it takes available width but allows scrolling */}
+                <div className="flex-1 overflow-x-auto md:pb-0 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:bg-gray-300 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent no-scrollbar">
                     <Menubar className="border-none bg-transparent shadow-none p-0 h-auto flex w-max">
                         {Object.values(menuData).map((section) => (
                             <MenubarMenu key={section.id}>
                                 <MenubarTrigger 
                                     className="
-                                        group flex items-center text-[12px] gap-1.5 text-neutral-700 cursor-pointer transition-colors font-semibold px-3 py-1.5 whitespace-nowrap rounded-none
+                                        group flex items-center 
+                                        text-[10px] md:text-[12px] 
+                                        gap-1 md:gap-1.5 
+                                        text-neutral-700 cursor-pointer transition-colors font-semibold 
+                                        px-2 py-1.5 md:px-3 
+                                        whitespace-nowrap rounded-none
                                         hover:bg-[#cc2221] hover:text-white 
                                         focus:bg-[#cc2221] focus:text-white 
                                         data-[state=open]:bg-[#cc2221] data-[state=open]:text-white
@@ -23,7 +30,7 @@ const ScrollableMenu = () => {
                                 >
                                     <section.icon 
                                         className="
-                                            h-3.5 w-3.5 shrink-0 transition-colors
+                                            h-3 w-3 md:h-3.5 md:w-3.5 shrink-0 transition-colors
                                             text-[#cc2221] 
                                             group-hover:text-white 
                                             group-focus:text-white 
@@ -54,10 +61,13 @@ const ScrollableMenu = () => {
                         ))}
                     </Menubar>
                 </div>
-                {/* View All Button */}
-                <div className="flex items-center pl-0 md:pl-2 shrink-0">
-                    <Link href="/category/list" className='text-[12px] pb-2 font-semibold text-neutral-700 flex items-center gap-2 hover:text-[#cc2221] transition-colors'>
-                        <Menu className='h-3.5 w-3.5' /> VIEW ALL CATEGORIES
+
+                {/* View All Button: Fixed size, shrink-0 prevents it from collapsing */}
+                <div className="flex items-center pl-2 shrink-0 border-l border-gray-200 md:border-none">
+                    <Link href="/category/list" className='text-[10px] md:text-[12px] font-semibold text-neutral-700 flex items-center gap-1.5 hover:text-[#cc2221] transition-colors whitespace-nowrap'>
+                        <Menu className='h-3 w-3 md:h-3.5 md:w-3.5' /> 
+                        <span className="hidden sm:inline">VIEW ALL CATEGORIES</span>
+                        <span className="sm:hidden">VIEW ALL</span>
                     </Link>
                 </div>
             </div>

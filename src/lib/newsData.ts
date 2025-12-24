@@ -190,6 +190,11 @@ export const newInnovationData = {
       id: 13,
       title: "AUXILIARY CABLES (CONTROL)",
       videoUrl: "/video/newInnovation/video12.mp4",
+    },
+    {
+      id: 14,
+      title: "AUXILIARY CABLES (CONTROL)",
+      videoUrl: "/video/newInnovation/USF 600101-A.517.mp4",
     }
   ]
 };

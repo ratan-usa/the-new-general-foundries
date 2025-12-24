@@ -17,17 +17,29 @@ const TopNavbarr = () => {
   return (
     <div className='w-full border-t border-gray-100'>
       <nav className="bg-[#cc2221] text-neutral-200 w-full shadow-md">
-
-        <div className="w-full px-4 sm:px-6 lg:px-10">
-
-          <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center min-h-9 py-2 sm:py-0">
  
+        <div className="w-full px-2 sm:px-6 lg:px-10">
+
+          <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center min-h-[32px] sm:min-h-9 py-1 sm:py-0">
+
             <div className="hidden sm:flex items-center space-x-4"> 
             </div> 
-            <div className="flex flex-wrap justify-center sm:justify-end items-center gap-x-4 gap-y-2 sm:gap-6">
+             
+            <div className="
+                flex flex-nowrap w-full sm:w-auto 
+                justify-between sm:justify-end 
+                items-center 
+                gap-2 sm:gap-6 
+                overflow-x-auto no-scrollbar
+            ">
               {topMenuItems.map((item) => (
                 <Link
-                  className='text-xs hover:text-[#cc2221] transition-colors whitespace-nowrap'
+                  className='
+                    text-[9px] sm:text-xs 
+                    hover:text-white transition-colors 
+                    whitespace-nowrap font-medium
+                    shrink-0
+                  '
                   key={item.label}
                   href={item.href}
                 >

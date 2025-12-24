@@ -32,7 +32,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" href="/apple-touch-icon.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <TopNavbar />
+        <div className="hidden md:block">
+          <TopNavbar />
+        </div>
         <TopNavbarr />
         <Navbar />
         {children}

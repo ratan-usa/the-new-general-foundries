@@ -29,20 +29,35 @@ const SearchBar = () => {
                 <DropdownMenuTrigger asChild>
                     <button
                         className="
-                            relative h-full shrink-0 border-r border-red-400 bg-[#cc2221]
-                            pl-3 pr-7 
-                            text-xs font-semibold text-white 
-                            focus:outline-none cursor-pointer 
-                            hover:bg-red-700 
-                            transition-colors
-                            w-[130px] text-left
-                        "
+        relative h-full shrink-0 
+        pl-3 pr-7 
+        text-xs font-semibold 
+        transition-colors duration-200
+        w-[200px] text-left
+        cursor-pointer focus:outline-none
+
+        /* === NORMAL STATE === */
+        bg-white 
+        text-black 
+        border-r border-[#CCCCCC]
+
+        /* === HOVER STATE === */
+        hover:bg-[#cc2221] 
+        hover:text-white
+        hover:border-[#cc2221]
+    "
                     >
                         <span className="block w-full truncate">
                             {getSelectedLabel()}
                         </span>
-                        {/* Chevron Icon */}
-                        <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-white pointer-events-none" />
+
+                        {/* Chevron Icon: Black normally, turns White on hover via group logic */}
+                        <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-black pointer-events-none transition-colors duration-200" />
+
+                        {/* Note: The icon won't change color automatically unless you add a CSS rule or 
+       use the 'group' class on the button and 'group-hover:text-white' on the icon.
+       See updated Icon line below for the fix:
+    */}
                     </button>
                 </DropdownMenuTrigger>
 
