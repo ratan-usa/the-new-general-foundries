@@ -1,13 +1,13 @@
 import Image from "next/image"
-import { 
-  ArrowRight, 
-  Settings, 
-  Zap, 
-  Hammer, 
-  Anchor, 
-  Droplets, 
-  Cuboid, 
-  Sun, 
+import {
+  ArrowRight,
+  Settings,
+  Zap,
+  Hammer,
+  Anchor,
+  Droplets,
+  Cuboid,
+  Sun,
   Flame,
   Building,
   Bolt,
@@ -21,10 +21,10 @@ import { Card, CardContent } from "@/components/ui/card"
 
 // 1. Your Local Images
 const myImages = [
-  "/assets/image10.jpeg", 
-  "/assets/image1.jpeg",  
-  "/assets/image18.jpeg", 
-  "/assets/image9.jpeg",  
+  "/assets/image10.jpeg",
+  "/assets/image1.jpeg",
+  "/assets/image18.jpeg",
+  "/assets/image9.jpeg",
   "/assets/image11.jpg",
   "/assets/image14.jpeg",
   "/assets/image16.jpg",
@@ -38,7 +38,7 @@ const products = [
     category: "Irrigation",
     brand: "TechnoML",
     price: "View Catalog",
-    isHero: true, 
+    isHero: true,
     icon: Zap,
     image: "/assets/image10.jpeg"
   },
@@ -65,8 +65,7 @@ export function MegaStories() {
 
   return (
     <section className="w-full px-4 md:px-8 py-12 bg-white">
-      
-      {/* Top Section Header (External) */}
+
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-3xl font-bold tracking-tight text-black uppercase border-l-4 border-black pl-4">
           Industrial Marketplace
@@ -79,14 +78,14 @@ export function MegaStories() {
       {/* === INDUSTRIAL BOOKSHELF CONTAINER === */}
       {/* 1. The Outer Frame (Simulates the Shelf Unit) */}
       <div className="border-[6px] border-zinc-800 bg-zinc-50 shadow-2xl relative">
-        
+
         {/* 2. The Horizontal Header (Requested by Client) */}
         <div className="w-full bg-zinc-800 text-white py-4 px-6 mb-6">
           <div className="flex justify-between items-center">
             <h2 className="text-2xl md:text-3xl font-black uppercase tracking-widest">
               VOLUMES 1 - 16
             </h2>
-            <span className="text-zinc-400 font-mono text-sm hidden md:block">
+            <span className="text-zinc-400  text-sm hidden md:block">
               SERIES: FOUNDRY_2025 // SPECS
             </span>
           </div>
@@ -95,48 +94,48 @@ export function MegaStories() {
         {/* 3. The Grid Content (Sitting 'inside' the shelf) */}
         <div className="px-6 pb-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            
+
             {/* === HERO PRODUCT (Volume 1) === */}
             <div className="md:col-span-2 md:row-span-2 h-full min-h-[400px]">
-               <Card className="h-full w-full overflow-hidden group border-2 border-zinc-800 shadow-none relative rounded-none bg-zinc-900 cursor-pointer">
-                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
-                  
-                  <Image
-                    src={heroProduct.image || myImages[0]} 
-                    alt={heroProduct.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
-                  />
-                  
-                  <div className="absolute bottom-0 left-0 p-8 z-20 text-white w-full">
-                    <div className="flex justify-between items-start">
-                        <Badge className="mb-4 bg-orange-600 text-white border-0 text-lg rounded-none px-3">
-                        VOL. 01
-                        </Badge>
-                        <Badge className="mb-4 bg-transparent border border-white/30 text-white hover:bg-white/10">
-                        TOP SELLER
-                        </Badge>
-                    </div>
-                    
-                    <h3 className="text-2xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-md font-mono">
-                      {heroProduct.title}
-                    </h3>
-                    <div className="flex items-center gap-6 text-sm text-gray-300 font-medium border-t border-white/20 pt-4">
-                      <span className="flex items-center gap-2">
-                        <heroProduct.icon className="h-4 w-4 text-orange-500" /> {heroProduct.brand}
-                      </span>
-                      <span className="text-white font-bold">
-                        {heroProduct.price}
-                      </span>
-                    </div>
+              <Card className="h-full w-full overflow-hidden group border-2 border-zinc-800 shadow-none relative rounded-none bg-zinc-900 cursor-pointer">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
+
+                <Image
+                  src={heroProduct.image || myImages[0]}
+                  alt={heroProduct.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
+                />
+
+                <div className="absolute bottom-0 left-0 p-8 z-20 text-white w-full">
+                  <div className="flex justify-between items-start">
+                    <Badge className="mb-4 bg-orange-600 text-white border-0 text-lg rounded-none px-3">
+                      VOL. 01
+                    </Badge>
+                    <Badge className="mb-4 bg-transparent border border-white/30 text-white hover:bg-white/10">
+                      TOP SELLER
+                    </Badge>
                   </div>
-               </Card>
+
+                  <h3 className="text-2xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-md ">
+                    {heroProduct.title}
+                  </h3>
+                  <div className="flex items-center gap-6 text-sm text-gray-300 font-medium border-t border-white/20 pt-4">
+                    <span className="flex items-center gap-2">
+                      <heroProduct.icon className="h-4 w-4 text-orange-500" /> {heroProduct.brand}
+                    </span>
+                    <span className="text-white font-bold">
+                      {heroProduct.price}
+                    </span>
+                  </div>
+                </div>
+              </Card>
             </div>
 
             {/* === GRID ITEMS (Volumes 2-16) === */}
             {gridProducts.map((product, index) => {
               // Cycle images
-              const imageIndex = (index + 1) % myImages.length 
+              const imageIndex = (index + 1) % myImages.length
               const imageSrc = myImages[imageIndex]
               const Icon = product.icon
 
@@ -150,26 +149,26 @@ export function MegaStories() {
                       className="object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
                     />
                     <div className="absolute top-0 left-0 p-2 w-full flex justify-between">
-                       {/* Volume Number Badge */}
-                       <Badge className="bg-zinc-900 text-white rounded-none font-mono text-xs">
-                          VOL. {String(index + 2).padStart(2, '0')}
-                       </Badge>
+                      {/* Volume Number Badge */}
+                      <Badge className="bg-zinc-900 text-white rounded-none  text-xs">
+                        VOL. {String(index + 2).padStart(2, '0')}
+                      </Badge>
                     </div>
                   </div>
-                  
+
                   <CardContent className="flex-1 p-4 flex flex-col justify-between bg-white">
                     <div>
-                      <h4 className="font-bold text-sm md:text-base leading-snug line-clamp-2 text-zinc-800 group-hover:text-orange-600 transition-colors uppercase font-mono">
+                      <h4 className="font-bold text-sm md:text-base leading-snug line-clamp-2 text-zinc-800 group-hover:text-orange-600 transition-colors uppercase ">
                         {product.title}
                       </h4>
                     </div>
                     <div className="flex items-center justify-between text-xs text-muted-foreground mt-3 pt-3 border-t border-zinc-100">
-                        <span className="font-medium text-black flex items-center gap-1">
-                          <Icon className="h-3 w-3" /> {product.brand}
-                        </span>
-                        <span className="font-bold text-black bg-zinc-100 px-2 py-1">
-                          {product.price}
-                        </span>
+                      <span className="font-medium text-black flex items-center gap-1">
+                        <Icon className="h-3 w-3" /> {product.brand}
+                      </span>
+                      <span className="font-bold text-black bg-zinc-100 px-2 py-1">
+                        {product.price}
+                      </span>
                     </div>
                   </CardContent>
                 </Card>
@@ -183,9 +182,9 @@ export function MegaStories() {
       </div>
 
       <div className="mt-12 text-center pb-8">
-         <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-700 min-w-[200px] rounded-none">
-           Download Full Spec Sheet
-         </Button>
+        <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-700 min-w-[200px] rounded-none">
+          Download Full Spec Sheet
+        </Button>
       </div>
     </section>
   )
