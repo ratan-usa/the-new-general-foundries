@@ -34,13 +34,14 @@ const myImages = [
 const products = [
   {
     id: "irrigation_products",
-    title: "Complete Irrigation Systems & Water Control",
+    title: "NEW NEXT GENERATION DESIGNER D-BOXES",
     category: "Irrigation",
     brand: "TechnoML",
     price: "View Catalog",
     isHero: true,
     icon: Zap,
-    image: "/assets/image10.jpeg"
+    image: "/assets/image10.jpeg",
+    video: "/video/NEW NEXT GENERATION DESIGNER D-BOXES.mp4" // <--- Add your video path here
   },
   { id: "earth_moving", title: "Bucket Teeth & Excavator Adaptors", category: "Earth Moving", brand: "HeavyDuty", price: "$450.00", icon: Zap },
   { id: "cathodic", title: "Zinc & Aluminium Sacrificial Anodes", category: "Protection", brand: "MarineSafe", price: "$120.00", icon: Settings },
@@ -98,15 +99,24 @@ export function MegaStories() {
             {/* === HERO PRODUCT (Volume 1) === */}
             <div className="md:col-span-2 md:row-span-2 h-full min-h-[400px]">
               <Card className="h-full w-full overflow-hidden group border-2 border-zinc-800 shadow-none relative rounded-none bg-zinc-900 cursor-pointer">
+
+                {/* Gradient Overlay (Keeps text readable) */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
 
-                <Image
-                  src={heroProduct.image || myImages[0]}
-                  alt={heroProduct.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105 opacity-90"
-                />
+                {/* === REPLACED IMAGE WITH VIDEO === */}
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
+                >
+                  {/* Use heroProduct.video if available, otherwise fallback or use fixed path */}
+                  <source src={heroProduct.video || "/video/NEW NEXT GENERATION DESIGNER D-BOXES.mp4"} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
 
+                {/* Content Wrapper */}
                 <div className="absolute bottom-0 left-0 p-8 z-20 text-white w-full">
                   <div className="flex justify-between items-start">
                     <Badge className="mb-4 bg-orange-600 text-white border-0 text-lg rounded-none px-3">
