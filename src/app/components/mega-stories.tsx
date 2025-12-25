@@ -101,7 +101,7 @@ export function MegaStories() {
               <Card className="h-full w-full overflow-hidden group border-2 border-zinc-800 shadow-none relative rounded-none bg-zinc-900 cursor-pointer">
 
                 {/* Gradient Overlay (Keeps text readable) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10" />
+                <div className="absolute inset-0  z-10" />
 
                 {/* === REPLACED IMAGE WITH VIDEO === */}
                 <video
@@ -109,7 +109,7 @@ export function MegaStories() {
                   loop
                   muted
                   playsInline
-                  className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 "
                 >
                   {/* Use heroProduct.video if available, otherwise fallback or use fixed path */}
                   <source src={heroProduct.video || "/video/NEW NEXT GENERATION DESIGNER D-BOXES.mp4"} type="video/mp4" />
@@ -119,22 +119,22 @@ export function MegaStories() {
                 {/* Content Wrapper */}
                 <div className="absolute bottom-0 left-0 p-8 z-20 text-white w-full">
                   <div className="flex justify-between items-start">
-                    <Badge className="mb-4 bg-orange-600 text-white border-0 text-lg rounded-none px-3">
+                    {/* <Badge className="mb-4 bg-orange-600 text-white border-0 text-lg rounded-none px-3">
                       VOL. 01
-                    </Badge>
-                    <Badge className="mb-4 bg-transparent border border-white/30 text-white hover:bg-white/10">
+                    </Badge> */}
+                    <Badge className="mb-4 bg-transparent border border-white/30 text-gray-800 hover:bg-white/10">
                       TOP SELLER
                     </Badge>
                   </div>
 
-                  <h3 className="text-2xl md:text-4xl font-bold leading-tight mb-4 drop-shadow-md ">
+                  <h3 className="text-2xl md:text-4xl font-bold leading-tight text-gray-800 mb-4 drop-shadow-md ">
                     {heroProduct.title}
                   </h3>
-                  <div className="flex items-center gap-6 text-sm text-gray-300 font-medium border-t border-white/20 pt-4">
+                  <div className="flex items-center gap-6 text-sm text-gray-900 font-medium border-t border-white/20 pt-4">
                     <span className="flex items-center gap-2">
-                      <heroProduct.icon className="h-4 w-4 text-orange-500" /> {heroProduct.brand}
+                      {/* <heroProduct.icon className="h-4 w-4 text-orange-500" /> {heroProduct.brand} */}
                     </span>
-                    <span className="text-white font-bold">
+                    <span className="text-gray-900 font-bold">
                       {heroProduct.price}
                     </span>
                   </div>

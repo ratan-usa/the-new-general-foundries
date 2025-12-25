@@ -57,7 +57,7 @@ export default function LiveStreamCommandCenter() {
             {/* Header / Stats */}
             <div className="w-full text-center mb-8 border-b border-white/10 pb-6">
                 <h1 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500 mb-2 uppercase tracking-tight">
-                    Mega Global Command
+                    MEGA GLOBAL MANUFACTURING NETWORKS
                 </h1>
                 <div className="flex justify-center gap-6 text-xs text-gray-400 font-mono mt-4">
                     <span className="flex items-center gap-1"><span className="text-[#cc2221]">●</span> 54,201 FACTORIES ONLINE</span>

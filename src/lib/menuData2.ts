@@ -973,10 +973,61 @@ export const menuData = {
   irrigation_products: {
     id: 'irrigation_products',
     label: 'IRRIGATION PRODUCTS',
-    icon: Building,
+    icon: Hammer, // or any lucide icon you prefer
     bannerImage: '/assets/image10.jpeg',
-    color: 'bg-[#cc2221] text-white',
-    categories: []
+    color: 'bg-purple-100 text-purple-900',
+    categories: [
+      {
+        name: "Bespoke Casting Solutions",
+        slug: "bespoke-casting-solutions",
+        image: "/assets/image10.jpeg",
+        description:
+          "Tailor-made casting solutions designed to meet unique project requirements and industrial applications.",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video1.mp4",
+        items: [
+          "Custom geometry castings",
+          "Special grade alloy castings",
+          "Rapid prototype castings",
+          "Small-batch / trial cast production"
+        ]
+      },
+      {
+        name: "Precision Machining & Fabrication",
+        slug: "precision-machining-fabrication",
+        image: "/assets/image10.jpeg",
+        description:
+          "High-precision machining and fabrication services engineered for accuracy, strength, and long-term performance.",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video2.mp4",
+        items: []
+      },
+      {
+        name: "OEM / Private Label Manufacturing",
+        slug: "oem-private-label-manufacturing",
+        image: "/assets/image10.jpeg",
+        description:
+          "Custom OEM production services for companies seeking branding, packaging, and dedicated product development.",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video3.mp4",
+        items: []
+      },
+      {
+        name: "Reverse Engineering",
+        slug: "reverse-engineering",
+        image: "/assets/image10.jpeg",
+        description:
+          "Accurate reverse engineering for discontinued, legacy, and rare industrial components.",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video4.mp4",
+        items: []
+      },
+      {
+        name: "Project-Based Manufacturing",
+        slug: "project-based-manufacturing",
+        image: "/assets/image10.jpeg",
+        description:
+          "Turnkey project-based industrial manufacturing tailored to large-scale infrastructure and engineering needs.",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video3.mp4",
+        items: []
+      }
+    ]
   },
   forgings: {
     id: 'forgings',
