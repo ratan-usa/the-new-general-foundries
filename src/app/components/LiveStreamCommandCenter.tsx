@@ -43,7 +43,7 @@ export default function LiveStreamCommandCenter() {
     <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
       
       {/* MAIN LAYOUT GRID */}
-      <div className="container mx-auto px-2 md:px-6 py-6 flex justify-between gap-4 md:gap-8 relative">
+      <div className="w-full mx-auto px-2 md:px-6 py-6 flex justify-between gap-4 md:gap-8 relative">
 
         {/* === LEFT COLUMN: USA LIVE STREAMS === */}
         {/* Hidden on small mobile, visible on lg screens */}
@@ -66,12 +66,12 @@ export default function LiveStreamCommandCenter() {
             </div>
 
             {/* THE INFINITE SCROLL FEED (Your main content) */}
-            <div className="w-full max-w-4xl">
+            <div className="w-full ">
                <InfiniteLiveFeed />
             </div>
 
             {/* Extra Content to enable scrolling */}
-            <div className="w-full max-w-4xl mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="w-full  mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="h-40 bg-neutral-900/50 border border-neutral-800 rounded-lg p-4 flex items-center justify-center text-gray-600">
                     Analytics Graph Placeholder
                 </div>
