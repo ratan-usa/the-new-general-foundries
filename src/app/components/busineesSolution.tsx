@@ -14,7 +14,10 @@ const BusinessSolutions = () => {
         <section className="py-12 bg-white">
             <h2 className={`
     text-[60px] lg:text-[90px] text-center mb-12 mx-auto 
-    bg-[linear-gradient(to_bottom,#cc2221_50%,black_50%)]
+    
+    /* Red (0-49%), Thin White Line (49-51%), Black (51-100%) */
+    bg-[linear-gradient(to_bottom,#cc2221_44%,#ffffff_44%,#ffffff_46%,black_46%)]
+    
     bg-clip-text text-transparent
     ${apricotsFont.className}
 `}>
