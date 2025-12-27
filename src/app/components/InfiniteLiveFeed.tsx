@@ -1,41 +1,38 @@
 'use client';
+import { allFactoryVideos } from '@/lib/videosData';
 import { Play } from 'lucide-react';
-import React, { useEffect, useRef, useState } from 'react';
-
-// 1. Mock Data Generator (Simulating 50,000 factories)
-const generateFactories = (startId: number, count: number) => {
-  return Array.from({ length: count }).map((_, i) => ({
-    id: startId + i,
-    name: `Mega Factory Unit ${startId + i}`,
-    location: i % 2 === 0 ? "Texas, USA" : "Gujarat, India",
-    thumbnail: `/assets/factory${(i % 5) + 1}.jpg`, // Cycles through dummy images
-    isLive: true,
-  }));
-};
-
+import React, { useRef, useState } from 'react';
+ 
 export default function InfiniteLiveFeed() {
-  const [items, setItems] = useState(generateFactories(1, 10)); // Start with 10
+  // 2. State now initializes with the first 10 items from your JSON
+  const [items, setItems] = useState(allFactoryVideos.slice(0, 10));
   const [loading, setLoading] = useState(false);
+  const [hasMore, setHasMore] = useState(true); // Track if we have more data
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // 2. The "Load More" Function
+  // 3. Updated "Load More" Function (Slices from JSON)
   const loadMoreItems = () => {
-    if (loading) return;
+    if (loading || !hasMore) return;
     setLoading(true);
     
-    // Simulate API delay (0.5s)
+    // Simulate network delay for smooth UX (optional, can be removed)
     setTimeout(() => {
-      const newItems = generateFactories(items.length + 1, 10); // Fetch next 10
-      setItems((prev) => [...prev, ...newItems]);
+      const currentLength = items.length;
+      const nextBatch = allFactoryVideos.slice(currentLength, currentLength + 10);
+      
+      if (nextBatch.length === 0) {
+        setHasMore(false); // No more videos in JSON
+      } else {
+        setItems((prev) => [...prev, ...nextBatch]);
+      }
+      
       setLoading(false);
     }, 500);
   };
 
-  // 3. Detect Scroll End (Infinite Scroll Logic)
   const handleScroll = () => {
     if (scrollContainerRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      // If user is near the right edge (within 100px), load more
       if (scrollLeft + clientWidth >= scrollWidth - 100) {
         loadMoreItems();
       }
@@ -45,7 +42,7 @@ export default function InfiniteLiveFeed() {
   return (
     <div className="w-full py-10 bg-neutral-900 border-y border-neutral-800">
       
-      <div className="container mx-auto px-4 mb-4 flex justify-between items-end">
+      <div className=" mx-auto px-4 mb-4 flex justify-between items-end">
         <div>
            <h2 className="text-xl font-bold text-white flex items-center gap-2">
              <span className="relative flex h-3 w-3">
@@ -54,13 +51,12 @@ export default function InfiniteLiveFeed() {
              </span>
              Live Factory Network
            </h2>
-           <p className="text-xs text-gray-400">Showing {items.length} of 50,000+ Streams</p>
+           {/* Show real count from JSON */}
+           <p className="text-xs text-gray-400">Showing {items.length} of {allFactoryVideos.length} Streams</p>
         </div>
-        {/* Visual Cue for Scrolling */}
         <div className="text-xs text-gray-500 hidden md:block">Scroll for more →</div>
       </div>
 
-      {/* 4. Horizontal Scroll Container */}
       <div 
         ref={scrollContainerRef}
         onScroll={handleScroll}
@@ -76,36 +72,43 @@ export default function InfiniteLiveFeed() {
               group cursor-pointer transition-all
             "
           >
-            {/* Lazy Loaded Image (Next.js handles lazy loading automatically) */}
-            {/* For real backend images, use valid src */}
-             <div className="absolute inset-0 bg-neutral-800 flex items-center justify-center text-gray-600 text-xs">
-                Factory Img Placeholder
-             </div>
+            {/* === VIDEO / IMAGE LOGIC === */}
+            {/* If you want autoplaying videos in the feed (like TikTok/Reels style), use <video> */}
+            {/* Otherwise, use an <img> thumbnail for better performance */}
             
-            {/* Overlay Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+            <video
+                muted
+                loop
+                playsInline
+                // Play only on hover to save performance
+                onMouseOver={(e) => e.currentTarget.play()}
+                onMouseOut={(e) => e.currentTarget.pause()}
+                className="absolute inset-0 w-full h-full object-cover"
+                poster={item.thumbnail} // Shows image until video loads/plays
+                src={item.videoUrl} // READS FROM JSON
+            />
+            
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
 
-            {/* Live Badge */}
-            <div className="absolute top-2 right-2 bg-[#cc2221] text-white text-[9px] font-bold px-1.5 py-0.5 rounded">
-              LIVE
-            </div>
+            {item.isLive && (
+                <div className="absolute top-2 right-2 bg-[#cc2221] text-white text-[9px] font-bold px-1.5 py-0.5 rounded z-10">
+                LIVE
+                </div>
+            )}
 
-            {/* Play Button (Appears on Hover) */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
                   <Play className="w-6 h-6 text-white fill-current" />
                </div>
             </div>
 
-            {/* Text Content */}
-            <div className="absolute bottom-3 left-3 right-3">
+            <div className="absolute bottom-3 left-3 right-3 pointer-events-none">
               <h3 className="text-white text-sm font-bold truncate">{item.name}</h3>
               <p className="text-gray-400 text-xs truncate">{item.location}</p>
             </div>
           </div>
         ))}
 
-        {/* Loading Skeleton (Shows while fetching more) */}
         {loading && (
           <div className="shrink-0 w-[280px] h-[180px] flex items-center justify-center">
              <div className="w-6 h-6 border-2 border-[#cc2221] border-t-transparent rounded-full animate-spin"></div>

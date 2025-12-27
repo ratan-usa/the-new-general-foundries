@@ -17,6 +17,7 @@ import { VerticalAccordion } from "../components/VerticalAccordion";
 import { DesignCapabilities } from "../components/design-capabilities";
 import AssociationsCarousel from "../components/productCarousel2";
 import LiveStreamCommandCenter from "../components/LiveStreamCommandCenter";
+import InfiniteLiveFeed from "../components/InfiniteLiveFeed";
 
 
 export default function Home() {
@@ -117,6 +118,8 @@ export default function Home() {
                 videos={newInnovationData.videos}
             />
             <VerticalAccordion />
+            <InfiniteLiveFeed />
+
             <AssociationsCarousel />
         </div>
     );

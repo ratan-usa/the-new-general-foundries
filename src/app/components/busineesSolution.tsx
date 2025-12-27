@@ -1,42 +1,26 @@
 import { Amphora, ChevronsRight, Droplets, Factory, TowerControl } from 'lucide-react';
 import Link from 'next/link';
 import localFont from 'next/font/local'
- // 1. Load the local font file
+import { services } from '@/lib/newsData';
+// 1. Load the local font file
 const apricotsFont = localFont({
     // Go up two levels (../../) to get out of /components and /app, then into /lib/fonts
     // src: '../../lib/fonts/Apricots.otf', 
-    src: '../../lib/fonts/brione-demo.regular.otf', 
+    src: '../../lib/fonts/Horizon.otf',
     display: 'swap',
 })
 const BusinessSolutions = () => {
-    const services = [
-        {
-            icon: TowerControl,
-            title: "METALS & FOUNDRY",
-            description: "Mega Foundries connects businesses with premium foundry metals, castings, and alloy products. Our platform enables seamless sourcing for automotive, construction, engineering, and large-scale industrial manufacturing.",
-        },
-        {
-            icon: Factory,
-            title: "INDUSTRIAL MACHINERY",
-            description: "We provide access to high-performance industrial machinery—from heavy equipment and CNC machines to material handling systems—helping industries scale operations with reliable and quality-certified products.",
-        },
-        {
-            icon: Amphora,
-            title: "STEEL & METAL SUPPLIES",
-            description: "Mega Foundries supports the oil, gas, and petrochemical sectors with equipment, pipelines, valves, and safety systems, ensuring industries meet operational standards and project demands with trusted suppliers.",
-        },
-        {
-            icon: Droplets,
-            title: "WATER & INFRASTRUCTURE",
-            description: "Our platform connects industries with advanced water management, treatment, and infrastructure solutions—supporting sustainable operations for manufacturing plants, municipalities, and engineering projects.",
-        },
-    ];
-
     return (
-        <section className="py-12 bg-white">
-
-            {/* Using the Custom Apricots Font */}
-            <h2 className={`text-[60px] lg:text-[90px] text-[#cc2221] text-center mb-12 mx-auto ${apricotsFont.className}`}>
+        <section className="py-12 bg-gray-900">
+            <h2 className={`
+    text-[60px] lg:text-[90px] text-center mb-12 mx-auto 
+    
+    /* 3-Color Hard Split Gradient */
+    bg-[linear-gradient(to_bottom,#cc2221_33%,#ffffff_33%,#ffffff_66%,black_66%)]
+    
+    bg-clip-text text-transparent
+    ${apricotsFont.className}
+`}>
                 World of Metals
             </h2>
             <div className="w-full px-4 sm:px-6 lg:px-10 py-3">

@@ -1,3 +1,5 @@
+import { Amphora, Droplets, Factory, TowerControl } from "lucide-react";
+
 export const newsArticles = [
   {
     id: 1,
@@ -249,3 +251,26 @@ export const paving_riser = {
     },
   ]
 };
+
+export const services = [
+  {
+    icon: TowerControl,
+    title: "METALS & FOUNDRY",
+    description: "Mega Foundries connects businesses with premium foundry metals, castings, and alloy products. Our platform enables seamless sourcing for automotive, construction, engineering, and large-scale industrial manufacturing.",
+  },
+  {
+    icon: Factory,
+    title: "INDUSTRIAL MACHINERY",
+    description: "We provide access to high-performance industrial machinery—from heavy equipment and CNC machines to material handling systems—helping industries scale operations with reliable and quality-certified products.",
+  },
+  {
+    icon: Amphora,
+    title: "STEEL & METAL SUPPLIES",
+    description: "Mega Foundries supports the oil, gas, and petrochemical sectors with equipment, pipelines, valves, and safety systems, ensuring industries meet operational standards and project demands with trusted suppliers.",
+  },
+  {
+    icon: Droplets,
+    title: "WATER & INFRASTRUCTURE",
+    description: "Our platform connects industries with advanced water management, treatment, and infrastructure solutions—supporting sustainable operations for manufacturing plants, municipalities, and engineering projects.",
+  },
+];
