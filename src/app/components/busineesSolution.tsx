@@ -11,13 +11,10 @@ const apricotsFont = localFont({
 })
 const BusinessSolutions = () => {
     return (
-        <section className="py-12 bg-gray-900">
+        <section className="py-12 bg-white">
             <h2 className={`
     text-[60px] lg:text-[90px] text-center mb-12 mx-auto 
-    
-    /* 3-Color Hard Split Gradient */
-    bg-[linear-gradient(to_bottom,#cc2221_33%,#ffffff_33%,#ffffff_66%,black_66%)]
-    
+    bg-[linear-gradient(to_bottom,#cc2221_50%,black_50%)]
     bg-clip-text text-transparent
     ${apricotsFont.className}
 `}>
