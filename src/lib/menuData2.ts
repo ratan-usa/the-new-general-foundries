@@ -1,4 +1,4 @@
-import { Zap, Factory, Settings, ShieldCheck, Leaf, Sun, Droplets, Gauge, Cog, Anvil, Hammer, Shield, Bolt, Building, Flame, Wrench, Cuboid, Anchor, Snowflake, Boxes, BoxesIcon, Building2, TreePine, TreePineIcon, LocateFixed, LocateFixedIcon, LocateIcon, DropletsIcon } from 'lucide-react';
+import { Zap, Factory, Settings, ShieldCheck, Leaf, Sun, Droplets, Gauge, Cog, Anvil, Hammer, Shield, Bolt, Building, Flame, Wrench, Cuboid, Anchor, Snowflake, Boxes, BoxesIcon, Building2, TreePine, TreePineIcon, LocateFixed, LocateFixedIcon, LocateIcon, DropletsIcon, Cpu } from 'lucide-react';
 export const menuData = {
   construction_castings: {
     id: 'construction_castings',
@@ -2075,7 +2075,102 @@ export const menuData = {
       }
     ]
   }
-  ,
+  ,new_technologies: {
+  id: 'new_technologies',
+  label: 'NEW TECHNOLOGIES',
+  icon: Cpu, // choose any lucide icon you prefer
+  bannerImage: '/assets/new-technologies-banner.jpeg',
+  color: 'bg-teal-100 text-teal-900',
+
+  categories: [
+
+    // 1) Additive Manufacturing / 3D Printing
+    {
+      name: "ADDITIVE MANUFACTURING (3D PRINTING)",
+      slug: "additive-manufacturing-3d-printing",
+      image: "/assets/additive-manufacturing.jpeg",
+      description:
+        "Advanced 3D printing technologies for rapid prototyping, tooling development and low-volume production components.",
+      videoUrl: "/video/additive-manufacturing.mp4",
+      items: [
+        "Metal 3D printed parts",
+        "Polymer 3D components",
+        "Rapid prototype models",
+        "Topology optimized parts",
+        "Custom tooling & fixtures"
+      ]
+    },
+
+    // 2) Digital Foundry & Smart Casting
+    {
+      name: "DIGITAL FOUNDRY & SMART CASTING",
+      slug: "digital-foundry-and-smart-casting",
+      image: "/assets/digital-foundry.jpeg",
+      description:
+        "Industry 4.0-enabled foundry solutions integrating sensors, data analytics and automation for precision casting.",
+      videoUrl: "/video/digital-foundry.mp4",
+      items: [
+        "Mold & core simulation",
+        "Defect prediction systems",
+        "Automated pouring systems",
+        "IIoT-enabled furnaces",
+        "Real-time quality monitoring"
+      ]
+    },
+
+    // 3) Robotics & Automation
+    {
+      name: "ROBOTICS & AUTOMATION",
+      slug: "robotics-and-automation",
+      image: "/assets/industrial-robotics.jpeg",
+      description:
+        "Robotics and automated systems designed to enhance productivity, safety and consistency in manufacturing plants.",
+      videoUrl: "/video/industrial-robotics.mp4",
+      items: [
+        "Robotic welding systems",
+        "Automated handling robots",
+        "Pick & place systems",
+        "Collaborative robots (Cobots)",
+        "Automated inspection robots"
+      ]
+    },
+
+    // 4) AI & Data-Driven Manufacturing
+    {
+      name: "AI & DATA-DRIVEN MANUFACTURING",
+      slug: "ai-and-data-driven-manufacturing",
+      image: "/assets/ai-manufacturing.jpeg",
+      description:
+        "Artificial intelligence and analytics platforms enabling predictive maintenance, defect analytics and smart planning.",
+      videoUrl: "/video/ai-manufacturing.mp4",
+      items: [
+        "Predictive maintenance systems",
+        "Production data analytics",
+        "Machine learning defect detection",
+        "Digital twins for manufacturing",
+        "Energy optimization systems"
+      ]
+    },
+
+    // 5) Advanced Materials & Coatings
+    {
+      name: "ADVANCED MATERIALS & COATINGS",
+      slug: "advanced-materials-and-coatings",
+      image: "/assets/advanced-materials.jpeg",
+      description:
+        "Next-generation high-performance materials and coatings offering improved strength, corrosion resistance and lifespan.",
+      videoUrl: "/video/advanced-materials.mp4",
+      items: [
+        "Wear-resistant coatings",
+        "Thermal barrier coatings",
+        "Nanocomposite materials",
+        "Super alloys",
+        "Corrosion-resistant surface treatments"
+      ]
+    }
+  ]
+}
+,
 
 
 };
