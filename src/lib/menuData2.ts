@@ -1,4 +1,4 @@
-import { Zap, Factory, Settings, ShieldCheck, Leaf, Sun, Droplets, Gauge, Cog, Anvil, Hammer, Shield, Bolt, Building, Flame, Wrench, Cuboid, Anchor, Snowflake, Boxes, BoxesIcon, Building2, TreePine, TreePineIcon, LocateFixed, LocateFixedIcon, LocateIcon, DropletsIcon, Cpu } from 'lucide-react';
+import { Zap, Factory, Settings, ShieldCheck, Droplets, Cog, Hammer, Flame, Wrench, Anchor, Snowflake, Building2, TreePineIcon, LocateIcon, DropletsIcon, Cpu, Shapes, Pickaxe, Truck } from 'lucide-react';
 export const menuData = {
   construction_castings: {
     id: 'construction_castings',
@@ -310,145 +310,185 @@ export const menuData = {
   },
   precast_molds: {
     id: 'precast_molds',
-    label: 'PRECAST MOLDS',
-    icon: BoxesIcon, // pick any lucide icon you like
+    label: 'PRECAST & MOLDS',
+    icon: Shapes, // choose any lucide icon you like
     bannerImage: '/assets/precast-molds-banner.jpeg',
     color: 'bg-orange-100 text-orange-900',
 
     categories: [
 
-      // 1) Precast Concrete Slab Molds
+      // 1) Precast Concrete Molds
       {
-        name: "PRECAST CONCRETE SLAB MOLDS",
-        slug: "precast-concrete-slab-molds",
-        image: "/assets/precast-slab-molds.jpeg",
+        name: "PRECAST CONCRETE MOLDS",
+        slug: "precast-concrete-molds",
+        image: "/assets/precast-concrete-molds.jpeg",
         description:
-          "High-precision molds for producing RCC precast slabs with superior surface finish and dimensional accuracy.",
-        videoUrl: "/video/precast-slab-molds.mp4",
+          "High-precision molds engineered for manufacturing durable, dimensionally accurate precast concrete elements.",
         items: [
-          "Floor slab molds",
-          "Roof slab molds",
-          "Solid slab molds",
-          "Hollow core slab molds",
-          "Prestressed slab molds"
+          "Slab molds",
+          "Beam & column molds",
+          "Retaining block molds",
+          "Foundation molds",
+          "Drain cover molds"
         ]
       },
 
-      // 2) Precast Pipe & Culvert Molds
+      // 2) Precast Road & Highway Molds
       {
-        name: "PRECAST PIPE & CULVERT MOLDS",
-        slug: "precast-pipe-and-culvert-molds",
-        image: "/assets/precast-pipe-molds.jpeg",
+        name: "PRECAST ROAD & HIGHWAY MOLDS",
+        slug: "precast-road-and-highway-molds",
+        image: "/assets/precast-road-molds.jpeg",
         description:
-          "Durable steel molds for manufacturing precast pipes and box culverts used in drainage and sewage infrastructure.",
-        videoUrl: "/video/precast-pipe-molds.mp4",
+          "Molds designed for precast components used in roads, highways, bridges and transportation infrastructure.",
         items: [
-          "RCC hume pipe molds",
-          "Jack pipe molds",
-          "Box culvert molds",
-          "Manhole pipe molds",
-          "Tongue & groove joint molds"
-        ]
-      },
-
-      // 3) Road & Highway Precast Molds
-      {
-        name: "ROAD & HIGHWAY PRECAST MOLDS",
-        slug: "road-and-highway-precast-molds",
-        image: "/assets/road-precast-molds.jpeg",
-        description:
-          "Precast molds designed for transportation infrastructure including highways, bridges and traffic safety systems.",
-        videoUrl: "/video/highway-precast-molds.mp4",
-        items: [
-          "New Jersey barrier molds",
           "Crash barrier molds",
           "Curbstone molds",
           "Bridge girder molds",
-          "Retaining wall panel molds"
+          "Divider molds",
+          "Drain channel molds"
         ]
       },
 
-      // 4) Building Component Precast Molds
+      // 3) Precast Pipe Molds
       {
-        name: "BUILDING COMPONENT PRECAST MOLDS",
-        slug: "building-component-precast-molds",
-        image: "/assets/building-precast-molds.jpeg",
+        name: "PRECAST PIPE MOLDS",
+        slug: "precast-pipe-molds",
+        image: "/assets/precast-pipe-molds.jpeg",
         description:
-          "Molds used for precast structural and architectural components in residential, commercial and industrial buildings.",
-        videoUrl: "/video/building-component-molds.mp4",
+          "Heavy-duty molds for manufacturing RCC and precast concrete pipes with high load-bearing capacity.",
+        items: [
+          "RCC Hume pipe molds",
+          "Box culvert pipe molds",
+          "Jack pipe molds",
+          "Pressure pipe molds",
+          "Manhole pipe molds"
+        ]
+      },
+
+      // 4) Precast Building Components
+      {
+        name: "PRECAST BUILDING COMPONENTS",
+        slug: "precast-building-components",
+        image: "/assets/precast-building-components.jpeg",
+        description:
+          "Molds used for precast elements in residential, commercial and industrial building construction.",
         items: [
           "Wall panel molds",
-          "Beam & column molds",
+          "Floor slab molds",
           "Staircase molds",
           "Balcony & railing molds",
           "Parapet wall molds"
         ]
       },
 
-      // 5) Utility & Municipal Precast Molds
+      // 5) Landscape & Urban Molds
+      {
+        name: "LANDSCAPE & URBAN MOLDS",
+        slug: "landscape-and-urban-molds",
+        image: "/assets/landscape-urban-molds.jpeg",
+        description:
+          "Architectural molds for landscape development, garden structures and city beautification elements.",
+        items: [
+          "Paving block molds",
+          "Planter molds",
+          "Tree guard molds",
+          "Street furniture molds",
+          "Decorative wall molds"
+        ]
+      },
+
+      // 6) Utility & Municipal Precast Molds
       {
         name: "UTILITY & MUNICIPAL PRECAST MOLDS",
         slug: "utility-and-municipal-precast-molds",
-        image: "/assets/utility-precast-molds.jpeg",
+        image: "/assets/municipal-precast-molds.jpeg",
         description:
-          "Precast molds used for smart city and municipal infrastructure applications.",
-        videoUrl: "/video/utility-precast-molds.mp4",
+          "Molds developed for smart city projects, utilities and public infrastructure applications.",
         items: [
           "Manhole cover molds",
-          "Drain channel molds",
-          "Electric cable trench molds",
           "Sewer chamber molds",
-          "Utility vault molds"
+          "Electric cable trench molds",
+          "Utility vault molds",
+          "Drainage component molds"
         ]
       },
 
-      // 6) Landscape & Urban Precast Molds
+      // 7) Wall & Boundary Molds
       {
-        name: "LANDSCAPE & URBAN PRECAST MOLDS",
-        slug: "landscape-and-urban-precast-molds",
-        image: "/assets/landscape-precast-molds.jpeg",
+        name: "WALL & BOUNDRY MOLDS",
+        slug: "wall-and-boundary-molds",
+        image: "/assets/wall-boundary-molds.jpeg",
         description:
-          "Aesthetic molds developed for landscaping projects, gardens, parks, and urban beautification.",
-        videoUrl: "/video/landscape-precast-molds.mp4",
+          "Precast molds for compound walls, fencing and boundary applications offering high strength and fast installation.",
         items: [
-          "Paving block molds",
-          "Tree guard molds",
-          "Planter molds",
-          "Garden bench molds",
-          "Decorative wall panel molds"
+          "Prestressed boundary wall molds",
+          "Post & panel molds",
+          "Fence slab molds",
+          "Gate pillar molds",
+          "Textured wall molds"
         ]
       },
 
-      // 7) Modular Mold Systems
+      // 8) Industrial Precast Molds
       {
-        name: "MODULAR MOLD SYSTEMS",
-        slug: "modular-mold-systems",
+        name: "INDUSTRIAL PRECAST MOLDS",
+        slug: "industrial-precast-molds",
+        image: "/assets/industrial-precast-molds.jpeg",
+        description:
+          "Molds for precast elements used in factories, warehouses, utility buildings and heavy industry projects.",
+        items: [
+          "Machine foundation molds",
+          "Cable tray molds",
+          "Trench cover molds",
+          "Heavy load slab molds",
+          "Industrial column molds"
+        ]
+      },
+
+      // 9) Agriculture Precast Molds
+      {
+        name: "AGRICULTURE PRECAST MOLDS",
+        slug: "agriculture-precast-molds",
+        image: "/assets/agriculture-precast-molds.jpeg",
+        description:
+          "Precast molds designed for agricultural infrastructure and farm development components.",
+        items: [
+          "Irrigation canal molds",
+          "Cattle trough molds",
+          "Cow shed molds",
+          "Farming slab molds",
+          "Agriculture fencing molds"
+        ]
+      },
+
+      // 10) Modular Mold Systems
+      {
+        name: "MODULAR MOLDS SYSTEMS",
+        slug: "modular-molds-systems",
         image: "/assets/modular-molds.jpeg",
         description:
-          "Flexible modular molding systems that reduce production setup time and enable multi-product manufacturing.",
-        videoUrl: "/video/modular-molds.mp4",
+          "Flexible modular mold systems allowing quick size changes and high productivity for multiple product designs.",
         items: [
           "Adjustable shuttering systems",
-          "Steel modular panel molds",
-          "Quick-release locking frames",
-          "Universal mold base frames",
-          "Bolt-tightening systems"
+          "Bolt-lock panel molds",
+          "Universal mold frames",
+          "Quick release systems",
+          "Interchangeable panel molds"
         ]
       },
 
-      // 8) Mold Accessories
+      // 11) Mold Accessories
       {
-        name: "MOLD ACCESSORIES",
-        slug: "mold-accessories",
+        name: "MOLDS ACCESSORIES",
+        slug: "molds-accessories",
         image: "/assets/mold-accessories.jpeg",
         description:
-          "Supporting accessories that enhance mold performance, productivity and product surface quality.",
-        videoUrl: "/video/mold-accessories.mp4",
+          "Accessories that enhance mold performance, surface finish and production efficiency.",
         items: [
-          "Rubber gaskets",
-          "Lifting anchors",
           "Vibration systems",
-          "Rebar positioning inserts",
+          "Lifting anchors",
+          "Rubber gaskets",
+          "Rebar positioning accessories",
           "Surface finishing liners"
         ]
       }
@@ -659,6 +699,129 @@ export const menuData = {
           "Engraved city name / branding",
           "Special coating & finishing",
           "OEM & private-label manufacturing"
+        ]
+      }
+    ]
+  }
+  ,
+  mining_products: {
+    id: 'mining_products',
+    label: 'MINING PRODUCTS',
+    icon: Pickaxe, // pick any lucide icon you like
+    bannerImage: '/assets/mining-products-banner.jpeg',
+    color: 'bg-stone-100 text-stone-900',
+
+    categories: [
+
+      // 1) Crusher Parts
+      {
+        name: "CRUSHER PARTS",
+        slug: "crusher-parts",
+        image: "/assets/crusher-parts.jpeg",
+        description:
+          "High-strength wear parts for jaw, cone and impact crushers designed to withstand extreme abrasion and impact conditions.",
+        items: [
+          "Jaw plates",
+          "Mantles & concaves",
+          "Blow bars",
+          "Liners & cheek plates",
+          "Hammer crusher parts"
+        ]
+      },
+
+      // 2) Screen Panels
+      {
+        name: "SCREEN PANELS",
+        slug: "screen-panels",
+        image: "/assets/screen-panels.jpeg",
+        description:
+          "Screening panels used for separation and classification of minerals and aggregates in mining operations.",
+        items: [
+          "Polyurethane screen panels",
+          "Rubber screen panels",
+          "Wedge wire screens",
+          "Perforated metal screens",
+          "Modular screen decks"
+        ]
+      },
+
+      // 3) Idlers & Rollers
+      {
+        name: "IDLERS & ROLLERS",
+        slug: "idlers-and-rollers",
+        image: "/assets/idlers-rollers.jpeg",
+        description:
+          "Conveyor idlers and rollers engineered for material handling in mines, ports and bulk handling facilities.",
+        items: [
+          "Carrying idlers",
+          "Return rollers",
+          "Impact idlers",
+          "Self-aligning idlers",
+          "Garland idlers"
+        ]
+      },
+
+      // 4) Bits & Drill Rods
+      {
+        name: "BITS & DRILL RODS",
+        slug: "bits-and-drill-rods",
+        image: "/assets/drill-bits.jpeg",
+        description:
+          "Drilling tools suitable for underground, open-cast mining and quarrying applications.",
+        items: [
+          "Button bits",
+          "Taper bits",
+          "DTH hammer bits",
+          "Drill rods",
+          "Shank adaptors"
+        ]
+      },
+
+      // 5) Blocks & Wear Parts
+      {
+        name: "BLOCKS & WEAR PARTS",
+        slug: "blocks-and-wear-parts",
+        image: "/assets/wear-blocks.jpeg",
+        description:
+          "Wear-resistant blocks and liners designed to extend service life of mining and material handling equipment.",
+        items: [
+          "Wear blocks",
+          "Chocky bars",
+          "Wear plates",
+          "Impact liners",
+          "Hardfaced components"
+        ]
+      },
+
+      // 6) Teeth & Adaptors
+      {
+        name: "TEETH & ADAPTORS",
+        slug: "teeth-and-adaptors",
+        image: "/assets/teeth-adaptors.jpeg",
+        description:
+          "Ground engaging tools used on excavators, loaders and buckets for efficient digging and loading.",
+        items: [
+          "Bucket teeth",
+          "Adaptors",
+          "Side cutters",
+          "Ripper teeth",
+          "Tooth pins & retainers"
+        ]
+      },
+
+      // 7) Utility Components
+      {
+        name: "UTILITY COMPONENTS",
+        slug: "utility-components",
+        image: "/assets/mining-utility-components.jpeg",
+        description:
+          "Essential supporting components and accessories used across mining machines and processing plants.",
+        items: [
+          "Bearings housings",
+          "Brackets & frames",
+          "Support structures",
+          "Custom fabricated parts",
+          "General mining hardware"
         ]
       }
     ]
@@ -1203,7 +1366,7 @@ export const menuData = {
         ]
       },
 
-      // 4) Pumping Solutions
+      // 4) Pumping Solution
       {
         name: "PUMPING SOLUTION",
         slug: "pumping-solution",
@@ -1237,7 +1400,7 @@ export const menuData = {
         ]
       },
 
-      // 6) Landscape & Garden Irrigation
+      // 6) Landscape & Garden
       {
         name: "LANDSCAPE & GARDEN",
         slug: "landscape-and-garden",
@@ -1254,7 +1417,7 @@ export const menuData = {
         ]
       },
 
-      // 7) Industrial & Large-Scale Irrigation
+      // 7) Industrial & Large-Scale
       {
         name: "INDUSTRIAL & LARGE-SCALE",
         slug: "industrial-and-large-scale",
@@ -1271,8 +1434,8 @@ export const menuData = {
         ]
       }
     ]
-  }
-  ,
+  },
+
   forgings: {
     id: 'forgings',
     label: 'FORGINGS',
@@ -1477,6 +1640,145 @@ export const menuData = {
           "Riser support castings",
           "Anchor and pile shoe castings",
           "Offshore platform brackets"
+        ]
+      }
+    ]
+  }
+  ,
+  earth_moving_equipments: {
+    id: 'earth_moving_equipments',
+    label: 'EARTH MOVING EQUIPMENTS',
+    icon: Truck, // choose any lucide icon you like
+    bannerImage: '/assets/earth-moving-banner.jpeg',
+    color: 'bg-yellow-100 text-yellow-900',
+
+    categories: [
+
+      // 1) Bucket Teeth & Adaptors
+      {
+        name: "BUCKET TEETH & ADAPTORS",
+        slug: "bucket-teeth-and-adaptors",
+        image: "/assets/bucket-teeth.jpeg",
+        description:
+          "High-strength bucket teeth and adaptors engineered for superior penetration and abrasion resistance in mining and construction operations.",
+        items: [
+          "Standard bucket teeth",
+          "Rock bucket teeth",
+          "Heavy-duty tips",
+          "Adaptors & shanks",
+          "Side cutters & protectors"
+        ]
+      },
+
+      // 2) Cutting Edges & End Bits
+      {
+        name: "CUTTING EDGES & END BITS",
+        slug: "cutting-edges-and-end-bits",
+        image: "/assets/cutting-edges.jpeg",
+        description:
+          "Wear-resistant cutting edges and end bits suitable for loaders, graders, dozers and scrapers.",
+        items: [
+          "Straight cutting edges",
+          "Curved cutting edges",
+          "Bolt-on edges",
+          "Grader blades",
+          "End bits & corner bits"
+        ]
+      },
+
+      // 3) Rollers & Sprockets
+      {
+        name: "ROLLARS & SPROCKETS",
+        slug: "rollers-and-sprockets",
+        image: "/assets/rollers-sprockets.jpeg",
+        description:
+          "Undercarriage rollers and sprockets designed for maximum load capacity and long service life.",
+        items: [
+          "Track rollers",
+          "Carrier rollers",
+          "Idlers",
+          "Drive sprockets",
+          "Segment groups"
+        ]
+      },
+
+      // 4) Couplers & Attachments
+      {
+        name: "COUPLERS & ATTACHEMENTS",
+        slug: "couplers-and-attachments",
+        image: "/assets/couplers-attachments.jpeg",
+        description:
+          "Quick couplers and multi-purpose attachments improving machine productivity across different job applications.",
+        items: [
+          "Hydraulic quick couplers",
+          "Mechanical couplers",
+          "Rippers",
+          "Grapples",
+          "Hydraulic breakers"
+        ]
+      },
+
+      // 5) Hydraulic Cylinder Components
+      {
+        name: "HYDRAULIC CYLINDER COMPONENTS",
+        slug: "hydraulic-cylinder-components",
+        image: "/assets/hydraulic-cylinder.jpeg",
+        description:
+          "Precision hydraulic cylinder components used in excavators, loaders, cranes and dozers.",
+        items: [
+          "Cylinder barrels",
+          "Piston rods",
+          "End caps",
+          "Glands & seals",
+          "Complete hydraulic cylinders"
+        ]
+      },
+
+      // 6) Cab & Body Parts
+      {
+        name: "CAB & BODY PARTS",
+        slug: "cab-and-body-parts",
+        image: "/assets/cab-body-parts.jpeg",
+        description:
+          "Structural and safety cabin components designed for operator comfort and machine durability.",
+        items: [
+          "Operator cabins",
+          "Doors & panels",
+          "Engine hoods",
+          "Fenders & guards",
+          "Canopy structures"
+        ]
+      },
+
+      // 7) Drive Train Components
+      {
+        name: "DRUVE TRAIN COMPONENTS",
+        slug: "drive-train-components",
+        image: "/assets/drive-train.jpeg",
+        description:
+          "Heavy-duty powertrain components ensuring efficient torque transmission and smooth machine operation.",
+        items: [
+          "Transmission housings",
+          "Differential components",
+          "Final drive assemblies",
+          "Axle components",
+          "Gear sets"
+        ]
+      },
+
+      // 8) Undercarriage Components
+      {
+        name: "UNDERCARRIAGE COMPONENTS",
+        slug: "undercarriage-components",
+        image: "/assets/undercarriage-components.jpeg",
+        description:
+          "Complete undercarriage spare parts suitable for excavators, bulldozers and track machines.",
+        items: [
+          "Track chains",
+          "Track shoes",
+          "Track bolts & nuts",
+          "Track frames",
+          "Track adjusters"
         ]
       }
     ]
@@ -1769,7 +2071,6 @@ export const menuData = {
       }
     ]
   }
-
   ,
   snow_plough: {
     id: 'snow_plough',
@@ -1862,6 +2163,176 @@ export const menuData = {
           "Mounting brackets",
           "Control systems",
           "Rubber & polyurethane scraper blades"
+        ]
+      }
+    ]
+  }
+  , metals_alloys: {
+    id: 'metals_alloys',
+    label: 'METALS & ALLOYS',
+    icon: Zap, // choose any lucide icon you prefer
+    bannerImage: '/assets/metals-alloys-banner.jpeg',
+    color: 'bg-slate-100 text-slate-900',
+
+    categories: [
+
+      // 1) Ductile Iron Castings
+      {
+        name: "DUCTILE IRON CASTINGS",
+        slug: "ductile-iron-castings",
+        image: "/assets/ductile-iron-castings.jpeg",
+        description:
+          "High-strength ductile iron castings offering superior toughness and fatigue resistance for industrial applications.",
+        items: [
+          "Valve body castings",
+          "Pump housing castings",
+          "Automotive components",
+          "Gearbox housings",
+          "Heavy machinery parts"
+        ]
+      },
+
+      // 2) High Manganese Steel Parts
+      {
+        name: "HIGH MANGANESE STEEL PARTS",
+        slug: "high-manganese-steel-parts",
+        image: "/assets/high-manganese-castings.jpeg",
+        description:
+          "Wear-resistant high manganese steel components ideal for impact and abrasion environments.",
+        items: [
+          "Crusher jaw plates",
+          "Cone crusher parts",
+          "Liner plates",
+          "Railway crossing parts",
+          "Earthmoving wear parts"
+        ]
+      },
+
+      // 3) Stainless Steel Components
+      {
+        name: "STAINLESS STEEL COMPONENTS",
+        slug: "stainless-steel-components",
+        image: "/assets/stainless-steel-components.jpeg",
+        description:
+          "Corrosion-resistant stainless steel castings and machined parts for process industries and marine environments.",
+        items: [
+          "Valve & pump components",
+          "Food industry parts",
+          "Chemical plant components",
+          "Heat-resistant parts",
+          "Precision engineered components"
+        ]
+      },
+
+      // 4) Alloy Steel Forged Parts
+      {
+        name: "ALLOY STEEL FORGED PARTS",
+        slug: "alloy-steel-forged-parts",
+        image: "/assets/alloy-steel-forged-parts.jpeg",
+        description:
+          "High-strength alloy steel forgings used in power, oil & gas, construction and heavy engineering sectors.",
+        items: [
+          "Forged shafts",
+          "Flanges",
+          "Rings & gears",
+          "Crankshafts",
+          "Heavy forged blocks"
+        ]
+      },
+
+      // 5) Aluminium & Brass Components
+      {
+        name: "ALUMINIUM & BRASS COMPONENTS",
+        slug: "aluminium-and-brass-components",
+        image: "/assets/aluminium-brass-components.jpeg",
+        description:
+          "Lightweight aluminum and brass precision components for electrical, automotive and marine applications.",
+        items: [
+          "Die-cast aluminium parts",
+          "Sand cast brass parts",
+          "Marine components",
+          "Electrical fittings",
+          "Automotive housings"
+        ]
+      },
+
+      // 6) White Iron Castings
+      {
+        name: "WHITE IRON CASTINGS",
+        slug: "white-iron-castings",
+        image: "/assets/white-iron-castings.jpeg",
+        description:
+          "Abrasion-resistant white cast iron parts suitable for high wear applications in mining and cement industries.",
+        items: [
+          "Grinding mill liners",
+          "Chute liners",
+          "Wear plates",
+          "Crusher liners",
+          "Pump parts"
+        ]
+      },
+
+      // 7) Copper & Bronze Precision Parts
+      {
+        name: "COPPER & BRONZE PRECISION PARTS",
+        slug: "copper-and-bronze-precision-parts",
+        image: "/assets/copper-bronze-parts.jpeg",
+        description:
+          "Precision copper and bronze castings with excellent conductivity, wear-resistance and anti-friction properties.",
+        items: [
+          "Bushes & bearings",
+          "Worm gear castings",
+          "Propeller components",
+          "Electrical contact parts",
+          "Sliding wear components"
+        ]
+      },
+
+      // 8) Electrical Component Alloys
+      {
+        name: "ELECTRICAL COMPONENT ALLOYS",
+        slug: "electrical-component-alloys",
+        image: "/assets/electrical-alloys.jpeg",
+        description:
+          "Specialty alloys used in switchgear, transformers and electrical equipment applications.",
+        items: [
+          "Contact tip alloys",
+          "Conductive copper alloys",
+          "Brazing alloys",
+          "Magnetic alloys",
+          "Electrical connector parts"
+        ]
+      },
+
+      // 9) Metal Fabricated Items
+      {
+        name: "METAL FABRICATED ITEMS",
+        slug: "metal-fabricated-items",
+        image: "/assets/metal-fabricated-items.jpeg",
+        description:
+          "Fabricated metal structures and assemblies manufactured through cutting, bending and welding processes.",
+        items: [
+          "Frames & brackets",
+          "Sheet metal enclosures",
+          "Support structures",
+          "Custom welded assemblies",
+          "Industrial fabrications"
+        ]
+      },
+
+      // 10) Pipes, Tubes & Fittings
+      {
+        name: "PIPES, TUBES & FITTINGS",
+        slug: "pipes-tubes-and-fittings",
+        image: "/assets/pipes-tubes-fittings.jpeg",
+        description:
+          "Comprehensive range of metallic pipes, tubes and fittings for fluid transport and structural applications.",
+        items: [
+          "Seamless pipes",
+          "ERW pipes",
+          "Square & rectangular tubes",
+          "Butt-weld fittings",
+          "Forged fittings"
         ]
       }
     ]
@@ -2074,105 +2545,130 @@ export const menuData = {
         ]
       }
     ]
+  },
+  cathodic_protection: {
+    id: 'cathodic_protection',
+    label: 'CATHODIC PROTECTION',
+    icon: ShieldCheck, // choose any lucide icon
+    bannerImage: '/assets/cathodic-protection-banner.jpeg',
+    color: 'bg-orange-100 text-orange-900',
+
+    categories: [
+
+      // 1) Zinc & Aluminium Cast Anodes
+      {
+        name: "ZINC & ALUMINIUM CAST ANODES",
+        slug: "zinc-and-aluminium-cast-anodes",
+        image: "/assets/zinc-aluminium-anodes.jpeg",
+        description:
+          "High-efficiency sacrificial anodes for corrosion protection of pipelines, marine structures and storage tanks.",
+        items: [
+          "Zinc slab anodes",
+          "Aluminium hull anodes",
+          "Pipeline anodes",
+          "Tank anodes",
+          "Hull & ballast tank anodes"
+        ]
+      },
+
+      // 2) Coated Titanium Anodes
+      {
+        name: "COATED TITANIUM ANODES",
+        slug: "coated-titanium-anodes",
+        image: "/assets/coated-titanium-anodes.jpeg",
+        description:
+          "Mixed metal oxide coated titanium anodes designed for impressed current cathodic protection systems.",
+        items: [
+          "MMO coated anodes",
+          "Ribbon mesh anodes",
+          "Tubular titanium anodes",
+          "Disc & plate anodes",
+          "Deep well anodes"
+        ]
+      },
+
+      // 3) Magnesium Anodes
+      {
+        name: "MAGNESIUM ANODES",
+        slug: "magnesium-anodes",
+        image: "/assets/magnesium-anodes.jpeg",
+        description:
+          "High-potential magnesium sacrificial anodes for underground steel structures and buried pipelines.",
+        items: [
+          "Cast magnesium anodes",
+          "High potential anodes",
+          "Pre-packaged magnesium anodes",
+          "Water heater anodes",
+          "Underground tank anodes"
+        ]
+      },
+
+      // 4) Transformers & Rectifiers
+      {
+        name: "TRANSFORMERS & RECTIFIERS",
+        slug: "transformers-and-rectifiers",
+        image: "/assets/transformer-rectifier.jpeg",
+        description:
+          "Impressed current cathodic protection power supply equipment ensuring accurate DC output and reliability.",
+        items: [
+          "Oil cooled rectifiers",
+          "Air cooled rectifiers",
+          "Automatic controlled TR units",
+          "Solar powered rectifiers",
+          "Digital monitoring rectifiers"
+        ]
+      },
+
+      // 5) Junction Boxes
+      {
+        name: "JUNCTION BOXES",
+        slug: "junction-boxes",
+        image: "/assets/junction-boxes.jpeg",
+        description:
+          "Junction boxes for current distribution, test stations and monitoring connections in CP systems.",
+        items: [
+          "Positive junction boxes",
+          "Negative junction boxes",
+          "Drain point boxes",
+          "Current regulating boxes",
+          "Bond boxes"
+        ]
+      },
+
+      // 6) Monitoring Equipments
+      {
+        name: "MONITORING EQUIPMENTS",
+        slug: "monitoring-equipments",
+        image: "/assets/monitoring-equipment.jpeg",
+        description:
+          "Monitoring systems for measuring potential, current output and performance of cathodic protection networks.",
+        items: [
+          "Reference electrodes",
+          "Test stations",
+          "Remote monitoring systems",
+          "Data loggers",
+          "Portable CP meters"
+        ]
+      },
+
+      // 7) Cables & Wiring Systems
+      {
+        name: "CALES & WIRING SYSTEMS",
+        slug: "cables-and-wiring-systems",
+        image: "/assets/cables-wiring.jpeg",
+        description:
+          "Special corrosion-resistant cables and wiring accessories for underground and marine CP applications.",
+        items: [
+          "HMWPE cables",
+          "XLPE/PVC cables",
+          "Anode header cables",
+          "Splicing kits",
+          "Cable connectors & seals"
+        ]
+      }
+    ]
   }
-  ,new_technologies: {
-  id: 'new_technologies',
-  label: 'NEW TECHNOLOGIES',
-  icon: Cpu, // choose any lucide icon you prefer
-  bannerImage: '/assets/new-technologies-banner.jpeg',
-  color: 'bg-teal-100 text-teal-900',
-
-  categories: [
-
-    // 1) Additive Manufacturing / 3D Printing
-    {
-      name: "ADDITIVE MANUFACTURING (3D PRINTING)",
-      slug: "additive-manufacturing-3d-printing",
-      image: "/assets/additive-manufacturing.jpeg",
-      description:
-        "Advanced 3D printing technologies for rapid prototyping, tooling development and low-volume production components.",
-      videoUrl: "/video/additive-manufacturing.mp4",
-      items: [
-        "Metal 3D printed parts",
-        "Polymer 3D components",
-        "Rapid prototype models",
-        "Topology optimized parts",
-        "Custom tooling & fixtures"
-      ]
-    },
-
-    // 2) Digital Foundry & Smart Casting
-    {
-      name: "DIGITAL FOUNDRY & SMART CASTING",
-      slug: "digital-foundry-and-smart-casting",
-      image: "/assets/digital-foundry.jpeg",
-      description:
-        "Industry 4.0-enabled foundry solutions integrating sensors, data analytics and automation for precision casting.",
-      videoUrl: "/video/digital-foundry.mp4",
-      items: [
-        "Mold & core simulation",
-        "Defect prediction systems",
-        "Automated pouring systems",
-        "IIoT-enabled furnaces",
-        "Real-time quality monitoring"
-      ]
-    },
-
-    // 3) Robotics & Automation
-    {
-      name: "ROBOTICS & AUTOMATION",
-      slug: "robotics-and-automation",
-      image: "/assets/industrial-robotics.jpeg",
-      description:
-        "Robotics and automated systems designed to enhance productivity, safety and consistency in manufacturing plants.",
-      videoUrl: "/video/industrial-robotics.mp4",
-      items: [
-        "Robotic welding systems",
-        "Automated handling robots",
-        "Pick & place systems",
-        "Collaborative robots (Cobots)",
-        "Automated inspection robots"
-      ]
-    },
-
-    // 4) AI & Data-Driven Manufacturing
-    {
-      name: "AI & DATA-DRIVEN MANUFACTURING",
-      slug: "ai-and-data-driven-manufacturing",
-      image: "/assets/ai-manufacturing.jpeg",
-      description:
-        "Artificial intelligence and analytics platforms enabling predictive maintenance, defect analytics and smart planning.",
-      videoUrl: "/video/ai-manufacturing.mp4",
-      items: [
-        "Predictive maintenance systems",
-        "Production data analytics",
-        "Machine learning defect detection",
-        "Digital twins for manufacturing",
-        "Energy optimization systems"
-      ]
-    },
-
-    // 5) Advanced Materials & Coatings
-    {
-      name: "ADVANCED MATERIALS & COATINGS",
-      slug: "advanced-materials-and-coatings",
-      image: "/assets/advanced-materials.jpeg",
-      description:
-        "Next-generation high-performance materials and coatings offering improved strength, corrosion resistance and lifespan.",
-      videoUrl: "/video/advanced-materials.mp4",
-      items: [
-        "Wear-resistant coatings",
-        "Thermal barrier coatings",
-        "Nanocomposite materials",
-        "Super alloys",
-        "Corrosion-resistant surface treatments"
-      ]
-    }
-  ]
-}
-,
-
-
+  
 };
 export type FooterLink = { label: string; href: string };
 

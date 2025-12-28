@@ -23,7 +23,7 @@ export default function FloatingQuoteBtn() {
         className="group flex items-center gap-3 bg-[#cc2221] text-white px-6 py-4 rounded-full shadow-[0_4px_14px_0_rgba(204,34,33,0.39)] hover:shadow-[0_6px_20px_rgba(204,34,33,0.23)] hover:bg-red-700 transition-all duration-300 transform hover:-translate-y-1"
       >
         <MessageSquareText className="w-5 h-5 animate-pulse" />
-        <span className="font-bold text-lg tracking-wide">Meet your Manager</span>
+        <span className="font-bold text-lg tracking-wide">Meet your dedicated foundry man</span>
       </Link>
     </div>
   );

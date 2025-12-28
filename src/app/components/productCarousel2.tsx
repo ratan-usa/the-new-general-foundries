@@ -28,7 +28,7 @@ const row2 = [
   { name: "Standard", src: "/ProductCarousels/sized/nj copy.JPG" },
   { name: "Standard", src: "/ProductCarousels/sized/ny state copy.JPG"},
   { name: "Standard", src: "/ProductCarousels/sized/ny.JPG" },
-  { name: "Standard", src: "/ProductCarousels/sized/penn copy.JPG" },
+  // { name: "Standard", src: "/ProductCarousels/sized/penn copy.JPG" },
   { name: "Standard", src: "/ProductCarousels/sized/PennDOT-Logo.png" },
   { name: "Standard", src: "/ProductCarousels/sized/RIDOT.jpg" },
   { name: "Standard", src: "/ProductCarousels/sized/suffolk copy.JPG" },

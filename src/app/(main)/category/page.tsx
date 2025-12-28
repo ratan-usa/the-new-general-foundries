@@ -9,14 +9,14 @@ import { Button } from '@/components/ui/button';
 import { menuData } from '@/lib/menuData2';
 
 export default function CategoryList() {
- 
+
     const categories = Object.values(menuData);
-    console.log('Categories:-wise', categories);
+    // console.log('Categories:-wise', categories);
 
     return (
         <div className="min-h-screen bg-white py-8">
  
-            <div className="w-full px-4 sm:px-6 lg:px-10  mx-auto">
+            <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
                 <p className="text-sm font-bold text-gray-700">
                     <Link href={'/'} className="hover:text-[#cc2221]">Home</Link>
                     <span className="mx-2">/</span>
