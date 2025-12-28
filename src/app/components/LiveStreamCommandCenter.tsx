@@ -2,6 +2,7 @@
 import { Play } from 'lucide-react';
 import React from 'react';
 import InfiniteLiveFeed from './InfiniteLiveFeed'; // Your existing center feed
+import FixedQuoteBtn from './FixedQuoteBtn';
 
 // --- HELPER COMPONENT: Side Video Player ---
 const SideStreamPlayer = ({
@@ -81,7 +82,7 @@ export default function LiveStreamCommandCenter() {
             videoSrc2="/video/video2.mp4"
           />
         </aside>
-
+        <FixedQuoteBtn />
         {/* === CENTER COLUMN: MEGA FOUNDRIES FEED === */}
         <main className="flex-1 min-w-0 flex flex-col items-center">
 
