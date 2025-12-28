@@ -90,9 +90,13 @@ export default function LiveStreamCommandCenter() {
             <h1 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500 mb-2 uppercase tracking-tight">
               MEGA GLOBAL MANUFACTURING NETWORK
             </h1>
+
             <div className="flex justify-center gap-6 text-xs text-gray-400 font-mono mt-4">
-              <span className="flex items-center gap-1"><span className="text-[#cc2221]">●</span> 54,201 FACTORIES ONLINE</span>
+              <span className="flex items-center gap-1 "><span className="text-[#cc2221]">●</span> 54,201 FACTORIES <div className="text-[#cc2221]">ONLINE</div> </span>
               <span className="flex items-center gap-1"><span className="text-green-500">●</span> 98.4% UPTIME</span>
+            </div>
+            <div className="flex justify-center gap-6 text-xs text-gray-400 mt-4">
+              <span className="text-xl md:text-2xl font-bold  bg-clip-text text-[#cc2221] mb-2 uppercase tracking-tight">FOLLOW YOUR PRODUCT BEING BORN & DELIVERED TO YOU LIVE(PRE-REGISTRATION REQUIRED) </span>
             </div>
           </div>
 
@@ -103,106 +107,106 @@ export default function LiveStreamCommandCenter() {
 
           {/* === DASHBOARD WIDGETS === */}
           <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
-            
+
             {/* 1. ANALYTICS GRAPH (Simulated Line Chart) */}
-            <div className="h-40 bg-neutral-900/50 border border-neutral-800 rounded-lg p-5 relative overflow-hidden group hover:border-[#cc2221]/50 transition-colors">
-               <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider">Overall Efficiency</h3>
-                    <p className="text-2xl font-bold text-white mt-1">94.2% <span className="text-green-500 text-xs">▲ 2.4%</span></p>
-                  </div>
-                  <div className="p-1.5 bg-green-500/10 rounded text-green-500">
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                  </div>
-               </div>
-               {/* CSS/SVG Line Chart */}
-               <div className="absolute bottom-0 left-0 right-0 h-16 opacity-50">
-                  <svg className="w-full h-full" viewBox="0 0 100 20" preserveAspectRatio="none">
-                     <path d="M0 15 Q 10 5, 20 12 T 40 10 T 60 5 T 80 12 T 100 8 L 100 20 L 0 20 Z" fill="url(#gradient)" />
-                     <path d="M0 15 Q 10 5, 20 12 T 40 10 T 60 5 T 80 12 T 100 8" fill="none" stroke="#cc2221" strokeWidth="0.5" />
-                     <defs>
-                        <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
-                           <stop offset="0%" stopColor="#cc2221" stopOpacity="0.4"/>
-                           <stop offset="100%" stopColor="#cc2221" stopOpacity="0"/>
-                        </linearGradient>
-                     </defs>
-                  </svg>
-               </div>
+            <div className="h-40 bg-neutral-900/50 border border-[#cc2221] rounded-lg p-5 relative overflow-hidden group hover:border-[#cc2221]/50 transition-colors">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider">Overall Efficiency</h3>
+                  <p className="text-2xl font-bold text-white mt-1">94.2% <span className="text-green-500 text-xs">▲ 2.4%</span></p>
+                </div>
+                <div className="p-1.5 bg-green-500/10 rounded text-green-500">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                </div>
+              </div>
+              {/* CSS/SVG Line Chart */}
+              <div className="absolute bottom-0 left-0 right-0 h-16 opacity-50">
+                <svg className="w-full h-full" viewBox="0 0 100 20" preserveAspectRatio="none">
+                  <path d="M0 15 Q 10 5, 20 12 T 40 10 T 60 5 T 80 12 T 100 8 L 100 20 L 0 20 Z" fill="url(#gradient)" />
+                  <path d="M0 15 Q 10 5, 20 12 T 40 10 T 60 5 T 80 12 T 100 8" fill="none" stroke="#cc2221" strokeWidth="0.5" />
+                  <defs>
+                    <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="#cc2221" stopOpacity="0.4" />
+                      <stop offset="100%" stopColor="#cc2221" stopOpacity="0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
             </div>
 
             {/* 2. PRODUCTION OUTPUT (Progress Bars) */}
-            <div className="h-40 bg-neutral-900/50 border border-neutral-800 rounded-lg p-5 flex flex-col justify-between hover:border-[#cc2221]/50 transition-colors">
-               <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider">Daily Production</h3>
-               
-               <div className="space-y-3">
-                  {/* Item 1 */}
-                  <div>
-                    <div className="flex justify-between text-xs mb-1">
-                       <span className="text-gray-300">Steel Castings</span>
-                       <span className="text-white font-mono">1,240 / 1,500</span>
-                    </div>
-                    <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
-                       <div className="bg-[#cc2221] h-full rounded-full w-[82%]"></div>
-                    </div>
+            <div className="h-40 bg-neutral-900/50 border border-[#cc2221] rounded-lg p-5 flex flex-col justify-between hover:border-[#cc2221]/50 transition-colors">
+              <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider">Daily Production</h3>
+
+              <div className="space-y-3">
+                {/* Item 1 */}
+                <div>
+                  <div className="flex justify-between text-xs mb-1">
+                    <span className="text-gray-300">Steel Castings</span>
+                    <span className="text-white font-mono">1,240 / 1,500</span>
                   </div>
-                  {/* Item 2 */}
-                  <div>
-                    <div className="flex justify-between text-xs mb-1">
-                       <span className="text-gray-300">Iron Forgings</span>
-                       <span className="text-white font-mono">850 / 900</span>
-                    </div>
-                    <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
-                       <div className="bg-orange-500 h-full rounded-full w-[94%]"></div>
-                    </div>
+                  <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                    <div className="bg-[#cc2221] h-full rounded-full w-[82%]"></div>
                   </div>
-               </div>
+                </div>
+                {/* Item 2 */}
+                <div>
+                  <div className="flex justify-between text-xs mb-1">
+                    <span className="text-gray-300">Iron Forgings</span>
+                    <span className="text-white font-mono">850 / 900</span>
+                  </div>
+                  <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                    <div className="bg-orange-500 h-full rounded-full w-[94%]"></div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* 3. ENERGY CONSUMPTION (Gauge/Stats) */}
-            <div className="h-40 bg-neutral-900/50 border border-neutral-800 rounded-lg p-5 hover:border-[#cc2221]/50 transition-colors">
-               <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-4">Grid Load</h3>
-               <div className="flex items-center gap-4">
-                  {/* Circular "Gauge" using CSS borders */}
-                  <div className="relative w-16 h-16 rounded-full border-4 border-neutral-800 flex items-center justify-center">
-                     <div className="absolute inset-0 border-4 border-[#cc2221] rounded-full border-l-transparent border-b-transparent rotate-45"></div>
-                     <span className="text-xs font-bold text-white">78%</span>
-                  </div>
-                  <div className="space-y-1">
-                     <p className="text-sm text-gray-300">Current Usage</p>
-                     <p className="text-xl font-bold text-white">42.5 <span className="text-sm font-normal text-gray-500">MW</span></p>
-                     <p className="text-[10px] text-green-500">● Optimal Range</p>
-                  </div>
-               </div>
+            <div className="h-40 bg-neutral-900/50 border border-[#cc2221] rounded-lg p-5 hover:border-[#cc2221]/50 transition-colors">
+              <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-4">Grid Load</h3>
+              <div className="flex items-center gap-4">
+                {/* Circular "Gauge" using CSS borders */}
+                <div className="relative w-16 h-16 rounded-full border-4 border-neutral-800 flex items-center justify-center">
+                  <div className="absolute inset-0 border-4 border-[#cc2221] rounded-full border-l-transparent border-b-transparent rotate-45"></div>
+                  <span className="text-xs font-bold text-white">78%</span>
+                </div>
+                <div className="space-y-1">
+                  <p className="text-sm text-gray-300">Current Usage</p>
+                  <p className="text-xl font-bold text-white">42.5 <span className="text-sm font-normal text-gray-500">MW</span></p>
+                  <p className="text-[10px] text-green-500">● Optimal Range</p>
+                </div>
+              </div>
             </div>
 
             {/* 4. LOGISTICS MAP (Dot Simulation) */}
-            <div className="h-40 bg-neutral-900/50 border border-neutral-800 rounded-lg p-5 relative overflow-hidden hover:border-[#cc2221]/50 transition-colors">
-               <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider relative z-10">Active Shipments</h3>
-               
-               {/* Fake Map Dots */}
-               <div className="absolute inset-0 opacity-30">
-                  {/* Grid Pattern Background */}
-                  <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#333 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
-               </div>
+            <div className="h-40 bg-neutral-900/50 border border-[#cc2221] rounded-lg p-5 relative overflow-hidden hover:border-[#cc2221]/50 transition-colors">
+              <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider relative z-10">Active Shipments</h3>
 
-               {/* Pulsing Dots (Ships/Trucks) */}
-               <div className="absolute top-1/2 left-1/4">
-                  <span className="absolute inline-flex h-3 w-3 rounded-full bg-blue-500 opacity-75 animate-ping"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
-               </div>
-               <div className="absolute top-1/3 right-1/4">
-                  <span className="absolute inline-flex h-3 w-3 rounded-full bg-blue-500 opacity-75 animate-ping delay-700"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
-               </div>
-               <div className="absolute bottom-1/3 left-1/2">
-                  <span className="absolute inline-flex h-3 w-3 rounded-full bg-blue-500 opacity-75 animate-ping delay-300"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
-               </div>
+              {/* Fake Map Dots */}
+              <div className="absolute inset-0 opacity-30">
+                {/* Grid Pattern Background */}
+                <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(#333 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+              </div>
 
-               <div className="absolute bottom-4 left-5 z-10">
-                  <p className="text-2xl font-bold text-white">1,892</p>
-                  <p className="text-[10px] text-gray-400">In Transit Global</p>
-               </div>
+              {/* Pulsing Dots (Ships/Trucks) */}
+              <div className="absolute top-1/2 left-1/4">
+                <span className="absolute inline-flex h-3 w-3 rounded-full bg-blue-500 opacity-75 animate-ping"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
+              </div>
+              <div className="absolute top-1/3 right-1/4">
+                <span className="absolute inline-flex h-3 w-3 rounded-full bg-blue-500 opacity-75 animate-ping delay-700"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
+              </div>
+              <div className="absolute bottom-1/3 left-1/2">
+                <span className="absolute inline-flex h-3 w-3 rounded-full bg-blue-500 opacity-75 animate-ping delay-300"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-400"></span>
+              </div>
+
+              <div className="absolute bottom-4 left-5 z-10">
+                <p className="text-2xl font-bold text-white">1,892</p>
+                <p className="text-[10px] text-gray-400">In Transit Global</p>
+              </div>
             </div>
 
           </div>

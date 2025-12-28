@@ -11,7 +11,7 @@ const topMenuItems = [
   { label: 'HR', href: '/hr' },
   { label: 'Mega Foundation', href: '/mega-foundation' },
   { label: 'Metal Price Index', href: '/materials' },
-  { label: 'New Technology', href: '/new-technology' },
+  { label: 'New Technologies', href: '/new-technologies' },
 ];
 
 const TopNavbarr = () => {

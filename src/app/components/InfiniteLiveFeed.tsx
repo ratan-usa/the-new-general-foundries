@@ -40,7 +40,7 @@ export default function InfiniteLiveFeed() {
   };
 
   return (
-    <div className="w-full py-10 bg-neutral-900 border-y border-neutral-800">
+    <div className="w-full py-10 bg-neutral-900 border-y border-[#cc2221]">
       
       <div className=" mx-auto px-4 mb-4 flex justify-between items-end">
         <div>
