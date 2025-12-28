@@ -199,7 +199,6 @@ export const menuData = {
       }
     ]
   },
-
   trench_products: {
     id: 'trench_products',
     label: 'TRENCH PRODUCTS',

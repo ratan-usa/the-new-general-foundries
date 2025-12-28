@@ -3,13 +3,20 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronRight, ArrowLeft } from 'lucide-react';
-import { menuData } from '@/lib/menuData2'; // Ensure this path is correct
 import CategoryProductLinks from '../CategoryProductLinks';
 import HotProductVideos from '../HotProductVideos';
 import IndustryNews from '../../news/IndustryNews';
 import { hotProductsData } from '@/lib/newsData';
+import { menuData } from '@/lib/menuData2';
 
-// --- HELPER FUNCTIONS ---
+export interface Category {
+  name: string;
+  slug: string;
+  image: string;
+  description: string;
+  items: string[];
+  videoUrl?: string; 
+}
 
 function getMainCategory(slug: string) {
   return Object.values(menuData).find((cat) => cat.id === slug);
@@ -26,10 +33,11 @@ function getSubCategory(slug: string) {
         title: subCat.name,
         description: subCat.description,
         parent: mainCat.label,
-        parentId: mainCat.id, // We need this ID to find siblings
+        parentId: mainCat.id,
         items: subCat.items,
         image: subCat.image,
-        videoUrl: subCat.videoUrl,
+        // FIX 1: Cast to 'any' to bypass the error here
+        videoUrl: (subCat as any).videoUrl,
       };
     }
   }
@@ -48,8 +56,6 @@ export default async function CategoryDetailPage({ params }: PageProps) {
   const mainCategory = getMainCategory(slug);
 
   if (mainCategory) {
-    // 
-    // ... (Your Main Category Render Logic - kept same as before) ...
     return (
       <div className="min-h-screen bg-white w-full px-4 sm:px-6 lg:px-10 py-3">
         {/* Banner Section */}
@@ -117,21 +123,20 @@ export default async function CategoryDetailPage({ params }: PageProps) {
   const subCategoryData = getSubCategory(slug);
 
   if (subCategoryData) {
-    // ✅ NEW LOGIC: Get ALL videos from the parent category
+    // New logic to find parent for videos
     const parentCategory = Object.values(menuData).find(cat => cat.id === subCategoryData.parentId);
     
-    // Create the list of ALL videos in this main category
     const allRelatedVideos = parentCategory 
       ? parentCategory.categories
-          .filter(cat => cat.videoUrl) // Only include items that have a video
+          // FIX 2: Cast 'cat' to any here to check for videoUrl
+          .filter(cat => (cat as any).videoUrl) 
           .map((cat, index) => ({
             id: index,
             title: cat.name,
-            videoUrl: cat.videoUrl
+            // FIX 3: Cast 'cat' to any here to access videoUrl
+            videoUrl: (cat as any).videoUrl 
           }))
       : []; 
-      // If parent not found (rare), fallback to just the current video
-      // : [{ id: 1, title: subCategoryData.title, videoUrl: subCategoryData.videoUrl }];
 
     return (
       <div className="min-h-screen bg-gray-50 py-12">
@@ -187,7 +192,6 @@ export default async function CategoryDetailPage({ params }: PageProps) {
 
           <CategoryProductLinks items={subCategoryData.items} />
           
-          {/* ✅ VIDEO SECTION UPDATED: Passes ALL videos from the parent category */}
           <HotProductVideos
             title={hotProductsData.title}
             videos={allRelatedVideos} 
