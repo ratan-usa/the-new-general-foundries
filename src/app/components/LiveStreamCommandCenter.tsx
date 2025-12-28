@@ -25,7 +25,6 @@ const SideStreamPlayer = ({
         <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span> LIVE
       </div>
 
-      {/* ACTUAL VIDEO TAG */}
       <video
         autoPlay
         loop
@@ -43,9 +42,9 @@ const SideStreamPlayer = ({
     </div>
 
     {/* === Video Container 2 (Bottom) === */}
-    <div className={`relative w-full h-1/2 bg-black rounded-xl overflow-hidden border border-neutral-800 opacity-80 hover:opacity-100 transition-opacity`}>
+    {/* UPDATED: Added border-2, dynamic color border, and shadow to match the top video */}
+    <div className={`relative w-full h-1/2 bg-black rounded-xl overflow-hidden border-2 border-${color}-500 shadow-[0_0_15px_rgba(0,0,0,0.5)] opacity-80 hover:opacity-100 transition-opacity`}>
 
-      {/* ACTUAL VIDEO TAG */}
       <video
         autoPlay
         loop
@@ -64,6 +63,7 @@ const SideStreamPlayer = ({
 
   </div>
 );
+ 
 
 export default function LiveStreamCommandCenter() {
   return (
@@ -217,7 +217,7 @@ export default function LiveStreamCommandCenter() {
         <aside className="hidden lg:block shrink-0">
           <SideStreamPlayer
             title="Asia Ops"
-            color="red"
+            color="blue"
             videoSrc1="/video/video3.mp4" // <--- Add your specific video paths here
             videoSrc2="/video/video4.mp4"
           />
