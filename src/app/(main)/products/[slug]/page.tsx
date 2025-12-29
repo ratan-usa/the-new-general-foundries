@@ -14,7 +14,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
     const slug = resolvedParams.slug;
 
     const product = getProductBySlug(resolvedParams.slug);
-    console.log(product.image)
+    console.log('product.image', product?.image);
     if (!product) {
         return notFound();
     }
@@ -24,7 +24,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
             {/* === BREADCRUMB === */}
             <div className="bg-gray-50 border-b border-gray-100">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
                     <div className="flex items-center text-sm text-gray-500">
                         <Link href="/" className="hover:text-[#cc2221]">Home</Link>
                         <ChevronRight className="w-4 h-4 mx-2" />
@@ -36,7 +36,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             </div>
 
             {/* === PRODUCT HERO === */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
                     {/* LEFT: Image */}
@@ -91,7 +91,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+            <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 mt-12">
                 <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
                     <h2 className="text-2xl font-bold text-gray-900 mb-6">Technical Specifications</h2>
 

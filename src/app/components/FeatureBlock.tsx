@@ -19,10 +19,10 @@ export function FeatureBlockItem({ data, imageOnLeft = false, className }: Featu
 
     return (
         // Outer section wrapper with responsive padding and max width
-        <section className={`w-full px-4 sm:px-6 lg:px-10 py-3 ${className}`}>
+        <section className={`w-full  px-4 sm:px-6 lg:px-10 py-3 ${className}`}>
 
             {/* Grid Container: Stacks columns on mobile, uses a 2-column grid on medium screens and up */}
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center max-w-6xl mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center mx-auto'>
 
                 {/* 1. Text Content Column */}
                 <div className={`order-2 ${textOrderClass}`}>

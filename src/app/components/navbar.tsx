@@ -11,9 +11,11 @@ import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSub, MenubarS
 import { menuData } from '@/lib/menuData2';
 import {
     BookAIcon,
+    ChevronDownIcon,
     ChevronRight,
     Menu,
     Search,
+    SquareChevronDownIcon,
     User,
     UserCheck2Icon,
     X,
@@ -203,8 +205,8 @@ const Navbar = () => {
                     <div className="flex flex-col lg:flex-row items-start justify-between gap-6">
 
                         {/* === LEFT SECTION (Logos) === */}
-                        <div className="w-full lg:w-auto flex justify-between items-start shrink-0">
-                            <div className="flex items-center gap-4 hidden lg:flex"> {/* Added mt-2 to align with center logo text baseline if needed */}
+                        <div className="w-full lg:w-auto flex flex-col justify-between items-start shrink-0">
+                            <div className="flex items-center gap-4 lg:flex"> {/* Added mt-2 to align with center logo text baseline if needed */}
                                 <Link href={'/'} className="shrink-0">
                                     <Image src={'/MEGA FOUNDRIES.png'} alt='Mega Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-18   lg:w-24" />
                                 </Link>
@@ -216,6 +218,10 @@ const Navbar = () => {
                                 </Link>
                             </div>
                             {/* ... Mobile Menu Button code ... */}
+                            {/* 2. User Menu (Aligned Bottom) */}
+                            <div className="mt-4">
+                                <h1 className='text-2xl md:text-3xl text-[#cc2221] flex gap-4 items-center'>Globally Connected <ChevronDownIcon className='h-8 w-8' /></h1>
+                            </div>
                         </div>
 
                         {/* === CENTER SECTION (Logo + Search Stacked) === */}
@@ -319,13 +325,13 @@ const Navbar = () => {
                         <Link href={'/'} className="shrink-0">
                             <Image src={'/MEGA INDUSTRIES2.png'} alt='Mega Industries' height={70} width={130} className=" object-contain py-2 h-16 w-auto" />
                         </Link>
- 
+
                         <SearchBar />
- 
+
                         <div className="hidden lg:block ">
                             <UserMenu />
                         </div>
- 
+
                         <div className="flex items-center gap-2 lg:hidden ml-auto">
                             <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2 text-neutral-600">
                                 {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

@@ -85,7 +85,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
            <p className='text-sm pt-4 '>Elastic energy description...</p>
         </div>
 
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {mainCategory.categories.map((sub, index) => (
               <Link href={`/category/${sub.slug}`} key={index} className="group block h-full">
@@ -140,7 +140,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
 
     return (
       <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Back Button & Title */}
           <div className="mb-8">
