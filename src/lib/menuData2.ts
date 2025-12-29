@@ -926,7 +926,7 @@ export const menuData = {
     id: 'paving_risers',
     label: 'PAVING RISERS',
     icon: Cog, // change if you prefer
-    bannerImage: '/assets/paving-risers-banner.jpeg',
+    bannerImage: '/assets/PAVING-RISERS/paving riser 1.5200.png',
     color: 'bg-[#cc2221] text-white',
 
     categories: [
@@ -935,10 +935,10 @@ export const menuData = {
       {
         name: "ADJUSTABLE PAVING RISERS",
         slug: "adjustable-paving-risers",
-        image: "/assets/adjustable-paving-risers.jpeg",
+        image: "/assets/PAVING-RISERS/paving riser 1.5200.png",
         description:
           "Height-adjustable paving risers designed for raised flooring, terraces, rooftops and outdoor decking applications.",
-        videoUrl: "/video/adjustable-paving-risers.mp4",
+        videoUrl: "/video/paving_riser/paving riser 1.5213.mp4",
         items: [
           "Wide height adjustment range",
           "Self-levelling functionality",
@@ -952,10 +952,10 @@ export const menuData = {
       {
         name: "FIXED HEIGHT RISERS",
         slug: "fixed-height-risers",
-        image: "/assets/fixed-height-risers.jpeg",
+        image: "/assets/PAVING-RISERS/paving riser 1.5203.png",
         description:
           "Cost-effective fixed-height risers used for uniform elevation in pedestrian areas, plazas and garden paving projects.",
-        videoUrl: "/video/fixed-height-risers.mp4",
+        videoUrl: "/video/paving_riser/paving riser 1.5216.mp4",
         items: [
           "Low-profile supports",
           "Predefined height options",
@@ -969,10 +969,10 @@ export const menuData = {
       {
         name: "HEAVY-DUTY PEDESTAL SYSTEMS",
         slug: "heavy-duty-pedestal-systems",
-        image: "/assets/heavy-duty-pedestals.jpeg",
+        image: "/assets/PAVING-RISERS/paving riser 1.5204.png",
         description:
           "Strong pedestal systems engineered for high-load applications like commercial plazas, industrial walkways and public spaces.",
-        videoUrl: "/video/heavy-duty-pedestals.mp4",
+        videoUrl: "/video/paving_riser/paving riser 1.5217.mp4",
         items: [
           "Reinforced support structure",
           "High load carrying capacity",
@@ -986,10 +986,10 @@ export const menuData = {
       {
         name: "SELF-LEVELLING RISERS",
         slug: "self-levelling-risers",
-        image: "/assets/self-levelling-risers.jpeg",
+        image: "/assets/PAVING-RISERS/paving riser 1.5205.png",
         description:
           "Self-levelling risers designed to compensate for surface irregularities and slopes while maintaining level paving surfaces.",
-        videoUrl: "/video/self-levelling-risers.mp4",
+        videoUrl: "/video/paving_riser/paving riser 1.5223.mp4",
         items: [
           "Automatic slope correction",
           "Perfectly level paved finish",
@@ -1003,10 +1003,10 @@ export const menuData = {
       {
         name: "ACCESSORIES & SPACERS",
         slug: "paving-riser-accessories-and-spacers",
-        image: "/assets/paving-accessories.jpeg",
+        image: "/assets/PAVING-RISERS/paving riser 1.5200.png",
         description:
           "Complete range of accessories for pedestal systems including spacers, shims and edge supports for accurate tile alignment.",
-        videoUrl: "/video/paving-accessories.mp4",
+        videoUrl: "/video/paving_riser/paving riser 1.5251.mp4",
         items: [
           "Tile spacers",
           "Rubber shims",
@@ -1022,7 +1022,7 @@ export const menuData = {
     id: 'petro_products',
     label: 'PETRO PRODUCTS',
     icon: Flame, // choose any lucide icon you prefer
-    bannerImage: '/assets/petro-products-banner.jpeg',
+    bannerImage: '/assets/image16.jpg',
     color: 'bg-amber-100 text-amber-900',
 
     categories: [
@@ -1031,10 +1031,10 @@ export const menuData = {
       {
         name: "REFINERY & PROCESS EQUIPMENT COMPONENTS",
         slug: "refinery-and-process-equipment-components",
-        image: "/assets/refinery-components.jpeg",
+        image: "/assets/image16.jpg",
         description:
           "Critical cast and fabricated components used in refineries and petrochemical process plants operating under high temperature and pressure.",
-        videoUrl: "/video/refinery-components.mp4",
+        videoUrl: "/video/petro/video1.mp4",
         items: [
           "Pressure vessel components",
           "Heat exchanger parts",
@@ -1048,10 +1048,10 @@ export const menuData = {
       {
         name: "PIPING & FLOWLINE PRODUCTS",
         slug: "piping-and-flowline-products",
-        image: "/assets/piping-flowline.jpeg",
+        image: "/assets/image16.jpg",
         description:
           "Comprehensive range of pipeline components for upstream, midstream and downstream oil & gas transportation systems.",
-        videoUrl: "/video/piping-flowline.mp4",
+        videoUrl: "/video/petro/video1.mp4",
         items: [
           "Pipe fittings & elbows",
           "Induction bends",
@@ -1065,10 +1065,10 @@ export const menuData = {
       {
         name: "VALVE & PUMP CASTINGS",
         slug: "valve-and-pump-castings",
-        image: "/assets/petro-valve-pump-castings.jpeg",
+        image: "/assets/image16.jpg",
         description:
           "High-performance castings for valves and pumps designed for corrosive fluids, hydrocarbons and high-pressure applications.",
-        videoUrl: "/video/valve-pump-castings.mp4",
+        videoUrl: "/video/petro/video1.mp4",
         items: [
           "Gate & globe valve bodies",
           "Ball valve housings",
@@ -1082,10 +1082,10 @@ export const menuData = {
       {
         name: "OFFSHORE & SUBSEA COMPONENTS",
         slug: "offshore-and-subsea-components",
-        image: "/assets/offshore-components.jpeg",
+        image: "/assets/image16.jpg",
         description:
           "Components engineered for offshore platforms, subsea systems and drilling operations in harsh marine environments.",
-        videoUrl: "/video/offshore-components.mp4",
+        videoUrl: "/video/petro/video1.mp4",
         items: [
           "Subsea valve bodies",
           "Christmas tree components",
@@ -1099,10 +1099,10 @@ export const menuData = {
       {
         name: "STORAGE & TERMINAL EQUIPMENT",
         slug: "storage-and-terminal-equipment",
-        image: "/assets/storage-terminal-equipment.jpeg",
+        image: "/assets/image16.jpg",
         description:
           "Equipment and components used in crude oil storage tanks, terminals and distribution stations.",
-        videoUrl: "/video/storage-terminal.mp4",
+        videoUrl: "/video/petro/video1.mp4",
         items: [
           "Floating roof tank components",
           "Roof drain system parts",
@@ -1321,7 +1321,7 @@ export const menuData = {
         image: "/assets/irrigation-pipes.jpeg",
         description:
           "High-performance irrigation pipes and fittings engineered for long-term durability, leak-proof performance and efficient water transport.",
-        videoUrl: "/video/pipes-and-fittings.mp4",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video1.mp4",
         items: [
           "HDPE pipes",
           "PVC pressure pipes",
@@ -1338,7 +1338,7 @@ export const menuData = {
         image: "/assets/sprinkler-system.jpeg",
         description:
           "Advanced sprinkler irrigation systems designed to distribute uniform water coverage for farms, lawns, fields and plantations.",
-        videoUrl: "/video/sprinkler-system.mp4",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video2.mp4",
         items: [
           "Impact sprinklers",
           "Rain gun systems",
@@ -1355,7 +1355,7 @@ export const menuData = {
         image: "/assets/water-control.jpeg",
         description:
           "Smart irrigation control components for precise flow regulation, pressure management and automatic system operation.",
-        videoUrl: "/video/water-control.mp4",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video3.mp4",
         items: [
           "Solenoid valves",
           "Butterfly & gate valves",
@@ -1372,7 +1372,7 @@ export const menuData = {
         image: "/assets/pumping-solution.jpeg",
         description:
           "Reliable pumping systems engineered for agricultural water lifting, drip irrigation and sprinkler irrigation applications.",
-        videoUrl: "/video/pumping-solution.mp4",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video4.mp4",
         items: [
           "Centrifugal pumps",
           "Submersible pumps",
@@ -1389,7 +1389,7 @@ export const menuData = {
         image: "/assets/agriculture-tools.jpeg",
         description:
           "A wide range of accessories and tools used for installation, maintenance and operation of irrigation networks.",
-        videoUrl: "/video/agriculture-tools.mp4",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video1.mp4",
         items: [
           "Punch tools",
           "Pipe cutters",
@@ -1406,7 +1406,7 @@ export const menuData = {
         image: "/assets/landscape-irrigation.jpeg",
         description:
           "Irrigation solutions for parks, villas, resorts, golf courses, public gardens and urban landscaping projects.",
-        videoUrl: "/video/landscape-irrigation.mp4",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video2.mp4",
         items: [
           "Drip irrigation kits",
           "Micro sprinklers",
@@ -1423,7 +1423,7 @@ export const menuData = {
         image: "/assets/industrial-irrigation.jpeg",
         description:
           "Heavy-duty irrigation systems designed for commercial agriculture, greenhouses, agro-industries and large plantations.",
-        videoUrl: "/video/industrial-irrigation.mp4",
+        videoUrl: "/video/IRRIGATION PRODUCTS/video3.mp4",
         items: [
           "High-pressure filtration systems",
           "Automated fertigation units",
@@ -1564,7 +1564,7 @@ export const menuData = {
         image: "/assets/propeller-castings.jpeg",
         description:
           "High-performance bronze and stainless-steel propeller and impeller castings engineered for marine propulsion systems.",
-        videoUrl: "/video/propeller-castings.mp4",
+        videoUrl: "/video/marine_castings/marine_castings1.mp4",
         items: [
           "Ship propeller castings",
           "Pump impeller castings",
@@ -1581,7 +1581,7 @@ export const menuData = {
         image: "/assets/marine-hardware.jpeg",
         description:
           "Rugged deck and hull hardware components designed to withstand harsh saline and offshore environments.",
-        videoUrl: "/video/marine-hardware.mp4",
+        videoUrl: "/video/marine_castings/marine_castings2.mp4",
         items: [
           "Cleats & bollards",
           "Fairleads & chocks",
@@ -1598,7 +1598,7 @@ export const menuData = {
         image: "/assets/marine-anodes.jpeg",
         description:
           "Sacrificial and impressed-current anode castings designed to protect ship hulls and marine structures from corrosion.",
-        videoUrl: "/video/marine-anodes.mp4",
+        videoUrl: "/video/marine_castings/marine_castings1.mp4",
         items: [
           "Zinc anodes",
           "Aluminium anodes",
@@ -1615,7 +1615,7 @@ export const menuData = {
         image: "/assets/ship-structural-castings.jpeg",
         description:
           "Heavy-duty structural castings used in hull framing, rudder systems and load-bearing areas of ships and offshore vessels.",
-        videoUrl: "/video/ship-structural-castings.mp4",
+        videoUrl: "/video/marine_castings/marine_castings2.mp4",
         items: [
           "Rudder horn castings",
           "Stern frame castings",
@@ -1632,7 +1632,7 @@ export const menuData = {
         image: "/assets/offshore-castings.jpeg",
         description:
           "Cast components engineered for offshore drilling rigs, subsea structures, mooring and production systems.",
-        videoUrl: "/video/offshore-platform-castings.mp4",
+        videoUrl: "/video/marine_castings/marine_castings1.mp4",
         items: [
           "Mooring chain components",
           "Subsea connector castings",
@@ -2667,7 +2667,7 @@ export const menuData = {
       }
     ]
   }
-  
+
 };
 export type FooterLink = { label: string; href: string };
 

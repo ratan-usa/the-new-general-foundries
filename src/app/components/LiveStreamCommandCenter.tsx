@@ -64,7 +64,7 @@ const SideStreamPlayer = ({
 
   </div>
 );
- 
+
 
 export default function LiveStreamCommandCenter() {
   return (
@@ -97,8 +97,8 @@ export default function LiveStreamCommandCenter() {
               <span className="flex items-center gap-1"><span className="text-green-500">●</span> 98.4% UPTIME</span>
             </div>
             <div className="flex justify-center gap-6 text-xs text-gray-400 mt-4">
-              <span className="text-xl md:text-2xl font-bold  bg-clip-text text-[#cc2221] mb-2 uppercase tracking-tight">FOLLOW YOUR PRODUCT BEING BORN & DELIVERED TO YOU LIVE(PRE-REGISTRATION REQUIRED) </span>
             </div>
+            <span className="text-xl md:text-2xl font-bold  bg-clip-text text-[#cc2221] mb-2 uppercase tracking-tight">FOLLOW YOUR PRODUCT BEING BORN & DELIVERED TO YOU LIVE <span className="text-sm "> (PRE-REGISTRATION REQUIRED) </span> </span>
           </div>
 
           {/* THE INFINITE SCROLL FEED (Your main content) */}

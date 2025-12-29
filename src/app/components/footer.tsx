@@ -67,51 +67,55 @@ const Footer = () => {
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pt-16 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16 border-b border-gray-800 pb-12">
 
-          <div className="flex flex-col space-y-6">
-            <h3 className="text-[#cc2221] font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
-              USA Operations
-            </h3>
+          <div className="flex flex-col justify-evenly gap-16 space-y-6">
+            <div>
+              <h3 className="text-[#cc2221] font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
+                USA Operations
+              </h3>
 
-            {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
-            <div className="flex gap-4">
-              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
-                <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/MEGA FOUNDRIES.png'} alt='Mega Foundries' fill className="object-contain" />
-                </Link>
-              </div>
-              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
-                <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/MEGA METALS.png'} alt='MEGA METALS' fill className="object-contain" />
-                </Link>
-              </div>
-              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
-                <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/MEGA FABRICATORS.png'} alt='Fabricators' fill className="object-contain" />
-                </Link>
+              {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
+              <div className="flex gap-4">
+                <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                  <Link href={'/'} className="w-full h-full relative">
+                    <Image src={'/MEGA FOUNDRIES.png'} alt='Mega Foundries' fill className="object-contain" />
+                  </Link>
+                </div>
+                <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                  <Link href={'/'} className="w-full h-full relative">
+                    <Image src={'/MEGA METALS.png'} alt='MEGA METALS' fill className="object-contain" />
+                  </Link>
+                </div>
+                <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                  <Link href={'/'} className="w-full h-full relative">
+                    <Image src={'/MEGA FABRICATORS.png'} alt='Fabricators' fill className="object-contain" />
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <div className="text-sm space-y-1 text-gray-400">
-              <p>105 MAXES ROAD</p>
-              <p>MELVILLE, NY 11737, USA</p>
-              {/* <a href="mailto:info@megafoundries.com" className="text-white hover:text-[#cc2221] transition-colors pt-2 block">
-                info@megafoundries.com
-              </a> */}
+            <div>
+              <div className="text-sm space-y-1 text-gray-400">
+                <p>105 MAXES ROAD</p>
+                <p>MELVILLE, NY 11737, USA</p>
+
+              </div>
+              {/* Added Mobile Number with Link */}
+              <p className='mt-4'>
+                <a
+                  href="tel:+15127828880"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  +1 (512) 782-8880
+                </a>
+              </p>
             </div>
 
-            {/* <div className="flex gap-3 pt-2">
-              {[Linkedin, Facebook, Instagram, Twitter].map((Icon, i) => (
-                <Link key={i} href={'/'} className='p-2 border border-gray-600 rounded-full hover:border-[#cc2221] hover:text-[#cc2221] hover:bg-[#cc2221]/10 transition-all'>
-                  <Icon className='w-4 h-4' />
-                </Link>
-              ))}
-            </div> */}
           </div>
 
           <div className="flex flex-col items-center justify-center">
             {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
             <div className="flex  ">
-              <div className="bg-white p-2 rounded-lg w-80 h-40 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+              <div className="bg-white p-2 rounded-lg w-80 h-50 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <Link href={'/'} className="w-full h-full relative">
                   <Image src={'/MEGA INDUSTRIES2.png'} alt='Mega Industries' fill className="object-contain" />
                 </Link>
@@ -120,48 +124,48 @@ const Footer = () => {
           </div>
 
           {/* --- COL 5: CANADA OPERATIONS (Logos + Info + Subscribe) --- */}
-          <div className="flex items-end flex-col space-y-6">
-            <h3 className="text-[#cc2221] text-left font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
-              Canada Operations
-            </h3>
+          <div className="flex items-end justify-evenly gap-16 flex-col space-y-6">
+            <div>
+              <h3 className="text-[#cc2221] text-left font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
+                Canada Operations
+              </h3>
 
-            {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
-            <div className="flex gap-4 justify-end">
-              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
-                <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/MEGA MOLDS.png'} alt='Canada Foundries' fill className="object-contain" />
-                </Link>
-              </div>
-              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
-                <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/MEGA FORGE.png'} alt='Mega Forge' fill className="object-contain" />
-                </Link>
-              </div>
-              <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
-                <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/CANADA FOUNDRIES.png'} alt='Mega Forge' fill className="object-contain" />
-                </Link>
+              {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
+              <div className="flex gap-4  justify-end">
+                <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                  <Link href={'/'} className="w-full h-full relative">
+                    <Image src={'/MEGA MOLDS.png'} alt='Canada Foundries' fill className="object-contain" />
+                  </Link>
+                </div>
+                <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                  <Link href={'/'} className="w-full h-full relative">
+                    <Image src={'/MEGA FORGE.png'} alt='Mega Forge' fill className="object-contain" />
+                  </Link>
+                </div>
+                <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+                  <Link href={'/'} className="w-full h-full relative">
+                    <Image src={'/CANADA FOUNDRIES.png'} alt='Mega Forge' fill className="object-contain" />
+                  </Link>
+                </div>
               </div>
             </div>
 
-            <div className="text-sm space-y-1 text-gray-400">
-              <p>ONE YOUNGE STREET</p>
-              <p>TORONTO, ONTARIO M5E 1R4 CANADA</p>
-            </div>
 
-            {/* Subscribe Form */}
-            <div className="pt-4">
-              {/* <h4 className="text-white font-semibold mb-3">Subscribe to Newsletter</h4>
-              <div className="flex w-full">
-                <Input
-                  type="email"
-                  placeholder="Enter Email"
-                  className="rounded-r-none border-gray-600 bg-gray-800 text-white focus:border-[#cc2221] h-10"
-                />
-                <Button className="rounded-l-none bg-[#cc2221] hover:bg-red-700 text-white font-bold h-10 px-4">
-                  Submit
-                </Button>
-              </div> */}
+            <div>
+              <div className="text-sm space-y-1 text-gray-400">
+                <p>ONE YOUNGE STREET</p>
+                <p>TORONTO, ONTARIO M5E 1R4 CANADA</p>
+
+              </div>
+              {/* Added Mobile Number with Link */}
+              <p className='mt-4'>
+                <a
+                  href="tel:+14388059990"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  +1 (438) 805-9990
+                </a>
+              </p>
             </div>
           </div>
 
@@ -272,7 +276,7 @@ const Footer = () => {
       <div className="border-t border-red-800 w-full px-4 sm:px-6 lg:px-10 py-6 pb-10 bg-[#cc2221]">
         <div className="flex justify-center items-center">
           <p className="text-lg text-white font-medium">
-            © 2025 Mega Foundries — All rights reserved.
+            ©1999-2026 Copyright <strong>Mega Industries & Groups</strong> — All Rights Reserved.
           </p>
         </div>
       </div>
