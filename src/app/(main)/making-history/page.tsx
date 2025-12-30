@@ -1,92 +1,166 @@
+import React from 'react';
+import { ArrowDownCircle, Trophy, Users, Globe, Building } from 'lucide-react';
+import Image from 'next/image';
 
-import { liveChatData } from "@/app/(main)/our-values/content";
-import { FeatureBlockItem } from "@/app/components/FeatureBlock";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, Users, Globe } from "lucide-react";
-import Image from "next/image";
-const allFeatureBlocks = [
-  liveChatData[0],
+// --- DATA: Mock Data for Mega Foundries History ---
+const HISTORY_DATA = [
+  {
+    year: "1985",
+    title: " The Foundation",
+    description: "Mega Foundries was established in Pittsburgh, PA, with a single blast furnace and a mission to forge the highest quality steel components for the American automotive industry.",
+    image: "/assets/image1.jpeg" // Replace with real image path
+  },
+  {
+    year: "1992",
+    title: "Expansion to Aerospace",
+    description: "After achieving ISO 9001 certification, we expanded our operations to supply critical alloy parts to major aerospace contractors, marking our entry into high-precision manufacturing.",
+    image: "/assets/image2.jpeg"
+  },
+  {
+    year: "2005",
+    title: "Going Global",
+    description: "We opened our first international facility in Germany, allowing us to serve the European market directly and increasing our global production capacity by 200%.",
+    image: "/assets/image3.jpeg"
+  },
+  {
+    year: "2018",
+    title: "Sustainable Steel",
+    description: "Mega Foundries committed to a greener future by retrofitting all plants with electric arc furnaces, reducing carbon emissions by 40% and setting a new industry standard.",
+    image: "/assets/image4.jpeg"
+  },
+  {
+    year: "2025",
+    title: "The Next Era",
+    description: "Today, we are pioneering AI-driven metallurgy and 3D metal printing, ensuring Mega Foundries remains the backbone of modern infrastructure.",
+    image: "/assets/image5.jpeg"
+  }
 ];
-const features = [
-  {
-    icon: Star,
-    title: "Global Engineering Excellence",
-    description:
-      "Mega Foundries stands at the forefront of precision manufacturing, delivering high-strength metal solutions engineered to global standards. With decades of expertise, we combine advanced metallurgy, cutting-edge machining, and modern production systems to create products that power industries worldwide.",
-  },
-  {
-    icon: Users,
-    title: "Innovation-Driven Manufacturing",
-    description:
-      "Our commitment to continuous innovation is reflected in every process we execute. From automated foundry operations to AI-supported quality control, Mega Foundries integrates new-age technologies to ensure consistency, reliability, and unmatched performance across all product lines.",
-  },
-  {
-    icon: Globe,
-    title: "Worldwide Infrastructure & Partnerships",
-    description:
-      "With a globally connected network and strong partnerships across government, commercial, and industrial sectors, Mega Foundries delivers end-to-end foundry, fabrication, and engineering solutions. We supply, manufacture, and support our clients at scale, ensuring seamless delivery from raw material sourcing to final deployment.",
-  },
+
+const STATS = [
+  { label: "Years of Legacy", value: "40+", icon: Trophy },
+  { label: "Global Facilities", value: "12", icon: Building },
+  { label: "Team Members", value: "2,500", icon: Users },
+  { label: "Countries Served", value: "35", icon: Globe },
 ];
-const AboutSection = () => {
+
+export default function MakingHistoryPage() {
   return (
-    <section className="relative w-full py-16 sm:py-24 bg-white">
-      <div className="absolute inset-0 z-0 h-[225px] w-full">
-        <Image
-          src={'/assets/image16.jpg'}
-          alt="Industrial background image"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
-          Making History
-        </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
-          MEGA FOUNDRIES - FOR THE INDUSTRY
-        </p>
-        <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
-          Streamline your entire material procurement process with intelligent AI automation
-        </h3>
-      </div>
-      <div className="relative z-10  mx-auto px-10">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-          {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/95"
-            >
-              <CardHeader className="flex flex-col items-center pt-10 pb-4">
-                <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
-                  <feature.icon className="w-8 h-8 text-[#cc2221]" />
-                </div>
-                <CardTitle className="text-[20px] font-semibold text-gray-900">
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center px-6 pb-10">
-                <p className="text-sm text-justify text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
 
-      {liveChatData.map((block, index) => (
-        <FeatureBlockItem
-          key={block.id}
-          data={block}
-          imageOnLeft={index % 2 !== 0}
-        />
-      ))}
-    </section>
+      {/* === HERO SECTION === */}
+      <section className="relative h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
+        {/* Background Overlay (Simulating industrial dark mode) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 via-slate-950 to-black opacity-90 z-0"></div>
+
+        {/* Decorative 'Sparks' or Graphic (Optional) */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[url('/assets/image2.jpeg')]"></div>
+
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <div className="inline-block mb-4 px-3 py-1 border border-red-600 rounded text-red-500 text-xs font-bold tracking-widest uppercase">
+            Since 1985
+          </div>
+          <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6">
+            Making <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">History</span>
+          </h1>
+          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+            From a single furnace in Pennsylvania to a global manufacturing powerhouse. Explore the milestones that forged Mega Foundries.
+          </p>
+
+          <div className="mt-10 animate-bounce">
+            <ArrowDownCircle className="w-10 h-10 mx-auto text-slate-600" />
+          </div>
+        </div>
+      </section>
+
+      {/* === STATS BAR === */}
+      <section className="py-12 bg-white border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {STATS.map((stat, idx) => (
+              <div key={idx} className="flex flex-col items-center text-center group">
+                <div className="mb-3 p-3 bg-slate-100 rounded-full group-hover:bg-red-50 transition-colors">
+                  <stat.icon className="w-6 h-6 text-slate-700 group-hover:text-red-600" />
+                </div>
+                <span className="text-3xl md:text-4xl font-extrabold text-slate-900">{stat.value}</span>
+                <span className="text-xs uppercase tracking-wider text-slate-500 mt-1">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === TIMELINE SECTION === */}
+      <section className="py-20 bg-slate-50 relative">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+
+          {/* Vertical Line (Hidden on mobile, visible on md+) */}
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-slate-300 top-0"></div>
+
+          <div className="space-y-16 md:space-y-24">
+            {HISTORY_DATA.map((item, index) => {
+              const isEven = index % 2 === 0;
+              return (
+                <div key={index} className={`relative flex flex-col md:flex-row items-center ${isEven ? 'md:flex-row-reverse' : ''}`}>
+
+                  {/* Timeline Dot (Center) */}
+                  <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-red-600 border-4 border-white rounded-full shadow-lg z-10 mt-1.5 md:mt-0"></div>
+
+                  {/* Date Badge (Mobile: Top Left, Desktop: Center Axis) */}
+                  <div className={`hidden md:flex absolute left-1/2 transform -translate-x-1/2 -mt-12 md:-mt-0 md:items-center md:justify-center w-16 h-8 bg-slate-900 text-white text-xs font-bold rounded px-2 z-20 ${isEven ? 'md:-translate-x-[140%]' : 'md:translate-x-[40%]'}`}>
+                    {item.year}
+                  </div>
+
+                  {/* Content Half */}
+                  <div className="w-full md:w-1/2 md:px-12 pl-12 pr-0">
+                    <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                      {/* Mobile Year Badge */}
+                      <span className="md:hidden inline-block bg-slate-900 text-white text-xs font-bold px-2 py-1 rounded mb-3">
+                        {item.year}
+                      </span>
+
+                      <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-slate-600 leading-relaxed text-sm md:text-base">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Image/Visual Half */}
+                  <div className="w-full md:w-1/2 md:px-12 mt-6 md:mt-0 pl-12 md:pl-12">
+                    <div className="aspect-video w-full bg-slate-200 rounded-xl overflow-hidden shadow-inner relative group">
+                      {/* Placeholder for Image */}
+                      <div className="absolute inset-0 flex items-center justify-center text-slate-400 font-medium bg-slate-100">
+
+                        <Image
+                          src={item.image}
+                          alt={item.title}
+                          fill />
+                      </div>
+                      {/* Overlay effect */}
+                      <div className="absolute inset-0 bg-slate-900/0 group-hover:bg-slate-900/10 transition-all duration-300"></div>
+                    </div>
+                  </div>
+
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Bottom CTA */}
+          <div className="mt-24 text-center">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">Be Part of Our Future</h3>
+            <p className="text-slate-500 mb-8 max-w-lg mx-auto">
+              We are constantly evolving. Join us as we forge the next chapter of Mega Foundries.
+            </p>
+            <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded shadow-lg transition-transform transform hover:-translate-y-1">
+              View Careers
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
   );
 }
-
-
-
-export default AboutSection

@@ -8,7 +8,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 const topMenuItems = [
   { label: 'OUR VALUES', href: '/our-values' },
   { label: 'HOME', href: '/' },
-  { label: 'HISTORY', href: '/materials' },
+  { label: 'HISTORY', href: '/history' },
   { label: 'TRANSFORMATION', href: '/transformation' },
   { label: 'INNOVATIONS', href: '/innovations' },
   { label: 'MAKING HISTORY', href: '/making-history' },

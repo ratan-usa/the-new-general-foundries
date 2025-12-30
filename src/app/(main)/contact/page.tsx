@@ -84,7 +84,7 @@ const ContactUs = () => {
     flagSrc: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/320px-Flag_of_Canada_%28Pantone%29.svg.png",
     description: "We are dedicated to providing excellent service. Contact us anytime; we look forward to assisting you",
     address: "ONE YOUNGE STREET TORONTO, ONTARIO M5E 1R4 CANADA",
-    phone: "+1 (516) 252 1111",
+    phone: "+1 (438) 805-9990",
     email: "info@megafoundries.com",
     // Google Map Embed for Toronto
     mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184551.8097336271!2d-79.54286569827758!3d43.71840371276628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1652901234567!5m2!1sen!2sus"
@@ -96,7 +96,7 @@ const ContactUs = () => {
     flagSrc: "https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/320px-Flag_of_the_United_States.svg.png",
     description: "We are dedicated to providing excellent service. Contact us anytime; we look forward to assisting you",
     address: "105 MAXES ROAD Melville, NY 11737 USA",
-    phone: "+1 (516) 252 1111",
+    phone: "+1 (512) 782-8880",
     email: "info@megafoundries.com",
     // Google Map Embed for New York
     mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830894612!2d-74.11976389064203!3d40.69766374869555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1652901987654!5m2!1sen!2sus"

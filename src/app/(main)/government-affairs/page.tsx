@@ -1,92 +1,163 @@
+import React from 'react';
+import { ShieldCheck, Flag, HardHat, FileText, Building2, Gavel, Download } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
-import { liveChatData } from "@/app/(main)/our-values/content";
-import { FeatureBlockItem } from "@/app/components/FeatureBlock";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, Users, Globe } from "lucide-react";
-import Image from "next/image";
-const allFeatureBlocks = [
-  liveChatData[0],
-];
-const features = [
-  {
-    icon: Star,
-    title: "Global Engineering Excellence",
-    description:
-      "Mega Foundries stands at the forefront of precision manufacturing, delivering high-strength metal solutions engineered to global standards. With decades of expertise, we combine advanced metallurgy, cutting-edge machining, and modern production systems to create products that power industries worldwide.",
-  },
-  {
-    icon: Users,
-    title: "Innovation-Driven Manufacturing",
-    description:
-      "Our commitment to continuous innovation is reflected in every process we execute. From automated foundry operations to AI-supported quality control, Mega Foundries integrates new-age technologies to ensure consistency, reliability, and unmatched performance across all product lines.",
-  },
-  {
-    icon: Globe,
-    title: "Worldwide Infrastructure & Partnerships",
-    description:
-      "With a globally connected network and strong partnerships across government, commercial, and industrial sectors, Mega Foundries delivers end-to-end foundry, fabrication, and engineering solutions. We supply, manufacture, and support our clients at scale, ensuring seamless delivery from raw material sourcing to final deployment.",
-  },
-];
-const AboutSection = () => {
+export default function GovernmentAffairsPage() {
   return (
-    <section className="relative w-full py-16 sm:py-24 bg-white">
-      <div className="absolute inset-0 z-0 h-[225px] w-full">
-        <Image
-          src={'/assets/image6.jpg'}
-          alt="Industrial background image"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
-          Government Affairs
-        </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
-          MEGA FOUNDRIES - FOR THE INDUSTRY
-        </p>
-        <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
-          Streamline your entire material procurement process with intelligent AI automation
-        </h3>
-      </div>
-      <div className="relative z-10  mx-auto px-10">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-          {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/95"
-            >
-              <CardHeader className="flex flex-col items-center pt-10 pb-4">
-                <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
-                  <feature.icon className="w-8 h-8 text-[#cc2221]" />
-                </div>
-                <CardTitle className="text-[20px] font-semibold text-gray-900">
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center px-6 pb-10">
-                <p className="text-sm text-justify text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
+    <div className="min-h-screen bg-white text-slate-900 font-sans">
+      
+      {/* === HERO SECTION === */}
+      <section className="relative h-[55vh] flex items-center bg-slate-900">
+        {/* Abstract Background: Subtle map or architectural lines */}
+        <div className="absolute inset-0 bg-[url('/assets/image4.jpg')] opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-900/40"></div>
+        
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 bg-blue-900/50 border border-blue-700/50 text-blue-200 text-xs font-bold px-3 py-1 rounded uppercase tracking-wider mb-6">
+              <Flag className="w-3 h-3" />
+              Public Sector & Policy
+            </div>
+            <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 leading-tight">
+              Forging the Nation's <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400">Backbone</span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-8">
+              Mega Foundries is a trusted partner to local, state, and federal agencies. We provide the critical infrastructure and defense components that keep America secure and moving forward.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded transition-colors">
+                <Download className="w-5 h-5" />
+                Capabilities Statement
+              </button>
+              <button className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded backdrop-blur-sm transition-colors">
+                Contact Liaison
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* === COMPLIANCE BAR === */}
+      <div className="bg-slate-100 border-b border-slate-200 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center md:justify-between items-center gap-6 text-slate-500 text-sm font-bold uppercase tracking-wider">
+            <span className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-slate-700" /> ITAR Registered</span>
+            <span className="hidden md:inline text-slate-300">|</span>
+            <span className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-slate-700" /> ISO 9001:2015</span>
+            <span className="hidden md:inline text-slate-300">|</span>
+            <span className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-slate-700" /> CAGE Code: 7X892</span>
+            <span className="hidden md:inline text-slate-300">|</span>
+            <span className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-slate-700" /> Buy American Compliant</span>
+          </div>
         </div>
       </div>
 
-      {liveChatData.map((block, index) => (
-        <FeatureBlockItem
-          key={block.id}
-          data={block}
-          imageOnLeft={index % 2 !== 0}
-        />
-      ))}
-    </section>
+      {/* === CORE PILLARS === */}
+      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-extrabold text-slate-900">Strategic Focus Areas</h2>
+          <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
+            Our government affairs division works tirelessly to align our manufacturing capabilities with national priorities.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+              <Building2 className="w-6 h-6 text-blue-700" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Infrastructure Revitalization</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Supporting the Bipartisan Infrastructure Law by supplying American-made steel for bridges, railways, and grid modernization projects.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+              <ShieldCheck className="w-6 h-6 text-red-700" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">National Defense</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Providing high-strength armor and structural components for land, sea, and air systems. We are a reliable tier-1 supplier to prime defense contractors.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-slate-50 border border-slate-200 p-8 rounded-xl hover:shadow-lg transition-shadow">
+            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+              <Gavel className="w-6 h-6 text-green-700" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Trade Policy Advocacy</h3>
+            <p className="text-slate-600 text-sm leading-relaxed">
+              Active engagement with policymakers to ensure fair trade practices, level playing fields for US manufacturers, and supply chain resilience.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* === CASE STUDY / IMPACT SECTION === */}
+      <section className="bg-slate-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full md:w-1/2">
+             {/* Placeholder for an image of a bridge or tank */}
+            <div className="aspect-[4/3] bg-slate-800 rounded-xl overflow-hidden relative border border-slate-700">
+               <div className="absolute inset-0 flex items-center justify-center text-slate-500 font-bold">
+                 <Image
+                   src={'/assets/image6.jpeg'}
+                   alt="Case Study Image"
+                   fill
+                   className="object-cover"
+                   priority
+                 />
+               </div>
+            </div>
+          </div>
+          <div className="w-full md:w-1/2">
+            <div className="inline-block px-3 py-1 bg-red-600 text-xs font-bold uppercase rounded mb-4">
+              Case Study
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Securing the Supply Chain</h2>
+            <p className="text-slate-400 mb-6 leading-relaxed">
+              When international supply chains faltered, Mega Foundries stepped up to produce critical turbine housings for the Department of Energy's hydroelectric expansion project. By reshoring this production, we reduced lead times by 40% and ensured 100% domestic compliance.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3">
+                <HardHat className="w-5 h-5 text-red-500" />
+                <span className="text-sm font-medium">100% Union Labor utilized</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <FileText className="w-5 h-5 text-red-500" />
+                <span className="text-sm font-medium">Full Material Traceability Reports</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* === CONTACT / FOOTER CTA === */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Government Liaison Office</h2>
+          <p className="text-slate-600 mb-8">
+            For inquiries regarding RFPs, capabilities briefings, or legislative tours, please contact our Government Affairs team directly.
+          </p>
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-slate-200 inline-block w-full md:w-auto text-left">
+            <div className="space-y-2">
+               <p className="text-sm text-slate-500 uppercase font-bold tracking-wide">Primary Point of Contact</p>
+               <p className="text-xl font-bold text-slate-900">Ben</p>
+               <p className="text-slate-600">Director of Government Relations</p>
+               <div className="h-px bg-slate-100 my-4"></div>
+               <p className="text-slate-900 font-medium">govt.relations@megafoundries.com</p>
+               <p className="text-slate-900 font-medium">+1 (438) 805-9990</p>
+               <p className="text-xs text-slate-400 mt-4">UEI: XJ9283KLS82</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
-
-
-
-export default AboutSection

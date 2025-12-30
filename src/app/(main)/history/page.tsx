@@ -1,92 +1,169 @@
+import React from 'react';
+import Image from 'next/image'; // Ensure you have images or remove this and use divs
+import { Clock, Hammer, Globe2, Leaf, ArrowRight } from 'lucide-react';
 
-import { liveChatData } from "@/app/(main)/our-values/content";
-import { FeatureBlockItem } from "@/app/components/FeatureBlock";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, Users, Globe } from "lucide-react";
-import Image from "next/image";
-const allFeatureBlocks = [
-  liveChatData[0],
+const ERAS = [
+  {
+    period: "The Early Years (1985-1995)",
+    title: "Forging the Foundation",
+    icon: Hammer,
+    content: "Founded by Robert Sterling in a defunct rail yard in Pittsburgh, Mega Foundries began with a single mission: to produce American steel that could outlast the competition. In these early days, the company focused exclusively on heavy rail components, establishing a reputation for unbreakable durability.",
+    stat: "1 Plant Opened"
+  },
+  {
+    period: "The Expansion (1996-2010)",
+    title: "Crossing Oceans",
+    icon: Globe2,
+    content: "Recognizing the shift in global manufacturing, Mega Foundries made the bold decision to acquire facilities in Germany and Japan. This era marked our transition from a domestic supplier to a global logistics partner, allowing us to serve automotive giants on three continents.",
+    stat: "Expanded to 4 Countries"
+  },
+  {
+    period: "The Modern Era (2011-Present)",
+    title: "Sustainable Innovation",
+    icon: Leaf,
+    content: "The definition of strength changed. It wasn't just about hardness anymore; it was about efficiency. We invested $500M into electric arc furnaces and AI-driven metallurgy, becoming the first foundry in our sector to achieve carbon-neutral production for specific alloy lines.",
+    stat: "40% Carbon Reduction"
+  }
 ];
-const features = [
-  {
-    icon: Star,
-    title: "Global Engineering Excellence",
-    description:
-      "Mega Foundries stands at the forefront of precision manufacturing, delivering high-strength metal solutions engineered to global standards. With decades of expertise, we combine advanced metallurgy, cutting-edge machining, and modern production systems to create products that power industries worldwide.",
-  },
-  {
-    icon: Users,
-    title: "Innovation-Driven Manufacturing",
-    description:
-      "Our commitment to continuous innovation is reflected in every process we execute. From automated foundry operations to AI-supported quality control, Mega Foundries integrates new-age technologies to ensure consistency, reliability, and unmatched performance across all product lines.",
-  },
-  {
-    icon: Globe,
-    title: "Worldwide Infrastructure & Partnerships",
-    description:
-      "With a globally connected network and strong partnerships across government, commercial, and industrial sectors, Mega Foundries delivers end-to-end foundry, fabrication, and engineering solutions. We supply, manufacture, and support our clients at scale, ensuring seamless delivery from raw material sourcing to final deployment.",
-  },
-];
-const AboutSection = () => {
+
+export default function HistoryPage() {
   return (
-    <section className="relative w-full py-16 sm:py-24 bg-white">
-      <div className="absolute inset-0 z-0 h-[225px] w-full">
-        <Image
-          src={'/assets/image6.jpg'}
-          alt="Industrial background image"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
-          History
-        </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
-          MEGA FOUNDRIES - FOR THE INDUSTRY
-        </p>
-        <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
-          Streamline your entire material procurement process with intelligent AI automation
-        </h3>
-      </div>
-      <div className="relative z-10  mx-auto px-10">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-          {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/95"
-            >
-              <CardHeader className="flex flex-col items-center pt-10 pb-4">
-                <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
-                  <feature.icon className="w-8 h-8 text-[#cc2221]" />
-                </div>
-                <CardTitle className="text-[20px] font-semibold text-gray-900">
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center px-6 pb-10">
-                <p className="text-sm text-justify text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+    <div className="min-h-screen bg-white text-slate-900 font-sans">
 
-      {liveChatData.map((block, index) => (
-        <FeatureBlockItem
-          key={block.id}
-          data={block}
-          imageOnLeft={index % 2 !== 0}
-        />
-      ))}
-    </section>
+      {/* === HERO SECTION === */}
+      <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
+        {/* Background Texture */}
+        <div className="absolute inset-0 opacity-20 bg-[url('/assets/image13.jpg')]"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-end justify-between gap-8">
+          <div className="max-w-2xl">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
+              Our <span className="text-red-600">Legacy</span>
+            </h1>
+            <p className="text-xl text-slate-300 leading-relaxed">
+              For four decades, Mega Foundries has been the silent backbone of modern infrastructure. This is the story of how we built trust, one pour at a time.
+            </p>
+          </div>
+
+          {/* Quick Stat Box */}
+          <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg border border-white/20 min-w-[200px]">
+            <div className="text-sm text-slate-300 uppercase tracking-widest mb-1">Established</div>
+            <div className="text-4xl font-mono font-bold text-white">1985</div>
+          </div>
+        </div>
+      </section>
+
+      {/* === NARRATIVE SECTION === */}
+      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+          {/* Left: Introduction Text */}
+          <div>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">From Rust Belt to High Tech</h2>
+            <p className="text-slate-600 mb-6 leading-relaxed">
+              The story of Mega Foundries is the story of American manufacturing resilience. When others shut down blast furnaces in the late 80s, we doubled down on quality. When the market demanded cheaper materials, we invested in stronger alloys.
+            </p>
+            <p className="text-slate-600 mb-8 leading-relaxed">
+              We believe that history isn't just about looking back—it's about understanding the foundation we stand on today. Every beam, every bolt, and every chassis we cast carries the DNA of 40 years of expertise.
+            </p>
+
+            <div className="flex items-center gap-4 text-sm font-bold text-slate-900">
+              <div className="w-12 h-1 bg-red-600"></div>
+              <span>READ THE CHAPTERS BELOW</span>
+            </div>
+          </div>
+
+          {/* Right: Vintage Image Placeholder */}
+          <div className="relative aspect-[4/3] bg-slate-100 rounded-lg overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
+            {/* Grayscale filter for "History" look */}
+            <div className="absolute inset-0 bg-slate-900/10 mix-blend-multiply z-10"></div>
+            <div className="w-full h-full bg-slate-300 flex items-center justify-center text-slate-500 font-bold">
+              <Image
+                src={'/assets/image3.jpeg'}
+                alt="Case Study Image"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            {/* Caption Badge */}
+            <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 text-xs font-bold text-slate-900 z-20 shadow-sm">
+              The Original Pittsburgh Yard
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* === ERAS / CHAPTERS === */}
+      <section className="py-20 bg-slate-50 border-t border-slate-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+          {ERAS.map((era, index) => (
+            <div key={index} className="group bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-200 hover:shadow-xl hover:border-red-100 transition-all duration-300">
+              <div className="flex flex-col md:flex-row gap-8">
+
+                {/* Left: Icon & Date */}
+                <div className="md:w-1/4 flex flex-col items-start border-b md:border-b-0 md:border-r border-slate-100 pb-6 md:pb-0 md:pr-6">
+                  <div className="w-12 h-12 bg-red-50 text-red-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                    <era.icon className="w-6 h-6" />
+                  </div>
+                  <span className="text-sm font-bold text-slate-400 uppercase tracking-wide">{era.period}</span>
+                </div>
+
+                {/* Right: Content */}
+                <div className="md:w-3/4">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-red-700 transition-colors">
+                    {era.title}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed mb-6">
+                    {era.content}
+                  </p>
+
+                  <div className="inline-flex items-center gap-2 text-xs font-bold bg-slate-100 px-3 py-1.5 rounded text-slate-700">
+                    <TrendingUp className="w-3 h-3" />
+                    Key Stat: {era.stat}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          ))}
+
+        </div>
+      </section>
+
+      {/* === FUTURE TEASER === */}
+      <section className="py-20 bg-slate-900 text-white text-center">
+        <div className="max-w-3xl mx-auto px-4">
+          <Clock className="w-12 h-12 mx-auto text-red-500 mb-6" />
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">The History of Tomorrow</h2>
+          <p className="text-slate-400 text-lg mb-8">
+            We aren't done writing our story. Join us as we pioneer the next generation of aerospace composites.
+          </p>
+          <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded transition-all">
+            See Our Future Vision
+          </button>
+        </div>
+      </section>
+
+    </div>
   );
 }
 
-
-
-export default AboutSection
+// Icon helper for the stats
+function TrendingUp({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24" height="24"
+      viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" strokeWidth="2"
+      strokeLinecap="round" strokeLinejoin="round"
+      className={className}
+    >
+      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+      <polyline points="17 6 23 6 23 12"></polyline>
+    </svg>
+  );
+}

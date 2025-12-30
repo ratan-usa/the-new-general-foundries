@@ -1,92 +1,232 @@
+import React from 'react';
+import Link from 'next/link';
+import {
+  Heart,
+  TrendingUp,
+  Shield,
+  GraduationCap,
+  Users,
+  Clock,
+  Briefcase,
+  ArrowRight
+} from 'lucide-react';
+import Image from 'next/image';
 
-import { liveChatData } from "@/app/(main)/our-values/content";
-import { FeatureBlockItem } from "@/app/components/FeatureBlock";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Star, Users, Globe } from "lucide-react";
-import Image from "next/image";
-const allFeatureBlocks = [
-  liveChatData[0],
-];
-const features = [
+const BENEFITS = [
   {
-    icon: Star,
-    title: "Global Engineering Excellence",
-    description:
-      "Mega Foundries stands at the forefront of precision manufacturing, delivering high-strength metal solutions engineered to global standards. With decades of expertise, we combine advanced metallurgy, cutting-edge machining, and modern production systems to create products that power industries worldwide.",
+    icon: Heart,
+    title: "Comprehensive Health",
+    desc: "Top-tier medical, dental, and vision coverage for you and your family starting day one."
   },
   {
-    icon: Users,
-    title: "Innovation-Driven Manufacturing",
-    description:
-      "Our commitment to continuous innovation is reflected in every process we execute. From automated foundry operations to AI-supported quality control, Mega Foundries integrates new-age technologies to ensure consistency, reliability, and unmatched performance across all product lines.",
+    icon: TrendingUp,
+    title: "401(k) Matching",
+    desc: "We match 100% of the first 6% of your contributions to help you build a secure future."
   },
   {
-    icon: Globe,
-    title: "Worldwide Infrastructure & Partnerships",
-    description:
-      "With a globally connected network and strong partnerships across government, commercial, and industrial sectors, Mega Foundries delivers end-to-end foundry, fabrication, and engineering solutions. We supply, manufacture, and support our clients at scale, ensuring seamless delivery from raw material sourcing to final deployment.",
+    icon: Shield,
+    title: "Safety First Culture",
+    desc: "Industry-leading safety protocols and equipment. We prioritize your well-being above production."
+  },
+  {
+    icon: GraduationCap,
+    title: "Tuition Reimbursement",
+    desc: "We invest in our people. Get reimbursed for certifications and degrees relevant to your field."
   },
 ];
-const AboutSection = () => {
+
+const DEPARTMENTS = [
+  {
+    title: "Production & Foundry",
+    roleCount: 12,
+    desc: "The heart of our operation. Casters, molders, and machine operators.",
+    color: "bg-red-50 text-red-700"
+  },
+  {
+    title: "Engineering & R&D",
+    roleCount: 5,
+    desc: "Metallurgists and systems engineers driving our next innovation.",
+    color: "bg-blue-50 text-blue-700"
+  },
+  {
+    title: "Logistics & Supply Chain",
+    roleCount: 3,
+    desc: "Keeping the raw materials moving and the finished products shipping.",
+    color: "bg-amber-50 text-amber-700"
+  },
+  {
+    title: "Corporate & Admin",
+    roleCount: 4,
+    desc: "HR, Finance, and Sales roles supporting the global mission.",
+    color: "bg-slate-50 text-slate-700"
+  }
+];
+
+export default function CareersPage() {
   return (
-    <section className="relative w-full py-16 sm:py-24 bg-white">
-      <div className="absolute inset-0 z-0 h-[225px] w-full">
-        <Image
-          src={'/assets/image19.jpeg'}
-          alt="Industrial background image"
-          layout="fill"
-          objectFit="cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/60"></div>
-      </div>
-      <div className="relative z-10 container mx-auto px-4 text-center">
-        <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
-          HR
-        </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
-          MEGA FOUNDRIES - FOR THE INDUSTRY
-        </p>
-        <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
-          Streamline your entire material procurement process with intelligent AI automation
-        </h3>
-      </div>
-      <div className="relative z-10  mx-auto px-10">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-          {features.map((feature, index) => (
-            <Card
-              key={index}
-              className="border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/95"
-            >
-              <CardHeader className="flex flex-col items-center pt-10 pb-4">
-                <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
-                  <feature.icon className="w-8 h-8 text-[#cc2221]" />
-                </div>
-                <CardTitle className="text-[20px] font-semibold text-gray-900">
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center px-6 pb-10">
-                <p className="text-sm text-justify text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
+    <div className="min-h-screen bg-white text-slate-900 font-sans">
 
-      {liveChatData.map((block, index) => (
-        <FeatureBlockItem
-          key={block.id}
-          data={block}
-          imageOnLeft={index % 2 !== 0}
-        />
-      ))}
-    </section>
+      {/* === HERO SECTION === */}
+      <section className="relative h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
+        {/* Background Image Placeholder */}
+        <div className="absolute inset-0 bg-slate-800">
+          {/* Replace with <Image> of workers in safety gear */}
+          <div className="absolute inset-0 bg-[url('/assets/image14.jpeg')] opacity-20"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+          <div className="inline-block mb-4 px-3 py-1 bg-red-600 rounded text-white text-xs font-bold tracking-widest uppercase">
+            Now Hiring
+          </div>
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+            Build a Career of <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-300">Steel</span>
+          </h1>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
+            Join the team that builds the infrastructure of the modern world. Stable jobs, competitive pay, and a legacy you can be proud of.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded transition-transform transform hover:-translate-y-1">
+              View Open Positions
+            </button>
+            <button className="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded backdrop-blur-sm transition-colors">
+              Employee Benefits
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* === VALUES / CULTURE === */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Mega Foundries?</h2>
+          <p className="text-slate-600 max-w-2xl mx-auto mb-16">
+            We don't just cast metal; we forge careers. Our culture is built on respect, safety, and the belief that every employee contributes to our success.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {BENEFITS.map((item, idx) => (
+              <div key={idx} className="p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-lg transition-shadow text-left">
+                <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm mb-4 text-red-600">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* === DEPARTMENTS / JOB CATEGORIES === */}
+      <section className="py-20 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <h2 className="text-3xl font-bold text-slate-900">Open Roles</h2>
+              <p className="mt-2 text-slate-600">Find where you fit in our organization.</p>
+            </div>
+            <Link href="/careers/all" className="hidden md:flex items-center gap-2 text-red-600 font-bold hover:text-red-700">
+              View All 24 Openings <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {DEPARTMENTS.map((dept, idx) => (
+              <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center bg-white p-6 rounded-xl border border-slate-200 hover:border-red-200 hover:shadow-md transition-all cursor-pointer group">
+                {/* Icon Box */}
+                <div className={`w-14 h-14 rounded-lg flex items-center justify-center shrink-0 ${dept.color} mb-4 sm:mb-0 sm:mr-6`}>
+                  <Briefcase className="w-6 h-6" />
+                </div>
+
+                {/* Content */}
+                <div className="flex-grow">
+                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-red-600 transition-colors">
+                    {dept.title}
+                  </h3>
+                  <p className="text-sm text-slate-500 mt-1 mb-2">
+                    {dept.desc}
+                  </p>
+                  <span className="inline-flex items-center text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded">
+                    {dept.roleCount} Positions Available
+                  </span>
+                </div>
+
+                {/* Arrow Icon */}
+                <div className="mt-4 sm:mt-0 opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all text-slate-400">
+                  <ArrowRight className="w-6 h-6" />
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center md:hidden">
+            <Link href="/careers/all" className="text-red-600 font-bold hover:text-red-700">
+              View All 24 Openings &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* === EMPLOYEE TESTIMONIAL / SPOTLIGHT === */}
+      <section className="py-20 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+
+            {/* Image Side */}
+            <div className="w-full md:w-1/2">
+              <div className="relative aspect-square md:aspect-[4/3] bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-2xl">
+                <div className="absolute inset-0 flex items-center justify-center text-slate-500">
+                  <Image
+                    src={'/assets/image8.jpg'}
+                    alt="Case Study Image"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Text Side */}
+            <div className="w-full md:w-1/2">
+              <div className="flex items-center gap-2 text-yellow-500 mb-4">
+                {[1, 2, 3, 4, 5].map(i => <span key={i}>★</span>)}
+                <span className="text-slate-400 text-sm ml-2">Employee since 2012</span>
+              </div>
+              <blockquote className="text-2xl md:text-3xl font-medium leading-relaxed mb-6">
+                "I started as a shift operator 12 years ago. Mega Foundries paid for my engineering degree, and now I lead the Quality Control division. This is a place where hard work actually pays off."
+              </blockquote>
+              <div>
+                <cite className="not-italic font-bold text-white text-lg block">David Miller</cite>
+                <span className="text-red-400 text-sm">Director of Quality Control</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* === FOOTER CTA === */}
+      <section className="py-24 bg-red-600 text-white text-center">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Join the Team?</h2>
+          <p className="text-red-100 text-lg mb-8">
+            Our application process is simple and transparent. Start by browsing our open roles today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-red-600 font-bold py-3 px-8 rounded hover:bg-slate-100 transition-colors shadow-lg">
+              Browse Openings
+            </button>
+            <button className="bg-red-700 border border-red-500 text-white font-bold py-3 px-8 rounded hover:bg-red-800 transition-colors">
+              Contact HR Team
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
   );
 }
-
-
-
-export default AboutSection

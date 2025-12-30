@@ -115,7 +115,7 @@ const Footer = () => {
           <div className="flex flex-col items-center justify-center">
             {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
             <div className="flex  ">
-              <div className="bg-white p-2 rounded-lg w-80 h-50 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+              <div className="bg-white p-2 rounded-lg w-80 h-60 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <Link href={'/'} className="w-full h-full relative">
                   <Image src={'/MEGA INDUSTRIES2.png'} alt='Mega Industries' fill className="object-contain" />
                 </Link>
