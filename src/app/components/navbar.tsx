@@ -220,7 +220,7 @@ const Navbar = () => {
                             {/* ... Mobile Menu Button code ... */}
                             {/* 2. User Menu (Aligned Bottom) */}
                             <div className="mt-4">
-                                <h1 className='text-2xl md:text-3xl text-[#cc2221] flex gap-4 items-center'>Globally Connected <ChevronDownIcon className='h-8 w-8' /></h1>
+                                <h1 className='text-xl md:text-2xl text-[#cc2221] flex gap-4 items-center'>Globally Connected <ChevronDownIcon className='h-8 w-8 text-gray-800 ' /></h1>
                             </div>
                         </div>
 
