@@ -2,30 +2,26 @@
 import { allFactoryVideos } from '@/lib/videosData';
 import { Play } from 'lucide-react';
 import React, { useRef, useState } from 'react';
- 
+
 export default function InfiniteLiveFeed() {
-  // 2. State now initializes with the first 10 items from your JSON
   const [items, setItems] = useState(allFactoryVideos.slice(0, 10));
   const [loading, setLoading] = useState(false);
-  const [hasMore, setHasMore] = useState(true); // Track if we have more data
+  const [hasMore, setHasMore] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  // 3. Updated "Load More" Function (Slices from JSON)
   const loadMoreItems = () => {
     if (loading || !hasMore) return;
     setLoading(true);
     
-    // Simulate network delay for smooth UX (optional, can be removed)
     setTimeout(() => {
       const currentLength = items.length;
       const nextBatch = allFactoryVideos.slice(currentLength, currentLength + 10);
       
       if (nextBatch.length === 0) {
-        setHasMore(false); // No more videos in JSON
+        setHasMore(false);
       } else {
         setItems((prev) => [...prev, ...nextBatch]);
       }
-      
       setLoading(false);
     }, 500);
   };
@@ -51,7 +47,6 @@ export default function InfiniteLiveFeed() {
              </span>
              Live Factory Network
            </h2>
-           {/* Show real count from JSON */}
            <p className="text-xs text-gray-400">Showing {items.length} of {allFactoryVideos.length} Streams</p>
         </div>
         <div className="text-xs text-gray-500 hidden md:block">Scroll for more →</div>
@@ -72,20 +67,35 @@ export default function InfiniteLiveFeed() {
               group cursor-pointer transition-all
             "
           >
-            {/* === VIDEO / IMAGE LOGIC === */}
-            {/* If you want autoplaying videos in the feed (like TikTok/Reels style), use <video> */}
-            {/* Otherwise, use an <img> thumbnail for better performance */}
-            
+            {/* === VIDEO LOGIC === */}
             <video
                 muted
                 loop
                 playsInline
-                // Play only on hover to save performance
-                onMouseOver={(e) => e.currentTarget.play()}
-                onMouseOut={(e) => e.currentTarget.pause()}
-                className="absolute inset-0 w-full h-full object-cover"
-                poster={item.thumbnail} // Shows image until video loads/plays
-                src={item.videoUrl} // READS FROM JSON
+                // 1. Shows the thumbnail immediately without downloading video
+                preload="none" 
+                // 2. The image source
+                poster={item.thumbnail} 
+                src={item.videoUrl}
+                className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300"
+                
+                // 3. Play on Hover
+                onMouseEnter={(e) => {
+                    // Reset time to 0 if you want it to restart every time
+                    // e.currentTarget.currentTime = 0; 
+                    const playPromise = e.currentTarget.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch((error) => {
+                            console.log("Auto-play prevented or interrupted:", error);
+                        });
+                    }
+                }}
+                
+                // 4. Pause on Leave
+                onMouseLeave={(e) => {
+                    e.currentTarget.pause();
+                    // Optional: e.currentTarget.load(); // Uncomment this line if you want the image to reappear instantly after mouse leave
+                }}
             />
             
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
@@ -96,8 +106,9 @@ export default function InfiniteLiveFeed() {
                 </div>
             )}
 
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-               <div className="bg-white/20 backdrop-blur-sm p-3 rounded-full">
+            {/* Play Button Overlay (Disappears on Hover) */}
+            <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity pointer-events-none">
+               <div className="bg-black/40 backdrop-blur-sm p-3 rounded-full">
                   <Play className="w-6 h-6 text-white fill-current" />
                </div>
             </div>

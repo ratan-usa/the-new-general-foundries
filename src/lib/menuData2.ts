@@ -1018,293 +1018,293 @@ export const menuData = {
     ]
   }
   ,
-  petro_products: {
-    id: 'petro_products',
-    label: 'PETRO PRODUCTS',
-    icon: Flame, // choose any lucide icon you prefer
-    bannerImage: '/assets/image9.jpeg',
-    color: 'bg-amber-100 text-amber-900',
+  // petro_products: {
+  //   id: 'petro_products',
+  //   label: 'PETRO PRODUCTS',
+  //   icon: Flame, // choose any lucide icon you prefer
+  //   bannerImage: '/assets/image9.jpeg',
+  //   color: 'bg-amber-100 text-amber-900',
 
-    categories: [
+  //   categories: [
 
-      // 1) Refinery & Process Equipment Components
-      {
-        name: "REFINERY & PROCESS EQUIPMENT COMPONENTS",
-        slug: "refinery-and-process-equipment-components",
-        image: "/assets/image12.jpg",
-        description:
-          "Critical cast and fabricated components used in refineries and petrochemical process plants operating under high temperature and pressure.",
-        videoUrl: "/video/petro/video1.mp4",
-        items: [
-          "Pressure vessel components",
-          "Heat exchanger parts",
-          "Column internals",
-          "Burner & furnace castings",
-          "Reactor support castings"
-        ]
-      },
+  //     // 1) Refinery & Process Equipment Components
+  //     {
+  //       name: "REFINERY & PROCESS EQUIPMENT COMPONENTS",
+  //       slug: "refinery-and-process-equipment-components",
+  //       image: "/assets/image12.jpg",
+  //       description:
+  //         "Critical cast and fabricated components used in refineries and petrochemical process plants operating under high temperature and pressure.",
+  //       videoUrl: "/video/petro/video1.mp4",
+  //       items: [
+  //         "Pressure vessel components",
+  //         "Heat exchanger parts",
+  //         "Column internals",
+  //         "Burner & furnace castings",
+  //         "Reactor support castings"
+  //       ]
+  //     },
 
-      // 2) Piping & Flowline Products
-      {
-        name: "PIPING & FLOWLINE PRODUCTS",
-        slug: "piping-and-flowline-products",
-        image: "/assets/image13.jpg",
-        description:
-          "Comprehensive range of pipeline components for upstream, midstream and downstream oil & gas transportation systems.",
-        videoUrl: "/video/petro/video1.mp4",
-        items: [
-          "Pipe fittings & elbows",
-          "Induction bends",
-          "Flanges & connectors",
-          "Insulated piping spools",
-          "Pig launcher & receiver fittings"
-        ]
-      },
+  //     // 2) Piping & Flowline Products
+  //     {
+  //       name: "PIPING & FLOWLINE PRODUCTS",
+  //       slug: "piping-and-flowline-products",
+  //       image: "/assets/image13.jpg",
+  //       description:
+  //         "Comprehensive range of pipeline components for upstream, midstream and downstream oil & gas transportation systems.",
+  //       videoUrl: "/video/petro/video1.mp4",
+  //       items: [
+  //         "Pipe fittings & elbows",
+  //         "Induction bends",
+  //         "Flanges & connectors",
+  //         "Insulated piping spools",
+  //         "Pig launcher & receiver fittings"
+  //       ]
+  //     },
 
-      // 3) Valve & Pump Castings
-      {
-        name: "VALVE & PUMP CASTINGS",
-        slug: "valve-and-pump-castings",
-        image: "/assets/image14.jpeg",
-        description:
-          "High-performance castings for valves and pumps designed for corrosive fluids, hydrocarbons and high-pressure applications.",
-        videoUrl: "/video/petro/video1.mp4",
-        items: [
-          "Gate & globe valve bodies",
-          "Ball valve housings",
-          "Control valve castings",
-          "Pump casings & volutes",
-          "Impellers & diffusers"
-        ]
-      },
+  //     // 3) Valve & Pump Castings
+  //     {
+  //       name: "VALVE & PUMP CASTINGS",
+  //       slug: "valve-and-pump-castings",
+  //       image: "/assets/image14.jpeg",
+  //       description:
+  //         "High-performance castings for valves and pumps designed for corrosive fluids, hydrocarbons and high-pressure applications.",
+  //       videoUrl: "/video/petro/video1.mp4",
+  //       items: [
+  //         "Gate & globe valve bodies",
+  //         "Ball valve housings",
+  //         "Control valve castings",
+  //         "Pump casings & volutes",
+  //         "Impellers & diffusers"
+  //       ]
+  //     },
 
-      // 4) Offshore & Subsea Components
-      {
-        name: "OFFSHORE & SUBSEA COMPONENTS",
-        slug: "offshore-and-subsea-components",
-        image: "/assets/image15.jpg",
-        description:
-          "Components engineered for offshore platforms, subsea systems and drilling operations in harsh marine environments.",
-        videoUrl: "/video/petro/video1.mp4",
-        items: [
-          "Subsea valve bodies",
-          "Christmas tree components",
-          "Riser & manifold components",
-          "Wellhead housings",
-          "Anchor and mooring castings"
-        ]
-      },
+  //     // 4) Offshore & Subsea Components
+  //     {
+  //       name: "OFFSHORE & SUBSEA COMPONENTS",
+  //       slug: "offshore-and-subsea-components",
+  //       image: "/assets/image15.jpg",
+  //       description:
+  //         "Components engineered for offshore platforms, subsea systems and drilling operations in harsh marine environments.",
+  //       videoUrl: "/video/petro/video1.mp4",
+  //       items: [
+  //         "Subsea valve bodies",
+  //         "Christmas tree components",
+  //         "Riser & manifold components",
+  //         "Wellhead housings",
+  //         "Anchor and mooring castings"
+  //       ]
+  //     },
 
-      // 5) Storage & Terminal Equipment
-      {
-        name: "STORAGE & TERMINAL EQUIPMENT",
-        slug: "storage-and-terminal-equipment",
-        image: "/assets/image16.jpg",
-        description:
-          "Equipment and components used in crude oil storage tanks, terminals and distribution stations.",
-        videoUrl: "/video/petro/video1.mp4",
-        items: [
-          "Floating roof tank components",
-          "Roof drain system parts",
-          "Access covers & manways",
-          "Tank foundation castings",
-          "Terminal handling components"
-        ]
-      }
-    ]
-  }
-  ,
-  monitoring_wells: {
-    id: 'monitoring_wells',
-    label: 'MONITORING WELLS',
-    icon: LocateIcon, // choose any lucide icon you prefer
-    bannerImage: '/assets/image17.jpg',
-    color: 'bg-cyan-100 text-cyan-900',
+  //     // 5) Storage & Terminal Equipment
+  //     {
+  //       name: "STORAGE & TERMINAL EQUIPMENT",
+  //       slug: "storage-and-terminal-equipment",
+  //       image: "/assets/image16.jpg",
+  //       description:
+  //         "Equipment and components used in crude oil storage tanks, terminals and distribution stations.",
+  //       videoUrl: "/video/petro/video1.mp4",
+  //       items: [
+  //         "Floating roof tank components",
+  //         "Roof drain system parts",
+  //         "Access covers & manways",
+  //         "Tank foundation castings",
+  //         "Terminal handling components"
+  //       ]
+  //     }
+  //   ]
+  // }
+  // ,
+  // monitoring_wells: {
+  //   id: 'monitoring_wells',
+  //   label: 'MONITORING WELLS',
+  //   icon: LocateIcon, // choose any lucide icon you prefer
+  //   bannerImage: '/assets/image17.jpg',
+  //   color: 'bg-cyan-100 text-cyan-900',
 
-    categories: [
+  //   categories: [
 
-      {
-        name: "GROUNDWATER MONITORING WELLS",
-        slug: "groundwater-monitoring-wells",
-        image: "/assets/image18.jpeg",
-        description:
-          "Complete range of groundwater monitoring wells designed to measure water levels, water quality and aquifer characteristics.",
-        videoUrl: "/video/groundwater-monitoring-wells.mp4",
-        items: [
-          "PVC monitoring well casings",
-          "HDPE monitoring well pipes",
-          "Screened well sections",
-          "Lockable monitoring well caps",
-          "Well development accessories"
-        ]
-      },
+  //     {
+  //       name: "GROUNDWATER MONITORING WELLS",
+  //       slug: "groundwater-monitoring-wells",
+  //       image: "/assets/image18.jpeg",
+  //       description:
+  //         "Complete range of groundwater monitoring wells designed to measure water levels, water quality and aquifer characteristics.",
+  //       videoUrl: "/video/groundwater-monitoring-wells.mp4",
+  //       items: [
+  //         "PVC monitoring well casings",
+  //         "HDPE monitoring well pipes",
+  //         "Screened well sections",
+  //         "Lockable monitoring well caps",
+  //         "Well development accessories"
+  //       ]
+  //     },
 
-      // 2) Environmental Observation Wells
-      {
-        name: "ENVIRONMENTAL OBSERVATION WELLS",
-        slug: "environmental-observation-wells",
-        image: "/assets/image19.jpeg",
-        description:
-          "Observation wells used for environmental site assessment, contamination studies, and remediation projects.",
-        videoUrl: "/video/environmental-observation-wells.mp4",
-        items: [
-          "Soil vapor monitoring wells",
-          "Leachate observation wells",
-          "Groundwater contamination wells",
-          "Remediation injection wells",
-          "Well sealing & protection systems"
-        ]
-      },
+  //     // 2) Environmental Observation Wells
+  //     {
+  //       name: "ENVIRONMENTAL OBSERVATION WELLS",
+  //       slug: "environmental-observation-wells",
+  //       image: "/assets/image19.jpeg",
+  //       description:
+  //         "Observation wells used for environmental site assessment, contamination studies, and remediation projects.",
+  //       videoUrl: "/video/environmental-observation-wells.mp4",
+  //       items: [
+  //         "Soil vapor monitoring wells",
+  //         "Leachate observation wells",
+  //         "Groundwater contamination wells",
+  //         "Remediation injection wells",
+  //         "Well sealing & protection systems"
+  //       ]
+  //     },
 
-      // 3) Well Screens & Filter Packs
-      {
-        name: "WELL SCREENS & FILTER PACKS",
-        slug: "well-screens-and-filter-packs",
-        image: "/assets/image20.jpg",
-        description:
-          "High-performance well screens and gravel filter packs designed to prevent sand entry while maintaining maximum flow rate.",
-        videoUrl: "/video/well-screens.mp4",
-        items: [
-          "PVC well screens",
-          "SS slotted screens",
-          "Wedge wire screens",
-          "Gravel / sand filter packs",
-          "Screen centralizers & end caps"
-        ]
-      },
+  //     // 3) Well Screens & Filter Packs
+  //     {
+  //       name: "WELL SCREENS & FILTER PACKS",
+  //       slug: "well-screens-and-filter-packs",
+  //       image: "/assets/image20.jpg",
+  //       description:
+  //         "High-performance well screens and gravel filter packs designed to prevent sand entry while maintaining maximum flow rate.",
+  //       videoUrl: "/video/well-screens.mp4",
+  //       items: [
+  //         "PVC well screens",
+  //         "SS slotted screens",
+  //         "Wedge wire screens",
+  //         "Gravel / sand filter packs",
+  //         "Screen centralizers & end caps"
+  //       ]
+  //     },
 
-      // 4) Monitoring Well Headworks & Covers
-      {
-        name: "MONITORING WELL HEADWORKS & COVERS",
-        slug: "monitoring-well-headworks-and-covers",
-        image: "/assets/image1.jpeg",
-        description:
-          "Heavy-duty surface protection and access systems for monitoring wells used in industrial, roadway and urban environments.",
-        videoUrl: "/video/well-headworks.mp4",
-        items: [
-          "Cast iron well covers",
-          "Steel traffic-rated covers",
-          "Locking protective caps",
-          "Flush-mount well covers",
-          "Surface box assemblies"
-        ]
-      },
+  //     // 4) Monitoring Well Headworks & Covers
+  //     {
+  //       name: "MONITORING WELL HEADWORKS & COVERS",
+  //       slug: "monitoring-well-headworks-and-covers",
+  //       image: "/assets/image1.jpeg",
+  //       description:
+  //         "Heavy-duty surface protection and access systems for monitoring wells used in industrial, roadway and urban environments.",
+  //       videoUrl: "/video/well-headworks.mp4",
+  //       items: [
+  //         "Cast iron well covers",
+  //         "Steel traffic-rated covers",
+  //         "Locking protective caps",
+  //         "Flush-mount well covers",
+  //         "Surface box assemblies"
+  //       ]
+  //     },
 
-      // 5) Instruments & Data Logging Systems
-      {
-        name: "INSTRUMENTS & DATA LOGGING SYSTEMS",
-        slug: "instruments-and-data-logging-systems",
-        image: "/assets/image2.jpeg",
-        description:
-          "Advanced measurement and logging instruments for continuous monitoring of water level, pressure and water quality parameters.",
-        videoUrl: "/video/well-instruments.mp4",
-        items: [
-          "Water level loggers",
-          "Pressure transducers",
-          "Multiparameter sondes",
-          "Telemetry-based remote monitoring",
-          "Automatic data logging systems"
-        ]
-      }
-    ]
-  }
-  ,
-  water_works_tools: {
-    id: 'water_works_tools',
-    label: 'WATER WORKS TOOLS',
-    icon: Wrench, // choose any lucide icon
-    bannerImage: '/assets/image11.jpg',
-    color: 'bg-sky-100 text-sky-900',
+  //     // 5) Instruments & Data Logging Systems
+  //     {
+  //       name: "INSTRUMENTS & DATA LOGGING SYSTEMS",
+  //       slug: "instruments-and-data-logging-systems",
+  //       image: "/assets/image2.jpeg",
+  //       description:
+  //         "Advanced measurement and logging instruments for continuous monitoring of water level, pressure and water quality parameters.",
+  //       videoUrl: "/video/well-instruments.mp4",
+  //       items: [
+  //         "Water level loggers",
+  //         "Pressure transducers",
+  //         "Multiparameter sondes",
+  //         "Telemetry-based remote monitoring",
+  //         "Automatic data logging systems"
+  //       ]
+  //     }
+  //   ]
+  // }
+  // ,
+  // water_works_tools: {
+  //   id: 'water_works_tools',
+  //   label: 'WATER WORKS TOOLS',
+  //   icon: Wrench, // choose any lucide icon
+  //   bannerImage: '/assets/image11.jpg',
+  //   color: 'bg-sky-100 text-sky-900',
 
-    categories: [
+  //   categories: [
 
-      // 1) Pipe Installation & Handling Tools
-      {
-        name: "PIPE INSTALLATION & HANDLING TOOLS",
-        slug: "pipe-installation-and-handling-tools",
-        image: "/assets/image3.jpeg",
-        description:
-          "Specialized tools designed for lifting, aligning, cutting and jointing water pipelines safely and efficiently.",
-        videoUrl: "/video/pipe-installation-tools.mp4",
-        items: [
-          "Pipe lifting clamps",
-          "Pipe alignment tools",
-          "Chain pipe wrenches",
-          "Pipe rollers & supports",
-          "Cutting and beveling tools"
-        ]
-      },
+  //     // 1) Pipe Installation & Handling Tools
+  //     {
+  //       name: "PIPE INSTALLATION & HANDLING TOOLS",
+  //       slug: "pipe-installation-and-handling-tools",
+  //       image: "/assets/image3.jpeg",
+  //       description:
+  //         "Specialized tools designed for lifting, aligning, cutting and jointing water pipelines safely and efficiently.",
+  //       videoUrl: "/video/pipe-installation-tools.mp4",
+  //       items: [
+  //         "Pipe lifting clamps",
+  //         "Pipe alignment tools",
+  //         "Chain pipe wrenches",
+  //         "Pipe rollers & supports",
+  //         "Cutting and beveling tools"
+  //       ]
+  //     },
 
-      // 2) Valve Operation & Maintenance Tools
-      {
-        name: "VALVE OPERATION & MAINTENANCE TOOLS",
-        slug: "valve-operation-and-maintenance-tools",
-        image: "/assets/image4.jpg",
-        description:
-          "Tools used for installation, operation, servicing and preventive maintenance of gate valves, butterfly valves and hydrants.",
-        videoUrl: "/video/valve-maintenance-tools.mp4",
-        items: [
-          "Valve key wrenches",
-          "Hydrant operating tools",
-          "Valve exercising machines",
-          "Extension operating rods",
-          "Portable valve actuators"
-        ]
-      },
+  //     // 2) Valve Operation & Maintenance Tools
+  //     {
+  //       name: "VALVE OPERATION & MAINTENANCE TOOLS",
+  //       slug: "valve-operation-and-maintenance-tools",
+  //       image: "/assets/image4.jpg",
+  //       description:
+  //         "Tools used for installation, operation, servicing and preventive maintenance of gate valves, butterfly valves and hydrants.",
+  //       videoUrl: "/video/valve-maintenance-tools.mp4",
+  //       items: [
+  //         "Valve key wrenches",
+  //         "Hydrant operating tools",
+  //         "Valve exercising machines",
+  //         "Extension operating rods",
+  //         "Portable valve actuators"
+  //       ]
+  //     },
 
-      // 3) Leak Detection & Location Equipment
-      {
-        name: "LEAK DETECTION & LOCATION EQUIPMENT",
-        slug: "leak-detection-and-location-equipment",
-        image: "/assets/image5.jpeg",
-        description:
-          "Advanced acoustic and electronic tools for detecting underground water leakage and pinpointing pipeline faults.",
-        videoUrl: "/video/leak-detection.mp4",
-        items: [
-          "Acoustic leak detectors",
-          "Ground microphones",
-          "Correlators",
-          "Tracer gas leak detection kits",
-          "Pipe locators"
-        ]
-      },
+  //     // 3) Leak Detection & Location Equipment
+  //     {
+  //       name: "LEAK DETECTION & LOCATION EQUIPMENT",
+  //       slug: "leak-detection-and-location-equipment",
+  //       image: "/assets/image5.jpeg",
+  //       description:
+  //         "Advanced acoustic and electronic tools for detecting underground water leakage and pinpointing pipeline faults.",
+  //       videoUrl: "/video/leak-detection.mp4",
+  //       items: [
+  //         "Acoustic leak detectors",
+  //         "Ground microphones",
+  //         "Correlators",
+  //         "Tracer gas leak detection kits",
+  //         "Pipe locators"
+  //       ]
+  //     },
 
-      // 4) Tapping, Drilling & Cutting Tools
-      {
-        name: "TAPPING, DRILLING & CUTTING TOOLS",
-        slug: "tapping-drilling-and-cutting-tools",
-        image: "/assets/image6.jpg",
-        description:
-          "Professional tools for hot tapping, drilling and on-line connection works on pressurized and non-pressurized pipelines.",
-        videoUrl: "/video/tapping-cutting-tools.mp4",
-        items: [
-          "Hot tapping machines",
-          "Hydrant tapping tools",
-          "Core drilling machines",
-          "Pipe cutting saws",
-          "Hole saw kits"
-        ]
-      },
+  //     // 4) Tapping, Drilling & Cutting Tools
+  //     {
+  //       name: "TAPPING, DRILLING & CUTTING TOOLS",
+  //       slug: "tapping-drilling-and-cutting-tools",
+  //       image: "/assets/image6.jpg",
+  //       description:
+  //         "Professional tools for hot tapping, drilling and on-line connection works on pressurized and non-pressurized pipelines.",
+  //       videoUrl: "/video/tapping-cutting-tools.mp4",
+  //       items: [
+  //         "Hot tapping machines",
+  //         "Hydrant tapping tools",
+  //         "Core drilling machines",
+  //         "Pipe cutting saws",
+  //         "Hole saw kits"
+  //       ]
+  //     },
 
-      // 5) Safety & Support Equipment
-      {
-        name: "SAFETY & SUPPORT EQUIPMENT",
-        slug: "safety-and-support-equipment",
-        image: "/assets/image7.jpg",
-        description:
-          "Protective and supporting equipment used during trenching, pipeline installation and confined space water works.",
-        videoUrl: "/video/water-works-safety.mp4",
-        items: [
-          "Trench shoring systems",
-          "Confined space entry kits",
-          "Gas detection devices",
-          "Fall protection equipment",
-          "Safety signage & barriers"
-        ]
-      }
-    ]
-  }
-  ,
+  //     // 5) Safety & Support Equipment
+  //     {
+  //       name: "SAFETY & SUPPORT EQUIPMENT",
+  //       slug: "safety-and-support-equipment",
+  //       image: "/assets/image7.jpg",
+  //       description:
+  //         "Protective and supporting equipment used during trenching, pipeline installation and confined space water works.",
+  //       videoUrl: "/video/water-works-safety.mp4",
+  //       items: [
+  //         "Trench shoring systems",
+  //         "Confined space entry kits",
+  //         "Gas detection devices",
+  //         "Fall protection equipment",
+  //         "Safety signage & barriers"
+  //       ]
+  //     }
+  //   ]
+  // }
+  // ,
   irrigation_products: {
     id: 'irrigation_products',
     label: 'IRRIGATION PRODUCTS',
