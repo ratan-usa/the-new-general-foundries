@@ -117,7 +117,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     { href: '/private/member/onboarding', label: 'Become a Vendor', icon: Store }, 
     { href: '/private/member/orders', label: 'Orders', icon: Package },
     { href: '/private/member/products', label: 'Products', icon: FileText },
-    { href: '/private/member/inventory', label: 'Inventory', icon: Factory },
+    // { href: '/private/member/inventory', label: 'Inventory', icon: Factory },
     { href: '/private/member/logistics', label: 'Logistics', icon: Truck },
     { href: '/private/member/team', label: 'Team', icon: Users },
     { href: '/private/member/settings', label: 'Settings', icon: Settings },
