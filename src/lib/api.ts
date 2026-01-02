@@ -7,14 +7,14 @@ import axios from 'axios';
 const DEFAULT_TENANT = "MEGAFOUNDRY";
 // ✅ UPDATED: All paths now point to "MEGAFOUNDRY"
 const TENANT_ID_MAP: Record<string, string> = {
-  "team":           "MEGAFOUNDRY",
-  "customer":       "MEGAFOUNDRY", 
-  "logistics":      "MEGAFOUNDRY",
-  "foundry":        "MEGAFOUNDRY",
-  "forge":          "MEGAFOUNDRY",
-  "fabricator":     "MEGAFOUNDRY",
-  "vendor":         "MEGAFOUNDRY",
-  "engineer":       "MEGAFOUNDRY",
+  "team": "MEGAFOUNDRY",
+  "customer": "MEGAFOUNDRY",
+  "logistics": "MEGAFOUNDRY",
+  "foundry": "MEGAFOUNDRY",
+  "forge": "MEGAFOUNDRY",
+  "fabricator": "MEGAFOUNDRY",
+  "vendor": "MEGAFOUNDRY",
+  "engineer": "MEGAFOUNDRY",
 };
 
 // =========================================================
@@ -23,7 +23,7 @@ const TENANT_ID_MAP: Record<string, string> = {
 
 export async function sendSignupLink(prevState: any, formData: FormData) {
   const email = formData.get("email") as string;
-  const rawSlug = formData.get("tenantCode") as string; 
+  const rawSlug = formData.get("tenantCode") as string;
   const apiTenantCode = TENANT_ID_MAP[rawSlug] || "MEGAFOUNDRY";
 
   console.log(`🚀 Signup: Mapping '${rawSlug}' -> '${apiTenantCode}'`);
@@ -36,9 +36,9 @@ export async function sendSignupLink(prevState: any, formData: FormData) {
     });
 
     if (!res.ok) {
-        const txt = await res.text();
-        console.error(`❌ API Error: ${txt}`);
-        return { success: false, message: `Request failed: ${txt}` };
+      const txt = await res.text();
+      console.error(`❌ API Error: ${txt}`);
+      return { success: false, message: `Request failed: ${txt}` };
     }
 
     return { success: true, message: "Link sent! Check your inbox." };
@@ -79,10 +79,10 @@ export async function verifyTwoFactor(email: string, pass: string, code: string,
     });
     const data = await res.json();
     if (!res.ok) return { success: false, message: data.message || "Invalid Code" };
-    
+
     // Normalize Token location
     const finalToken = data.token || data.accessToken || data.jwt || (data.data && data.data.token);
-    return { success: true, token: finalToken }; 
+    return { success: true, token: finalToken };
   } catch (error) {
     return { success: false, message: "Network error" };
   }
@@ -101,13 +101,13 @@ export async function completeRegistration(clientId: string, tenantSlug: string,
     });
 
     if (!res.ok) {
-       const errorData = await res.json().catch(() => ({}));
-       // Handle .NET specific validation errors
-       if (errorData.errors) {
-         const detailedMessages = Object.values(errorData.errors).flat().join(", ");
-         return { success: false, message: detailedMessages };
-       }
-       return { success: false, message: errorData.message || "Validation failed." };
+      const errorData = await res.json().catch(() => ({}));
+      // Handle .NET specific validation errors
+      if (errorData.errors) {
+        const detailedMessages = Object.values(errorData.errors).flat().join(", ");
+        return { success: false, message: detailedMessages };
+      }
+      return { success: false, message: errorData.message || "Validation failed." };
     }
     return { success: true };
   } catch (error) {
@@ -120,7 +120,7 @@ export async function changePassword(email: string, oldPass: string, newPass: st
 
   const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
 
- 
+
 
   try {
 
@@ -146,9 +146,9 @@ export async function changePassword(email: string, oldPass: string, newPass: st
 
     if (!res.ok) {
 
-        const errorData = await res.json().catch(() => ({}));
+      const errorData = await res.json().catch(() => ({}));
 
-        return { success: false, message: errorData.message || "Failed to update password." };
+      return { success: false, message: errorData.message || "Failed to update password." };
 
     }
 
@@ -175,7 +175,7 @@ export async function sendForgotPasswordEmail(email: string, tenantSlug: string)
       body: JSON.stringify({ email }),
     });
     if (!res.ok) {
-        return { success: true, message: "If an account exists, a reset link has been sent." };
+      return { success: true, message: "If an account exists, a reset link has been sent." };
     }
     return { success: true, message: "Reset link sent! Check your inbox." };
   } catch (error) {
@@ -194,8 +194,8 @@ export async function resetPassword(clientId: string, email: string, newPass: st
     });
 
     if (!res.ok) {
-       const errorData = await res.json().catch(() => ({}));
-       return { success: false, message: errorData.message || "Failed to reset password." };
+      const errorData = await res.json().catch(() => ({}));
+      return { success: false, message: errorData.message || "Failed to reset password." };
     }
     return { success: true, message: "Password reset successful." };
   } catch (error) {
@@ -209,16 +209,16 @@ export async function resetPassword(clientId: string, email: string, newPass: st
 
 // Helper: Manually decode JWT Token (Backup Plan)
 function parseJwt(token: string) {
-    try {
-        const base64Url = token.split('.')[1];
-        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function(c) {
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-        }).join(''));
-        return JSON.parse(jsonPayload);
-    } catch (e) {
-        return null;
-    }
+  try {
+    const base64Url = token.split('.')[1];
+    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+    return JSON.parse(jsonPayload);
+  } catch (e) {
+    return null;
+  }
 }
 
 // --- GET CURRENT USER PROFILE (Robust Version) ---
@@ -227,14 +227,14 @@ export async function getUserProfile(token: string, tenantSlug: string) {
 
   // 1. Try to fetch from API (Primary Strategy)
   try {
-    const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/me`, { 
+    const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/me`, {
       method: 'GET',
       headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
     });
 
     if (res.ok) {
-        const data = await res.json();
-        return { success: true, data: data.data || data };
+      const data = await res.json();
+      return { success: true, data: data.data || data };
     }
   } catch (err) {
     console.warn("API Profile fetch failed, falling back to Token decoding...");
@@ -242,34 +242,34 @@ export async function getUserProfile(token: string, tenantSlug: string) {
 
   // 2. FALLBACK: Decode the Token manually (Secondary Strategy)
   const decoded = parseJwt(token);
-  
+
   if (decoded) {
-      console.log("🔓 RAW DECODED TOKEN:", decoded); 
+    console.log("🔓 RAW DECODED TOKEN:", decoded);
 
-      // 3. UNIVERSAL ID SEARCH (Fixes missing ID issue)
-      const userId = 
-        decoded.id || decoded.sub || decoded.uid || decoded.UserId || decoded.oid || 
-        decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
+    // 3. UNIVERSAL ID SEARCH (Fixes missing ID issue)
+    const userId =
+      decoded.id || decoded.sub || decoded.uid || decoded.UserId || decoded.oid ||
+      decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"];
 
-      const email = 
-        decoded.email || decoded.upn || decoded.unique_name || 
-        decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"];
+    const email =
+      decoded.email || decoded.upn || decoded.unique_name ||
+      decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"];
 
-      const name = 
-        decoded.name || decoded.given_name || 
-        decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"];
+    const name =
+      decoded.name || decoded.given_name ||
+      decoded["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"];
 
-      if (userId) {
-          return { 
-              success: true, 
-              data: {
-                  id: userId, // Normalized ID
-                  email: email || "user@example.com",
-                  fullName: name || "User",
-                  role: decoded.role || "Member"
-              }
-          };
-      }
+    if (userId) {
+      return {
+        success: true,
+        data: {
+          id: userId, // Normalized ID
+          email: email || "user@example.com",
+          fullName: name || "User",
+          role: decoded.role || "Member"
+        }
+      };
+    }
   }
 
   return { success: false, message: "Could not retrieve user profile." };
@@ -282,7 +282,7 @@ export async function getUserProfile(token: string, tenantSlug: string) {
 // Generic Authenticated Fetcher
 async function fetchWithAuth(endpoint: string, method: string = 'GET', body?: any) {
   // Safety check for server-side rendering
-  if (typeof window === 'undefined') return null; 
+  if (typeof window === 'undefined') return null;
 
   const token = localStorage.getItem('authToken');
   const tenant = localStorage.getItem('tenantSlug') || 'team';
@@ -306,18 +306,18 @@ async function fetchWithAuth(endpoint: string, method: string = 'GET', body?: an
 
   try {
     const res = await fetch(`${BASE_URL}/${apiTenant}/${endpoint}`, config);
-    
+
     if (res.status === 401) {
-       console.warn("Token expired.");
-       // localStorage.removeItem('authToken'); // Optional: auto-logout
-       return null;
+      console.warn("Token expired.");
+      // localStorage.removeItem('authToken'); // Optional: auto-logout
+      return null;
     }
 
     if (!res.ok) {
-        const errorTxt = await res.text();
-        console.error(`API Error ${res.status}:`, errorTxt);
-        // Try to return JSON error if possible
-        try { return JSON.parse(errorTxt); } catch { return { success: false, message: errorTxt }; }
+      const errorTxt = await res.text();
+      console.error(`API Error ${res.status}:`, errorTxt);
+      // Try to return JSON error if possible
+      try { return JSON.parse(errorTxt); } catch { return { success: false, message: errorTxt }; }
     }
 
     return await res.json();
@@ -328,13 +328,13 @@ async function fetchWithAuth(endpoint: string, method: string = 'GET', body?: an
 }
 
 // --- PRODUCTS ---
-export async function getProducts(page = 1, limit = 10) {
-  return await fetchWithAuth(`products?pageNumber=${page}&pageSize=${limit}`); 
-}
+// export async function getProducts(page = 1, limit = 10) {
+//   return await fetchWithAuth(`products?pageNumber=${page}&pageSize=${limit}`); 
+// }
 
-export async function createProduct(data: any) {
-  return await fetchWithAuth('products', 'POST', data);
-}
+// export async function createProduct(data: any) {
+//   return await fetchWithAuth('products', 'POST', data);
+// }
 
 export async function deleteProduct(id: string) {
   return await fetchWithAuth(`products/${id}`, 'DELETE');
@@ -475,4 +475,189 @@ export const uploadVendorDocument = async (vendorId: string, formData: FormData,
 export const deleteVendorDocument = async (vendorId: string, documentId: string, tenantCode: string = DEFAULT_TENANT) => {
   const res = await axios.delete(`${API_URL}/${tenantCode}/vendors/${vendorId}/compliance-documents/${documentId}`);
   return res.data;
+};
+
+
+
+
+// src/services/api.ts
+
+// === TYPES ===
+export interface ApiDocument {
+  url: string;
+  thumbnailUrl?: string;
+  type: string;
+  isPrimary: boolean;
+}
+
+export interface Product {
+  id: string;
+  productName: string;
+  productSlug: string;
+  categorySlug: string;
+  status: 'DRAFT' | 'PUBLISHED' | 'ARCHIVED';
+  unitPrice: number;
+  stockQuantity: number;
+  inStock: boolean;
+  documents: ApiDocument[];
+}
+
+export interface ApiResponse {
+  content: Product[];
+  totalPages: number;
+  totalElements: number;
+  number: number;
+  first: boolean;
+  last: boolean;
+}
+
+
+// === DUMMY DATA GENERATOR (Fallback) ===
+const getMockProducts = (page: number, size: number): ApiResponse => {
+  const mockData = Array.from({ length: size }).map((_, i) => ({
+    id: `mock-${page}-${i}`,
+    productName: `Mock Product ${page * size + i + 1}`,
+    productSlug: `mock-product-${i}`,
+    categorySlug: 'mock-category',
+    status: (i % 2 === 0 ? 'PUBLISHED' : 'DRAFT') as any,
+    unitPrice: 100 + i * 10,
+    stockQuantity: 50,
+    inStock: true,
+    documents: [{ type: 'IMAGE', isPrimary: true, url: '', thumbnailUrl: '' }]
+  }));
+
+  return {
+    content: mockData,
+    totalPages: 5,
+    totalElements: 50,
+    number: page,
+    first: page === 0,
+    last: page === 4
+  };
+};
+
+// === MAIN FETCH FUNCTION ===
+export const getProducts = async (page: number, size: number = 10, tenantCode: string = DEFAULT_TENANT): Promise<ApiResponse> => {
+  try {
+    const res = await fetch(`${BASE_URL}/${tenantCode}/products?page=${page}&size=${size}`);
+
+    if (!res.ok) {
+      throw new Error(`API Error: ${res.statusText}`);
+    }
+
+    const data: ApiResponse = await res.json();
+    return data;
+
+  } catch (error) {
+    console.error("Fetch failed, switching to MOCK data:", error);
+    // FALLBACK: Return dummy data if API fails so the UI doesn't break
+    return new Promise((resolve) => {
+      setTimeout(() => resolve(getMockProducts(page, size)), 500);
+    });
+  }
+};
+
+
+export interface CreateProductRequest {
+  id?: string;
+  tenantId?: string;
+  productName: string;
+  productSlug: string;
+  sku: string;
+  status: 'DRAFT' | 'PUBLISHED' | 'ARCHIVED';
+  shortDescription?: string;
+  longDescription?: string;
+
+  // === ADD THIS MISSING LINE ===
+  tags?: string[]; 
+  // ============================
+
+  // Vendor / Category Info
+  vendorId: string;
+  vendorName: string;
+  vendorSlug: string;
+  
+  categoryId: string;
+  categoryName: string;
+  categorySlug: string;
+  
+  subcategoryId: string;
+  subcategoryName: string;
+  subcategorySlug: string;
+
+  // Nested Objects
+  pricing: {
+    currency: string;
+    unitPrice: number;
+    salePrice?: number;
+    unitOfMeasure: string;
+  };
+  
+  dimensions?: {
+    length: number;
+    width: number;
+    height: number;
+    dimensionUnit: 'IN' | 'CM';
+    weight: number;
+    weightUnit: 'LB' | 'KG';
+  };
+  
+  availability?: {
+    inStock: boolean;
+    stockQuantity: number;
+    minOrderQuantity?: number;
+    leadTimeDays?: number;
+  };
+
+  documents?: {
+    url: string;
+    type: 'IMAGE';
+    isPrimary: boolean;
+    title: string;
+  }[];
+}
+
+
+
+ // src/services/api.ts
+
+export const createProduct = async (productData: CreateProductRequest, tenantCode: string = "MEGAFOUNDRY"): Promise<any> => {
+  const BASE_URL = "https://precastxchange-api.azurewebsites.net/api/v1";
+  
+  // Get Token
+  let token = '';
+  if (typeof window !== 'undefined') {
+    token = localStorage.getItem('authToken') || localStorage.getItem('accessToken') || '';
+  }
+
+  if (!token) throw new Error("Authentication Error: No token found.");
+
+  // === DEBUG: LOG THE PAYLOAD ===
+  console.group("🚀 Debug: Create Product Payload");
+  console.log("Target URL:", `${BASE_URL}/${tenantCode}/products`);
+  console.log("Body:", JSON.stringify(productData, null, 2)); // Use this string to test in Swagger/Postman
+  console.groupEnd();
+
+  try {
+    const res = await fetch(`${BASE_URL}/${tenantCode}/products`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+      body: JSON.stringify(productData),
+    });
+
+    if (!res.ok) {
+      // Try to get text, sometimes 500 errors return a stack trace in HTML or text
+      const errorText = await res.text();
+      console.error("❌ Server 500 Details:", errorText);
+      throw new Error(`Server Error (${res.status}): ${res.statusText}`);
+    }
+
+    return await res.json();
+  } catch (error) {
+    console.error("🔥 API Error:", error);
+    throw error;
+  }
 };

@@ -13,7 +13,8 @@ import {
   Users,
   Truck,
   Factory,
-  Store
+  Store,
+  Loader2 // Imported Loader for better visual feedback
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -27,28 +28,30 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-// ✅ Import the robust API helper we created
-import { getUserProfile } from '@/lib/api';
+// Ensure this path matches where you saved the helper function
+import { getUserProfile } from '@/lib/api'; 
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter(); 
+  const [isProfileLoading, setIsProfileLoading] = useState(true);
   
   // --- STATE FOR USER PROFILE ---
   const [user, setUser] = useState({
-    name: "Loading...",
-    email: "...",
-    initials: ".."
+    name: "",
+    email: "",
+    initials: ""
   });
 
   // --- 1. FETCH PROFILE ON LOAD ---
   useEffect(() => {
+    let isMounted = true;
+
     async function initLayout() {
-      // 1. Safety Check: Browser Env
       if (typeof window === 'undefined') return;
 
-      const token = localStorage.getItem('authToken');
-      const tenant = localStorage.getItem('tenantSlug') || 'team';
+      const token = localStorage.getItem('authToken'); // Matches our API fix
+      const tenant = localStorage.getItem('tenantSlug') || 'foundry';
 
       // 2. Redirect if no token
       if (!token) {
@@ -58,42 +61,54 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       }
 
       // 3. Fetch Real User Data
-      const res = await getUserProfile(token, tenant);
+      try {
+        const res = await getUserProfile(token, tenant);
 
-      if (res.success && res.data) {
-        console.log("✅ Layout loaded for:", res.data.fullName);
-        
-        const fullName = res.data.fullName || res.data.name || "User";
+        if (isMounted && res.success && res.data) {
+          console.log("✅ Layout loaded for:", res.data.fullName);
+          
+          const fullName = res.data.fullName || res.data.name || "User";
 
-        // Calculate Initials
-        const initials = fullName
-          .split(' ')
-          .map((n: string) => n[0])
-          .join('')
-          .toUpperCase()
-          .substring(0, 2);
+          // Calculate Initials safely
+          const initials = fullName
+            .split(' ')
+            .map((n: string) => n[0])
+            .join('')
+            .toUpperCase()
+            .substring(0, 2);
 
-        setUser({
-          name: fullName,
-          email: res.data.email || res.data.username || "",
-          initials: initials || "ME"
-        });
+          setUser({
+            name: fullName,
+            email: res.data.email || res.data.username || "",
+            initials: initials || "ME"
+          });
+        }
+      } catch (err) {
+        console.error("Profile load failed", err);
+      } finally {
+        if (isMounted) setIsProfileLoading(false);
       }
     }
 
     initLayout();
+
+    return () => { isMounted = false; };
   }, [router]);
 
-  // --- 2. LOGOUT FUNCTION ---
+  // --- 2. DYNAMIC LOGOUT FUNCTION ---
   const handleLogout = () => {
-    // Clear ALL related storage
+    // 1. Capture tenant BEFORE clearing storage so we know where to send them
+    const currentTenant = localStorage.getItem('tenantSlug') || 'foundry';
+
+    // 2. Clear ALL related storage
     localStorage.removeItem('authToken');
+    localStorage.removeItem('accessToken'); // Clear both just in case
     localStorage.removeItem('tenantSlug');
     localStorage.removeItem('currentUserId');
     localStorage.removeItem('isVendor');
 
-    // Redirect
-    router.push('/login/foundry'); 
+    // 3. Dynamic Redirect
+    router.push(`/login/${currentTenant}`); 
   };
 
   // Navigation Links
@@ -101,7 +116,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     { href: '/private/member', label: 'Overview', icon: LayoutDashboard },
     { href: '/private/member/onboarding', label: 'Become a Vendor', icon: Store }, 
     { href: '/private/member/orders', label: 'Orders', icon: Package },
-    { href: '/private/member/rfqs', label: 'RFQs & Quotes', icon: FileText },
+    { href: '/private/member/products', label: 'Products', icon: FileText },
     { href: '/private/member/inventory', label: 'Inventory', icon: Factory },
     { href: '/private/member/logistics', label: 'Logistics', icon: Truck },
     { href: '/private/member/team', label: 'Team', icon: Users },
@@ -179,9 +194,14 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="relative h-9 w-9 rounded-full">
                   <Avatar className="h-9 w-9 border border-slate-200">
+                    {/* Add User Image URL if you have it in state */}
                     <AvatarImage src="" alt={user.name} />
                     <AvatarFallback className="bg-slate-900 text-white font-semibold">
-                      {user.initials}
+                      {isProfileLoading ? (
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                      ) : (
+                        user.initials
+                      )}
                     </AvatarFallback>
                   </Avatar>
                 </Button>
@@ -189,12 +209,16 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               <DropdownMenuContent className="w-56" align="end" forceMount>
                 <DropdownMenuLabel className="font-normal">
                   <div className="flex flex-col space-y-1">
-                    {/* DYNAMIC NAME */}
-                    <p className="text-sm font-medium leading-none">{user.name}</p>
-                    {/* DYNAMIC EMAIL */}
-                    <p className="text-xs leading-none text-muted-foreground">
-                      {user.email}
-                    </p>
+                    {isProfileLoading ? (
+                       <div className="h-8 bg-slate-100 rounded animate-pulse" />
+                    ) : (
+                      <>
+                        <p className="text-sm font-medium leading-none">{user.name}</p>
+                        <p className="text-xs leading-none text-muted-foreground">
+                          {user.email}
+                        </p>
+                      </>
+                    )}
                   </div>
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator />
