@@ -6,6 +6,8 @@ import { Star, Users, Globe } from "lucide-react";
 import Image from "next/image";
 import HotProductVideos from "../category/HotProductVideos";
 import { newInnovationData } from "@/lib/newsData";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 const allFeatureBlocks = [
   liveChatData[0],
 ];
@@ -46,12 +48,42 @@ const AboutSection = () => {
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
           Innovations
         </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
-          MEGA FOUNDRIES - FOR THE INDUSTRY
-        </p>
-        <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
-          Streamline your entire material procurement process with intelligent AI automation
-        </h3>
+
+        {/* === 3. CONTENT WRAPPER === */}
+        <div className="relative z-10 container mx-auto px-4     text-center">
+          <p className="text-[20px]   font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+            MEGA FOUNDRIES - FOR THE INDUSTRY
+          </p>
+          {/* MOBILE CARD EFFECT: Adds a white glass box on mobile only so text is readable */}
+          <div className="inline-block md:inline w-full md:w-auto  md:bg-transparent backdrop-blur-md md:backdrop-blur-none rounded-xl p-6 md:p-0 shadow-lg md:shadow-none border border-white/50 md:border-none">
+
+            {/* HEADINGS */}
+            <h1 className="text-gray-800   font-bold leading-tight tracking-tight mt-2">
+
+              {/* Line 1 */}
+              <span className="block text-[18px] md:text-[40px] whitespace-normal md:whitespace-nowrap">
+                WHY LIMIT YOURSELF
+              </span>
+
+
+            </h1>
+
+            {/* Quote */}
+            <p className="text-[14px] md:text-[22px] text-[#cc2221] font-medium italic mt-4 mb-6">
+              ROLLS ROYCE FROM BRITIAN
+            </p>
+
+
+            {/* Bottom Text */}
+            <p className="text-[11px] md:text-[18px] text-gray-800   mt-6 font-semibold uppercase tracking-wide">
+              ROLEX FROM SWITZERLAND
+            </p>
+            <p className="text-[11px] md:text-[18px] text-gray-800   mt-6 font-semibold uppercase tracking-wide">
+              ROLEX FROM THE BEST FROM OUR NETWORK OF ADVANCED PRICE ATVANTAGE PRODUCTS
+            </p>
+          </div>
+
+        </div>
       </div>
       <HotProductVideos
         title={newInnovationData.title}

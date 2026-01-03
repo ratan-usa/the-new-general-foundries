@@ -323,6 +323,8 @@ export const menuData = {
         image: "/assets/image18.jpeg",
         description:
           "High-precision molds engineered for manufacturing durable, dimensionally accurate precast concrete elements.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Slab molds",
           "Beam & column molds",
@@ -339,6 +341,8 @@ export const menuData = {
         image: "/assets/image19.jpeg",
         description:
           "Molds designed for precast components used in roads, highways, bridges and transportation infrastructure.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Crash barrier molds",
           "Curbstone molds",
@@ -355,6 +359,8 @@ export const menuData = {
         image: "/assets/image20.jpg",
         description:
           "Heavy-duty molds for manufacturing RCC and precast concrete pipes with high load-bearing capacity.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "RCC Hume pipe molds",
           "Box culvert pipe molds",
@@ -371,6 +377,8 @@ export const menuData = {
         image: "/assets/image1.jpeg",
         description:
           "Molds used for precast elements in residential, commercial and industrial building construction.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Wall panel molds",
           "Floor slab molds",
@@ -387,6 +395,8 @@ export const menuData = {
         image: "/assets/image2.jpeg",
         description:
           "Architectural molds for landscape development, garden structures and city beautification elements.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Paving block molds",
           "Planter molds",
@@ -403,6 +413,8 @@ export const menuData = {
         image: "/assets/image3.jpeg",
         description:
           "Molds developed for smart city projects, utilities and public infrastructure applications.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Manhole cover molds",
           "Sewer chamber molds",
@@ -419,6 +431,8 @@ export const menuData = {
         image: "/assets/image4.jpg",
         description:
           "Precast molds for compound walls, fencing and boundary applications offering high strength and fast installation.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Prestressed boundary wall molds",
           "Post & panel molds",
@@ -435,6 +449,8 @@ export const menuData = {
         image: "/assets/image5.jpeg",
         description:
           "Molds for precast elements used in factories, warehouses, utility buildings and heavy industry projects.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Machine foundation molds",
           "Cable tray molds",
@@ -451,6 +467,8 @@ export const menuData = {
         image: "/assets/image6.jpg",
         description:
           "Precast molds designed for agricultural infrastructure and farm development components.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Irrigation canal molds",
           "Cattle trough molds",
@@ -467,6 +485,8 @@ export const menuData = {
         image: "/assets/image7.jpg",
         description:
           "Flexible modular mold systems allowing quick size changes and high productivity for multiple product designs.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Adjustable shuttering systems",
           "Bolt-lock panel molds",
@@ -483,6 +503,8 @@ export const menuData = {
         image: "/assets/image8.jpg",
         description:
           "Accessories that enhance mold performance, surface finish and production efficiency.",
+        videoUrl: "/video/mold/2 feet mold.54.mp4",
+
         items: [
           "Vibration systems",
           "Lifting anchors",
@@ -2454,7 +2476,7 @@ export const menuData = {
     id: 'marine_castings',
     label: 'MARINE CASTINGS',
     icon: Anchor, // choose any lucide icon
-    bannerImage: '/assets/image4.jpg',
+    bannerImage: '/assets/marine_castings/marine_castings3.jpeg',
     color: 'bg-blue-100 text-blue-900',
 
     categories: [
@@ -2463,10 +2485,10 @@ export const menuData = {
       {
         name: "PROPELLER & PROPELLER HUB CASTINGS",
         slug: "propeller-and-propeller-hub-castings",
-        image: "/assets/image4.jpg",
+        image: "/assets/marine_castings/marine_castings2.jpeg",
         description:
           "High-performance bronze and stainless-steel castings used in marine propulsion systems for vessels of all sizes.",
-        videoUrl: "/video/marine-propeller-castings.mp4",
+        videoUrl: "/video/marine_castings/marine_castings1.mp4",
         items: [
           "Fixed pitch propeller castings",
           "Controllable pitch propeller hubs",
@@ -2480,10 +2502,10 @@ export const menuData = {
       {
         name: "DECK & MOORING CASTINGS",
         slug: "deck-and-mooring-castings",
-        image: "/assets/image5.jpeg",
+        image: "/assets/marine_castings/marine_castings1.jpeg",
         description:
           "Heavy-duty castings used for mooring, towing and securing vessels in ports, harbors and offshore platforms.",
-        videoUrl: "/video/deck-mooring-castings.mp4",
+        videoUrl: "/video/marine_castings/marine_castings2.mp4",
         items: [
           "Bitts & bollards",
           "Cleats & chocks",
@@ -2497,10 +2519,10 @@ export const menuData = {
       {
         name: "RUDDER & STEERING SYSTEM CASTINGS",
         slug: "rudder-and-steering-system-castings",
-        image: "/assets/image6.jpg",
+        image: "/assets/marine_castings/marine_castings2.jpeg",
         description:
           "Structural cast parts used in rudder assemblies and steering mechanisms for marine vessels and ships.",
-        videoUrl: "/video/rudder-castings.mp4",
+        videoUrl: "/video/marine_castings/Mashroom Anchor.578.mp4",
         items: [
           "Rudder horn castings",
           "Rudder stock castings",
@@ -2514,10 +2536,10 @@ export const menuData = {
       {
         name: "SACRIFICIAL ANODE CASTINGS",
         slug: "sacrificial-anode-castings",
-        image: "/assets/image7.jpg",
+        image: "/assets/marine_castings/marine_castings3.jpeg",
         description:
           "Zinc, aluminium and magnesium anode castings designed for cathodic protection of ship hulls and marine structures.",
-        videoUrl: "/video/sacrificial-anodes.mp4",
+        videoUrl: "/video/marine_castings/marine_castings1.mp4",
         items: [
           "Hull anodes",
           "Tank anodes",
@@ -2531,10 +2553,10 @@ export const menuData = {
       {
         name: "OFFSHORE & SUBSEA CASTINGS",
         slug: "offshore-and-subsea-castings",
-        image: "/assets/image8.jpg",
+        image: "/assets/marine_castings/marine_castings1.jpeg",
         description:
           "Castings manufactured for subsea production systems, offshore platforms and deep-water equipment.",
-        videoUrl: "/video/offshore-subsea-castings.mp4",
+        videoUrl: "/video/marine_castings/Mooring Bollards.13.mp4",
         items: [
           "Subsea connector castings",
           "Manifold components",
