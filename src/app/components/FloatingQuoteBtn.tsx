@@ -16,7 +16,7 @@ export default function FloatingQuoteBtn() {
   };
 
   return (
-    <div className="fixed bottom-20 right-8 z-50">
+    <div className="fixed bottom-20 right-24 z-50">
       <Link 
         href="#get-quote"
         onClick={handleClick}
