@@ -66,7 +66,7 @@ export default function AdminProductList() {
         </div>
         <Link 
           href="/private/member/products/new"
-          className="inline-flex items-center gap-2 bg-[#cc2221] hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+          className="inline-flex items-center gap-2 bg-[#cc2221] hover:bg-[#cc2221] text-white px-4 py-2 rounded-lg font-medium transition-colors"
         >
           <Plus className="w-4 h-4" />
           Add Product
@@ -171,7 +171,7 @@ export default function AdminProductList() {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                        <button className="p-2 text-gray-400 hover:text-[#cc2221] hover:bg-blue-50 rounded-lg">
+                        <button className="p-2 text-gray-400 hover:text-[#cc2221] hover:bg-[#cc2221] rounded-lg">
                           <Edit className="w-4 h-4" />
                         </button>
                         <button className="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 rounded-lg">
