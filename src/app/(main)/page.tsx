@@ -1,5 +1,10 @@
-import { Button } from "@/components/ui/button";
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+
+// --- IMPORTS ---
 import HeroSection from "../components/hero";
 import BusinessSolutions from "../components/busineesSolution";
 import CosmoBlog from "../components/cosmoBlog";
@@ -18,14 +23,37 @@ import { DesignCapabilities } from "../components/design-capabilities";
 import AssociationsCarousel from "../components/productCarousel2";
 import LiveStreamCommandCenter from "../components/LiveStreamCommandCenter";
 import InfiniteLiveFeed from "../components/InfiniteLiveFeed";
+import FactoryStories from '../private/dashboard/FactoryStories';
 
+// --- THE NEW STORIES COMPONENT --- 
 
 export default function Home() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [userName, setUserName] = useState('');
+    const [isMounted, setIsMounted] = useState(false);
+
+    // --- CHECK LOGIN STATUS ---
+    useEffect(() => {
+        setIsMounted(true);
+        const token = typeof window !== 'undefined' ? localStorage.getItem('authToken') : null;
+
+        if (token) {
+            setIsLoggedIn(true);
+            const name = localStorage.getItem('userName') || 'Member';
+            setUserName(name);
+        }
+    }, []);
+
+    if (!isMounted) return null;
+
     return (
         <div className="">
+            
+            {/* ========================================= */}
+            {/* 1. HERO VIDEO SECTION (Visible to ALL)    */}
+            {/* ========================================= */}
             <div className="relative w-full overflow-hidden flex items-center justify-center min-h-[500px] md:min-h-[700px]">
-
-                {/* === 1. BACKGROUND VIDEO (Fixed z-0) === */}
+                {/* Background Video */}
                 <video
                     autoPlay
                     loop
@@ -33,54 +61,38 @@ export default function Home() {
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover z-0"
                 >
-                    {/* Replace with your video path */}
                     <source src="/video/282244_small.mp4" type="video/mp4" />
                 </video>
 
-                {/* === 2. RED OVERLAY (Stronger on mobile for readability) === */}
+                {/* Red Overlay */}
                 <div className="absolute inset-0 bg-[#cc2221]/10 md:bg-[#cc2221]/30 z-0 pointer-events-none" />
 
-                {/* === 3. CONTENT WRAPPER === */}
+                {/* Hero Content */}
                 <div className="relative z-10 container mx-auto px-4 py-12 md:py-24 text-center">
-
-                    {/* MOBILE CARD EFFECT: Adds a white glass box on mobile only so text is readable */}
                     <div className="inline-block md:inline w-full md:w-auto bg-white/60 md:bg-transparent backdrop-blur-md md:backdrop-blur-none rounded-xl p-6 md:p-0 shadow-lg md:shadow-none border border-white/50 md:border-none">
-
-                        {/* Top Label */}
                         <p className="text-[8px] md:text-[16px] font-bold uppercase tracking-widest text-[#cc2221] mb-2 md:mb-4 bg-white/80 md:bg-white/90 px-3 py-2 rounded-full inline-block shadow-sm">
                             MEGA FOUNDRIES | the best industry services
                         </p>
 
-                        {/* HEADINGS */}
                         <h1 className="text-gray-800 md:text-white font-bold leading-tight tracking-tight mt-2">
-
-                            {/* Line 1 */}
                             <span className="block text-[18px] md:text-[40px] whitespace-normal md:whitespace-nowrap">
                                 The World's Largest and Advanced
                             </span>
-
-                            {/* Line 2 */}
                             <span className="block text-[18px] md:text-[40px]">
                                 Consortium of
                             </span>
-
-                            {/* Highlighted Line */}
                             <span className="block mt-2 text-[10px] py-2 md:text-[28px] text-[#cc2221] uppercase tracking-wide font-black drop-shadow-sm bg-white/50 md:bg-transparent rounded px-2">
                                 Foundries, Forge Shops & Fabricators
                             </span>
-
-                            {/* Big Finish */}
                             <span className="block mt-2 text-[28px] md:text-[70px] font-light text-gray-800 md:text-white">
                                 Under One Universe
                             </span>
                         </h1>
 
-                        {/* Quote */}
                         <p className="text-[14px] md:text-[22px] text-[#cc2221] font-medium italic mt-4 mb-6">
                             "Think Fast and Succeed Faster"
                         </p>
 
-                        {/* BUTTONS */}
                         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full">
                             <Button className="w-full sm:w-auto bg-[#cc2221] hover:bg-red-700 text-white rounded-md font-bold shadow-lg md:px-10 md:py-7 md:text-xl">
                                 Explore Capabilities
@@ -91,17 +103,37 @@ export default function Home() {
                             </Button>
                         </div>
 
-                        {/* Bottom Text */}
                         <p className="text-[11px] md:text-[18px] text-gray-800 md:text-white mt-6 font-semibold uppercase tracking-wide">
                             Engage with dedicated experts
                         </p>
                     </div>
-
                 </div>
             </div>
+
+            {/* ========================================= */}
+            {/* 2. FACTORY STORIES (LOGGED IN ONLY)       */}
+            {/* ========================================= */}
+            {isLoggedIn && (
+                <div className="bg-slate-50 border-b border-slate-200 py-8">
+                    <div className=" mx-auto px-4">
+ 
+                    <FactoryStories />
+                        
+                        {/* THE STORIES COMPONENT */}
+                    </div>
+                </div>
+            )}
+
+            {/* ========================================= */}
+            {/* 3. REST OF HOME PAGE (Visible to ALL)     */}
+            {/* ========================================= */}
             <LiveStreamCommandCenter />
+            
             <HeroSection />
-            <MegaStories />
+            
+            {/* You can keep or remove the old MegaStories depending on your preference */}
+            <MegaStories /> 
+            
             <BusinessSolutions />
             <CosmoBlog />
             <ChatBlog />
@@ -111,7 +143,6 @@ export default function Home() {
             <SourcingRequest />
             <EngagementAnalytics />
             <IndustryNews />
-            {/* <MarketplacePage/> */}
             <FloatingQuoteBtn />
             <HotProductVideos
                 title={newInnovationData.title}
@@ -119,7 +150,6 @@ export default function Home() {
             />
             <VerticalAccordion />
             <InfiniteLiveFeed />
-
             <AssociationsCarousel />
         </div>
     );
