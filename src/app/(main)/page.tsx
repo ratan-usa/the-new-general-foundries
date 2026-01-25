@@ -24,6 +24,7 @@ import AssociationsCarousel from "../components/productCarousel2";
 import LiveStreamCommandCenter from "../components/LiveStreamCommandCenter";
 import InfiniteLiveFeed from "../components/InfiniteLiveFeed";
 import FactoryStories from '../private/dashboard/FactoryStories';
+import Product3DShowcase from './videos/Product3DShowcase';
 
 // --- THE NEW STORIES COMPONENT --- 
 
@@ -48,7 +49,7 @@ export default function Home() {
 
     return (
         <div className="">
-            
+
             {/* ========================================= */}
             {/* 1. HERO VIDEO SECTION (Visible to ALL)    */}
             {/* ========================================= */}
@@ -89,7 +90,7 @@ export default function Home() {
                             </span>
                         </h1>
 
-                        <p className="text-[14px] md:text-[22px] text-[#cc2221] font-medium italic mt-4 mb-6">
+                        <p className="text-[14px] md:text-[22px] text-[#cc2221] font-medium italic mt-4 mb-6   md:mb-4 bg-white/80 md:bg-white/90 px-3 py-2 rounded-full inline-block shadow-sm">
                             "Think Fast and Succeed Faster"
                         </p>
 
@@ -116,8 +117,8 @@ export default function Home() {
             {isLoggedIn && (
                 <div className="bg-slate-50 border-b border-slate-200 py-8">
                     <div className=" mx-auto px-4">
- 
-                        
+
+
                         {/* THE STORIES COMPONENT */}
                     </div>
                 </div>
@@ -128,12 +129,12 @@ export default function Home() {
             <FactoryStories />
             {/* ========================================= */}
             <LiveStreamCommandCenter />
-            
+
             <HeroSection />
-            
+            <Product3DShowcase />
             {/* You can keep or remove the old MegaStories depending on your preference */}
-            <MegaStories /> 
-            
+            <MegaStories />
+
             <BusinessSolutions />
             <CosmoBlog />
             <ChatBlog />

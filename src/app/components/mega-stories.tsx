@@ -127,7 +127,7 @@ export function MegaStories() {
                     </Badge>
                   </div>
 
-                  <h3 className="text-2xl md:text-4xl font-bold leading-tight text-gray-800 mb-4 drop-shadow-md ">
+                  <h3 className="text-xxl md:text-2xl font-bold leading-tight text-gray-800 mb-4 drop-shadow-md ">
                     {heroProduct.title}
                   </h3>
                   <div className="flex items-center gap-6 text-sm text-gray-900 font-medium border-t border-white/20 pt-4">
