@@ -117,7 +117,6 @@ export default function Home() {
                 <div className="bg-slate-50 border-b border-slate-200 py-8">
                     <div className=" mx-auto px-4">
  
-                    <FactoryStories />
                         
                         {/* THE STORIES COMPONENT */}
                     </div>
@@ -126,6 +125,7 @@ export default function Home() {
 
             {/* ========================================= */}
             {/* 3. REST OF HOME PAGE (Visible to ALL)     */}
+            <FactoryStories />
             {/* ========================================= */}
             <LiveStreamCommandCenter />
             
