@@ -96,47 +96,45 @@ export function MegaStories() {
         <div className="px-6 pb-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            {/* === HERO PRODUCT (Volume 1) === */}
+{/* === HERO PRODUCT (Volume 1) === */}
             <div className="md:col-span-2 md:row-span-2 h-full min-h-[400px]">
-              <Card className="h-full w-full overflow-hidden group border-2 border-zinc-800 shadow-none relative rounded-none bg-zinc-900 cursor-pointer">
+              <Card className="h-full w-full overflow-hidden group border-2 border-gray-100 shadow-sm relative rounded-none bg-white cursor-pointer flex flex-col items-center justify-center">
 
-                {/* Gradient Overlay (Keeps text readable) */}
-                <div className="absolute inset-0  z-10" />
-
-                {/* === REPLACED IMAGE WITH VIDEO === */}
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-700 "
-                >
-                  {/* Use heroProduct.video if available, otherwise fallback or use fixed path */}
-                  <source src={heroProduct.video || "/video/NEW NEXT GENERATION DESIGNER D-BOXES.mp4"} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                {/* === VIDEO CONTAINER (Reduced Size) === */}
+                {/* w-[85%] h-[55%] makes it smaller than the card, leaving white space */}
+                <div className="relative w-[85%] h-[55%] shadow-lg overflow-hidden z-0 mb-16"> 
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    >
+                      <source src={heroProduct.video || "/video/NEW NEXT GENERATION DESIGNER D-BOXES.mp4"} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                </div>
 
                 {/* Content Wrapper */}
-                <div className="absolute bottom-0 left-0 p-8 z-20 text-white w-full">
+                <div className="absolute bottom-0 left-0 p-8 z-20 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100">
                   <div className="flex justify-between items-start">
-                    {/* <Badge className="mb-4 bg-orange-600 text-white border-0 text-lg rounded-none px-3">
-                      VOL. 01
-                    </Badge> */}
-                    <Badge className="mb-4 bg-transparent border border-white/30 text-gray-800 hover:bg-white/10">
+                    <Badge className="mb-2 bg-transparent border border-[#cc2221] text-[#cc2221] hover:bg-[#cc2221] hover:text-white rounded-none px-2 py-0.5">
                       TOP SELLER
                     </Badge>
                   </div>
 
-                  <h3 className="text-xxl md:text-2xl font-bold leading-tight text-gray-800 mb-4 drop-shadow-md ">
+                  <h3 className="text-2xl md:text-3xl font-black leading-tight text-[#cc2221] mb-2 uppercase tracking-tight">
                     {heroProduct.title}
                   </h3>
-                  <div className="flex items-center gap-6 text-sm text-gray-900 font-medium border-t border-white/20 pt-4">
-                    <span className="flex items-center gap-2">
-                      {/* <heroProduct.icon className="h-4 w-4 text-orange-500" /> {heroProduct.brand} */}
-                    </span>
-                    <span className="text-gray-900 font-bold">
-                      {heroProduct.price}
-                    </span>
+                  
+                  <div className="flex items-center justify-between border-t border-gray-200 pt-3 mt-2">
+                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                        Volume 01
+                     </span>
+                     {/* The Red Accent Color */}
+                     <span className="  font-black text-xl">
+                        {heroProduct.price}
+                     </span>
                   </div>
                 </div>
               </Card>
@@ -168,7 +166,7 @@ export function MegaStories() {
 
                   <CardContent className="flex-1 p-4 flex flex-col justify-between bg-white">
                     <div>
-                      <h4 className="font-bold text-sm md:text-base leading-snug line-clamp-2 text-zinc-800 group-hover:text-orange-600 transition-colors uppercase ">
+                      <h4 className="font-bold text-sm md:text-base leading-snug line-clamp-2 text-[#cc2221] group-hover:text-orange-600 transition-colors uppercase ">
                         {product.title}
                       </h4>
                     </div>

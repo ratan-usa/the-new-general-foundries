@@ -224,7 +224,7 @@ export default function FactoryStories() {
           </div>
 
           {/* Floating Plus Button */}
-          <div className="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 rounded-full p-1 border-4 border-white shadow-sm">
+          <div className="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#cc2221] rounded-full p-1 border-4 border-white shadow-sm">
             <Plus className="w-4 h-4 text-white" strokeWidth={3} />
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function FactoryStories() {
 
             {/* Avatar Badge (Top Left) */}
             <div className={`
-                absolute top-2 left-2 rounded-full border-4 border-blue-600 p-[2px] bg-blue-600
+                absolute top-2 left-2 rounded-full border-4 border-[#cc2221] p-[2px] bg-[#cc2221]
                 ${story.isViewed ? 'border-slate-300 bg-slate-300' : ''}
                 shadow-md
             `}>
