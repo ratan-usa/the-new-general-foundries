@@ -22,7 +22,7 @@ const PRODUCT_VIDEOS = [
     description: "Full rotation showing the variable height adjustment ring mechanism.",
     duration: "0:45",
     type: "360_ROTATION",
-    src: "video/paving_riser/paving riser 1.5213.mp4", 
+    src: "video/paving_riser/1 FT LEACHING GALLEY .glb", 
     thumbnail: "/assets/PAVING-RISERS/paving riser 1.5200.png" 
   },
   {

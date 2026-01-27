@@ -25,6 +25,8 @@ import LiveStreamCommandCenter from "../components/LiveStreamCommandCenter";
 import InfiniteLiveFeed from "../components/InfiniteLiveFeed";
 import FactoryStories from '../private/dashboard/FactoryStories';
 import Product3DShowcase from './videos/Product3DShowcase';
+import NewProductPage from './videos/videoViewer';
+import ProductPage from './videos/ProductPage';
 
 // --- THE NEW STORIES COMPONENT --- 
 
@@ -129,7 +131,8 @@ export default function Home() {
             <FactoryStories />
             {/* ========================================= */}
             <LiveStreamCommandCenter />
-
+            {/* <NewProductPage /> */}
+            <ProductPage/>
             <HeroSection />
             <Product3DShowcase />
             {/* You can keep or remove the old MegaStories depending on your preference */}
