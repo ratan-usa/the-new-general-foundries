@@ -68,7 +68,7 @@ export function MegaStories() {
     <section className="w-full px-4 md:px-8 py-12 bg-white">
 
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl font-bold tracking-tight text-black uppercase border-l-4 border-black pl-4">
+        <h2 className="text-3xl font-bold tracking-tight text-[#cc2221] uppercase border-l-4 border-black pl-4">
           Industrial Marketplace
         </h2>
         <Button variant="outline" className="hidden sm:flex group border-black text-black hover:bg-zinc-100">
@@ -102,7 +102,7 @@ export function MegaStories() {
 
                 {/* === VIDEO CONTAINER (Reduced Size) === */}
                 {/* w-[85%] h-[55%] makes it smaller than the card, leaving white space */}
-                <div className="relative w-[85%] h-[55%] shadow-lg overflow-hidden z-0 mb-16"> 
+                <div className="relative w-full h-full shadow-lg overflow-hidden z-0 mb-16"> 
                     <video
                       autoPlay
                       loop
@@ -116,7 +116,7 @@ export function MegaStories() {
                 </div>
 
                 {/* Content Wrapper */}
-                <div className="absolute bottom-0 left-0 p-8 z-20 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100">
+                <div className="absolute bottom-0 left-0 pt-8 z-20 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100">
                   <div className="flex justify-between items-start">
                     <Badge className="mb-2 bg-transparent border border-[#cc2221] text-[#cc2221] hover:bg-[#cc2221] hover:text-white rounded-none px-2 py-0.5">
                       TOP SELLER
