@@ -98,7 +98,7 @@ export function MegaStories() {
 
 {/* === HERO PRODUCT (Volume 1) === */}
             <div className="md:col-span-2 md:row-span-2 h-full min-h-[400px]">
-              <Card className="h-full w-full overflow-hidden group border-2 border-gray-100 shadow-sm relative rounded-none bg-white cursor-pointer flex flex-col items-center justify-center">
+              <Card className="h-full w-full p-20 overflow-hidden group border-2 border-gray-100 shadow-sm relative rounded-none bg-white cursor-pointer flex flex-col items-center justify-center">
 
                 {/* === VIDEO CONTAINER (Reduced Size) === */}
                 {/* w-[85%] h-[55%] makes it smaller than the card, leaving white space */}

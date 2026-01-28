@@ -38,7 +38,7 @@ export default function AssociationsCarousel() {
   return (
     <section className="w-full py-2 bg-slate-50 overflow-hidden">
       <div className="container mx-auto px-4 mb-10 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#cc2221] uppercase tracking-wide">
+        <h2 className="text-2xl md:text-3xl font-bold   uppercase tracking-wide">
           Associations & Standards
         </h2>
         {/* <div className="w-24 h-1 bg-[#cc2221] mx-auto mt-4 rounded-full"></div> */}
