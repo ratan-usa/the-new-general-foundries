@@ -1,4 +1,61 @@
-import { Anvil, Hammer, Construction, Layers, Beaker } from "lucide-react";
+import { Anvil, Hammer, Construction, Layers, Beaker, LucideIcon } from "lucide-react";
+import { Wrench, Droplet, Lightbulb, Grid3X3, DoorOpen } from 'lucide-react';
+export interface Category {
+  title: string;
+  slug: string;
+  image: string;
+  description: string;
+  specs: string[];
+  icon: LucideIcon; // Store the component itself, not <Icon />
+  color: string;
+}
+export const categories = [
+  {
+    title: "Trench Products",
+    slug: "trench-products",
+    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    description: "Heavy-duty drainage solutions for high-traffic industrial environments.",
+    specs: ["Ductile Iron Construction", "Load Class D400+", "Anti-Slip Surface", "UV Resistant Coating"],
+    icon: Wrench,
+    color: "bg-red-700",
+  },
+  {
+    title: "Cleanouts",
+    slug: "cleanouts",
+    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    description: "Professional grade access points for plumbing and waste systems.",
+    specs: ["Gas-tight Seals", "Brass/Nickel Finish", "Easy-access Design", "Corrosion Resistant"],
+    icon: Droplet,
+    color: "bg-red-700",
+  },
+  {
+    title: "New Innovations",
+    slug: "new-innovations",
+    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    description: "Cutting-edge casting technologies and patent-pending industrial designs.",
+    specs: ["Patent-pending Technology", "Sustainable Materials", "IoT Ready Sensors", "High Precision Molding"],
+    icon: Lightbulb,
+    color: "bg-red-700",
+  },
+  {
+    title: "Pipe Grates",
+    slug: "pipe-grates",
+    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    description: "Optimized water flow and debris management for municipal projects.",
+    specs: ["High Flow Efficiency", "Debris Filtration", "Cast Iron Durability", "Custom Sizes Available"],
+    icon: Grid3X3,
+    color: "bg-red-700",
+  },
+  {
+    title: "Hinged Castings",
+    slug: "hinged-castings",
+    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    description: "Ergonomic, easy-access manhole and utility covers for safety.",
+    specs: ["Ergonomic Lift Assist", "Safety Lock System", "Heavy Duty Hinge", "Reduced Maintenance Cost"],
+    icon: DoorOpen,
+    color: "bg-red-700",
+  }
+];
 
 export const materialsData: Record<string, any> = {
   "cast-iron": {
@@ -7,7 +64,7 @@ export const materialsData: Record<string, any> = {
     description: "Known for its excellent machinability, vibration dampening, and wear resistance. Ideal for engine blocks, manhole covers, and heavy machinery bases.",
     properties: ["High compressive strength", "Good castability", "Vibration damping", "Wear resistance"],
     applications: ["Automotive engine blocks", "Pipe fittings", "Machine tool bases", "Manhole covers"],
-    image: "/assets/image16.jpg"  
+    image: "/assets/image16.jpg"
   },
   "ductile-iron": {
     title: "Ductile Iron",
@@ -33,7 +90,7 @@ export const materialsData: Record<string, any> = {
     applications: ["Aerospace components", "Automotive panels", "Heat sinks", "Marine fittings"],
     image: "/assets/image7.jpg"
   },
-  "stainless": {  
+  "stainless": {
     title: "Stainless Steel",
     icon: Beaker,
     description: "Selected for its corrosion resistance and hygiene properties. Essential for medical, food processing, and chemical industries.",

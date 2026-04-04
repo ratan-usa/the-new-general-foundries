@@ -27,6 +27,7 @@ import FactoryStories from '../private/dashboard/FactoryStories';
 import Product3DShowcase from './videos/Product3DShowcase';
 import NewProductPage from './videos/videoViewer';
 import ProductPage from './videos/ProductPage';
+import { MegaProducts } from '../components/MegaProducts';
 
 // --- THE NEW STORIES COMPONENT --- 
 
@@ -128,6 +129,7 @@ export default function Home() {
 
             {/* ========================================= */}
             {/* 3. REST OF HOME PAGE (Visible to ALL)     */}
+           <MegaProducts/>
             <FactoryStories />
             {/* ========================================= */}
             <LiveStreamCommandCenter />

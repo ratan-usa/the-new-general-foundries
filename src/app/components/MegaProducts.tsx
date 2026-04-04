@@ -1,0 +1,77 @@
+"use client";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { categories } from '@/lib/materialsData';
+
+export const MegaProducts = () => {
+  return (
+    <section className="py-24 px-6 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16 border-l-4 border-[#cc2221] pl-6"
+        >
+          <h2 className="text-5xl font-black text-slate-900 tracking-tighter uppercase">
+            Popular <span className="text-[#cc2221]">Categories</span>
+          </h2>
+          <p className="text-slate-500 mt-4 text-lg max-w-xl">
+            Precision-engineered casting solutions for the world's most demanding infrastructure.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {categories.map((item, index) => {
+            // FIX: Destructure the icon and rename it to a Capitalized variable
+            const IconComponent = item.icon;
+
+            return (
+              <motion.div
+                key={item.slug}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_60px_-15px_rgba(204,34,33,0.2)] transition-all duration-500"
+              >
+                {/* Image Header */}
+                <div className="relative h-64 overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                  
+                  {/* FIX: Render as a component <IconComponent /> */}
+                  <div className={`absolute bottom-4 left-4 p-3 rounded-xl text-white shadow-lg ${item.color}`}>
+                    <IconComponent size={24} />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#cc2221] transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-slate-600 mb-8 flex-grow leading-relaxed">
+                    {item.description}
+                  </p>
+                  <Link
+                    href={`/categories/${item.slug}`}
+                    className="flex items-center justify-center gap-3 w-full py-4 bg-slate-50 rounded-2xl text-[#cc2221] font-black uppercase tracking-widest text-xs hover:bg-[#cc2221] hover:text-white transition-all duration-300"
+                  >
+                    View Details <ArrowRight size={16} />
+                  </Link>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+};
