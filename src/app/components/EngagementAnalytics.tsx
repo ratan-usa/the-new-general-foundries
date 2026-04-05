@@ -2,6 +2,7 @@ import React from 'react';
 import { BadgeCheck, Handshake, Package, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface FeatureItemProps {
   icon: React.ElementType; // This handles the Lucide components (e.g., BadgeCheck)
@@ -58,7 +59,9 @@ export default function App() {
 
           {/* Left Column: Image */}
           <div className="lg:col-span-1">
-            <img
+            <Image
+              width={1200}
+              height={600}
               src="/assets/image11.jpg"
               alt="Two business professionals shaking hands in an industrial factory setting"
               className="w-full h-full object-cover rounded-4xl shadow-xl"

@@ -88,7 +88,9 @@ export default function FooterHero({
                                 {/* Product Image Card */}
                                 <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 flex flex-col items-center text-center space-y-4 transition-transform hover:scale-[1.02] duration-300">
                                     <div className="w-full aspect-[4/3] relative flex items-center justify-center">
-                                        <img
+                                        <Image
+                                            width={1200}
+                                            height={600}
                                             src="/assets/image12.jpg"
                                             alt="Industrial Transformer Unit"
                                             className="max-h-full max-w-full object-contain drop-shadow-lg"

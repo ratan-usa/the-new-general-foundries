@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { ApiDocument, getProducts, Product } from '@/lib/api';
+import Image from 'next/image';
 
 // Import from your new API file 
 
@@ -130,7 +131,9 @@ export default function AdminProductList() {
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 shrink-0 bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                           <img 
+                           <Image 
+                             width={1200}
+                             height={600}
                              src={getThumbnail(product.documents)} 
                              alt={product.productName} 
                              className="w-full h-full object-cover"

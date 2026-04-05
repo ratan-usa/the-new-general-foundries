@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react';
 import { Plus, X, ArrowRight, ChevronRight, ChevronLeft } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 // --- TYPES ---
 type MediaType = 'IMAGE' | 'VIDEO';
@@ -211,7 +212,9 @@ export default function FactoryStories() {
           {/* Top Half (User Image) */}
           <div className="h-[65%] w-full bg-slate-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
+              width={1200}
+              height={600}
               src="/assets/marine_castings/marine_castings2.jpeg"
               alt="Me"
               className="w-full h-full object-cover group-hover/create:scale-105 transition-transform duration-300"
@@ -243,7 +246,7 @@ export default function FactoryStories() {
               <video src={story.mediaUrl} className="w-full h-full object-cover group-hover/story:scale-105 transition-transform duration-500" />
             ) : (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={story.mediaUrl} alt={story.vendorName} className="w-full h-full object-cover group-hover/story:scale-105 transition-transform duration-500" />
+              <Image width={1200} height={600} src={story.mediaUrl} alt={story.vendorName} className="w-full h-full object-cover group-hover/story:scale-105 transition-transform duration-500" />
             )}
 
             {/* Dark Overlay Gradient */}
@@ -355,7 +358,7 @@ function StoryViewer({ stories, initialIndex, onClose }: { stories: Story[], ini
             <video src={currentStory.mediaUrl} className="w-full h-full object-contain" autoPlay playsInline />
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={currentStory.mediaUrl} alt="Story" className="w-full h-full object-contain" />
+            <Image width={1200} height={600} src={currentStory.mediaUrl} alt="Story" className="w-full h-full object-contain" />
           )}
         </div>
 

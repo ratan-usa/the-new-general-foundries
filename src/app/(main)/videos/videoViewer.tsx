@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link'; 
 import { createProduct, CreateProductRequest } from '@/lib/api';
+import Image from 'next/image';
 
 // --- DYNAMIC IMPORT (CRITICAL FOR 3D) ---
 const ModelViewer = dynamic(() => import('./ModelViewer'), {
@@ -163,7 +164,7 @@ export default function NewProductPage() {
                                         ) : (
                                             /* C. IMAGE VIEWER */
                                             // eslint-disable-next-line @next/next/no-img-element
-                                            <img src={mediaPreview} alt="Preview" className="w-full h-full object-contain" />
+                                            <Image width={1200} height={600} src={mediaPreview} alt="Preview" className="w-full h-full object-contain" />
                                         )}
 
                                         {/* Trash Button */}

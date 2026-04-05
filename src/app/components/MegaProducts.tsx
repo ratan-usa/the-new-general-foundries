@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { categories } from '@/lib/materialsData';
+import Image from 'next/image';
 
 export const MegaProducts = () => {
   return (
@@ -39,9 +40,11 @@ export const MegaProducts = () => {
               >
                 {/* Image Header */}
                 <div className="relative h-64 overflow-hidden">
-                  <img 
+                  <Image 
                     src={item.image} 
                     alt={item.title}
+                    width={1200}
+                    height={600}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />

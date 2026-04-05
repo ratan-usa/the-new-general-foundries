@@ -33,7 +33,7 @@ const OfficeCard = ({
       <div className="absolute -top-8 p-1 bg-white rounded-full shadow-sm">
         <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gray-100 relative">
           {/* Replace src with actual flag image assets */}
-          <img src={flagSrc} alt={`${title} flag`} className="w-full h-full object-cover" />
+          <Image width={1200} height={600} src={flagSrc} alt={`${title} flag`} className="w-full h-full object-cover" />
         </div>
       </div>
 

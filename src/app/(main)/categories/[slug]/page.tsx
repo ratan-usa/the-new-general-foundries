@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { categories } from '@/lib/materialsData';
 import { ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 interface PageProps {
     params: {
@@ -39,8 +40,10 @@ export default async function CategoryPage() {
                 </button>
 
                 <div className="relative h-[60vh] flex items-center justify-center bg-slate-900">
-                    <img
+                    <Image
                         src={data.image}
+                        width={1200}
+                        height={600}
                         className="absolute inset-0 w-full h-full object-cover opacity-40"
                         alt="Banner"
                     />

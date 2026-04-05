@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import { Save, ChevronLeft, FileText, Box, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
 import { createProduct, CreateProductRequest } from '@/lib/api';
+import Image from 'next/image';
 
 // --- DYNAMIC IMPORT FOR 3D VIEWER ---
 const ModelViewer = dynamic(() => import('./ModelViewer'), { 
@@ -215,7 +216,7 @@ export default function ProductPage() {
                           {/* Thumbnail */}
                           <div className="w-12 h-12 bg-gray-200 rounded-md overflow-hidden flex-shrink-0">
                              {/* eslint-disable-next-line @next/next/no-img-element */}
-                             <img src={asset.thumbnail} alt={asset.name} className="w-full h-full object-cover" />
+                             <Image width={1200} height={600} src={asset.thumbnail} alt={asset.name} className="w-full h-full object-cover" />
                           </div>
                           
                           {/* Info */}
