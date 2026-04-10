@@ -32,6 +32,7 @@ import { newInnovationData } from "@/lib/newsData";
 import { DesignCapabilities } from '../components/design-capabilities';
 import { MegaStories } from '../components/mega-stories';
 import { VerticalAccordion } from '../components/VerticalAccordion';
+import AiRobotics from '../components/AiRobotics';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -93,7 +94,7 @@ export default function Home() {
             <LiveStreamCommandCenter />
             <ProductPage />
             <HeroSection />
-
+            <AiRobotics />
             {/* Non-Critical Visuals */}
             <Product3DShowcase />
             <MegaStories />
