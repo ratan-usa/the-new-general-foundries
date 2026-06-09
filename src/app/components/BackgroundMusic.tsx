@@ -45,7 +45,7 @@ export default function BackgroundMusic() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-72 right-6 z-50">
       {/* Hidden Audio Element */}
       <audio 
         ref={audioRef} 

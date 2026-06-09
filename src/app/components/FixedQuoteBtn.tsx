@@ -1,16 +1,44 @@
+"use client"; // Required in Next.js App Router for state & scroll listeners
+
 import Link from "next/link";
-import React from "react";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Phone, Mail, MessageCircle, ArrowUp } from "lucide-react";
 
 const FixedQuoteBtn = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Show scroll button when page is scrolled down past 300px
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
+      {/* ========================================= */}
+      {/* 1. SIDE FIXED: GET A QUOTE               */}
+      {/* ========================================= */}
       <div className="fixed top-30 right-0 z-[9999]">
         <Link
           href="/quote"
           className="
             flex items-center gap-2
-            bg-[#cc2221] hover:bg-[#cc2221] text-white font-bold
+            bg-[#cc2221] hover:bg-[#b01e1d] text-white font-bold
             py-3 px-8 rounded-t-lg shadow-[0_0_10px_rgba(0,0,0,0.3)]
             transition-all duration-300 ease-in-out
             origin-bottom-right 
@@ -24,17 +52,20 @@ const FixedQuoteBtn = () => {
       </div>
 
       {/* ========================================= */}
-      {/* 2. BOTTOM SIDE: 3 ROUNDED CONTACT ICONS   */}
+      {/* 2. BOTTOM RIGHT FIXED STACK              */}
       {/* ========================================= */}
-      <div className="fixed bottom-6 right-6 z-[9999] flex flex-col gap-4">
+      <div className="fixed bottom-6 right-6 z-[9999] flex flex-col gap-4 items-center">
         
-        {/* A. WhatsApp (Green) */}
+
+
+        {/* BOTTOM THREE: Social / Contact Icons */}
+        {/* A. WhatsApp */}
         <Link
-          href="https://wa.me/15127828880" // Replace with actual number
+          href="https://wa.me/15127828880"
           target="_blank"
           className="
             w-12 h-12 flex items-center justify-center 
-            bg-[#cc2221] hover:bg-[#cc2221] text-white 
+            bg-[#cc2221] hover:bg-[#b01e1d] text-white 
             rounded-full shadow-lg shadow-[#cc2221]/30
             transition-transform hover:scale-110
           "
@@ -43,12 +74,12 @@ const FixedQuoteBtn = () => {
           <MessageCircle className="w-6 h-6" />
         </Link>
 
-        {/* B. Phone Call (Blue) */}
+        {/* B. Phone Call */}
         <Link
           href="tel:+15127828880"
           className="
             w-12 h-12 flex items-center justify-center 
-            bg-[#cc2221] hover:bg-[#cc2221] text-white 
+            bg-[#cc2221] hover:bg-[#b01e1d] text-white 
             rounded-full shadow-lg shadow-[#cc2221]/30
             transition-transform hover:scale-110
           "
@@ -57,12 +88,12 @@ const FixedQuoteBtn = () => {
           <Phone className="w-5 h-5" />
         </Link>
 
-        {/* C. Email (Slate/Gray or Brand Red) */}
+        {/* C. Email */}
         <Link
           href="mailto:sales@megafoundries.com"
           className="
             w-12 h-12 flex items-center justify-center 
-            bg-[#cc2221] hover:bg-[#cc2221] text-white 
+            bg-[#cc2221] hover:bg-[#b01e1d] text-white 
             rounded-full shadow-lg shadow-[#cc2221]/30
             transition-transform hover:scale-110
           "
@@ -70,6 +101,20 @@ const FixedQuoteBtn = () => {
         >
           <Mail className="w-5 h-5" />
         </Link>
+
+        {/* TOP: Scroll to Top Button */}
+        <button
+          onClick={scrollToTop}
+          className={`
+            w-12 h-12 flex items-center justify-center 
+            bg-slate-800 hover:bg-slate-900 text-white 
+            rounded-full shadow-lg transition-all duration-300
+            ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none h-0 w-0 !gap-0"}
+          `}
+          title="Scroll to Top"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </button>
 
       </div>
     </>
