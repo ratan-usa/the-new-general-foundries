@@ -1,16 +1,15 @@
 import React from "react";
 import Link from "next/link";
-
 const categories = [
   "Manhole Covers",
   "Gully Gratings",
   "Heavy Traffic Gratings",
   "Access Covers",
   "Telecom & Electrical",
-  "Drainage Channels",
+  "Drainage Castings",
   "Tree Grates",
   "Standard Junction Boxes",
-  "FUBOX Systems",
+  "Industrial Castings",
   "Support Brackets"
 ];
 
@@ -18,44 +17,44 @@ const products = [
   {
     id: "manhole-covers",
     title: "Manhole Covers",
-    description: "Available in modern designs and various resistance classes. Mega Foundries ductile iron covers are engineered securely for high-load municipal sealing and sewage networks.",
+    description: "Available in modern designs and various resistance classes. Mega Foundries ductile iron castings are engineered securely for high-load municipal sealing and sewage networks.",
     image: "/assets/image7.jpg",
     link: "/products/manhole-covers"
   },
   {
     id: "gully-gratings",
     title: "Gully Gratings",
-    description: "High-performance iron gratings supplied in multiple sizes and load classes for efficient rainwater collection on urban roads, highways, parking lots, and industrial plants.",
+    description: "High-performance iron castings supplied in multiple sizes and load classes for efficient rainwater collection on urban roads, highways, parking lots, and industrial plants.",
     image: "/assets/image7.jpg",
     link: "/products/gully-gratings"
   },
   {
     id: "heavy-traffic",
     title: "Heavy Traffic Gratings",
-    description: "Engineered to withstand intensive point loads up to 90 tons. The ultimate solution for heavy industrial zones, logistics hubs, airports, and dockyards.",
+    description: "Heavy-duty iron castings engineered to withstand intensive point loads up to 90 tons. The ultimate casting solution for heavy industrial zones, logistics hubs, airports, and dockyards.",
     image: "/assets/image7.jpg",
     link: "/products/heavy-traffic"
   },
   {
     id: "access-covers",
     title: "Access Covers for Inspection Chambers",
-    description: "Versatile inspection and access solutions for water, sewage, and electrical distribution chambers. Built with airtight sealing, dual-face options, and modular sizing.",
+    description: "Versatile casting solutions for inspection and access over water, sewage, and electrical distribution chambers. Built with airtight sealing, dual-face options, and modular sizing.",
     image: "/assets/image7.jpg",
     link: "/products/access-covers"
   },
   {
     id: "telecom-electrical",
     title: "Fiber Optic, Telecom & Electrical Covers",
-    description: "Specialized infrastructure covers offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
+    description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
     image: "/assets/image7.jpg",
     link: "/products/telecom-covers"
   },
   {
-    id: "drainage-channels",
-    title: "Surface Drainage Channels",
-    description: "Premium linear drainage solutions combining polymer concrete channels with solid ductile iron gratings to ensure rapid water evacuation performance.",
+    id: "drainage-castings",
+    title: "Surface Drainage Castings",
+    description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
     image: "/assets/image7.jpg",
-    link: "/products/drainage-channels"
+    link: "/products/drainage-castings"
   }
 ];
 
@@ -70,7 +69,7 @@ const MegaProduct = () => {
             Explore <span className="font-semibold text-[#cc2221]">Mega Foundries</span> Products
           </h2>
           <p className="text-sm text-zinc-400">
-            Complete line of world-class nodular ductile iron products (Fe 50007), delivering ultimate durability and engineering modernity to your infrastructure projects.
+            Complete line of world-class nodular ductile iron castings (Fe 50007), delivering ultimate durability and engineering modernity to your infrastructure projects.
           </p>
         </div>
 
@@ -100,7 +99,6 @@ const MegaProduct = () => {
                   alt={product.title}
                   className="max-h-56 object-contain filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-105"
                   onError={(e) => {
-                    // Fallback visual mock if images are loading/missing during setup
                     e.currentTarget.src = "https://via.placeholder.com/300x200/222/fff?text=Casting+Product";
                   }}
                 />
@@ -115,7 +113,7 @@ const MegaProduct = () => {
                   {product.description}
                 </p>
                 
-                {/* Styled Red Border Action Button per the image */}
+                {/* Styled Red Border Action Button */}
                 <Link
                   href={product.link}
                   className="
