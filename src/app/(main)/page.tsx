@@ -33,6 +33,7 @@ import { DesignCapabilities } from '../components/design-capabilities';
 import { MegaStories } from '../components/mega-stories';
 import { VerticalAccordion } from '../components/VerticalAccordion';
 import AiRobotics from '../components/AiRobotics';
+import MegaProduct from '../components/MegaProduct';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -103,6 +104,8 @@ export default function Home() {
             {/* Blogs & Feed */}
             <CosmoBlog />
             <ChatBlog />
+            <MegaProducts />
+            <MegaProduct/>
             <ProductCarousel />
             <DesignCapabilities />
 
