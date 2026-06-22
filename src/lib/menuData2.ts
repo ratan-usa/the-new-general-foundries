@@ -307,215 +307,215 @@ export const menuData = {
     ]
 
   },
-  precast_molds: {
-    id: 'precast_molds',
-    label: 'PRECAST & MOLDS',
-    icon: Shapes, // choose any lucide icon you like
-    bannerImage: '/assets/image4.jpg',
-    color: 'bg-orange-100 text-orange-900',
+  // precast_molds: {
+  //   id: 'precast_molds',
+  //   label: 'PRECAST & MOLDS',
+  //   icon: Shapes, // choose any lucide icon you like
+  //   bannerImage: '/assets/image4.jpg',
+  //   color: 'bg-orange-100 text-orange-900',
 
-    categories: [
+  //   categories: [
 
-      // 1) Precast Concrete Molds
-      {
-        name: "PRECAST CONCRETE MOLDS",
-        slug: "precast-concrete-molds",
-        image: "/assets/image18.jpeg",
-        description:
-          "High-precision molds engineered for manufacturing durable, dimensionally accurate precast concrete elements.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 1) Precast Concrete Molds
+  //     {
+  //       name: "PRECAST CONCRETE MOLDS",
+  //       slug: "precast-concrete-molds",
+  //       image: "/assets/image18.jpeg",
+  //       description:
+  //         "High-precision molds engineered for manufacturing durable, dimensionally accurate precast concrete elements.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Slab molds",
-          "Beam & column molds",
-          "Retaining block molds",
-          "Foundation molds",
-          "Drain cover molds"
-        ]
-      },
+  //       items: [
+  //         "Slab molds",
+  //         "Beam & column molds",
+  //         "Retaining block molds",
+  //         "Foundation molds",
+  //         "Drain cover molds"
+  //       ]
+  //     },
 
-      // 2) Precast Road & Highway Molds
-      {
-        name: "PRECAST ROAD & HIGHWAY MOLDS",
-        slug: "precast-road-and-highway-molds",
-        image: "/assets/image19.jpeg",
-        description:
-          "Molds designed for precast components used in roads, highways, bridges and transportation infrastructure.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 2) Precast Road & Highway Molds
+  //     {
+  //       name: "PRECAST ROAD & HIGHWAY MOLDS",
+  //       slug: "precast-road-and-highway-molds",
+  //       image: "/assets/image19.jpeg",
+  //       description:
+  //         "Molds designed for precast components used in roads, highways, bridges and transportation infrastructure.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Crash barrier molds",
-          "Curbstone molds",
-          "Bridge girder molds",
-          "Divider molds",
-          "Drain channel molds"
-        ]
-      },
+  //       items: [
+  //         "Crash barrier molds",
+  //         "Curbstone molds",
+  //         "Bridge girder molds",
+  //         "Divider molds",
+  //         "Drain channel molds"
+  //       ]
+  //     },
 
-      // 3) Precast Pipe Molds
-      {
-        name: "PRECAST PIPE MOLDS",
-        slug: "precast-pipe-molds",
-        image: "/assets/image20.jpg",
-        description:
-          "Heavy-duty molds for manufacturing RCC and precast concrete pipes with high load-bearing capacity.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 3) Precast Pipe Molds
+  //     {
+  //       name: "PRECAST PIPE MOLDS",
+  //       slug: "precast-pipe-molds",
+  //       image: "/assets/image20.jpg",
+  //       description:
+  //         "Heavy-duty molds for manufacturing RCC and precast concrete pipes with high load-bearing capacity.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "RCC Hume pipe molds",
-          "Box culvert pipe molds",
-          "Jack pipe molds",
-          "Pressure pipe molds",
-          "Manhole pipe molds"
-        ]
-      },
+  //       items: [
+  //         "RCC Hume pipe molds",
+  //         "Box culvert pipe molds",
+  //         "Jack pipe molds",
+  //         "Pressure pipe molds",
+  //         "Manhole pipe molds"
+  //       ]
+  //     },
 
-      // 4) Precast Building Components
-      {
-        name: "PRECAST BUILDING COMPONENTS",
-        slug: "precast-building-components",
-        image: "/assets/image1.jpeg",
-        description:
-          "Molds used for precast elements in residential, commercial and industrial building construction.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 4) Precast Building Components
+  //     {
+  //       name: "PRECAST BUILDING COMPONENTS",
+  //       slug: "precast-building-components",
+  //       image: "/assets/image1.jpeg",
+  //       description:
+  //         "Molds used for precast elements in residential, commercial and industrial building construction.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Wall panel molds",
-          "Floor slab molds",
-          "Staircase molds",
-          "Balcony & railing molds",
-          "Parapet wall molds"
-        ]
-      },
+  //       items: [
+  //         "Wall panel molds",
+  //         "Floor slab molds",
+  //         "Staircase molds",
+  //         "Balcony & railing molds",
+  //         "Parapet wall molds"
+  //       ]
+  //     },
 
-      // 5) Landscape & Urban Molds
-      {
-        name: "LANDSCAPE & URBAN MOLDS",
-        slug: "landscape-and-urban-molds",
-        image: "/assets/image2.jpeg",
-        description:
-          "Architectural molds for landscape development, garden structures and city beautification elements.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 5) Landscape & Urban Molds
+  //     {
+  //       name: "LANDSCAPE & URBAN MOLDS",
+  //       slug: "landscape-and-urban-molds",
+  //       image: "/assets/image2.jpeg",
+  //       description:
+  //         "Architectural molds for landscape development, garden structures and city beautification elements.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Paving block molds",
-          "Planter molds",
-          "Tree guard molds",
-          "Street furniture molds",
-          "Decorative wall molds"
-        ]
-      },
+  //       items: [
+  //         "Paving block molds",
+  //         "Planter molds",
+  //         "Tree guard molds",
+  //         "Street furniture molds",
+  //         "Decorative wall molds"
+  //       ]
+  //     },
 
-      // 6) Utility & Municipal Precast Molds
-      {
-        name: "UTILITY & MUNICIPAL PRECAST MOLDS",
-        slug: "utility-and-municipal-precast-molds",
-        image: "/assets/image3.jpeg",
-        description:
-          "Molds developed for smart city projects, utilities and public infrastructure applications.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 6) Utility & Municipal Precast Molds
+  //     {
+  //       name: "UTILITY & MUNICIPAL PRECAST MOLDS",
+  //       slug: "utility-and-municipal-precast-molds",
+  //       image: "/assets/image3.jpeg",
+  //       description:
+  //         "Molds developed for smart city projects, utilities and public infrastructure applications.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Manhole cover molds",
-          "Sewer chamber molds",
-          "Electric cable trench molds",
-          "Utility vault molds",
-          "Drainage component molds"
-        ]
-      },
+  //       items: [
+  //         "Manhole cover molds",
+  //         "Sewer chamber molds",
+  //         "Electric cable trench molds",
+  //         "Utility vault molds",
+  //         "Drainage component molds"
+  //       ]
+  //     },
 
-      // 7) Wall & Boundary Molds
-      {
-        name: "WALL & BOUNDRY MOLDS",
-        slug: "wall-and-boundary-molds",
-        image: "/assets/image4.jpg",
-        description:
-          "Precast molds for compound walls, fencing and boundary applications offering high strength and fast installation.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 7) Wall & Boundary Molds
+  //     {
+  //       name: "WALL & BOUNDRY MOLDS",
+  //       slug: "wall-and-boundary-molds",
+  //       image: "/assets/image4.jpg",
+  //       description:
+  //         "Precast molds for compound walls, fencing and boundary applications offering high strength and fast installation.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Prestressed boundary wall molds",
-          "Post & panel molds",
-          "Fence slab molds",
-          "Gate pillar molds",
-          "Textured wall molds"
-        ]
-      },
+  //       items: [
+  //         "Prestressed boundary wall molds",
+  //         "Post & panel molds",
+  //         "Fence slab molds",
+  //         "Gate pillar molds",
+  //         "Textured wall molds"
+  //       ]
+  //     },
 
-      // 8) Industrial Precast Molds
-      {
-        name: "INDUSTRIAL PRECAST MOLDS",
-        slug: "industrial-precast-molds",
-        image: "/assets/image5.jpeg",
-        description:
-          "Molds for precast elements used in factories, warehouses, utility buildings and heavy industry projects.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 8) Industrial Precast Molds
+  //     {
+  //       name: "INDUSTRIAL PRECAST MOLDS",
+  //       slug: "industrial-precast-molds",
+  //       image: "/assets/image5.jpeg",
+  //       description:
+  //         "Molds for precast elements used in factories, warehouses, utility buildings and heavy industry projects.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Machine foundation molds",
-          "Cable tray molds",
-          "Trench cover molds",
-          "Heavy load slab molds",
-          "Industrial column molds"
-        ]
-      },
+  //       items: [
+  //         "Machine foundation molds",
+  //         "Cable tray molds",
+  //         "Trench cover molds",
+  //         "Heavy load slab molds",
+  //         "Industrial column molds"
+  //       ]
+  //     },
 
-      // 9) Agriculture Precast Molds
-      {
-        name: "AGRICULTURE PRECAST MOLDS",
-        slug: "agriculture-precast-molds",
-        image: "/assets/image6.jpg",
-        description:
-          "Precast molds designed for agricultural infrastructure and farm development components.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 9) Agriculture Precast Molds
+  //     {
+  //       name: "AGRICULTURE PRECAST MOLDS",
+  //       slug: "agriculture-precast-molds",
+  //       image: "/assets/image6.jpg",
+  //       description:
+  //         "Precast molds designed for agricultural infrastructure and farm development components.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Irrigation canal molds",
-          "Cattle trough molds",
-          "Cow shed molds",
-          "Farming slab molds",
-          "Agriculture fencing molds"
-        ]
-      },
+  //       items: [
+  //         "Irrigation canal molds",
+  //         "Cattle trough molds",
+  //         "Cow shed molds",
+  //         "Farming slab molds",
+  //         "Agriculture fencing molds"
+  //       ]
+  //     },
 
-      // 10) Modular Mold Systems
-      {
-        name: "MODULAR MOLDS SYSTEMS",
-        slug: "modular-molds-systems",
-        image: "/assets/image7.jpg",
-        description:
-          "Flexible modular mold systems allowing quick size changes and high productivity for multiple product designs.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 10) Modular Mold Systems
+  //     {
+  //       name: "MODULAR MOLDS SYSTEMS",
+  //       slug: "modular-molds-systems",
+  //       image: "/assets/image7.jpg",
+  //       description:
+  //         "Flexible modular mold systems allowing quick size changes and high productivity for multiple product designs.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Adjustable shuttering systems",
-          "Bolt-lock panel molds",
-          "Universal mold frames",
-          "Quick release systems",
-          "Interchangeable panel molds"
-        ]
-      },
+  //       items: [
+  //         "Adjustable shuttering systems",
+  //         "Bolt-lock panel molds",
+  //         "Universal mold frames",
+  //         "Quick release systems",
+  //         "Interchangeable panel molds"
+  //       ]
+  //     },
 
-      // 11) Mold Accessories
-      {
-        name: "MOLDS ACCESSORIES",
-        slug: "molds-accessories",
-        image: "/assets/image8.jpg",
-        description:
-          "Accessories that enhance mold performance, surface finish and production efficiency.",
-        videoUrl: "/video/mold/2 feet mold.54.mp4",
+  //     // 11) Mold Accessories
+  //     {
+  //       name: "MOLDS ACCESSORIES",
+  //       slug: "molds-accessories",
+  //       image: "/assets/image8.jpg",
+  //       description:
+  //         "Accessories that enhance mold performance, surface finish and production efficiency.",
+  //       videoUrl: "/video/mold/2 feet mold.54.mp4",
 
-        items: [
-          "Vibration systems",
-          "Lifting anchors",
-          "Rubber gaskets",
-          "Rebar positioning accessories",
-          "Surface finishing liners"
-        ]
-      }
-    ]
-  }
-  ,
+  //       items: [
+  //         "Vibration systems",
+  //         "Lifting anchors",
+  //         "Rubber gaskets",
+  //         "Rebar positioning accessories",
+  //         "Surface finishing liners"
+  //       ]
+  //     }
+  //   ]
+  // }
+  // ,
   buildings_supply: {
     id: 'buildings_supply',
     label: 'BUILDING SUPPLY',
@@ -2803,7 +2803,7 @@ export const footerColumns: FooterColumn[] = [
           makeLink("Irrigation Products", "irrigation-products"),
           makeLink("Earth Moving Equipments", "earth-moving-equipments"),
           makeLink("Cathodic Protection", "cathodic-protection"),
-          makeLink("Precast & Molds", "precast-molds"),
+          // makeLink("Precast & Molds", "precast-molds"),
           makeLink("Mining Products", "mining-products"),
           makeLink("Metals & Alloys", "metals-alloys"),
           makeLink("Fabrication", "fabrication"),

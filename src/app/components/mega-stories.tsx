@@ -45,7 +45,7 @@ const products = [
   },
   { id: "earth_moving", title: "Bucket Teeth & Excavator Adaptors", category: "Earth Moving", brand: "HeavyDuty", price: "$450.00", icon: Zap },
   { id: "cathodic", title: "Zinc & Aluminium Sacrificial Anodes", category: "Protection", brand: "MarineSafe", price: "$120.00", icon: Settings },
-  { id: "precast", title: "Precast Concrete Molds & Road Barriers", category: "Infrastructure", brand: "InfraBuild", price: "Custom", icon: Cuboid },
+  // { id: "precast", title: "Precast Concrete Molds & Road Barriers", category: "Infrastructure", brand: "InfraBuild", price: "Custom", icon: Cuboid },
   { id: "mining", title: "Crusher Parts & Screen Panels", category: "Mining", brand: "RockCrush", price: "$2,100", icon: Sun },
   { id: "metals", title: "Ductile Iron & Stainless Steel Castings", category: "Alloys", brand: "Foundry", price: "RFQ", icon: Droplets },
   { id: "paving", title: "Adjustable Paving Risers & Pedestals", category: "Construction", brand: "LevelUp", price: "$15.00", icon: Cog },

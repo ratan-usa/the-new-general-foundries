@@ -48,15 +48,15 @@ const items: AccordionItem[] = [
         color: "bg-[#cc2221]",
         icon: Shield
     },
-    {
-        id: "4",
-        category: "Precast",
-        title: "Concrete Molds",
-        description: "High-precision molds for producing durable infrastructure elements.",
-        image: "/assets/image15.jpg",
-        color: "bg-[#cc2221]",
-        icon: Cuboid
-    },
+    // {
+    //     id: "4",
+    //     category: "Precast",
+    //     title: "Concrete Molds",
+    //     description: "High-precision molds for producing durable infrastructure elements.",
+    //     image: "/assets/image15.jpg",
+    //     color: "bg-[#cc2221]",
+    //     icon: Cuboid
+    // },
     {
         id: "5",
         category: "Mining",

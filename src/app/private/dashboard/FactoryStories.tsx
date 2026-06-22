@@ -20,14 +20,14 @@ interface Story {
 
 // --- DATA ---
 const INITIAL_STORIES: Story[] = [
-  {
-    id: '1',
-    vendorName: 'Mega Foundries – Precast Systems',
-    vendorAvatar: '/assets/marine_castings/marine_castings2.jpeg',
-    mediaUrl: '/video/4. MJ x FE 11.25 Degree.968.mp4',
-    mediaType: 'VIDEO',
-    isViewed: false,
-  },
+  // {
+  //   id: '1',
+  //   vendorName: 'Mega Foundries – Precast Systems',
+  //   vendorAvatar: '/assets/marine_castings/marine_castings2.jpeg',
+  //   mediaUrl: '/video/4. MJ x FE 11.25 Degree.968.mp4',
+  //   mediaType: 'VIDEO',
+  //   isViewed: false,
+  // },
   {
     id: '2',
     vendorName: 'Mega Foundries – Manufacturing',
@@ -68,14 +68,14 @@ const INITIAL_STORIES: Story[] = [
     mediaType: 'IMAGE',
     isViewed: false,
   },
-  {
-    id: '7',
-    vendorName: 'Mega Foundries – Precast Panels',
-    vendorAvatar: '/assets/marine_castings/marine_castings2.jpeg',
-    mediaUrl: '/assets/image7.jpg',
-    mediaType: 'IMAGE',
-    isViewed: false,
-  },
+  // {
+  //   id: '7',
+  //   vendorName: 'Mega Foundries – Precast Panels',
+  //   vendorAvatar: '/assets/marine_castings/marine_castings2.jpeg',
+  //   mediaUrl: '/assets/image7.jpg',
+  //   mediaType: 'IMAGE',
+  //   isViewed: false,
+  // },
   {
     id: '8',
     vendorName: 'Mega Foundries – Heavy Lifting',
@@ -115,14 +115,15 @@ const INITIAL_STORIES: Story[] = [
     mediaUrl: '/assets/image12.jpg',
     mediaType: 'IMAGE',
     isViewed: false,
-  }, {
-    id: '13',
-    vendorName: 'Mega Foundries – Precast Beams & Columns',
-    vendorAvatar: '/assets/image5.jpeg',
-    mediaUrl: '/assets/image13.jpg',
-    mediaType: 'IMAGE',
-    isViewed: false,
-  },
+  }, 
+  // {
+  //   id: '13',
+  //   vendorName: 'Mega Foundries – Precast Beams & Columns',
+  //   vendorAvatar: '/assets/image5.jpeg',
+  //   mediaUrl: '/assets/image13.jpg',
+  //   mediaType: 'IMAGE',
+  //   isViewed: false,
+  // },
   {
     id: '14',
     vendorName: 'Mega Foundries – Mold Fabrication',
@@ -163,14 +164,14 @@ const INITIAL_STORIES: Story[] = [
     mediaType: 'IMAGE',
     isViewed: false,
   },
-  {
-    id: '19',
-    vendorName: 'Mega Foundries – Finished Precast Structures',
-    vendorAvatar: '/assets/image5.jpeg',
-    mediaUrl: '/assets/image19.jpeg',
-    mediaType: 'IMAGE',
-    isViewed: false,
-  },
+  // {
+  //   id: '19',
+  //   vendorName: 'Mega Foundries – Finished Precast Structures',
+  //   vendorAvatar: '/assets/image5.jpeg',
+  //   mediaUrl: '/assets/image19.jpeg',
+  //   mediaType: 'IMAGE',
+  //   isViewed: false,
+  // },
 
 ];
 

@@ -82,13 +82,13 @@ const ASSET_LIBRARY = [
     url: '/gib files/1 FT LEACHING GALLEY .glb', 
     thumbnail: '/assets/image9.jpeg'
   },
-  {
-    id: '10',
-    name: 'Precast Catch Basin',
-    type: 'MODEL',
-    url: '/gib files/2 FT LEACHING GALLEY .glb', 
-    thumbnail: '/assets/image10.jpeg'
-  }
+  // {
+  //   id: '10',
+  //   name: 'Precast Catch Basin',
+  //   type: 'MODEL',
+  //   url: '/gib files/2 FT LEACHING GALLEY .glb', 
+  //   thumbnail: '/assets/image10.jpeg'
+  // }
 ];
 
 // Helper for UUIDs
