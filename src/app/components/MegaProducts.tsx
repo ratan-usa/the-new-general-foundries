@@ -8,8 +8,8 @@ import Image from 'next/image';
 
 export const MegaProducts = () => {
   return (
-    <section className="py-24 px-6 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-24 px-4 md:px-8 bg-white overflow-hidden">
+      <div className="">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

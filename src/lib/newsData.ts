@@ -155,7 +155,7 @@ export const newInnovationData = {
     {
       id: 6,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/video6.mp4",
+      videoUrl: "/video/newInnovation/video4.mp4",
     }
     ,
     {

@@ -103,8 +103,7 @@ export default function Home() {
 
             {/* Blogs & Feed */}
             <CosmoBlog />
-            <ChatBlog />
-            <MegaProducts />
+            <ChatBlog /> 
             <MegaProduct/>
             <ProductCarousel />
             <DesignCapabilities />
