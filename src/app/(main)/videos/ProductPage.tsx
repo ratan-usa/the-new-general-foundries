@@ -64,7 +64,7 @@ const ASSET_LIBRARY = [
     name: 'Surface Linear Drainage Casting Segment',
     type: 'MODEL',
     url: '/gib files/3 FT LEACHING GALLEY .glb', 
-    thumbnail: '/assets/image7.jpg'
+    thumbnail: '/assets/image7.jpeg'
   },
   {
     id: '8',

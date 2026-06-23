@@ -13,7 +13,7 @@ export const categories = [
   {
     title: "Trench Products",
     slug: "trench-products",
-    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    image: "/assets/image15.jpeg", // Construction/Infrastructure image
     description: "Heavy-duty drainage solutions for high-traffic industrial environments.",
     specs: ["Ductile Iron Construction", "Load Class D400+", "Anti-Slip Surface", "UV Resistant Coating"],
     icon: Wrench,
@@ -22,7 +22,7 @@ export const categories = [
   {
     title: "Cleanouts",
     slug: "cleanouts",
-    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    image: "/assets/image15.jpeg", // Construction/Infrastructure image
     description: "Professional grade access points for plumbing and waste systems.",
     specs: ["Gas-tight Seals", "Brass/Nickel Finish", "Easy-access Design", "Corrosion Resistant"],
     icon: Droplet,
@@ -31,7 +31,7 @@ export const categories = [
   {
     title: "New Innovations",
     slug: "new-innovations",
-    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    image: "/assets/image15.jpeg", // Construction/Infrastructure image
     description: "Cutting-edge casting technologies and patent-pending industrial designs.",
     specs: ["Patent-pending Technology", "Sustainable Materials", "IoT Ready Sensors", "High Precision Molding"],
     icon: Lightbulb,
@@ -40,7 +40,7 @@ export const categories = [
   {
     title: "Pipe Grates",
     slug: "pipe-grates",
-    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    image: "/assets/image15.jpeg", // Construction/Infrastructure image
     description: "Optimized water flow and debris management for municipal projects.",
     specs: ["High Flow Efficiency", "Debris Filtration", "Cast Iron Durability", "Custom Sizes Available"],
     icon: Grid3X3,
@@ -49,7 +49,7 @@ export const categories = [
   {
     title: "Hinged Castings",
     slug: "hinged-castings",
-    image: "/assets/image15.jpg", // Construction/Infrastructure image
+    image: "/assets/image15.jpeg", // Construction/Infrastructure image
     description: "Ergonomic, easy-access manhole and utility covers for safety.",
     specs: ["Ergonomic Lift Assist", "Safety Lock System", "Heavy Duty Hinge", "Reduced Maintenance Cost"],
     icon: DoorOpen,
@@ -88,7 +88,7 @@ export const materialsData: Record<string, any> = {
     description: "Lightweight yet strong, aluminum is essential for aerospace, automotive, and marine industries requiring corrosion resistance.",
     properties: ["Lightweight", "Corrosion resistant", "High thermal conductivity", "Non-magnetic"],
     applications: ["Aerospace components", "Automotive panels", "Heat sinks", "Marine fittings"],
-    image: "/assets/image7.jpg"
+    image: "/assets/image7.jpeg"
   },
   "stainless": {
     title: "Stainless Steel",

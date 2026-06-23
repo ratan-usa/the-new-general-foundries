@@ -72,7 +72,7 @@ const INITIAL_STORIES: Story[] = [
   //   id: '7',
   //   vendorName: 'Mega Foundries – Precast Panels',
   //   vendorAvatar: '/assets/marine_castings/marine_castings2.jpeg',
-  //   mediaUrl: '/assets/image7.jpg',
+  //   mediaUrl: '/assets/image7.jpeg',
   //   mediaType: 'IMAGE',
   //   isViewed: false,
   // },

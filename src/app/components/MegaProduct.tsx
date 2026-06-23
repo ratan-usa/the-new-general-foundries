@@ -18,42 +18,42 @@ const products = [
     id: "manhole-covers",
     title: "Manhole Covers",
     description: "Available in modern designs and various resistance classes. Mega Foundries ductile iron castings are engineered securely for high-load municipal sealing and sewage networks.",
-    image: "/assets/image7.jpg",
+    image: "/assets/image7.jpeg",
     link: "/products/manhole-covers"
   },
   {
     id: "gully-gratings",
     title: "Gully Gratings",
     description: "High-performance iron castings supplied in multiple sizes and load classes for efficient rainwater collection on urban roads, highways, parking lots, and industrial plants.",
-    image: "/assets/image7.jpg",
+    image: "/assets/image7.jpeg",
     link: "/products/gully-gratings"
   },
   {
     id: "heavy-traffic",
     title: "Heavy Traffic Gratings",
     description: "Heavy-duty iron castings engineered to withstand intensive point loads up to 90 tons. The ultimate casting solution for heavy industrial zones, logistics hubs, airports, and dockyards.",
-    image: "/assets/image7.jpg",
+    image: "/assets/image7.jpeg",
     link: "/products/heavy-traffic"
   },
   {
     id: "access-covers",
     title: "Access Covers for Inspection Chambers",
     description: "Versatile casting solutions for inspection and access over water, sewage, and electrical distribution chambers. Built with airtight sealing, dual-face options, and modular sizing.",
-    image: "/assets/image7.jpg",
+    image: "/assets/image7.jpeg",
     link: "/products/access-covers"
   },
   {
     id: "telecom-electrical",
     title: "Fiber Optic, Telecom & Electrical Covers",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/image7.jpg",
+    image: "/assets/image7.jpeg",
     link: "/products/telecom-covers"
   },
   {
     id: "drainage-castings",
     title: "Surface Drainage Castings",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/image7.jpg",
+    image: "/assets/image7.jpeg",
     link: "/products/drainage-castings"
   }
 ];

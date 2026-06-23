@@ -53,7 +53,7 @@ const items: AccordionItem[] = [
     //     category: "Precast",
     //     title: "Concrete Molds",
     //     description: "High-precision molds for producing durable infrastructure elements.",
-    //     image: "/assets/image15.jpg",
+    //     image: "/assets/image15.jpeg",
     //     color: "bg-[#cc2221]",
     //     icon: Cuboid
     // },
@@ -125,7 +125,7 @@ const items: AccordionItem[] = [
         category: "Infrastructure",
         title: "Construction Parts",
         description: "Heavy-duty scaffolding and infrastructure support components.",
-        image: "/assets/image15.jpg",
+        image: "/assets/image15.jpeg",
         color: "bg-[#cc2221]",
         icon: Building
     },

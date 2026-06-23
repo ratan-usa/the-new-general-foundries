@@ -44,7 +44,7 @@ const tagLines = [
         id: 7,
         lines: "Mega Savings. Zero Compromise.",
         description: "Communicates cost-efficiency paired with premium quality. It highlights Mega Foundries’ ability to provide competitive pricing without compromising on material strength, safety, or engineering excellence.",
-        imgUrl: "/assets/image7.jpg"
+        imgUrl: "/assets/image7.jpeg"
     },
     {
         id: 8,
@@ -92,7 +92,7 @@ const tagLines = [
         id: 15,
         lines: "Our Investment Today, Your Reward Tomorrow.",
         description: "Shows Mega Foundries’ long-term value approach. Every product is engineered to deliver consistent, high-performance results for years or decades—ensuring customers benefit long after installation.",
-        imgUrl: "/assets/image15.jpg"
+        imgUrl: "/assets/image15.jpeg"
     },
     {
         id: 16,
@@ -122,7 +122,7 @@ const tagLines = [
         id: 20,
         lines: "Engineering Beyond Boundaries.",
         description: "Reflects global scalability. Mega Foundries designs and manufactures industrial solutions capable of serving international sectors without limitations on geography, complexity, or scale.",
-        imgUrl: "/assets/image20.jpg"
+        imgUrl: "/assets/image20.jpeg"
     }
 ];
 

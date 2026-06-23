@@ -45,7 +45,7 @@ export const blogPosts = [
     slug: "future-of-metal-casting-automation",
     author: "Mega Editorial Team",
     date: "28 Nov 2025",
-    image: "/assets/image15.jpg",
+    image: "/assets/image15.jpeg",
     excerpt: "How robotic arms and automated molding lines are increasing precision and safety in modern foundries."
   },
   {

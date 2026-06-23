@@ -51,7 +51,7 @@ export const allFactoryVideos = [
         "id": 7,
         "name": "Mega Foundries - Aero Components",
         "location": "California, USA",
-        "thumbnail": "/assets/image7.jpg",
+        "thumbnail": "/assets/image7.jpeg",
         "videoUrl": "/video/video7.mp4",
         "isLive": true
     },
@@ -115,7 +115,7 @@ export const allFactoryVideos = [
         "id": 15,
         "name": "Mega Foundries - Hydraulic Pumps",
         "location": "Minnesota, USA",
-        "thumbnail": "/assets/image15.jpg",
+        "thumbnail": "/assets/image15.jpeg",
         "videoUrl": "/video/video15.mp4",
         "isLive": true
     },
@@ -155,7 +155,7 @@ export const allFactoryVideos = [
         "id": 20,
         "name": "Mega Foundries - Medical Implants",
         "location": "Massachusetts, USA",
-        "thumbnail": "/assets/image20.jpg",
+        "thumbnail": "/assets/image20.jpeg",
         "videoUrl": "/video/video20.mp4",
         "isLive": true
     },

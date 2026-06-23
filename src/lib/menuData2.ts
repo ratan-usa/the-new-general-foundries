@@ -131,7 +131,7 @@ export const menuData = {
       {
         name: "HYDRANT & WATER DISTRIBUTION CASTINGS",
         slug: "hydrant-and-water-distribution-castings",
-        image: "/assets/image7.jpg",
+        image: "/assets/image7.jpeg",
         description:
           "Cast components used in municipal water networks for underground and above-ground fire hydrants and distribution systems.",
         videoUrl: "/video/hydrant-castings.mp4",
@@ -265,7 +265,7 @@ export const menuData = {
       {
         name: "JUNCTION BOXES",
         slug: "junction-boxes",
-        image: "/assets/image15.jpg",
+        image: "/assets/image15.jpeg",
         description: "Industrial-grade junction boxes designed for safe and secure connectivity in cathodic protection setups.",
         videoUrl: "/video/video1.mp4",
         items: [
@@ -356,7 +356,7 @@ export const menuData = {
   //     {
   //       name: "PRECAST PIPE MOLDS",
   //       slug: "precast-pipe-molds",
-  //       image: "/assets/image20.jpg",
+  //       image: "/assets/image20.jpeg",
   //       description:
   //         "Heavy-duty molds for manufacturing RCC and precast concrete pipes with high load-bearing capacity.",
   //       videoUrl: "/video/mold/2 feet mold.54.mp4",
@@ -482,7 +482,7 @@ export const menuData = {
   //     {
   //       name: "MODULAR MOLDS SYSTEMS",
   //       slug: "modular-molds-systems",
-  //       image: "/assets/image7.jpg",
+  //       image: "/assets/image7.jpeg",
   //       description:
   //         "Flexible modular mold systems allowing quick size changes and high productivity for multiple product designs.",
   //       videoUrl: "/video/mold/2 feet mold.54.mp4",
@@ -642,7 +642,7 @@ export const menuData = {
       {
         name: "SQUARE TREE GRATES",
         slug: "square-tree-grates",
-        image: "/assets/image15.jpg",
+        image: "/assets/image15.jpeg",
         description:
           "Heavy-duty square tree grates designed for pedestrian pathways, plazas, malls and urban landscaping projects.",
         videoUrl: "/video/square-tree-grates.mp4",
@@ -729,7 +729,7 @@ export const menuData = {
     id: 'mining_products',
     label: 'MINING PRODUCTS',
     icon: Pickaxe, // pick any lucide icon you like
-    bannerImage: '/assets/image7.jpg',
+    bannerImage: '/assets/image7.jpeg',
     color: 'bg-stone-100 text-stone-900',
 
     categories: [
@@ -738,7 +738,7 @@ export const menuData = {
       {
         name: "CRUSHER PARTS",
         slug: "crusher-parts",
-        image: "/assets/image20.jpg",
+        image: "/assets/image20.jpeg",
         description:
           "High-strength wear parts for jaw, cone and impact crushers designed to withstand extreme abrasion and impact conditions.",
         items: [
@@ -861,7 +861,7 @@ export const menuData = {
       {
         name: "STEEL STRUCTURES & FRAMES",
         slug: "steel-structures-and-frames",
-        image: "/assets/image7.jpg",
+        image: "/assets/image7.jpeg",
         description:
           "Custom fabricated steel structures and frames designed for industrial buildings, warehouses and heavy engineering applications.",
         videoUrl: "/video/steel-structures.mp4",
@@ -1104,7 +1104,7 @@ export const menuData = {
   //     {
   //       name: "OFFSHORE & SUBSEA COMPONENTS",
   //       slug: "offshore-and-subsea-components",
-  //       image: "/assets/image15.jpg",
+  //       image: "/assets/image15.jpeg",
   //       description:
   //         "Components engineered for offshore platforms, subsea systems and drilling operations in harsh marine environments.",
   //       videoUrl: "/video/petro/video1.mp4",
@@ -1182,7 +1182,7 @@ export const menuData = {
   //     {
   //       name: "WELL SCREENS & FILTER PACKS",
   //       slug: "well-screens-and-filter-packs",
-  //       image: "/assets/image20.jpg",
+  //       image: "/assets/image20.jpeg",
   //       description:
   //         "High-performance well screens and gravel filter packs designed to prevent sand entry while maintaining maximum flow rate.",
   //       videoUrl: "/video/well-screens.mp4",
@@ -1312,7 +1312,7 @@ export const menuData = {
   //     {
   //       name: "SAFETY & SUPPORT EQUIPMENT",
   //       slug: "safety-and-support-equipment",
-  //       image: "/assets/image7.jpg",
+  //       image: "/assets/image7.jpeg",
   //       description:
   //         "Protective and supporting equipment used during trenching, pipeline installation and confined space water works.",
   //       videoUrl: "/video/water-works-safety.mp4",
@@ -1470,7 +1470,7 @@ export const menuData = {
       {
         name: "OPEN DIE FORGINGS",
         slug: "open-die-forgings",
-        image: "/assets/image15.jpg",
+        image: "/assets/image15.jpeg",
         description:
           "Large-size forgings produced using open-die forging processes for heavy engineering, power and oil & gas sectors.",
         videoUrl: "/video/open-die-forgings.mp4",
@@ -1555,7 +1555,7 @@ export const menuData = {
       {
         name: "CUSTOM & PRECISION FORGINGS",
         slug: "custom-and-precision-forgings",
-        image: "/assets/image20.jpg",
+        image: "/assets/image20.jpeg",
         description:
           "Tailor-made precision forgings manufactured based on customer drawings, 3D models and OEM specifications.",
         videoUrl: "/video/custom-forgings.mp4",
@@ -1583,7 +1583,7 @@ export const menuData = {
       {
         name: "PROPELLER & IMPELLER CASTINGS",
         slug: "propeller-and-impeller-castings",
-        image: "/assets/image15.jpg",
+        image: "/assets/image15.jpeg",
         description:
           "High-performance bronze and stainless-steel propeller and impeller castings engineered for marine propulsion systems.",
         videoUrl: "/video/marine_castings/marine_castings1.mp4",
@@ -1670,7 +1670,7 @@ export const menuData = {
     id: 'earth_moving_equipments',
     label: 'EARTH MOVING EQUIPMENTS',
     icon: Truck, // choose any lucide icon you like
-    bannerImage: '/assets/image15.jpg',
+    bannerImage: '/assets/image15.jpeg',
     color: 'bg-yellow-100 text-yellow-900',
 
     categories: [
@@ -1679,7 +1679,7 @@ export const menuData = {
       {
         name: "BUCKET TEETH & ADAPTORS",
         slug: "bucket-teeth-and-adaptors",
-        image: "/assets/image20.jpg",
+        image: "/assets/image20.jpeg",
         description:
           "High-strength bucket teeth and adaptors engineered for superior penetration and abrasion resistance in mining and construction operations.",
         items: [
@@ -1791,7 +1791,7 @@ export const menuData = {
       {
         name: "UNDERCARRIAGE COMPONENTS",
         slug: "undercarriage-components",
-        image: "/assets/image7.jpg",
+        image: "/assets/image7.jpeg",
         description:
           "Complete undercarriage spare parts suitable for excavators, bulldozers and track machines.",
         items: [
@@ -1948,7 +1948,7 @@ export const menuData = {
       {
         name: "HEATING & FURNACE SYSTEMS",
         slug: "heating-and-furnace-systems",
-        image: "/assets/image15.jpg",
+        image: "/assets/image15.jpeg",
         description:
           "Energy-efficient heating systems and industrial furnaces for billet, ingot and bar heating prior to forging.",
         videoUrl: "/video/forging-furnace.mp4",
@@ -2027,7 +2027,7 @@ export const menuData = {
       {
         name: "CRUSHING & SCREENING MACHINERY",
         slug: "crushing-and-screening-machinery",
-        image: "/assets/image20.jpg",
+        image: "/assets/image20.jpeg",
         description:
           "Industrial crushers and screens used in mining, quarrying, aggregates and mineral processing applications.",
         videoUrl: "/video/crushing-machinery.mp4",
@@ -2097,7 +2097,7 @@ export const menuData = {
     id: 'snow_plough',
     label: 'SNOW PLOUGH',
     icon: Snowflake, // choose any lucide icon you like
-    bannerImage: '/assets/image20.jpg',
+    bannerImage: '/assets/image20.jpeg',
     color: 'bg-blue-100 text-blue-900',
 
     categories: [
@@ -2201,7 +2201,7 @@ export const menuData = {
       {
         name: "DUCTILE IRON CASTINGS",
         slug: "ductile-iron-castings",
-        image: "/assets/image7.jpg",
+        image: "/assets/image7.jpeg",
         description:
           "High-strength ductile iron castings offering superior toughness and fatigue resistance for industrial applications.",
         items: [
@@ -2313,7 +2313,7 @@ export const menuData = {
       {
         name: "ELECTRICAL COMPONENT ALLOYS",
         slug: "electrical-component-alloys",
-        image: "/assets/image15.jpg",
+        image: "/assets/image15.jpeg",
         description:
           "Specialty alloys used in switchgear, transformers and electrical equipment applications.",
         items: [
@@ -2406,7 +2406,7 @@ export const menuData = {
       {
         name: "OEM / PRIVATE LABEL MANUFACTURING",
         slug: "oem-private-label-manufacturing",
-        image: "/assets/image20.jpg",
+        image: "/assets/image20.jpeg",
         description:
           "Dedicated OEM & private label production services including brand-specific tooling, packaging and documentation.",
         videoUrl: "/video/oem-private-label.mp4",
@@ -2676,7 +2676,7 @@ export const menuData = {
       {
         name: "CALES & WIRING SYSTEMS",
         slug: "cables-and-wiring-systems",
-        image: "/assets/image15.jpg",
+        image: "/assets/image15.jpeg",
         description:
           "Special corrosion-resistant cables and wiring accessories for underground and marine CP applications.",
         items: [
