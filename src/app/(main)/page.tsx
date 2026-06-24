@@ -34,6 +34,7 @@ import { MegaStories } from '../components/mega-stories';
 import { VerticalAccordion } from '../components/VerticalAccordion';
 import AiRobotics from '../components/AiRobotics';
 import MegaProduct from '../components/MegaProduct';
+import CastingCarousel from '../components/CastingCarousel';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -94,6 +95,7 @@ export default function Home() {
             <FactoryStories />
             <LiveStreamCommandCenter />
             <ProductPage />
+            <CastingCarousel/>
             <HeroSection />
             <AiRobotics />
             {/* Non-Critical Visuals */}
