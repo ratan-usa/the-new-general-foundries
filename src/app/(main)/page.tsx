@@ -36,6 +36,7 @@ import AiRobotics from '../components/AiRobotics';
 import MegaProduct from '../components/MegaProduct';
 import CastingCarousel from '../components/CastingCarousel';
 import MegaBlog from '../components/MegaBlog';
+import MetalDirectory from '../components/MetalDirectory';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -93,12 +94,12 @@ export default function Home() {
             <Product3DShowcase />
             {/* 2. CORE PRODUCTS (High Priority) */}
             <MegaProducts />
-
+            <MetalDirectory />
             <FactoryStories />
             <LiveStreamCommandCenter />
             <ProductPage />
-            <CastingCarousel/>
-            <MegaBlog/>
+            <CastingCarousel />
+            <MegaBlog />
             <HeroSection />
             <AiRobotics />
             {/* Non-Critical Visuals */}
@@ -107,8 +108,8 @@ export default function Home() {
 
             {/* Blogs & Feed */}
             <CosmoBlog />
-            <ChatBlog /> 
-            <MegaProduct/>
+            <ChatBlog />
+            <MegaProduct />
             <ProductCarousel />
             <DesignCapabilities />
 

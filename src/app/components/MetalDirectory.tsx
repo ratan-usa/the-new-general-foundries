@@ -75,9 +75,9 @@ export default function MetalDirectory() {
   const [selectedMetal, setSelectedMetal] = useState<MetalProfile>(METALS_DATA[0]);
 
   return (
-    <section className="bg-red-800 text-white font-sans border-t border-zinc-950">
-      {/* Dynamic Fluid Full Width Layout Container */}
-      <div className="w-full px-4 sm:px-6 lg:px-10">
+    <section className="bg-[#0a0a0a] text-white py-24 px-4 md:px-8 font-sans border-t border-zinc-950">
+      <div className="max-w-7xl mx-auto">
+        
         {/* Dynamic Header */}
         <div className="border-b border-zinc-900 pb-10 mb-16">
           <span className="text-xs uppercase tracking-[0.3em] font-black text-[#cc2221] block mb-3">
@@ -87,10 +87,11 @@ export default function MetalDirectory() {
             Primary Metals <span className="text-zinc-600">& Alloys</span>
           </h2>
         </div>
+
         {/* Asymmetrical Split Screen Core */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* LEFT COLUMN: Industrial Selector Index */}
+          {/* LEFT COLUMN: Industrial Selector Index (5 Columns) */}
           <div className="lg:col-span-5 flex flex-col gap-3">
             {METALS_DATA.map((metal) => {
               const isActive = selectedMetal.id === metal.id;
@@ -121,7 +122,7 @@ export default function MetalDirectory() {
             })}
           </div>
 
-          {/* RIGHT COLUMN: The Interactive Focal Blast Window */}
+          {/* RIGHT COLUMN: The Interactive Focal Blast Window (7 Columns) */}
           <div className="lg:col-span-7 bg-[#141414] border border-zinc-900 p-8 md:p-12 rounded-sm relative overflow-hidden min-h-[500px] flex flex-col justify-between shadow-2xl">
             
             {/* Structural Geometric Backing Accents */}
@@ -145,7 +146,7 @@ export default function MetalDirectory() {
               </p>
 
               {/* Comprehensive Summary Narrative */}
-              <p className="text-zinc-400 text-base leading-relaxed mb-8 font-light">
+              <p className="text-zinc-400 text-base leading-relaxed mb-8 max-w-xl font-light">
                 {selectedMetal.description}
               </p>
             </div>
@@ -183,6 +184,7 @@ export default function MetalDirectory() {
           </div>
 
         </div>
+
       </div>
     </section>
   );
