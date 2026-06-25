@@ -47,7 +47,7 @@ const FixedQuoteBtn = () => {
             translate-x-0
           "
         >
-          <span>Get a Quote</span>
+          <span>Connect with us</span>
         </Link>
       </div>
 

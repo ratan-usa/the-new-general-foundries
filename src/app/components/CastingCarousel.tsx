@@ -30,7 +30,7 @@ export default function CastingCarousel() {
     <section className="bg-[#0a0a0a] py-20 overflow-hidden flex flex-col items-center justify-center font-sans">
       
       {/* Header Section */}
-      <div className="text-center mb-16 px-4">
+      <div className="text-center px-4">
         <span className="text-xs uppercase tracking-[0.25em] font-bold text-[#cc2221] block mb-3">
           Standard Castings
         </span>

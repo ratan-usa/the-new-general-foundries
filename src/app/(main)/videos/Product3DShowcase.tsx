@@ -233,8 +233,8 @@ export default function Product3DShowcase() {
 
             {/* Bottom Call to Action */}
             <div className="mt-4 pt-4 border-t border-zinc-800 text-center">
-               <p className="text-xs text-gray-500 mb-3">Need 3D CAD files for your project?</p>
-               <Button variant="outline" className="w-full text-xs border-zinc-700 hover:bg-white hover:text-black uppercase">
+               <p className="text-xs text-black mb-3">Need 3D CAD files for your project?</p>
+               <Button variant="outline" className="w-full text-xs text-black border-zinc-700 hover:bg-white hover:text-black uppercase">
                  Request CAD / BIM Files <ChevronRight className="w-3 h-3 ml-1" />
                </Button>
             </div>

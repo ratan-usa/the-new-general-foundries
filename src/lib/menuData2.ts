@@ -2847,11 +2847,10 @@ export const footerColumns: FooterColumn[] = [
     ],
   },
   {
-    id: "support-quality",
-    // This column has TWO sections, but follows the same pattern as above!
+    id: "support-service",
     sections: [
       {
-        title: "Support & Services",
+        title: "Suport Service",
         links: [
           makeLink("Technical Support", "technical-support"),
           makeLink("Customer Support", "customer-support"),
@@ -2860,20 +2859,44 @@ export const footerColumns: FooterColumn[] = [
           makeLink("Installation Support", "installation-support"),
           makeLink("Custom Support", "custom-support"),
           makeLink("Live Solutions", "live-solutions"),
-        ],
-      },
-      {
-        title: "Quality & Compliances",
-        links: [
           makeLink("Chemical Testing", "chemical-testing"),
           makeLink("Physical Testing", "physical-testing"),
           makeLink("Manual Testing", "manual-testing"),
           makeLink("Testing & Inspection", "testing-inspection"),
           makeLink("Material Analysis", "material-analysis"),
           makeLink("Quality Control Process", "quality-control-process"),
-          makeLink("Approval & Certification", "approval-certification"),
+          makeLink("Approval & Certification", "approval-certification")
         ],
       },
     ],
   },
+  // {
+  //   id: "support-quality",
+  //    sections: [
+  //     {
+  //       title: "Support & Services",
+  //       links: [
+  //         makeLink("Technical Support", "technical-support"),
+  //         makeLink("Customer Support", "customer-support"),
+  //         makeLink("Engineering Consultancy", "engineering-consultancy"),
+  //         makeLink("After Sales Services", "after-sales-services"),
+  //         makeLink("Installation Support", "installation-support"),
+  //         makeLink("Custom Support", "custom-support"),
+  //         makeLink("Live Solutions", "live-solutions"),
+  //       ],
+  //     },
+  //     {
+  //       title: "Quality & Compliances",
+  //       links: [
+  //         makeLink("Chemical Testing", "chemical-testing"),
+  //         makeLink("Physical Testing", "physical-testing"),
+  //         makeLink("Manual Testing", "manual-testing"),
+  //         makeLink("Testing & Inspection", "testing-inspection"),
+  //         makeLink("Material Analysis", "material-analysis"),
+  //         makeLink("Quality Control Process", "quality-control-process"),
+  //         makeLink("Approval & Certification", "approval-certification"),
+  //       ],
+  //     },
+  //   ],
+  // },
 ];

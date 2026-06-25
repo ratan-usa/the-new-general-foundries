@@ -136,7 +136,7 @@ const INITIAL_STORIES: Story[] = [
     id: '15',
     vendorName: 'Mega Foundries – Yard Storage & Handling',
     vendorAvatar: '/assets/image5.jpeg',
-    mediaUrl: '/assets/image15.jpg',
+    mediaUrl: '/assets/image15.jpeg',
     mediaType: 'IMAGE',
     isViewed: true,
   },

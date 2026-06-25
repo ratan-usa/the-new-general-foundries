@@ -27,7 +27,7 @@ const techFeatures = [
 
 export default function AiRobotics() {
   return (
-    <section className="py-24 bg-slate-950 text-white overflow-hidden relative">
+    <section className="py-24 bg-black text-white overflow-hidden relative">
       <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('/assets/image16.jpg')]" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -39,7 +39,7 @@ export default function AiRobotics() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative z-10 rounded-3xl border border-white/10 overflow-hidden bg-slate-900/50 backdrop-blur-xl p-2 shadow-2xl">
+            <div className="relative z-10 rounded-3xl border border-white/10 overflow-hidden bg-black backdrop-blur-xl p-2 shadow-2xl">
               <Image 
                 src="/assets/image8.jpg" 
                 alt="AI Robotics"

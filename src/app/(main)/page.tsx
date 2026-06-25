@@ -90,6 +90,7 @@ export default function Home() {
                 </div>
             </header>
 
+            <Product3DShowcase />
             {/* 2. CORE PRODUCTS (High Priority) */}
             <MegaProducts />
 
@@ -101,7 +102,6 @@ export default function Home() {
             <HeroSection />
             <AiRobotics />
             {/* Non-Critical Visuals */}
-            <Product3DShowcase />
             <MegaStories />
             <BusinessSolutions />
 

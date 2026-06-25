@@ -201,7 +201,7 @@ export const newInnovationData = {
     {
       id: 15,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/X - MAS BLESSINGS.mp4",
+      videoUrl: "/video/newInnovation/9013 A Mega.467.mp4",
     }
   ]
 };

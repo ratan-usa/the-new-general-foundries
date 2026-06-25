@@ -248,10 +248,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-end gap-3">
             <span className="text-xs text-gray-500 font-medium uppercase tracking-wider">We Accept</span>
             <div className="flex gap-2">
-              {/* Payment Logo 1: Visa */}
-              <div className="bg-white p-1 rounded w-10 h-6 flex items-center justify-center">
-                <Image src="/assets/logos/visa.png" alt="Visa" width={32} height={20} className="object-contain" />
-              </div>
+ 
               {/* Payment Logo 1: Visa */}
               <div className="bg-white p-1 rounded w-10 h-6 flex items-center justify-center">
                 <Image src="/assets/logos/applepay.png" alt="Apple Pay" width={32} height={20} className="object-contain" />

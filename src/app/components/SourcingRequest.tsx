@@ -35,7 +35,7 @@ export default function SourcingRequest() {
                     priority
                 />
                 {/* Dark Overlay */}
-                <div className="absolute inset-0 bg-slate-900/80"></div>
+                <div className="absolute inset-0 bg-black/70"></div>
             </div>
 
             {/* === CONTENT CONTAINER === */}

@@ -57,7 +57,7 @@ export default function MegaBlog() {
 
   return (
     <section className="bg-[#0a0a0a] text-white py-24 px-4 md:px-8 font-sans border-t border-zinc-900 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+      <div className="">
         
         {/* Unconventional Header: Massive Side-by-Side Typography */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between border-b border-zinc-800 pb-12 mb-16 gap-6">
