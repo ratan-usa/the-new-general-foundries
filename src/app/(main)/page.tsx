@@ -37,6 +37,7 @@ import MegaProduct from '../components/MegaProduct';
 import CastingCarousel from '../components/CastingCarousel';
 import MegaBlog from '../components/MegaBlog';  
 import MegaMagazine from '../components/MegaMagazine';
+import OtherMetalsDirectory from '../components/OtherMetalsDirectory';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -97,7 +98,7 @@ export default function Home() {
             <LiveStreamCommandCenter />
             <ProductPage />
             <MegaMagazine/>
-            {/* <OtherMetalsDirectory/> */}
+            <OtherMetalsDirectory/>
             {/* <MetalDirectory /> */}
             <CastingCarousel />
             <FactoryStories /> 
