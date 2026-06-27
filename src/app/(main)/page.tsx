@@ -98,9 +98,9 @@ export default function Home() {
             <LiveStreamCommandCenter />
             <ProductPage />
             <MegaMagazine/>
+            <CastingCarousel />
             <OtherMetalsDirectory/>
             {/* <MetalDirectory /> */}
-            <CastingCarousel />
             <FactoryStories /> 
             <MegaBlog />
             <HeroSection />

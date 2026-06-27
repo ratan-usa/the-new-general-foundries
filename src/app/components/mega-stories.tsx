@@ -69,7 +69,7 @@ export function MegaStories() {
 
       <div className="flex items-center justify-between mb-8">
         <h2 className="text-3xl font-bold tracking-tight text-[#cc2221] uppercase border-l-4 border-black pl-4">
-          Industrial Marketplace
+          Casting zone
         </h2>
         <Button variant="outline" className="hidden sm:flex group border-black text-black hover:bg-zinc-100">
           View All Categories <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
