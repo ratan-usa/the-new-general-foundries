@@ -35,8 +35,8 @@ import { VerticalAccordion } from '../components/VerticalAccordion';
 import AiRobotics from '../components/AiRobotics';
 import MegaProduct from '../components/MegaProduct';
 import CastingCarousel from '../components/CastingCarousel';
-import MegaBlog from '../components/MegaBlog';
-import MetalDirectory from '../components/MetalDirectory';
+import MegaBlog from '../components/MegaBlog';  
+import MegaMagazine from '../components/MegaMagazine';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -94,11 +94,13 @@ export default function Home() {
             <Product3DShowcase />
             {/* 2. CORE PRODUCTS (High Priority) */}
             <MegaProducts />
-            <MetalDirectory />
-            <FactoryStories />
             <LiveStreamCommandCenter />
             <ProductPage />
+            <MegaMagazine/>
+            {/* <OtherMetalsDirectory/> */}
+            {/* <MetalDirectory /> */}
             <CastingCarousel />
+            <FactoryStories /> 
             <MegaBlog />
             <HeroSection />
             <AiRobotics />

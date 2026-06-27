@@ -75,9 +75,10 @@ export default function MetalDirectory() {
   const [selectedMetal, setSelectedMetal] = useState<MetalProfile>(METALS_DATA[0]);
 
   return (
-    <section className="bg-red-800 text-white font-sans border-t border-zinc-950">
+    <section className="bg-[#0a0a0a] text-white py-24 font-sans border-t border-zinc-950">
       {/* Dynamic Fluid Full Width Layout Container */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
+        
         {/* Dynamic Header */}
         <div className="border-b border-zinc-900 pb-10 mb-16">
           <span className="text-xs uppercase tracking-[0.3em] font-black text-[#cc2221] block mb-3">
@@ -87,6 +88,7 @@ export default function MetalDirectory() {
             Primary Metals <span className="text-zinc-600">& Alloys</span>
           </h2>
         </div>
+
         {/* Asymmetrical Split Screen Core */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
@@ -183,6 +185,7 @@ export default function MetalDirectory() {
           </div>
 
         </div>
+
       </div>
     </section>
   );
