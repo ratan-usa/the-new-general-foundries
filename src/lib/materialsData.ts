@@ -3,17 +3,18 @@ import { Wrench, Droplet, Lightbulb, Grid3X3, DoorOpen } from 'lucide-react';
 export interface Category {
   title: string;
   slug: string;
-  image: string;
+  video?: string;       // Made optional
+  image?: string;       // Added optional static image field
   description: string;
   specs: string[];
-  icon: LucideIcon; // Store the component itself, not <Icon />
+  icon: LucideIcon;
   color: string;
 }
 export const categories = [
   {
     title: "Trench Products",
     slug: "trench-products",
-    image: "/assets/image15.jpeg", // Construction/Infrastructure image
+    video: "/video/trench/Trench 500 Animation.498.mp4",
     description: "Heavy-duty drainage solutions for high-traffic industrial environments.",
     specs: ["Ductile Iron Construction", "Load Class D400+", "Anti-Slip Surface", "UV Resistant Coating"],
     icon: Wrench,
@@ -22,7 +23,7 @@ export const categories = [
   {
     title: "Cleanouts",
     slug: "cleanouts",
-    image: "/assets/image15.jpeg", // Construction/Infrastructure image
+    image: "/assets/PAVING-RISERS/products/cleanout.jpeg",
     description: "Professional grade access points for plumbing and waste systems.",
     specs: ["Gas-tight Seals", "Brass/Nickel Finish", "Easy-access Design", "Corrosion Resistant"],
     icon: Droplet,
@@ -40,7 +41,7 @@ export const categories = [
   {
     title: "Pipe Grates",
     slug: "pipe-grates",
-    image: "/assets/image15.jpeg", // Construction/Infrastructure image
+    image: "/assets/PAVING-RISERS/products/pipe grid.jpeg",
     description: "Optimized water flow and debris management for municipal projects.",
     specs: ["High Flow Efficiency", "Debris Filtration", "Cast Iron Durability", "Custom Sizes Available"],
     icon: Grid3X3,

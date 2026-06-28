@@ -34,14 +34,14 @@ const myImages = [
 const products = [
   {
     id: "irrigation_products",
-    title: "NEW NEXT GENERATION DESIGNER D-BOXES",
+    title: "NEW NEXT GENERATION DESIGNER MANHOLE COVER",
     category: "Irrigation",
     brand: "TechnoML",
     price: "View Catalog",
     isHero: true,
     icon: Zap,
     image: "/assets/image10.jpeg",
-    video: "/video/NEW NEXT GENERATION DESIGNER D-BOXES.mp4" // <--- Add your video path here
+    video: "/video/NEW NEXT GENERATION DESIGNER MANHOLE COVER.mp4" // <--- Add your video path here
   },
   { id: "earth_moving", title: "Bucket Teeth & Excavator Adaptors", category: "Earth Moving", brand: "HeavyDuty", price: "$450.00", icon: Zap },
   { id: "cathodic", title: "Zinc & Aluminium Sacrificial Anodes", category: "Protection", brand: "MarineSafe", price: "$120.00", icon: Settings },
@@ -110,7 +110,7 @@ export function MegaStories() {
                       playsInline
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     >
-                      <source src={heroProduct.video || "/video/NEW NEXT GENERATION DESIGNER D-BOXES.mp4"} type="video/mp4" />
+                      <source src={heroProduct.video || "/video/NEW NEXT GENERATION DESIGNER MANHOLE COVER.mp4"} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
                 </div>
