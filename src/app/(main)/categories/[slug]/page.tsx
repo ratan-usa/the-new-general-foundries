@@ -41,7 +41,7 @@ export default async function CategoryPage() {
 
                 <div className="relative h-[60vh] flex items-center justify-center bg-slate-900">
                     <Image
-                        src={data.image}
+                        src={data.image || '/assets/image15.jpeg'}
                         width={1200}
                         height={600}
                         className="absolute inset-0 w-full h-full object-cover opacity-40"
