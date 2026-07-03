@@ -1,5 +1,6 @@
 import { Anvil, Hammer, Construction, Layers, Beaker, LucideIcon } from "lucide-react";
 import { Wrench, Droplet, Lightbulb, Grid3X3, DoorOpen } from 'lucide-react';
+import { title } from "process";
 export interface Category {
   title: string;
   slug: string;
@@ -54,6 +55,15 @@ export const categories = [
     description: "Ergonomic, easy-access manhole and utility covers for safety.",
     specs: ["Ergonomic Lift Assist", "Safety Lock System", "Heavy Duty Hinge", "Reduced Maintenance Cost"],
     icon: DoorOpen,
+    color: "bg-red-700",
+  }, 
+  {
+    title: "Trench Products",
+    slug: "trench-products",
+    video: "/video/trench/Trench 500 Animation.498.mp4",
+    description: "Heavy-duty drainage solutions for high-traffic industrial environments.",
+    specs: ["Ductile Iron Construction", "Load Class D400+", "Anti-Slip Surface", "UV Resistant Coating"],
+    icon: Wrench,
     color: "bg-red-700",
   }
 ];

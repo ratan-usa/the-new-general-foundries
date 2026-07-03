@@ -20,7 +20,7 @@ const ScrollableMenu = () => {
                                         group flex items-center 
                                         text-[10px] md:text-[12px] 
                                         gap-1 md:gap-1.5 
-                                        text-neutral-700 cursor-pointer transition-colors font-semibold 
+                                        text-[#cc2221] cursor-pointer transition-colors font-semibold 
                                         px-2 py-1.5 md:px-3 
                                         whitespace-nowrap rounded-none
                                         hover:bg-[#cc2221] hover:text-white 
@@ -31,7 +31,7 @@ const ScrollableMenu = () => {
                                     <section.icon 
                                         className="
                                             h-3 w-3 md:h-3.5 md:w-3.5 shrink-0 transition-colors
-                                            text-[#cc2221] 
+                                            text-neutral-700
                                             group-hover:text-white 
                                             group-focus:text-white 
                                             group-data-[state=open]:text-white

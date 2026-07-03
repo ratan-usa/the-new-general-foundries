@@ -41,7 +41,7 @@ const products = [
     isHero: true,
     icon: Zap,
     image: "/assets/image10.jpeg",
-    video: "/video/NEW NEXT GENERATION DESIGNER MANHOLE COVER.mp4" // <--- Add your video path here
+    video: "/video/custom solutions/5900-E CN tower Brick.478.mp4" // <--- Add your video path here
   },
   { id: "earth_moving", title: "Bucket Teeth & Excavator Adaptors", category: "Earth Moving", brand: "HeavyDuty", price: "$450.00", icon: Zap },
   { id: "cathodic", title: "Zinc & Aluminium Sacrificial Anodes", category: "Protection", brand: "MarineSafe", price: "$120.00", icon: Settings },
@@ -54,6 +54,8 @@ const products = [
   { id: "marine", title: "Bronze Propellers & Marine Hulls", category: "Marine", brand: "Nautical", price: "$3,500", icon: Anchor },
   { id: "oil_gas", title: "High-Pressure Valve Components", category: "Oil & Gas", brand: "PetroParts", price: "RFQ", icon: Flame },
   { id: "construction", title: "Scaffolding & Infrastructure Parts", category: "Construction", brand: "BuildSafe", price: "RFQ", icon: Building },
+  { id: "utility", title: "Power Transmission Hardware", category: "Utility", brand: "GridTech", price: "$200.00", icon: Bolt },
+  { id: "utility", title: "Power Transmission Hardware", category: "Utility", brand: "GridTech", price: "$200.00", icon: Bolt },
   { id: "utility", title: "Power Transmission Hardware", category: "Utility", brand: "GridTech", price: "$200.00", icon: Bolt },
   { id: "defence", title: "Aerospace & Defence Grade Castings", category: "Defence", brand: "AeroCast", price: "Restricted", icon: Shield },
   { id: "custom", title: "Bespoke OEM Manufacturing", category: "Manufacturing", brand: "TechnoML", price: "Contact", icon: Hammer },

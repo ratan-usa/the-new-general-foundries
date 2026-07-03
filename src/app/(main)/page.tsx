@@ -38,6 +38,7 @@ import CastingCarousel from '../components/CastingCarousel';
 import MegaBlog from '../components/MegaBlog';  
 import MegaMagazine from '../components/MegaMagazine';
 import OtherMetalsDirectory from '../components/OtherMetalsDirectory';
+import ProductCarouselo from '../components/productCarouselo';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -113,8 +114,9 @@ export default function Home() {
             <CosmoBlog />
             <ChatBlog />
             <MegaProduct />
-            <ProductCarousel />
             <DesignCapabilities />
+            <ProductCarousel />
+            <ProductCarouselo/>
 
             {/* Data-Heavy Footer Content */}
             <SourcingRequest />

@@ -22,36 +22,92 @@ const products = [
     link: "/products/manhole-covers"
   },
   {
-    id: "gully-gratings",
-    title: "Gully Gratings",
+    id: "trench-system",
+    title: "Trench Systems",
     description: "High-performance iron castings supplied in multiple sizes and load classes for efficient rainwater collection on urban roads, highways, parking lots, and industrial plants.",
     image: "/assets/image7.jpeg",
     link: "/products/gully-gratings"
   },
   {
-    id: "heavy-traffic",
-    title: "Heavy Traffic Gratings",
+    id: "paving-risers",
+    title: "Paving Risers",
     description: "Heavy-duty iron castings engineered to withstand intensive point loads up to 90 tons. The ultimate casting solution for heavy industrial zones, logistics hubs, airports, and dockyards.",
     image: "/assets/image7.jpeg",
     link: "/products/heavy-traffic"
   },
   {
-    id: "access-covers",
-    title: "Access Covers for Inspection Chambers",
+    id: "Hatches & Access-covers",
+    title: "Hactches & Access Covers for Inspection Chambers",
     description: "Versatile casting solutions for inspection and access over water, sewage, and electrical distribution chambers. Built with airtight sealing, dual-face options, and modular sizing.",
     image: "/assets/image7.jpeg",
     link: "/products/access-covers"
   },
   {
-    id: "telecom-electrical",
+    id: "utility-telecom-electrical",
     title: "Fiber Optic, Telecom & Electrical Covers",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
     image: "/assets/image7.jpeg",
     link: "/products/telecom-covers"
   },
   {
-    id: "drainage-castings",
-    title: "Surface Drainage Castings",
+    id: "precast-concrete molds",
+    title: "Precast Concrete Molds",
+    description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
+    image: "/assets/image7.jpeg",
+    link: "/products/drainage-castings"
+  },
+  {
+    id: "petro-gas-station-products",
+    title: "Petro Gas Station Products",
+    description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
+    image: "/assets/image7.jpeg",
+    link: "/products/telecom-covers"
+  },
+  {
+    id: "tree-grates",
+    title: "Tree Grates",
+    description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
+    image: "/assets/image7.jpeg",
+    link: "/products/drainage-castings"
+  },
+  {
+    id: "marine-castings",
+    title: "Marine Castings",
+    description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
+    image: "/assets/image7.jpeg",
+    link: "/products/telecom-covers"
+  },
+  {
+    id: "detectable-warning-plates",
+    title: "Detectable Warning Plates",
+    description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
+    image: "/assets/image7.jpeg",
+    link: "/products/drainage-castings"
+  },
+  {
+    id: "water-works-product",
+    title: "Water Works Products",
+    description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
+    image: "/assets/image7.jpeg",
+    link: "/products/telecom-covers"
+  },
+  {
+    id: "ornamental-castings",
+    title: "Ornamental Castings",
+    description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
+    image: "/assets/image7.jpeg",
+    link: "/products/drainage-castings"
+  },
+  {
+    id: "water-sampling-station",
+    title: "Water Sampling Station",
+    description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
+    image: "/assets/image7.jpeg",
+    link: "/products/telecom-covers"
+  },
+  {
+    id: "precast-concrete molds",
+    title: "Precast Concrete Molds",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
     image: "/assets/image7.jpeg",
     link: "/products/drainage-castings"
@@ -62,7 +118,7 @@ const MegaProduct = () => {
   return (
     <section className="bg-[#121212] text-gray-200 py-16 w-full px-4 sm:px-6 lg:px-10 font-sans">
       <div className="">
-        
+
         {/* Header Section */}
         <div className="border-b border-zinc-800 pb-6 mb-10">
           <h2 className="text-3xl font-light tracking-wide text-white mb-2">
@@ -86,11 +142,11 @@ const MegaProduct = () => {
         </div>
 
         {/* Product Grid / Row Layout */}
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {products.map((product) => (
-            <div 
+            <div
               key={product.id}
-              className="flex flex-col md:flex-row items-center gap-8 md:gap-16 border-b border-zinc-900 pb-12 last:border-0"
+              className="flex flex-col md:flex-row items-center gap-8 md:gap-16 border-b border-zinc-900 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] transition-transform duration-300  pb-12 last:border-0"
             >
               {/* Product Image Wrapper Container */}
               <div className="w-full md:w-1/3 flex justify-center items-center bg-[#181818] p-6 rounded-lg border border-zinc-800/40 shadow-inner group">
@@ -112,7 +168,7 @@ const MegaProduct = () => {
                 <p className="text-zinc-400 text-sm leading-relaxed mb-6 max-w-2xl">
                   {product.description}
                 </p>
-                
+
                 {/* Styled Red Border Action Button */}
                 <Link
                   href={product.link}

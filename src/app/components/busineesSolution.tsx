@@ -61,21 +61,20 @@ const BusinessSolutions = () => {
     }, [currentSubText, isDeleting, metalIndex, typingSpeed]);
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-2 bg-white">
             {/* Main World of Metals Heading */}
-            <h2 className={`
-                text-[60px] lg:text-[90px] text-center mx-auto leading-none
-                /* Red (0-44%), Thin White Line (44-46%), Black (46-100%) */
+            {/* <h2 className={`
+                text-[60px] lg:text-[90px] text-center mx-auto leading-none 
                 bg-[linear-gradient(to_bottom,#cc2221_44%,#ffffff_44%,#ffffff_46%,black_46%)]
                 bg-clip-text text-transparent
                 ${apricotsFont.className}
             `}>
                 World of Metals
-            </h2>
+            </h2> */}
 
             {/* Dynamic Typewriter Showcase Block */}
-            <div className="text-center mt-4 mb-12">
-                <p className="text-5xl md:text-3xl font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold inline-block">
+            <div className="text-center mb-12">
+                <p className="text-7xl md:text-5xl font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold inline-block">
                   All Metals Popular:{" "}
                   <span className="text-[#cc2221] border-r-2 border-[#cc2221] pr-1 animate-pulse font-black">
                      {currentSubText}

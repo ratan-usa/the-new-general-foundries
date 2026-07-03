@@ -112,10 +112,10 @@ const Footer = () => {
 
           </div>
 
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-start">
             {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
             <div className="flex  ">
-              <div className="bg-white p-2 rounded-lg w-80 h-60 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+              <div className="bg-white p-2 rounded-lg w-80 h-36 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <Link href={'/'} className="w-full h-full relative">
                   <Image src={'/MEGA INDUSTRIES2.png'} alt='Mega Industries' fill className="object-contain" />
                 </Link>
@@ -244,29 +244,7 @@ const Footer = () => {
                 </Link>
               ))}</div>
           </div>
-          {/* --- COL 3: PAYMENT METHODS (Right Aligned) --- */}
-          <div className="flex flex-col items-center md:items-end gap-3">
-            <span className="text-xs text-gray-500 font-medium uppercase tracking-wider">We Accept</span>
-            <div className="flex gap-2">
  
-              {/* Payment Logo 1: Visa */}
-              <div className="bg-white p-1 rounded w-10 h-6 flex items-center justify-center">
-                <Image src="/assets/logos/applepay.png" alt="Apple Pay" width={32} height={20} className="object-contain" />
-              </div>
-              {/* Payment Logo 2: MasterCard */}
-              <div className="bg-white p-1 rounded w-10 h-6 flex items-center justify-center">
-                <Image src="/assets/logos/mastercard.png" alt="MasterCard" width={32} height={20} className="object-contain" />
-              </div>
-              {/* Payment Logo 3: Amex */}
-              <div className="bg-white p-1 rounded w-10 h-6 flex items-center justify-center">
-                <Image src="/assets/logos/amex.png" alt="Amex" width={32} height={20} className="object-contain" />
-              </div>
-              {/* Payment Logo 4: UPI */}
-              <div className="bg-white p-1 rounded w-10 h-6 flex items-center justify-center">
-                <Image src="/assets/logos/google pay.png" alt="UPI" width={32} height={20} className="object-contain" />
-              </div>
-            </div>
-          </div>
 
         </div>
       </div>
