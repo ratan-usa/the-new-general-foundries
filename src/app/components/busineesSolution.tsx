@@ -73,8 +73,8 @@ const BusinessSolutions = () => {
             </h2> */}
 
             {/* Dynamic Typewriter Showcase Block */}
-            <div className="text-center mb-12">
-                <p className="text-7xl md:text-5xl font-mono uppercase tracking-[0.2em] text-neutral-500 font-bold inline-block">
+            <div className="text-left px-10 mb-12">
+                <p className="text-7xl md:text-5xl font-sans uppercase tracking-[0.1em] text-neutral-500 font-bold inline-block">
                   All Metals Popular:{" "}
                   <span className="text-[#cc2221] border-r-2 border-[#cc2221] pr-1 animate-pulse font-black">
                      {currentSubText}

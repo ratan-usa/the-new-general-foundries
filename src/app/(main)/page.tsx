@@ -39,6 +39,7 @@ import MegaBlog from '../components/MegaBlog';
 import MegaMagazine from '../components/MegaMagazine';
 import OtherMetalsDirectory from '../components/OtherMetalsDirectory';
 import ProductCarouselo from '../components/productCarouselo';
+import HighFlowGrates from './HighFlowGrates';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -99,6 +100,7 @@ export default function Home() {
             <LiveStreamCommandCenter />
             <ProductPage />
             <MegaMagazine/>
+            <HighFlowGrates/>
             <CastingCarousel />
             <OtherMetalsDirectory/>
             {/* <MetalDirectory /> */}
