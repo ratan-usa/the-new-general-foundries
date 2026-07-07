@@ -40,6 +40,7 @@ import MegaMagazine from '../components/MegaMagazine';
 import OtherMetalsDirectory from '../components/OtherMetalsDirectory';
 import ProductCarouselo from '../components/productCarouselo';
 import HighFlowGrates from './HighFlowGrates';
+import IndustrialManifest from './IndustrialManifest';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -98,6 +99,7 @@ export default function Home() {
             {/* 2. CORE PRODUCTS (High Priority) */}
             <MegaProducts />
             <LiveStreamCommandCenter />
+            <IndustrialManifest/>
             <ProductPage />
             <MegaMagazine/>
             <HighFlowGrates/>
