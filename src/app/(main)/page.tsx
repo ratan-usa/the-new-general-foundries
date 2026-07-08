@@ -42,6 +42,9 @@ import ProductCarouselo from '../components/productCarouselo';
 import HighFlowGrates from './HighFlowGrates';
 import IndustrialManifest from './IndustrialManifest';
 import MegaQSeries from './MegaQSeries';
+import MegaFoundationPage from './mega-foundation/page';
+ import MegaFeaShowcase from './MegaFeaShowcase';
+import { Hero } from './Hero';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -62,7 +65,7 @@ export default function Home() {
     return (
         <div className="bg-white">
             {/* 1. HERO VIDEO (LCP - Static/Fast) */}
-            <header className="relative w-full overflow-hidden flex items-center justify-center min-h-[500px] md:min-h-[700px]">
+            {/* <header className="relative w-full overflow-hidden flex items-center justify-center min-h-[500px] md:min-h-[700px]">
                 <video
                     autoPlay loop muted playsInline
                     className="absolute inset-0 w-full h-full object-cover z-0"
@@ -94,13 +97,14 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </header>
-
+            </header> */}
+            <Hero />
             <Product3DShowcase />
             {/* 2. CORE PRODUCTS (High Priority) */}
             <MegaQSeries/>
             <MegaProducts />
             <LiveStreamCommandCenter />
+             <MegaFeaShowcase/>
             <IndustrialManifest/>
             <ProductPage />
             <MegaMagazine/>
