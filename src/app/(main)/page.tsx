@@ -41,6 +41,7 @@ import OtherMetalsDirectory from '../components/OtherMetalsDirectory';
 import ProductCarouselo from '../components/productCarouselo';
 import HighFlowGrates from './HighFlowGrates';
 import IndustrialManifest from './IndustrialManifest';
+import MegaQSeries from './MegaQSeries';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -97,6 +98,7 @@ export default function Home() {
 
             <Product3DShowcase />
             {/* 2. CORE PRODUCTS (High Priority) */}
+            <MegaQSeries/>
             <MegaProducts />
             <LiveStreamCommandCenter />
             <IndustrialManifest/>
