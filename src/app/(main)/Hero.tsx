@@ -60,7 +60,7 @@ export const Hero = ({
       <div className="absolute inset-0 bg-[#cc2221]/5 z-0 pointer-events-none mix-blend-color" />
 
       {/* 2. FLUID EDGES CONTAINER - SHIFTED CONTENT UP via pb-24 md:pb-36 */}
-      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-10 pt-12 pb-24 md:pb-36">
+      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-10 pt-12 pb-48 md:pb-60">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start w-full">
 
           {/* LEFT SIDE CONTENT */}
