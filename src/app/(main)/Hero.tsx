@@ -2,21 +2,22 @@
 
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button'; // Adjust path if needed
-import localFont from 'next/font/local'
-import { motion, AnimatePresence } from "framer-motion";
+import { Button } from '@/components/ui/button'; 
+import localFont from 'next/font/local';
+import { motion } from "framer-motion";
 
 interface HeroProps {
   videoSrc?: string;
 }
-const apricotsFont = localFont({
-  src: '../../lib/fonts/Horizon.otf',
-  display: 'swap',
-})
 
-// --- Dynamic Typing Logic ---
-// const words = ["ENGINEERS.", "AGENCIES.", "CUSTOMERS.", "VENDORS.", "TEAM.", "ENTRY."];
-const words = ["Foundries.", "Forge Shops", "Fabricators."]; 
+const apricotsFont = localFont({
+  src: '../../lib/fonts/Horizon.otf', 
+  display: 'swap',
+  fallback: ['sans-serif']
+});
+
+const words = ["Foundries.", "Forge Shops.", "Fabricators."]; 
+
 export const Hero = ({
   videoSrc = "/video/282244_small.mp4"
 }: HeroProps) => {
@@ -26,8 +27,8 @@ export const Hero = ({
 
   useEffect(() => {
     if (subIndex === words[index].length + 1 && !reverse) {
-      setTimeout(() => setReverse(true), 1500);
-      return;
+      const timeout = setTimeout(() => setReverse(true), 1500);
+      return () => clearTimeout(timeout);
     }
     if (subIndex === 0 && reverse) {
       setReverse(false);
@@ -36,85 +37,84 @@ export const Hero = ({
     }
     const timeout = setTimeout(() => {
       setSubIndex((prev) => prev + (reverse ? -1 : 1));
-    }, reverse ? 50 : 100);
+    }, reverse ? 40 : 80);
     return () => clearTimeout(timeout);
   }, [subIndex, index, reverse]);
 
   return (
-    <header className="relative w-full overflow-hidden flex items-center justify-center min-h-[500px] md:min-h-[650px] bg-[#cc2221]">
+    <header className="relative w-full overflow-hidden flex items-center justify-center min-h-[600px] md:min-h-[800px] bg-black">
 
-      {/* 1. HERO VIDEO BACKGROUND - 100% OPACITY */}
+      {/* 1. HERO VIDEO BACKGROUND - FIXED TO 100% OPACITY */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0 opacity-100"
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-100 filter contrast-125"
       >
         <source src={videoSrc} type="video/mp4" />
       </video>
 
-      {/* Clean Light Blue Vivid Wash */}
-      <div className="absolute inset-0 bg-[#cc2221]/10 z-0 pointer-events-none" />
+      {/* Ambient Gradient Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/50 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-[#cc2221]/5 z-0 pointer-events-none mix-blend-color" />
 
-      {/* 2. SPLIT LAYOUT CONTAINER */}
-      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-10 my-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+      {/* 2. FLUID EDGES CONTAINER - SHIFTED CONTENT UP via pb-24 md:pb-36 */}
+      <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-10 pt-12 pb-24 md:pb-36">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start w-full">
 
           {/* LEFT SIDE CONTENT */}
-          <div className="lg:col-span-6 text-left space-y-3">
+          <div className="lg:col-span-8 text-left space-y-6">
  
-
-            {/* Main Title Tagline (More compact text sizes) */}
-            <h1 className="text-white font-black uppercase tracking-tighter leading-none">
-              <span className="block text-2xl sm:text-3xl md:text-4xl xl:text-5xl italic font-black text-white shadow-[0_4px_20px_rgba(204,34,33,0.3)]">
-                The World's Advanced Consortium of <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-[#cc2221]">
-                  {/* WATERWORKS <br />AUTHORITY */}
-
-                </span>
-                <span className="relative min-w-[320px] text-left text-white inline-flex items-center">
-                  <span style={{ WebkitTextStroke: "2px #ffffff", color: "transparent" }}>
-                    {words[index].substring(0, subIndex)}
-                  </span>
-                  <motion.span
-                    animate={{ opacity: [1, 0] }}
-                    transition={{ repeat: Infinity, duration: 0.8 }}
-                    className="w-2 h-14 md:h-20 bg-[#cc2221] ml-2"
-                  />
-                </span>
-                {/* <span className="text-[#cc2221]">...</span> */}
-
-              </span>
-            </h1>
-
-            {/* Sub-Bar Text Frame */}
-            <div className="inline-block text-[10px] sm:text-[12px] text-white tracking-[0.08em] font-black bg-[#cc2221] border border-[#cc2221] shadow-[0_4px_20px_rgba(204,34,33,0.3)] px-3.5 py-2 w-full max-w-sm">
+            {/* Meta Tag Block */}
+            <div className="inline-block text-xs text-white tracking-[0.25em] font-black bg-[#cc2221] border border-[#cc2221] shadow-[0_0_20px_rgba(204,34,33,0.4)] px-4 py-2 uppercase">
               MEGA FOUNDRIES | Global Industrial Hub
             </div>
 
+            {/* Main Title Heading */}
+            <h1 className="text-white font-black uppercase tracking-tighter leading-none">
+              <span className="block text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.95)]">
+                The World's Advanced <br />
+                Consortium of{" "}
+                <span className="block min-h-[1.2em] relative mt-2 lg:mt-4 flex items-center">
+                  
+                  {/* Transparent Outline Text Effect */}
+                  <span 
+                    className="text-transparent drop-shadow-[0_0_20px_rgba(204,34,33,0.4)] font-black select-none"
+                    style={{ 
+                      WebkitTextStroke: "2px #ffffff",
+                    }}
+                  >
+                    {words[index].substring(0, subIndex)}
+                  </span>
+
+                  {/* Typing Cursor Accent Indicator */}
+                  <motion.span
+                    animate={{ opacity: [1, 0] }}
+                    transition={{ repeat: Infinity, duration: 0.8 }}
+                    className="w-1.5 h-10 sm:h-14 md:h-16 bg-[#cc2221] ml-3 shadow-[0_0_15px_#cc2221] shrink-0 inline-block"
+                  />
+                </span>
+              </span>
+            </h1>
+
           </div>
 
-          {/* CENTER GAP (Keeps center clear for the swan imagery) */}
-          <div className="hidden lg:block lg:col-span-2 h-10"></div>
+          {/* RIGHT SIDE ACTION PANEL - SHIFTED UP via lg:mt-4 */}
+          <div className="lg:col-span-4 flex flex-col items-center lg:items-end justify-center text-center lg:text-right space-y-6 lg:mt-4 w-full">
 
-          {/* RIGHT SIDE CONTENT */}
-          <div className="lg:col-span-4 flex flex-col items-center lg:items-end justify-center text-center lg:text-right space-y-4">
-
-            {/* Secondary Statement (Scaled Down) */}
             <div className="w-full">
-              <span className="block text-lg sm:text-xl md:text-2xl font-black tracking-tight uppercase italic text-white drop-shadow-[0_4px_10px_rgba(0,74,173,0.95)]">
+              <span className="block text-2xl sm:text-3xl font-black tracking-tighter uppercase italic text-white drop-shadow-[0_4px_12px_rgba(204,34,33,0.5)]">
                 Under One Universe
               </span>
             </div>
 
-            {/* Actions / Buttons (Standard height sizing) */}
-            <div className="flex flex-col gap-2.5 w-full max-w-[260px]">
-              <Button className="w-full bg-[#cc2221] hover:bg-[#cc2221] text-white font-bold uppercase tracking-wider h-11 text-xs rounded-none border-b-2 border-[#cc2221] shadow-md transition-all duration-150">
+            <div className="flex flex-col gap-3 w-full max-w-xs">
+              <Button className="w-full bg-[#cc2221] hover:bg-[#b01e1d] text-white font-black uppercase tracking-widest h-12 text-xs rounded-none shadow-[0_4px_20px_rgba(204,34,33,0.3)] transition-all duration-200 border-none">
                 Explore Capabilities
               </Button>
 
-              <Button variant="outline" asChild className="w-full border border-white text-white bg-[#cc2221]/80 hover:bg-white hover:text-[#cc2221] font-bold uppercase tracking-wider h-11 text-xs rounded-none shadow-md transition-colors duration-200">
+              <Button variant="outline" asChild className="w-full border-2 border-white text-white bg-transparent hover:bg-white hover:text-black font-black uppercase tracking-widest h-12 text-xs rounded-none transition-all duration-200">
                 <Link href="/sellerHomepage">Succeed With Us</Link>
               </Button>
             </div>
@@ -124,8 +124,8 @@ export const Hero = ({
         </div>
       </div>
 
-      {/* Bottom Pure Corporate Identity Accent Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-[#cc2221] via-[#000000] to-[#cc2221]"></div>
+      {/* Base Identity Accent Bar */}
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-[#cc2221] via-black to-[#cc2221] z-20"></div>
     </header>
   );
 };
