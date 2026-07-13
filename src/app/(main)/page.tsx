@@ -45,6 +45,7 @@ import MegaQSeries from './MegaQSeries';
 import MegaFoundationPage from './mega-foundation/page';
  import MegaFeaShowcase from './MegaFeaShowcase';
 import { Hero } from './Hero';
+import MegaMediaHub from '../components/MegaMediaHub';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -103,6 +104,7 @@ export default function Home() {
             {/* 2. CORE PRODUCTS (High Priority) */}
             <MegaQSeries/>
             <MegaProducts />
+            {/* <MegaMediaHub/> */}
             <LiveStreamCommandCenter />
              <MegaFeaShowcase/>
             <IndustrialManifest/>
