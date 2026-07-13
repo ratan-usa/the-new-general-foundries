@@ -29,40 +29,40 @@ export default function AiRobotics() {
   return (
     <section className="py-24 bg-black text-white overflow-hidden relative">
       <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('/assets/image16.jpg')]" />
-      
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="relative"
           >
             <div className="relative z-10 rounded-3xl border border-white/10 overflow-hidden bg-black backdrop-blur-xl p-2 shadow-2xl">
-              <Image 
-                src="/assets/image8.jpg" 
+              <Image
+                src="/assets/image8.jpeg"
                 alt="AI Robotics"
                 className="rounded-2xl opacity-80"
                 width={1000}
                 height={1000}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
-              
+
               {/* Animated Badge */}
               <div className="absolute bottom-8 left-8 flex items-center gap-3 bg-[#cc2221] px-6 py-3 rounded-full shadow-xl">
                 <Zap className="animate-pulse" size={20} />
                 <span className="font-bold tracking-tighter uppercase text-sm">Industry 4.0 Active</span>
               </div>
             </div>
-            
+
             {/* Glow Effect */}
             <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#cc2221] rounded-full blur-[120px] opacity-20" />
           </motion.div>
 
           {/* Right Side: Content */}
           <div>
-            <motion.h2 
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -76,7 +76,7 @@ export default function AiRobotics() {
 
             <div className="space-y-6">
               {techFeatures.map((tech, idx) => (
-                <motion.div 
+                <motion.div
                   key={idx}
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}

@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeroSection = () => {
     // Note: The image URL is a placeholder. Replace it with your actual image path.
-    const imageUrl = "/assets/image8.jpg";
+    const imageUrl = "/assets/image21.jpeg";
 
     return (
         <div
@@ -14,7 +14,7 @@ const HeroSection = () => {
                 // Mimic the image's rounded bottom edge if possible, otherwise use a subtle curve effect
                 clipPath: 'polygon(0 0, 100% 0, 100% 95%, 0 100%)',
             }}
-        > 
+        >
             <div className="absolute inset-0 bg-neutral-900/40 backdrop-blur-[1px]"></div>
             <div className="relative z-10 text-center max-w-4xl px-4">
 
