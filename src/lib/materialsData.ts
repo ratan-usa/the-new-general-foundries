@@ -58,11 +58,11 @@ export const categories = [
     color: "bg-red-700",
   }, 
   {
-    title: "Trench Products",
-    slug: "trench-products",
-    video: "/video/trench/Trench 500 Animation.498.mp4",
-    description: "Heavy-duty drainage solutions for high-traffic industrial environments.",
-    specs: ["Ductile Iron Construction", "Load Class D400+", "Anti-Slip Surface", "UV Resistant Coating"],
+    title: "MJ Fittings",
+    slug: "mj-fittings",
+    image: "/assets/MEGA/MJ Fittings.jpeg",
+    description: "Our range of mechanical joint (MJ) fittings are engineered for superior sealing performance in underground water and gas pipelines.   ",
+    specs: ["ISO 2531/EN 545 Standard", "Flange Sizes: 50mm - 1200mm", "Working Pressure: Up to 16 Bar", "Corrosion-Resistant Epoxy Coating"],
     icon: Wrench,
     color: "bg-red-700",
   }
