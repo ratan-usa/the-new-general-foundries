@@ -33,7 +33,7 @@ export const categories = [
   {
     title: "New Innovations",
     slug: "new-innovations",
-    image: "/assets/image15.jpeg", // Construction/Infrastructure image
+    image: "/assets/MEGA/MONITERING WELL STATION.11 - Copy.png", // Construction/Infrastructure image
     description: "Cutting-edge casting technologies and patent-pending industrial designs.",
     specs: ["Patent-pending Technology", "Sustainable Materials", "IoT Ready Sensors", "High Precision Molding"],
     icon: Lightbulb,
@@ -42,7 +42,7 @@ export const categories = [
   {
     title: "Pipe Grates",
     slug: "pipe-grates",
-    image: "/assets/PAVING-RISERS/products/pipe grid.jpeg",
+    video: "/assets/PAVING-RISERS/products/pipe grate.mp4",
     description: "Optimized water flow and debris management for municipal projects.",
     specs: ["High Flow Efficiency", "Debris Filtration", "Cast Iron Durability", "Custom Sizes Available"],
     icon: Grid3X3,
@@ -51,7 +51,7 @@ export const categories = [
   {
     title: "Hinged Castings",
     slug: "hinged-castings",
-    image: "/assets/image15.jpeg", // Construction/Infrastructure image
+    image: "/assets/MEGA/HATCHES COVER.png", // Construction/Infrastructure image
     description: "Ergonomic, easy-access manhole and utility covers for safety.",
     specs: ["Ergonomic Lift Assist", "Safety Lock System", "Heavy Duty Hinge", "Reduced Maintenance Cost"],
     icon: DoorOpen,

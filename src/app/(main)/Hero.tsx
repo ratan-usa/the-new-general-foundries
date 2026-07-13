@@ -101,7 +101,7 @@ export const Hero = ({
           </div>
 
           {/* RIGHT SIDE ACTION PANEL - SHIFTED UP via lg:mt-4 */}
-          <div className="lg:col-span-4 flex flex-col items-center lg:items-end justify-center text-center lg:text-right space-y-6 lg:mt-4 w-full">
+          <div className="lg:col-span-4 flex flex-col items-center lg:items-end pr-12 justify-center text-center lg:text-right space-y-6 lg:mt-4 w-full">
 
             <div className="w-full">
               <span className="block text-2xl sm:text-3xl font-black tracking-tighter uppercase italic text-white drop-shadow-[0_4px_12px_rgba(204,34,33,0.5)]">
