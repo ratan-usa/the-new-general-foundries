@@ -104,7 +104,7 @@ export default function Home() {
             {/* 2. CORE PRODUCTS (High Priority) */}
             <MegaQSeries/>
             <MegaProducts />
-            {/* <MegaMediaHub/> */}
+            <MegaMediaHub/>
             <LiveStreamCommandCenter />
              <MegaFeaShowcase/>
             <IndustrialManifest/>
