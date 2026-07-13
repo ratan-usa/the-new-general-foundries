@@ -51,7 +51,7 @@ export const categories = [
   {
     title: "Hinged Castings",
     slug: "hinged-castings",
-    image: "/assets/MEGA/HATCHES COVER.png", // Construction/Infrastructure image
+    image: "/assets/MEGA/HATCHES COVER.jpeg", // Construction/Infrastructure image
     description: "Ergonomic, easy-access manhole and utility covers for safety.",
     specs: ["Ergonomic Lift Assist", "Safety Lock System", "Heavy Duty Hinge", "Reduced Maintenance Cost"],
     icon: DoorOpen,
