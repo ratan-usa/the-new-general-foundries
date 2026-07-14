@@ -1,15 +1,13 @@
 'use client';
+
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { 
   Play, 
   Pause, 
   Rotate3d, 
-  Maximize, 
   ChevronRight, 
-  Box, 
-  Layers,
-  Scan
+  Layers
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -22,7 +20,7 @@ const PRODUCT_VIDEOS = [
     description: "Full rotation showcase highlighting our high-precision ductile iron height adjustment ring mechanism.",
     duration: "0:45",
     type: "360_ROTATION",
-    src: "video/paving_riser/1 FT LEACHING GALLEY .glb", 
+    src: "video/paving_riser/paving riser 1.5213.mp4", // Restored valid video path to prevent .glb breaks
     thumbnail: "/assets/PAVING-RISERS/paving riser 1.5200.png" 
   },
   {
@@ -37,7 +35,7 @@ const PRODUCT_VIDEOS = [
   {
     id: 3,
     title: "Infrastructure Valve Boxes",
-    description: "Step-by-step industrial 3D animation showing a standard heavy-traffic utility valve box casing setup.",
+    description: "Step-by-step industrial 3D animation showing a standard heavy-traffic utility utility valve box casing setup.",
     duration: "2:00",
     type: "ANIMATION", 
     src: "video/paving_riser/paving riser 1.5213.mp4", 
@@ -53,50 +51,35 @@ const PRODUCT_VIDEOS = [
     thumbnail: "/assets/PAVING-RISERS/paving riser 1.5204.png" 
   }
 ];
+
 export default function Product3DShowcase() {
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isAutoPlayAll, setIsAutoPlayAll] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   
   const activeVideo = PRODUCT_VIDEOS[activeVideoIndex];
 
-  // Logic: Handle video switching when "Play All" is active
+  // Logic: Handle automatic transitions and infinite looping
   const handleVideoEnd = () => {
-    if (isAutoPlayAll) {
-      if (activeVideoIndex + 1 < PRODUCT_VIDEOS.length) {
-        // Play next video
-        setActiveVideoIndex((prev) => prev + 1);
-      } else {
-        // End of playlist
-        setIsAutoPlayAll(false);
-        setIsPlaying(false);
-      }
-    } else {
-        setIsPlaying(false);
-    }
+    // Cycles to the next index, resetting cleanly to 0 after the last track ends
+    setActiveVideoIndex((prev) => (prev + 1) % PRODUCT_VIDEOS.length);
   };
 
-  // Effect: When active video changes, ensure it plays if we are in "Playing" mode
+  // Effect: Guarantees continuous autoplay configurations on active state alterations
   useEffect(() => {
-    if (isPlaying && videoRef.current) {
-        videoRef.current.load();
-        videoRef.current.play();
+    if (videoRef.current) {
+      videoRef.current.load();
+      videoRef.current.play().catch((err) => {
+        console.log("Autoplay context wait:", err);
+      });
     }
-  }, [activeVideoIndex, isPlaying]);
-
-  const handlePlayAll = () => {
-    setActiveVideoIndex(0);
-    setIsPlaying(true);
-    setIsAutoPlayAll(true);
-  };
+  }, [activeVideoIndex]);
 
   return (
-    <section className="bg-zinc-950 text-white py-20 border-t border-zinc-900">
-      <div className="container mx-auto px-4">
+    <section className="bg-zinc-950 text-white py-20 border-t border-zinc-900 w-full">
+      <div className="w-full px-4 sm:px-6 lg:px-10">
         
         {/* --- SECTION HEADER --- */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6 w-full">
           <div>
             <div className="flex items-center gap-2 mb-2">
               <Rotate3d className="text-[#cc2221] w-5 h-5 animate-spin-slow" />
@@ -110,131 +93,111 @@ export default function Product3DShowcase() {
           </div>
 
           <Button 
-            onClick={handlePlayAll}
-            className={cn(
-              "gap-2 font-bold uppercase tracking-wider px-8 h-12 transition-all",
-              isAutoPlayAll 
-                ? "bg-[#cc2221] text-white animate-pulse" 
-                : "bg-white text-black hover:bg-gray-200"
-            )}
+            disabled
+            className="gap-2 font-black uppercase tracking-widest px-8 h-12 bg-[#cc2221] text-white animate-pulse opacity-100 cursor-default"
           >
-            {isAutoPlayAll ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-            {isAutoPlayAll ? "Playing All..." : "Play All 3D Tours"}
+            <Play className="w-4 h-4 fill-current" />
+            Looping Active
           </Button>
         </div>
 
         {/* --- MAIN PLAYER AREA --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
           
-          {/* LEFT: The Main Screen */}
-          <div className="lg:col-span-2">
-            <div className="relative aspect-video bg-black rounded-lg border border-zinc-800 shadow-2xl overflow-hidden group">
+          {/* LEFT: Continuous Main Screen Display */}
+          <div className="lg:col-span-2 w-full">
+            <div className="relative aspect-video bg-black rounded-none border border-zinc-800 shadow-2xl overflow-hidden group">
               
-              {/* VIDEO PLAYER LOGIC */}
-              {isPlaying ? (
-                  <video
-                    ref={videoRef}
-                    key={activeVideo.src} // Key ensures react rebuilds element on change
-                    className="w-full h-full object-contain bg-black"
-                    controls
-                    autoPlay
-                    onEnded={handleVideoEnd}
-                  >
-                    <source src={activeVideo.src} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-              ) : (
-                /* THUMBNAIL / IDLE STATE */
-                <div className="absolute inset-0">
-                    {/* Background Image */}
-                    <Image 
-                        src={activeVideo.thumbnail}
-                        alt={activeVideo.title}
-                        fill
-                        className="object-cover opacity-60"
-                    />
-                    
-                    {/* Play Button Overlay */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center cursor-pointer hover:bg-black/30 transition-all z-10" onClick={() => setIsPlaying(true)}>
-                        <div className="w-20 h-20 bg-[#cc2221] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                            <Play className="w-8 h-8 text-white fill-current ml-1" />
-                        </div>
-                        <p className="mt-4 font-bold uppercase tracking-wider text-sm text-white drop-shadow-md">Start Interactive Tour</p>
-                    </div>
-                </div>
-              )}
+              <video
+                ref={videoRef}
+                key={activeVideo.src} 
+                className="w-full h-full object-contain bg-black"
+                controls
+                autoPlay
+                muted // Muting guarantees the system passes absolute web browser autoplay blocks
+                playsInline
+                onEnded={handleVideoEnd}
+              >
+                <source src={activeVideo.src} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
 
-              {/* Video Info Overlay (Only show when NOT playing so controls aren't blocked, or keep at bottom) */}
-              {!isPlaying && (
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent z-20">
-                    <div className="flex items-center gap-3 mb-1">
-                      <Badge variant="outline" className="text-[#cc2221] border-[#cc2221] bg-[#cc2221]/10">
-                        {activeVideo.type.replace('_', ' ')}
-                      </Badge>
-                      <span className="text-xs text-gray-400 font-mono">{activeVideo.duration}</span>
-                    </div>
-                    <h3 className="text-2xl font-bold">{activeVideo.title}</h3>
-                    <p className="text-gray-300 text-sm max-w-xl">{activeVideo.description}</p>
-                  </div>
-              )}
+              {/* Minimal Top Layout Metadata overlay overlaying active performance logs */}
+              <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-[#0a0a0a]/80 backdrop-blur-sm border border-zinc-800 px-3 py-1.5">
+                <span className="w-2 h-2 bg-[#cc2221] rounded-full animate-ping shrink-0" />
+                <span className="text-[10px] font-mono tracking-widest text-zinc-300 uppercase font-bold">
+                  Autoloop Sequence Item 0{activeVideoIndex + 1}
+                </span>
+              </div>
+            </div>
+
+            {/* Permanent Bottom Technical Specs Drawer */}
+            <div className="mt-4 p-6 bg-zinc-900/40 border border-zinc-900 rounded-none space-y-2">
+              <div className="flex items-center gap-3">
+                <Badge variant="outline" className="text-[#cc2221] border-[#cc2221] bg-[#cc2221]/10 rounded-none uppercase text-[10px] tracking-wider font-black">
+                  {activeVideo.type.replace('_', ' ')}
+                </Badge>
+                <span className="text-xs text-gray-400 font-mono tracking-wide">{activeVideo.duration} Log Length</span>
+              </div>
+              <h3 className="text-2xl font-black text-white uppercase tracking-tight">{activeVideo.title}</h3>
+              <p className="text-gray-400 text-sm font-light leading-relaxed max-w-4xl">{activeVideo.description}</p>
             </div>
           </div>
 
-          {/* RIGHT: Playlist */}
-          <div className="lg:col-span-1 bg-zinc-900/50 rounded-lg border border-zinc-800 p-4 h-full flex flex-col">
-            <h4 className="text-gray-400 font-bold uppercase text-xs tracking-widest mb-4 flex items-center gap-2">
-              <Layers className="w-4 h-4" /> 
-              Up Next
-            </h4>
-            
-            <div className="space-y-3 overflow-y-auto pr-2 custom-scrollbar flex-1">
-              {PRODUCT_VIDEOS.map((video, idx) => (
-                <div 
-                  key={video.id}
-                  onClick={() => {
-                    setActiveVideoIndex(idx);
-                    setIsPlaying(true);
-                    setIsAutoPlayAll(false);
-                  }}
-                  className={cn(
-                    "flex gap-4 p-3 rounded-md cursor-pointer transition-all border group",
-                    activeVideoIndex === idx 
-                      ? "bg-[#cc2221]/10 border-[#cc2221]" 
-                      : "bg-black border-zinc-800 hover:border-zinc-600"
-                  )}
-                >
-                  {/* Thumbnail Placeholder */}
-                  <div className="relative w-24 h-16 bg-zinc-800 rounded overflow-hidden shrink-0 flex items-center justify-center">
-                    <Image 
-                        src={video.thumbnail} 
-                        alt="thumb" 
-                        fill 
-                        className="object-cover opacity-70 group-hover:opacity-100"
-                    />
-                    
-                    {activeVideoIndex === idx && isPlaying && (
-                       <div className="absolute inset-0 bg-black/50 flex items-center justify-center z-10">
-                          <div className="w-2 h-2 bg-red-500 rounded-full animate-ping" />
-                       </div>
-                    )}
-                  </div>
+          {/* RIGHT: Active Playlist Index Trackers */}
+          <div className="lg:col-span-1 bg-zinc-900/20 rounded-none border border-zinc-900 p-4 h-full flex flex-col justify-between min-h-[400px]">
+            <div className="w-full">
+              <h4 className="text-gray-400 font-bold uppercase text-xs tracking-widest mb-4 flex items-center gap-2 border-b border-zinc-900 pb-3">
+                <Layers className="w-4 h-4" /> 
+                Showroom Playlist Lineup
+              </h4>
+              
+              <div className="space-y-3 overflow-y-auto pr-2 custom-scrollbar max-h-[420px]">
+                {PRODUCT_VIDEOS.map((video, idx) => {
+                  const isCurrent = activeVideoIndex === idx;
+                  return (
+                    <div 
+                      key={video.id}
+                      onClick={() => setActiveVideoIndex(idx)}
+                      className={cn(
+                        "flex gap-4 p-3 rounded-none cursor-pointer transition-all border group items-center",
+                        isCurrent 
+                          ? "bg-[#cc2221]/10 border-[#cc2221]" 
+                          : "bg-black border-zinc-900 hover:border-zinc-700"
+                      )}
+                    >
+                      {/* Thumbnail Placeholder Window */}
+                      <div className="relative w-24 h-16 bg-zinc-900 rounded-none overflow-hidden shrink-0 flex items-center justify-center border border-zinc-800">
+                        <Image 
+                          src={video.thumbnail} 
+                          alt="thumb" 
+                          fill 
+                          className="object-cover opacity-60 group-hover:opacity-100 transition-opacity"
+                        />
+                        {isCurrent && (
+                          <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-10">
+                            <div className="w-2.5 h-2.5 bg-[#cc2221] rounded-full animate-ping" />
+                          </div>
+                        )}
+                      </div>
 
-                  {/* Text Info */}
-                  <div className="flex flex-col justify-center">
-                    <h5 className={cn("font-bold text-sm leading-tight mb-1 group-hover:text-[#cc2221] transition-colors", activeVideoIndex === idx ? "text-[#cc2221]" : "text-white")}>
-                      {video.title}
-                    </h5>
-                    <p className="text-xs text-gray-500 line-clamp-1">{video.description}</p>
-                  </div>
-                </div>
-              ))}
+                      {/* Info Text Element */}
+                      <div className="flex flex-col justify-center">
+                        <h5 className={cn("font-bold text-xs uppercase tracking-wide leading-tight mb-1 transition-colors", isCurrent ? "text-[#cc2221]" : "text-white group-hover:text-[#cc2221]")}>
+                          {video.title}
+                        </h5>
+                        <p className="text-[11px] text-gray-500 line-clamp-1">{video.description}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* Bottom Call to Action */}
-            <div className="mt-4 pt-4 border-t border-zinc-800 text-center">
-               <p className="text-xs text-black mb-3">Need 3D CAD files for your project?</p>
-               <Button variant="outline" className="w-full text-xs text-black border-zinc-700 hover:bg-white hover:text-black uppercase">
-                 Request CAD / BIM Files <ChevronRight className="w-3 h-3 ml-1" />
+            {/* Bottom Technical Assets Outbound Request */}
+            <div className="mt-6 pt-4 border-t border-zinc-900 text-left w-full">
+               <Button variant="outline" className="w-full text-xs text-white bg-transparent border-zinc-800 hover:bg-white hover:text-black font-black uppercase tracking-wider h-11 rounded-none transition-colors">
+                 Request CAD / BIM Files <ChevronRight className="w-3 h-3 ml-2" />
                </Button>
             </div>
           </div>
