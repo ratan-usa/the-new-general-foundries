@@ -151,7 +151,7 @@ export default function CategoryMegaMenu() {
                 <li key={index}>
                   <Link 
                     href={`/category/${item.toLowerCase().replace(/ /g, '-')}`}
-                    className={`block text-sm transition-colors ${ // Just styling the 3rd item red to match your image example, normally logic would differ item === 'Electrical Equipment' ? 'text-[#cc2221] font-medium' : 'text-gray-600 hover:text-[#cc2221]' }`}
+                    className={`block text-sm transition-colors ${ item === 'Electrical Equipment' ? 'text-[#cc2221] font-medium' : 'text-[#D80621] hover:text-[#cc2221]' }`}
                   >
                     {item}
                   </Link>
