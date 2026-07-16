@@ -127,7 +127,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
     <div className="min-h-screen flex bg-slate-50">
 
       {/* --- DESKTOP SIDEBAR --- */}
-      <aside className="hidden md:flex w-64 flex-col bg-slate-900 text-white fixed h-full inset-y-0 z-50">
+      <aside className="hidden md:flex w-64 flex-col bg-slate-500 text-[#D80621] fixed h-full inset-y-0 z-50">
         <div className="h-16 flex items-center px-6 border-b border-slate-800 font-bold text-xl tracking-wider">
           <span className="text-[#cc2221]">MEGA</span>FOUNDRIES
         </div>
@@ -137,10 +137,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             const isActive = pathname === item.href;
             return (
               <Link key={item.href} href={item.href}>
-                <span className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${isActive
-                  ? 'bg-[#cc2221] text-white'
-                  : 'text-slate-400 hover:text-white hover:bg-slate-800'
-                  }`}>
+                <span className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${isActive ? 'bg-[#cc2221] text-white' : 'text-slate-400 hover:text-white hover:bg-slate-800' }`}>
                   <item.icon className="w-4 h-4" />
                   {item.label}
                 </span>
@@ -170,11 +167,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                 <Menu className="w-5 h-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="bg-slate-900 text-white border-none">
+            <SheetContent side="left" className="bg-slate-500 text-[#D80621] border-none">
               <div className="font-bold text-xl mb-8"><span className="text-[#cc2221]">MEGA</span>FOUNDRIES</div>
               <nav className="space-y-2">
                 {navItems.map((item) => (
-                  <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2 text-slate-300 hover:text-white">
+                  <Link key={item.href} href={item.href} className="flex items-center gap-3 px-3 py-2 text-[#D80621] hover:text-white">
                     <item.icon className="w-4 h-4" />
                     {item.label}
                   </Link>
@@ -184,7 +181,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </Sheet>
 
           {/* Breadcrumb / Title */}
-          <h1 className="text-lg font-semibold text-slate-800 hidden sm:block">
+          <h1 className="text-lg font-semibold text-[#D80621] hidden sm:block">
             Dashboard Overview
           </h1>
 
@@ -196,7 +193,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
                   <Avatar className="h-9 w-9 border border-slate-200">
                     {/* Add User Image URL if you have it in state */}
                     <AvatarImage src="" alt={user.name} />
-                    <AvatarFallback className="bg-slate-900 text-white font-semibold">
+                    <AvatarFallback className="bg-slate-500 text-[#D80621] font-semibold">
                       {isProfileLoading ? (
                         <Loader2 className="w-4 h-4 animate-spin" />
                       ) : (

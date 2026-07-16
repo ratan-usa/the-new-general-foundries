@@ -9,14 +9,14 @@ export default function CustomProjectsPage() {
     <div className="min-h-screen bg-white">
       
       {/* Hero */}
-      <div className="relative h-[300px] bg-slate-900 flex items-center justify-center overflow-hidden">
+      <div className="relative h-[300px] bg-slate-500 flex items-center justify-center overflow-hidden">
          {/* Optional: Add background image here like previous pages */}
          <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
          
          <div className="relative z-10 text-center px-4">
             <Cog className="w-16 h-16 text-[#cc2221] mx-auto mb-4 animate-spin-slow" />
             <h1 className="text-4xl md:text-5xl font-bold text-white">Custom Metal Projects</h1>
-            <p className="text-gray-300 mt-4 text-lg">No limits on metal selections. Tailored to your specs.</p>
+            <p className="text-[#D80621] mt-4 text-lg">No limits on metal selections. Tailored to your specs.</p>
          </div>
       </div>
 
@@ -25,10 +25,10 @@ export default function CustomProjectsPage() {
           
           {/* Left: Info */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-[#D80621] mb-4">
               If you can design it, <span className="text-[#cc2221]">we can cast it.</span>
             </h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-[#D80621] mb-8 leading-relaxed">
               Our engineering team specializes in complex geometries, unique alloy compositions, and large-scale productions. Whether you need a prototype or a production run of 10,000 units, we have the infrastructure to deliver.
             </p>
 
@@ -38,8 +38,8 @@ export default function CustomProjectsPage() {
                         <span className="text-[#cc2221] font-bold text-xl">1</span>
                     </div>
                     <div>
-                        <h3 className="font-bold text-gray-900">Consultation</h3>
-                        <p className="text-sm text-gray-500">Review specs with our metallurgists.</p>
+                        <h3 className="font-bold text-[#D80621]">Consultation</h3>
+                        <p className="text-sm text-[#D80621]">Review specs with our metallurgists.</p>
                     </div>
                 </div>
                 <div className="flex gap-4">
@@ -47,8 +47,8 @@ export default function CustomProjectsPage() {
                         <span className="text-[#cc2221] font-bold text-xl">2</span>
                     </div>
                     <div>
-                        <h3 className="font-bold text-gray-900">Pattern Making</h3>
-                        <p className="text-sm text-gray-500">3D modeling and mold creation.</p>
+                        <h3 className="font-bold text-[#D80621]">Pattern Making</h3>
+                        <p className="text-sm text-[#D80621]">3D modeling and mold creation.</p>
                     </div>
                 </div>
                 <div className="flex gap-4">
@@ -56,8 +56,8 @@ export default function CustomProjectsPage() {
                         <span className="text-[#cc2221] font-bold text-xl">3</span>
                     </div>
                     <div>
-                        <h3 className="font-bold text-gray-900">Casting & Finishing</h3>
-                        <p className="text-sm text-gray-500">Pouring, cooling, and CNC machining.</p>
+                        <h3 className="font-bold text-[#D80621]">Casting & Finishing</h3>
+                        <p className="text-sm text-[#D80621]">Pouring, cooling, and CNC machining.</p>
                     </div>
                 </div>
             </div>
@@ -89,8 +89,8 @@ export default function CustomProjectsPage() {
                 </div>
 
                 <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:bg-gray-100 cursor-pointer transition-colors">
-                    <UploadCloud className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                    <p className="text-sm text-gray-500">Upload Blueprints / CAD Files</p>
+                    <UploadCloud className="w-8 h-8 text-[#D80621] mx-auto mb-2" />
+                    <p className="text-sm text-[#D80621]">Upload Blueprints / CAD Files</p>
                 </div>
 
                 <Button className="w-full bg-[#cc2221] hover:bg-red-700 text-white py-6">

@@ -39,7 +39,7 @@ const TopNavbar = () => {
       <nav className="bg-neutral-800 text-neutral-200 w-full mx-auto shadow-md">
 
         {/* Corrected lg:px-30 to lg:px-8 or standard container usage */}
-        <div className="w-full px-4 sm:px-6 lg:px-10  mx-auto">
+        <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
           <div className="flex justify-between items-center h-9">
 
             {/* --- DESKTOP: Left Menu Items --- */}
@@ -61,7 +61,7 @@ const TopNavbar = () => {
             <div className="lg:hidden flex items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-neutral-200 hover:text-[#cc2221] focus:outline-none"
+                className="text-[#D80621] hover:text-[#cc2221] focus:outline-none"
               >
                 {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -122,7 +122,7 @@ const TopNavbar = () => {
         {/* --- MOBILE MENU DROPDOWN --- */}
         {/* Renders conditionally based on state */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-neutral-900 border-t border-neutral-700 absolute w-full left-0 top-9 shadow-xl py-4 px-4 flex flex-col gap-4">
+          <div className="lg:hidden bg-slate-500 border-t border-neutral-700 absolute w-full left-0 top-9 shadow-xl py-4 px-4 flex flex-col gap-4">
 
             {/* Mobile Links Grid */}
             <div className="grid grid-cols-2 gap-3">

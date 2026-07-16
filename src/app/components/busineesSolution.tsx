@@ -63,18 +63,13 @@ const BusinessSolutions = () => {
     return (
         <section className="py-2 bg-white">
             {/* Main World of Metals Heading */}
-            {/* <h2 className={`
-                text-[60px] lg:text-[90px] text-center mx-auto leading-none 
-                bg-[linear-gradient(to_bottom,#cc2221_44%,#ffffff_44%,#ffffff_46%,black_46%)]
-                bg-clip-text text-transparent
-                ${apricotsFont.className}
-            `}>
+            {/* <h2 className={` text-[60px] lg:text-[90px] text-center mx-auto leading-none bg-[linear-gradient(to_bottom,#cc2221_44%,#ffffff_44%,#ffffff_46%,#c0c0c0_46%)] bg-clip-text text-transparent ${apricotsFont.className} `}>
                 World of Metals
             </h2> */}
 
             {/* Dynamic Typewriter Showcase Block */}
             <div className="text-left px-10 mb-12">
-                <p className="text-7xl md:text-5xl font-sans uppercase tracking-[0.1em] text-neutral-500 font-bold inline-block">
+                <p className="text-7xl md:text-5xl font-sans uppercase tracking-[0.1em] text-[#D80621] font-bold inline-block">
                   All Metals Popular:{" "}
                   <span className="text-[#cc2221] border-r-2 border-[#cc2221] pr-1 animate-pulse font-black">
                      {currentSubText}
@@ -95,13 +90,13 @@ const BusinessSolutions = () => {
                                 </div>
                             </div>
                             <h3 className="text-sm font-bold text-[#cc2221] mb-3">{service.title}</h3>
-                            <p className="text-sm text-neutral-600 mb-4 h-20 overflow-hidden leading-relaxed">
+                            <p className="text-sm text-[#D80621] mb-4 h-20 overflow-hidden leading-relaxed">
                                 {service.description}
                             </p>
 
                             <Link
                                 href="#"
-                                className="inline-flex text-sm items-center font-semibold text-neutral-800 hover:text-[#cc2221] transition-colors group"
+                                className="inline-flex text-sm items-center font-semibold text-[#D80621] hover:text-[#cc2221] transition-colors group"
                             >
                                 Learn More
                                 <ChevronsRight className='h-3 w-3 ml-2 transform group-hover:translate-x-1 transition-transform' />

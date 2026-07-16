@@ -73,7 +73,7 @@ function ResetPasswordForm({ clientId }: { clientId: string }) {
         <Card className="max-w-md w-full shadow-xl">
             <CardHeader className="text-center">
                 <div className="mx-auto bg-slate-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                    <Lock className="w-6 h-6 text-slate-600" />
+                    <Lock className="w-6 h-6 text-[#D80621]" />
                 </div>
                 <CardTitle className="text-2xl font-bold">Reset Password</CardTitle>
                 <CardDescription>

@@ -105,7 +105,7 @@ function RegisterForm() {
               name="email" 
               value={emailParam} 
               disabled 
-              className="bg-slate-100 text-slate-500 cursor-not-allowed"
+              className="bg-slate-100 text-[#D80621] cursor-not-allowed"
             />
           </div>
 

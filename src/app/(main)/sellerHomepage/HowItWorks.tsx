@@ -40,7 +40,7 @@ export default function HowItWorks() {
         <span className="text-[#cc2221] font-bold text-xs uppercase tracking-widest">
           Mega Foundries Process
         </span>
-        <h2 className="text-[30px] md:text-[40px] font-bold text-gray-900 mt-2">
+        <h2 className="text-[30px] md:text-[40px] font-bold text-[#D80621] mt-2">
           How It <span className="text-[#cc2221]">Works</span>
         </h2>
       </div>
@@ -91,10 +91,10 @@ export default function HowItWorks() {
                   </div>
 
                   <div className="absolute top-[280px] px-4 text-center max-w-[280px]">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-[#D80621] mb-3">
                       <span className="text-[#cc2221]">{step.highlight}</span> {step.title.replace(step.highlight, "")}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                    <p className="text-sm text-[#D80621] leading-relaxed font-medium">
                       {step.description}
                     </p>
                   </div>
@@ -102,16 +102,16 @@ export default function HowItWorks() {
               ) : (
                 <>
                   <div className="absolute top-0 px-4 text-center max-w-[280px]">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-xl font-bold text-[#D80621] mb-3">
                       <span className="text-[#cc2221]">{step.highlight}</span> {step.title.replace(step.highlight, "")}
                     </h3>
-                    <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                    <p className="text-sm text-[#D80621] leading-relaxed font-medium">
                       {step.description}
                     </p>
                   </div>
 
                   {/* Number sits INSIDE the bottom bend */}
-                  <div className="absolute top-[320px] text-7xl font-black text-gray-900 bg-white/80 px-4 rounded-xl backdrop-blur-sm z-20">
+                  <div className="absolute top-[320px] text-7xl font-black text-[#D80621] bg-white/80 px-4 rounded-xl backdrop-blur-sm z-20">
                     {step.id}
                   </div>
                 </>
@@ -133,10 +133,10 @@ export default function HowItWorks() {
               {step.id}
             </div>
             <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
+              <h3 className="text-lg font-bold text-[#D80621] mb-2">
                 {step.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-[#D80621] text-sm leading-relaxed">
                 {step.description}
               </p>
             </div>

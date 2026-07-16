@@ -138,7 +138,7 @@ export function DesignCapabilities() {
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
 
         {/* Section Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-zinc-900 mb-10 border-l-4 border-[#cc2221] pl-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#D80621] mb-10 border-l-4 border-[#cc2221] pl-4">
           The Mega Philosophy
         </h2>
 
@@ -162,7 +162,7 @@ export function DesignCapabilities() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Optional dark overlay on hover */}
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                  <div className="absolute inset-0 -[#D80621]/0 group-hover:-[#D80621]/10 transition-colors" />
                 </div>
 
                 {/* Right Side: Content (Approx 65% width) */}
@@ -173,10 +173,10 @@ export function DesignCapabilities() {
                     {categoryTitle}
                   </span>
 
-                  <h3 className="text-lg md:text-xl font-bold text-zinc-900 mb-3 leading-tight group-hover:text-[#cc2221] transition-colors">
+                  <h3 className="text-lg md:text-xl font-bold text-[#D80621] mb-3 leading-tight group-hover:text-[#cc2221] transition-colors">
                     {item.lines}
                   </h3>
-                  <p className="text-sm text-zinc-600 leading-relaxed">
+                  <p className="text-sm text-[#D80621] leading-relaxed">
                     {item.description}
                   </p>
                 </div>

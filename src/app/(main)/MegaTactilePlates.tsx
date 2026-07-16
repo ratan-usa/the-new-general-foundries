@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function MegaTactilePlates() {
   return (
-    <section className="bg-white text-[#0a0a0a] py-16 font-sans border-b border-gray-100 w-full">
+    <section className="bg-white text-[#D80621] py-16 font-sans border-b border-gray-100 w-full">
       {/* Absolute strict fluid full width padding bounds */}
       <div className="w-full px-4 sm:px-6 lg:px-10 space-y-16">
 
@@ -17,12 +17,12 @@ export default function MegaTactilePlates() {
             <span className="text-xs uppercase tracking-[0.4em] font-black text-[#cc2221] block mb-3">
               Infrastructure Accessibility Index
             </span>
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#0a0a0a] leading-none">
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#D80621] leading-none">
               Tactile Plates <br />
               <span className="text-[#cc2221]">Detectable Warnings</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-base font-light leading-relaxed max-w-xl">
+          <p className="text-[#D80621] text-base font-light leading-relaxed max-w-xl">
             ADA-compliant infrastructure castings built to outlast the concrete surrounding them. Engineered with high-fidelity truncated domes to secure busy transit paths.
           </p>
         </div>
@@ -39,10 +39,10 @@ export default function MegaTactilePlates() {
                 <Accessibility className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-1">
+                <h4 className="text-sm font-black uppercase tracking-wide text-[#D80621] mb-1">
                   ADA Truncated Dome Compliance
                 </h4>
-                <p className="text-xs text-gray-500 leading-relaxed font-light">
+                <p className="text-xs text-[#D80621] leading-relaxed font-light">
                   Features clean, dimensionally strict raised domes matching municipal accessibility laws. Delivers immediate orientation feedback for white canes and pedestrian foot travel.
                 </p>
               </div>
@@ -54,10 +54,10 @@ export default function MegaTactilePlates() {
                 <Grip className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-1">
+                <h4 className="text-sm font-black uppercase tracking-wide text-[#D80621] mb-1">
                   Slip-Resistant Micro Texture Ground
                 </h4>
-                <p className="text-xs text-gray-500 leading-relaxed font-light">
+                <p className="text-xs text-[#D80621] leading-relaxed font-light">
                   The primary spacing floor matrix is cast using raw structural texturing elements, preventing traction slippage during severe freezing rain or oil wash overruns.
                 </p>
               </div>
@@ -69,10 +69,10 @@ export default function MegaTactilePlates() {
                 <ShieldAlert className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-black uppercase tracking-wide text-[#0a0a0a] mb-1">
+                <h4 className="text-sm font-black uppercase tracking-wide text-[#D80621] mb-1">
                   Monolithic Wet-Set Lug Anchors
                 </h4>
-                <p className="text-xs text-gray-500 leading-relaxed font-light">
+                <p className="text-xs text-[#D80621] leading-relaxed font-light">
                   Heavy bottom iron anchors drop directly into wet municipal concrete pours, creating a unified substrate bond that entirely stops mechanical displacement.
                 </p>
               </div>
@@ -104,7 +104,7 @@ export default function MegaTactilePlates() {
               <div className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-gray-300" />
               <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-gray-300" />
 
-              <div className="absolute bottom-4 left-4 right-4 bg-[#0a0a0a]/95 text-[9px] font-mono uppercase font-bold tracking-wider text-zinc-400 text-center py-2 z-20">
+              <div className="absolute bottom-4 left-4 right-4 bg-[#D80621]/95 text-[9px] font-mono uppercase font-bold tracking-wider text-[#D80621] text-center py-2 z-20">
                 Component Blueprint Configuration Preview
               </div>
             </div>
@@ -123,16 +123,16 @@ export default function MegaTactilePlates() {
         {/* --- BASE PERFORMANCE SPEC INDEX --- */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 border-t border-gray-200 w-full bg-white text-center md:text-left">
           <div className="p-4 bg-gray-50 border border-gray-100 rounded-none">
-            <span className="text-[10px] font-mono uppercase text-gray-400 block mb-1">Material Core</span>
-            <span className="text-sm font-black text-[#0a0a0a] uppercase tracking-wide">Class 35B Gray Iron</span>
+            <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">Material Core</span>
+            <span className="text-sm font-black text-[#D80621] uppercase tracking-wide">Class 35B Gray Iron</span>
           </div>
           <div className="p-4 bg-gray-50 border border-gray-100 rounded-none">
-            <span className="text-[10px] font-mono uppercase text-gray-400 block mb-1">Load Limits</span>
-            <span className="text-sm font-black text-[#0a0a0a] uppercase tracking-wide">AASHTO H-20 Wheel Load</span>
+            <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">Load Limits</span>
+            <span className="text-sm font-black text-[#D80621] uppercase tracking-wide">AASHTO H-20 Wheel Load</span>
           </div>
           <div className="p-4 bg-gray-50 border border-gray-100 rounded-none">
-            <span className="text-[10px] font-mono uppercase text-gray-400 block mb-1">Coating Finish</span>
-            <span className="text-sm font-black text-[#0a0a0a] uppercase tracking-wide">Natural Patina or Safety Red</span>
+            <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">Coating Finish</span>
+            <span className="text-sm font-black text-[#D80621] uppercase tracking-wide">Natural Patina or Safety Red</span>
           </div>
         </div>
 

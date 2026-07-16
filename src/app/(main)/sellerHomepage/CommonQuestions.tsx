@@ -45,7 +45,7 @@ export default function CommonQuestions() {
         
         {/* === HEADER === */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#D80621]">
             Common <span className="text-[#cc2221]">Questions</span>
           </h2>
         </div>
@@ -61,34 +61,26 @@ export default function CommonQuestions() {
                 {/* Question Bar */}
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className={`
-                    w-full flex items-center justify-between p-5 text-left transition-all duration-200
-                    bg-gray-50 hover:bg-gray-100
-                    border-l-[6px] ${isOpen ? 'border-[#cc2221]' : 'border-[#cc2221]'} 
-                    /* Note: The image shows red border for all items, even closed ones */
-                  `}
+                  className={` w-full flex items-center justify-between p-5 text-left transition-all duration-200 bg-gray-50 hover:bg-gray-100 border-l-[6px] ${isOpen ? 'border-[#cc2221]' : 'border-[#cc2221]'} /* Note: The image shows red border for all items, even closed ones */ `}
                 >
-                  <span className="text-lg font-medium text-gray-800">
-                    <span className="font-bold text-gray-900 mr-2">Q:</span> 
+                  <span className="text-lg font-medium text-[#D80621]">
+                    <span className="font-bold text-[#D80621] mr-2">Q:</span> 
                     {faq.question}
                   </span>
                   
                   {isOpen ? (
-                    <ChevronDown className="w-5 h-5 text-gray-500" />
+                    <ChevronDown className="w-5 h-5 text-[#D80621]" />
                   ) : (
-                    <ChevronRight className="w-5 h-5 text-gray-400" />
+                    <ChevronRight className="w-5 h-5 text-[#D80621]" />
                   )}
                 </button>
 
                 {/* Answer Area (Expandable) */}
                 <div
-                  className={`
-                    overflow-hidden transition-all duration-300 ease-in-out
-                    ${isOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}
-                  `}
+                  className={` overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'} `}
                 >
-                  <div className="p-5 pl-8 bg-white text-gray-600 text-base leading-relaxed border-l-[6px] border-transparent">
-                    <span className="font-bold text-gray-900 mr-2">A:</span> 
+                  <div className="p-5 pl-8 bg-white text-[#D80621] text-base leading-relaxed border-l-[6px] border-transparent">
+                    <span className="font-bold text-[#D80621] mr-2">A:</span> 
                     {faq.answer}
                   </div>
                 </div>

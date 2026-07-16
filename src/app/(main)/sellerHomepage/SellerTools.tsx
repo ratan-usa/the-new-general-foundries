@@ -53,10 +53,10 @@ export default function SellerTools() {
           <span className="text-[#cc2221] font-bold text-sm uppercase tracking-widest">
             Mega Foundries | PARTNER SUITE
           </span>
-          <h2 className="text-[30px] md:text-[40px] font-bold text-gray-900">
+          <h2 className="text-[30px] md:text-[40px] font-bold text-[#D80621]">
             Engineered for <span className="text-[#cc2221]">Modern Foundries</span>
           </h2>
-          <p className="text-gray-500 max-w-2xl mx-auto text-xl">
+          <p className="text-[#D80621] max-w-2xl mx-auto text-xl">
             Transition from traditional job-work to a digitally integrated manufacturing hub.
             Utilize our specialized tools to optimize your production workflow.
           </p>
@@ -71,22 +71,16 @@ export default function SellerTools() {
                 <div
                   key={tool.id}
                   onClick={() => setActiveTab(index)}
-                  className={`
-                    cursor-pointer group transition-all duration-300 border-l-4 pl-6 py-4
-                    ${isActive ? 'border-[#cc2221] bg-red-50/30 rounded-r-lg' : 'border-transparent hover:border-red-100'}
-                  `}
+                  className={` cursor-pointer group transition-all duration-300 border-l-4 pl-6 py-4 ${isActive ? 'border-[#cc2221] bg-red-50/30 rounded-r-lg' : 'border-transparent hover:border-red-100'} `}
                 >
                   <h3 className={`text-xl font-bold transition-colors ${isActive ? 'text-[#cc2221]' : 'text-gray-600 group-hover:text-gray-900'}`}>
                     {tool.number} {tool.title}
                   </h3>
 
                   <div
-                    className={`
-                      overflow-hidden transition-all duration-500 ease-in-out
-                      ${isActive ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0'}
-                    `}
+                    className={` overflow-hidden transition-all duration-500 ease-in-out ${isActive ? 'max-h-40 opacity-100 mt-3' : 'max-h-0 opacity-0'} `}
                   >
-                    <p className="text-sm text-gray-500 leading-relaxed">
+                    <p className="text-sm text-[#D80621] leading-relaxed">
                       {tool.description}
                     </p>
                   </div>
@@ -96,7 +90,7 @@ export default function SellerTools() {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="relative bg-gray-900 rounded-xl overflow-hidden shadow-2xl border border-gray-800 aspect-[16/10]">
+            <div className="relative bg-slate-500 rounded-xl overflow-hidden shadow-2xl border border-gray-800 aspect-[16/10]">
 
               <div className="absolute top-0 left-0 right-0 h-8 bg-gray-800 flex items-center px-4 space-x-2 z-10 border-b border-gray-700">
                 <div className="w-3 h-3 rounded-full bg-red-500"></div>

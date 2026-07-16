@@ -31,10 +31,10 @@ export default function PrivateStats() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
          
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#D80621] mb-4">
             Our <span className="text-[#cc2221]">Stats</span>
           </h2> 
-          <p className="text-gray-400 text-sm italic uppercase tracking-wide">
+          <p className="text-[#D80621] text-sm italic uppercase tracking-wide">
             Stats & Facts... Not for public display. Available to members only.
           </p>
         </div>
@@ -47,20 +47,20 @@ export default function PrivateStats() {
                 <stat.icon className="w-8 h-8 text-[#cc2221]" strokeWidth={1.5} />
               </div>
                
-              <h3 className="text-4xl font-extrabold text-slate-900 mb-2">
+              <h3 className="text-4xl font-extrabold text-[#D80621] mb-2">
                 {stat.count}
               </h3>
                
-              <p className="text-slate-600 font-medium text-sm uppercase tracking-wide">
+              <p className="text-[#D80621] font-medium text-sm uppercase tracking-wide">
                 {stat.label}
               </p>
             </div>
           ))}
         </div>
  
-        <div className="max-w-2xl mx-auto text-center bg-slate-900 text-white rounded-2xl p-8 md:p-12 shadow-2xl">
+        <div className="max-w-2xl mx-auto text-center bg-slate-500 text-[#D80621] rounded-2xl p-8 md:p-12 shadow-2xl">
           <h3 className="text-2xl font-bold mb-2">Be the first to know.</h3>
-          <p className="text-gray-400 mb-8">Subscribe to get full access to our network stats.</p>
+          <p className="text-[#D80621] mb-8">Subscribe to get full access to our network stats.</p>
           
           <form className="flex flex-col sm:flex-row gap-4">
             <Input 

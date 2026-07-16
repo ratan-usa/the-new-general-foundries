@@ -12,7 +12,7 @@ export default function CategoryProductLinks({ items }: CategoryProductLinksProp
 
   return (
     <div className="mt-12 pt-8 border-t border-gray-100">
-      <h3 className="text-xl font-bold text-gray-900 mb-6">
+      <h3 className="text-xl font-bold text-[#D80621] mb-6">
         All Products in this Category
       </h3>
       
@@ -26,16 +26,7 @@ export default function CategoryProductLinks({ items }: CategoryProductLinksProp
               key={index} 
               // Direct link to the product page
               href={`/products/${slug}`}
-              className="
-                px-4 py-2 
-                bg-white 
-                border border-gray-200 
-                text-sm text-gray-600 
-                hover:text-[#cc2221] hover:border-[#cc2221] hover:shadow-sm
-                transition-all duration-200
-                cursor-pointer
-                rounded-md
-              "
+              className=" px-4 py-2 bg-white border border-gray-200 text-sm text-[#D80621] hover:text-[#cc2221] hover:border-[#cc2221] hover:shadow-sm transition-all duration-200 cursor-pointer rounded-md "
             >
               {item}
             </Link>

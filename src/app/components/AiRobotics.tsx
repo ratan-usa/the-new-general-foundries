@@ -27,7 +27,7 @@ const techFeatures = [
 
 export default function AiRobotics() {
   return (
-    <section className="py-24 bg-black text-white overflow-hidden relative">
+    <section className="py-24 bg-[#D80621] text-white overflow-hidden relative">
       <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('/assets/image16.jpg')]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -39,20 +39,20 @@ export default function AiRobotics() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative z-10 rounded-3xl border border-white/10 overflow-hidden bg-black backdrop-blur-xl p-2 shadow-2xl">
+            <div className="relative z-10 rounded-3xl border border-white/10 overflow-hidden bg-[#D80621] backdrop-blur-xl p-2 shadow-2xl">
               <Image
                 src="/assets/image8.jpeg"
                 alt="AI Robotics"
-                className="rounded-2xl opacity-80"
-                width={1000}
-                height={1000}
+                width={800}
+                height={600}
+                className="rounded-2xl w-full h-[500px] object-cover opacity-80 mix-blend-luminosity"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
 
               {/* Animated Badge */}
               <div className="absolute bottom-8 left-8 flex items-center gap-3 bg-[#cc2221] px-6 py-3 rounded-full shadow-xl">
-                <Zap className="animate-pulse" size={20} />
-                <span className="font-bold tracking-tighter uppercase text-sm">Industry 4.0 Active</span>
+                <Zap className="animate-pulse text-white" size={20} />
+                <span className="font-bold tracking-tighter uppercase text-sm text-white">Industry 4.0 Active</span>
               </div>
             </div>
 
@@ -66,11 +66,11 @@ export default function AiRobotics() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-5xl font-black tracking-tighter mb-6 uppercase"
+              className="text-5xl font-black tracking-tighter mb-6 uppercase text-white"
             >
-              The Future is <span className="text-[#cc2221]">Automated</span>
+              The Future is <span className="text-[#c0c0c0]">Automated</span>
             </motion.h2>
-            <p className="text-slate-400 text-lg mb-12 leading-relaxed">
+            <p className="text-[#c0c0c0] text-lg mb-12 leading-relaxed">
               Mega Foundries is leading the transition to Industry 4.0. We integrate neural networks and robotic precision to eliminate human error and maximize casting efficiency.
             </p>
 
@@ -82,14 +82,14 @@ export default function AiRobotics() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: tech.delay }}
                   viewport={{ once: true }}
-                  className="flex gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#cc2221]/50 transition-colors group"
+                  className="flex gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#c0c0c0]/50 transition-colors group"
                 >
-                  <div className="text-[#cc2221] group-hover:scale-110 transition-transform">
+                  <div className="text-[#c0c0c0] group-hover:scale-110 transition-transform">
                     {tech.icon}
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-1 tracking-tight">{tech.title}</h4>
-                    <p className="text-slate-500 text-sm leading-relaxed">{tech.desc}</p>
+                    <h4 className="text-xl font-bold mb-1 tracking-tight text-white">{tech.title}</h4>
+                    <p className="text-[#c0c0c0] text-sm leading-relaxed">{tech.desc}</p>
                   </div>
                 </motion.div>
               ))}

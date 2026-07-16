@@ -17,7 +17,7 @@ const AboutSection = () => {
           objectFit="cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 -[#D80621]/60"></div>
       </div>
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">

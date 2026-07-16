@@ -121,7 +121,7 @@ const products = [
 
 const MegaProduct = () => {
   return (
-    <section className="bg-[#121212] text-gray-200 py-16 w-full px-4 sm:px-6 lg:px-10 font-sans">
+    <section className="bg-[#c0c0c0] text-[#D80621] py-16 w-full px-4 sm:px-6 lg:px-10 font-sans">
       <div className="">
 
         {/* Header Section */}
@@ -129,7 +129,7 @@ const MegaProduct = () => {
           <h2 className="text-3xl font-light tracking-wide text-white mb-2">
             Explore <span className="font-semibold text-[#cc2221]">Mega Foundries</span> Products
           </h2>
-          <p className="text-sm text-zinc-400">
+          <p className="text-sm text-[#D80621]">
             Complete line of world-class nodular ductile iron castings (Fe 50007), delivering ultimate durability and engineering modernity to your infrastructure projects.
           </p>
         </div>
@@ -139,7 +139,7 @@ const MegaProduct = () => {
           {categories.map((cat, index) => (
             <button
               key={index}
-              className="px-3 py-2 border border-zinc-800 bg-[#1a1a1a] hover:bg-[#cc2221] hover:border-[#cc2221] text-zinc-300 hover:text-white transition-all duration-200 rounded-sm"
+              className="px-3 py-2 border border-zinc-800 bg-[#D80621] hover:bg-[#cc2221] hover:border-[#cc2221] text-zinc-300 hover:text-white transition-all duration-200 rounded-sm"
             >
               {cat}
             </button>
@@ -151,10 +151,10 @@ const MegaProduct = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="flex flex-col md:flex-row items-center gap-8 md:gap-16 border-b border-zinc-900 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] transition-transform duration-300  pb-12 last:border-0"
+              className="flex flex-col md:flex-row items-center gap-8 md:gap-16 border-b border-zinc-900 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] transition-transform duration-300 pb-12 last:border-0"
             >
               {/* Product Image Wrapper Container */}
-              <div className="w-full md:w-1/3 flex justify-center items-center bg-[#181818] p-6 rounded-lg border border-zinc-800/40 shadow-inner group">
+              <div className="w-full md:w-1/3 flex justify-center items-center bg-[#c0c0c0] p-6 rounded-lg border border-zinc-800/40 shadow-inner group">
                 <img
                   src={product.image}
                   alt={product.title}
@@ -170,19 +170,14 @@ const MegaProduct = () => {
                 <h3 className="text-2xl font-semibold text-white tracking-wide mb-3">
                   {product.title}
                 </h3>
-                <p className="text-zinc-400 text-sm leading-relaxed mb-6 max-w-2xl">
+                <p className="text-[#D80621] text-sm leading-relaxed mb-6 max-w-2xl">
                   {product.description}
                 </p>
 
                 {/* Styled Red Border Action Button */}
                 <Link
                   href={product.link}
-                  className="
-                    inline-block text-xs font-bold uppercase tracking-widest text-white 
-                    border border-[#cc2221] px-6 py-3 bg-transparent 
-                    hover:bg-[#cc2221] transition-all duration-300 ease-in-out
-                    rounded-xs
-                  "
+                  className=" inline-block text-xs font-bold uppercase tracking-widest text-white border border-[#cc2221] px-6 py-3 bg-transparent hover:bg-[#cc2221] transition-all duration-300 ease-in-out rounded-xs "
                 >
                   View Products
                 </Link>

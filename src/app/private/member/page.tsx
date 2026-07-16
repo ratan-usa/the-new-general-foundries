@@ -101,7 +101,7 @@ export default function DashboardPage() {
       return (
         <div className="h-[80vh] flex flex-col items-center justify-center gap-2">
             <Loader2 className="animate-spin text-[#cc2221] w-10 h-10" />
-            <p className="text-slate-500">Loading Dashboard...</p>
+            <p className="text-[#D80621]">Loading Dashboard...</p>
         </div>
       );
   }
@@ -112,10 +112,10 @@ export default function DashboardPage() {
       {/* --- WELCOME BANNER --- */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">
+            <h2 className="text-3xl font-bold tracking-tight text-[#D80621]">
                 Welcome back, {user.name} 👋
             </h2>
-            <p className="text-slate-500">
+            <p className="text-[#D80621]">
                 Here is what's happening with your projects today.
             </p>
         </div>
@@ -132,14 +132,14 @@ export default function DashboardPage() {
         {stats.map((stat, i) => (
           <Card key={i} className="shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-transparent hover:border-t-[#cc2221]">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium text-slate-600">
+              <CardTitle className="text-sm font-medium text-[#D80621]">
                 {stat.title}
               </CardTitle>
               <stat.icon className="h-4 w-4 text-[#cc2221]" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-slate-900">{stat.value}</div>
-              <p className="text-xs text-slate-500 mt-1">
+              <div className="text-2xl font-bold text-[#D80621]">{stat.value}</div>
+              <p className="text-xs text-[#D80621] mt-1">
                 {stat.change}
               </p>
             </CardContent>
@@ -157,7 +157,7 @@ export default function DashboardPage() {
                     You have 12 orders moving through production today.
                 </CardDescription>
             </div>
-            <Button className="bg-slate-900 hover:bg-slate-800 text-white">
+            <Button className="bg-slate-500 hover:bg-slate-800 text-[#D80621]">
                 View All Orders <ArrowUpRight className="ml-2 h-4 w-4"/>
             </Button>
           </CardHeader>

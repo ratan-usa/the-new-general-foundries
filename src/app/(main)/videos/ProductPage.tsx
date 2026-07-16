@@ -167,8 +167,8 @@ export default function ProductPage() {
     <div className="bg-gray-50 pb-4">
       {/* === 3D ASSET SELECTION === */}
       <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-        <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <Box className="w-5 h-5 text-gray-400" /> Select 3D Casting Model
+        <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
+          <Box className="w-5 h-5 text-[#D80621]" /> Select 3D Casting Model
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -178,7 +178,7 @@ export default function ProductPage() {
             {previewUrl && mediaType === 'MODEL' ? (
               <ModelViewer src={previewUrl} />
             ) : (
-              <div className="w-full h-full flex flex-col items-center justify-center text-gray-400">
+              <div className="w-full h-full flex flex-col items-center justify-center text-[#D80621]">
                 <Box className="w-10 h-10 mb-2 opacity-50" />
                 <span className="text-sm">Select a casting model from the list</span>
               </div>
@@ -191,13 +191,7 @@ export default function ProductPage() {
               <div
                 key={asset.id}
                 onClick={() => handleSelectAsset(asset)}
-                className={`
-                     flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all
-                     ${selectedAssetId === asset.id
-                    ? 'border-blue-600 bg-blue-50 ring-1 ring-blue-600'
-                    : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
-                  }
-                   `}
+                className={` flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${selectedAssetId === asset.id ? 'border-blue-600 bg-blue-50 ring-1 ring-blue-600' : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50' } `}
               >
                 {/* Thumbnail */}
                 <div className="w-12 h-12 bg-gray-200 rounded-md overflow-hidden flex-shrink-0">
@@ -206,8 +200,8 @@ export default function ProductPage() {
 
                 {/* Info */}
                 <div className="flex-1">
-                  <p className="text-sm font-bold text-gray-800">{asset.name}</p>
-                  <p className="text-xs text-gray-500">{asset.type} • FOUNDRY CASTING</p>
+                  <p className="text-sm font-bold text-[#D80621]">{asset.name}</p>
+                  <p className="text-xs text-[#D80621]">{asset.type} • FOUNDRY CASTING</p>
                 </div>
 
                 {/* Checkmark */}

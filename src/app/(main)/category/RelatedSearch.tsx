@@ -13,7 +13,7 @@ export default function RelatedSearch({ tags }: RelatedSearchProps) {
 
   return (
     <div className="mt-12 pt-8 border-t border-gray-100">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">
+      <h3 className="text-xl font-bold text-[#D80621] mb-4">
         Related Search
       </h3>
       
@@ -24,15 +24,7 @@ export default function RelatedSearch({ tags }: RelatedSearchProps) {
             // Creates a search URL or product link. 
             // You can change this to `/products/${slug}` if preferred.
             href={`/search?q=${encodeURIComponent(tag)}`}
-            className="
-              px-4 py-2 
-              bg-white 
-              border border-gray-300 
-              text-sm text-gray-600 
-              hover:text-[#cc2221] hover:border-[#cc2221] 
-              transition-colors duration-200
-              cursor-pointer
-            "
+            className=" px-4 py-2 bg-white border border-gray-300 text-sm text-[#D80621] hover:text-[#cc2221] hover:border-[#cc2221] transition-colors duration-200 cursor-pointer "
           >
             {tag.toLowerCase()}
           </Link>

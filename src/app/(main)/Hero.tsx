@@ -42,7 +42,7 @@ export const Hero = ({
   }, [subIndex, index, reverse]);
 
   return (
-    <header className="relative w-full overflow-hidden flex items-center justify-center min-h-[600px] md:min-h-[800px] bg-black">
+    <header className="relative w-full overflow-hidden flex items-center justify-center min-h-[600px] md:min-h-[800px] -[#D80621]">
 
       {/* 1. HERO VIDEO BACKGROUND - FIXED TO 100% OPACITY */}
       <video
@@ -56,7 +56,7 @@ export const Hero = ({
       </video>
 
       {/* Ambient Gradient Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/50 z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t -[#D80621]/80 -[#D80621]/20 -[#D80621]/50 z-0 pointer-events-none" />
       <div className="absolute inset-0 bg-[#cc2221]/5 z-0 pointer-events-none mix-blend-color" />
 
       {/* 2. FLUID EDGES CONTAINER - SHIFTED CONTENT UP via pb-24 md:pb-36 */}
@@ -114,7 +114,7 @@ export const Hero = ({
                 Explore Capabilities
               </Button>
 
-              <Button variant="outline" asChild className="w-full border-2 border-white text-white bg-transparent hover:bg-white hover:text-black font-black uppercase tracking-widest h-12 text-xs rounded-none transition-all duration-200">
+              <Button variant="outline" asChild className="w-full border-2 border-white text-white bg-transparent hover:bg-white hover:-[#D80621] font-black uppercase tracking-widest h-12 text-xs rounded-none transition-all duration-200">
                 <Link href="/sellerHomepage">Succeed With Us</Link>
               </Button>
             </div>
@@ -125,7 +125,7 @@ export const Hero = ({
       </div>
 
       {/* Base Identity Accent Bar */}
-      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-[#cc2221] via-black to-[#cc2221] z-20"></div>
+      <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-[#cc2221] -[#D80621] to-[#cc2221] z-20"></div>
     </header>
   );
 };

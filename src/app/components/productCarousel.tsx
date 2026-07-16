@@ -28,12 +28,12 @@ const MetricSection = () => {
                     {metrics.map((metric, index) => (
                         <div key={index} className="flex flex-col items-center p-4">
                             <div className="relative p-3 rounded-full bg-neutral-100/50 mb-3">
-                                 <metric.icon className="w-6 h-6 text-neutral-800" />
+                                 <metric.icon className="w-6 h-6 text-[#D80621]" />
                                  <div className="absolute inset-0 border border-neutral-300 rounded-full"></div>
                             </div>
 
                             <div className="text-[14px] font-extrabold text-[#cc2221] mb-1">{metric.value}</div>
-                            <p className="text-[10px] text-neutral-600 text-center">{metric.label}</p>
+                            <p className="text-[10px] text-[#D80621] text-center">{metric.label}</p>
                         </div>
                     ))}
                 </div> */}
@@ -46,10 +46,7 @@ const MetricSection = () => {
 
 const ProductItemCard = ({ count, label }: ProductItemCardProps) => (
     <div
-        className={`
-            shrink-0   rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-[#cc2221]
-            w-[250px] h-[100px] flex flex-col justify-center items-center shadow-sm  cursor-pointer
-        `}
+        className={` shrink-0 rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-[#cc2221] w-[250px] h-[100px] flex flex-col justify-center items-center shadow-sm cursor-pointer `}
     >
         <p className={`font-extrabold text-white text-xl mb-1`}>{count}</p>
         <p className={`text-center text-white text-[13px] leading-tight`}>{label}</p>
@@ -91,7 +88,7 @@ const ProductCarousel = () => {
     );
 
     return (
-        <section className="py-10 bg-black ">
+        <section className="py-10 -[#D80621] ">
             <MetricSection />
             <div className="space-y-4 w-full">
                 <div

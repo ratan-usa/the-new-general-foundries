@@ -28,31 +28,14 @@ const SearchBar = () => {
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <button
-                        className="
-        relative h-full shrink-0 
-        pl-3 pr-7 
-        text-xs font-semibold 
-        transition-colors duration-200
-        w-[200px] text-left
-        cursor-pointer focus:outline-none
-
-        /* === NORMAL STATE === */
-        bg-white 
-        text-black 
-        border-r border-[#CCCCCC]
-
-        /* === HOVER STATE === */
-        hover:bg-[#cc2221] 
-        hover:text-white
-        hover:border-[#cc2221]
-    "
+                        className=" relative h-full shrink-0 pl-3 pr-7 text-xs font-semibold transition-colors duration-200 w-[200px] text-left cursor-pointer focus:outline-none /* === NORMAL STATE === */ bg-white -[#D80621] border-r border-[#CCCCCC] /* === HOVER STATE === */ hover:bg-[#cc2221] hover:text-white hover:border-[#cc2221] "
                     >
                         <span className="block w-full truncate">
                             {getSelectedLabel()}
                         </span>
 
                         {/* Chevron Icon: Black normally, turns White on hover via group logic */}
-                        <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-black pointer-events-none transition-colors duration-200" />
+                        <ChevronDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 -[#D80621] pointer-events-none transition-colors duration-200" />
 
                         {/* Note: The icon won't change color automatically unless you add a CSS rule or 
        use the 'group' class on the button and 'group-hover:text-white' on the icon.
@@ -64,20 +47,12 @@ const SearchBar = () => {
                 {/* Dropdown Content - Square Borders */}
                 <DropdownMenuContent
                     align="start"
-                    className="
-                        w-[200px] max-h-[300px] overflow-y-auto 
-                        bg-white p-0 shadow-lg border border-gray-200 z-[60]
-                        rounded-none 
-                    "
+                    className=" w-[200px] max-h-[300px] overflow-y-auto bg-white p-0 shadow-lg border border-gray-200 z-[60] rounded-none "
                 >
                     {/* "All" Option */}
                     <DropdownMenuItem
                         onClick={() => setSelectedId("all")}
-                        className="
-                            cursor-pointer text-xs font-semibold px-3 py-2 text-neutral-800
-                            rounded-none
-                            focus:bg-[#cc2221] focus:text-white
-                        "
+                        className=" cursor-pointer text-xs font-semibold px-3 py-2 text-[#D80621] rounded-none focus:bg-[#cc2221] focus:text-white "
                     >
                         All
                     </DropdownMenuItem>
@@ -87,11 +62,7 @@ const SearchBar = () => {
                         <DropdownMenuItem
                             key={section.id}
                             onClick={() => setSelectedId(section.id)}
-                            className="
-                                cursor-pointer text-xs font-semibold px-3 py-2 text-neutral-800
-                                rounded-none
-                                focus:bg-[#cc2221] focus:text-white
-                            "
+                            className=" cursor-pointer text-xs font-semibold px-3 py-2 text-[#D80621] rounded-none focus:bg-[#cc2221] focus:text-white "
                         >
                             {section.label}
                         </DropdownMenuItem>
@@ -103,7 +74,7 @@ const SearchBar = () => {
             <input
                 type="text"
                 placeholder="Search products..."
-                className="w-full h-full pl-3 pr-4 text-sm text-neutral-700 focus:outline-none placeholder:text-neutral-400"
+                className="w-full h-full pl-3 pr-4 text-sm text-[#D80621] focus:outline-none placeholder:text-neutral-400"
             />
 
             {/* === 3. BUTTON === */}

@@ -64,11 +64,11 @@ export default function DashboardPage() {
             {user ? (
                 <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="p-3 bg-slate-50 rounded">
-                        <span className="block text-slate-500 text-xs uppercase">Full Name</span>
+                        <span className="block text-[#D80621] text-xs uppercase">Full Name</span>
                         <span className="font-medium text-lg">{user.fullName}</span>
                     </div>
                     <div className="p-3 bg-slate-50 rounded">
-                        <span className="block text-slate-500 text-xs uppercase">Email</span>
+                        <span className="block text-[#D80621] text-xs uppercase">Email</span>
                         <span className="font-medium text-lg">{user.email}</span>
                     </div>
                     <div className="p-3 bg-slate-50 rounded col-span-2 border border-blue-100 bg-blue-50 text-blue-900">

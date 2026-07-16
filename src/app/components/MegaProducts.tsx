@@ -18,10 +18,10 @@ export const MegaProducts = () => {
           viewport={{ once: true }}
           className="mb-16 border-l-4 border-[#cc2221] pl-6"
         >
-          <h2 className="text-5xl font-black text-slate-900 tracking-tighter uppercase">
+          <h2 className="text-5xl font-black text-[#D80621] tracking-tighter uppercase">
             New products <span className="text-[#cc2221]">Innovation's</span>
           </h2>
-          <p className="text-slate-500 mt-4 text-lg max-w-xl">
+          <p className="text-[#D80621] mt-4 text-lg max-w-xl">
             Precision-engineered casting solutions for the world's most demanding infrastructure.
           </p>
         </motion.div>
@@ -58,7 +58,7 @@ export const MegaProducts = () => {
                 className="group relative flex flex-col bg-white rounded-3xl overflow-hidden shadow-[0_10px_40px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_60px_-15px_rgba(204,34,33,0.2)] transition-all duration-500"
               >
                 {/* Media Container Box */}
-                <div className="relative h-64 overflow-hidden bg-slate-950">
+                <div className="relative h-64 overflow-hidden bg-slate-500">
                   
                   {item.image ? (
                     /* STATIC IMAGE MODE */
@@ -84,7 +84,7 @@ export const MegaProducts = () => {
                   )}
 
                   {/* Dark Gradient Mask Overlay Shield */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t -[#D80621]/80 -[#D80621]/20 to-transparent pointer-events-none" />
                   
                   {/* Category Status Badge */}
                   <div className={`absolute bottom-4 left-4 p-3 rounded-xl text-white shadow-lg ${item.color}`}>
@@ -94,10 +94,10 @@ export const MegaProducts = () => {
 
                 {/* Main Content Info Block */}
                 <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#cc2221] transition-colors">
+                  <h3 className="text-2xl font-bold text-[#D80621] mb-3 group-hover:text-[#cc2221] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-slate-600 mb-8 flex-grow leading-relaxed font-light">
+                  <p className="text-[#D80621] mb-8 flex-grow leading-relaxed font-light">
                     {item.description}
                   </p>
                   

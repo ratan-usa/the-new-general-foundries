@@ -16,7 +16,7 @@ import Image from 'next/image';
 const ModelViewer = dynamic(() => import('./ModelViewer'), {
     ssr: false, // Disables server rendering for this component
     loading: () => (
-        <div className="w-full h-full flex flex-col items-center justify-center bg-gray-50 text-gray-400">
+        <div className="w-full h-full flex flex-col items-center justify-center bg-gray-50 text-[#D80621]">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mb-2"></div>
             <span className="text-xs">Loading 3D Engine...</span>
         </div>
@@ -112,10 +112,10 @@ export default function NewProductPage() {
             {/* Header */}
             <div className="bg-white border-b border-gray-200 sticky top-0 z-30 px-6 py-4 flex items-center justify-between shadow-sm">
                 <div className="flex items-center gap-4">
-                    <Link href="/private/member/products" className="p-2 hover:bg-gray-100 rounded-full text-gray-500">
+                    <Link href="/private/member/products" className="p-2 hover:bg-gray-100 rounded-full text-[#D80621]">
                         <ChevronLeft className="w-5 h-5" />
                     </Link>
-                    <h1 className="text-xl font-bold text-gray-900">Add New Product</h1>
+                    <h1 className="text-xl font-bold text-[#D80621]">Add New Product</h1>
                 </div>
                 <button onClick={handleSubmit(onSubmit)} className="flex items-center gap-2 px-6 py-2 text-sm font-medium text-white bg-[#cc2221] rounded-lg hover:bg-red-700">
                     <Save className="w-4 h-4" /> Save
@@ -130,8 +130,8 @@ export default function NewProductPage() {
 
                         {/* Basic Info */}
                         <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                            <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                <FileText className="w-5 h-5 text-gray-400" /> Basic Info
+                            <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
+                                <FileText className="w-5 h-5 text-[#D80621]" /> Basic Info
                             </h2>
                             <div className="space-y-4">
                                 <div>
@@ -147,8 +147,8 @@ export default function NewProductPage() {
 
                         {/* === MEDIA UPLOAD AREA === */}
                         <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
-                            <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                <UploadCloud className="w-5 h-5 text-gray-400" /> Product Media
+                            <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
+                                <UploadCloud className="w-5 h-5 text-[#D80621]" /> Product Media
                             </h2>
 
                             <div className="space-y-4">
@@ -184,8 +184,8 @@ export default function NewProductPage() {
                                         <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
                                             <Box className="w-8 h-8 text-blue-600" />
                                         </div>
-                                        <p className="text-lg text-gray-800 font-semibold">Upload Media</p>
-                                        <p className="text-sm text-gray-500 mt-1">
+                                        <p className="text-lg text-[#D80621] font-semibold">Upload Media</p>
+                                        <p className="text-sm text-[#D80621] mt-1">
                                             Drag & drop images, videos, or <span className="font-bold text-blue-600">.GLB 3D Files</span>
                                         </p>
                                     </div>

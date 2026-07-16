@@ -20,13 +20,13 @@ const heroSection = () => {
                     <span className="block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
                         Foundries, Forge Shops & Fabricators
                     </span>
-                    <span className="block mt-2 text-2xl  md:text-4xl font-light ">
+                    <span className="block mt-2 text-2xl md:text-4xl font-light ">
                         Under One Universe
                     </span>
                 </h1>
 
                 {/* Tagline */}
-                <p className="text-xl text-[#cc2221] md:text-[22px] font-medium   italic">
+                <p className="text-xl text-[#cc2221] md:text-[22px] font-medium italic">
                     "Think Fast and Succeed Faster"
                 </p>
 
@@ -34,12 +34,12 @@ const heroSection = () => {
                     <Button className="bg-[#cc2221] hover:bg-red-700 text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
                         Explore Capabilities
                     </Button>
-                    <Button variant="outline" className="px-10 text-[#cc2221] border-2 border-[#cc2221] py-7 text-xl  hover:bg-white/10 backdrop-blur-sm">
+                    <Button variant="outline" className="px-10 text-[#cc2221] border-2 border-[#cc2221] py-7 text-xl hover:bg-white/10 backdrop-blur-sm">
                         Succeed With Us <ArrowRight className="ml-2 w-5 h-5" />
                     </Button>
                 </div>
             </div>
-            <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">Engage with dedicated experts
+            <p className="text-[18px] text-[#D80621] max-w-4xl mx-auto mb-16">Engage with dedicated experts
             </p>
         </div>
     )

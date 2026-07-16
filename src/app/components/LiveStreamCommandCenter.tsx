@@ -19,10 +19,10 @@ const SideStreamPlayer = ({
   <div className="w-[200px] h-[calc(100vh-100px)] sticky top-24 flex flex-col gap-4">
 
     {/* === Video Container 1 (Top) === */}
-    <div className={`relative w-full h-1/2 bg-black rounded-xl overflow-hidden border-2 border-${color}-500 shadow-[0_0_15px_rgba(0,0,0,0.5)]`}>
+    <div className={`relative w-full h-1/2 -[#D80621] rounded-xl overflow-hidden border-2 border-${color}-500 shadow-[0_0_15px_rgba(0,0,0,0.5)]`}>
 
       {/* Live Badge */}
-      <div className="absolute top-2 left-2 z-10 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold text-white">
+      <div className="absolute top-2 left-2 z-10 flex items-center gap-1.5 -[#D80621]/60 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold text-white">
         <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span> LIVE
       </div>
 
@@ -36,7 +36,7 @@ const SideStreamPlayer = ({
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 to-transparent"></div>
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t -[#D80621]/80 to-transparent"></div>
       <div className="absolute bottom-3 left-3 text-white text-xs font-bold">
         {title} - Unit A
       </div>
@@ -44,7 +44,7 @@ const SideStreamPlayer = ({
 
     {/* === Video Container 2 (Bottom) === */}
     {/* UPDATED: Added border-2, dynamic color border, and shadow to match the top video */}
-    <div className={`relative w-full h-1/2 bg-black rounded-xl overflow-hidden border-2 border-${color}-500 shadow-[0_0_15px_rgba(0,0,0,0.5)] opacity-80 hover:opacity-100 transition-opacity`}>
+    <div className={`relative w-full h-1/2 -[#D80621] rounded-xl overflow-hidden border-2 border-${color}-500 shadow-[0_0_15px_rgba(0,0,0,0.5)] opacity-80 hover:opacity-100 transition-opacity`}>
 
       <video
         autoPlay
@@ -56,7 +56,7 @@ const SideStreamPlayer = ({
       />
 
       {/* Overlay info */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 to-transparent"></div>
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-t -[#D80621]/80 to-transparent"></div>
       <div className="absolute bottom-3 left-3 text-white text-xs font-bold">
         {title} - Unit B
       </div>
@@ -68,7 +68,7 @@ const SideStreamPlayer = ({
 
 export default function LiveStreamCommandCenter() {
   return (
-    <div className="min-h-screen bg-[#050505] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#D80621] text-white overflow-x-hidden">
 
       {/* MAIN LAYOUT GRID */}
       <div className="w-full mx-auto px-2 md:px-6 py-6 flex justify-between gap-4 md:gap-8 relative">
@@ -87,18 +87,18 @@ export default function LiveStreamCommandCenter() {
         <main className="flex-1 min-w-0 flex flex-col items-center">
 
           {/* Header / Stats */}
-          <div className="w-full text-center mb-8 border-b border-white/10 pb-6">
-            <h1 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500 mb-2 uppercase tracking-tight">
+          <div className="w-full text-center mb-8 border-b border-white/10 pb-6 bg-[#D80621] py-4 rounded-t-lg">
+            <h1 className="text-2xl md:text-4xl font-bold text-white mb-2 uppercase tracking-tight">
               MEGA GLOBAL MANUFACTURING NETWORK
             </h1>
 
-            <div className="flex justify-center gap-6 text-xs text-gray-400 font-mono mt-4">
+            <div className="flex justify-center gap-6 text-xs text-[#D80621] font-mono mt-4">
               <span className="flex items-center gap-1 "><span className="text-[#cc2221]">●</span> 54,201 FACTORIES <div className="text-[#cc2221]">ONLINE</div> </span>
               <span className="flex items-center gap-1"><span className="text-green-500">●</span> 98.4% UPTIME</span>
             </div>
-            <div className="flex justify-center gap-6 text-xs text-gray-400 mt-4">
+            <div className="flex justify-center gap-6 text-xs text-[#D80621] mt-4">
             </div>
-            <span className="text-xl md:text-2xl font-bold  bg-clip-text text-[#cc2221] mb-2 uppercase tracking-tight">FOLLOW YOUR PRODUCT BEING BORN & DELIVERED TO YOU LIVE <span className="text-sm "> (PRE-REGISTRATION REQUIRED) </span> </span>
+            <span className="text-xl md:text-2xl font-bold bg-clip-text text-[#cc2221] mb-2 uppercase tracking-tight">FOLLOW YOUR PRODUCT BEING BORN & DELIVERED TO YOU LIVE <span className="text-sm "> (PRE-REGISTRATION REQUIRED) </span> </span>
           </div>
 
           {/* THE INFINITE SCROLL FEED (Your main content) */}
@@ -110,10 +110,10 @@ export default function LiveStreamCommandCenter() {
           <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
 
             {/* 1. ANALYTICS GRAPH (Simulated Line Chart) */}
-            <div className="h-40 bg-neutral-900/50 border border-[#cc2221] rounded-lg p-5 relative overflow-hidden group hover:border-[#cc2221]/50 transition-colors">
+            <div className="h-40 bg-slate-500/50 border border-[#cc2221] rounded-lg p-5 relative overflow-hidden group hover:border-[#cc2221]/50 transition-colors">
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider">Overall Efficiency</h3>
+                  <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider">Overall Efficiency</h3>
                   <p className="text-2xl font-bold text-white mt-1">94.2% <span className="text-green-500 text-xs">▲ 2.4%</span></p>
                 </div>
                 <div className="p-1.5 bg-green-500/10 rounded text-green-500">
@@ -136,14 +136,14 @@ export default function LiveStreamCommandCenter() {
             </div>
 
             {/* 2. PRODUCTION OUTPUT (Progress Bars) */}
-            <div className="h-40 bg-neutral-900/50 border border-[#cc2221] rounded-lg p-5 flex flex-col justify-between hover:border-[#cc2221]/50 transition-colors">
-              <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider">Daily Production</h3>
+            <div className="h-40 bg-slate-500/50 border border-[#cc2221] rounded-lg p-5 flex flex-col justify-between hover:border-[#cc2221]/50 transition-colors">
+              <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider">Daily Production</h3>
 
               <div className="space-y-3">
                 {/* Item 1 */}
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-gray-300">Steel Castings</span>
+                    <span className="text-[#D80621]">Steel Castings</span>
                     <span className="text-white font-mono">1,240 / 1,500</span>
                   </div>
                   <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
@@ -153,7 +153,7 @@ export default function LiveStreamCommandCenter() {
                 {/* Item 2 */}
                 <div>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-gray-300">Iron Forgings</span>
+                    <span className="text-[#D80621]">Iron Forgings</span>
                     <span className="text-white font-mono">850 / 900</span>
                   </div>
                   <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
@@ -164,8 +164,8 @@ export default function LiveStreamCommandCenter() {
             </div>
 
             {/* 3. ENERGY CONSUMPTION (Gauge/Stats) */}
-            <div className="h-40 bg-neutral-900/50 border border-[#cc2221] rounded-lg p-5 hover:border-[#cc2221]/50 transition-colors">
-              <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-4">Grid Load</h3>
+            <div className="h-40 bg-slate-500/50 border border-[#cc2221] rounded-lg p-5 hover:border-[#cc2221]/50 transition-colors">
+              <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider mb-4">Grid Load</h3>
               <div className="flex items-center gap-4">
                 {/* Circular "Gauge" using CSS borders */}
                 <div className="relative w-16 h-16 rounded-full border-4 border-neutral-800 flex items-center justify-center">
@@ -173,16 +173,16 @@ export default function LiveStreamCommandCenter() {
                   <span className="text-xs font-bold text-white">78%</span>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-sm text-gray-300">Current Usage</p>
-                  <p className="text-xl font-bold text-white">42.5 <span className="text-sm font-normal text-gray-500">MW</span></p>
+                  <p className="text-sm text-[#D80621]">Current Usage</p>
+                  <p className="text-xl font-bold text-white">42.5 <span className="text-sm font-normal text-[#D80621]">MW</span></p>
                   <p className="text-[10px] text-green-500">● Optimal Range</p>
                 </div>
               </div>
             </div>
 
             {/* 4. LOGISTICS MAP (Dot Simulation) */}
-            <div className="h-40 bg-neutral-900/50 border border-[#cc2221] rounded-lg p-5 relative overflow-hidden hover:border-[#cc2221]/50 transition-colors">
-              <h3 className="text-gray-400 text-xs font-bold uppercase tracking-wider relative z-10">Active Shipments</h3>
+            <div className="h-40 bg-slate-500/50 border border-[#cc2221] rounded-lg p-5 relative overflow-hidden hover:border-[#cc2221]/50 transition-colors">
+              <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider relative z-10">Active Shipments</h3>
 
               {/* Fake Map Dots */}
               <div className="absolute inset-0 opacity-30">
@@ -206,7 +206,7 @@ export default function LiveStreamCommandCenter() {
 
               <div className="absolute bottom-4 left-5 z-10">
                 <p className="text-2xl font-bold text-white">1,892</p>
-                <p className="text-[10px] text-gray-400">In Transit Global</p>
+                <p className="text-[10px] text-[#D80621]">In Transit Global</p>
               </div>
             </div>
 

@@ -53,12 +53,12 @@ const SearchWithSuggestions = () => {
       <div className="relative group">
         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
           {/* Icon turns red when focused */}
-          <Search className="h-5 w-5 text-gray-400 group-focus-within:text-[#cc2221] transition-colors" />
+          <Search className="h-5 w-5 text-[#D80621] group-focus-within:text-[#cc2221] transition-colors" />
         </div>
         <input
           type="text"
           // Added 'bg-white' here explicitly
-          className="w-full pl-12 pr-4 py-4 bg-white rounded-lg border-0 shadow-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white/50 placeholder:text-gray-400 text-lg transition-all"
+          className="w-full pl-12 pr-4 py-4 bg-white rounded-lg border-0 shadow-lg text-[#D80621] focus:outline-none focus:ring-2 focus:ring-white/50 placeholder:text-gray-400 text-lg transition-all"
           placeholder="Search for materials, products, or help..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -70,7 +70,7 @@ const SearchWithSuggestions = () => {
       {isOpen && (
         <div className="absolute top-full left-0 w-full mt-2 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden max-h-[400px] overflow-y-auto animate-in fade-in slide-in-from-top-2 duration-200">
           
-          <div className="bg-gray-50 px-4 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider border-b border-gray-100">
+          <div className="bg-gray-50 px-4 py-2 text-xs font-semibold text-[#D80621] uppercase tracking-wider border-b border-gray-100">
             {filteredItems.length > 0 ? "Recommended Results" : "No results found"}
           </div>
 
@@ -84,12 +84,12 @@ const SearchWithSuggestions = () => {
                   className="block px-4 py-3 hover:bg-gray-50 transition-colors border-l-4 border-transparent hover:border-[#cc2221]"
                 >
                   <div className="flex items-start">
-                    <FileText className="w-4 h-4 text-gray-400 mt-1 mr-3 shrink-0" />
+                    <FileText className="w-4 h-4 text-[#D80621] mt-1 mr-3 shrink-0" />
                     <div>
                       <p className="text-sm font-semibold text-[#cc2221]">
                         {item.title}
                       </p>
-                      <p className="text-xs text-gray-400 mt-0.5 flex items-center gap-1">
+                      <p className="text-xs text-[#D80621] mt-0.5 flex items-center gap-1">
                         {item.category.split(' > ').map((part, i, arr) => (
                           <span key={i} className="flex items-center">
                             {part}
@@ -103,7 +103,7 @@ const SearchWithSuggestions = () => {
               ))}
             </div>
           ) : (
-            <div className="p-8 text-center text-gray-500 text-sm">
+            <div className="p-8 text-center text-[#D80621] text-sm">
               No matches found for "{query}". <br /> Try searching for "Iron" or "Login".
             </div>
           )}

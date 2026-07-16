@@ -96,23 +96,23 @@ export default function MegaMagazine() {
   const currentContent = MAGAZINE_DATA[activeTab] || MAGAZINE_DATA["ductile-iron"];
 
   return (
-    <section className="bg-[#0a0a0a] text-zinc-300 py-10 font-sans border-t border-zinc-950">
+    <section className="bg-[#D80621] text-zinc-300 py-10 font-sans border-t border-zinc-950">
       {/* Absolute strict fluid full width padding */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
         
         {/* TOP ROW: Mega Foundries Custom Header Banner */}
-        <div className="w-full bg-[#141414] border border-zinc-900 p-6 mb-8 flex flex-col md:flex-row items-center justify-between rounded-xs gap-4">
+        <div className="w-full bg-[#D80621] border border-zinc-900 p-6 mb-8 flex flex-col md:flex-row items-center justify-between rounded-xs gap-4">
           <div className="flex items-center gap-3">
             <div className="text-2xl font-black tracking-tighter text-white">
               MEGA <span className="text-[#cc2221]">FOUNDRIES</span>
             </div>
             <div className="h-6 w-[1px] bg-zinc-800 hidden md:block" />
-            <span className="text-[10px] font-mono tracking-widest text-zinc-500 uppercase">
+            <span className="text-[10px] font-mono tracking-widest text-[#D80621] uppercase">
               Primary Metals Spec Index
             </span>
           </div>
-          <div className="text-center md:text-right text-xs text-zinc-400 font-mono">
-            CALL: (512) 782-8880 <span className="mx-2 text-zinc-700">•</span> VISIT: WWW.MEGAFOUNDRIES.COM
+          <div className="text-center md:text-right text-xs text-[#D80621] font-mono">
+            CALL: (512) 782-8880 <span className="mx-2 text-[#D80621]">•</span> VISIT: WWW.MEGAFOUNDRIES.COM
           </div>
         </div>
 
@@ -120,8 +120,8 @@ export default function MegaMagazine() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           
           {/* COLUMN 1: LEFT SIDEBAR TABS INDEX (Metals Selectors) */}
-          <div className="md:col-span-3 bg-[#141414] border border-zinc-900 rounded-xs overflow-hidden shadow-xl">
-            <div className="bg-[#1c1c1c] p-4 border-b border-zinc-900">
+          <div className="md:col-span-3 bg-[#D80621] border border-zinc-900 rounded-xs overflow-hidden shadow-xl">
+            <div className="bg-[#D80621] p-4 border-b border-zinc-900">
               <h3 className="text-xs font-bold uppercase tracking-wider text-white leading-tight">
                 Casting Source <br />
                 <span className="text-[#cc2221]">Magazine</span>
@@ -134,12 +134,7 @@ export default function MegaMagazine() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`w-full text-left px-4 py-2.5 text-xs font-medium border-l-2 transition-all duration-200
-                      ${isActive 
-                        ? "bg-[#0a0a0a] text-[#cc2221] border-[#cc2221] font-bold" 
-                        : "bg-transparent text-zinc-400 border-transparent hover:bg-[#1a1a1a] hover:text-white"
-                      }
-                    `}
+                    className={`w-full text-left px-4 py-2.5 text-xs font-medium border-l-2 transition-all duration-200 ${isActive ? "bg-[#D80621] text-[#cc2221] border-[#cc2221] font-bold" : "bg-transparent text-[#D80621] border-transparent hover:bg-[#D80621] hover:text-white" } `}
                   >
                     {tab.label}
                   </button>
@@ -162,13 +157,13 @@ export default function MegaMagazine() {
                 {currentContent.title}
               </h3>
               
-              <div className="flex flex-wrap gap-2 text-xs font-mono text-zinc-500">
+              <div className="flex flex-wrap gap-2 text-xs font-mono text-[#D80621]">
                 <span className="text-[#cc2221] font-bold italic">{currentContent.author}</span>
                 <span>•</span>
                 <span>{currentContent.date}</span>
               </div>
 
-              <p className="text-zinc-400 text-sm leading-relaxed font-light">
+              <p className="text-[#D80621] text-sm leading-relaxed font-light">
                 {currentContent.excerpt}
               </p>
 
@@ -184,7 +179,7 @@ export default function MegaMagazine() {
           </div>
 
           {/* COLUMN 3: RIGHT SUB-CATEGORIES DIRECTORY PANEL */}
-          <div className="md:col-span-3 bg-[#141414]/40 border border-zinc-900/60 p-5 rounded-xs shadow-inner">
+          <div className="md:col-span-3 bg-[#D80621]/40 border border-zinc-900/60 p-5 rounded-xs shadow-inner">
             <h4 className="text-xs font-black uppercase tracking-widest text-white border-b border-zinc-900 pb-3 mb-4">
               Technical Matrix
             </h4>
@@ -193,7 +188,7 @@ export default function MegaMagazine() {
                 <li key={index}>
                   <Link 
                     href={`/magazine/matrix/${category.toLowerCase().replace(/ /g, "-")}`}
-                    className="text-xs text-zinc-500 hover:text-[#cc2221] transition-colors duration-150 block py-0.5"
+                    className="text-xs text-[#D80621] hover:text-[#cc2221] transition-colors duration-150 block py-0.5"
                   >
                     {category}
                   </Link>

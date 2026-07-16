@@ -34,7 +34,7 @@ const VIDEO_RESOURCES: MediaAsset[] = [
 
 export default function MegaMediaHub() {
   return (
-    <section className="bg-white text-[#0a0a0a] py-24 font-sans border-b border-gray-100 w-full">
+    <section className="bg-white text-[#D80621] py-24 font-sans border-b border-gray-100 w-full">
       {/* Strict Fluid Layout Bounds */}
       <div className="w-full px-4 sm:px-6 lg:px-10 space-y-16">
         
@@ -44,11 +44,11 @@ export default function MegaMediaHub() {
             <span className="text-xs uppercase tracking-[0.4em] font-black text-[#cc2221] block mb-3">
               Technical Streaming Terminal
             </span>
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#0a0a0a] leading-none">
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#D80621] leading-none">
               Simulation <span className="text-[#cc2221]">& Lab Feeds</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-base font-light leading-relaxed max-w-xl">
+          <p className="text-[#D80621] text-base font-light leading-relaxed max-w-xl">
             Live infrastructure benchmarks. Real-time rendering streams visualizing hydraulic grate flow intercept dynamics alongside micro-layered thermoplastic production tooling cycles.
           </p>
         </div>
@@ -66,13 +66,13 @@ export default function MegaMediaHub() {
                 <span className="text-[10px] font-mono tracking-widest text-[#cc2221] font-bold uppercase flex items-center gap-1.5">
                   <Activity className="w-3.5 h-3.5" /> {video.badge}
                 </span>
-                <span className="text-[9px] font-mono tracking-wider text-gray-400 uppercase">
+                <span className="text-[9px] font-mono tracking-wider text-[#D80621] uppercase">
                   Feed // Active
                 </span>
               </div>
 
               {/* HIGH DEFINITION VIDEO VIEWPORT BOX */}
-              <div className="relative w-full aspect-video bg-[#0a0a0a] border border-gray-200 overflow-hidden shadow-inner mb-6">
+              <div className="relative w-full aspect-video bg-[#D80621] border border-gray-200 overflow-hidden shadow-inner mb-6">
                 <iframe
                   src={video.embedUrl}
                   title={video.title}
@@ -85,20 +85,20 @@ export default function MegaMediaHub() {
               {/* CORE METADATA SPEC DATA BLOCK */}
               <div className="flex flex-col flex-grow justify-between space-y-6">
                 <div className="space-y-2">
-                  <h3 className="text-xl font-black uppercase tracking-tight text-[#0a0a0a] group-hover:text-[#cc2221] transition-colors">
+                  <h3 className="text-xl font-black uppercase tracking-tight text-[#D80621] group-hover:text-[#cc2221] transition-colors">
                     {video.title}
                   </h3>
-                  <p className="text-xs text-gray-400 font-mono uppercase tracking-wide">
+                  <p className="text-xs text-[#D80621] font-mono uppercase tracking-wide">
                     Origin Authority: {video.source}
                   </p>
-                  <p className="text-gray-600 text-xs md:text-sm font-light leading-relaxed pt-2">
+                  <p className="text-[#D80621] text-xs md:text-sm font-light leading-relaxed pt-2">
                     {video.description}
                   </p>
                 </div>
 
                 {/* Direct Reference Technical Anchors */}
                 <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 text-gray-400">
+                  <div className="flex items-center gap-1.5 text-[#D80621]">
                     <Youtube className="w-4 h-4 text-[#cc2221]" />
                     <span className="text-[10px] font-mono uppercase tracking-widest font-bold">HD Network Source</span>
                   </div>
@@ -107,7 +107,7 @@ export default function MegaMediaHub() {
                     href={video.id === "hydraulic-grates" ? "https://www.youtube.com/watch?v=-TLP3uBB55o&t=785s" : "https://www.youtube.com/watch?v=WHO6G67GJbM"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#cc2221] hover:text-[#0a0a0a] border-b border-dashed border-[#cc2221] pb-0.5 transition-colors uppercase tracking-wider"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#cc2221] hover:text-[#D80621] border-b border-dashed border-[#cc2221] pb-0.5 transition-colors uppercase tracking-wider"
                   >
                     Launch Native Player <ExternalLink className="w-3 h-3" />
                   </a>

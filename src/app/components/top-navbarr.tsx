@@ -26,13 +26,7 @@ const TopNavbarr = () => {
             <div className="hidden sm:flex items-center space-x-4"> 
             </div> 
              
-            <div className="
-                flex flex-nowrap w-full sm:w-auto 
-                justify-between sm:justify-end 
-                items-center 
-                gap-2 sm:gap-6 
-                overflow-x-auto no-scrollbar
-            ">
+            <div className=" flex flex-nowrap w-full sm:w-auto justify-between sm:justify-end items-center gap-2 sm:gap-6 overflow-x-auto no-scrollbar ">
               {topMenuItems.map((item) => (
                 <Link
                   className='

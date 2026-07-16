@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 
 export default function PledgeAndOffer() {
   return (
-    <section className="relative bg-slate-900 py-20 overflow-hidden">
+    <section className="relative bg-slate-500 py-20 overflow-hidden">
       
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -30,12 +30,12 @@ export default function PledgeAndOffer() {
             </h2>
             
             <blockquote className="border-l-4 border-[#cc2221] pl-6 py-2">
-              <p className="text-xl md:text-2xl text-slate-300 italic font-light leading-relaxed">
+              <p className="text-xl md:text-2xl text-[#D80621] italic font-light leading-relaxed">
                 "We will undertake every casting that is presented to us... regardless."
               </p>
             </blockquote>
             
-            <p className="text-slate-400 text-lg">
+            <p className="text-[#D80621] text-lg">
               No geometry is too complex, no alloy too difficult. We challenge the industry standards to deliver what others say is impossible.
             </p>
           </div>
@@ -51,15 +51,15 @@ export default function PledgeAndOffer() {
                 <Gift className="w-8 h-8 text-[#cc2221]" />
               </div>
 
-              <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase mb-2">
+              <h3 className="text-2xl md:text-3xl font-black text-[#D80621] uppercase mb-2">
                 Order Your Prototypes
               </h3>
               
               <div className="text-4xl md:text-5xl font-black text-[#cc2221] mb-6 tracking-tight">
-                ON US <span className="text-black">FREE</span>
+                ON US <span className="-[#D80621]">FREE</span>
               </div>
 
-              <p className="text-gray-600 mb-8">
+              <p className="text-[#D80621] mb-8">
                 Experience our quality risk-free. Submit your design today and let us prove our pledge to you.
               </p>
 
@@ -69,7 +69,7 @@ export default function PledgeAndOffer() {
                 </Button>
               </Link>
               
-              <p className="text-xs text-gray-400 mt-4">
+              <p className="text-xs text-[#D80621] mt-4">
                 *Terms and conditions apply. Valid for new partners and verified projects.
               </p>
             </div>

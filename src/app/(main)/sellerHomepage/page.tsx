@@ -21,19 +21,19 @@ export default function PartnerProgramPage() {
       <section className="w-full px-4 sm:px-6 lg:px-10 py-3">
         <div className="grid grid-cols-1 md:grid-cols-2 min-h-[600px]">
 
-          <div className="flex flex-col justify-center  py-16   z-10">
-            <span className="text-neutral-500 font-bold tracking-widest uppercase text-sm">
+          <div className="flex flex-col justify-center py-16 z-10">
+            <span className="text-[#D80621] font-bold tracking-widest uppercase text-sm">
               MEGA FOUNDRIES PARTNER PROGRAM
             </span>
             <span className="text-[#cc2221] font-bold tracking-widest uppercase text-sm mb-4">
               Generations ahead with the next generation active
             </span>
-            <h1 className="text-[30px] md:text-[32px] lg:text-[40px] font-extrabold text-neutral-900 mb-6 leading-tight">
+            <h1 className="text-[30px] md:text-[32px] lg:text-[40px] font-extrabold text-[#D80621] mb-6 leading-tight">
               Scale Your <br />
               <span className="text-[#cc2221]">Manufacturing Reach</span> <br />
               Globally
             </h1>
-            <p className="text-neutral-600 text-xl mb-8 max-w-lg leading-relaxed">
+            <p className="text-[#D80621] text-xl mb-8 max-w-lg leading-relaxed">
               Join our integrated supply chain network. Leverage our advanced digital infrastructure to distribute high-grade castings to infrastructure projects across continents.
             </p>
             <div className="flex gap-4">
@@ -69,40 +69,40 @@ export default function PartnerProgramPage() {
               <div className="p-4 bg-red-50 rounded-full mb-2 group-hover:scale-110 transition-transform">
                 <Anvil className="w-8 h-8 text-[#cc2221]" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[30px] font-extrabold text-neutral-900">
+              <h3 className="text-[30px] font-extrabold text-[#D80621]">
                 <AnimatedCounter end={2500} suffix="+" />
               </h3>
-              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Alloy Grades</p>
+              <p className="text-[#D80621] font-medium text-sm uppercase tracking-wide">Alloy Grades</p>
             </div>
 
             <div className="flex flex-col items-center space-y-2 group">
               <div className="p-4 bg-red-50 rounded-full mb-2 group-hover:scale-110 transition-transform">
                 <Factory className="w-8 h-8 text-[#cc2221]" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[30px] font-extrabold text-neutral-900">
+              <h3 className="text-[30px] font-extrabold text-[#D80621]">
                 <AnimatedCounter end={850} />
               </h3>
-              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Partner Foundries</p>
+              <p className="text-[#D80621] font-medium text-sm uppercase tracking-wide">Partner Foundries</p>
             </div>
 
             <div className="flex flex-col items-center space-y-2 group">
               <div className="p-4 bg-red-50 rounded-full mb-2 group-hover:scale-110 transition-transform">
                 <BarChart3 className="w-8 h-8 text-[#cc2221]" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[30px] font-extrabold text-neutral-900">
+              <h3 className="text-[30px] font-extrabold text-[#D80621]">
                 <AnimatedCounter end={12} suffix="M+" />
               </h3>
-              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Tons Shipped</p>
+              <p className="text-[#D80621] font-medium text-sm uppercase tracking-wide">Tons Shipped</p>
             </div>
 
             <div className="flex flex-col items-center space-y-2 group">
               <div className="p-4 bg-red-50 rounded-full mb-2 group-hover:scale-110 transition-transform">
                 <Globe2 className="w-8 h-8 text-[#cc2221]" strokeWidth={1.5} />
               </div>
-              <h3 className="text-[30px] font-extrabold text-neutral-900">
+              <h3 className="text-[30px] font-extrabold text-[#D80621]">
                 <AnimatedCounter end={45} />
               </h3>
-              <p className="text-neutral-500 font-medium text-sm uppercase tracking-wide">Export Countries</p>
+              <p className="text-[#D80621] font-medium text-sm uppercase tracking-wide">Export Countries</p>
             </div>
 
           </div>
@@ -115,10 +115,10 @@ export default function PartnerProgramPage() {
           <h4 className="text-[#cc2221] font-bold text-sm uppercase tracking-wider mb-3">
             Mega Foundries Digital Portal
           </h4>
-          <h2 className="text-[30px] md:text-[40px] font-bold text-neutral-900 mb-6">
+          <h2 className="text-[30px] md:text-[40px] font-bold text-[#D80621] mb-6">
             Digitize Your Inventory & Streamline Procurement
           </h2>
-          <p className="text-neutral-500 mb-16 max-w-2xl mx-auto text-xl">
+          <p className="text-[#D80621] mb-16 max-w-2xl mx-auto text-xl">
             Manage multiple alloy specifications, track CAD revisions, and monitor global shipments in real-time with our integrated foundry management tool.
           </p>
 
@@ -126,7 +126,7 @@ export default function PartnerProgramPage() {
 
             <div className="absolute -inset-1 bg-linear-to-r from-red-600 to-red-400 rounded-3xl opacity-20 group-hover:opacity-40 blur-xl transition duration-500"></div>
 
-            <div className="relative bg-neutral-900 rounded-t-3xl p-[3%] shadow-2xl border-b border-neutral-800">
+            <div className="relative bg-slate-500 rounded-t-3xl p-[3%] shadow-2xl border-b border-neutral-800">
               <div className="absolute top-3 left-1/2 -translate-x-1/2 w-2 h-2 bg-neutral-700 rounded-full z-20 shadow-inner"></div>
 
               <div className="relative bg-white rounded-md overflow-hidden aspect-16/10 border border-neutral-800">

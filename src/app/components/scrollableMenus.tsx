@@ -16,33 +16,17 @@ const ScrollableMenu = () => {
                         {Object.values(menuData).map((section) => (
                             <MenubarMenu key={section.id}>
                                 <MenubarTrigger 
-                                    className="
-                                        group flex items-center 
-                                        text-[10px] md:text-[12px] 
-                                        gap-1 md:gap-1.5 
-                                        text-[#cc2221] cursor-pointer transition-colors font-semibold 
-                                        px-2 py-1.5 md:px-3 
-                                        whitespace-nowrap rounded-none
-                                        hover:bg-[#cc2221] hover:text-white 
-                                        focus:bg-[#cc2221] focus:text-white 
-                                        data-[state=open]:bg-[#cc2221] data-[state=open]:text-white
-                                    "
+                                    className=" group flex items-center text-[10px] md:text-[12px] gap-1 md:gap-1.5 text-[#cc2221] cursor-pointer transition-colors font-semibold px-2 py-1.5 md:px-3 whitespace-nowrap rounded-none hover:bg-[#cc2221] hover:text-white focus:bg-[#cc2221] focus:text-white data-[state=open]:bg-[#cc2221] data-[state=open]:text-white "
                                 >
                                     <section.icon 
-                                        className="
-                                            h-3 w-3 md:h-3.5 md:w-3.5 shrink-0 transition-colors
-                                            text-neutral-700
-                                            group-hover:text-white 
-                                            group-focus:text-white 
-                                            group-data-[state=open]:text-white
-                                        " 
+                                        className=" h-3 w-3 md:h-3.5 md:w-3.5 shrink-0 transition-colors text-[#D80621] group-hover:text-white group-focus:text-white group-data-[state=open]:text-white " 
                                     />
                                     {section.label}
                                 </MenubarTrigger>
                                 <MenubarContent className="bg-white border border-gray-100 shadow-xl rounded-md min-w-[220px] p-1">
                                     {section.categories.map((category, index) => (
                                         <MenubarSub key={index}>
-                                            <MenubarSubTrigger className="cursor-pointer text-sm py-2 px-3 rounded-sm text-gray-700 hover:text-[#cc2221] hover:bg-red-50">
+                                            <MenubarSubTrigger className="cursor-pointer text-sm py-2 px-3 rounded-sm text-[#D80621] hover:text-[#cc2221] hover:bg-red-50">
                                                 {category.name}
                                             </MenubarSubTrigger>
                                             <MenubarSubContent className="max-h-[400px] overflow-y-auto bg-white border border-gray-100 shadow-lg min-w-[200px] p-1 ml-1">

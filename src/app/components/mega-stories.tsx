@@ -70,10 +70,10 @@ export function MegaStories() {
     <section className="w-full px-4 md:px-8 py-12 bg-white">
 
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl font-bold tracking-tight text-[#cc2221] uppercase border-l-4 border-black pl-4">
+        <h2 className="text-3xl font-bold tracking-tight text-[#cc2221] uppercase border-l-4 -[#D80621] pl-4">
           Casting zone
         </h2>
-        <Button variant="outline" className="hidden sm:flex group border-black text-black hover:bg-zinc-100">
+        <Button variant="outline" className="hidden sm:flex group -[#D80621] -[#D80621] hover:bg-zinc-100">
           View All Categories <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Button>
       </div>
@@ -88,7 +88,7 @@ export function MegaStories() {
             <h2 className="text-2xl md:text-3xl font-black uppercase tracking-widest">
               VOLUMES 1 - 16
             </h2>
-            <span className="text-zinc-400  text-sm hidden md:block">
+            <span className="text-[#D80621] text-sm hidden md:block">
               SERIES: FOUNDRY_2025 // SPECS
             </span>
           </div>
@@ -130,11 +130,11 @@ export function MegaStories() {
                   </h3>
                   
                   <div className="flex items-center justify-between border-t border-gray-200 pt-3 mt-2">
-                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                     <span className="text-xs font-bold text-[#D80621] uppercase tracking-widest">
                         Volume 01
                      </span>
                      {/* The Red Accent Color */}
-                     <span className="  font-black text-xl">
+                     <span className=" font-black text-xl">
                         {heroProduct.price}
                      </span>
                   </div>
@@ -160,7 +160,7 @@ export function MegaStories() {
                     />
                     <div className="absolute top-0 left-0 p-2 w-full flex justify-between">
                       {/* Volume Number Badge */}
-                      <Badge className="bg-zinc-900 text-white rounded-none  text-xs">
+                      <Badge className="bg-slate-500 text-[#D80621] rounded-none text-xs">
                         VOL. {String(index + 2).padStart(2, '0')}
                       </Badge>
                     </div>
@@ -173,10 +173,10 @@ export function MegaStories() {
                       </h4>
                     </div>
                     <div className="flex items-center justify-between text-xs text-muted-foreground mt-3 pt-3 border-t border-zinc-100">
-                      <span className="font-medium text-black flex items-center gap-1">
+                      <span className="font-medium -[#D80621] flex items-center gap-1">
                         <Icon className="h-3 w-3" /> {product.brand}
                       </span>
-                      <span className="font-bold text-black bg-zinc-100 px-2 py-1">
+                      <span className="font-bold -[#D80621] bg-zinc-100 px-2 py-1">
                         {product.price}
                       </span>
                     </div>
@@ -192,7 +192,7 @@ export function MegaStories() {
       </div>
 
       <div className="mt-12 text-center pb-8">
-        <Button size="lg" className="bg-zinc-900 text-white hover:bg-zinc-700 min-w-[200px] rounded-none">
+        <Button size="lg" className="bg-slate-500 text-[#D80621] hover:bg-zinc-700 min-w-[200px] rounded-none">
           Download Full Spec Sheet
         </Button>
       </div>

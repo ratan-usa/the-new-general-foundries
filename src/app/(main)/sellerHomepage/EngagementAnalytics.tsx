@@ -32,7 +32,7 @@ const EngagementAnalytics = () => {
             <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
 
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-normal text-gray-900">
+                    <h2 className="text-3xl md:text-5xl font-normal text-[#D80621]">
                         Engagement <span className="text-[#cc2221]">Analytics</span>
                     </h2>
                 </div>
@@ -100,17 +100,17 @@ const EngagementAnalytics = () => {
                     </div>
 
                     <div className="space-y-6">
-                        <h3 className="text-xl md:text-2xl font-bold text-gray-900 leading-tight">
+                        <h3 className="text-xl md:text-2xl font-bold text-[#D80621] leading-tight">
                             See how your products perform — and how you stack up against others.
                         </h3>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-[#D80621] text-sm leading-relaxed">
                             With Mega Foundries's Engagement Analytics, you get deep insights into how buyers
                             are interacting with your listings. Track key engagement metrics like product views,
                             inquiries, clicks, and response rates — all broken down by category.
                         </p>
 
-                        <p className="text-gray-600 text-sm leading-relaxed">
+                        <p className="text-[#D80621] text-sm leading-relaxed">
                             What sets us apart? We don't just show your numbers — we show how you
                             compare. Understand where you lead and where there's room to grow by
                             benchmarking your performance against other sellers in the same category.

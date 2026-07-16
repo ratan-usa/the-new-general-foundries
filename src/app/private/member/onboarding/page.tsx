@@ -206,7 +206,7 @@ export default function VendorOnboardingPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 gap-3">
         <Loader2 className="animate-spin w-10 h-10 text-[#cc2221]" />
-        <p className="text-slate-500 font-medium">Verifying User Identity...</p>
+        <p className="text-[#D80621] font-medium">Verifying User Identity...</p>
       </div>
     );
   }
@@ -239,12 +239,12 @@ export default function VendorOnboardingPage() {
   return (
     <div className="min-h-screen bg-slate-50 py-10 px-4 flex justify-center">
       <Card className="max-w-3xl w-full shadow-xl border-t-4 border-t-[#cc2221]">
-        <CardHeader className="bg-slate-900 text-white rounded-t-sm mt-1">
+        <CardHeader className="bg-slate-500 text-[#D80621] rounded-t-sm mt-1">
           <div className="flex items-center gap-3 mb-2">
             <Store className="w-8 h-8 text-[#cc2221]" />
             <CardTitle className="text-2xl">Vendor Registration</CardTitle>
           </div>
-          <CardDescription className="text-slate-400">
+          <CardDescription className="text-[#D80621]">
             You are logged in as <span className="text-white font-semibold">{formData.email}</span>.
             Complete this form to upgrade.
           </CardDescription>
@@ -255,7 +255,7 @@ export default function VendorOnboardingPage() {
 
             {/* 1. BUSINESS INFO */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold flex items-center gap-2 text-slate-800 border-b pb-2">
+              <h3 className="text-lg font-semibold flex items-center gap-2 text-[#D80621] border-b pb-2">
                 <Store className="w-4 h-4" /> Business Details
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
@@ -272,7 +272,7 @@ export default function VendorOnboardingPage() {
 
             {/* 2. CONTACT */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold flex items-center gap-2 text-slate-800 border-b pb-2">
+              <h3 className="text-lg font-semibold flex items-center gap-2 text-[#D80621] border-b pb-2">
                 <User className="w-4 h-4" /> Primary Contact
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
@@ -293,7 +293,7 @@ export default function VendorOnboardingPage() {
 
             {/* 3. ADDRESS */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold flex items-center gap-2 text-slate-800 border-b pb-2">
+              <h3 className="text-lg font-semibold flex items-center gap-2 text-[#D80621] border-b pb-2">
                 <MapPin className="w-4 h-4" /> Headquarters Address
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
@@ -322,7 +322,7 @@ export default function VendorOnboardingPage() {
 
             {/* 4. COMPLIANCE */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold flex items-center gap-2 text-slate-800 border-b pb-2">
+              <h3 className="text-lg font-semibold flex items-center gap-2 text-[#D80621] border-b pb-2">
                 <FileText className="w-4 h-4" /> Tax Info
               </h3>
               <div className="space-y-2">

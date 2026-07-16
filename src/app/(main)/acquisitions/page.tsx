@@ -41,7 +41,7 @@ const AboutSection = () => {
           objectFit="cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 -[#D80621]/60"></div>
       </div>
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
@@ -59,7 +59,7 @@ const AboutSection = () => {
         title={paving_riser.title}
         videos={paving_riser.videos}
       />
-      <div className="relative z-10  mx-auto px-10">
+      <div className="relative z-10 mx-auto px-10">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
           {features.map((feature, index) => (
             <Card
@@ -70,12 +70,12 @@ const AboutSection = () => {
                 <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
                   <feature.icon className="w-8 h-8 text-[#cc2221]" />
                 </div>
-                <CardTitle className="text-[20px] font-semibold text-gray-900">
+                <CardTitle className="text-[20px] font-semibold text-[#D80621]">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-center px-6 pb-10">
-                <p className="text-sm text-justify text-gray-600 leading-relaxed">
+                <p className="text-sm text-justify text-[#D80621] leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>

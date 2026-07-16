@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function VideoHero() {
   return (
-    <section className="relative w-full h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden bg-slate-900">
+    <section className="relative w-full h-[600px] md:h-[700px] flex items-center justify-center overflow-hidden bg-slate-500">
 
       <video
         autoPlay
@@ -20,7 +20,7 @@ export default function VideoHero() {
         Your browser does not support the video tag.
       </video>
 
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 -[#D80621]/40"></div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center space-y-6">
 

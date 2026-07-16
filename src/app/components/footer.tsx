@@ -63,13 +63,13 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-[#1a1a1a] text-gray-300 border-t border-gray-800 font-sans">
+    <footer className="bg-[#D80621] text-white border-t border-gray-800 font-sans">
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pt-16 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16 border-b border-gray-800 pb-12">
 
           <div className="flex flex-col justify-evenly gap-16 space-y-6">
             <div>
-              <h3 className="text-[#cc2221] font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
+              <h3 className="text-white font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
                 USA Operations
               </h3>
 
@@ -94,7 +94,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <div className="text-sm space-y-1 text-gray-400">
+              <div className="text-sm space-y-1 text-white">
                 <p>105 MAXES ROAD</p>
                 <p>MELVILLE, NY 11737, USA</p>
 
@@ -103,7 +103,7 @@ const Footer = () => {
               <p className='mt-4'>
                 <a
                   href="tel:+15127828880"
-                  className="hover:text-white transition-colors duration-200"
+                  className="hover:text-gray-200 transition-colors duration-200"
                 >
                   +1 (512) 782-8880
                 </a>
@@ -114,7 +114,7 @@ const Footer = () => {
 
           <div className="flex flex-col items-center justify-start">
             {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
-            <div className="flex  ">
+            <div className="flex ">
               <div className="bg-white p-2 rounded-lg w-80 h-36 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <Link href={'/'} className="w-full h-full relative">
                   <Image src={'/CANADA FOUNDRIES.png'} alt='Mega Industries' fill className="object-contain" />
@@ -126,12 +126,12 @@ const Footer = () => {
           {/* --- COL 5: CANADA OPERATIONS (Logos + Info + Subscribe) --- */}
           <div className="flex items-end justify-evenly gap-16 flex-col space-y-6">
             <div>
-              <h3 className="text-[#cc2221] text-left font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
+              <h3 className="text-white text-left font-bold uppercase tracking-wider text-sm border-b border-[#cc2221]/30 pb-2 w-fit">
                 Canada Operations
               </h3>
 
               {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
-              <div className="flex gap-4  justify-end">
+              <div className="flex gap-4 justify-end">
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
                     <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Foundries' fill className="object-contain" />
@@ -152,7 +152,7 @@ const Footer = () => {
 
 
             <div>
-              <div className="text-sm space-y-1 text-gray-400">
+              <div className="text-sm space-y-1 text-white">
                 <p>ONE YOUNGE STREET</p>
                 <p>TORONTO, ONTARIO M5E 1R4 CANADA</p>
 
@@ -161,7 +161,7 @@ const Footer = () => {
               <p className='mt-4'>
                 <a
                   href="tel:+14388059990"
-                  className="hover:text-white transition-colors duration-200"
+                  className="hover:text-gray-200 transition-colors duration-200"
                 >
                   +1 (438) 805-9990
                 </a>
@@ -171,7 +171,7 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pb-12  ">
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pb-12 ">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-start">
 
           {footerColumns.map((col) => (
@@ -192,7 +192,7 @@ const Footer = () => {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-xs text-gray-400 hover:text-[#cc2221] transition-colors block"
+                          className="text-xs text-white hover:text-gray-200 transition-colors block"
                         >
                           {link.label}
                         </Link>
@@ -211,7 +211,7 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="w-full px-4 sm:px-6 lg:px-10 py-2  bg-[#0f0f0f] border-t border-gray-800">
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-2 bg-[#c0c0c0] border-t border-gray-800">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-gray-800 pb-8">
 
 
@@ -233,12 +233,12 @@ const Footer = () => {
           {/* --- COL 1: SOCIAL ICONS (Left Aligned) --- */}
           <div className="flex flex-col items-center md:justify-start">
             <h4 className="text-white text-sm font-semibold mb-3 tracking-wide">info@megafoundries.com</h4>
-            <div className="flex   justify-center   items-center md:justify-start gap-3 ">
+            <div className="flex justify-center items-center md:justify-start gap-3 ">
               {[Linkedin, Facebook, Instagram, Twitter].map((Icon, i) => (
                 <Link
                   key={i}
                   href={'/'}
-                  className='p-2.5 border border-gray-700 rounded-full text-gray-400 hover:border-[#cc2221] hover:text-white hover:bg-[#cc2221] transition-all duration-300'
+                  className='p-2.5 border border-gray-700 rounded-full text-white hover:border-[#cc2221] hover:text-gray-200 hover:bg-[#cc2221] transition-all duration-300'
                 >
                   <Icon className='w-4 h-4' />
                 </Link>

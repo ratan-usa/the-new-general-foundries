@@ -68,7 +68,7 @@ const MaterialsHelpCenter = () => {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 -[#D80621]/60"></div>
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto space-y-6">
@@ -98,15 +98,15 @@ const MaterialsHelpCenter = () => {
                 <item.icon className="w-8 h-8 text-[#cc2221] group-hover:text-white transition-colors duration-300" />
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#cc2221] text-xl transition-colors">
+              <h3 className="text-xl font-bold text-[#D80621] mb-3 group-hover:text-[#cc2221] text-xl transition-colors">
                 {item.title}
               </h3>
 
-              <p className="text-gray-500 text-sm mb-6 leading-relaxed grow">
+              <p className="text-[#D80621] text-sm mb-6 leading-relaxed grow">
                 {item.description}
               </p>
 
-              <div className="flex items-center text-[#cc2221] font-semibold mt-auto  text-xl group-hover:translate-x-1 transition-transform">
+              <div className="flex items-center text-[#cc2221] font-semibold mt-auto text-xl group-hover:translate-x-1 transition-transform">
                 Explore Specs <ArrowRight className="ml-2 w-4 h-4" />
               </div>
             </Link>
@@ -115,7 +115,7 @@ const MaterialsHelpCenter = () => {
       </section>
 
       <section className="text-center py-12 pb-24">
-        <p className="text-gray-600 mb-4">Can't find what you are looking for?</p>
+        <p className="text-[#D80621] mb-4">Can't find what you are looking for?</p>
         <Button className="bg-[#cc2221] hover:bg-red-700 text-white px-8 py-6 text-lg rounded-full">
           Contact Our Engineering Team
         </Button>

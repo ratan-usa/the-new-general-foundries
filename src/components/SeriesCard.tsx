@@ -23,7 +23,7 @@ export default function SeriesCard({ title, items }: SeriesCardProps) {
             <li key={index}>
               <Link 
                 href={`/products/${title.toLowerCase().replace(" ", "-")}`} 
-                className="text-sm font-medium text-slate-700 hover:text-[#cc2221] flex items-center gap-1 transition-colors"
+                className="text-sm font-medium text-[#D80621] hover:text-[#cc2221] flex items-center gap-1 transition-colors"
               >
                 {/* Logic to underline specific headers like "SPECIALITY PRODUCTS" */}
                 <span className={item === item.toUpperCase() && item.length > 10 ? "underline decoration-2 underline-offset-4 font-bold" : ""}>

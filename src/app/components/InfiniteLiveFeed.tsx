@@ -36,7 +36,7 @@ export default function InfiniteLiveFeed() {
   };
 
   return (
-    <div className="w-full py-10 bg-neutral-900 border-y  ">
+    <div className="w-full py-10 bg-slate-500 border-y ">
       
       <div className=" mx-auto px-4 mb-4 flex justify-between items-end">
         <div>
@@ -47,9 +47,9 @@ export default function InfiniteLiveFeed() {
              </span>
              Live Factory Network
            </h2>
-           <p className="text-xs text-gray-400">Showing {items.length} of {allFactoryVideos.length} Streams</p>
+           <p className="text-xs text-[#D80621]">Showing {items.length} of {allFactoryVideos.length} Streams</p>
         </div>
-        <div className="text-xs text-gray-500 hidden md:block">Scroll for more →</div>
+        <div className="text-xs text-[#D80621] hidden md:block">Scroll for more →</div>
       </div>
 
       <div 
@@ -60,12 +60,7 @@ export default function InfiniteLiveFeed() {
         {items.map((item) => (
           <div 
             key={item.id} 
-            className="
-              relative shrink-0 w-[280px] h-[180px] 
-              bg-neutral-800 rounded-lg overflow-hidden 
-              border border-neutral-700 hover:border-[#cc2221] 
-              group cursor-pointer transition-all
-            "
+            className=" relative shrink-0 w-[280px] h-[180px] bg-neutral-800 rounded-lg overflow-hidden border border-neutral-700 hover:border-[#cc2221] group cursor-pointer transition-all "
           >
             {/* === VIDEO LOGIC === */}
             <video
@@ -98,7 +93,7 @@ export default function InfiniteLiveFeed() {
                 }}
             />
             
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t -[#D80621]/90 -[#D80621]/20 to-transparent pointer-events-none" />
 
             {item.isLive && (
                 <div className="absolute top-2 right-2 bg-[#cc2221] text-white text-[9px] font-bold px-1.5 py-0.5 rounded z-10">
@@ -108,14 +103,14 @@ export default function InfiniteLiveFeed() {
 
             {/* Play Button Overlay (Disappears on Hover) */}
             <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 transition-opacity pointer-events-none">
-               <div className="bg-black/40 backdrop-blur-sm p-3 rounded-full">
+               <div className="-[#D80621]/40 backdrop-blur-sm p-3 rounded-full">
                   <Play className="w-6 h-6 text-white fill-current" />
                </div>
             </div>
 
             <div className="absolute bottom-3 left-3 right-3 pointer-events-none">
               <h3 className="text-white text-sm font-bold truncate">{item.name}</h3>
-              <p className="text-gray-400 text-xs truncate">{item.location}</p>
+              <p className="text-[#D80621] text-xs truncate">{item.location}</p>
             </div>
           </div>
         ))}

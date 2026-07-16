@@ -132,8 +132,7 @@ const Taglines = () => {
             {tagLines.map((item) => (
                 <div
                     key={item.id}
-                    className={`flex flex-col md:flex-row items-center gap-8 ${item.id % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row"
-                        }`}
+                    className={`flex flex-col md:flex-row items-center gap-8 ${item.id % 2 === 0 ? "md:flex-row-reverse" : "md:flex-row" }`}
                 >
                     {/* IMAGE (30px fixed height & width) */}
                     <div className="w-full md:w-1/2 flex justify-center md:justify-start">
@@ -152,7 +151,7 @@ const Taglines = () => {
                         <h3 className="text-[18px] font-bold text-[#cc2221] leading-tight">
                             {item.lines}
                         </h3>
-                        <p className="text-[13px] text-gray-600 leading-relaxed">
+                        <p className="text-[13px] text-[#D80621] leading-relaxed">
                             {item.description}
                         </p>
                     </div>

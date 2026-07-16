@@ -37,22 +37,22 @@ const OfficeCard = ({
         </div>
       </div>
 
-      <h3 className="text-2xl font-semibold text-gray-800 mt-8 mb-4">{title}</h3>
-      <p className="text-gray-500 text-sm mb-8 leading-relaxed max-w-sm mx-auto">
+      <h3 className="text-2xl font-semibold text-[#D80621] mt-8 mb-4">{title}</h3>
+      <p className="text-[#D80621] text-sm mb-8 leading-relaxed max-w-sm mx-auto">
         {description}
       </p>
 
-      <div className="w-full space-y-4 text-left mb-8 text-gray-600 text-sm">
+      <div className="w-full space-y-4 text-left mb-8 text-[#D80621] text-sm">
         <div className="flex items-start gap-3">
-          <MapPin className="w-5 h-5 text-gray-400 mt-0.5 shrink-0" />
+          <MapPin className="w-5 h-5 text-[#D80621] mt-0.5 shrink-0" />
           <span>{address}</span>
         </div>
         <div className="flex items-center gap-3">
-          <Phone className="w-5 h-5 text-gray-400 shrink-0" />
+          <Phone className="w-5 h-5 text-[#D80621] shrink-0" />
           <span>{phone}</span>
         </div>
         <div className="flex items-center gap-3">
-          <Mail className="w-5 h-5 text-gray-400 shrink-0" />
+          <Mail className="w-5 h-5 text-[#D80621] shrink-0" />
           <span>{email}</span>
         </div>
       </div>
@@ -115,7 +115,7 @@ const ContactUs = () => {
           objectFit="cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 -[#D80621]/60"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 text-center">
@@ -134,13 +134,13 @@ const ContactUs = () => {
             <span className="block mt-2 text-[#cc2221] uppercase tracking-wide drop-shadow-lg">
               Foundries, Forge Shops & Fabricators
             </span>
-            <span className="block mt-2 text-2xl  md:text-4xl font-light ">
+            <span className="block mt-2 text-2xl md:text-4xl font-light ">
               Under One Universe
             </span>
           </h1>
 
           {/* Tagline */}
-          <p className="text-xl text-[#cc2221] md:text-[22px] font-medium   italic">
+          <p className="text-xl text-[#cc2221] md:text-[22px] font-medium italic">
             "Think Fast and Succeed Faster"
           </p>
 
@@ -149,12 +149,12 @@ const ContactUs = () => {
             <Button className="bg-[#cc2221] hover:bg-red-700 text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
               Explore Capabilities
             </Button>
-            <Button variant="outline" className="px-10 text-[#cc2221] border-2 border-[#cc2221] py-7 text-xl  hover:bg-white/10 backdrop-blur-sm">
+            <Button variant="outline" className="px-10 text-[#cc2221] border-2 border-[#cc2221] py-7 text-xl hover:bg-white/10 backdrop-blur-sm">
               Succeed With Us <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </div>
         </div>
-        <p className="text-[18px] text-gray-700 max-w-4xl mx-auto mb-16">
+        <p className="text-[18px] text-[#D80621] max-w-4xl mx-auto mb-16">
           Engage with dedicated experts
         </p>
       </div>
@@ -170,7 +170,7 @@ const ContactUs = () => {
             <h4 className="text-[#cc2221] font-bold uppercase tracking-wider mb-3">
               MEGA FOUNDRIES | SEND US A MESSAGE
             </h4>
-            <p className="text-gray-500">
+            <p className="text-[#D80621]">
               The next-generation platform for industrial trade.
             </p>
           </div>
@@ -180,10 +180,10 @@ const ContactUs = () => {
 
               {/* Left Side Text Content (takes 2/5 columns on large screens) */}
               <div className="lg:col-span-2 space-y-6">
-                <h2 className="text-3xl md:text-4xl text-gray-800">
+                <h2 className="text-3xl md:text-4xl text-[#D80621]">
                   Send Your Inquiry. <span className="font-bold block mt-2">We Will Respond Shortly.</span>
                 </h2>
-                <p className="text-gray-500 leading-relaxed">
+                <p className="text-[#D80621] leading-relaxed">
                   We are committed to exceeding your expectations. Feel free to send us your questions or suggestions—we are here to listen and assist.
                 </p>
               </div>
@@ -223,7 +223,7 @@ const ContactUs = () => {
                     <Textarea
                       id="message"
                       placeholder="Your Message"
-                      className="min-h-[150px] bg-gray-50 border-gray-200  resize-none"
+                      className="min-h-[150px] bg-gray-50 border-gray-200 resize-none"
                     />
                   </div>
 

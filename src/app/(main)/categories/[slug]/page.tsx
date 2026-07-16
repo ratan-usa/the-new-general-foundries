@@ -23,7 +23,7 @@ export default async function CategoryPage() {
 
     if (!data) return notFound();
     return (
-        <main className="w-full py-24 min-h-screen  relative pb-24">
+        <main className="w-full py-24 min-h-screen relative pb-24">
 
             {/* ISOLATED TACTICAL BACKGROUNDS */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-0"></div>
@@ -33,13 +33,13 @@ export default async function CategoryPage() {
                 {/* TOP NAVIGATION */}
                 <button
                     onClick={() => router.back()}
-                    className="text-gray-400 hover:text-[#cc2221] mb-8 flex items-center gap-2 text-xs font-black uppercase tracking-widest transition-colors group bg-[#cc2221]/5 px-4 py-2 rounded border border-[#cc2221]/10 hover:border-[#cc2221]/30"
+                    className="text-[#D80621] hover:text-[#cc2221] mb-8 flex items-center gap-2 text-xs font-black uppercase tracking-widest transition-colors group bg-[#cc2221]/5 px-4 py-2 rounded border border-[#cc2221]/10 hover:border-[#cc2221]/30"
                 >
                     <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                     Return to Intelligence Center
                 </button>
 
-                <div className="relative h-[60vh] flex items-center justify-center bg-slate-900">
+                <div className="relative h-[60vh] flex items-center justify-center bg-slate-500">
                     <Image
                         src={data.image || '/assets/image15.jpeg'}
                         width={1200}
@@ -56,7 +56,7 @@ export default async function CategoryPage() {
                         <motion.h1
                             initial={{ y: 20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
-                            className="text-6xl md:text-8xl font-black text-slate-900 mt-4 tracking-tighter"
+                            className="text-6xl md:text-8xl font-black text-[#D80621] mt-4 tracking-tighter"
                         >
                             {data.title.toUpperCase()}
                         </motion.h1>
@@ -71,7 +71,7 @@ export default async function CategoryPage() {
                         <div className="lg:col-span-2 space-y-8">
                             <div className="bg-white p-10 rounded-[2rem] shadow-xl border border-slate-100">
                                 <h2 className="text-3xl font-bold mb-6">Product Overview</h2>
-                                <p className="text-xl text-slate-600 leading-relaxed">
+                                <p className="text-xl text-[#D80621] leading-relaxed">
                                     {data.description}
                                 </p>
                             </div>
@@ -80,7 +80,7 @@ export default async function CategoryPage() {
                                 {['ASTM Standards', 'Ductile Iron', 'ISO Certified', 'USA Made'].map((badge) => (
                                     <div key={badge} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center gap-4">
                                         <div className="w-2 h-2 bg-[#cc2221] rounded-full" />
-                                        <span className="font-bold text-slate-800">{badge}</span>
+                                        <span className="font-bold text-[#D80621]">{badge}</span>
                                     </div>
                                 ))}
                             </div>
@@ -98,7 +98,7 @@ export default async function CategoryPage() {
 
                             <div className="p-8 border-2 border-dashed border-slate-200 rounded-[2rem]">
                                 <h4 className="font-bold mb-2">Technical Support</h4>
-                                <p className="text-sm text-slate-500 italic">"Our engineers are available 24/7 for specification assistance."</p>
+                                <p className="text-sm text-[#D80621] italic">"Our engineers are available 24/7 for specification assistance."</p>
                             </div>
                         </div>
 

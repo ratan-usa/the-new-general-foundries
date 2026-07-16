@@ -49,7 +49,7 @@ export default function MegaQSeries() {
   const [activeVariant, setActiveVariant] = useState<QProductVariant>(Q_SERIES_VARIANTS[0]);
 
   return (
-    <section className="bg-white text-[#0a0a0a] py-24 font-sans border-b border-gray-100 w-full">
+    <section className="bg-white text-[#D80621] py-24 font-sans border-b border-gray-100 w-full">
       {/* Absolute strict fluid full width padding bounds */}
       <div className="w-full px-4 sm:px-6 lg:px-10 space-y-16">
         
@@ -59,11 +59,11 @@ export default function MegaQSeries() {
             <span className="text-xs uppercase tracking-[0.4em] font-black text-[#cc2221] block mb-3">
               Next-Gen Foundry Lineup
             </span>
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#0a0a0a] leading-none">
+            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#D80621] leading-none">
               The New <span className="text-[#cc2221]">Q Series</span>
             </h2>
           </div>
-          <p className="text-gray-500 text-base font-light leading-relaxed max-w-xl">
+          <p className="text-[#D80621] text-base font-light leading-relaxed max-w-xl">
             Conception to inception all in one go. The Q Series represents Mega’s peak metallurgical engineering—forging high-performance casting systems built for devastating modern surface stress.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function MegaQSeries() {
           
           {/* COLUMN 1: VERTICAL CONTROLLER INDEX (3 Columns Wide) */}
           <div className="lg:col-span-3 flex flex-col gap-3 w-full">
-            <span className="text-[10px] font-mono tracking-widest text-gray-400 uppercase font-bold mb-1 block">
+            <span className="text-[10px] font-mono tracking-widest text-[#D80621] uppercase font-bold mb-1 block">
               Select Series Variant:
             </span>
             {Q_SERIES_VARIANTS.map((variant) => {
@@ -82,18 +82,13 @@ export default function MegaQSeries() {
                 <button
                   key={variant.id}
                   onClick={() => setActiveVariant(variant)}
-                  className={`w-full text-left p-5 border transition-all duration-300 rounded-none flex items-center justify-between group
-                    ${isActive 
-                      ? "bg-gray-50 border-[#cc2221] shadow-md" 
-                      : "bg-white border-gray-200 text-gray-400 hover:border-gray-400 hover:text-[#0a0a0a]"
-                    }
-                  `}
+                  className={`w-full text-left p-5 border transition-all duration-300 rounded-none flex items-center justify-between group ${isActive ? "bg-gray-50 border-[#cc2221] shadow-md" : "bg-white border-gray-200 text-[#D80621] hover:border-gray-400 hover:text-[#D80621]" } `}
                 >
                   <div>
                     <p className={`text-lg font-black uppercase tracking-tight transition-colors ${isActive ? 'text-[#cc2221]' : 'text-gray-900'}`}>
                       {variant.name}
                     </p>
-                    <p className="text-[10px] text-gray-400 font-mono uppercase tracking-wider mt-0.5">
+                    <p className="text-[10px] text-[#D80621] font-mono uppercase tracking-wider mt-0.5">
                       {variant.metric} Rating
                     </p>
                   </div>
@@ -106,18 +101,18 @@ export default function MegaQSeries() {
           {/* COLUMN 2: PRIMARY SPECIFICATION FOCUS SHEET (5 Columns Wide) */}
           <div className="lg:col-span-5 space-y-8 w-full">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-50 border border-gray-200 text-gray-600 text-xs font-mono uppercase tracking-wider mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-50 border border-gray-200 text-[#D80621] text-xs font-mono uppercase tracking-wider mb-6">
                 <Sliders className="w-3.5 h-3.5 text-[#cc2221]" /> Dynamic Configuration Unit
               </div>
 
-              <h3 className="text-3xl md:text-4xl font-black text-[#0a0a0a] tracking-tight uppercase mb-1">
+              <h3 className="text-3xl md:text-4xl font-black text-[#D80621] tracking-tight uppercase mb-1">
                 {activeVariant.name}
               </h3>
               <p className="text-xs font-mono uppercase tracking-widest text-[#cc2221] font-bold border-b border-gray-100 pb-4 mb-4">
                 {activeVariant.tagline}
               </p>
 
-              <p className="text-gray-600 text-sm leading-relaxed font-light">
+              <p className="text-[#D80621] text-sm leading-relaxed font-light">
                 {activeVariant.description}
               </p>
             </div>
@@ -125,19 +120,19 @@ export default function MegaQSeries() {
             {/* Technical Analytical Metric Block */}
             <div className="grid grid-cols-2 gap-4 border-t border-gray-100 pt-6">
               <div className="bg-gray-50 p-4 border border-gray-100">
-                <span className="text-[10px] font-mono uppercase text-gray-400 block mb-1">
+                <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">
                   {activeVariant.metricLabel}
                 </span>
-                <span className="text-2xl font-black text-[#0a0a0a] font-mono tracking-tight">
+                <span className="text-2xl font-black text-[#D80621] font-mono tracking-tight">
                   {activeVariant.metric}
                 </span>
               </div>
               
               <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col justify-center">
-                <span className="text-[10px] font-mono uppercase text-gray-400 block mb-1">
+                <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">
                   Material Matrix
                 </span>
-                <span className="text-xs font-bold text-gray-700 uppercase tracking-wide">
+                <span className="text-xs font-bold text-[#D80621] uppercase tracking-wide">
                   Nodular Ductile Iron
                 </span>
               </div>
@@ -169,7 +164,7 @@ export default function MegaQSeries() {
               <div className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-gray-300" />
               <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-gray-300" />
 
-              <div className="absolute bottom-4 left-4 right-4 bg-[#0a0a0a]/95 text-[9px] font-mono uppercase font-bold tracking-wider text-zinc-400 text-center py-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
+              <div className="absolute bottom-4 left-4 right-4 bg-[#D80621]/95 text-[9px] font-mono uppercase font-bold tracking-wider text-[#D80621] text-center py-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
                 Component Focal Frame // Active Spec
               </div>
             </div>
@@ -181,19 +176,19 @@ export default function MegaQSeries() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 border-t border-gray-200 w-full">
           <div className="flex items-center gap-3 p-4">
             <ShieldCheck className="w-6 h-6 text-[#cc2221] shrink-0" />
-            <p className="text-xs uppercase tracking-wider font-bold text-gray-800">
+            <p className="text-xs uppercase tracking-wider font-bold text-[#D80621]">
               AASHTO H-20 & F900 Proof Tested
             </p>
           </div>
           <div className="flex items-center gap-3 p-4">
             <Cpu className="w-6 h-6 text-[#cc2221] shrink-0" />
-            <p className="text-xs uppercase tracking-wider font-bold text-gray-800">
+            <p className="text-xs uppercase tracking-wider font-bold text-[#D80621]">
               Integrated IoT Sensor Seating Channels
             </p>
           </div>
           <div className="flex items-center gap-3 p-4">
             <Zap className="w-6 h-6 text-[#cc2221] shrink-0" />
-            <p className="text-xs uppercase tracking-wider font-bold text-gray-800">
+            <p className="text-xs uppercase tracking-wider font-bold text-[#D80621]">
               Parallel Flash-Mold Precision Assembly
             </p>
           </div>

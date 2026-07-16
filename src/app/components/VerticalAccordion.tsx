@@ -192,7 +192,7 @@ export function VerticalAccordion() {
                                 // Inactive: Shrink to flex-1 (takes up 1x space) with BLACK background (No Blue)
                                 isActive 
                                     ? `flex-[5] ${item.color}` 
-                                    : "flex-[1] bg-zinc-900 hover:bg-zinc-800"
+                                    : "flex-[1] bg-slate-500 hover:bg-zinc-800"
                             )}
                         >
                             {/* --- CONTENT WHEN EXPANDED (VISIBLE ONLY ON ACTIVE) --- */}
@@ -204,20 +204,20 @@ export function VerticalAccordion() {
                             >
                                 {/* Top Image Section */}
                                 <div className="relative h-[55%] w-full overflow-hidden">
-                                    <div className="absolute inset-0 bg-black/20 z-10" />
+                                    <div className="absolute inset-0 -[#D80621]/20 z-10" />
                                     <Image
                                         src={item.image}
                                         alt={item.title}
                                         fill
                                         className="object-cover"
                                     />
-                                    <div className="absolute top-6 left-6 z-20 bg-black/50 backdrop-blur-md p-2 rounded-lg text-white">
+                                    <div className="absolute top-6 left-6 z-20 -[#D80621]/50 backdrop-blur-md p-2 rounded-lg text-white">
                                         <Icon className="w-6 h-6" />
                                     </div>
                                 </div>
 
                                 {/* Text Content Section */}
-                                <div className="flex flex-col px-6 py-6 text-white h-[45%] bg-gradient-to-t from-black/20 to-transparent">
+                                <div className="flex flex-col px-6 py-6 text-white h-[45%] bg-gradient-to-t -[#D80621]/20 to-transparent">
                                     <div className="flex items-center gap-2 mb-2 opacity-80">
                                         <span className="text-xs font-bold tracking-widest uppercase border border-white/30 px-2 py-1 rounded">
                                             {item.category}

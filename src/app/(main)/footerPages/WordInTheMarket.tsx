@@ -80,7 +80,7 @@ export default function WordInTheMarket() {
                     className="object-cover"
                   />
                   {/* Dark overlay for contrast if needed */}
-                  <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>
+                  <div className="absolute inset-0 -[#D80621]/10 group-hover:-[#D80621]/0 transition-colors"></div>
                 </div>
               </div>
 
@@ -89,7 +89,7 @@ export default function WordInTheMarket() {
                 <h3 className="text-[#cc2221] font-medium text-lg mb-3">
                   {item.title}
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-sm text-[#D80621] leading-relaxed">
                   {item.description}
                 </p>
               </div>

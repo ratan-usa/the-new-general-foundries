@@ -41,7 +41,7 @@ export default function LocationsManager({ vendorId }: { vendorId: string }) {
         {locations.map((loc) => (
           <div key={loc.id} className="flex items-center justify-between p-3 border rounded bg-gray-50">
             <div className="flex items-center gap-3">
-              <MapPin className="w-5 h-5 text-gray-500" />
+              <MapPin className="w-5 h-5 text-[#D80621]" />
               <span className="font-medium">{loc.city}, {loc.country}</span>
             </div>
             <Button variant="ghost" size="sm" onClick={() => handleRemove(loc.id)} className="text-red-600 hover:text-red-700 hover:bg-red-50">
@@ -49,13 +49,13 @@ export default function LocationsManager({ vendorId }: { vendorId: string }) {
             </Button>
           </div>
         ))}
-        {locations.length === 0 && <p className="text-gray-400 text-sm">No locations added yet.</p>}
+        {locations.length === 0 && <p className="text-[#D80621] text-sm">No locations added yet.</p>}
       </div>
 
       {/* Add New Item Input */}
       <div className="flex gap-2 items-end border-t pt-4">
         <div className="flex-1">
-          <label className="text-xs font-medium text-gray-500">Add New City</label>
+          <label className="text-xs font-medium text-[#D80621]">Add New City</label>
           <Input 
             value={newCity} 
             onChange={(e) => setNewCity(e.target.value)} 

@@ -64,10 +64,10 @@ const DEPARTMENTS = [
 
 export default function CareersPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans">
+    <div className="min-h-screen bg-white text-[#D80621] font-sans">
 
       {/* === HERO SECTION === */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center bg-slate-500 text-[#D80621] overflow-hidden">
         {/* Background Image Placeholder */}
         <div className="absolute inset-0 bg-slate-800">
           {/* Replace with <Image> of workers in safety gear */}
@@ -82,7 +82,7 @@ export default function CareersPage() {
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
             Build a Career of <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-300">Steel</span>
           </h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-[#D80621] max-w-2xl mx-auto mb-8">
             Join the team that builds the infrastructure of the modern world. Stable jobs, competitive pay, and a legacy you can be proud of.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -99,8 +99,8 @@ export default function CareersPage() {
       {/* === VALUES / CULTURE === */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4">Why Mega Foundries?</h2>
-          <p className="text-slate-600 max-w-2xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-[#D80621] mb-4">Why Mega Foundries?</h2>
+          <p className="text-[#D80621] max-w-2xl mx-auto mb-16">
             We don't just cast metal; we forge careers. Our culture is built on respect, safety, and the belief that every employee contributes to our success.
           </p>
 
@@ -110,8 +110,8 @@ export default function CareersPage() {
                 <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm mb-4 text-red-600">
                   <item.icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <h3 className="text-lg font-bold text-[#D80621] mb-2">{item.title}</h3>
+                <p className="text-sm text-[#D80621] leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -125,8 +125,8 @@ export default function CareersPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl font-bold text-slate-900">Open Roles</h2>
-              <p className="mt-2 text-slate-600">Find where you fit in our organization.</p>
+              <h2 className="text-3xl font-bold text-[#D80621]">Open Roles</h2>
+              <p className="mt-2 text-[#D80621]">Find where you fit in our organization.</p>
             </div>
             <Link href="/careers/all" className="hidden md:flex items-center gap-2 text-red-600 font-bold hover:text-red-700">
               View All 24 Openings <ArrowRight className="w-4 h-4" />
@@ -143,19 +143,19 @@ export default function CareersPage() {
 
                 {/* Content */}
                 <div className="flex-grow">
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-red-600 transition-colors">
+                  <h3 className="text-xl font-bold text-[#D80621] group-hover:text-red-600 transition-colors">
                     {dept.title}
                   </h3>
-                  <p className="text-sm text-slate-500 mt-1 mb-2">
+                  <p className="text-sm text-[#D80621] mt-1 mb-2">
                     {dept.desc}
                   </p>
-                  <span className="inline-flex items-center text-xs font-bold text-slate-400 bg-slate-100 px-2 py-1 rounded">
+                  <span className="inline-flex items-center text-xs font-bold text-[#D80621] bg-slate-100 px-2 py-1 rounded">
                     {dept.roleCount} Positions Available
                   </span>
                 </div>
 
                 {/* Arrow Icon */}
-                <div className="mt-4 sm:mt-0 opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all text-slate-400">
+                <div className="mt-4 sm:mt-0 opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all text-[#D80621]">
                   <ArrowRight className="w-6 h-6" />
                 </div>
               </div>
@@ -171,14 +171,14 @@ export default function CareersPage() {
       </section>
 
       {/* === EMPLOYEE TESTIMONIAL / SPOTLIGHT === */}
-      <section className="py-20 bg-slate-900 text-white">
+      <section className="py-20 bg-slate-500 text-[#D80621]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center gap-12">
 
             {/* Image Side */}
             <div className="w-full md:w-1/2">
               <div className="relative aspect-square md:aspect-[4/3] bg-slate-800 rounded-xl overflow-hidden border border-slate-700 shadow-2xl">
-                <div className="absolute inset-0 flex items-center justify-center text-slate-500">
+                <div className="absolute inset-0 flex items-center justify-center text-[#D80621]">
                   <Image
                     src={'/assets/image8.jpeg'}
                     alt="Case Study Image"
@@ -194,7 +194,7 @@ export default function CareersPage() {
             <div className="w-full md:w-1/2">
               <div className="flex items-center gap-2 text-yellow-500 mb-4">
                 {[1, 2, 3, 4, 5].map(i => <span key={i}>★</span>)}
-                <span className="text-slate-400 text-sm ml-2">Employee since 2012</span>
+                <span className="text-[#D80621] text-sm ml-2">Employee since 2012</span>
               </div>
               <blockquote className="text-2xl md:text-3xl font-medium leading-relaxed mb-6">
                 "I started as a shift operator 12 years ago. Mega Foundries paid for my engineering degree, and now I lead the Quality Control division. This is a place where hard work actually pays off."

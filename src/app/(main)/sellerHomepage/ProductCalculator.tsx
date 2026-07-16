@@ -47,7 +47,7 @@ export default function ProductCalculator() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
            
           <div className="text-center lg:text-left">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#D80621] mb-8 leading-tight">
               Simplify Complex Pricing with Our <br />
               <span className="text-[#cc2221]">Built-in Product Calculator..</span>
             </h2>
@@ -73,10 +73,10 @@ export default function ProductCalculator() {
                 </div>
  
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#cc2221] transition-colors">
+                  <h3 className="text-xl font-bold text-[#D80621] mb-2 group-hover:text-[#cc2221] transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-[#D80621] text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

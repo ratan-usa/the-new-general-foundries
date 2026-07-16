@@ -61,7 +61,7 @@ export default function SettingsPage() {
     <div className="space-y-6 max-w-4xl mx-auto pb-10">
       <div>
         <h3 className="text-2xl font-medium">Settings</h3>
-        <p className="text-sm text-slate-500">Manage your account settings and preferences.</p>
+        <p className="text-sm text-[#D80621]">Manage your account settings and preferences.</p>
       </div>
       
       <Tabs defaultValue="general" className="w-full">
@@ -82,11 +82,11 @@ export default function SettingsPage() {
               <div className="flex items-center gap-6">
                 <Avatar className="h-20 w-20 border-2 border-slate-100">
                     <AvatarImage src="/placeholder-user.jpg" />
-                    <AvatarFallback className="text-lg bg-slate-900 text-white">RP</AvatarFallback>
+                    <AvatarFallback className="text-lg bg-slate-500 text-[#D80621]">RP</AvatarFallback>
                 </Avatar>
                 <div>
                     <Button variant="outline" size="sm">Change Avatar</Button>
-                    <p className="text-xs text-slate-400 mt-2">JPG, GIF or PNG. 1MB max.</p>
+                    <p className="text-xs text-[#D80621] mt-2">JPG, GIF or PNG. 1MB max.</p>
                 </div>
               </div>
 

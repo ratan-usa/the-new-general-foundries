@@ -17,14 +17,14 @@ export default function CategoryList() {
         <div className="min-h-screen bg-white py-8">
  
             <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
-                <p className="text-sm font-bold text-gray-700">
+                <p className="text-sm font-bold text-[#D80621]">
                     <Link href={'/'} className="hover:text-[#cc2221]">Home</Link>
                     <span className="mx-2">/</span>
-                    <span className="text-gray-500 font-normal">All Categories</span>
+                    <span className="text-[#D80621] font-normal">All Categories</span>
                 </p>
             </div>
 
-            <div className="w-full px-4 sm:px-6 lg:px-10  mx-auto">
+            <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
 
                 {categories.map((category) => (
                     <div key={category.id} className="bg-white rounded-3xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col lg:flex-row h-auto lg:h-[600px]">
@@ -36,7 +36,7 @@ export default function CategoryList() {
                                 fill
                                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t -[#D80621]/60 -[#D80621]/20 to-transparent"></div>
  
                             <div className={`absolute top-6 left-0 px-6 py-2 rounded-r-full font-bold text-lg shadow-sm ${category.color || 'bg-gray-100 text-gray-900'}`}>
                                 {category.label}
@@ -64,10 +64,10 @@ export default function CategoryList() {
 
                                         {/* Content */}
                                         <div className="flex flex-col grow">
-                                            <h3 className="font-bold text-gray-900 text-lg mb-2 group-hover:text-[#cc2221] transition-colors">
+                                            <h3 className="font-bold text-[#D80621] text-lg mb-2 group-hover:text-[#cc2221] transition-colors">
                                                 {sub.name}
                                             </h3>
-                                            <p className="text-sm text-gray-500 leading-relaxed line-clamp-3">
+                                            <p className="text-sm text-[#D80621] leading-relaxed line-clamp-3">
                                                 {sub.description || `Explore our ${sub.name} solutions.`}
                                             </p>
                                         </div>
