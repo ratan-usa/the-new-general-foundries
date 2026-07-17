@@ -96,11 +96,11 @@ export default function CategoryMegaMenu() {
           onMouseEnter={() => handleTabChange('energy')}
           className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'energy' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700' }`}
         >
-          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#cc2221]' : 'text-gray-400'}`} />
+          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#D80621]' : 'text-gray-400'}`} />
           Energy
           {/* Red Underline Animation */}
           {activeTab === 'energy' && (
-            <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-[#cc2221]"></span>
+            <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-[#D80621]"></span>
           )}
         </button>
 
@@ -109,11 +109,11 @@ export default function CategoryMegaMenu() {
           onMouseEnter={() => handleTabChange('powerGen')}
           className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'powerGen' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700' }`}
         >
-          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#cc2221]' : 'text-gray-400'}`} />
+          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#D80621]' : 'text-gray-400'}`} />
           Power Generation
           {/* Red Underline Animation */}
           {activeTab === 'powerGen' && (
-            <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-[#cc2221]"></span>
+            <span className="absolute bottom-[-17px] left-0 w-full h-[2px] bg-[#D80621]"></span>
           )}
         </button>
       </div>
@@ -131,7 +131,7 @@ export default function CategoryMegaMenu() {
                 <li key={index}>
                   <button
                     onMouseEnter={() => setActiveCategoryIndex(index)}
-                    className={`w-full flex items-center justify-between px-6 py-3 text-sm font-bold transition-colors ${ isActive ? 'text-[#cc2221] bg-red-50/50' : 'text-gray-800 hover:text-[#cc2221]' }`}
+                    className={`w-full flex items-center justify-between px-6 py-3 text-sm font-bold transition-colors ${ isActive ? 'text-[#D80621] bg-red-50/50' : 'text-gray-800 hover:text-[#D80621]' }`}
                   >
                     <span>{cat.name}</span>
                     {isActive && <ChevronRight className="w-4 h-4" />}
@@ -151,7 +151,7 @@ export default function CategoryMegaMenu() {
                 <li key={index}>
                   <Link 
                     href={`/category/${item.toLowerCase().replace(/ /g, '-')}`}
-                    className={`block text-sm transition-colors ${ item === 'Electrical Equipment' ? 'text-[#cc2221] font-medium' : 'text-[#D80621] hover:text-[#cc2221]' }`}
+                    className={`block text-sm transition-colors ${ item === 'Electrical Equipment' ? 'text-[#D80621] font-medium' : 'text-[#D80621] hover:text-[#D80621]' }`}
                   >
                     {item}
                   </Link>

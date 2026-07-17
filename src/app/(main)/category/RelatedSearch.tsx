@@ -24,7 +24,7 @@ export default function RelatedSearch({ tags }: RelatedSearchProps) {
             // Creates a search URL or product link. 
             // You can change this to `/products/${slug}` if preferred.
             href={`/search?q=${encodeURIComponent(tag)}`}
-            className=" px-4 py-2 bg-white border border-gray-300 text-sm text-[#D80621] hover:text-[#cc2221] hover:border-[#cc2221] transition-colors duration-200 cursor-pointer "
+            className=" px-4 py-2 bg-white border border-gray-300 text-sm text-[#D80621] hover:text-[#D80621] hover:border-[#D80621] transition-colors duration-200 cursor-pointer "
           >
             {tag.toLowerCase()}
           </Link>

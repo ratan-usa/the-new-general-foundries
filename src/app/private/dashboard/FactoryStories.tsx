@@ -228,7 +228,7 @@ export default function FactoryStories() {
           </div>
 
           {/* Floating Plus Button */}
-          <div className="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#cc2221] rounded-full p-1 border-4 border-white shadow-sm">
+          <div className="absolute top-[65%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#D80621] rounded-full p-1 border-4 border-white shadow-sm">
             <Plus className="w-4 h-4 text-white" strokeWidth={3} />
           </div>
         </div>
@@ -254,7 +254,7 @@ export default function FactoryStories() {
             <div className="absolute inset-0 bg-gradient-to-b -[#D80621]/10 via-transparent -[#D80621]/70 pointer-events-none" />
 
             {/* Avatar Badge (Top Left) */}
-            <div className={` absolute top-2 left-2 rounded-full border-4 border-[#cc2221] p-[2px] bg-[#cc2221] ${story.isViewed ? 'border-slate-300 bg-slate-300' : ''} shadow-md `}>
+            <div className={` absolute top-2 left-2 rounded-full border-4 border-[#D80621] p-[2px] bg-[#D80621] ${story.isViewed ? 'border-slate-300 bg-slate-300' : ''} shadow-md `}>
               <Avatar className="w-8 h-8 md:w-9 md:h-9 border-2 border-white">
                 <AvatarImage src={story.vendorAvatar} />
                 <AvatarFallback>VN</AvatarFallback>

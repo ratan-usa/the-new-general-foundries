@@ -52,8 +52,8 @@ export default function WordInTheMarket() {
         {/* === HEADER === */}
         {/* Red vertical line + Title */}
         <div className="flex items-center gap-3 mb-10">
-          <div className="w-1 h-8 bg-[#cc2221]"></div>
-          <h2 className="text-xl md:text-2xl font-normal text-[#cc2221] uppercase tracking-wide">
+          <div className="w-1 h-8 bg-[#D80621]"></div>
+          <h2 className="text-xl md:text-2xl font-normal text-[#D80621] uppercase tracking-wide">
             WORD IN THE MARKET
           </h2>
         </div>
@@ -86,7 +86,7 @@ export default function WordInTheMarket() {
 
               {/* CONTENT */}
               <div className="pt-6 pr-4">
-                <h3 className="text-[#cc2221] font-medium text-lg mb-3">
+                <h3 className="text-[#D80621] font-medium text-lg mb-3">
                   {item.title}
                 </h3>
                 <p className="text-sm text-[#D80621] leading-relaxed">

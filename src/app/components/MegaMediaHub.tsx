@@ -41,11 +41,11 @@ export default function MegaMediaHub() {
         {/* --- HEADER LOGISTICS SECTION --- */}
         <div className="border-b border-gray-200 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 w-full">
           <div>
-            <span className="text-xs uppercase tracking-[0.4em] font-black text-[#cc2221] block mb-3">
+            <span className="text-xs uppercase tracking-[0.4em] font-black text-[#D80621] block mb-3">
               Technical Streaming Terminal
             </span>
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#D80621] leading-none">
-              Simulation <span className="text-[#cc2221]">& Lab Feeds</span>
+              Simulation <span className="text-[#D80621]">& Lab Feeds</span>
             </h2>
           </div>
           <p className="text-[#D80621] text-base font-light leading-relaxed max-w-xl">
@@ -58,12 +58,12 @@ export default function MegaMediaHub() {
           {VIDEO_RESOURCES.map((video) => (
             <div 
               key={video.id} 
-              className="flex flex-col bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-6 group hover:border-[#cc2221] hover:bg-white transition-all duration-300 shadow-sm"
+              className="flex flex-col bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-6 group hover:border-[#D80621] hover:bg-white transition-all duration-300 shadow-sm"
             >
               
               {/* Top Analytical Banner Strip */}
               <div className="flex items-center justify-between mb-4 border-b border-gray-200 pb-3">
-                <span className="text-[10px] font-mono tracking-widest text-[#cc2221] font-bold uppercase flex items-center gap-1.5">
+                <span className="text-[10px] font-mono tracking-widest text-[#D80621] font-bold uppercase flex items-center gap-1.5">
                   <Activity className="w-3.5 h-3.5" /> {video.badge}
                 </span>
                 <span className="text-[9px] font-mono tracking-wider text-[#D80621] uppercase">
@@ -85,7 +85,7 @@ export default function MegaMediaHub() {
               {/* CORE METADATA SPEC DATA BLOCK */}
               <div className="flex flex-col flex-grow justify-between space-y-6">
                 <div className="space-y-2">
-                  <h3 className="text-xl font-black uppercase tracking-tight text-[#D80621] group-hover:text-[#cc2221] transition-colors">
+                  <h3 className="text-xl font-black uppercase tracking-tight text-[#D80621] group-hover:text-[#D80621] transition-colors">
                     {video.title}
                   </h3>
                   <p className="text-xs text-[#D80621] font-mono uppercase tracking-wide">
@@ -99,7 +99,7 @@ export default function MegaMediaHub() {
                 {/* Direct Reference Technical Anchors */}
                 <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
                   <div className="flex items-center gap-1.5 text-[#D80621]">
-                    <Youtube className="w-4 h-4 text-[#cc2221]" />
+                    <Youtube className="w-4 h-4 text-[#D80621]" />
                     <span className="text-[10px] font-mono uppercase tracking-widest font-bold">HD Network Source</span>
                   </div>
                   
@@ -107,7 +107,7 @@ export default function MegaMediaHub() {
                     href={video.id === "hydraulic-grates" ? "https://www.youtube.com/watch?v=-TLP3uBB55o&t=785s" : "https://www.youtube.com/watch?v=WHO6G67GJbM"}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#cc2221] hover:text-[#D80621] border-b border-dashed border-[#cc2221] pb-0.5 transition-colors uppercase tracking-wider"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-[#D80621] hover:text-[#D80621] border-b border-dashed border-[#D80621] pb-0.5 transition-colors uppercase tracking-wider"
                   >
                     Launch Native Player <ExternalLink className="w-3 h-3" />
                   </a>

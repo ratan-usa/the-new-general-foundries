@@ -50,11 +50,11 @@ export default function SellerTools() {
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
 
         <div className="text-center mb-16 space-y-4">
-          <span className="text-[#cc2221] font-bold text-sm uppercase tracking-widest">
+          <span className="text-[#D80621] font-bold text-sm uppercase tracking-widest">
             Mega Foundries | PARTNER SUITE
           </span>
           <h2 className="text-[30px] md:text-[40px] font-bold text-[#D80621]">
-            Engineered for <span className="text-[#cc2221]">Modern Foundries</span>
+            Engineered for <span className="text-[#D80621]">Modern Foundries</span>
           </h2>
           <p className="text-[#D80621] max-w-2xl mx-auto text-xl">
             Transition from traditional job-work to a digitally integrated manufacturing hub.
@@ -71,9 +71,9 @@ export default function SellerTools() {
                 <div
                   key={tool.id}
                   onClick={() => setActiveTab(index)}
-                  className={` cursor-pointer group transition-all duration-300 border-l-4 pl-6 py-4 ${isActive ? 'border-[#cc2221] bg-red-50/30 rounded-r-lg' : 'border-transparent hover:border-red-100'} `}
+                  className={` cursor-pointer group transition-all duration-300 border-l-4 pl-6 py-4 ${isActive ? 'border-[#D80621] bg-red-50/30 rounded-r-lg' : 'border-transparent hover:border-red-100'} `}
                 >
-                  <h3 className={`text-xl font-bold transition-colors ${isActive ? 'text-[#cc2221]' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                  <h3 className={`text-xl font-bold transition-colors ${isActive ? 'text-[#D80621]' : 'text-gray-600 group-hover:text-gray-900'}`}>
                     {tool.number} {tool.title}
                   </h3>
 

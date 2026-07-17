@@ -28,7 +28,7 @@ const SearchBar = () => {
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <button
-                        className=" relative h-full shrink-0 pl-3 pr-7 text-xs font-semibold transition-colors duration-200 w-[200px] text-left cursor-pointer focus:outline-none /* === NORMAL STATE === */ bg-white -[#D80621] border-r border-[#CCCCCC] /* === HOVER STATE === */ hover:bg-[#cc2221] hover:text-white hover:border-[#cc2221] "
+                        className=" relative h-full shrink-0 pl-3 pr-7 text-xs font-semibold transition-colors duration-200 w-[200px] text-left cursor-pointer focus:outline-none /* === NORMAL STATE === */ bg-white -[#D80621] border-r border-[#CCCCCC] /* === HOVER STATE === */ hover:bg-[#D80621] hover:text-white hover:border-[#D80621] "
                     >
                         <span className="block w-full truncate">
                             {getSelectedLabel()}
@@ -52,7 +52,7 @@ const SearchBar = () => {
                     {/* "All" Option */}
                     <DropdownMenuItem
                         onClick={() => setSelectedId("all")}
-                        className=" cursor-pointer text-xs font-semibold px-3 py-2 text-[#D80621] rounded-none focus:bg-[#cc2221] focus:text-white "
+                        className=" cursor-pointer text-xs font-semibold px-3 py-2 text-[#D80621] rounded-none focus:bg-[#D80621] focus:text-white "
                     >
                         All
                     </DropdownMenuItem>
@@ -62,7 +62,7 @@ const SearchBar = () => {
                         <DropdownMenuItem
                             key={section.id}
                             onClick={() => setSelectedId(section.id)}
-                            className=" cursor-pointer text-xs font-semibold px-3 py-2 text-[#D80621] rounded-none focus:bg-[#cc2221] focus:text-white "
+                            className=" cursor-pointer text-xs font-semibold px-3 py-2 text-[#D80621] rounded-none focus:bg-[#D80621] focus:text-white "
                         >
                             {section.label}
                         </DropdownMenuItem>
@@ -78,7 +78,7 @@ const SearchBar = () => {
             />
 
             {/* === 3. BUTTON === */}
-            <Button className="h-full rounded-none px-6 bg-[#cc2221] hover:bg-red-700 text-white font-semibold text-xs uppercase tracking-wide">
+            <Button className="h-full rounded-none px-6 bg-[#D80621] hover:bg-red-700 text-white font-semibold text-xs uppercase tracking-wide">
                 Search
             </Button>
         </div>

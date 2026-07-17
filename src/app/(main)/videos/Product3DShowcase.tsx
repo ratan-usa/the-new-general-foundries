@@ -82,8 +82,8 @@ export default function Product3DShowcase() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6 w-full">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <Rotate3d className="text-[#cc2221] w-5 h-5 animate-spin-slow" />
-              <span className="text-[#cc2221] font-bold uppercase tracking-widest text-sm">
+              <Rotate3d className="text-[#D80621] w-5 h-5 animate-spin-slow" />
+              <span className="text-[#D80621] font-bold uppercase tracking-widest text-sm">
                 Interactive Showroom
               </span>
             </div>
@@ -94,7 +94,7 @@ export default function Product3DShowcase() {
 
           <Button 
             disabled
-            className="gap-2 font-black uppercase tracking-widest px-8 h-12 bg-[#cc2221] text-white animate-pulse opacity-100 cursor-default"
+            className="gap-2 font-black uppercase tracking-widest px-8 h-12 bg-[#D80621] text-white animate-pulse opacity-100 cursor-default"
           >
             <Play className="w-4 h-4 fill-current" />
             Looping Active
@@ -124,7 +124,7 @@ export default function Product3DShowcase() {
 
               {/* Minimal Top Layout Metadata overlay overlaying active performance logs */}
               <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-[#D80621]/80 backdrop-blur-sm border border-zinc-800 px-3 py-1.5">
-                <span className="w-2 h-2 bg-[#cc2221] rounded-full animate-ping shrink-0" />
+                <span className="w-2 h-2 bg-[#D80621] rounded-full animate-ping shrink-0" />
                 <span className="text-[10px] font-mono tracking-widest text-[#D80621] uppercase font-bold">
                   Autoloop Sequence Item 0{activeVideoIndex + 1}
                 </span>
@@ -134,7 +134,7 @@ export default function Product3DShowcase() {
             {/* Permanent Bottom Technical Specs Drawer */}
             <div className="mt-4 p-6 bg-slate-500/40 border border-zinc-900 rounded-none space-y-2">
               <div className="flex items-center gap-3">
-                <Badge variant="outline" className="text-[#cc2221] border-[#cc2221] bg-[#cc2221]/10 rounded-none uppercase text-[10px] tracking-wider font-black">
+                <Badge variant="outline" className="text-[#D80621] border-[#D80621] bg-[#D80621]/10 rounded-none uppercase text-[10px] tracking-wider font-black">
                   {activeVideo.type.replace('_', ' ')}
                 </Badge>
                 <span className="text-xs text-[#D80621] font-mono tracking-wide">{activeVideo.duration} Log Length</span>
@@ -162,7 +162,7 @@ export default function Product3DShowcase() {
                       className={cn(
                         "flex gap-4 p-3 rounded-none cursor-pointer transition-all border group items-center",
                         isCurrent 
-                          ? "bg-[#cc2221]/10 border-[#cc2221]" 
+                          ? "bg-[#D80621]/10 border-[#D80621]" 
                           : "-[#D80621] border-zinc-900 hover:border-zinc-700"
                       )}
                     >
@@ -176,14 +176,14 @@ export default function Product3DShowcase() {
                         />
                         {isCurrent && (
                           <div className="absolute inset-0 -[#D80621]/60 flex items-center justify-center z-10">
-                            <div className="w-2.5 h-2.5 bg-[#cc2221] rounded-full animate-ping" />
+                            <div className="w-2.5 h-2.5 bg-[#D80621] rounded-full animate-ping" />
                           </div>
                         )}
                       </div>
 
                       {/* Info Text Element */}
                       <div className="flex flex-col justify-center">
-                        <h5 className={cn("font-bold text-xs uppercase tracking-wide leading-tight mb-1 transition-colors", isCurrent ? "text-[#cc2221]" : "text-white group-hover:text-[#cc2221]")}>
+                        <h5 className={cn("font-bold text-xs uppercase tracking-wide leading-tight mb-1 transition-colors", isCurrent ? "text-[#D80621]" : "text-white group-hover:text-[#D80621]")}>
                           {video.title}
                         </h5>
                         <p className="text-[11px] text-[#D80621] line-clamp-1">{video.description}</p>

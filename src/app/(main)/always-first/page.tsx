@@ -23,7 +23,7 @@ const AboutSection = () => {
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
           Our Products
         </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#D80621] mb-2">
           MEGA FOUNDRIES - Products
         </p>
       </div>

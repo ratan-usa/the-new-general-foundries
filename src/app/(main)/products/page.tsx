@@ -19,7 +19,7 @@ export default function CatalogPage() {
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
           Our Product Category
         </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#D80621] mb-2">
           JUST HIGHER STANDARDS
         </p>
         <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">

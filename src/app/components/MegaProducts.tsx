@@ -16,10 +16,10 @@ export const MegaProducts = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 border-l-4 border-[#cc2221] pl-6"
+          className="mb-16 border-l-4 border-[#D80621] pl-6"
         >
           <h2 className="text-5xl font-black text-[#D80621] tracking-tighter uppercase">
-            New products <span className="text-[#cc2221]">Innovation's</span>
+            New products <span className="text-[#D80621]">Innovation's</span>
           </h2>
           <p className="text-[#D80621] mt-4 text-lg max-w-xl">
             Precision-engineered casting solutions for the world's most demanding infrastructure.
@@ -94,7 +94,7 @@ export const MegaProducts = () => {
 
                 {/* Main Content Info Block */}
                 <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-2xl font-bold text-[#D80621] mb-3 group-hover:text-[#cc2221] transition-colors">
+                  <h3 className="text-2xl font-bold text-[#D80621] mb-3 group-hover:text-[#D80621] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-[#D80621] mb-8 flex-grow leading-relaxed font-light">
@@ -103,7 +103,7 @@ export const MegaProducts = () => {
                   
                   <Link
                     href={`/categories/${item.slug}`}
-                    className="flex items-center justify-center gap-3 w-full py-4 bg-slate-50 rounded-2xl text-[#cc2221] font-black uppercase tracking-widest text-xs hover:bg-[#cc2221] hover:text-white transition-all duration-300"
+                    className="flex items-center justify-center gap-3 w-full py-4 bg-slate-50 rounded-2xl text-[#D80621] font-black uppercase tracking-widest text-xs hover:bg-[#D80621] hover:text-white transition-all duration-300"
                   >
                     View Details <ArrowRight size={16} />
                   </Link>

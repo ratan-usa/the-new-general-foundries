@@ -32,7 +32,7 @@ const MetricSection = () => {
                                  <div className="absolute inset-0 border border-neutral-300 rounded-full"></div>
                             </div>
 
-                            <div className="text-[14px] font-extrabold text-[#cc2221] mb-1">{metric.value}</div>
+                            <div className="text-[14px] font-extrabold text-[#D80621] mb-1">{metric.value}</div>
                             <p className="text-[10px] text-[#D80621] text-center">{metric.label}</p>
                         </div>
                     ))}
@@ -46,10 +46,10 @@ const MetricSection = () => {
 
 const ProductItemCard = ({ count, label }: ProductItemCardProps) => (
     <div
-        className={` shrink-0 rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-[#cc2221] w-[250px] h-[100px] flex flex-col justify-center items-center shadow-sm cursor-pointer `}
+        className={` shrink-0 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:scale-105 bg-white border border-white/20 w-[250px] h-[100px] flex flex-col justify-center items-center shadow-md cursor-pointer `}
     >
-        <p className={`font-extrabold text-white text-xl mb-1`}>{count}</p>
-        <p className={`text-center text-white text-[13px] leading-tight`}>{label}</p>
+        <p className={`font-extrabold text-[#D80621] text-xl mb-1`}>{count}</p>
+        <p className={`text-center text-[#D80621] text-[13px] leading-tight`}>{label}</p>
     </div>
 );
 
@@ -88,7 +88,7 @@ const ProductCarousel = () => {
     );
 
     return (
-        <section className="py-10 -[#D80621] ">
+        <section className="py-10 bg-[#D80621] ">
             <MetricSection />
             <div className="space-y-4 w-full">
                 <div

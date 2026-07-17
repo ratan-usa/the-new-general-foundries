@@ -93,12 +93,12 @@ export default function LiveStreamCommandCenter() {
             </h1>
 
             <div className="flex justify-center gap-6 text-xs text-[#D80621] font-mono mt-4">
-              <span className="flex items-center gap-1 "><span className="text-[#cc2221]">●</span> 54,201 FACTORIES <div className="text-[#cc2221]">ONLINE</div> </span>
+              <span className="flex items-center gap-1 "><span className="text-[#D80621]">●</span> 54,201 FACTORIES <div className="text-[#D80621]">ONLINE</div> </span>
               <span className="flex items-center gap-1"><span className="text-green-500">●</span> 98.4% UPTIME</span>
             </div>
             <div className="flex justify-center gap-6 text-xs text-[#D80621] mt-4">
             </div>
-            <span className="text-xl md:text-2xl font-bold bg-clip-text text-[#cc2221] mb-2 uppercase tracking-tight">FOLLOW YOUR PRODUCT BEING BORN & DELIVERED TO YOU LIVE <span className="text-sm "> (PRE-REGISTRATION REQUIRED) </span> </span>
+            <span className="text-xl md:text-2xl font-bold bg-clip-text text-white mb-2 uppercase tracking-tight">FOLLOW YOUR PRODUCT BEING BORN & DELIVERED TO YOU LIVE <span className="text-sm "> (PRE-REGISTRATION REQUIRED) </span> </span>
           </div>
 
           {/* THE INFINITE SCROLL FEED (Your main content) */}
@@ -110,7 +110,7 @@ export default function LiveStreamCommandCenter() {
           <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
 
             {/* 1. ANALYTICS GRAPH (Simulated Line Chart) */}
-            <div className="h-40 bg-slate-500/50 border border-[#cc2221] rounded-lg p-5 relative overflow-hidden group hover:border-[#cc2221]/50 transition-colors">
+            <div className="h-40 bg-slate-500/50 border border-[#D80621] rounded-lg p-5 relative overflow-hidden group hover:border-[#D80621]/50 transition-colors">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider">Overall Efficiency</h3>
@@ -124,11 +124,11 @@ export default function LiveStreamCommandCenter() {
               <div className="absolute bottom-0 left-0 right-0 h-16 opacity-50">
                 <svg className="w-full h-full" viewBox="0 0 100 20" preserveAspectRatio="none">
                   <path d="M0 15 Q 10 5, 20 12 T 40 10 T 60 5 T 80 12 T 100 8 L 100 20 L 0 20 Z" fill="url(#gradient)" />
-                  <path d="M0 15 Q 10 5, 20 12 T 40 10 T 60 5 T 80 12 T 100 8" fill="none" stroke="#cc2221" strokeWidth="0.5" />
+                  <path d="M0 15 Q 10 5, 20 12 T 40 10 T 60 5 T 80 12 T 100 8" fill="none" stroke="#D80621" strokeWidth="0.5" />
                   <defs>
                     <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#cc2221" stopOpacity="0.4" />
-                      <stop offset="100%" stopColor="#cc2221" stopOpacity="0" />
+                      <stop offset="0%" stopColor="#D80621" stopOpacity="0.4" />
+                      <stop offset="100%" stopColor="#D80621" stopOpacity="0" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -136,7 +136,7 @@ export default function LiveStreamCommandCenter() {
             </div>
 
             {/* 2. PRODUCTION OUTPUT (Progress Bars) */}
-            <div className="h-40 bg-slate-500/50 border border-[#cc2221] rounded-lg p-5 flex flex-col justify-between hover:border-[#cc2221]/50 transition-colors">
+            <div className="h-40 bg-slate-500/50 border border-[#D80621] rounded-lg p-5 flex flex-col justify-between hover:border-[#D80621]/50 transition-colors">
               <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider">Daily Production</h3>
 
               <div className="space-y-3">
@@ -147,7 +147,7 @@ export default function LiveStreamCommandCenter() {
                     <span className="text-white font-mono">1,240 / 1,500</span>
                   </div>
                   <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
-                    <div className="bg-[#cc2221] h-full rounded-full w-[82%]"></div>
+                    <div className="bg-[#D80621] h-full rounded-full w-[82%]"></div>
                   </div>
                 </div>
                 {/* Item 2 */}
@@ -164,12 +164,12 @@ export default function LiveStreamCommandCenter() {
             </div>
 
             {/* 3. ENERGY CONSUMPTION (Gauge/Stats) */}
-            <div className="h-40 bg-slate-500/50 border border-[#cc2221] rounded-lg p-5 hover:border-[#cc2221]/50 transition-colors">
+            <div className="h-40 bg-slate-500/50 border border-[#D80621] rounded-lg p-5 hover:border-[#D80621]/50 transition-colors">
               <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider mb-4">Grid Load</h3>
               <div className="flex items-center gap-4">
                 {/* Circular "Gauge" using CSS borders */}
                 <div className="relative w-16 h-16 rounded-full border-4 border-neutral-800 flex items-center justify-center">
-                  <div className="absolute inset-0 border-4 border-[#cc2221] rounded-full border-l-transparent border-b-transparent rotate-45"></div>
+                  <div className="absolute inset-0 border-4 border-[#D80621] rounded-full border-l-transparent border-b-transparent rotate-45"></div>
                   <span className="text-xs font-bold text-white">78%</span>
                 </div>
                 <div className="space-y-1">
@@ -181,7 +181,7 @@ export default function LiveStreamCommandCenter() {
             </div>
 
             {/* 4. LOGISTICS MAP (Dot Simulation) */}
-            <div className="h-40 bg-slate-500/50 border border-[#cc2221] rounded-lg p-5 relative overflow-hidden hover:border-[#cc2221]/50 transition-colors">
+            <div className="h-40 bg-slate-500/50 border border-[#D80621] rounded-lg p-5 relative overflow-hidden hover:border-[#D80621]/50 transition-colors">
               <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider relative z-10">Active Shipments</h3>
 
               {/* Fake Map Dots */}

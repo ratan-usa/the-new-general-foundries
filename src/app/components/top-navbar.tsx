@@ -36,7 +36,7 @@ const TopNavbar = () => {
   const [selectedCountry, setSelectedCountry] = useState(countryOptions[0])
   return (
     <div className='w-full relative z-50'>
-      <nav className="bg-neutral-800 text-neutral-200 w-full mx-auto shadow-md">
+      <nav className="bg-neutral-800 text-[#D80621] w-full mx-auto shadow-md">
 
         {/* Corrected lg:px-30 to lg:px-8 or standard container usage */}
         <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
@@ -47,7 +47,7 @@ const TopNavbar = () => {
             <div className="hidden lg:flex space-x-1 gap-6 items-center">
               {topMenuItems.map((item) => (
                 <Link
-                  className='text-xs hover:text-[#cc2221] transition-colors whitespace-nowrap'
+                  className='text-xs hover:text-[#D80621] transition-colors whitespace-nowrap'
                   key={item.label}
                   href={item.href}
                 >
@@ -61,7 +61,7 @@ const TopNavbar = () => {
             <div className="lg:hidden flex items-center">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-[#D80621] hover:text-[#cc2221] focus:outline-none"
+                className="text-[#D80621] hover:text-[#D80621] focus:outline-none"
               >
                 {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -73,7 +73,7 @@ const TopNavbar = () => {
 
               {/* --- LANGUAGE DROPDOWN --- */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-xs hover:text-[#cc2221] transition-colors outline-none">
+                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-xs hover:text-[#D80621] transition-colors outline-none">
                   {/* Shows the SELECTED flag and label */}
                   <span className="text-xs">{selectedLang.flag}</span>
                   {selectedLang.label}
@@ -95,7 +95,7 @@ const TopNavbar = () => {
 
               {/* --- COUNTRY DROPDOWN --- */}
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-xs hover:text-[#cc2221] transition-colors outline-none">
+                <DropdownMenuTrigger className="flex items-center justify-center gap-1.5 text-xs hover:text-[#D80621] transition-colors outline-none">
                   <span className="text-xs">{selectedCountry.flag}</span>
                   {selectedCountry.label}
                   <ChevronDown className="w-3 h-3 opacity-50" />
@@ -129,7 +129,7 @@ const TopNavbar = () => {
               {topMenuItems.map((item) => (
                 <Link
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className='text-xs text-neutral-300 hover:text-[#cc2221] transition-colors'
+                  className='text-xs text-neutral-300 hover:text-[#D80621] transition-colors'
                   key={item.label}
                   href={item.href}
                 >
@@ -143,15 +143,15 @@ const TopNavbar = () => {
             {/* Mobile Settings & Socials */}
             <div className="flex flex-col gap-3">
               <div className="flex justify-between">
-                <Link href={''} className='flex items-center gap-1.5 text-xs hover:text-[#cc2221]'>English-USD <ChevronDown className="w-3 h-3" /></Link>
-                <Link href={''} className='flex items-center gap-1.5 text-xs hover:text-[#cc2221]'>Country <ChevronDown className="w-3 h-3" /></Link>
+                <Link href={''} className='flex items-center gap-1.5 text-xs hover:text-[#D80621]'>English-USD <ChevronDown className="w-3 h-3" /></Link>
+                <Link href={''} className='flex items-center gap-1.5 text-xs hover:text-[#D80621]'>Country <ChevronDown className="w-3 h-3" /></Link>
               </div>
 
               <div className="flex gap-4 justify-start mt-2">
-                <Link href={'/'}><Linkedin className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-                <Link href={'/'}><Facebook className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-                <Link href={'/'}><Instagram className='w-4 h-4 hover:text-[#cc2221]' /></Link>
-                <Link href={'/'}><Twitter className='w-4 h-4 hover:text-[#cc2221]' /></Link>
+                <Link href={'/'}><Linkedin className='w-4 h-4 hover:text-[#D80621]' /></Link>
+                <Link href={'/'}><Facebook className='w-4 h-4 hover:text-[#D80621]' /></Link>
+                <Link href={'/'}><Instagram className='w-4 h-4 hover:text-[#D80621]' /></Link>
+                <Link href={'/'}><Twitter className='w-4 h-4 hover:text-[#D80621]' /></Link>
               </div>
             </div>
           </div>

@@ -94,11 +94,11 @@ const MaterialsHelpCenter = () => {
               href={item.href}
               className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 border border-gray-100 flex flex-col items-start"
             >
-              <div className="mb-6 p-3 bg-red-50 rounded-lg group-hover:bg-[#cc2221] transition-colors duration-300">
-                <item.icon className="w-8 h-8 text-[#cc2221] group-hover:text-white transition-colors duration-300" />
+              <div className="mb-6 p-3 bg-red-50 rounded-lg group-hover:bg-[#D80621] transition-colors duration-300">
+                <item.icon className="w-8 h-8 text-[#D80621] group-hover:text-white transition-colors duration-300" />
               </div>
 
-              <h3 className="text-xl font-bold text-[#D80621] mb-3 group-hover:text-[#cc2221] text-xl transition-colors">
+              <h3 className="text-xl font-bold text-[#D80621] mb-3 group-hover:text-[#D80621] text-xl transition-colors">
                 {item.title}
               </h3>
 
@@ -106,7 +106,7 @@ const MaterialsHelpCenter = () => {
                 {item.description}
               </p>
 
-              <div className="flex items-center text-[#cc2221] font-semibold mt-auto text-xl group-hover:translate-x-1 transition-transform">
+              <div className="flex items-center text-[#D80621] font-semibold mt-auto text-xl group-hover:translate-x-1 transition-transform">
                 Explore Specs <ArrowRight className="ml-2 w-4 h-4" />
               </div>
             </Link>
@@ -116,7 +116,7 @@ const MaterialsHelpCenter = () => {
 
       <section className="text-center py-12 pb-24">
         <p className="text-[#D80621] mb-4">Can't find what you are looking for?</p>
-        <Button className="bg-[#cc2221] hover:bg-red-700 text-white px-8 py-6 text-lg rounded-full">
+        <Button className="bg-[#D80621] hover:bg-red-700 text-white px-8 py-6 text-lg rounded-full">
           Contact Our Engineering Team
         </Button>
       </section>

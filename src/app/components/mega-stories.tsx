@@ -70,7 +70,7 @@ export function MegaStories() {
     <section className="w-full px-4 md:px-8 py-12 bg-white">
 
       <div className="flex items-center justify-between mb-8">
-        <h2 className="text-3xl font-bold tracking-tight text-[#cc2221] uppercase border-l-4 -[#D80621] pl-4">
+        <h2 className="text-3xl font-bold tracking-tight text-[#D80621] uppercase border-l-4 -[#D80621] pl-4">
           Casting zone
         </h2>
         <Button variant="outline" className="hidden sm:flex group -[#D80621] -[#D80621] hover:bg-zinc-100">
@@ -120,12 +120,12 @@ export function MegaStories() {
                 {/* Content Wrapper */}
                 <div className="absolute bottom-0 left-0 pt-8 z-20 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100">
                   <div className="flex justify-between items-start">
-                    <Badge className="mb-2 bg-transparent border border-[#cc2221] text-[#cc2221] hover:bg-[#cc2221] hover:text-white rounded-none px-2 py-0.5">
+                    <Badge className="mb-2 bg-transparent border border-[#D80621] text-[#D80621] hover:bg-[#D80621] hover:text-white rounded-none px-2 py-0.5">
                       TOP SELLER
                     </Badge>
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-black leading-tight text-[#cc2221] mb-2 uppercase tracking-tight">
+                  <h3 className="text-2xl md:text-3xl font-black leading-tight text-[#D80621] mb-2 uppercase tracking-tight">
                     {heroProduct.title}
                   </h3>
                   
@@ -168,7 +168,7 @@ export function MegaStories() {
 
                   <CardContent className="flex-1 p-4 flex flex-col justify-between bg-white">
                     <div>
-                      <h4 className="font-bold text-sm md:text-base leading-snug line-clamp-2 text-[#cc2221] group-hover:text-orange-600 transition-colors uppercase ">
+                      <h4 className="font-bold text-sm md:text-base leading-snug line-clamp-2 text-[#D80621] group-hover:text-orange-600 transition-colors uppercase ">
                         {product.title}
                       </h4>
                     </div>

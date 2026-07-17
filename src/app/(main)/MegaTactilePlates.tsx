@@ -14,12 +14,12 @@ export default function MegaTactilePlates() {
         {/* --- SECTION HEADER --- */}
         <div className="border-b border-gray-200 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 w-full">
           <div>
-            <span className="text-xs uppercase tracking-[0.4em] font-black text-[#cc2221] block mb-3">
+            <span className="text-xs uppercase tracking-[0.4em] font-black text-[#D80621] block mb-3">
               Infrastructure Accessibility Index
             </span>
             <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#D80621] leading-none">
               Tactile Plates <br />
-              <span className="text-[#cc2221]">Detectable Warnings</span>
+              <span className="text-[#D80621]">Detectable Warnings</span>
             </h2>
           </div>
           <p className="text-[#D80621] text-base font-light leading-relaxed max-w-xl">
@@ -34,8 +34,8 @@ export default function MegaTactilePlates() {
           <div className="lg:col-span-8 space-y-8 w-full">
 
             {/* Feature 1 */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#cc2221] hover:bg-white transition-all duration-300">
-              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-[#cc2221] shrink-0">
+            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#D80621] hover:bg-white transition-all duration-300">
+              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-[#D80621] shrink-0">
                 <Accessibility className="w-5 h-5" />
               </div>
               <div>
@@ -49,8 +49,8 @@ export default function MegaTactilePlates() {
             </div>
 
             {/* Feature 2 */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#cc2221] hover:bg-white transition-all duration-300">
-              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-[#cc2221] shrink-0">
+            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#D80621] hover:bg-white transition-all duration-300">
+              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-[#D80621] shrink-0">
                 <Grip className="w-5 h-5" />
               </div>
               <div>
@@ -64,8 +64,8 @@ export default function MegaTactilePlates() {
             </div>
 
             {/* Feature 3 */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#cc2221] hover:bg-white transition-all duration-300">
-              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-[#cc2221] shrink-0">
+            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#D80621] hover:bg-white transition-all duration-300">
+              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-[#D80621] shrink-0">
                 <ShieldAlert className="w-5 h-5" />
               </div>
               <div>
@@ -83,7 +83,7 @@ export default function MegaTactilePlates() {
           {/* RIGHT COLUMN: CAD SPEC FRAMEWORK (Reduced to 4 Columns Wide for a slightly smaller layout display) */}
           <div className="lg:col-span-4 w-full flex flex-col gap-6 items-center lg:items-end">
 
-            <div className="relative w-full aspect-square bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-4 flex items-center justify-center group shadow-inner hover:border-[#cc2221] transition-colors duration-300">
+            <div className="relative w-full aspect-square bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-4 flex items-center justify-center group shadow-inner hover:border-[#D80621] transition-colors duration-300">
 
               {/* Static Asset Visual - Visibility fixed by clearing transparency filters */}
               <div className="relative w-full h-full opacity-100">
@@ -111,7 +111,7 @@ export default function MegaTactilePlates() {
 
             {/* Specification Configuration Output Trigger */}
             <div className="w-full">
-              <Button className="w-full bg-[#cc2221] hover:bg-[#b01e1d] text-white font-black uppercase tracking-widest text-xs h-12 rounded-none transition-all duration-200 flex items-center justify-center gap-2">
+              <Button className="w-full bg-[#D80621] hover:bg-[#b01e1d] text-white font-black uppercase tracking-widest text-xs h-12 rounded-none transition-all duration-200 flex items-center justify-center gap-2">
                 Download ADA Blueprint Matrices <ArrowUpRight className="w-4 h-4" />
               </Button>
             </div>

@@ -44,7 +44,7 @@ const AboutSection = () => {
         <h2 className="text-[40px] pb-12 font-extrabold tracking-tight text-white mb-8">
           About US
         </h2>
-        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+        <p className="text-[20px] py-5 font-semibold uppercase tracking-widest text-[#D80621] mb-2">
           MEGA FOUNDRIES - FOR THE INDUSTRY
         </p>
         <h3 className="text-[25px] sm:text-4xl font-bold max-w-4xl mx-auto mb-16">
@@ -60,7 +60,7 @@ const AboutSection = () => {
             >
               <CardHeader className="flex flex-col items-center pt-10 pb-4">
                 <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
-                  <feature.icon className="w-8 h-8 text-[#cc2221]" />
+                  <feature.icon className="w-8 h-8 text-[#D80621]" />
                 </div>
                 <CardTitle className="text-[20px] font-semibold text-[#D80621]">
                   {feature.title}

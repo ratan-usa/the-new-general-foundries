@@ -46,7 +46,7 @@ export default function CommonQuestions() {
         {/* === HEADER === */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-[#D80621]">
-            Common <span className="text-[#cc2221]">Questions</span>
+            Common <span className="text-[#D80621]">Questions</span>
           </h2>
         </div>
 
@@ -61,7 +61,7 @@ export default function CommonQuestions() {
                 {/* Question Bar */}
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className={` w-full flex items-center justify-between p-5 text-left transition-all duration-200 bg-gray-50 hover:bg-gray-100 border-l-[6px] ${isOpen ? 'border-[#cc2221]' : 'border-[#cc2221]'} /* Note: The image shows red border for all items, even closed ones */ `}
+                  className={` w-full flex items-center justify-between p-5 text-left transition-all duration-200 bg-gray-50 hover:bg-gray-100 border-l-[6px] ${isOpen ? 'border-[#D80621]' : 'border-[#D80621]'} /* Note: The image shows red border for all items, even closed ones */ `}
                 >
                   <span className="text-lg font-medium text-[#D80621]">
                     <span className="font-bold text-[#D80621] mr-2">Q:</span> 

@@ -36,7 +36,7 @@ const FixedQuoteBtn = () => {
       <div className="fixed top-30 right-0 z-[9999]">
         <Link
           href="/quote"
-          className=" flex items-center gap-2 bg-[#cc2221] hover:bg-[#b01e1d] text-white font-bold py-3 px-8 rounded-t-lg shadow-[0_0_10px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out origin-bottom-right rotate-[-90deg] translate-y-[50%] translate-x-0 "
+          className=" flex items-center gap-2 bg-[#D80621] hover:bg-[#b01e1d] text-white font-bold py-3 px-8 rounded-t-lg shadow-[0_0_10px_rgba(0,0,0,0.3)] transition-all duration-300 ease-in-out origin-bottom-right rotate-[-90deg] translate-y-[50%] translate-x-0 "
         >
           <span>Connect with us</span>
         </Link>
@@ -54,7 +54,7 @@ const FixedQuoteBtn = () => {
         <Link
           href="https://wa.me/15127828880"
           target="_blank"
-          className=" w-12 h-12 flex items-center justify-center bg-[#cc2221] hover:bg-[#b01e1d] text-white rounded-full shadow-lg shadow-[#cc2221]/30 transition-transform hover:scale-110 "
+          className=" w-12 h-12 flex items-center justify-center bg-[#D80621] hover:bg-[#b01e1d] text-white rounded-full shadow-lg shadow-[#D80621]/30 transition-transform hover:scale-110 "
           title="Chat on WhatsApp"
         >
           <MessageCircle className="w-6 h-6" />
@@ -63,7 +63,7 @@ const FixedQuoteBtn = () => {
         {/* B. Phone Call */}
         <Link
           href="tel:+15127828880"
-          className=" w-12 h-12 flex items-center justify-center bg-[#cc2221] hover:bg-[#b01e1d] text-white rounded-full shadow-lg shadow-[#cc2221]/30 transition-transform hover:scale-110 "
+          className=" w-12 h-12 flex items-center justify-center bg-[#D80621] hover:bg-[#b01e1d] text-white rounded-full shadow-lg shadow-[#D80621]/30 transition-transform hover:scale-110 "
           title="Call Us"
         >
           <Phone className="w-5 h-5" />
@@ -72,7 +72,7 @@ const FixedQuoteBtn = () => {
         {/* C. Email */}
         <Link
           href="mailto:sales@megafoundries.com"
-          className=" w-12 h-12 flex items-center justify-center bg-[#cc2221] hover:bg-[#b01e1d] text-white rounded-full shadow-lg shadow-[#cc2221]/30 transition-transform hover:scale-110 "
+          className=" w-12 h-12 flex items-center justify-center bg-[#D80621] hover:bg-[#b01e1d] text-white rounded-full shadow-lg shadow-[#D80621]/30 transition-transform hover:scale-110 "
           title="Send Email"
         >
           <Mail className="w-5 h-5" />

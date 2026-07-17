@@ -33,7 +33,7 @@ const EngagementAnalytics = () => {
 
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-normal text-[#D80621]">
-                        Engagement <span className="text-[#cc2221]">Analytics</span>
+                        Engagement <span className="text-[#D80621]">Analytics</span>
                     </h2>
                 </div>
 
@@ -47,8 +47,8 @@ const EngagementAnalytics = () => {
                             >
                                 <defs>
                                     <linearGradient id="colorProduct" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="5%" stopColor="#cc2221" stopOpacity={0.8} />
-                                        <stop offset="95%" stopColor="#cc2221" stopOpacity={0.1} />
+                                        <stop offset="5%" stopColor="#D80621" stopOpacity={0.8} />
+                                        <stop offset="95%" stopColor="#D80621" stopOpacity={0.1} />
                                     </linearGradient>
                                     <linearGradient id="colorMarket" x1="0" y1="0" x2="0" y2="1">
                                         <stop offset="5%" stopColor="#808080" stopOpacity={0.8} />
@@ -89,8 +89,8 @@ const EngagementAnalytics = () => {
                                 <Area
                                     type="monotone"
                                     dataKey="product"
-                                    stroke="#cc2221"
-                                    fill="#cc2221"
+                                    stroke="#D80621"
+                                    fill="#D80621"
                                     fillOpacity={0.5}
                                     strokeWidth={0}
                                     activeDot={{ r: 6 }}

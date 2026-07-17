@@ -32,7 +32,7 @@ const MetricSection = () => {
                                  <div className="absolute inset-0 border border-neutral-300 rounded-full"></div>
                             </div>
 
-                            <div className="text-[14px] font-extrabold text-[#cc2221] mb-1">{metric.value}</div>
+                            <div className="text-[14px] font-extrabold text-[#D80621] mb-1">{metric.value}</div>
                             <p className="text-[10px] text-[#D80621] text-center">{metric.label}</p>
                         </div>
                     ))}
@@ -46,7 +46,7 @@ const MetricSection = () => {
 
 const ProductItemCard = ({ count, label }: ProductItemCardProps) => (
     <div
-        className={` shrink-0 rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-[#cc2221] w-[250px] h-[100px] flex flex-col justify-center items-center shadow-sm cursor-pointer `}
+        className={` shrink-0 rounded-xl p-4 transition-shadow duration-300 hover:shadow-lg bg-[#D80621] w-[250px] h-[100px] flex flex-col justify-center items-center shadow-sm cursor-pointer `}
     >
         <p className={`font-extrabold text-white text-xl mb-1`}>{count}</p>
         <p className={`text-center text-white text-[13px] leading-tight`}>{label}</p>

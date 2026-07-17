@@ -26,7 +26,7 @@ export default function CategoryProductLinks({ items }: CategoryProductLinksProp
               key={index} 
               // Direct link to the product page
               href={`/products/${slug}`}
-              className=" px-4 py-2 bg-white border border-gray-200 text-sm text-[#D80621] hover:text-[#cc2221] hover:border-[#cc2221] hover:shadow-sm transition-all duration-200 cursor-pointer rounded-md "
+              className=" px-4 py-2 bg-white border border-gray-200 text-sm text-[#D80621] hover:text-[#D80621] hover:border-[#D80621] hover:shadow-sm transition-all duration-200 cursor-pointer rounded-md "
             >
               {item}
             </Link>

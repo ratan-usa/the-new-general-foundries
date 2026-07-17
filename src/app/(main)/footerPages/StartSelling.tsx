@@ -37,7 +37,7 @@ export default function StartSelling() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#D80621]">
-            Start Selling Smarter with <span className="text-[#cc2221]">Mega Foundries?</span>
+            Start Selling Smarter with <span className="text-[#D80621]">Mega Foundries?</span>
           </h2>
         </div>
 
@@ -62,7 +62,7 @@ export default function StartSelling() {
               {features.map((feature, index) => (
                 <div key={index} className="flex flex-col items-start">
                   {/* Icon */}
-                  <feature.icon className="w-10 h-10 text-[#cc2221] mb-4" strokeWidth={2} />
+                  <feature.icon className="w-10 h-10 text-[#D80621] mb-4" strokeWidth={2} />
                   
                   {/* Title */}
                   <h3 className="text-xl font-bold text-[#D80621] mb-3">
@@ -80,7 +80,7 @@ export default function StartSelling() {
             {/* CTA Button */}
             <div className="mt-12 text-center lg:text-right">
               <Link href="/seller-registration">
-                <Button className="bg-[#cc2221] hover:bg-red-700 text-white font-bold px-8 py-6 text-lg rounded-md shadow-md transition-transform hover:-translate-y-1">
+                <Button className="bg-[#D80621] hover:bg-red-700 text-white font-bold px-8 py-6 text-lg rounded-md shadow-md transition-transform hover:-translate-y-1">
                   Join As Supplier
                 </Button>
               </Link>

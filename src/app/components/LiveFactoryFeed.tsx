@@ -34,7 +34,7 @@ export default function LiveFactoryFeed() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
           <div className="text-center md:text-left">
             <h2 className="text-3xl font-bold flex items-center justify-center md:justify-start gap-3">
-              <Signal className="text-[#cc2221] animate-pulse" /> 
+              <Signal className="text-[#D80621] animate-pulse" /> 
               Global Live Operations
             </h2>
             <p className="text-[#D80621] mt-2">
@@ -48,7 +48,7 @@ export default function LiveFactoryFeed() {
             <input 
               type="text" 
               placeholder="Search by Factory or Country..." 
-              className="w-full pl-10 pr-4 py-2 bg-neutral-800 border border-neutral-700 rounded-full focus:border-[#cc2221] focus:outline-none text-sm transition-colors"
+              className="w-full pl-10 pr-4 py-2 bg-neutral-800 border border-neutral-700 rounded-full focus:border-[#D80621] focus:outline-none text-sm transition-colors"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
@@ -59,7 +59,7 @@ export default function LiveFactoryFeed() {
           {filteredStreams.map((stream) => (
             <div 
               key={stream.id} 
-              className="group relative bg-neutral-800 rounded-xl overflow-hidden cursor-pointer border border-neutral-700 hover:border-[#cc2221] transition-all hover:-translate-y-1"
+              className="group relative bg-neutral-800 rounded-xl overflow-hidden cursor-pointer border border-neutral-700 hover:border-[#D80621] transition-all hover:-translate-y-1"
               onClick={() => setSelectedStream(stream)}
             >
               {/* Thumbnail */}
@@ -72,7 +72,7 @@ export default function LiveFactoryFeed() {
                 {/* <Image src={stream.thumbnail} alt={stream.name} fill className="object-cover opacity-80 group-hover:opacity-100 transition-opacity" /> */}
                 
                 {/* Overlay Badge */}
-                <div className="absolute top-3 left-3 bg-[#cc2221] text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1 shadow-lg">
+                <div className="absolute top-3 left-3 bg-[#D80621] text-white text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1 shadow-lg">
                   <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" /> LIVE
                 </div>
 
@@ -100,7 +100,7 @@ export default function LiveFactoryFeed() {
           <DialogContent className="-[#D80621] border-neutral-800 text-white max-w-4xl p-0 overflow-hidden">
             <DialogHeader className="p-4 absolute top-0 left-0 z-10 w-full bg-gradient-to-b -[#D80621]/80 to-transparent">
               <DialogTitle className="text-sm font-medium flex items-center gap-2">
-                <span className="w-2 h-2 bg-[#cc2221] rounded-full animate-pulse" /> 
+                <span className="w-2 h-2 bg-[#D80621] rounded-full animate-pulse" /> 
                 {selectedStream?.name}
               </DialogTitle>
             </DialogHeader>

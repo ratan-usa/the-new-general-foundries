@@ -50,14 +50,14 @@ export default function AiRobotics() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
 
               {/* Animated Badge */}
-              <div className="absolute bottom-8 left-8 flex items-center gap-3 bg-[#cc2221] px-6 py-3 rounded-full shadow-xl">
+              <div className="absolute bottom-8 left-8 flex items-center gap-3 bg-[#D80621] px-6 py-3 rounded-full shadow-xl">
                 <Zap className="animate-pulse text-white" size={20} />
                 <span className="font-bold tracking-tighter uppercase text-sm text-white">Industry 4.0 Active</span>
               </div>
             </div>
 
             {/* Glow Effect */}
-            <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#cc2221] rounded-full blur-[120px] opacity-20" />
+            <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#D80621] rounded-full blur-[120px] opacity-20" />
           </motion.div>
 
           {/* Right Side: Content */}

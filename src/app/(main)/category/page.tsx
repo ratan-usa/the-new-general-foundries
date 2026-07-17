@@ -18,7 +18,7 @@ export default function CategoryList() {
  
             <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
                 <p className="text-sm font-bold text-[#D80621]">
-                    <Link href={'/'} className="hover:text-[#cc2221]">Home</Link>
+                    <Link href={'/'} className="hover:text-[#D80621]">Home</Link>
                     <span className="mx-2">/</span>
                     <span className="text-[#D80621] font-normal">All Categories</span>
                 </p>
@@ -64,7 +64,7 @@ export default function CategoryList() {
 
                                         {/* Content */}
                                         <div className="flex flex-col grow">
-                                            <h3 className="font-bold text-[#D80621] text-lg mb-2 group-hover:text-[#cc2221] transition-colors">
+                                            <h3 className="font-bold text-[#D80621] text-lg mb-2 group-hover:text-[#D80621] transition-colors">
                                                 {sub.name}
                                             </h3>
                                             <p className="text-sm text-[#D80621] leading-relaxed line-clamp-3">
@@ -80,7 +80,7 @@ export default function CategoryList() {
                                 <Link href={`/category/${category.id}`}>
                                     <Button
                                         variant="ghost"
-                                        className="text-[#cc2221] hover:text-[#a01b1b] hover:bg-red-50 font-semibold flex items-center gap-2 px-4"
+                                        className="text-[#D80621] hover:text-[#a01b1b] hover:bg-red-50 font-semibold flex items-center gap-2 px-4"
                                     >
                                         View More <ChevronDown className="w-4 h-4" />
                                     </Button>

@@ -51,7 +51,7 @@ const AboutSection = () => {
 
         {/* === 3. CONTENT WRAPPER === */}
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <p className="text-[20px] font-semibold uppercase tracking-widest text-[#cc2221] mb-2">
+          <p className="text-[20px] font-semibold uppercase tracking-widest text-[#D80621] mb-2">
             MEGA FOUNDRIES - FOR THE INDUSTRY
           </p>
           {/* MOBILE CARD EFFECT: Adds a white glass box on mobile only so text is readable */}
@@ -69,7 +69,7 @@ const AboutSection = () => {
             </h1>
 
             {/* Quote */}
-            <p className="text-[14px] md:text-[22px] text-[#cc2221] font-medium italic mt-4 mb-6">
+            <p className="text-[14px] md:text-[22px] text-[#D80621] font-medium italic mt-4 mb-6">
               ROLLS ROYCE FROM BRITIAN
             </p>
 

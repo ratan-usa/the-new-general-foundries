@@ -100,7 +100,7 @@ export default function DashboardPage() {
   if (loading) {
       return (
         <div className="h-[80vh] flex flex-col items-center justify-center gap-2">
-            <Loader2 className="animate-spin text-[#cc2221] w-10 h-10" />
+            <Loader2 className="animate-spin text-[#D80621] w-10 h-10" />
             <p className="text-[#D80621]">Loading Dashboard...</p>
         </div>
       );
@@ -121,7 +121,7 @@ export default function DashboardPage() {
         </div>
         <div className="flex gap-2">
             <Button variant="outline">Download Report</Button>
-            <Button className="bg-[#cc2221] hover:bg-red-700">
+            <Button className="bg-[#D80621] hover:bg-red-700">
                 <ShieldCheck className="w-4 h-4 mr-2"/> Verify Identity
             </Button>
         </div>
@@ -130,12 +130,12 @@ export default function DashboardPage() {
       {/* --- STATS GRID --- */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat, i) => (
-          <Card key={i} className="shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-transparent hover:border-t-[#cc2221]">
+          <Card key={i} className="shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-transparent hover:border-t-[#D80621]">
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
               <CardTitle className="text-sm font-medium text-[#D80621]">
                 {stat.title}
               </CardTitle>
-              <stat.icon className="h-4 w-4 text-[#cc2221]" />
+              <stat.icon className="h-4 w-4 text-[#D80621]" />
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold text-[#D80621]">{stat.value}</div>
