@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-// --- CUSTOM CONTENT FOR MEGA FOUNDRIES (Zero Plagiarism) ---
+// --- CUSTOM CONTENT FOR CANADA FOUNDRIES (Zero Plagiarism) ---
 const tools = [
   {
     id: 1,
@@ -51,7 +51,7 @@ export default function SellerTools() {
 
         <div className="text-center mb-16 space-y-4">
           <span className="text-[#D80621] font-bold text-sm uppercase tracking-widest">
-            Mega Foundries | PARTNER SUITE
+            Canada Foundries | PARTNER SUITE
           </span>
           <h2 className="text-[30px] md:text-[40px] font-bold text-[#D80621]">
             Engineered for <span className="text-[#D80621]">Modern Foundries</span>

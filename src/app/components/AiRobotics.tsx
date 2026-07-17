@@ -71,7 +71,7 @@ export default function AiRobotics() {
               The Future is <span className="text-[#c0c0c0]">Automated</span>
             </motion.h2>
             <p className="text-[#c0c0c0] text-lg mb-12 leading-relaxed">
-              Mega Foundries is leading the transition to Industry 4.0. We integrate neural networks and robotic precision to eliminate human error and maximize casting efficiency.
+              Canada Foundries is leading the transition to Industry 4.0. We integrate neural networks and robotic precision to eliminate human error and maximize casting efficiency.
             </p>
 
             <div className="space-y-6">

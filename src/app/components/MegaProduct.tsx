@@ -127,7 +127,7 @@ const MegaProduct = () => {
         {/* Header Section */}
         <div className="border-b border-zinc-800 pb-6 mb-10">
           <h2 className="text-3xl font-light tracking-wide text-white mb-2">
-            Explore <span className="font-semibold text-[#D80621]">Mega Foundries</span> Products
+            Explore <span className="font-semibold text-[#D80621]">Canada Foundries</span> Products
           </h2>
           <p className="text-sm text-[#D80621]">
             Complete line of world-class nodular ductile iron castings (Fe 50007), delivering ultimate durability and engineering modernity to your infrastructure projects.

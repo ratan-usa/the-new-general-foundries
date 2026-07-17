@@ -73,7 +73,7 @@ export default function MegaBlog() {
             </h2>
           </div>
           <p className="text-white text-sm max-w-sm font-medium leading-relaxed">
-            Raw industrial perspectives, deep metallurgical studies, and infrastructure updates directly from the manufacturing floor of Mega Foundries.
+            Raw industrial perspectives, deep metallurgical studies, and infrastructure updates directly from the manufacturing floor of Canada Foundries.
           </p>
         </div>
 

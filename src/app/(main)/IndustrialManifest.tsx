@@ -47,7 +47,7 @@ export default function IndustrialManifest() {
         <div className="border-b border-zinc-900 pb-12 mb-20 flex flex-col xl:flex-row xl:items-end justify-between gap-8">
           <div className="space-y-4">
             <span className="text-xs uppercase tracking-[0.4em] font-black text-[#D80621] block">
-              The Mega Foundries Speed-Matrix
+              The Canada Foundries Speed-Matrix
             </span>
             <h2 className="text-4xl sm:text-6xl md:text-7xl font-black uppercase tracking-tighter leading-none">
               NOT ONE STEP BUT <br />
@@ -80,7 +80,7 @@ export default function IndustrialManifest() {
               <span className="text-white">ALL IN ONE GO</span>
             </h3>
             <p className="text-white text-base max-w-2xl font-light leading-relaxed mb-8">
-              No intermediary standard hand-offs. Mega Foundries integrates rapid metallurgical prototyping straight into heavy industrial mass production lines, flashing raw blueprints into solid iron castings flawlessly.
+              No intermediary standard hand-offs. Canada Foundries integrates rapid metallurgical prototyping straight into heavy industrial mass production lines, flashing raw blueprints into solid iron castings flawlessly.
             </p>
             
             <button className="inline-flex items-center gap-3 px-6 py-3.5 border-2 border-white bg-transparent hover:bg-white hover:text-[#D80621] text-white text-xs font-bold uppercase tracking-widest transition-all duration-300 rounded-xs">

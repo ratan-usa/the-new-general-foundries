@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mega Foundries",
-  description: "Mega Foundries Product Landing Page",
+  title: "Canada Foundries",
+  description: "Canada Foundries Product Landing Page",
 };
 
 export default function RootLayout({

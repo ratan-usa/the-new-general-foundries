@@ -83,7 +83,7 @@ export default function LiveStreamCommandCenter() {
           />
         </aside>
         <FixedQuoteBtn />
-        {/* === CENTER COLUMN: MEGA FOUNDRIES FEED === */}
+        {/* === CENTER COLUMN: CANADA FOUNDRIES FEED === */}
         <main className="flex-1 min-w-0 flex flex-col items-center">
 
           {/* Header / Stats */}

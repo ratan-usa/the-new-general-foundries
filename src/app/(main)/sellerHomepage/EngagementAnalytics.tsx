@@ -105,7 +105,7 @@ const EngagementAnalytics = () => {
                         </h3>
 
                         <p className="text-[#D80621] text-sm leading-relaxed">
-                            With Mega Foundries's Engagement Analytics, you get deep insights into how buyers
+                            With Canada Foundries's Engagement Analytics, you get deep insights into how buyers
                             are interacting with your listings. Track key engagement metrics like product views,
                             inquiries, clicks, and response rates — all broken down by category.
                         </p>

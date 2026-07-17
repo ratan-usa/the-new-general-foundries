@@ -15,7 +15,7 @@ const ModelViewer = dynamic(() => import('./ModelViewer'), {
   loading: () => <div className="h-full flex items-center justify-center bg-gray-100 text-xs">Loading 3D Engine...</div>
 });
 
-// --- 10 MEGA FOUNDRIES CASTING ASSETS (No Precast) ---
+// --- 10 CANADA FOUNDRIES CASTING ASSETS (No Precast) ---
 const ASSET_LIBRARY = [
   {
     id: '1',

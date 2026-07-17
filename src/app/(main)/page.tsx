@@ -80,7 +80,7 @@ export default function Home() {
                 <div className="relative z-10 container mx-auto px-4 text-center">
                     <div className="inline-block p-6 md:p-0">
                         <p className="text-[12px] md:text-[16px] font-bold uppercase tracking-widest text-[#D80621] mb-4 bg-white/90 px-4 py-2 rounded-full inline-block shadow-sm">
-                            MEGA FOUNDRIES | Global Industrial Hub
+                            CANADA FOUNDRIES | Global Industrial Hub
                         </p>
                         <h1 className="text-white font-bold leading-tight tracking-tight drop-shadow-lg">
                             <span className="block text-[24px] md:text-[50px]">The World's Advanced Consortium of</span>

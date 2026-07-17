@@ -142,7 +142,7 @@ const Navbar = () => {
                         <div className="w-full lg:w-auto flex justify-between item-start gap-6 shrink-0">
                             <div className='flex flex-col gap-4'>
                                 <div className="items-center gap-4 hidden lg:flex">
-                                    <Link href={'/'} className="shrink-0"><Image src={'/CANADA FOUNDRIES.png'} alt='Mega Foundries' height={80} width={80} className="object-contain h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20" /></Link>
+                                    <Link href={'/'} className="shrink-0"><Image src={'/CANADA FOUNDRIES.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20" /></Link>
                                     <Link href={'/'} className="shrink-0"><Image src={'/CANADA FOUNDRIES.png'} alt='Fabricator' height={80} width={80} className="object-contain h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20" /></Link>
                                     <Link href={'/'} className="shrink-0"><Image src={'/CANADA FOUNDRIES.png'} alt='Fabricator' height={80} width={80} className="object-contain h-24 w-24 sm:h-16 sm:w-16 lg:h-20 lg:w-20" /></Link>
                                 </div> 
@@ -208,7 +208,7 @@ const Navbar = () => {
                         <div className="w-full lg:w-auto flex flex-col justify-between items-start shrink-0">
                             <div className="flex items-center gap-4 lg:flex"> {/* Added mt-2 to align with center logo text baseline if needed */}
                                 <Link href={'/'} className="shrink-0">
-                                    <Image src={'/CANADA FOUNDRIES.png'} alt='Mega Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-18 lg:w-24" />
+                                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Foundries' height={80} width={80} className="object-contain h-14 w-14 lg:h-18 lg:w-24" />
                                 </Link>
                                 <Link href={'/'} className="shrink-0">
                                     <Image src={'/CANADA FOUNDRIES.png'} alt='Fabricator' height={80} width={80} className="object-contain h-14 w-14 lg:h-18 lg:w-24" />

@@ -37,7 +37,7 @@ export default function StartSelling() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-[#D80621]">
-            Start Selling Smarter with <span className="text-[#D80621]">Mega Foundries?</span>
+            Start Selling Smarter with <span className="text-[#D80621]">Canada Foundries?</span>
           </h2>
         </div>
 

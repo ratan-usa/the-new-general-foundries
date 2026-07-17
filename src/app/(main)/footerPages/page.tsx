@@ -76,13 +76,13 @@ export default function FooterHero({
                                 {/* Quote Box */}
                                 <div className="bg-blue-50/50 border border-blue-100 rounded-lg p-4">
                                     <p className="text-[#D80621] font-medium italic">
-                                        "Mega Foundries delivers precision-engineered components for hydraulic systems, power transmission, and heavy earth-moving machinery, setting the benchmark for industrial durability."
+                                        "Canada Foundries delivers precision-engineered components for hydraulic systems, power transmission, and heavy earth-moving machinery, setting the benchmark for industrial durability."
                                     </p>
                                 </div>
 
                                 {/* Image Caption */}
                                 <p className="text-xs text-[#D80621] max-w-[250px]">
-                                    Explore Mega Foundries' comprehensive range of Castings, Forgings, and Fabricated assemblies.
+                                    Explore Canada Foundries' comprehensive range of Castings, Forgings, and Fabricated assemblies.
                                 </p>
 
                                 {/* Product Image Card */}

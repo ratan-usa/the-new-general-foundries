@@ -100,7 +100,7 @@ export default function MegaMagazine() {
       {/* Absolute strict fluid full width padding */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
         
-        {/* TOP ROW: Mega Foundries Custom Header Banner */}
+        {/* TOP ROW: Canada Foundries Custom Header Banner */}
         <div className="w-full bg-[#D80621] border border-white/20 p-6 mb-8 flex flex-col md:flex-row items-center justify-between rounded-xs gap-4 shadow-md">
           <div className="flex items-center gap-3">
             <div className="text-2xl font-black tracking-tighter text-white">
