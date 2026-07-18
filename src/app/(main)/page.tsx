@@ -35,7 +35,7 @@ import { VerticalAccordion } from '../components/VerticalAccordion';
 import AiRobotics from '../components/AiRobotics';
 import MegaProduct from '../components/MegaProduct';
 import CastingCarousel from '../components/CastingCarousel';
-import MegaBlog from '../components/MegaBlog';  
+import MegaBlog from '../components/MegaBlog';
 import MegaMagazine from '../components/MegaMagazine';
 import OtherMetalsDirectory from '../components/OtherMetalsDirectory';
 import ProductCarouselo from '../components/productCarouselo';
@@ -43,12 +43,13 @@ import HighFlowGrates from './HighFlowGrates';
 import IndustrialManifest from './IndustrialManifest';
 import MegaQSeries from './MegaQSeries';
 import MegaFoundationPage from './mega-foundation/page';
- import MegaFeaShowcase from './MegaFeaShowcase';
+import MegaFeaShowcase from './MegaFeaShowcase';
 import { Hero } from './Hero';
 import MegaMediaHub from '../components/MegaMediaHub';
 import MegaTactilePlates from './MegaTactilePlates';
 import CanadaRegionalDirectory from '../CanadaRegionalDirectory';
 import OntarioStandardsDashboard from '../OntarioStandardsDashboard';
+import FoundryStandardsVideoMatrix from '../FoundryStandardsVideoMatrix';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -105,22 +106,24 @@ export default function Home() {
             <Hero />
             <Product3DShowcase />
             {/* 2. CORE PRODUCTS (High Priority) */}
-            <MegaQSeries/>
-            <CanadaRegionalDirectory/>
-            <OntarioStandardsDashboard/>
+            <MegaQSeries />
+            <CanadaRegionalDirectory />
+            <OntarioStandardsDashboard />
+ 
+            <FoundryStandardsVideoMatrix />
             <MegaProducts />
-            <MegaMediaHub/>
-            <MegaTactilePlates/>
+            <MegaMediaHub />
+            <MegaTactilePlates />
             <LiveStreamCommandCenter />
-             <MegaFeaShowcase/>
-            <IndustrialManifest/>
+            <MegaFeaShowcase />
+            <IndustrialManifest />
             <ProductPage />
-            <MegaMagazine/>
-            <HighFlowGrates/>
+            <MegaMagazine />
+            <HighFlowGrates />
             <CastingCarousel />
-            <OtherMetalsDirectory/>
+            <OtherMetalsDirectory />
             {/* <MetalDirectory /> */}
-            <FactoryStories /> 
+            <FactoryStories />
             <MegaBlog />
             <HeroSection />
             <AiRobotics />
@@ -134,7 +137,7 @@ export default function Home() {
             <MegaProduct />
             <DesignCapabilities />
             <ProductCarousel />
-            <ProductCarouselo/>
+            <ProductCarouselo />
 
             {/* Data-Heavy Footer Content */}
             <SourcingRequest />
