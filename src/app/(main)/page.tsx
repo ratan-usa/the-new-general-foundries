@@ -48,6 +48,7 @@ import { Hero } from './Hero';
 import MegaMediaHub from '../components/MegaMediaHub';
 import MegaTactilePlates from './MegaTactilePlates';
 import CanadaRegionalDirectory from '../CanadaRegionalDirectory';
+import OntarioStandardsDashboard from '../OntarioStandardsDashboard';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -106,6 +107,7 @@ export default function Home() {
             {/* 2. CORE PRODUCTS (High Priority) */}
             <MegaQSeries/>
             <CanadaRegionalDirectory/>
+            <OntarioStandardsDashboard/>
             <MegaProducts />
             <MegaMediaHub/>
             <MegaTactilePlates/>
