@@ -1,138 +1,201 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { Grip, Accessibility, ShieldAlert, ArrowUpRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Grip, Accessibility, ShieldAlert, ArrowUpRight, Activity, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function MegaTactilePlates() {
-  return (
-    <section className="bg-white text-[#D80621] py-16 font-sans border-b border-gray-100 w-full">
-      {/* Absolute strict fluid full width padding bounds */}
-      <div className="w-full px-4 sm:px-6 lg:px-10 space-y-16">
+const PERFORMANCE_FEATURES = [
+  {
+    id: "ada-domes",
+    title: "ADA Truncated Dome Compliance",
+    shortTitle: "ADA Domes",
+    icon: Accessibility,
+    description: "Features clean, dimensionally strict raised domes matching municipal accessibility laws. Delivers immediate orientation feedback for white canes and pedestrian foot travel.",
+    metric: "Strict Form Factor Compliance",
+    details: "Domes are mathematically aligned across the iron substrate to prevent cane-tip snagging while maximizing audio-tactile signature resonance."
+  },
+  {
+    id: "slip-texture",
+    title: "Slip-Resistant Micro Texture Ground",
+    shortTitle: "Traction Floor",
+    icon: Grip,
+    description: "The primary spacing floor matrix is cast using raw structural texturing elements, preventing traction slippage during severe freezing rain or oil wash overruns.",
+    metric: "Coefficient of Friction > 0.80",
+    details: "Micro-grooves integrated into the gray iron casting draw liquid away from the dome peaks, ensuring safety vectors in intense weather."
+  },
+  {
+    id: "lug-anchors",
+    title: "Monolithic Wet-Set Lug Anchors",
+    shortTitle: "Lug Anchors",
+    icon: ShieldAlert,
+    description: "Heavy bottom iron anchors drop directly into wet municipal concrete pours, creating a unified substrate bond that entirely stops mechanical displacement.",
+    metric: "Anti-Displacement Rigidity",
+    details: "Features heavy-gauge perpendicular locking tabs extending 3 inches into the concrete base framework, rendering thermal shifts harmless."
+  }
+];
 
+export default function MegaTactilePlates() {
+  const [activeFeature, setActiveFeature] = useState(PERFORMANCE_FEATURES[0]);
+
+  return (
+    <section className="w-full px-4 sm:px-6 lg:px-10 py-24 bg-white text-black font-sans overflow-hidden border-b border-gray-100">
+      <div className="max-w-7xl mx-auto space-y-12">
+        
         {/* --- SECTION HEADER --- */}
         <div className="border-b border-gray-200 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 w-full">
-          <div>
-            <span className="text-xs uppercase tracking-[0.4em] font-black text-[#D80621] block mb-3">
+          <div className="space-y-2">
+            <span className="text-xs uppercase tracking-[0.3em] font-bold text-[#D80621] block">
               Infrastructure Accessibility Index
             </span>
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#D80621] leading-none">
-              Tactile Plates <br />
-              <span className="text-[#D80621]">Detectable Warnings</span>
+            <h2 className="text-4xl lg:text-5xl font-black tracking-tighter uppercase text-[#D80621]">
+              TACTILE PLATES &mdash; DETECTABLE WARNINGS
             </h2>
           </div>
-          <p className="text-[#D80621] text-base font-light leading-relaxed max-w-xl">
+          <p className="text-sm text-gray-600 font-mono leading-relaxed max-w-sm">
             ADA-compliant infrastructure castings built to outlast the concrete surrounding them. Engineered with high-fidelity truncated domes to secure busy transit paths.
           </p>
         </div>
 
         {/* --- MAIN CORE ARCHITECTURE DISPLAY --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch w-full">
 
-          {/* LEFT COLUMN: CRITICAL PERFORMANCE FEATURES (Expanded to 8 Columns Wide) */}
-          <div className="lg:col-span-8 space-y-8 w-full">
+          {/* LEFT COLUMN: CRITICAL PERFORMANCE FEATURES TIMELINE (5 Columns) */}
+          <div className="lg:col-span-5 flex flex-col gap-3">
+            <span className="text-[10px] font-mono text-gray-500 uppercase tracking-wider block pl-1">
+              Select Performance Feature Vector
+            </span>
+            <div className="space-y-3 flex-grow flex flex-col justify-start">
+              {PERFORMANCE_FEATURES.map((feature, index) => {
+                const IconComponent = feature.icon;
+                const isSelected = activeFeature.id === feature.id;
+                
+                return (
+                  <button
+                    key={feature.id}
+                    onClick={() => setActiveFeature(feature)}
+                    className={`w-full text-left p-5 rounded-xl border transition-all duration-300 flex items-center justify-between group relative overflow-hidden ${
+                      isSelected
+                        ? "bg-[#D80621] border-[#D80621] text-white shadow-md"
+                        : "bg-white border-gray-200 text-black hover:border-[#D80621]"
+                    }`}
+                  >
+                    <div className="flex items-center gap-4 max-w-[85%] relative z-10">
+                      <div className={`p-2.5 rounded-lg border transition-colors ${
+                        isSelected 
+                          ? "bg-white/10 border-white/20 text-white" 
+                          : "bg-gray-50 border-gray-200 text-[#D80621] group-hover:bg-[#D80621]/5"
+                      }`}>
+                        <IconComponent className="w-5 h-5" />
+                      </div>
+                      <div className="space-y-0.5 truncate">
+                        <span className={`text-[9px] font-mono uppercase tracking-widest block ${
+                          isSelected ? "text-white/70" : "text-gray-400"
+                        }`}>
+                          Feature Module 0{index + 1}
+                        </span>
+                        <h3 className="font-bold text-base tracking-tight truncate uppercase">
+                          {feature.shortTitle}
+                        </h3>
+                      </div>
+                    </div>
 
-            {/* Feature 1 */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#D80621] hover:bg-white transition-all duration-300">
-              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-[#D80621] shrink-0">
-                <Accessibility className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="text-sm font-black uppercase tracking-wide text-[#D80621] mb-1">
-                  ADA Truncated Dome Compliance
-                </h4>
-                <p className="text-xs text-[#D80621] leading-relaxed font-light">
-                  Features clean, dimensionally strict raised domes matching municipal accessibility laws. Delivers immediate orientation feedback for white canes and pedestrian foot travel.
-                </p>
-              </div>
+                    <ArrowUpRight className={`w-4 h-4 shrink-0 transition-transform duration-300 relative z-10 ${
+                      isSelected ? "translate-x-0.5 -translate-y-0.5 text-white" : "text-gray-300 group-hover:text-[#D80621] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    }`} />
+                  </button>
+                );
+              })}
             </div>
-
-            {/* Feature 2 */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#D80621] hover:bg-white transition-all duration-300">
-              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-[#D80621] shrink-0">
-                <Grip className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="text-sm font-black uppercase tracking-wide text-[#D80621] mb-1">
-                  Slip-Resistant Micro Texture Ground
-                </h4>
-                <p className="text-xs text-[#D80621] leading-relaxed font-light">
-                  The primary spacing floor matrix is cast using raw structural texturing elements, preventing traction slippage during severe freezing rain or oil wash overruns.
-                </p>
-              </div>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="flex items-start gap-4 p-5 bg-gray-50 border border-gray-100 rounded-none group hover:border-[#D80621] hover:bg-white transition-all duration-300">
-              <div className="w-10 h-10 bg-white border border-gray-200 flex items-center justify-center text-[#D80621] shrink-0">
-                <ShieldAlert className="w-5 h-5" />
-              </div>
-              <div>
-                <h4 className="text-sm font-black uppercase tracking-wide text-[#D80621] mb-1">
-                  Monolithic Wet-Set Lug Anchors
-                </h4>
-                <p className="text-xs text-[#D80621] leading-relaxed font-light">
-                  Heavy bottom iron anchors drop directly into wet municipal concrete pours, creating a unified substrate bond that entirely stops mechanical displacement.
-                </p>
-              </div>
-            </div>
-
           </div>
 
-          {/* RIGHT COLUMN: CAD SPEC FRAMEWORK (Reduced to 4 Columns Wide for a slightly smaller layout display) */}
-          <div className="lg:col-span-4 w-full flex flex-col gap-6 items-center lg:items-end">
+          {/* RIGHT COLUMN: CAD VIEWPORT METADATA MONITOR (7 Columns) */}
+          <div className="lg:col-span-7 bg-white border border-gray-200 p-4 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between min-h-[520px]">
+            <div className="space-y-6">
+              
+              {/* Image Viewport Container Box */}
+              <div className="relative rounded-lg border border-gray-200 bg-gray-50 overflow-hidden h-72 w-full group flex items-center justify-center p-4">
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/assets/MEGA/Detectable%20Warning%20Plates.jpeg"
+                    alt="Cast Iron Tactile Plate Mechanical Profile"
+                    fill
+                    className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-700"
+                    priority
+                  />
+                </div>
 
-            <div className="relative w-full aspect-square bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-4 flex items-center justify-center group shadow-inner hover:border-[#D80621] transition-colors duration-300">
+                {/* Grid Crosshair Blueprint Elements */}
+                <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-gray-300" />
+                <div className="absolute top-3 right-3 w-3 h-3 border-t border-r border-gray-300" />
+                <div className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-gray-300" />
+                <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-gray-300" />
 
-              {/* Static Asset Visual - Visibility fixed by clearing transparency filters */}
-              <div className="relative w-full h-full opacity-100">
-                <Image
-                  // src="/assets/image5.jpeg" 
-                  src="/assets/MEGA/Detectable%20Warning%20Plates.jpeg"
-
-                  alt="Cast Iron Tactile Plate Mechanical Profile"
-                  fill
-                  className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-500 opacity-100"
-                  priority
-                />
+                <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur border border-gray-200 px-3 py-1 rounded text-[9px] font-mono tracking-widest text-[#D80621] uppercase flex items-center gap-1.5 font-bold">
+                  <Activity className="w-3.5 h-3.5 animate-pulse" />
+                  CAD Blueprint Matrix
+                </div>
               </div>
 
-              {/* Grid Crosshair Indicators */}
-              <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-gray-300" />
-              <div className="absolute top-3 right-3 w-3 h-3 border-t border-r border-gray-300" />
-              <div className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-gray-300" />
-              <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-gray-300" />
+              {/* Dynamic Reading Diagnostics Box */}
+              <div className="space-y-4">
+                <div className="border-b border-gray-200 pb-3 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                  <div className="space-y-0.5">
+                    <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider block">
+                      Active Telemetry Component Clause
+                    </span>
+                    <h4 className="text-xl font-black text-[#D80621] uppercase tracking-tight">
+                      {activeFeature.title}
+                    </h4>
+                  </div>
+                  <span className="shrink-0 text-[10px] font-mono font-bold border border-emerald-600 text-emerald-600 px-3 py-1 rounded-md bg-emerald-50 max-self-start">
+                    {activeFeature.metric}
+                  </span>
+                </div>
 
-              <div className="absolute bottom-4 left-4 right-4 bg-[#D80621]/95 text-[9px] font-mono uppercase font-bold tracking-wider text-[#D80621] text-center py-2 z-20">
-                Component Blueprint Configuration Preview
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeFeature.id}
+                    initial={{ opacity: 0, y: 5 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -5 }}
+                    transition={{ duration: 0.2 }}
+                    className="text-xs md:text-sm text-gray-700 font-mono leading-relaxed bg-gray-50 p-4 rounded-lg border border-gray-200 space-y-2"
+                  >
+                    <p className="text-black font-medium">{activeFeature.description}</p>
+                    <p className="text-gray-500 border-t border-gray-200/60 pt-2 text-[11px] flex items-start gap-1.5">
+                      <Info className="w-3.5 h-3.5 text-[#D80621] shrink-0 mt-0.5" />
+                      <span>{activeFeature.details}</span>
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
 
-            {/* Specification Configuration Output Trigger */}
-            <div className="w-full">
-              <Button className="w-full bg-[#D80621] hover:bg-[#b01e1d] text-white font-black uppercase tracking-widest text-xs h-12 rounded-none transition-all duration-200 flex items-center justify-center gap-2">
+            {/* CTA Trigger Integration */}
+            <div className="mt-6">
+              <Button className="w-full bg-[#D80621] hover:bg-[#b01e1d] text-white font-black uppercase tracking-widest text-xs h-12 rounded-xl transition-all duration-200 flex items-center justify-center gap-2">
                 Download ADA Blueprint Matrices <ArrowUpRight className="w-4 h-4" />
               </Button>
             </div>
 
           </div>
-
         </div>
 
         {/* --- BASE PERFORMANCE SPEC INDEX --- */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 border-t border-gray-200 w-full bg-white text-center md:text-left">
-          <div className="p-4 bg-gray-50 border border-gray-100 rounded-none">
-            <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">Material Core</span>
-            <span className="text-sm font-black text-[#D80621] uppercase tracking-wide">Class 35B Gray Iron</span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-8 border-t border-gray-200 w-full text-left font-mono text-xs">
+          <div className="p-4 bg-gray-50 border border-gray-200 rounded-xl flex flex-col justify-center gap-0.5">
+            <span className="text-[9px] uppercase tracking-wider text-gray-400 block">Material Core</span>
+            <span className="font-bold text-black uppercase tracking-wide">Class 35B Gray Iron</span>
           </div>
-          <div className="p-4 bg-gray-50 border border-gray-100 rounded-none">
-            <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">Load Limits</span>
-            <span className="text-sm font-black text-[#D80621] uppercase tracking-wide">AASHTO H-20 Wheel Load</span>
+          <div className="p-4 bg-gray-50 border border-gray-200 rounded-xl flex flex-col justify-center gap-0.5">
+            <span className="text-[9px] uppercase tracking-wider text-gray-400 block">Load Limits</span>
+            <span className="font-bold text-black uppercase tracking-wide">AASHTO H-20 Wheel Load</span>
           </div>
-          <div className="p-4 bg-gray-50 border border-gray-100 rounded-none">
-            <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">Coating Finish</span>
-            <span className="text-sm font-black text-[#D80621] uppercase tracking-wide">Natural Patina or Safety Red</span>
+          <div className="p-4 bg-gray-50 border border-gray-200 rounded-xl flex flex-col justify-center gap-0.5">
+            <span className="text-[9px] uppercase tracking-wider text-gray-400 block">Coating Finish</span>
+            <span className="font-bold text-black uppercase tracking-wide">Natural Patina or Safety Red</span>
           </div>
         </div>
 

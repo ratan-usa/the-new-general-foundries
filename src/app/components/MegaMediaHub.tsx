@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { Youtube, ExternalLink, Activity, Layers } from "lucide-react";
+import React, { useState } from "react";
+import { Youtube, ExternalLink, Activity, Tv, ChevronRight, Play, Cpu, ShieldAlert } from "lucide-react";
 
 interface MediaAsset {
   id: string;
@@ -10,6 +10,7 @@ interface MediaAsset {
   badge: string;
   description: string;
   embedUrl: string;
+  nativeUrl: string;
 }
 
 const VIDEO_RESOURCES: MediaAsset[] = [
@@ -19,8 +20,8 @@ const VIDEO_RESOURCES: MediaAsset[] = [
     source: "Federal Highway Administration (FHWA)",
     badge: "Hydraulic Performance Model",
     description: "Full fluid dynamic test showcasing parallel, curved, and cross-bar casting matrices under localized street section flows. Highlights frontal interception capability versus bypass side flow rates.",
-    // Embed code mapped with autoplay=1, mute=1 (required by browsers for autoplay), loop=1, and playlist fallback
-    embedUrl: "https://www.youtube.com/embed/-TLP3uBB55o?autoplay=1&mute=1&loop=1&playlist=-TLP3uBB55o&start=785"
+    embedUrl: "https://www.youtube.com/embed/-TLP3uBB55o?autoplay=1&mute=1&loop=1&playlist=-TLP3uBB55o&start=785",
+    nativeUrl: "https://www.youtube.com/watch?v=-TLP3uBB55o&t=785s"
   },
   {
     id: "fdm-foundry",
@@ -28,15 +29,17 @@ const VIDEO_RESOURCES: MediaAsset[] = [
     source: "Industrial Grade Additive Manufacturing",
     badge: "Additive Tooling Matrix",
     description: "Layer additive manufacturing breakdown utilizing high-grade thermoplastic matrices to construct precision patterns, low-volume components, and casting mold mockups directly from CAD layers.",
-    embedUrl: "https://www.youtube.com/embed/WHO6G67GJbM?autoplay=1&mute=1&loop=1&playlist=WHO6G67GJbM"
+    embedUrl: "https://www.youtube.com/embed/WHO6G67GJbM?autoplay=1&mute=1&loop=1&playlist=WHO6G67GJbM",
+    nativeUrl: "https://www.youtube.com/watch?v=WHO6G67GJbM"
   }
 ];
 
 export default function MegaMediaHub() {
+  const [activeFeed, setActiveFeed] = useState<MediaAsset>(VIDEO_RESOURCES[0]);
+
   return (
-    <section className="bg-white text-[#D80621] py-24 font-sans border-b border-gray-100 w-full">
-      {/* Strict Fluid Layout Bounds */}
-      <div className="w-full px-4 sm:px-6 lg:px-10 space-y-16">
+    <section className="bg-white text-black py-4 font-sans border-b border-gray-100 w-full px-4 sm:px-6 lg:px-10">
+      <div className="max-w-7xl mx-auto space-y-12">
         
         {/* --- HEADER LOGISTICS SECTION --- */}
         <div className="border-b border-gray-200 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 w-full">
@@ -44,80 +47,141 @@ export default function MegaMediaHub() {
             <span className="text-xs uppercase tracking-[0.4em] font-black text-[#D80621] block mb-3">
               Technical Streaming Terminal
             </span>
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter text-[#D80621] leading-none">
-              Simulation <span className="text-[#D80621]">& Lab Feeds</span>
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-[#D80621] leading-none">
+              Simulation <span className="text-black">& Lab Feeds</span>
             </h2>
           </div>
-          <p className="text-[#D80621] text-base font-light leading-relaxed max-w-xl">
-            Live infrastructure benchmarks. Real-time rendering streams visualizing hydraulic grate flow intercept dynamics alongside micro-layered thermoplastic production tooling cycles.
+          <p className="text-gray-600 text-sm font-mono leading-relaxed max-w-sm">
+            Live infrastructure benchmarks. Real-time rendering streams visualizing hydraulic grate flow intercept dynamics and production tooling cycles.
           </p>
         </div>
 
-        {/* --- DUAL SPLIT MEDIA GRID (100% Clarity Visuals) --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-full">
-          {VIDEO_RESOURCES.map((video) => (
-            <div 
-              key={video.id} 
-              className="flex flex-col bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-6 group hover:border-[#D80621] hover:bg-white transition-all duration-300 shadow-sm"
-            >
-              
-              {/* Top Analytical Banner Strip */}
-              <div className="flex items-center justify-between mb-4 border-b border-gray-200 pb-3">
-                <span className="text-[10px] font-mono tracking-widest text-[#D80621] font-bold uppercase flex items-center gap-1.5">
-                  <Activity className="w-3.5 h-3.5" /> {video.badge}
-                </span>
-                <span className="text-[9px] font-mono tracking-wider text-[#D80621] uppercase">
-                  Feed // Active
-                </span>
-              </div>
+        {/* --- HIGH-INNOVATION WORKSPACE MODULAR INTERFACE --- */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+          
+          {/* Timeline Access Directory Selector List (5 Columns) */}
+          <div className="lg:col-span-5 flex flex-col gap-3">
+            <span className="text-[10px] font-mono text-gray-500 uppercase tracking-wider block pl-1">
+              Select Active Diagnostic Pipeline Feed
+            </span>
+            <div className="space-y-3 flex-grow flex flex-col justify-start">
+              {VIDEO_RESOURCES.map((video, index) => {
+                const isSelected = activeFeed.id === video.id;
+                return (
+                  <button
+                    key={video.id}
+                    onClick={() => setActiveFeed(video)}
+                    className={`w-full text-left p-5 rounded-xl border transition-all duration-300 flex items-center justify-between group relative overflow-hidden ${
+                      isSelected
+                        ? "bg-[#D80621] border-[#D80621] text-white shadow-md"
+                        : "bg-white border-gray-200 text-black hover:border-[#D80621]"
+                    }`}
+                  >
+                    <div className="flex items-center gap-4 max-w-[85%] relative z-10">
+                      <div className={`p-2.5 rounded-lg border transition-colors ${
+                        isSelected 
+                          ? "bg-white/10 border-white/20 text-white" 
+                          : "bg-gray-50 border-gray-200 text-[#D80621] group-hover:bg-[#D80621]/5"
+                      }`}>
+                        <Tv className="w-5 h-5" />
+                      </div>
+                      <div className="space-y-0.5 truncate">
+                        <span className={`text-[9px] font-mono uppercase tracking-widest block ${
+                          isSelected ? "text-white/70" : "text-gray-400"
+                        }`}>
+                          STREAM NODE 0{index + 1} // {video.badge}
+                        </span>
+                        <h3 className="font-bold text-base tracking-tight truncate uppercase">
+                          {video.title}
+                        </h3>
+                      </div>
+                    </div>
 
-              {/* HIGH DEFINITION VIDEO VIEWPORT BOX */}
-              <div className="relative w-full aspect-video bg-[#D80621] border border-gray-200 overflow-hidden shadow-inner mb-6">
+                    <ChevronRight className={`w-4 h-4 shrink-0 transition-transform duration-300 relative z-10 ${
+                      isSelected ? "translate-x-1 text-white" : "text-gray-300 group-hover:text-[#D80621] group-hover:translate-x-1"
+                    }`} />
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Large Scale Simulation Broadcast Viewport (7 Columns) */}
+          <div className="lg:col-span-7 bg-white border border-gray-200 p-4 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between min-h-[540px]">
+            <div className="space-y-6">
+              
+              {/* Main Embed Display Window Box */}
+              <div className="relative w-full aspect-video bg-black border border-gray-200 overflow-hidden rounded-lg group shadow-inner">
                 <iframe
-                  src={video.embedUrl}
-                  title={video.title}
+                  key={activeFeed.id}
+                  src={activeFeed.embedUrl}
+                  title={activeFeed.title}
                   allow="autoplay; encrypted-media; picture-in-picture; web-share"
                   allowFullScreen
                   className="absolute inset-0 w-full h-full object-cover border-none"
                 />
+
+                {/* Technical Raster Overlay Layer */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.15)_50%)] bg-[length:100%_4px] pointer-events-none opacity-30" />
+                
+                <div className="absolute bottom-3 left-3 bg-black/80 backdrop-blur border border-neutral-800 px-3 py-1 rounded text-[9px] font-mono tracking-widest text-emerald-400 uppercase flex items-center gap-1.5 pointer-events-none">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  Live Stream Output
+                </div>
               </div>
 
-              {/* CORE METADATA SPEC DATA BLOCK */}
-              <div className="flex flex-col flex-grow justify-between space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-xl font-black uppercase tracking-tight text-[#D80621] group-hover:text-[#D80621] transition-colors">
-                    {video.title}
-                  </h3>
-                  <p className="text-xs text-[#D80621] font-mono uppercase tracking-wide">
-                    Origin Authority: {video.source}
-                  </p>
-                  <p className="text-[#D80621] text-xs md:text-sm font-light leading-relaxed pt-2">
-                    {video.description}
-                  </p>
-                </div>
-
-                {/* Direct Reference Technical Anchors */}
-                <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 text-[#D80621]">
-                    <Youtube className="w-4 h-4 text-[#D80621]" />
-                    <span className="text-[10px] font-mono uppercase tracking-widest font-bold">HD Network Source</span>
+              {/* Dynamic Information Specifications Abstract */}
+              <div className="space-y-4">
+                <div className="border-b border-gray-200 pb-3 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                  <div className="space-y-0.5">
+                    <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider block">
+                      Authority: {activeFeed.source}
+                    </span>
+                    <h4 className="text-xl font-black text-[#D80621] uppercase tracking-tight">
+                      {activeFeed.title}
+                    </h4>
                   </div>
-                  
                   <a
-                    href={video.id === "hydraulic-grates" ? "https://www.youtube.com/watch?v=-TLP3uBB55o&t=785s" : "https://www.youtube.com/watch?v=WHO6G67GJbM"}
+                    href={activeFeed.nativeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-xs font-bold text-[#D80621] hover:text-[#D80621] border-b border-dashed border-[#D80621] pb-0.5 transition-colors uppercase tracking-wider"
+                    className="shrink-0 text-xs font-bold tracking-wider uppercase border border-[#D80621] text-[#D80621] px-4 py-2 rounded-lg bg-transparent hover:bg-[#D80621] hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
                   >
-                    Launch Native Player <ExternalLink className="w-3 h-3" />
+                    Launch <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
-              </div>
 
+                <p className="text-xs md:text-sm text-gray-700 font-mono leading-relaxed bg-gray-50 p-4 rounded-lg border border-gray-200">
+                  {activeFeed.description}
+                </p>
+              </div>
             </div>
-          ))}
+
+            {/* Simulated Live Stream Feed Telemetry Data Row */}
+            <div className="grid grid-cols-3 gap-4 border-t border-gray-200 pt-5 mt-6 font-mono text-xs">
+              <div className="space-y-1">
+                <span className="text-[9px] uppercase tracking-wider text-gray-400 block">Signal Source</span>
+                <span className="font-bold text-black flex items-center gap-1.5 uppercase">
+                  <Youtube className="w-3.5 h-3.5 text-[#D80621]" /> HD Network
+                </span>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[9px] uppercase tracking-wider text-gray-400 block">Protocol Integrity</span>
+                <span className="font-bold text-black flex items-center gap-1.5 uppercase">
+                  <Cpu className="w-3.5 h-3.5 text-[#D80621]" /> Matrix Sync
+                </span>
+              </div>
+              <div className="space-y-1">
+                <span className="text-[9px] uppercase tracking-wider text-gray-400 block">Telemetry State</span>
+                <span className="font-bold text-emerald-600 animate-pulse flex items-center gap-1">
+                  <Activity className="w-3.5 h-3.5" /> 100% Active
+                </span>
+              </div>
+            </div>
+
+          </div>
+
         </div>
- 
 
       </div>
     </section>
