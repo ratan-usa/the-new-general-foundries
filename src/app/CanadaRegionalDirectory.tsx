@@ -13,7 +13,7 @@ const regions = [
   { name: "Ontario", capital: "Toronto", x: 640, y: 770, color: "#D80621", isTerritory: false },
   // Priority 3: Quebec Operations
   { name: "Quebec", capital: "Quebec City", x: 780, y: 660, color: "#D80621", isTerritory: false },
-  // Atlantic Coast & North (Logistical links)
+ 
   { name: "Yukon", capital: "Whitehorse", x: 140, y: 250, color: "#cccccc", isTerritory: true },
   { name: "Northwest Territories", capital: "Yellowknife", x: 300, y: 300, color: "#cccccc", isTerritory: true },
   { name: "Nunavut", capital: "Iqaluit", x: 620, y: 280, color: "#cccccc", isTerritory: true },
