@@ -65,24 +65,23 @@ const Footer = () => {
   return (
     <footer className="bg-[#D80621] text-white border-t border-[#cccccc] font-sans">
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pt-16 ">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16 border-b border-[#cccccc] pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16 border-b border-white/10 pb-12">
 
-          <div className="flex flex-col justify-evenly gap-16 space-y-6">
-            <div>
-              <h3 className="text-white font-bold uppercase tracking-wider text-sm border-b border-[#D80621]/30 pb-2 w-fit">
-                USA Operations
-              </h3>
+          {/* --- COL 1: SALES OFFICE (Left) --- */}
+          <div className="flex flex-col justify-between gap-8">
+            <div className="space-y-6">
 
-              {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
+
+              {/* Logos */}
               <div className="flex gap-4">
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Foundries' fill className="object-contain" />
+                    <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse Industries' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='CANADA METALS' fill className="object-contain" />
+                    <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse METALS' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
@@ -91,81 +90,104 @@ const Footer = () => {
                   </Link>
                 </div>
               </div>
+              {/* Category Badge */}
+              <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#B31942] bg-white px-3 py-1 rounded-sm shadow-sm">
+                Canada Foundries
+              </span>
             </div>
 
+            {/* Address Details */}
             <div>
-              <div className="text-sm space-y-1 text-white">
-                <p>105 MAXES ROAD</p>
-                <p>MELVILLE, NY 11737, USA</p>
-
+              <div className="text-sm space-y-1 text-white/70 font-light">
+                <p className="font-semibold text-white">777 DUNSMUIR STREET, 17TH FLOOR</p>
+                <p>VANCOUVER, BC V7Y 1K4</p>
               </div>
-              {/* Added Mobile Number with Link */}
-              <p className='mt-4'>
+              <div className="mt-4 flex flex-col gap-1 text-sm text-white/80 font-mono">
                 <a
-                  href="tel:+15127828880"
-                  className="hover:text-[#cccccc] transition-colors duration-200"
+                  href="tel:6042000616"
+                  className="hover:text-[#B31942] transition-colors duration-200"
                 >
-                  +1 (512) 782-8880
+                  Ph: 604 200 0616
                 </a>
-              </p>
+              </div>
             </div>
-
           </div>
 
-          <div className="flex flex-col items-center justify-start">
-            {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
-            <div className="flex ">
-              <div className="bg-white p-2 rounded-lg w-80 h-36 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
+          {/* --- COL 2: CORPORATE HEADQUARTERS (Middle) --- */}
+          <div className="flex flex-col items-center justify-between text-center gap-8 border-y lg:border-y-0 lg:border-x border-white/10 py-8 lg:py-0 px-4">
+            <div className="space-y-6 flex flex-col items-center">
+
+
+              {/* Main Corporate Logo */}
+              <div className="bg-white p-3 rounded-lg w-72 h-32 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Industries' fill className="object-contain" />
+                  <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse Industries' fill className="object-contain" />
                 </Link>
               </div>
+              {/* Category Badge */}
+              <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#B31942] bg-white px-3 py-1 rounded-sm shadow-sm">
+                World Headquarters
+              </span>
+            </div>
+
+            {/* Address Details */}
+            <div className="text-sm space-y-1 text-white/70 font-light">
+              <p className="font-semibold text-white">GLOBAL OPERATIONS HUB</p>
+              <p>YONGE STREET, TORONTO</p>
+              <p className="pt-2 text-xs text-white/50 font-mono">PRIMARY EXECUTIVE MANAGEMENT</p>
+              <div className="mt-4 flex flex-col gap-1 text-sm text-white/80 font-mono">
+                <a
+                  href="tel:4168146157"
+                  className="hover:text-[#B31942] transition-colors duration-200"
+                >
+                  Ph: 416 814 6157
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* --- COL 5: CANADA OPERATIONS (Logos + Info + Subscribe) --- */}
-          <div className="flex items-end justify-evenly gap-16 flex-col space-y-6">
-            <div>
-              <h3 className="text-white text-left font-bold uppercase tracking-wider text-sm border-b border-[#D80621]/30 pb-2 w-fit">
-                Canada Operations
-              </h3>
+          {/* --- COL 3: INTERNATIONAL OFFICE (Right) --- */}
+          <div className="flex flex-col justify-between items-start lg:items-end text-left lg:text-right gap-8">
+            <div className="space-y-6 flex flex-col items-start lg:items-end">
 
-              {/* OPTIMIZED LOGO PLACEMENT: Side by Side */}
-              <div className="flex gap-4 justify-end">
+
+              {/* Logos */}
+              <div className="flex gap-4 justify-start lg:justify-end">
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Foundries' fill className="object-contain" />
+                    <Image src={'/CANADA FOUNDRIES.png'} alt='MWA' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Forge' fill className="object-contain" />
+                    <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse Forge' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Forge' fill className="object-contain" />
+                    <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse Forge' fill className="object-contain" />
                   </Link>
                 </div>
               </div>
             </div>
-
-
+            {/* Category Badge */}
+            <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#B31942] bg-white px-3 py-1 rounded-sm shadow-sm">
+              Sales Office
+            </span>
+            {/* Address Details */}
             <div>
-              <div className="text-sm space-y-1 text-white">
-                <p>ONE YOUNGE STREET</p>
-                <p>TORONTO, ONTARIO M5E 1R4 CANADA</p>
-
+              <div className="text-sm space-y-1 text-white/70 font-light">
+                <p className="font-semibold text-white">105 MAXES ROAD</p>
+                <p>MELVILLE, NY 11737, USA</p>
               </div>
-              {/* Added Mobile Number with Link */}
-              <p className='mt-4'>
+              <div className="mt-4 text-sm text-white/80 font-mono">
                 <a
-                  href="tel:+14388059990"
-                  className="hover:text-[#cccccc] transition-colors duration-200"
+                  href="tel:6314581111"
+                  className="hover:text-[#B31942] transition-colors duration-200"
                 >
-                  +1 (438) 805-9990
+                  Ph: 631 458 1111
                 </a>
-              </p>
+              </div>
             </div>
           </div>
 
