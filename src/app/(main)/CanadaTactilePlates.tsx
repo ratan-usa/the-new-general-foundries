@@ -114,7 +114,7 @@ export default function canadaTactilePlates() {
               <div className="relative rounded-lg border border-[#cccccc] bg-[#ffffff] overflow-hidden h-72 w-full group flex items-center justify-center p-4">
                 <div className="relative w-full h-full">
                   <Image
-                    src="/assets/canada/Detectable%20Warning%20Plates.jpeg"
+                    src="/assets/MEGA/detectable Warning Plates.jpeg"
                     alt="Cast Iron Tactile Plate Mechanical Profile"
                     fill
                     className="object-contain p-2 grayscale group-hover:grayscale-0 transition-all duration-700"
