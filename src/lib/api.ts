@@ -4,17 +4,17 @@
 const BASE_URL = "https://precastxchange-api.azurewebsites.net/api/v1";
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api/v1';
 import axios from 'axios';
-const DEFAULT_TENANT = "MEGAFOUNDRY";
-// ✅ UPDATED: All paths now point to "MEGAFOUNDRY"
+const DEFAULT_TENANT = "canadaFOUNDRY";
+// ✅ UPDATED: All paths now point to "canadaFOUNDRY"
 const TENANT_ID_MAP: Record<string, string> = {
-  "team": "MEGAFOUNDRY",
-  "customer": "MEGAFOUNDRY",
-  "logistics": "MEGAFOUNDRY",
-  "foundry": "MEGAFOUNDRY",
-  "forge": "MEGAFOUNDRY",
-  "fabricator": "MEGAFOUNDRY",
-  "vendor": "MEGAFOUNDRY",
-  "engineer": "MEGAFOUNDRY",
+  "team": "canadaFOUNDRY",
+  "customer": "canadaFOUNDRY",
+  "logistics": "canadaFOUNDRY",
+  "foundry": "canadaFOUNDRY",
+  "forge": "canadaFOUNDRY",
+  "fabricator": "canadaFOUNDRY",
+  "vendor": "canadaFOUNDRY",
+  "engineer": "canadaFOUNDRY",
 };
 
 // =========================================================
@@ -24,7 +24,7 @@ const TENANT_ID_MAP: Record<string, string> = {
 export async function sendSignupLink(prevState: any, formData: FormData) {
   const email = formData.get("email") as string;
   const rawSlug = formData.get("tenantCode") as string;
-  const apiTenantCode = TENANT_ID_MAP[rawSlug] || "MEGAFOUNDRY";
+  const apiTenantCode = TENANT_ID_MAP[rawSlug] || "canadaFOUNDRY";
 
   console.log(`🚀 Signup: Mapping '${rawSlug}' -> '${apiTenantCode}'`);
 
@@ -54,7 +54,7 @@ export async function sendSignupLink(prevState: any, formData: FormData) {
 
 // --- LOGIN ---
 export async function loginUser(email: string, pass: string, tenantSlug: string) {
-  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "canadaFOUNDRY";
   try {
     const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/login`, {
       method: 'POST',
@@ -70,7 +70,7 @@ export async function loginUser(email: string, pass: string, tenantSlug: string)
 
 // --- VERIFY OTP & GET TOKEN ---
 export async function verifyTwoFactor(email: string, pass: string, code: string, tenantSlug: string) {
-  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "canadaFOUNDRY";
   try {
     const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/two-factor`, {
       method: 'POST',
@@ -90,7 +90,7 @@ export async function verifyTwoFactor(email: string, pass: string, code: string,
 
 // --- COMPLETE REGISTRATION (After clicking email link) ---
 export async function completeRegistration(clientId: string, tenantSlug: string, data: any) {
-  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "canadaFOUNDRY";
   console.log("🚀 Registering:", { clientId, apiTenantCode, email: data.email });
 
   try {
@@ -118,7 +118,7 @@ export async function completeRegistration(clientId: string, tenantSlug: string,
 
 export async function changePassword(email: string, oldPass: string, newPass: string, tenantSlug: string) {
 
-  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "canadaFOUNDRY";
 
 
 
@@ -167,7 +167,7 @@ export async function changePassword(email: string, oldPass: string, newPass: st
 
 // --- FORGOT PASSWORD ---
 export async function sendForgotPasswordEmail(email: string, tenantSlug: string) {
-  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "canadaFOUNDRY";
   try {
     const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/forgot-password`, {
       method: 'POST',
@@ -185,7 +185,7 @@ export async function sendForgotPasswordEmail(email: string, tenantSlug: string)
 
 // --- RESET PASSWORD ---
 export async function resetPassword(clientId: string, email: string, newPass: string, tenantSlug: string) {
-  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "canadaFOUNDRY";
   try {
     const res = await fetch(`${BASE_URL}/${apiTenantCode}/auth/reset-password/${clientId}`, {
       method: 'POST',
@@ -223,7 +223,7 @@ function parseJwt(token: string) {
 
 // --- GET CURRENT USER PROFILE (Robust Version) ---
 export async function getUserProfile(token: string, tenantSlug: string) {
-  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "MEGAFOUNDRY";
+  const apiTenantCode = TENANT_ID_MAP[tenantSlug] || "canadaFOUNDRY";
 
   // 1. Try to fetch from API (Primary Strategy)
   try {
@@ -286,7 +286,7 @@ async function fetchWithAuth(endpoint: string, method: string = 'GET', body?: an
 
   const token = localStorage.getItem('authToken');
   const tenant = localStorage.getItem('tenantSlug') || 'team';
-  const apiTenant = TENANT_ID_MAP[tenant] || "MEGAFOUNDRY";
+  const apiTenant = TENANT_ID_MAP[tenant] || "canadaFOUNDRY";
 
   if (!token) {
     // Optional: Redirect logic if needed
@@ -569,18 +569,18 @@ export interface CreateProductRequest {
   longDescription?: string;
 
   // === ADD THIS MISSING LINE ===
-  tags?: string[]; 
+  tags?: string[];
   // ============================
 
   // Vendor / Category Info
   vendorId: string;
   vendorName: string;
   vendorSlug: string;
-  
+
   categoryId: string;
   categoryName: string;
   categorySlug: string;
-  
+
   subcategoryId: string;
   subcategoryName: string;
   subcategorySlug: string;
@@ -592,7 +592,7 @@ export interface CreateProductRequest {
     salePrice?: number;
     unitOfMeasure: string;
   };
-  
+
   dimensions?: {
     length: number;
     width: number;
@@ -601,7 +601,7 @@ export interface CreateProductRequest {
     weight: number;
     weightUnit: 'LB' | 'KG';
   };
-  
+
   availability?: {
     inStock: boolean;
     stockQuantity: number;
@@ -619,11 +619,11 @@ export interface CreateProductRequest {
 
 
 
- // src/services/api.ts
+// src/services/api.ts
 
-export const createProduct = async (productData: CreateProductRequest, tenantCode: string = "MEGAFOUNDRY"): Promise<any> => {
+export const createProduct = async (productData: CreateProductRequest, tenantCode: string = "canadaFOUNDRY"): Promise<any> => {
   const BASE_URL = "https://precastxchange-api.azurewebsites.net/api/v1";
-  
+
   // Get Token
   let token = '';
   if (typeof window !== 'undefined') {

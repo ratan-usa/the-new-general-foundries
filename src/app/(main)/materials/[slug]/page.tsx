@@ -61,11 +61,11 @@ export default async function MaterialPage({ params }: PageProps) {
             </ul>
           </div>
 
-          <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+          <div className="bg-[#ffffff] p-8 rounded-2xl border border-[#cccccc]">
             <h2 className="text-2xl font-bold text-xl text-[#D80621] mb-6">Common Applications</h2>
             <div className="flex flex-wrap gap-3">
               {data.applications.map((app: string, i: number) => (
-                <span key={i} className="bg-white px-4 text-sm py-2 rounded-full border border-gray-200 text-[#D80621] shadow-sm">
+                <span key={i} className="bg-white px-4 text-sm py-2 rounded-full border border-[#cccccc] text-[#D80621] shadow-sm">
                   {app}
                 </span>
               ))}
@@ -73,7 +73,7 @@ export default async function MaterialPage({ params }: PageProps) {
             <div className="mt-10 p-6 text-xl bg-[#D80621]/5 rounded-xl border border-[#D80621]/10">
               <h3 className="font-bold text-[#D80621] mb-2">Need a custom ?</h3>
               <Link href="/custom-projects">
-                <Button className="w-full text-xl bg-[#D80621] hover:bg-red-700 text-white mt-4">
+                <Button className="w-full text-xl bg-[#D80621] hover:bg-[#D80621] text-white mt-4">
                   Request Quote for {data.title}
                 </Button>
               </Link>

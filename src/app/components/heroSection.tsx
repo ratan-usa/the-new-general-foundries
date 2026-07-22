@@ -31,7 +31,7 @@ const heroSection = () => {
                 </p>
 
                 <div className="flex flex-col py-5 sm:flex-row items-center justify-center gap-4 mt-8">
-                    <Button className="bg-[#D80621] hover:bg-red-700 text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
+                    <Button className="bg-[#D80621] hover:bg-[#D80621] text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
                         Explore Capabilities
                     </Button>
                     <Button variant="outline" className="px-10 text-[#D80621] border-2 border-[#D80621] py-7 text-xl hover:bg-white/10 backdrop-blur-sm">

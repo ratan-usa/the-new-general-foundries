@@ -39,12 +39,12 @@ export default function LocationsManager({ vendorId }: { vendorId: string }) {
       {/* List of Existing Items */}
       <div className="grid gap-3 mb-6">
         {locations.map((loc) => (
-          <div key={loc.id} className="flex items-center justify-between p-3 border rounded bg-gray-50">
+          <div key={loc.id} className="flex items-center justify-between p-3 border rounded bg-[#ffffff]">
             <div className="flex items-center gap-3">
               <MapPin className="w-5 h-5 text-[#D80621]" />
               <span className="font-medium">{loc.city}, {loc.country}</span>
             </div>
-            <Button variant="ghost" size="sm" onClick={() => handleRemove(loc.id)} className="text-red-600 hover:text-red-700 hover:bg-red-50">
+            <Button variant="ghost" size="sm" onClick={() => handleRemove(loc.id)} className="text-[#D80621] hover:text-[#D80621] hover:bg-[#D80621]">
               <Trash2 className="w-4 h-4" />
             </Button>
           </div>

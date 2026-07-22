@@ -19,7 +19,7 @@ export const categories = [
     description: "Heavy-duty drainage solutions for high-traffic industrial environments.",
     specs: ["Ductile Iron Construction", "Load Class D400+", "Anti-Slip Surface", "UV Resistant Coating"],
     icon: Wrench,
-    color: "bg-red-700",
+    color: "bg-[#D80621]",
   },
   {
     title: "Cleanouts",
@@ -28,16 +28,16 @@ export const categories = [
     description: "Professional grade access points for plumbing and waste systems.",
     specs: ["Gas-tight Seals", "Brass/Nickel Finish", "Easy-access Design", "Corrosion Resistant"],
     icon: Droplet,
-    color: "bg-red-700",
+    color: "bg-[#D80621]",
   },
   {
     title: "New Innovations",
     slug: "new-innovations",
-    image: "/assets/MEGA/MONITERING WELL STATION.11 - Copy.png", // Construction/Infrastructure image
+    image: "/assets/canada/MONITERING WELL STATION.11 - Copy.png", // Construction/Infrastructure image
     description: "Cutting-edge casting technologies and patent-pending industrial designs.",
     specs: ["Patent-pending Technology", "Sustainable Materials", "IoT Ready Sensors", "High Precision Molding"],
     icon: Lightbulb,
-    color: "bg-red-700",
+    color: "bg-[#D80621]",
   },
   {
     title: "Pipe Grates",
@@ -46,25 +46,25 @@ export const categories = [
     description: "Optimized water flow and debris management for municipal projects.",
     specs: ["High Flow Efficiency", "Debris Filtration", "Cast Iron Durability", "Custom Sizes Available"],
     icon: Grid3X3,
-    color: "bg-red-700",
+    color: "bg-[#D80621]",
   },
   {
     title: "Hinged Castings",
     slug: "hinged-castings",
-    image: "/assets/MEGA/HATCHES COVER.jpeg", // Construction/Infrastructure image
+    image: "/assets/canada/HATCHES COVER.jpeg", // Construction/Infrastructure image
     description: "Ergonomic, easy-access manhole and utility covers for safety.",
     specs: ["Ergonomic Lift Assist", "Safety Lock System", "Heavy Duty Hinge", "Reduced Maintenance Cost"],
     icon: DoorOpen,
-    color: "bg-red-700",
-  }, 
+    color: "bg-[#D80621]",
+  },
   {
     title: "MJ Fittings",
     slug: "mj-fittings",
-    image: "/assets/MEGA/MJ Fittings.jpeg",
+    image: "/assets/canada/MJ Fittings.jpeg",
     description: "Our range of mechanical joint (MJ) fittings are engineered for superior sealing performance in underground water and gas pipelines.   ",
     specs: ["ISO 2531/EN 545 Standard", "Flange Sizes: 50mm - 1200mm", "Working Pressure: Up to 16 Bar", "Corrosion-Resistant Epoxy Coating"],
     icon: Wrench,
-    color: "bg-red-700",
+    color: "bg-[#D80621]",
   }
 ];
 

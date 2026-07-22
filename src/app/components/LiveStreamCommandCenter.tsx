@@ -23,7 +23,7 @@ const SideStreamPlayer = ({
 
       {/* Live Badge */}
       <div className="absolute top-2 left-2 z-10 flex items-center gap-1.5 -[#D80621]/60 backdrop-blur-md px-2 py-1 rounded text-[10px] font-bold text-white">
-        <span className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></span> LIVE
+        <span className="w-1.5 h-1.5 bg-[#D80621] rounded-full animate-pulse"></span> LIVE
       </div>
 
       <video
@@ -89,7 +89,7 @@ export default function LiveStreamCommandCenter() {
           {/* Header / Stats */}
           <div className="w-full text-center mb-8 border-b border-white/10 pb-6 bg-[#D80621] py-4 rounded-t-lg">
             <h1 className="text-2xl md:text-4xl font-bold text-white mb-2 uppercase tracking-tight">
-              MEGA GLOBAL MANUFACTURING NETWORK
+              CANADA GLOBAL MANUFACTURING NETWORK
             </h1>
 
             <div className="flex justify-center gap-6 text-xs text-[#D80621] font-mono mt-4">
@@ -110,7 +110,7 @@ export default function LiveStreamCommandCenter() {
           <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-4">
 
             {/* 1. ANALYTICS GRAPH (Simulated Line Chart) */}
-            <div className="h-40 bg-slate-500/50 border border-[#D80621] rounded-lg p-5 relative overflow-hidden group hover:border-[#D80621]/50 transition-colors">
+            <div className="h-40 bg-[#ffffff] border border-[#D80621] rounded-lg p-5 relative overflow-hidden group hover:border-[#D80621]/50 transition-colors">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider">Overall Efficiency</h3>
@@ -136,7 +136,7 @@ export default function LiveStreamCommandCenter() {
             </div>
 
             {/* 2. PRODUCTION OUTPUT (Progress Bars) */}
-            <div className="h-40 bg-slate-500/50 border border-[#D80621] rounded-lg p-5 flex flex-col justify-between hover:border-[#D80621]/50 transition-colors">
+            <div className="h-40 bg-[#ffffff] border border-[#D80621] rounded-lg p-5 flex flex-col justify-between hover:border-[#D80621]/50 transition-colors">
               <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider">Daily Production</h3>
 
               <div className="space-y-3">
@@ -146,7 +146,7 @@ export default function LiveStreamCommandCenter() {
                     <span className="text-[#D80621]">Steel Castings</span>
                     <span className="text-white font-mono">1,240 / 1,500</span>
                   </div>
-                  <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                  <div className="w-full bg-[#ffffff] h-1.5 rounded-full overflow-hidden">
                     <div className="bg-[#D80621] h-full rounded-full w-[82%]"></div>
                   </div>
                 </div>
@@ -156,7 +156,7 @@ export default function LiveStreamCommandCenter() {
                     <span className="text-[#D80621]">Iron Forgings</span>
                     <span className="text-white font-mono">850 / 900</span>
                   </div>
-                  <div className="w-full bg-neutral-800 h-1.5 rounded-full overflow-hidden">
+                  <div className="w-full bg-[#ffffff] h-1.5 rounded-full overflow-hidden">
                     <div className="bg-orange-500 h-full rounded-full w-[94%]"></div>
                   </div>
                 </div>
@@ -164,11 +164,11 @@ export default function LiveStreamCommandCenter() {
             </div>
 
             {/* 3. ENERGY CONSUMPTION (Gauge/Stats) */}
-            <div className="h-40 bg-slate-500/50 border border-[#D80621] rounded-lg p-5 hover:border-[#D80621]/50 transition-colors">
+            <div className="h-40 bg-[#ffffff] border border-[#D80621] rounded-lg p-5 hover:border-[#D80621]/50 transition-colors">
               <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider mb-4">Grid Load</h3>
               <div className="flex items-center gap-4">
                 {/* Circular "Gauge" using CSS borders */}
-                <div className="relative w-16 h-16 rounded-full border-4 border-neutral-800 flex items-center justify-center">
+                <div className="relative w-16 h-16 rounded-full border-4 border-[#cccccc] flex items-center justify-center">
                   <div className="absolute inset-0 border-4 border-[#D80621] rounded-full border-l-transparent border-b-transparent rotate-45"></div>
                   <span className="text-xs font-bold text-white">78%</span>
                 </div>
@@ -181,7 +181,7 @@ export default function LiveStreamCommandCenter() {
             </div>
 
             {/* 4. LOGISTICS MAP (Dot Simulation) */}
-            <div className="h-40 bg-slate-500/50 border border-[#D80621] rounded-lg p-5 relative overflow-hidden hover:border-[#D80621]/50 transition-colors">
+            <div className="h-40 bg-[#ffffff] border border-[#D80621] rounded-lg p-5 relative overflow-hidden hover:border-[#D80621]/50 transition-colors">
               <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider relative z-10">Active Shipments</h3>
 
               {/* Fake Map Dots */}

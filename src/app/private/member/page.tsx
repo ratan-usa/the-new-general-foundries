@@ -121,7 +121,7 @@ export default function DashboardPage() {
         </div>
         <div className="flex gap-2">
             <Button variant="outline">Download Report</Button>
-            <Button className="bg-[#D80621] hover:bg-red-700">
+            <Button className="bg-[#D80621] hover:bg-[#D80621]">
                 <ShieldCheck className="w-4 h-4 mr-2"/> Verify Identity
             </Button>
         </div>
@@ -157,7 +157,7 @@ export default function DashboardPage() {
                     You have 12 orders moving through production today.
                 </CardDescription>
             </div>
-            <Button className="bg-slate-500 hover:bg-slate-800 text-[#D80621]">
+            <Button className="bg-[#ffffff] hover:bg-[#ffffff] text-[#D80621]">
                 View All Orders <ArrowUpRight className="ml-2 h-4 w-4"/>
             </Button>
           </CardHeader>
@@ -193,7 +193,7 @@ export default function DashboardPage() {
                             <DropdownMenuContent align="end">
                                 <DropdownMenuItem>View Details</DropdownMenuItem>
                                 <DropdownMenuItem>Download Invoice</DropdownMenuItem>
-                                <DropdownMenuItem className="text-red-600">Cancel Order</DropdownMenuItem>
+                                <DropdownMenuItem className="text-[#D80621]">Cancel Order</DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
                     </TableCell>
@@ -210,7 +210,7 @@ export default function DashboardPage() {
 
 // Helper for status colors
 function StatusBadge({ status }: { status: string }) {
-    let styles = "bg-slate-100 text-slate-600";
+    let styles = "bg-[#ffffff] text-[#cccccc]";
     if (status === 'In Production') styles = "bg-blue-100 text-blue-700 border-blue-200 border";
     if (status === 'Shipped') styles = "bg-yellow-100 text-yellow-700 border-yellow-200 border";
     if (status === 'Delivered') styles = "bg-green-100 text-green-700 border-green-200 border";

@@ -48,7 +48,7 @@ const INITIAL_STORIES: Story[] = [
     id: '4',
     vendorName: 'Canada Foundries – Installation',
     vendorAvatar: '/assets/marine_castings/marine_castings2.jpeg',
-    mediaUrl: '/video/Fire Dumper Mega.470.mp4',
+    mediaUrl: '/video/Fire Dumper canada.470.mp4',
     mediaType: 'VIDEO',
     isViewed: false,
   },
@@ -115,7 +115,7 @@ const INITIAL_STORIES: Story[] = [
     mediaUrl: '/assets/image12.jpg',
     mediaType: 'IMAGE',
     isViewed: false,
-  }, 
+  },
   // {
   //   id: '13',
   //   vendorName: 'Canada Foundries – Precast Beams & Columns',
@@ -191,7 +191,7 @@ export default function FactoryStories() {
 
   return (
     // 1. OUTER WRAPPER: Ensures full width of the parent container
-    <div className="w-full bg-white py-6 border-b border-gray-100 relative group">
+    <div className="w-full bg-white py-6 border-b border-[#cccccc] relative group">
 
       {/* 2. SCROLL CONTAINER: 
           - w-full: Takes full width
@@ -208,10 +208,10 @@ export default function FactoryStories() {
         {/* flex-none: Prevents shrinking. Fixed width/height ensuring consistent look */}
         <div
           onClick={() => setIsUploading(true)}
-          className="flex-none w-28 h-48 md:w-32 md:h-56 relative rounded-xl overflow-hidden cursor-pointer shadow-sm border border-slate-200 group/create hover:bg-slate-50 transition-colors"
+          className="flex-none w-28 h-48 md:w-32 md:h-56 relative rounded-xl overflow-hidden cursor-pointer shadow-sm border border-[#cccccc] group/create hover:bg-[#ffffff] transition-colors"
         >
           {/* Top Half (User Image) */}
-          <div className="h-[65%] w-full bg-slate-100">
+          <div className="h-[65%] w-full bg-[#ffffff]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <Image
               width={1200}
@@ -254,7 +254,7 @@ export default function FactoryStories() {
             <div className="absolute inset-0 bg-gradient-to-b -[#D80621]/10 via-transparent -[#D80621]/70 pointer-events-none" />
 
             {/* Avatar Badge (Top Left) */}
-            <div className={` absolute top-2 left-2 rounded-full border-4 border-[#D80621] p-[2px] bg-[#D80621] ${story.isViewed ? 'border-slate-300 bg-slate-300' : ''} shadow-md `}>
+            <div className={` absolute top-2 left-2 rounded-full border-4 border-[#D80621] p-[2px] bg-[#D80621] ${story.isViewed ? 'border-[#cccccc] bg-[#ffffff]' : ''} shadow-md `}>
               <Avatar className="w-8 h-8 md:w-9 md:h-9 border-2 border-white">
                 <AvatarImage src={story.vendorAvatar} />
                 <AvatarFallback>VN</AvatarFallback>
@@ -279,7 +279,7 @@ export default function FactoryStories() {
       <div className="absolute top-1/2 -translate-y-1/2 right-4 z-10 hidden md:group-hover:block">
         <button
           onClick={scrollRight}
-          className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg border border-slate-100 hover:bg-white transition-colors text-[#D80621]"
+          className="bg-white/90 backdrop-blur-sm rounded-full p-2 shadow-lg border border-[#cccccc] hover:bg-white transition-colors text-[#D80621]"
         >
           <ArrowRight className="w-5 h-5" />
         </button>
@@ -322,12 +322,12 @@ function StoryViewer({ stories, initialIndex, onClose }: { stories: Story[], ini
   return (
     <div className="fixed inset-0 z-[9999] -[#D80621]/95 flex items-center justify-center">
       {/* Close Button */}
-      <button onClick={onClose} className="absolute top-4 right-4 text-white hover:text-gray-300 z-50 p-2 -[#D80621]/20 rounded-full backdrop-blur-md">
+      <button onClick={onClose} className="absolute top-4 right-4 text-white hover:text-[#cccccc] z-50 p-2 -[#D80621]/20 rounded-full backdrop-blur-md">
         <X className="w-6 h-6" />
       </button>
 
       {/* Main Content Area */}
-      <div className="relative h-full w-full md:max-w-md -[#D80621] md:rounded-xl overflow-hidden md:h-[90vh] md:border md:border-zinc-800 shadow-2xl">
+      <div className="relative h-full w-full md:max-w-md -[#D80621] md:rounded-xl overflow-hidden md:h-[90vh] md:border md:border-[#cccccc] shadow-2xl">
 
         {/* Progress & Header */}
         <div className="absolute top-0 left-0 right-0 p-4 z-20 bg-gradient-to-b -[#D80621]/80 to-transparent">
@@ -350,7 +350,7 @@ function StoryViewer({ stories, initialIndex, onClose }: { stories: Story[], ini
         </div>
 
         {/* Media */}
-        <div className="h-full w-full flex items-center justify-center bg-slate-500">
+        <div className="h-full w-full flex items-center justify-center bg-[#ffffff]">
           {currentStory.mediaType === 'VIDEO' ? (
             <video src={currentStory.mediaUrl} className="w-full h-full object-contain" autoPlay playsInline />
           ) : (
@@ -382,7 +382,7 @@ function UploadStoryModal({ onClose }: { onClose: () => void }) {
     <div className="fixed inset-0 z-[100] -[#D80621]/60 flex items-center justify-center backdrop-blur-sm p-4 animate-in fade-in duration-200">
       <div className="bg-white rounded-xl p-6 w-full max-w-sm shadow-xl">
         <h3 className="font-bold text-xl text-[#D80621] mb-4">Add to Story</h3>
-        <div className="h-48 bg-slate-50 border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center text-[#D80621] hover:bg-slate-100 hover:border-blue-400 transition-colors cursor-pointer">
+        <div className="h-48 bg-[#ffffff] border-2 border-dashed border-[#cccccc] rounded-xl flex flex-col items-center justify-center text-[#D80621] hover:bg-[#ffffff] hover:border-blue-400 transition-colors cursor-pointer">
           <div className="bg-white p-3 rounded-full mb-3 shadow-sm">
             <Plus className="w-6 h-6 text-blue-600" />
           </div>

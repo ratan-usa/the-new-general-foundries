@@ -32,11 +32,11 @@ export default function BlogSection() {
             <Link 
               key={post.id} 
               href={`/blog/${post.slug}`} // Link to the dynamic blog page
-              className="group flex flex-col h-full bg-white rounded-xl overflow-hidden border border-transparent hover:border-gray-100 hover:shadow-lg transition-all duration-300"
+              className="group flex flex-col h-full bg-white rounded-xl overflow-hidden border border-transparent hover:border-[#cccccc] hover:shadow-lg transition-all duration-300"
             >
               
               {/* Image with Zoom Effect */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100">
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#ffffff]">
                 <Image
                   src={post.image}
                   alt={post.title}

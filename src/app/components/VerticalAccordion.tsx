@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
-import { 
-  Zap, Settings, Cuboid, Sun, Droplets, Cog, Wrench, 
-  Anchor, Flame, Building, Bolt, Shield, Hammer 
+import {
+    Zap, Settings, Cuboid, Sun, Droplets, Cog, Wrench,
+    Anchor, Flame, Building, Bolt, Shield, Hammer
 } from 'lucide-react';
 
 // --- DATA MODEL ---
@@ -15,11 +15,11 @@ interface AccordionItem {
     category: string;
     description: string;
     image: string;
-    color: string; 
+    color: string;
     icon?: React.ElementType;
 }
 
-// 16 Items based on your Mega Products / Industrial Data
+// 16 Items based on your canada Products / Industrial Data
 const items: AccordionItem[] = [
     {
         id: "1",
@@ -176,7 +176,7 @@ export function VerticalAccordion() {
             {/* w-full: Full Width
                 h-[600px]: Fixed height for the bookshelf effect
             */}
-            <div className="flex w-full h-[700px] overflow-hidden border-y border-zinc-200">
+            <div className="flex w-full h-[700px] overflow-hidden border-y border-[#cccccc]">
 
                 {items.map((item) => {
                     const isActive = activeId === item.id;
@@ -187,12 +187,12 @@ export function VerticalAccordion() {
                             key={item.id}
                             onMouseEnter={() => setActiveId(item.id)}
                             className={cn(
-                                "relative transition-all duration-500 ease-in-out border-r border-zinc-800 last:border-r-0 cursor-pointer overflow-hidden",
+                                "relative transition-all duration-500 ease-in-out border-r border-[#cccccc] last:border-r-0 cursor-pointer overflow-hidden",
                                 // Active: Grow to flex-5 (takes up 5x space) with RED background
                                 // Inactive: Shrink to flex-1 (takes up 1x space) with BLACK background (No Blue)
-                                isActive 
-                                    ? `flex-[5] ${item.color}` 
-                                    : "flex-[1] bg-slate-500 hover:bg-zinc-800"
+                                isActive
+                                    ? `flex-[5] ${item.color}`
+                                    : "flex-[1] bg-[#ffffff] hover:bg-[#ffffff]"
                             )}
                         >
                             {/* --- CONTENT WHEN EXPANDED (VISIBLE ONLY ON ACTIVE) --- */}
@@ -229,7 +229,7 @@ export function VerticalAccordion() {
                                     <p className="text-sm leading-relaxed opacity-90 line-clamp-3">
                                         {item.description}
                                     </p>
-                                    
+
                                     <div className="mt-auto pt-4 flex items-center text-xs font-bold uppercase tracking-wider gap-2">
                                         View Products <span className="text-lg">→</span>
                                     </div>
@@ -245,8 +245,8 @@ export function VerticalAccordion() {
                             >
                                 <h3
                                     className="text-white/60 hover:text-white whitespace-nowrap text-sm font-bold tracking-[0.2em] uppercase transition-colors"
-                                    style={{ 
-                                        writingMode: 'vertical-rl', 
+                                    style={{
+                                        writingMode: 'vertical-rl',
                                         transform: 'rotate(180deg)',
                                         textShadow: '0px 0px 10px rgba(0,0,0,0.5)'
                                     }}

@@ -29,7 +29,7 @@ const products = [
     id: "trench-system",
     title: "Trench Systems",
     description: "High-performance iron castings supplied in multiple sizes and load classes for efficient rainwater collection on urban roads, highways, parking lots, and industrial plants.",
-    image: "/assets/MEGA/pre-trench-01.JPG",
+    image: "/assets/CANADA/pre-trench-01.JPG",
     link: "/products/gully-gratings"
   },
   {
@@ -43,21 +43,21 @@ const products = [
     id: "Hatches & Access-covers",
     title: "Hactches & Access Covers for Inspection Chambers",
     description: "Versatile casting solutions for inspection and access over water, sewage, and electrical distribution chambers. Built with airtight sealing, dual-face options, and modular sizing.",
-    image: "/assets/MEGA/HATCHES COVER.png",
+    image: "/assets/CANADA/HATCHES COVER.png",
     link: "/products/access-covers"
   },
   {
     id: "utility-telecom-electrical",
     title: "Fiber Optic, Telecom & Electrical Covers",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/MEGA/Electrical Covers.jpeg",
+    image: "/assets/CANADA/Electrical Covers.jpeg",
     link: "/products/telecom-covers"
   },
   {
     id: "precast-concrete molds",
     title: "Precast Concrete Molds",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/MEGA/catch-01 (3).JPG",
+    image: "/assets/CANADA/catch-01 (3).JPG",
     link: "/products/drainage-castings"
   },
   
@@ -65,7 +65,7 @@ const products = [
     id: "petro-gas-station-products",
     title: "Petro Gas Station Products",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/MEGA/MONITERING WELL STATION.11 - Copy.png",
+    image: "/assets/CANADA/MONITERING WELL STATION.11 - Copy.png",
     link: "/products/telecom-covers"
   },
   {
@@ -86,46 +86,46 @@ const products = [
     id: "detectable-warning-plates",
     title: "Detectable Warning Plates",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/MEGA/Detectable Warning Plates.jpeg",
+    image: "/assets/CANADA/Detectable Warning Plates.jpeg",
     link: "/products/drainage-castings"
   },
   {
     id: "water-works-product",
     title: "Water Works Products",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/MEGA/1.1 - Copy.png",
+    image: "/assets/CANADA/1.1 - Copy.png",
     link: "/products/telecom-covers"
   },
   {
     id: "ornamental-castings",
     title: "Ornamental Castings",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/MEGA/Ornamental Castings.jpeg",
+    image: "/assets/CANADA/Ornamental Castings.jpeg",
     link: "/products/drainage-castings"
   },
   {
     id: "water-sampling-station",
     title: "Water Sampling Station",
     description: "Specialized infrastructure castings offering secure access, single/articulated mechanics, and tamper-proof locking mechanisms across varying heavy-duty utility networks.",
-    image: "/assets/MEGA/sampling stations.png",
+    image: "/assets/CANADA/sampling stations.png",
     link: "/products/telecom-covers"
   },
   {
     id: "precast-concrete molds",
     title: "Precast Concrete Molds",
     description: "Premium linear drainage solutions engineered with solid ductile iron casting gratings to ensure rapid surface water evacuation and maximum performance.",
-    image: "/assets/MEGA/catch-01 (3).JPG",
+    image: "/assets/CANADA/catch-01 (3).JPG",
     link: "/products/drainage-castings"
   }
 ];
 
-const MegaProduct = () => {
+const CanadaProduct = () => {
   return (
     <section className="bg-[#c0c0c0] text-[#D80621] py-16 w-full px-4 sm:px-6 lg:px-10 font-sans">
       <div className="">
 
         {/* Header Section */}
-        <div className="border-b border-zinc-800 pb-6 mb-10">
+        <div className="border-b border-[#cccccc] pb-6 mb-10">
           <h2 className="text-3xl font-light tracking-wide text-white mb-2">
             Explore <span className="font-semibold text-[#D80621]">Canada Foundries</span> Products
           </h2>
@@ -139,7 +139,7 @@ const MegaProduct = () => {
           {categories.map((cat, index) => (
             <button
               key={index}
-              className="px-3 py-2 border border-zinc-800 bg-[#D80621] hover:bg-[#D80621] hover:border-[#D80621] text-zinc-300 hover:text-white transition-all duration-200 rounded-sm"
+              className="px-3 py-2 border border-[#cccccc] bg-[#D80621] hover:bg-[#D80621] hover:border-[#D80621] text-[#cccccc] hover:text-white transition-all duration-200 rounded-sm"
             >
               {cat}
             </button>
@@ -151,10 +151,10 @@ const MegaProduct = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="flex flex-col md:flex-row items-center gap-8 md:gap-16 border-b border-zinc-900 filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] transition-transform duration-300 pb-12 last:border-0"
+              className="flex flex-col md:flex-row items-center gap-8 md:gap-16 border-b border-[#cccccc] filter drop-shadow-[0_10px_15px_rgba(0,0,0,0.6)] transition-transform duration-300 pb-12 last:border-0"
             >
               {/* Product Image Wrapper Container */}
-              <div className="w-full md:w-1/3 flex justify-center items-center bg-[#c0c0c0] p-6 rounded-lg border border-zinc-800/40 shadow-inner group">
+              <div className="w-full md:w-1/3 flex justify-center items-center bg-[#c0c0c0] p-6 rounded-lg border border-[#cccccc] shadow-inner group">
                 <img
                   src={product.image}
                   alt={product.title}
@@ -191,4 +191,4 @@ const MegaProduct = () => {
   );
 };
 
-export default MegaProduct;
+export default CanadaProduct;

@@ -9,7 +9,7 @@ export default function CustomProjectsPage() {
     <div className="min-h-screen bg-white">
       
       {/* Hero */}
-      <div className="relative h-[300px] bg-slate-500 flex items-center justify-center overflow-hidden">
+      <div className="relative h-[300px] bg-[#ffffff] flex items-center justify-center overflow-hidden">
          {/* Optional: Add background image here like previous pages */}
          <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
          
@@ -34,7 +34,7 @@ export default function CustomProjectsPage() {
 
             <div className="space-y-6">
                 <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 bg-[#D80621] rounded-lg flex items-center justify-center shrink-0">
                         <span className="text-[#D80621] font-bold text-xl">1</span>
                     </div>
                     <div>
@@ -43,7 +43,7 @@ export default function CustomProjectsPage() {
                     </div>
                 </div>
                 <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 bg-[#D80621] rounded-lg flex items-center justify-center shrink-0">
                         <span className="text-[#D80621] font-bold text-xl">2</span>
                     </div>
                     <div>
@@ -52,7 +52,7 @@ export default function CustomProjectsPage() {
                     </div>
                 </div>
                 <div className="flex gap-4">
-                    <div className="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 bg-[#D80621] rounded-lg flex items-center justify-center shrink-0">
                         <span className="text-[#D80621] font-bold text-xl">3</span>
                     </div>
                     <div>
@@ -64,7 +64,7 @@ export default function CustomProjectsPage() {
           </div>
 
           {/* Right: Form */}
-          <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200 shadow-sm">
+          <div className="bg-[#ffffff] p-8 rounded-2xl border border-[#cccccc] shadow-sm">
             <h3 className="text-xl font-bold mb-6">Start Your Custom Project</h3>
             <form className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
@@ -88,12 +88,12 @@ export default function CustomProjectsPage() {
                     <Textarea placeholder="Describe dimensions, material requirements, and estimated quantity..." className="h-32" />
                 </div>
 
-                <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:bg-gray-100 cursor-pointer transition-colors">
+                <div className="border-2 border-dashed border-[#cccccc] rounded-lg p-6 text-center hover:bg-[#ffffff] cursor-pointer transition-colors">
                     <UploadCloud className="w-8 h-8 text-[#D80621] mx-auto mb-2" />
                     <p className="text-sm text-[#D80621]">Upload Blueprints / CAD Files</p>
                 </div>
 
-                <Button className="w-full bg-[#D80621] hover:bg-red-700 text-white py-6">
+                <Button className="w-full bg-[#D80621] hover:bg-[#D80621] text-white py-6">
                     Submit Request
                 </Button>
             </form>

@@ -31,7 +31,7 @@ const TECH_HIGHLIGHTS = [
 
 export default function NewTechnologiesPage() {
   return (
-    <div className="min-h-screen bg-slate-500 text-[#D80621] font-sans selection:bg-cyan-500 selection:-[#D80621]">
+    <div className="min-h-screen bg-[#ffffff] text-[#D80621] font-sans selection:bg-cyan-500 selection:-[#D80621]">
       
       {/* === HERO SECTION === */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
@@ -40,13 +40,13 @@ export default function NewTechnologiesPage() {
         <div className="absolute top-0 left-0 w-full h-full bg-[url('/assets/image9.jpeg')] opacity-10"></div>
         
         {/* Glowing Orb/Graphic */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/20 blur-[120px] rounded-full animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#D80621] blur-[120px] rounded-full animate-pulse"></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-cyan-500/10 blur-[80px] rounded-full mix-blend-screen"></div>
 
         <div className="relative z-10 text-center max-w-5xl px-4">
           <div className="inline-flex items-center gap-2 border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-md">
             <Atom className="w-3 h-3 animate-spin-slow" />
-            Mega Research Labs
+            Canada Research Labs
           </div>
           <h1 className="text-5xl md:text-8xl font-black tracking-tighter mb-6">
             THE FUTURE IS <br />
@@ -63,23 +63,23 @@ export default function NewTechnologiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {TECH_HIGHLIGHTS.map((tech) => (
-              <div key={tech.id} className="group relative bg-slate-500/50 border border-slate-800 p-8 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-colors duration-500">
+              <div key={tech.id} className="group relative bg-[#ffffff] border border-[#cccccc] p-8 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-colors duration-500">
                 {/* Hover Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-transparent to-red-500/0 group-hover:from-cyan-500/5 group-hover:to-red-500/5 transition-all duration-500"></div>
                 
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-slate-800 rounded-lg flex items-center justify-center mb-6 border border-slate-700 group-hover:scale-110 transition-transform group-hover:border-cyan-500 group-hover:text-cyan-400">
+                  <div className="w-14 h-14 bg-[#ffffff] rounded-lg flex items-center justify-center mb-6 border border-[#cccccc] group-hover:scale-110 transition-transform group-hover:border-cyan-500 group-hover:text-cyan-400">
                     <tech.icon className="w-7 h-7" />
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors">{tech.title}</h3>
-                  <p className="text-xs font-bold text-red-500 uppercase tracking-widest mb-4">{tech.subtitle}</p>
+                  <p className="text-xs font-bold text-[#D80621] uppercase tracking-widest mb-4">{tech.subtitle}</p>
                   
                   <p className="text-[#D80621] leading-relaxed mb-6 text-sm">
                     {tech.description}
                   </p>
 
-                  <ul className="space-y-2 border-t border-slate-800 pt-6">
+                  <ul className="space-y-2 border-t border-[#cccccc] pt-6">
                     {tech.specs.map((spec, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm text-[#D80621]">
                         <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full shadow-[0_0_5px_cyan]"></div>
@@ -95,22 +95,22 @@ export default function NewTechnologiesPage() {
       </section>
 
       {/* === THE LAB (R&D) SECTION === */}
-      <section className="py-24 -[#D80621] border-y border-slate-800">
+      <section className="py-24 -[#D80621] border-y border-[#cccccc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-16">
           
           <div className="w-full md:w-1/2">
-            <h2 className="text-4xl font-bold mb-6">Inside <span className="text-red-600">Site-X</span></h2>
+            <h2 className="text-4xl font-bold mb-6">Inside <span className="text-[#D80621]">Site-X</span></h2>
             <p className="text-[#D80621] mb-8 text-lg">
               Site-X is our dedicated R&D facility located in Austin, TX. Here, 50+ PhD metallurgists and data scientists work in secrecy to develop alloys that can withstand the temperatures of Mars entry and the pressure of the ocean floor.
             </p>
             
             <div className="grid grid-cols-2 gap-6">
-              <div className="p-4 bg-slate-500 rounded border border-slate-800">
+              <div className="p-4 bg-[#ffffff] rounded border border-[#cccccc]">
                 <Microscope className="w-6 h-6 text-cyan-400 mb-2" />
                 <div className="text-2xl font-bold text-white">45</div>
                 <div className="text-xs text-[#D80621] uppercase">Active Patents</div>
               </div>
-              <div className="p-4 bg-slate-500 rounded border border-slate-800">
+              <div className="p-4 bg-[#ffffff] rounded border border-[#cccccc]">
                 <BarChart3 className="w-6 h-6 text-cyan-400 mb-2" />
                 <div className="text-2xl font-bold text-white">$120M</div>
                 <div className="text-xs text-[#D80621] uppercase">Annual R&D Budget</div>
@@ -120,7 +120,7 @@ export default function NewTechnologiesPage() {
 
           <div className="w-full md:w-1/2 relative">
             {/* Holographic Image Frame */}
-            <div className="relative aspect-video rounded-xl overflow-hidden border border-slate-700 bg-slate-500">
+            <div className="relative aspect-video rounded-xl overflow-hidden border border-[#cccccc] bg-[#ffffff]">
               <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
               
               <div className="absolute inset-0 flex items-center justify-center">
@@ -139,7 +139,7 @@ export default function NewTechnologiesPage() {
       </section>
 
       {/* === PARTNERSHIPS === */}
-      <section className="py-20 bg-slate-500">
+      <section className="py-20 bg-[#ffffff]">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <p className="text-[#D80621] font-bold uppercase tracking-widest mb-10">Innovation Partners</p>
           <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">

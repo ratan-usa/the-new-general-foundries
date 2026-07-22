@@ -56,7 +56,7 @@ export default function OntarioStandardsDashboard() {
   const [activeNoteIndex, setActiveNoteIndex] = useState<number | null>(null);
 
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-10 py-10 bg-[#ffffff] text-[#000000] selection:bg-[#D80621] selection:text-[#ffffff] font-sans">
+    <div className="w-full px-4 sm:px-6 lg:px-10 py-10 bg-[#ffffff] text-[#ffffff] selection:bg-[#D80621] selection:text-[#ffffff] font-sans">
       <div className="max-w-7xl mx-auto space-y-8">
         
         {/* Top Minimal Typography Heading Layout */}
@@ -97,7 +97,7 @@ export default function OntarioStandardsDashboard() {
                     className={`w-full text-left p-4 rounded-lg border transition-all flex items-center justify-between group ${
                       isSelected
                         ? "bg-[#D80621] border-[#D80621] text-[#ffffff]"
-                        : "bg-[#ffffff] border-[#cccccc] text-[#000000] hover:border-[#D80621]"
+                        : "bg-[#ffffff] border-[#cccccc] text-[#ffffff] hover:border-[#D80621]"
                     }`}
                   >
                     <div className="flex items-start gap-3.5 max-w-[90%]">
@@ -131,7 +131,7 @@ export default function OntarioStandardsDashboard() {
                 <Ruler className="w-3.5 h-3.5 text-[#D80621]" />
                 <span>OPSD Technical Blueprint Matrix</span>
               </div>
-              <div className="text-[11px] text-[#000000] space-y-1.5 leading-relaxed">
+              <div className="text-[11px] text-[#ffffff] space-y-1.5 leading-relaxed">
                 <div><span className="text-[#666666]">Standard Drawing:</span> № 2001</div>
                 <div><span className="text-[#666666]">Approved By:</span> John P. Sullivan (City Eng.)</div>
                 <div><span className="text-[#666666]">Geometrics:</span> NADCA Compliant Baseline</div>
@@ -181,7 +181,7 @@ export default function OntarioStandardsDashboard() {
                       }`}>
                         [{index + 1}]
                       </span>
-                      <p className={activeNoteIndex === index ? "text-[#000000] font-medium" : "text-[#333333]"}>
+                      <p className={activeNoteIndex === index ? "text-[#ffffff] font-medium" : "text-[#333333]"}>
                         {note}
                       </p>
                     </div>

@@ -71,9 +71,9 @@ export default function SellerTools() {
                 <div
                   key={tool.id}
                   onClick={() => setActiveTab(index)}
-                  className={` cursor-pointer group transition-all duration-300 border-l-4 pl-6 py-4 ${isActive ? 'border-[#D80621] bg-red-50/30 rounded-r-lg' : 'border-transparent hover:border-red-100'} `}
+                  className={` cursor-pointer group transition-all duration-300 border-l-4 pl-6 py-4 ${isActive ? 'border-[#D80621] bg-[#D80621] rounded-r-lg' : 'border-transparent hover:border-[#D80621]'} `}
                 >
-                  <h3 className={`text-xl font-bold transition-colors ${isActive ? 'text-[#D80621]' : 'text-gray-600 group-hover:text-gray-900'}`}>
+                  <h3 className={`text-xl font-bold transition-colors ${isActive ? 'text-[#D80621]' : 'text-[#cccccc] group-hover:text-[#D80621]'}`}>
                     {tool.number} {tool.title}
                   </h3>
 
@@ -90,10 +90,10 @@ export default function SellerTools() {
           </div>
 
           <div className="lg:col-span-8">
-            <div className="relative bg-slate-500 rounded-xl overflow-hidden shadow-2xl border border-gray-800 aspect-[16/10]">
+            <div className="relative bg-[#ffffff] rounded-xl overflow-hidden shadow-2xl border border-[#cccccc] aspect-[16/10]">
 
-              <div className="absolute top-0 left-0 right-0 h-8 bg-gray-800 flex items-center px-4 space-x-2 z-10 border-b border-gray-700">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="absolute top-0 left-0 right-0 h-8 bg-[#ffffff] flex items-center px-4 space-x-2 z-10 border-b border-[#cccccc]">
+                <div className="w-3 h-3 rounded-full bg-[#D80621]"></div>
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>

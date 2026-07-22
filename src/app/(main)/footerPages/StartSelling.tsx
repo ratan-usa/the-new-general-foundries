@@ -80,7 +80,7 @@ export default function StartSelling() {
             {/* CTA Button */}
             <div className="mt-12 text-center lg:text-right">
               <Link href="/seller-registration">
-                <Button className="bg-[#D80621] hover:bg-red-700 text-white font-bold px-8 py-6 text-lg rounded-md shadow-md transition-transform hover:-translate-y-1">
+                <Button className="bg-[#D80621] hover:bg-[#D80621] text-white font-bold px-8 py-6 text-lg rounded-md shadow-md transition-transform hover:-translate-y-1">
                   Join As Supplier
                 </Button>
               </Link>

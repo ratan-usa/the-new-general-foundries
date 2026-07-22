@@ -75,7 +75,7 @@ export default function MetalDirectory() {
   const [selectedMetal, setSelectedMetal] = useState<MetalProfile>(METALS_DATA[0]);
 
   return (
-    <section className="bg-[#D80621] text-white py-24 font-sans border-t border-zinc-950">
+    <section className="bg-[#D80621] text-white py-24 font-sans border-t border-[#cccccc]">
       {/* Dynamic Fluid Full Width Layout Container */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
         

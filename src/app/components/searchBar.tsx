@@ -22,7 +22,7 @@ const SearchBar = () => {
     };
 
     return (
-        <div className="hidden md:flex max-w-xl w-full mx-4 h-10 items-center border border-red-200 rounded-md overflow-hidden bg-white">
+        <div className="hidden md:flex max-w-xl w-full mx-4 h-10 items-center border border-[#D80621] rounded-md overflow-hidden bg-white">
 
             {/* === 1. CUSTOM DROPDOWN === */}
             <DropdownMenu>
@@ -47,7 +47,7 @@ const SearchBar = () => {
                 {/* Dropdown Content - Square Borders */}
                 <DropdownMenuContent
                     align="start"
-                    className=" w-[200px] max-h-[300px] overflow-y-auto bg-white p-0 shadow-lg border border-gray-200 z-[60] rounded-none "
+                    className=" w-[200px] max-h-[300px] overflow-y-auto bg-white p-0 shadow-lg border border-[#cccccc] z-[60] rounded-none "
                 >
                     {/* "All" Option */}
                     <DropdownMenuItem
@@ -74,11 +74,11 @@ const SearchBar = () => {
             <input
                 type="text"
                 placeholder="Search products..."
-                className="w-full h-full pl-3 pr-4 text-sm text-[#D80621] focus:outline-none placeholder:text-neutral-400"
+                className="w-full h-full pl-3 pr-4 text-sm text-[#D80621] focus:outline-none placeholder:text-[#cccccc]"
             />
 
             {/* === 3. BUTTON === */}
-            <Button className="h-full rounded-none px-6 bg-[#D80621] hover:bg-red-700 text-white font-semibold text-xs uppercase tracking-wide">
+            <Button className="h-full rounded-none px-6 bg-[#D80621] hover:bg-[#D80621] text-white font-semibold text-xs uppercase tracking-wide">
                 Search
             </Button>
         </div>

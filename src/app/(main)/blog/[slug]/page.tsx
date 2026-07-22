@@ -22,7 +22,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-white pb-20">
        
-      <div className="bg-slate-500 text-[#D80621] py-20 px-4">
+      <div className="bg-[#ffffff] text-[#D80621] py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
             <Link href="/blog" className="inline-flex items-center text-sm text-[#D80621] hover:text-white mb-8 transition-colors">
                 <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
@@ -85,9 +85,9 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
 
         {/* Share / Footer of Article */}
-        <div className="mt-12 pt-8 border-t border-gray-100 flex justify-between items-center">
+        <div className="mt-12 pt-8 border-t border-[#cccccc] flex justify-between items-center">
             <p className="text-sm text-[#D80621]">Tags: Foundry, Innovation, Manufacturing</p>
-            <button className="flex items-center gap-2 text-sm font-bold text-[#D80621] hover:text-red-700">
+            <button className="flex items-center gap-2 text-sm font-bold text-[#D80621] hover:text-[#D80621]">
                 <Share2 className="w-4 h-4" /> Share Article
             </button>
         </div>

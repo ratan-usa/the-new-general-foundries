@@ -18,7 +18,7 @@ interface QProductVariant {
 const Q_SERIES_VARIANTS: QProductVariant[] = [
   {
     id: "q-500",
-    name: "Mega Q-500",
+    name: "Canada Q-500",
     tagline: "High-Velocity Linear Interception Matrix",
     description: "Engineered for intense transit hubs demanding continuous surface drainage. Features a self-locking monolithic seating geometry that drops into existing concrete channels instantly.",
     metric: "F900+",
@@ -27,7 +27,7 @@ const Q_SERIES_VARIANTS: QProductVariant[] = [
   },
   {
     id: "q-700",
-    name: "Mega Q-700",
+    name: "Canada Q-700",
     tagline: "Seismic-Rated Municipal Distribution Hub",
     description: "Specially formulated from premium nodular ductile iron to withstand unpredictable lateral shifting forces. Optimized for heavy airport taxiways and industrial container shipping ports.",
     metric: "90-Ton",
@@ -36,7 +36,7 @@ const Q_SERIES_VARIANTS: QProductVariant[] = [
   },
   {
     id: "q-alpha",
-    name: "Mega Q-Alpha",
+    name: "Canada Q-Alpha",
     tagline: "Smart IoT-Ready Inspection System",
     description: "Our most advanced foundry design yet. Features integrated low-frequency structural health sensors embedded directly within the iron casting frame to track load cycles in real-time.",
     metric: "0.01mm",
@@ -45,16 +45,16 @@ const Q_SERIES_VARIANTS: QProductVariant[] = [
   }
 ];
 
-export default function MegaQSeries() {
+export default function CanadaQSeries() {
   const [activeVariant, setActiveVariant] = useState<QProductVariant>(Q_SERIES_VARIANTS[0]);
 
   return (
-    <section className="bg-white text-[#D80621] py-24 font-sans border-b border-gray-100 w-full">
+    <section className="bg-white text-[#D80621] py-24 font-sans border-b border-[#cccccc] w-full">
       {/* Absolute strict fluid full width padding bounds */}
       <div className="w-full px-4 sm:px-6 lg:px-10 space-y-16">
         
         {/* --- MAIN HEADER MATRIX --- */}
-        <div className="border-b border-gray-200 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 w-full">
+        <div className="border-b border-[#cccccc] pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 w-full">
           <div>
             <span className="text-xs uppercase tracking-[0.4em] font-black text-[#D80621] block mb-3">
               Next-Gen Foundry Lineup
@@ -64,7 +64,7 @@ export default function MegaQSeries() {
             </h2>
           </div>
           <p className="text-[#D80621] text-base font-light leading-relaxed max-w-xl">
-            Conception to inception all in one go. The Q Series represents Mega’s peak metallurgical engineering—forging high-performance casting systems built for devastating modern surface stress.
+            Conception to inception all in one go. The Q Series represents Canada’s peak metallurgical engineering—forging high-performance casting systems built for devastating modern surface stress.
           </p>
         </div>
 
@@ -82,7 +82,7 @@ export default function MegaQSeries() {
                 <button
                   key={variant.id}
                   onClick={() => setActiveVariant(variant)}
-                  className={`w-full text-left p-5 border transition-all duration-300 rounded-none flex items-center justify-between group ${isActive ? "bg-gray-50 border-[#D80621] shadow-md" : "bg-white border-gray-200 text-[#D80621] hover:border-gray-400 hover:text-[#D80621]" } `}
+                  className={`w-full text-left p-5 border transition-all duration-300 rounded-none flex items-center justify-between group ${isActive ? "bg-[#ffffff] border-[#D80621] shadow-md" : "bg-white border-[#cccccc] text-[#D80621] hover:border-[#cccccc] hover:text-[#D80621]" } `}
                 >
                   <div>
                     <p className={`text-lg font-black uppercase tracking-tight transition-colors ${isActive ? 'text-[#D80621]' : 'text-[#D80621]'}`}>
@@ -92,7 +92,7 @@ export default function MegaQSeries() {
                       {variant.metric} Rating
                     </p>
                   </div>
-                  <ArrowUpRight className={`w-4 h-4 transition-transform duration-300 ${isActive ? 'text-[#D80621] rotate-45' : 'text-gray-300 group-hover:text-gray-600'}`} />
+                  <ArrowUpRight className={`w-4 h-4 transition-transform duration-300 ${isActive ? 'text-[#D80621] rotate-45' : 'text-[#cccccc] group-hover:text-[#cccccc]'}`} />
                 </button>
               );
             })}
@@ -101,14 +101,14 @@ export default function MegaQSeries() {
           {/* COLUMN 2: PRIMARY SPECIFICATION FOCUS SHEET (5 Columns Wide) */}
           <div className="lg:col-span-5 space-y-8 w-full">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-gray-50 border border-gray-200 text-[#D80621] text-xs font-mono uppercase tracking-wider mb-6">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#ffffff] border border-[#cccccc] text-[#D80621] text-xs font-mono uppercase tracking-wider mb-6">
                 <Sliders className="w-3.5 h-3.5 text-[#D80621]" /> Dynamic Configuration Unit
               </div>
 
               <h3 className="text-3xl md:text-4xl font-black text-[#D80621] tracking-tight uppercase mb-1">
                 {activeVariant.name}
               </h3>
-              <p className="text-xs font-mono uppercase tracking-widest text-[#D80621] font-bold border-b border-gray-100 pb-4 mb-4">
+              <p className="text-xs font-mono uppercase tracking-widest text-[#D80621] font-bold border-b border-[#cccccc] pb-4 mb-4">
                 {activeVariant.tagline}
               </p>
 
@@ -118,8 +118,8 @@ export default function MegaQSeries() {
             </div>
 
             {/* Technical Analytical Metric Block */}
-            <div className="grid grid-cols-2 gap-4 border-t border-gray-100 pt-6">
-              <div className="bg-gray-50 p-4 border border-gray-100">
+            <div className="grid grid-cols-2 gap-4 border-t border-[#cccccc] pt-6">
+              <div className="bg-[#ffffff] p-4 border border-[#cccccc]">
                 <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">
                   {activeVariant.metricLabel}
                 </span>
@@ -128,7 +128,7 @@ export default function MegaQSeries() {
                 </span>
               </div>
               
-              <div className="bg-gray-50 p-4 border border-gray-100 flex flex-col justify-center">
+              <div className="bg-[#ffffff] p-4 border border-[#cccccc] flex flex-col justify-center">
                 <span className="text-[10px] font-mono uppercase text-[#D80621] block mb-1">
                   Material Matrix
                 </span>
@@ -145,7 +145,7 @@ export default function MegaQSeries() {
 
           {/* COLUMN 3: CRISP HIGH-CONTRAST CAD PREVIEW VISUAL (4 Columns Wide) */}
           <div className="lg:col-span-4 w-full flex justify-end">
-            <div className="relative w-full max-w-[400px] aspect-square bg-gray-50 border border-gray-200 rounded-none overflow-hidden p-6 flex items-center justify-center group shadow-inner hover:border-[#D80621] transition-colors duration-300">
+            <div className="relative w-full max-w-[400px] aspect-square bg-[#ffffff] border border-[#cccccc] rounded-none overflow-hidden p-6 flex items-center justify-center group shadow-inner hover:border-[#D80621] transition-colors duration-300">
               
               {/* Product Visual */}
               <div className="relative w-full h-full">
@@ -159,10 +159,10 @@ export default function MegaQSeries() {
               </div>
 
               {/* Technical Geometric Crosshair Accents */}
-              <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-gray-300" />
-              <div className="absolute top-3 right-3 w-3 h-3 border-t border-r border-gray-300" />
-              <div className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-gray-300" />
-              <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-gray-300" />
+              <div className="absolute top-3 left-3 w-3 h-3 border-t border-l border-[#cccccc]" />
+              <div className="absolute top-3 right-3 w-3 h-3 border-t border-r border-[#cccccc]" />
+              <div className="absolute bottom-3 left-3 w-3 h-3 border-b border-l border-[#cccccc]" />
+              <div className="absolute bottom-3 right-3 w-3 h-3 border-b border-r border-[#cccccc]" />
 
               <div className="absolute bottom-4 left-4 right-4 bg-[#D80621]/95 text-[9px] font-mono uppercase font-bold tracking-wider text-[#D80621] text-center py-1.5 opacity-80 group-hover:opacity-100 transition-opacity">
                 Component Focal Frame // Active Spec
@@ -173,7 +173,7 @@ export default function MegaQSeries() {
         </div>
 
         {/* --- PERFORMANCE ASSURANCE MATRIX FLOOR --- */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 border-t border-gray-200 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12 border-t border-[#cccccc] w-full">
           <div className="flex items-center gap-3 p-4">
             <ShieldCheck className="w-6 h-6 text-[#D80621] shrink-0" />
             <p className="text-xs uppercase tracking-wider font-bold text-[#D80621]">

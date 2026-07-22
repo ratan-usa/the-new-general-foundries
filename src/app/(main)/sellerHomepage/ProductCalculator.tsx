@@ -67,7 +67,7 @@ export default function ProductCalculator() {
               <div key={feature.id} className="flex gap-5 group">
                  
                 <div className="shrink-0">
-                  <div className="w-12 h-12 bg-white rounded-lg border border-red-100 shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-white rounded-lg border border-[#D80621] shadow-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-6 h-6 text-[#D80621]" strokeWidth={1.5} />
                   </div>
                 </div>

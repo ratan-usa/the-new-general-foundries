@@ -41,9 +41,9 @@ export default function PrivateStats() {
  
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {statsData.map((stat) => (
-            <div key={stat.id} className="flex flex-col items-center text-center p-6 bg-slate-50 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
+            <div key={stat.id} className="flex flex-col items-center text-center p-6 bg-[#ffffff] rounded-xl border border-[#cccccc] hover:shadow-md transition-shadow">
         
-              <div className="mb-4 p-3 bg-red-50 rounded-full">
+              <div className="mb-4 p-3 bg-[#D80621] rounded-full">
                 <stat.icon className="w-8 h-8 text-[#D80621]" strokeWidth={1.5} />
               </div>
                
@@ -58,7 +58,7 @@ export default function PrivateStats() {
           ))}
         </div>
  
-        <div className="max-w-2xl mx-auto text-center bg-slate-500 text-[#D80621] rounded-2xl p-8 md:p-12 shadow-2xl">
+        <div className="max-w-2xl mx-auto text-center bg-[#ffffff] text-[#D80621] rounded-2xl p-8 md:p-12 shadow-2xl">
           <h3 className="text-2xl font-bold mb-2">Be the first to know.</h3>
           <p className="text-[#D80621] mb-8">Subscribe to get full access to our network stats.</p>
           
@@ -66,9 +66,9 @@ export default function PrivateStats() {
             <Input 
               type="email" 
               placeholder="Enter your email address" 
-              className="bg-white/10 border-white/20 text-white placeholder:text-gray-500 h-12"
+              className="bg-white/10 border-white/20 text-white placeholder:text-[#cccccc] h-12"
             />
-            <Button className="bg-[#D80621] hover:bg-red-700 h-12 px-8 font-bold">
+            <Button className="bg-[#D80621] hover:bg-[#D80621] h-12 px-8 font-bold">
               Subscribe
             </Button>
           </form>

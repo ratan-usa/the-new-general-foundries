@@ -5,7 +5,7 @@ import LiveFactoryFeed from '../../components/LiveFactoryFeed'
 import LiveStreamCommandCenter from '../../components/LiveStreamCommandCenter'
 import BusinessSolutions from '../../components/busineesSolution'
 import LiveStreamLayout from '../../components/LiveStreamLayout'
-import { MegaStories } from '../../components/mega-stories'
+import { CanadaStories } from '../../components/canada-stories'
 
 const videos = () => {
     return (
@@ -13,7 +13,7 @@ const videos = () => {
             <LiveStreamCommandCenter />
             <HeroSection />
             <InfiniteLiveFeed />
-            <MegaStories />
+            <CanadaStories />
             <LiveFactoryFeed />
             <BusinessSolutions />
             <LiveStreamLayout />

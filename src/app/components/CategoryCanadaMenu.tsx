@@ -66,7 +66,7 @@ const menuData = {
   }
 };
 
-export default function CategoryMegaMenu() {
+export default function CategoryCanadaMenu() {
   // State for Top Level Tabs
   const [activeTab, setActiveTab] = useState<'energy' | 'powerGen'>('powerGen');
   
@@ -89,14 +89,14 @@ export default function CategoryMegaMenu() {
       {/* === TRIGGER / TOP TABS === */}
       {/* This simulates the navbar links. In a real navbar, you might trigger this on hover of a "Categories" button, 
           but here we show the tabs directly as requested in the image. */}
-      <div className="flex items-center space-x-8 bg-white px-6 py-4 rounded-t-lg border-b border-gray-100">
+      <div className="flex items-center space-x-8 bg-white px-6 py-4 rounded-t-lg border-b border-[#cccccc]">
         
         {/* Tab 1: Energy */}
         <button
           onMouseEnter={() => handleTabChange('energy')}
-          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'energy' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700' }`}
+          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'energy' ? 'text-[#D80621]' : 'text-[#cccccc] hover:text-[#cccccc]' }`}
         >
-          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#D80621]' : 'text-gray-400'}`} />
+          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#D80621]' : 'text-[#cccccc]'}`} />
           Energy
           {/* Red Underline Animation */}
           {activeTab === 'energy' && (
@@ -107,9 +107,9 @@ export default function CategoryMegaMenu() {
         {/* Tab 2: Power Generation */}
         <button
           onMouseEnter={() => handleTabChange('powerGen')}
-          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'powerGen' ? 'text-gray-900' : 'text-gray-500 hover:text-gray-700' }`}
+          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'powerGen' ? 'text-[#D80621]' : 'text-[#cccccc] hover:text-[#cccccc]' }`}
         >
-          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#D80621]' : 'text-gray-400'}`} />
+          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#D80621]' : 'text-[#cccccc]'}`} />
           Power Generation
           {/* Red Underline Animation */}
           {activeTab === 'powerGen' && (
@@ -120,10 +120,10 @@ export default function CategoryMegaMenu() {
 
 
       {/* === DROPDOWN PANEL === */}
-      <div className="absolute left-0 top-full w-[800px] bg-white shadow-xl border-t border-gray-100 rounded-b-lg flex z-50 min-h-[400px]">
+      <div className="absolute left-0 top-full w-[800px] bg-white shadow-xl border-t border-[#cccccc] rounded-b-lg flex z-50 min-h-[400px]">
         
         {/* --- LEFT COLUMN: CATEGORIES --- */}
-        <div className="w-1/2 py-6 border-r-2 border-gray-100">
+        <div className="w-1/2 py-6 border-r-2 border-[#cccccc]">
           <ul className="space-y-1">
             {currentData.categories.map((cat, index) => {
               const isActive = index === activeCategoryIndex;
@@ -131,7 +131,7 @@ export default function CategoryMegaMenu() {
                 <li key={index}>
                   <button
                     onMouseEnter={() => setActiveCategoryIndex(index)}
-                    className={`w-full flex items-center justify-between px-6 py-3 text-sm font-bold transition-colors ${ isActive ? 'text-[#D80621] bg-red-50/50' : 'text-gray-800 hover:text-[#D80621]' }`}
+                    className={`w-full flex items-center justify-between px-6 py-3 text-sm font-bold transition-colors ${ isActive ? 'text-[#D80621] bg-[#D80621]' : 'text-[#D80621] hover:text-[#D80621]' }`}
                   >
                     <span>{cat.name}</span>
                     {isActive && <ChevronRight className="w-4 h-4" />}
@@ -145,7 +145,7 @@ export default function CategoryMegaMenu() {
         {/* --- RIGHT COLUMN: SUB-ITEMS --- */}
         <div className="w-1/2 py-6 bg-white">
           {/* Vertical gray line visual (optional, acts as spacer padding) */}
-          <div className="h-full pl-8 border-l-2 border-gray-100/50">
+          <div className="h-full pl-8 border-l-2 border-[#cccccc]">
             <ul className="space-y-4">
               {activeSubItems.map((item, index) => (
                 <li key={index}>

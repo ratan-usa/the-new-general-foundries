@@ -6,13 +6,13 @@ import { menuData } from "@/lib/menuData2" // 1. Import menuData
 const tagLines = [
   {
     id: 1,
-    lines: "Be bold. Be powerful. The Futuristic Mega Force.",
+    lines: "Be bold. Be powerful. The Futuristic Canada Force.",
     description: "Represents Canada Foundries’ commitment to bold innovation, powerful engineering, and a futuristic vision. It reflects our focus on pioneering technologies, next-generation materials, and advanced manufacturing systems that position us as a global force transforming the future of metal and industrial engineering.",
     imgUrl: "/assets/image1.jpeg"
   },
   {
     id: 2,
-    lines: "Mega Options. Mega Outcomes.",
+    lines: "Canada Options. Canada Outcomes.",
     description: "Highlights the extensive variety of products, solutions, and industrial services Canada Foundries offers. From raw materials to advanced manufacturing systems, the company consistently delivers high-value outcomes that exceed expectations through versatility, innovation, and precision engineering.",
     imgUrl: "/assets/image2.jpeg"
   },
@@ -36,13 +36,13 @@ const tagLines = [
   },
   {
     id: 6,
-    lines: "The Mega Guarantee.",
-    description: "Assures customers of long-term durability, reliability, and flawless engineering. The Mega Guarantee symbolizes trust and confidence in the performance, safety, and structural strength of every product.",
+    lines: "The Canada Guarantee.",
+    description: "Assures customers of long-term durability, reliability, and flawless engineering. The Canada Guarantee symbolizes trust and confidence in the performance, safety, and structural strength of every product.",
     imgUrl: "/assets/image6.jpg"
   },
   {
     id: 7,
-    lines: "Mega Savings. Zero Compromise.",
+    lines: "Canada Savings. Zero Compromise.",
     description: "Communicates cost-efficiency paired with premium quality. It highlights Canada Foundries’ ability to provide competitive pricing without compromising on material strength, safety, or engineering excellence.",
     imgUrl: "/assets/image7.jpeg"
   },
@@ -108,7 +108,7 @@ const tagLines = [
   },
   {
     id: 18,
-    lines: "Mega Strength. Mega Standards.",
+    lines: "Canada Strength. Canada Standards.",
     description: "Defines the exceptional quality, structural strength, durability, and strict compliance standards that Canada Foundries maintains across all operational and manufacturing processes.",
     imgUrl: "/assets/image18.jpeg"
   },
@@ -134,12 +134,12 @@ export function DesignCapabilities() {
   );
 
   return (
-    <section className="w-full py-16 px-4 md:px-8 bg-zinc-50">
+    <section className="w-full py-16 px-4 md:px-8 bg-[#ffffff]">
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
 
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-[#D80621] mb-10 border-l-4 border-[#D80621] pl-4">
-          The Mega Philosophy
+          The Canada Philosophy
         </h2>
 
         {/* The Grid Layout (2 Columns) */}
@@ -154,7 +154,7 @@ export function DesignCapabilities() {
                 className="group flex flex-row border border-[#cccccc] shadow-xl overflow-hidden hover:shadow-none transition-shadow duration-300 min-h-[240px] bg-white"
               >
                 {/* Left Side: Image (Approx 35% width) */}
-                <div className="relative w-[35%] min-w-[35%] bg-zinc-100">
+                <div className="relative w-[35%] min-w-[35%] bg-[#ffffff]">
                   <Image
                     src={item.imgUrl}
                     alt={item.lines}

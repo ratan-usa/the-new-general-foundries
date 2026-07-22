@@ -113,9 +113,16 @@ export default function FoundryStandardsVideoMatrix() {
                 >
                   <RotateCcw className="w-4 h-4 text-white" />
                 </button>
-              </div> 
+              </div>
+
+              <div className="text-[10px] font-mono text-neutral-400 tracking-wider">
+                FEED STATUS // <span className="text-emerald-400 animate-pulse font-bold">LOOPING CONTINUOUS</span>
+              </div>
             </div>
- 
+
+            <div className="absolute top-4 left-4 bg-black/80 backdrop-blur border border-neutral-800 px-3 py-1.5 rounded text-[10px] font-mono tracking-widest uppercase text-white font-bold">
+              SYS_LOG // {activeSpec.category.replace(" ", "_").toUpperCase()}
+            </div>
           </div>
 
           {/* Directory Panel & Specifications Readings (Right Side) */}

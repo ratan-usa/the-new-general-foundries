@@ -31,7 +31,7 @@ const OfficeCard = ({
     <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-6 md:p-8 flex flex-col items-center text-center border-t-4 border-transparent hover:border-[#D80621] transition-all duration-300 relative mt-8">
       {/* Circular Flag Container overlapping top border */}
       <div className="absolute -top-8 p-1 bg-white rounded-full shadow-sm">
-        <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-gray-100 relative">
+        <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#cccccc] relative">
           {/* Replace src with actual flag image assets */}
           <Image width={1200} height={600} src={flagSrc} alt={`${title} flag`} className="w-full h-full object-cover" />
         </div>
@@ -58,7 +58,7 @@ const OfficeCard = ({
       </div>
 
       {/* Google Maps Embed */}
-      <div className="w-full h-48 bg-gray-200 rounded-lg overflow-hidden">
+      <div className="w-full h-48 bg-[#ffffff] rounded-lg overflow-hidden">
         <iframe
           src={mapSrc}
           width="100%"
@@ -85,7 +85,7 @@ const ContactUs = () => {
     description: "We are dedicated to providing excellent service. Contact us anytime; we look forward to assisting you",
     address: "ONE YOUNGE STREET TORONTO, ONTARIO M5E 1R4 CANADA",
     phone: "+1 (438) 805-9990",
-    email: "info@megafoundries.com",
+    email: "info@canadafoundries.com",
     // Google Map Embed for Toronto
     mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184551.8097336271!2d-79.54286569827758!3d43.71840371276628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1652901234567!5m2!1sen!2sus"
   };
@@ -97,7 +97,7 @@ const ContactUs = () => {
     description: "We are dedicated to providing excellent service. Contact us anytime; we look forward to assisting you",
     address: "105 MAXES ROAD Melville, NY 11737 USA",
     phone: "+1 (512) 782-8880",
-    email: "info@megafoundries.com",
+    email: "info@canadafoundries.com",
     // Google Map Embed for New York
     mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830894612!2d-74.11976389064203!3d40.69766374869555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sus!4v1652901987654!5m2!1sen!2sus"
   };
@@ -146,7 +146,7 @@ const ContactUs = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col py-5 sm:flex-row items-center justify-center gap-4 mt-8">
-            <Button className="bg-[#D80621] hover:bg-red-700 text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
+            <Button className="bg-[#D80621] hover:bg-[#D80621] text-white px-10 py-7 text-xl rounded-md font-bold shadow-[0_0_20px_rgba(204,34,33,0.4)] transition-all transform hover:scale-105">
               Explore Capabilities
             </Button>
             <Button variant="outline" className="px-10 text-[#D80621] border-2 border-[#D80621] py-7 text-xl hover:bg-white/10 backdrop-blur-sm">
@@ -158,7 +158,7 @@ const ContactUs = () => {
           Engage with dedicated experts
         </p>
       </div>
-      <div className="bg-gray-50 min-h-screen px-4 sm:px-6 lg:px-8">
+      <div className="bg-[#ffffff] min-h-screen px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Section 1: Office Locations Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 mb-24">
@@ -197,7 +197,7 @@ const ContactUs = () => {
                         type="text"
                         id="name"
                         placeholder="Name"
-                        className="bg-gray-50 border-gray-200"
+                        className="bg-[#ffffff] border-[#cccccc]"
                       />
                     </div>
                     <div>
@@ -205,7 +205,7 @@ const ContactUs = () => {
                         type="email"
                         id="email"
                         placeholder="Email"
-                        className="bg-gray-50 border-gray-200"
+                        className="bg-[#ffffff] border-[#cccccc]"
                       />
                     </div>
                   </div>
@@ -215,7 +215,7 @@ const ContactUs = () => {
                       type="text"
                       id="subject"
                       placeholder="Subject"
-                      className="bg-gray-50 border-gray-200 "
+                      className="bg-[#ffffff] border-[#cccccc] "
                     />
                   </div>
 
@@ -223,7 +223,7 @@ const ContactUs = () => {
                     <Textarea
                       id="message"
                       placeholder="Your Message"
-                      className="min-h-[150px] bg-gray-50 border-gray-200 resize-none"
+                      className="min-h-[150px] bg-[#ffffff] border-[#cccccc] resize-none"
                     />
                   </div>
 
@@ -231,7 +231,7 @@ const ContactUs = () => {
                     <Button
                       type="submit"
                       variant="outline"
-                      className="h-auto py-2 px-4 border border-[#D80621] text-[#D80621] hover:bg-red-50 hover:text-[#D80621] font-semibold text-base transition-all duration-300"
+                      className="h-auto py-2 px-4 border border-[#D80621] text-[#D80621] hover:bg-[#D80621] hover:text-[#D80621] font-semibold text-base transition-all duration-300"
                     >
                       Submit Request!
                     </Button>

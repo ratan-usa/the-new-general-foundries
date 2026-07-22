@@ -8,8 +8,8 @@ import React, { useState } from 'react';
 // === SAMPLE DATA: In real app, fetch this from your DB ===
 // You need a database table with: id, factory_name, location, thumbnail_url, vimeo_id
 const sampleStreams = [
-  { id: 1, name: "Mega Forge USA - Plant A", location: "Texas, USA", thumbnail: "/assets/factory1.jpg", vimeoId: "76979871" }, // Sample Vimeo ID
-  { id: 2, name: "Mega Casting India", location: "Gujarat, India", thumbnail: "/assets/factory2.jpg", vimeoId: "76979871" },
+  { id: 1, name: "Canada Forge USA - Plant A", location: "Texas, USA", thumbnail: "/assets/factory1.jpg", vimeoId: "76979871" }, // Sample Vimeo ID
+  { id: 2, name: "Canada Casting India", location: "Gujarat, India", thumbnail: "/assets/factory2.jpg", vimeoId: "76979871" },
   { id: 3, name: "Canada Foundries Unit 4", location: "Ontario, Canada", thumbnail: "/assets/factory3.jpg", vimeoId: "76979871" },
   { id: 4, name: "Precision Molds UK", location: "London, UK", thumbnail: "/assets/factory4.jpg", vimeoId: "76979871" },
   { id: 5, name: "Euro Fabricators", location: "Berlin, Germany", thumbnail: "/assets/factory5.jpg", vimeoId: "76979871" },
@@ -27,7 +27,7 @@ export default function LiveFactoryFeed() {
   );
 
   return (
-    <section className="w-full py-12 bg-slate-500 text-[#D80621]">
+    <section className="w-full py-12 bg-[#ffffff] text-[#D80621]">
       <div className="container mx-auto px-4">
         
         {/* HEADER */}
@@ -48,7 +48,7 @@ export default function LiveFactoryFeed() {
             <input 
               type="text" 
               placeholder="Search by Factory or Country..." 
-              className="w-full pl-10 pr-4 py-2 bg-neutral-800 border border-neutral-700 rounded-full focus:border-[#D80621] focus:outline-none text-sm transition-colors"
+              className="w-full pl-10 pr-4 py-2 bg-[#ffffff] border border-[#cccccc] rounded-full focus:border-[#D80621] focus:outline-none text-sm transition-colors"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
@@ -59,13 +59,13 @@ export default function LiveFactoryFeed() {
           {filteredStreams.map((stream) => (
             <div 
               key={stream.id} 
-              className="group relative bg-neutral-800 rounded-xl overflow-hidden cursor-pointer border border-neutral-700 hover:border-[#D80621] transition-all hover:-translate-y-1"
+              className="group relative bg-[#ffffff] rounded-xl overflow-hidden cursor-pointer border border-[#cccccc] hover:border-[#D80621] transition-all hover:-translate-y-1"
               onClick={() => setSelectedStream(stream)}
             >
               {/* Thumbnail */}
-              <div className="relative h-48 w-full bg-slate-500">
+              <div className="relative h-48 w-full bg-[#ffffff]">
                 {/* Replace src with real images */}
-                <div className="absolute inset-0 bg-neutral-800 flex items-center justify-center text-[#D80621]">
+                <div className="absolute inset-0 bg-[#ffffff] flex items-center justify-center text-[#D80621]">
                     {/* Placeholder if image missing */}
                     <span className="text-xs">Thumbnail: {stream.name}</span>
                 </div>
@@ -97,7 +97,7 @@ export default function LiveFactoryFeed() {
 
         {/* VIDEO MODAL (Dialog) */}
         <Dialog open={!!selectedStream} onOpenChange={() => setSelectedStream(null)}>
-          <DialogContent className="-[#D80621] border-neutral-800 text-white max-w-4xl p-0 overflow-hidden">
+          <DialogContent className="-[#D80621] border-[#cccccc] text-white max-w-4xl p-0 overflow-hidden">
             <DialogHeader className="p-4 absolute top-0 left-0 z-10 w-full bg-gradient-to-b -[#D80621]/80 to-transparent">
               <DialogTitle className="text-sm font-medium flex items-center gap-2">
                 <span className="w-2 h-2 bg-[#D80621] rounded-full animate-pulse" /> 

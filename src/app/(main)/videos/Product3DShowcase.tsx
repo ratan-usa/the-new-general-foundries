@@ -75,7 +75,7 @@ export default function Product3DShowcase() {
   }, [activeVideoIndex]);
 
   return (
-    <section className="bg-slate-500 text-[#D80621] py-20 border-t border-zinc-900 w-full">
+    <section className="bg-[#ffffff] text-[#D80621] py-20 border-t border-[#cccccc] w-full">
       <div className="w-full px-4 sm:px-6 lg:px-10">
         
         {/* --- SECTION HEADER --- */}
@@ -106,7 +106,7 @@ export default function Product3DShowcase() {
           
           {/* LEFT: Continuous Main Screen Display */}
           <div className="lg:col-span-2 w-full">
-            <div className="relative aspect-video -[#D80621] rounded-none border border-zinc-800 shadow-2xl overflow-hidden group">
+            <div className="relative aspect-video -[#D80621] rounded-none border border-[#cccccc] shadow-2xl overflow-hidden group">
               
               <video
                 ref={videoRef}
@@ -123,7 +123,7 @@ export default function Product3DShowcase() {
               </video>
 
               {/* Minimal Top Layout Metadata overlay overlaying active performance logs */}
-              <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-[#D80621]/80 backdrop-blur-sm border border-zinc-800 px-3 py-1.5">
+              <div className="absolute top-4 left-4 z-20 flex items-center gap-2 bg-[#D80621]/80 backdrop-blur-sm border border-[#cccccc] px-3 py-1.5">
                 <span className="w-2 h-2 bg-[#D80621] rounded-full animate-ping shrink-0" />
                 <span className="text-[10px] font-mono tracking-widest text-[#D80621] uppercase font-bold">
                   Autoloop Sequence Item 0{activeVideoIndex + 1}
@@ -132,7 +132,7 @@ export default function Product3DShowcase() {
             </div>
 
             {/* Permanent Bottom Technical Specs Drawer */}
-            <div className="mt-4 p-6 bg-slate-500/40 border border-zinc-900 rounded-none space-y-2">
+            <div className="mt-4 p-6 bg-[#ffffff] border border-[#cccccc] rounded-none space-y-2">
               <div className="flex items-center gap-3">
                 <Badge variant="outline" className="text-[#D80621] border-[#D80621] bg-[#D80621]/10 rounded-none uppercase text-[10px] tracking-wider font-black">
                   {activeVideo.type.replace('_', ' ')}
@@ -145,9 +145,9 @@ export default function Product3DShowcase() {
           </div>
 
           {/* RIGHT: Active Playlist Index Trackers */}
-          <div className="lg:col-span-1 bg-slate-500/20 rounded-none border border-zinc-900 p-4 h-full flex flex-col justify-between min-h-[400px]">
+          <div className="lg:col-span-1 bg-[#ffffff] rounded-none border border-[#cccccc] p-4 h-full flex flex-col justify-between min-h-[400px]">
             <div className="w-full">
-              <h4 className="text-[#D80621] font-bold uppercase text-xs tracking-widest mb-4 flex items-center gap-2 border-b border-zinc-900 pb-3">
+              <h4 className="text-[#D80621] font-bold uppercase text-xs tracking-widest mb-4 flex items-center gap-2 border-b border-[#cccccc] pb-3">
                 <Layers className="w-4 h-4" /> 
                 Showroom Playlist Lineup
               </h4>
@@ -163,11 +163,11 @@ export default function Product3DShowcase() {
                         "flex gap-4 p-3 rounded-none cursor-pointer transition-all border group items-center",
                         isCurrent 
                           ? "bg-[#D80621]/10 border-[#D80621]" 
-                          : "-[#D80621] border-zinc-900 hover:border-zinc-700"
+                          : "-[#D80621] border-[#cccccc] hover:border-[#cccccc]"
                       )}
                     >
                       {/* Thumbnail Placeholder Window */}
-                      <div className="relative w-24 h-16 bg-slate-500 rounded-none overflow-hidden shrink-0 flex items-center justify-center border border-zinc-800">
+                      <div className="relative w-24 h-16 bg-[#ffffff] rounded-none overflow-hidden shrink-0 flex items-center justify-center border border-[#cccccc]">
                         <Image 
                           src={video.thumbnail} 
                           alt="thumb" 
@@ -195,8 +195,8 @@ export default function Product3DShowcase() {
             </div>
 
             {/* Bottom Technical Assets Outbound Request */}
-            <div className="mt-6 pt-4 border-t border-zinc-900 text-left w-full">
-               <Button variant="outline" className="w-full text-xs text-white bg-transparent border-zinc-800 hover:bg-white hover:-[#D80621] font-black uppercase tracking-wider h-11 rounded-none transition-colors">
+            <div className="mt-6 pt-4 border-t border-[#cccccc] text-left w-full">
+               <Button variant="outline" className="w-full text-xs text-white bg-transparent border-[#cccccc] hover:bg-white hover:-[#D80621] font-black uppercase tracking-wider h-11 rounded-none transition-colors">
                  Request CAD / BIM Files <ChevronRight className="w-3 h-3 ml-2" />
                </Button>
             </div>

@@ -4,9 +4,9 @@ import React from "react";
 import Image from "next/image";
 import { Hammer, ShieldAlert, Lock, Activity } from "lucide-react";
 
-export default function MegaFeaShowcase() {
+export default function CanadaFeaShowcase() {
   return (
-    <section className="bg-white text-[#D80621] py-24 font-sans border-b border-gray-100 w-full">
+    <section className="bg-white text-[#D80621] py-24 font-sans border-b border-[#cccccc] w-full">
       {/* Absolute strict fluid full width padding bounds */}
       <div className="w-full px-4 sm:px-6 lg:px-10 space-y-24">
         
@@ -29,7 +29,7 @@ export default function MegaFeaShowcase() {
             
             <div className="space-y-4 text-[#D80621] text-sm md:text-base font-light leading-relaxed">
               <p>
-                To ensure Mega casting systems deliver the structural strength and fatigue stability required for heavy modern municipal networks, we utilize advanced Finite Element Analysis (FEA) deep within our pipeline prototyping cycles. This modeling allowing us to map exactly how the physical cover behaves under devastating continuous tire pounding.
+                To ensure Canada casting systems deliver the structural strength and fatigue stability required for heavy modern municipal networks, we utilize advanced Finite Element Analysis (FEA) deep within our pipeline prototyping cycles. This modeling allowing us to map exactly how the physical cover behaves under devastating continuous tire pounding.
               </p>
               <p>
                 Our high-fidelity FEA heat maps illustrate how the internal geometric support ribs manage and disperse downward point forces evenly across both the cover and seating frame. By evaluating this strain behavior pattern down to the micron level, we actively refine our structural walls to reduce shifting movement and guarantee long-term wear resistance long before actual metallic pouring begins.
@@ -39,7 +39,7 @@ export default function MegaFeaShowcase() {
 
           {/* Right Visual FEA Heat Map Column (5 Columns Wide) */}
           <div className="lg:col-span-5 w-full flex justify-end">
-            <div className="relative w-full max-w-[480px] aspect-[4/3] bg-gray-50 border border-gray-200 p-4 shadow-md rounded-xs group hover:border-[#D80621] transition-colors duration-300">
+            <div className="relative w-full max-w-[480px] aspect-[4/3] bg-[#ffffff] border border-[#cccccc] p-4 shadow-md rounded-xs group hover:border-[#D80621] transition-colors duration-300">
               <Image
                 src="/assets/image2.jpeg" // Replace with your FEA color heat map simulation image
                 alt="Finite Element Analysis Structural Heat Map Simulation"
@@ -55,13 +55,13 @@ export default function MegaFeaShowcase() {
         </div>
 
         {/* --- BOTTOM ROW: KEY FEATURES & BENEFITS WITH GRAPHIC --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pt-16 border-t border-gray-200 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pt-16 border-t border-[#cccccc] w-full">
           
           {/* Left Features List Stack (7 Columns Wide) */}
           <div className="lg:col-span-7 space-y-10 w-full">
             <div>
               <h3 className="text-2xl font-black uppercase tracking-tight text-[#D80621] mb-1">
-                Mega Q-Series
+                Canada Q-Series
               </h3>
               <p className="text-xs font-mono uppercase tracking-widest text-[#D80621] font-bold">
                 Key Features & Benefits
@@ -71,7 +71,7 @@ export default function MegaFeaShowcase() {
             <div className="space-y-8 w-full">
               {/* Feature 1 */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-gray-50 border border-gray-200 flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
+                <div className="w-10 h-10 bg-[#ffffff] border border-[#cccccc] flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
                   <Hammer className="w-5 h-5" />
                 </div>
                 <div className="space-y-1">
@@ -79,14 +79,14 @@ export default function MegaFeaShowcase() {
                     Inverted T-Flange Seating Frame
                   </h4>
                   <p className="text-xs text-[#D80621] leading-relaxed font-light">
-                    The mechanical core of Mega systems is its wide structural baseline flange, specifically optimized to anchor secure vault chamber block paths and balance continuous overhead shear stresses safely.
+                    The mechanical core of Canada systems is its wide structural baseline flange, specifically optimized to anchor secure vault chamber block paths and balance continuous overhead shear stresses safely.
                   </p>
                 </div>
               </div>
 
               {/* Feature 2 */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-gray-50 border border-gray-200 flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
+                <div className="w-10 h-10 bg-[#ffffff] border border-[#cccccc] flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
                   <ShieldAlert className="w-5 h-5" />
                 </div>
                 <div className="space-y-1">
@@ -101,7 +101,7 @@ export default function MegaFeaShowcase() {
 
               {/* Feature 3 */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-gray-50 border border-gray-200 flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
+                <div className="w-10 h-10 bg-[#ffffff] border border-[#cccccc] flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
                   <Lock className="w-5 h-5" />
                 </div>
                 <div className="space-y-1">
@@ -118,10 +118,10 @@ export default function MegaFeaShowcase() {
 
           {/* Right Product Close-up Image Column (5 Columns Wide) */}
           <div className="lg:col-span-5 w-full flex justify-end">
-            <div className="relative w-full max-w-[480px] aspect-[4/3] bg-gray-50 border border-gray-200 p-4 shadow-md rounded-xs group hover:border-[#D80621] transition-colors duration-300">
+            <div className="relative w-full max-w-[480px] aspect-[4/3] bg-[#ffffff] border border-[#cccccc] p-4 shadow-md rounded-xs group hover:border-[#D80621] transition-colors duration-300">
               <Image
                 src="/assets/image2.jpeg" // Replace with your close-up product casting macro image
-                alt="Mega High-Precision Iron Casting Surface View"
+                alt="Canada High-Precision Iron Casting Surface View"
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-102"
               />

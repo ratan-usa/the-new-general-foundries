@@ -62,7 +62,7 @@ const products = [
   { id: "snow", title: "Industrial Snow Plough Attachments", category: "Equipment", brand: "WinterOps", price: "$1,200", icon: Cog },
 ]
 
-export function MegaStories() {
+export function CanadaStories() {
   const heroProduct = products[0]
   const gridProducts = products.slice(1) // Items 2-16
 
@@ -73,17 +73,17 @@ export function MegaStories() {
         <h2 className="text-3xl font-bold tracking-tight text-[#D80621] uppercase border-l-4 -[#D80621] pl-4">
           Casting zone
         </h2>
-        <Button variant="outline" className="hidden sm:flex group -[#D80621] -[#D80621] hover:bg-zinc-100">
+        <Button variant="outline" className="hidden sm:flex group -[#D80621] -[#D80621] hover:bg-[#ffffff]">
           View All Categories <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Button>
       </div>
 
       {/* === INDUSTRIAL BOOKSHELF CONTAINER === */}
       {/* 1. The Outer Frame (Simulates the Shelf Unit) */}
-      <div className="border-[6px] border-zinc-800 bg-zinc-50 shadow-2xl relative">
+      <div className="border-[6px] border-[#cccccc] bg-[#ffffff] shadow-2xl relative">
 
         {/* 2. The Horizontal Header (Requested by Client) */}
-        <div className="w-full bg-zinc-800 text-white py-4 px-6 mb-6">
+        <div className="w-full bg-[#ffffff] text-white py-4 px-6 mb-6">
           <div className="flex justify-between items-center">
             <h2 className="text-2xl md:text-3xl font-black uppercase tracking-widest">
               VOLUMES 1 - 16
@@ -100,7 +100,7 @@ export function MegaStories() {
 
 {/* === HERO PRODUCT (Volume 1) === */}
             <div className="md:col-span-2 md:row-span-2 h-full min-h-[400px]">
-              <Card className="h-full w-full p-20 overflow-hidden group border-2 border-gray-100 shadow-sm relative rounded-none bg-white cursor-pointer flex flex-col items-center justify-center">
+              <Card className="h-full w-full p-20 overflow-hidden group border-2 border-[#cccccc] shadow-sm relative rounded-none bg-white cursor-pointer flex flex-col items-center justify-center">
 
                 {/* === VIDEO CONTAINER (Reduced Size) === */}
                 {/* w-[85%] h-[55%] makes it smaller than the card, leaving white space */}
@@ -118,7 +118,7 @@ export function MegaStories() {
                 </div>
 
                 {/* Content Wrapper */}
-                <div className="absolute bottom-0 left-0 pt-8 z-20 w-full bg-white/90 backdrop-blur-sm border-t border-gray-100">
+                <div className="absolute bottom-0 left-0 pt-8 z-20 w-full bg-white/90 backdrop-blur-sm border-t border-[#cccccc]">
                   <div className="flex justify-between items-start">
                     <Badge className="mb-2 bg-transparent border border-[#D80621] text-[#D80621] hover:bg-[#D80621] hover:text-white rounded-none px-2 py-0.5">
                       TOP SELLER
@@ -129,7 +129,7 @@ export function MegaStories() {
                     {heroProduct.title}
                   </h3>
                   
-                  <div className="flex items-center justify-between border-t border-gray-200 pt-3 mt-2">
+                  <div className="flex items-center justify-between border-t border-[#cccccc] pt-3 mt-2">
                      <span className="text-xs font-bold text-[#D80621] uppercase tracking-widest">
                         Volume 01
                      </span>
@@ -150,8 +150,8 @@ export function MegaStories() {
               const Icon = product.icon
 
               return (
-                <Card key={product.id} className="group flex flex-col overflow-hidden border-2 border-zinc-200 hover:border-zinc-800 shadow-none hover:shadow-xl transition-all h-[320px] rounded-none">
-                  <div className="relative h-48 w-full overflow-hidden bg-zinc-100">
+                <Card key={product.id} className="group flex flex-col overflow-hidden border-2 border-[#cccccc] hover:border-[#cccccc] shadow-none hover:shadow-xl transition-all h-[320px] rounded-none">
+                  <div className="relative h-48 w-full overflow-hidden bg-[#ffffff]">
                     <Image
                       src={imageSrc}
                       alt={product.title}
@@ -160,7 +160,7 @@ export function MegaStories() {
                     />
                     <div className="absolute top-0 left-0 p-2 w-full flex justify-between">
                       {/* Volume Number Badge */}
-                      <Badge className="bg-slate-500 text-[#D80621] rounded-none text-xs">
+                      <Badge className="bg-[#ffffff] text-[#D80621] rounded-none text-xs">
                         VOL. {String(index + 2).padStart(2, '0')}
                       </Badge>
                     </div>
@@ -172,11 +172,11 @@ export function MegaStories() {
                         {product.title}
                       </h4>
                     </div>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground mt-3 pt-3 border-t border-zinc-100">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground mt-3 pt-3 border-t border-[#cccccc]">
                       <span className="font-medium -[#D80621] flex items-center gap-1">
                         <Icon className="h-3 w-3" /> {product.brand}
                       </span>
-                      <span className="font-bold -[#D80621] bg-zinc-100 px-2 py-1">
+                      <span className="font-bold -[#D80621] bg-[#ffffff] px-2 py-1">
                         {product.price}
                       </span>
                     </div>
@@ -188,11 +188,11 @@ export function MegaStories() {
         </div>
 
         {/* 4. The Bottom Shelf Lip (Visual Anchor) */}
-        <div className="h-4 bg-zinc-800 w-full border-t border-zinc-600"></div>
+        <div className="h-4 bg-[#ffffff] w-full border-t border-[#cccccc]"></div>
       </div>
 
       <div className="mt-12 text-center pb-8">
-        <Button size="lg" className="bg-slate-500 text-[#D80621] hover:bg-zinc-700 min-w-[200px] rounded-none">
+        <Button size="lg" className="bg-[#ffffff] text-[#D80621] hover:bg-[#ffffff] min-w-[200px] rounded-none">
           Download Full Spec Sheet
         </Button>
       </div>

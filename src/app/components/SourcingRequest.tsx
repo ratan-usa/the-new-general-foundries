@@ -59,7 +59,7 @@ export default function SourcingRequest() {
                                 <Input
                                     type="text"
                                     placeholder="Product Name"
-                                    className="bg-white border-gray-300 h-12"
+                                    className="bg-white border-[#cccccc] h-12"
                                 />
                             </div>
 
@@ -68,11 +68,11 @@ export default function SourcingRequest() {
                                 <Input
                                     type="number"
                                     placeholder="Purchase Quantity"
-                                    className="bg-white border-gray-300 h-12"
+                                    className="bg-white border-[#cccccc] h-12"
                                 />
 
                                 <Select>
-                                    <SelectTrigger className="h-12 border-gray-300 text-[#D80621]">
+                                    <SelectTrigger className="h-12 border-[#cccccc] text-[#D80621]">
                                         <SelectValue placeholder="Unit/Sets" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -88,7 +88,7 @@ export default function SourcingRequest() {
                             <div>
                                 <Textarea
                                     placeholder="Please describe your specific sourcing requirements for product attributes, desired quantity, and any additional services you expect from suppliers"
-                                    className="bg-white border-gray-300 min-h-[120px] resize-none"
+                                    className="bg-white border-[#cccccc] min-h-[120px] resize-none"
                                 />
                             </div>
 
@@ -99,7 +99,7 @@ export default function SourcingRequest() {
                             </div>
 
                             {/* Submit Button */}
-                            <Button className="w-full sm:w-auto bg-[#D80621] hover:bg-red-700 text-white font-bold py-6 px-8 text-base rounded-md mt-2">
+                            <Button className="w-full sm:w-auto bg-[#D80621] hover:bg-[#D80621] text-white font-bold py-6 px-8 text-base rounded-md mt-2">
                                 Post Your Request
                             </Button>
                         </form>
@@ -120,7 +120,7 @@ export default function SourcingRequest() {
                             {benefits.map((item, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-6 h-6 text-white shrink-0 mt-0.5" />
-                                    <span className="text-gray-100 text-base leading-relaxed">
+                                    <span className="text-[#cccccc] text-base leading-relaxed">
                                         {item}
                                     </span>
                                 </li>

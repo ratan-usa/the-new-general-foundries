@@ -89,22 +89,22 @@ const SIDEBAR_TABS = [
   { id: "angle-iron", label: "Angle Iron Geometry" }
 ];
 
-export default function MegaMagazine() {
+export default function canadaMagazine() {
   const [activeTab, setActiveTab] = useState("ductile-iron");
 
   // Pulls data specific ONLY to the clicked metal tab ID, defaults safely to ductile-iron if missing
   const currentContent = MAGAZINE_DATA[activeTab] || MAGAZINE_DATA["ductile-iron"];
 
   return (
-    <section className="bg-[#D80621] text-white py-10 font-sans border-t border-zinc-950">
+    <section className="bg-[#D80621] text-white py-10 font-sans border-t border-[#cccccc]">
       {/* Absolute strict fluid full width padding */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
-        
+
         {/* TOP ROW: Canada Foundries Custom Header Banner */}
         <div className="w-full bg-[#D80621] border border-white/20 p-6 mb-8 flex flex-col md:flex-row items-center justify-between rounded-xs gap-4 shadow-md">
           <div className="flex items-center gap-3">
             <div className="text-2xl font-black tracking-tighter text-white">
-              MEGA <span className="text-white">FOUNDRIES</span>
+              canada <span className="text-white">FOUNDRIES</span>
             </div>
             <div className="h-6 w-[1px] bg-white/30 hidden md:block" />
             <span className="text-[10px] font-mono tracking-widest text-white uppercase">
@@ -112,13 +112,13 @@ export default function MegaMagazine() {
             </span>
           </div>
           <div className="text-center md:text-right text-xs text-white font-mono">
-            CALL: (512) 782-8880 <span className="mx-2 text-white">•</span> VISIT: WWW.MEGAFOUNDRIES.COM
+            CALL: (512) 782-8880 <span className="mx-2 text-white">•</span> VISIT: WWW.canadaFOUNDRIES.COM
           </div>
         </div>
 
         {/* MAIN 3-COLUMN STRUCTURE */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-          
+
           {/* COLUMN 1: LEFT SIDEBAR TABS INDEX (Metals Selectors) */}
           <div className="md:col-span-3 bg-[#D80621] border border-white/20 rounded-xs overflow-hidden shadow-xl">
             <div className="bg-[#D80621] p-4 border-b border-white/20">
@@ -134,7 +134,7 @@ export default function MegaMagazine() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`w-full text-left px-4 py-2.5 text-xs font-medium border-l-2 transition-all duration-200 ${isActive ? "bg-white/10 text-white border-white font-bold" : "bg-transparent text-white/80 border-transparent hover:bg-white/5 hover:text-white" } `}
+                    className={`w-full text-left px-4 py-2.5 text-xs font-medium border-l-2 transition-all duration-200 ${isActive ? "bg-white/10 text-white border-white font-bold" : "bg-transparent text-white/80 border-transparent hover:bg-white/5 hover:text-white"} `}
                   >
                     {tab.label}
                   </button>
@@ -156,7 +156,7 @@ export default function MegaMagazine() {
               <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight leading-snug hover:text-white/80 transition-colors duration-200">
                 {currentContent.title}
               </h3>
-              
+
               <div className="flex flex-wrap gap-2 text-xs font-mono text-white/80">
                 <span className="text-white font-bold italic">{currentContent.author}</span>
                 <span>•</span>
@@ -168,8 +168,8 @@ export default function MegaMagazine() {
               </p>
 
               <div className="pt-2">
-                <Link 
-                  href={currentContent.link} 
+                <Link
+                  href={currentContent.link}
                   className="text-xs font-bold uppercase tracking-wider text-white hover:text-white/80 transition-colors duration-200 inline-block border-b border-dashed border-white pb-0.5"
                 >
                   Read Technical Spec
@@ -186,7 +186,7 @@ export default function MegaMagazine() {
             <ul className="space-y-2">
               {currentContent.rightCategories.map((category, index) => (
                 <li key={index}>
-                  <Link 
+                  <Link
                     href={`/magazine/matrix/${category.toLowerCase().replace(/ /g, "-")}`}
                     className="text-xs text-white/80 hover:text-white transition-colors duration-150 block py-0.5"
                   >

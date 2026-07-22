@@ -39,7 +39,7 @@ export default async function CategoryPage() {
                     Return to Intelligence Center
                 </button>
 
-                <div className="relative h-[60vh] flex items-center justify-center bg-slate-500">
+                <div className="relative h-[60vh] flex items-center justify-center bg-[#ffffff]">
                     <Image
                         src={data.image || '/assets/image15.jpeg'}
                         width={1200}
@@ -69,7 +69,7 @@ export default async function CategoryPage() {
 
                         {/* Main Info */}
                         <div className="lg:col-span-2 space-y-8">
-                            <div className="bg-white p-10 rounded-[2rem] shadow-xl border border-slate-100">
+                            <div className="bg-white p-10 rounded-[2rem] shadow-xl border border-[#cccccc]">
                                 <h2 className="text-3xl font-bold mb-6">Product Overview</h2>
                                 <p className="text-xl text-[#D80621] leading-relaxed">
                                     {data.description}
@@ -78,7 +78,7 @@ export default async function CategoryPage() {
 
                             <div className="grid grid-cols-2 gap-6">
                                 {['ASTM Standards', 'Ductile Iron', 'ISO Certified', 'USA Made'].map((badge) => (
-                                    <div key={badge} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center gap-4">
+                                    <div key={badge} className="bg-[#ffffff] p-6 rounded-2xl border border-[#cccccc] flex items-center gap-4">
                                         <div className="w-2 h-2 bg-[#D80621] rounded-full" />
                                         <span className="font-bold text-[#D80621]">{badge}</span>
                                     </div>
@@ -96,7 +96,7 @@ export default async function CategoryPage() {
                                 </button>
                             </div>
 
-                            <div className="p-8 border-2 border-dashed border-slate-200 rounded-[2rem]">
+                            <div className="p-8 border-2 border-dashed border-[#cccccc] rounded-[2rem]">
                                 <h4 className="font-bold mb-2">Technical Support</h4>
                                 <p className="text-sm text-[#D80621] italic">"Our engineers are available 24/7 for specification assistance."</p>
                             </div>

@@ -7,11 +7,11 @@ import { Button } from '@/components/ui/button';
 
 export default function PledgeAndOffer() {
   return (
-    <section className="relative bg-slate-500 py-20 overflow-hidden">
+    <section className="relative bg-[#ffffff] py-20 overflow-hidden">
       
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-        <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-red-600 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
+        <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#D80621] rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute left-0 bottom-0 w-[300px] h-[300px] bg-blue-600 rounded-full blur-[100px] translate-y-1/3 -translate-x-1/3"></div>
       </div>
 
@@ -20,7 +20,7 @@ export default function PledgeAndOffer() {
           
           {/* === LEFT: THE PLEDGE === */}
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20 text-red-400 text-sm font-bold tracking-wider uppercase">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#D80621] border border-[#D80621] text-[#D80621] text-sm font-bold tracking-wider uppercase">
               <ShieldCheck className="w-4 h-4" />
               Our Guarantee & Challenge
             </div>
@@ -47,7 +47,7 @@ export default function PledgeAndOffer() {
             
             <div className="relative bg-white rounded-xl p-8 md:p-10 text-center shadow-2xl">
               
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-[#D80621] rounded-full flex items-center justify-center mx-auto mb-6">
                 <Gift className="w-8 h-8 text-[#D80621]" />
               </div>
 
@@ -64,7 +64,7 @@ export default function PledgeAndOffer() {
               </p>
 
               <Link href="/contact">
-                <Button className="w-full bg-[#D80621] hover:bg-red-700 text-white text-lg font-bold py-7 rounded-lg shadow-lg hover:shadow-red-500/25 transition-all transform hover:-translate-y-1">
+                <Button className="w-full bg-[#D80621] hover:bg-[#D80621] text-white text-lg font-bold py-7 rounded-lg shadow-lg hover:shadow-red-500/25 transition-all transform hover:-translate-y-1">
                   Claim Your Free Prototype
                 </Button>
               </Link>

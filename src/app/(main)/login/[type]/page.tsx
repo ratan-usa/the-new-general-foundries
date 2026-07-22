@@ -88,11 +88,11 @@ export default function LoginPage({ params }: { params: Promise<{ type: string }
   const displayTitle = type ? type.toUpperCase() : 'PORTAL';
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#ffffff] p-4">
       <Card className="max-w-md w-full shadow-xl border-t-4 border-t-[#D80621]">
 
         <CardHeader className="text-center">
-          <div className="mx-auto bg-red-50 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+          <div className="mx-auto bg-[#D80621] w-12 h-12 rounded-full flex items-center justify-center mb-4">
             {step === 'credentials' ? (
               <LogIn className="w-6 h-6 text-[#D80621]" />
             ) : (
@@ -142,12 +142,12 @@ export default function LoginPage({ params }: { params: Promise<{ type: string }
               </div>
 
               {error && (
-                <p className="text-red-500 text-sm font-medium bg-red-50 p-2 rounded text-center border border-red-100">
+                <p className="text-[#D80621] text-sm font-medium bg-[#D80621] p-2 rounded text-center border border-[#D80621]">
                   {error}
                 </p>
               )}
 
-              <Button className="w-full bg-[#D80621] hover:bg-red-700 py-6 text-md font-bold" disabled={loading}>
+              <Button className="w-full bg-[#D80621] hover:bg-[#D80621] py-6 text-md font-bold" disabled={loading}>
                 {loading ? <Loader2 className="animate-spin mr-2" /> : "Sign In"}
               </Button>
             </form>
@@ -160,21 +160,21 @@ export default function LoginPage({ params }: { params: Promise<{ type: string }
                 <InputOTP maxLength={6} value={otp} onChange={(val) => setOtp(val)}>
                   <InputOTPGroup>
                     {[0, 1, 2, 3, 4, 5].map((idx) => (
-                      <InputOTPSlot key={idx} index={idx} className="w-10 h-10 sm:w-12 sm:h-12 text-lg border-slate-300" />
+                      <InputOTPSlot key={idx} index={idx} className="w-10 h-10 sm:w-12 sm:h-12 text-lg border-[#cccccc]" />
                     ))}
                   </InputOTPGroup>
                 </InputOTP>
               </div>
 
               {error && (
-                <p className="text-red-500 text-sm font-medium bg-red-50 px-4 py-2 rounded">
+                <p className="text-[#D80621] text-sm font-medium bg-[#D80621] px-4 py-2 rounded">
                   {error}
                 </p>
               )}
 
               <Button
                 onClick={handleVerify}
-                className="w-full bg-[#D80621] hover:bg-red-700 py-6 text-lg font-bold"
+                className="w-full bg-[#D80621] hover:bg-[#D80621] py-6 text-lg font-bold"
                 disabled={loading}
               >
                 {loading ? <Loader2 className="animate-spin mr-2" /> : "Verify & Login"}
@@ -182,7 +182,7 @@ export default function LoginPage({ params }: { params: Promise<{ type: string }
 
               <button
                 onClick={() => { setStep('credentials'); setError(''); }}
-                className="flex items-center text-sm text-[#D80621] hover:text-slate-800"
+                className="flex items-center text-sm text-[#D80621] hover:text-[#D80621]"
               >
                 <ArrowLeft className="w-3 h-3 mr-1" /> Back to Login
               </button>

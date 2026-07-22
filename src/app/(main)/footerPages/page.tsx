@@ -26,7 +26,7 @@ export default function FooterHero({
                     {title}
                 </h1>
                 <p className="pb-4 text-xl item-center text-[#D80621] leading-relaxed">
-                    We have a never-ending drive to stay committed to the industry by giving the best efficient <span className="text-red-500 font-semibold">products to our Valued Clients</span>.
+                    We have a never-ending drive to stay committed to the industry by giving the best efficient <span className="text-[#D80621] font-semibold">products to our Valued Clients</span>.
                 </p>
             </div>
 
@@ -39,7 +39,7 @@ export default function FooterHero({
 
                             {/* Custom Header with Red Line */}
                             <div className="flex items-center gap-4">
-                                <div className="h-8 w-1.5 bg-red-600 rounded-full" />
+                                <div className="h-8 w-1.5 bg-[#D80621] rounded-full" />
                                 <h2 className="text-sm font-bold tracking-[0.2em] text-[#D80621] uppercase">
                                     Overview
                                 </h2>
@@ -59,17 +59,17 @@ export default function FooterHero({
 
                             {/* Mobile CTA (visible only on small screens) */}
                             <div className="lg:hidden pt-4">
-                                <Button variant="outline" className="w-full border-red-200 text-red-600 hover:text-red-700 hover:bg-red-50">
+                                <Button variant="outline" className="w-full border-[#D80621] text-[#D80621] hover:text-[#D80621] hover:bg-[#D80621]">
                                     Contact Us
                                 </Button>
                             </div>
                         </div>
 
                         {/* RIGHT COLUMN: Sidebar / Product Highlight */}
-                        <div className="lg:w-5/12 bg-slate-50/80 p-8 lg:p-12 border-t lg:border-t-0 lg:border-l border-slate-100 relative">
+                        <div className="lg:w-5/12 bg-[#ffffff] p-8 lg:p-12 border-t lg:border-t-0 lg:border-l border-[#cccccc] relative">
 
                             {/* Decorative Background Icon */}
-                            <Settings className="absolute bottom-[-20px] right-[-20px] w-64 h-64 text-slate-200/40 animate-spin-slow pointer-events-none" />
+                            <Settings className="absolute bottom-[-20px] right-[-20px] w-64 h-64 text-[#cccccc] animate-spin-slow pointer-events-none" />
 
                             <div className="relative z-10 flex flex-col h-full space-y-8">
 
@@ -86,7 +86,7 @@ export default function FooterHero({
                                 </p>
 
                                 {/* Product Image Card */}
-                                <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 flex flex-col items-center text-center space-y-4 transition-transform hover:scale-[1.02] duration-300">
+                                <div className="bg-white rounded-xl p-6 shadow-sm border border-[#cccccc] flex flex-col items-center text-center space-y-4 transition-transform hover:scale-[1.02] duration-300">
                                     <div className="w-full aspect-[4/3] relative flex items-center justify-center">
                                         <Image
                                             width={1200}
@@ -97,13 +97,13 @@ export default function FooterHero({
                                         />
                                     </div>
                                     <p className="text-xs text-[#D80621] max-w-[250px]">
-                                        Find out Power Mega's Foundries Transmission and Distribution product range.
+                                        Find out Power Canada's Foundries Transmission and Distribution product range.
                                     </p>
                                 </div>
 
                                 {/* Desktop CTA */}
                                 <div className="mt-auto hidden lg:block">
-                                    <Button variant="outline" className="group border-red-200 text-red-600 hover:bg-red-50 hover:text-red-700 px-8">
+                                    <Button variant="outline" className="group border-[#D80621] text-[#D80621] hover:bg-[#D80621] hover:text-[#D80621] px-8">
                                         Contact us
                                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                     </Button>

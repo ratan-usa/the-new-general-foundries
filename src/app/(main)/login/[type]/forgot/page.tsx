@@ -31,7 +31,7 @@ export default function ForgotPasswordPage({ params }: { params: Promise<{ type:
 
   if (isSent) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
+      <div className="min-h-screen flex items-center justify-center bg-[#ffffff] p-4">
         <Card className="max-w-md w-full text-center p-8 border-green-200 bg-green-50">
           <div className="mx-auto bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4">
             <CheckCircle2 className="w-8 h-8 text-green-600" />
@@ -51,10 +51,10 @@ export default function ForgotPasswordPage({ params }: { params: Promise<{ type:
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#ffffff] p-4">
       <Card className="max-w-md w-full shadow-xl">
         <CardHeader className="text-center">
-          <div className="mx-auto bg-slate-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+          <div className="mx-auto bg-[#ffffff] w-12 h-12 rounded-full flex items-center justify-center mb-4">
             <KeyRound className="w-6 h-6 text-[#D80621]" />
           </div>
           <CardTitle className="text-2xl font-bold">Forgot Password?</CardTitle>
@@ -78,14 +78,14 @@ export default function ForgotPasswordPage({ params }: { params: Promise<{ type:
               />
             </div>
 
-            <Button className="w-full bg-slate-500 hover:bg-slate-800 py-6" disabled={loading}>
+            <Button className="w-full bg-[#ffffff] hover:bg-[#ffffff] py-6" disabled={loading}>
               {loading ? <Loader2 className="animate-spin mr-2" /> : "Send Reset Link"}
             </Button>
           </form>
         </CardContent>
 
         <CardFooter className="justify-center border-t pt-4">
-            <Link href={`/login/${type}`} className="flex items-center text-sm text-[#D80621] hover:text-slate-800">
+            <Link href={`/login/${type}`} className="flex items-center text-sm text-[#D80621] hover:text-[#D80621]">
                 <ArrowLeft className="w-3 h-3 mr-1" /> Back to Login
             </Link>
         </CardFooter>

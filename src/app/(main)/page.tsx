@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 // --- CRITICAL COMPONENTS (Load Immediately) ---
-import { MegaProducts } from '../components/MegaProducts';
+import { CanadaProducts } from '../components/CanadaProducts';
 
 // --- DYNAMIC IMPORTS (Lazy Loaded for Speed) ---
 const FactoryStories = dynamic(() => import('../private/dashboard/FactoryStories'), { ssr: false });
@@ -30,26 +30,27 @@ const FloatingQuoteBtn = dynamic(() => import('../components/FloatingQuoteBtn'),
 
 import { newInnovationData } from "@/lib/newsData";
 import { DesignCapabilities } from '../components/design-capabilities';
-import { MegaStories } from '../components/mega-stories';
+import { CanadaStories } from '../components/canada-stories';
 import { VerticalAccordion } from '../components/VerticalAccordion';
 import AiRobotics from '../components/AiRobotics';
-import MegaProduct from '../components/MegaProduct';
+import CanadaProduct from '../components/CanadaProduct';
 import CastingCarousel from '../components/CastingCarousel';
-import MegaBlog from '../components/MegaBlog';
-import MegaMagazine from '../components/MegaMagazine';
+import CanadaBlog from '../components/CanadaBlog';
+import CanadaMagazine from '../components/CanadaMagazine';
 import OtherMetalsDirectory from '../components/OtherMetalsDirectory';
 import ProductCarouselo from '../components/productCarouselo';
 import HighFlowGrates from './HighFlowGrates';
 import IndustrialManifest from './IndustrialManifest';
-import MegaQSeries from './MegaQSeries';
-import MegaFoundationPage from './mega-foundation/page';
-import MegaFeaShowcase from './MegaFeaShowcase';
+import CanadaQSeries from './CanadaQSeries';
+import CanadaFoundationPage from './canada-foundation/page';
+import CanadaFeaShowcase from './CanadaFeaShowcase';
 import { Hero } from './Hero';
-import MegaMediaHub from '../components/MegaMediaHub';
-import MegaTactilePlates from './MegaTactilePlates';
+import CanadaMediaHub from '../components/CanadaMediaHub';
+import CanadaTactilePlates from './CanadaTactilePlates';
 import CanadaRegionalDirectory from '../CanadaRegionalDirectory';
 import OntarioStandardsDashboard from '../OntarioStandardsDashboard';
 import FoundryStandardsVideoMatrix from '../FoundryStandardsVideoMatrix';
+import ProudlyCanadian from './ProudlyCanadian';
 
 export default function Home() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -106,35 +107,35 @@ export default function Home() {
             <Hero />
             <Product3DShowcase />
             {/* 2. CORE PRODUCTS (High Priority) */}
-            <MegaQSeries />
+            <CanadaQSeries />
             <CanadaRegionalDirectory />
             <OntarioStandardsDashboard />
- 
             <FoundryStandardsVideoMatrix />
-            <MegaProducts />
-            <MegaMediaHub />
-            <MegaTactilePlates />
+            <CanadaProducts />
+            <ProudlyCanadian />
+            <CanadaMediaHub />
+            <CanadaTactilePlates />
             <LiveStreamCommandCenter />
-            <MegaFeaShowcase />
+            <CanadaFeaShowcase />
             <IndustrialManifest />
             <ProductPage />
-            <MegaMagazine />
+            <CanadaMagazine />
             <HighFlowGrates />
             <CastingCarousel />
             <OtherMetalsDirectory />
             {/* <MetalDirectory /> */}
             <FactoryStories />
-            <MegaBlog />
+            <CanadaBlog />
             <HeroSection />
             <AiRobotics />
             {/* Non-Critical Visuals */}
-            <MegaStories />
+            <CanadaStories />
             <BusinessSolutions />
 
             {/* Blogs & Feed */}
             <CosmoBlog />
             <ChatBlog />
-            <MegaProduct />
+            <CanadaProduct />
             <DesignCapabilities />
             <ProductCarousel />
             <ProductCarouselo />

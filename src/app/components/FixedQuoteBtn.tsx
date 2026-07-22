@@ -71,7 +71,7 @@ const FixedQuoteBtn = () => {
 
         {/* C. Email */}
         <Link
-          href="mailto:sales@megafoundries.com"
+          href="mailto:sales@canadafoundries.com"
           className=" w-12 h-12 flex items-center justify-center bg-[#D80621] hover:bg-[#b01e1d] text-white rounded-full shadow-lg shadow-[#D80621]/30 transition-transform hover:scale-110 "
           title="Send Email"
         >
@@ -81,7 +81,7 @@ const FixedQuoteBtn = () => {
         {/* TOP: Scroll to Top Button */}
         <button
           onClick={scrollToTop}
-          className={` w-12 h-12 flex items-center justify-center bg-slate-800 hover:bg-slate-500 text-white rounded-full shadow-lg transition-all duration-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none h-0 w-0 !gap-0"} `}
+          className={` w-12 h-12 flex items-center justify-center bg-[#ffffff] hover:bg-[#ffffff] text-white rounded-full shadow-lg transition-all duration-300 ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-0 pointer-events-none h-0 w-0 !gap-0"} `}
           title="Scroll to Top"
         >
           <ArrowUp className="w-5 h-5" />

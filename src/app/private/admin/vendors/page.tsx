@@ -22,7 +22,7 @@ export default function VendorListPage() {
     useEffect(() => {
         async function loadVendors() {
             try {
-                const data = await getVendors(); // Uses "MEGAFOUNDRY" by default
+                const data = await getVendors(); // Uses "canadaFOUNDRY" by default
                 setVendors(data || []);
             } catch (error) {
                 console.error("Failed to load vendors", error);
@@ -102,7 +102,7 @@ export default function VendorListPage() {
 
                                     {/* Status Badge */}
                                     <TableCell>
-                                        <span className={`px-2 py-1 rounded-full text-xs font-bold ${vendor.isActive ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-700" }`}>
+                                        <span className={`px-2 py-1 rounded-full text-xs font-bold ${vendor.isActive ? "bg-green-100 text-green-700" : "bg-[#ffffff] text-[#cccccc]"}`}>
                                             {vendor.isActive ? "Active" : "Inactive"}
                                         </span>
                                     </TableCell>

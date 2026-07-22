@@ -6,7 +6,7 @@ import { ArrowRight, Activity, Cpu, ShieldCheck, Box } from "lucide-react";
 import Link from "next/link";
 import { categories } from "@/lib/materialsData";
 
-export const MegaProducts = () => {
+export const CanadaProducts = () => {
   const [activeSpec, setActiveSpec] = useState(categories[0] || null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -22,7 +22,7 @@ export const MegaProducts = () => {
   if (!activeSpec) return null;
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-10 py-24 bg-white text-black font-sans overflow-hidden">
+    <section className="w-full px-4 sm:px-6 lg:px-10 py-24 bg-white text-[#D80621] font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto space-y-12">
         
         {/* Top Typography Branding Header */}
@@ -77,7 +77,7 @@ export const MegaProducts = () => {
                     className={`w-full text-left p-5 rounded-xl border transition-all duration-300 flex items-center justify-between group relative overflow-hidden ${
                       isSelected
                         ? "bg-[#D80621] border-[#D80621] text-white shadow-md"
-                        : "bg-white border-[#cccccc] text-black hover:border-[#D80621]"
+                        : "bg-white border-[#cccccc] text-[#D80621] hover:border-[#D80621]"
                     }`}
                   >
                     <div className="flex items-center gap-4 max-w-[85%] relative z-10">
@@ -114,7 +114,7 @@ export const MegaProducts = () => {
             <div className="space-y-6">
               
               {/* Active Media Preview Window Box Container */}
-              <div className="relative rounded-lg border border-[#cccccc] bg-neutral-950 overflow-hidden h-72 w-full group">
+              <div className="relative rounded-lg border border-[#cccccc] bg-[#ffffff] overflow-hidden h-72 w-full group">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeSpec.slug}
@@ -150,7 +150,7 @@ export const MegaProducts = () => {
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.2)_50%)] bg-[length:100%_4px] pointer-events-none opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
 
-                <div className="absolute bottom-3 left-3 bg-black/80 backdrop-blur border border-neutral-800 px-3 py-1 rounded text-[9px] font-mono tracking-widest text-emerald-400 uppercase flex items-center gap-1.5">
+                <div className="absolute bottom-3 left-3 bg-[#ffffff] backdrop-blur border border-[#cccccc] px-3 py-1 rounded text-[9px] font-mono tracking-widest text-emerald-400 uppercase flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   Live Video Render Matrix
                 </div>
@@ -175,7 +175,7 @@ export const MegaProducts = () => {
                   </Link>
                 </div>
 
-                <p className="text-sm text-neutral-700 font-mono leading-relaxed bg-neutral-50 p-4 rounded-lg border border-neutral-200">
+                <p className="text-sm text-[#cccccc] font-mono leading-relaxed bg-[#ffffff] p-4 rounded-lg border border-[#cccccc]">
                   {activeSpec.description}
                 </p>
               </div>
@@ -185,13 +185,13 @@ export const MegaProducts = () => {
             <div className="grid grid-cols-3 gap-4 border-t border-[#cccccc] pt-5 mt-6 font-mono text-xs">
               <div className="space-y-1">
                 <span className="text-[9px] uppercase tracking-wider text-[#666666] block">Alloy Target</span>
-                <span className="font-bold text-black flex items-center gap-1.5">
+                <span className="font-bold text-[#D80621] flex items-center gap-1.5">
                   <Cpu className="w-3.5 h-3.5 text-[#D80621]" /> High Tensile
                 </span>
               </div>
               <div className="space-y-1">
                 <span className="text-[9px] uppercase tracking-wider text-[#666666] block">Testing Status</span>
-                <span className="font-bold text-black flex items-center gap-1.5">
+                <span className="font-bold text-[#D80621] flex items-center gap-1.5">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#D80621]" /> ASTM Certified
                 </span>
               </div>

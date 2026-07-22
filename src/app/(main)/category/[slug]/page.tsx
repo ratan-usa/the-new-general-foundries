@@ -89,7 +89,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {mainCategory.categories.map((sub, index) => (
               <Link href={`/category/${sub.slug}`} key={index} className="group block h-full">
-                <div className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div className="bg-white rounded-xl overflow-hidden border border-[#cccccc] shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
                       src={sub.image || '/assets/placeholder.jpg'}
@@ -139,7 +139,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
       : []; 
 
     return (
-      <div className="min-h-screen bg-gray-50 py-12">
+      <div className="min-h-screen bg-[#ffffff] py-12">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Back Button & Title */}
@@ -160,11 +160,11 @@ export default async function CategoryDetailPage({ params }: PageProps) {
                 <Link
                   key={index}
                   href={`/products/${item.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`}
-                  className="bg-white p-6 rounded-xl border border-gray-200 hover:border-[#D80621] hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="bg-white p-6 rounded-xl border border-[#cccccc] hover:border-[#D80621] hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div className='flex justify-evenly'>
                     <div>
-                      <div className="w-12 h-12 bg-red-50 rounded-lg mb-4 text-[#D80621]">
+                      <div className="w-12 h-12 bg-[#D80621] rounded-lg mb-4 text-[#D80621]">
                         <ChevronRight />
                       </div>
                       <h3 className="font-bold text-lg text-[#D80621] group-hover:text-[#D80621] mb-2">
@@ -183,7 +183,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
                 </Link>
               ))
             ) : (
-              <div className="col-span-full py-12 text-center bg-white rounded-xl border border-dashed border-gray-300">
+              <div className="col-span-full py-12 text-center bg-white rounded-xl border border-dashed border-[#cccccc]">
                 <p className="text-[#D80621]">No specific products listed under this category yet.</p>
                 <Link href="/contact" className="text-[#D80621] font-bold mt-2 inline-block">Contact us for custom requirements &rarr;</Link>
               </div>

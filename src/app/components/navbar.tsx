@@ -31,7 +31,7 @@ const loginOptions = [
         id: 1,
         title: "Corporate & Operations",
         links: [
-            { label: "Team Mega Login", href: "/login/team" },
+            { label: "Team canada Login", href: "/login/team" },
             { label: "Customer Login", href: "/login/customer" },
             { label: "Logistics Login", href: "/login/logistics" },
             { label: "Foundries Login", href: "/login/foundry" },
@@ -90,22 +90,22 @@ const Navbar = () => {
                     return (
                         <DropdownMenu key={item.label}>
                             <DropdownMenuTrigger className="flex items-center gap-2 group outline-none cursor-pointer">
-                                <div className='text-neutral-600 group-hover:text-[#D80621] transition-colors'>
+                                <div className='text-[#cccccc] group-hover:text-[#D80621] transition-colors'>
                                     <item.icon size={28} strokeWidth={1.5} />
                                 </div>
                                 <div className="flex flex-col justify-center text-left">
-                                    <p className='text-sm text-neutral-500 leading-tight'>{item.label}</p>
-                                    <p className='text-xs font-bold text-neutral-800 group-hover:text-[#D80621] transition-colors'>{item.content}</p>
+                                    <p className='text-sm text-[#cccccc] leading-tight'>{item.label}</p>
+                                    <p className='text-xs font-bold text-[#D80621] group-hover:text-[#D80621] transition-colors'>{item.content}</p>
                                 </div>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent align="end" className="w-[420px] p-3 bg-white border border-gray-100 shadow-lg rounded-md">
+                            <DropdownMenuContent align="end" className="w-[420px] p-3 bg-white border border-[#cccccc] shadow-lg rounded-md">
                                 <div className="grid grid-cols-2 gap-2">
                                     {loginOptions.map((group) => (
                                         <div key={group.id} className="space-y-1">
                                             <h4 className="text-[13px] font-semibold text-[#D80621] px-2">{group.title}</h4>
                                             {group.links.map((item) => (
                                                 <DropdownMenuItem key={item.href} asChild>
-                                                    <Link href={item.href} className="cursor-pointer flex items-center gap-2 py-2 hover:bg-red-50 rounded px-2 group">
+                                                    <Link href={item.href} className="cursor-pointer flex items-center gap-2 py-2 hover:bg-[#D80621] rounded px-2 group">
                                                         <ChevronRight className="w-4 h-4 text-[#D80621] opacity-0 group-hover:opacity-100 transition-opacity" />
                                                         <span className="font-medium text-[13px] text-[#D80621] group-hover:text-[#D80621]">{item.label}</span>
                                                     </Link>
@@ -120,12 +120,12 @@ const Navbar = () => {
                 }
                 return (
                     <Link className='flex items-center gap-2 group' key={item.label} href={item.href}>
-                        <div className='text-neutral-600 group-hover:text-[#D80621] transition-colors'>
+                        <div className='text-[#cccccc] group-hover:text-[#D80621] transition-colors'>
                             <item.icon size={28} strokeWidth={1.5} />
                         </div>
                         <div className="flex flex-col justify-center">
-                            <p className='text-sm text-neutral-500 leading-tight'>{item.label}</p>
-                            <p className='text-xs font-bold text-neutral-800 group-hover:text-[#D80621] transition-colors'>{item.content}</p>
+                            <p className='text-sm text-[#cccccc] leading-tight'>{item.label}</p>
+                            <p className='text-xs font-bold text-[#D80621] group-hover:text-[#D80621] transition-colors'>{item.content}</p>
                         </div>
                     </Link>
                 )
@@ -149,9 +149,9 @@ const Navbar = () => {
                             </div>
                             <div className="pt-2 lg:hidden">
                                 <div className="grid grid-cols-7 gap-4 items-center justify-items-center">
-                                    <Image src={'/CANADA FOUNDRIES.png'} alt='Mega' width={60} height={60} className="object-contain h-12 w-12" />
+                                    <Image src={'/CANADA FOUNDRIES.png'} alt='canada' width={60} height={60} className="object-contain h-12 w-12" />
                                     <Image src={'/CANADA FOUNDRIES.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
-                                    <Image src={'/MEGA INDUSTRIES.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
+                                    <Image src={'/canada INDUSTRIES.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                     <Image src={'/CANADA FOUNDRIES.png'} alt='Fabricator' width={100} height={100} className="object-contain h-24 w-24" />
                                     <Image src={'/CANADA FOUNDRIES.png'} alt='Fabricator' width={60} height={60} className="object-contain h-12 w-12" />
                                     <Image src={'/CANADA FOUNDRIES.png'} alt='Forge' width={60} height={60} className="object-contain h-12 w-12" />
@@ -168,7 +168,7 @@ const Navbar = () => {
                             <Link href={'/'} className="shrink-0 flex items-center justify-center">
                                 <Image
                                     src={'/CANADA FOUNDRIES.png'}
-                                    alt='Mega Industries'
+                                    alt='Canada Industries'
                                     width={300}    
                                     height={400}   
                                     className="object-contain w-auto h-28 lg:h-20"  
@@ -220,7 +220,7 @@ const Navbar = () => {
                             {/* ... Mobile Menu Button code ... */}
                             {/* 2. User Menu (Aligned Bottom) */}
                             <div className="mt-4">
-                                <h1 className='text-xl md:text-2xl text-[#D80621] flex gap-4 items-center'>Globally Connected <ChevronDownIcon className='h-8 w-8 text-gray-800 ' /></h1>
+                                <h1 className='text-xl md:text-2xl text-[#D80621] flex gap-4 items-center'>Globally Connected <ChevronDownIcon className='h-8 w-8 text-[#D80621] ' /></h1>
                             </div>
                         </div>
 
@@ -230,7 +230,7 @@ const Navbar = () => {
                             <Link href={'/'} className="shrink-0 flex items-center justify-center">
                                 <Image
                                     src={'/CANADA FOUNDRIES.png'}
-                                    alt='Mega Industries'
+                                    alt='Canada Industries'
                                     width={400}
                                     height={120}
                                     className="object-contain h-16 w-auto lg:h-20" // Adjusted height
@@ -273,15 +273,15 @@ const Navbar = () => {
 
                 {/* === MOBILE MENU DRAWER === */}
                 {isMobileMenuOpen && (
-                    <div className="lg:hidden bg-neutral-50 border-t border-neutral-200 px-4 py-4 shadow-inner space-y-4 h-[calc(100vh-80px)] overflow-y-auto">
+                    <div className="lg:hidden bg-[#ffffff] border-t border-[#cccccc] px-4 py-4 shadow-inner space-y-4 h-[calc(100vh-80px)] overflow-y-auto">
                         {topMenuItems.map((item) => (
                             <div key={item.label}>
                                 {item.isLogin ? (
-                                    <div className="space-y-2 bg-white p-3 rounded-lg border border-gray-100">
+                                    <div className="space-y-2 bg-white p-3 rounded-lg border border-[#cccccc]">
                                         <div className='flex items-center gap-4 text-[#D80621] mb-3'>
                                             <item.icon size={24} />
                                             <div>
-                                                <p className='text-xs text-neutral-500'>{item.label}</p>
+                                                <p className='text-xs text-[#cccccc]'>{item.label}</p>
                                                 <p className='text-sm font-bold'>Select Login Type</p>
                                             </div>
                                         </div>
@@ -290,7 +290,7 @@ const Navbar = () => {
                                                 <div key={group.id} className="space-y-1">
                                                     <h4 className="text-[12px] font-semibold text-[#D80621] pl-1">{group.title}</h4>
                                                     {group.links.map((link) => (
-                                                        <Link key={link.href} href={link.href} className="flex items-center gap-2 p-2 rounded text-[13px] text-[#D80621] hover:bg-red-50 hover:text-[#D80621]">
+                                                        <Link key={link.href} href={link.href} className="flex items-center gap-2 p-2 rounded text-[13px] text-[#D80621] hover:bg-[#D80621] hover:text-[#D80621]">
                                                             <ChevronRight className="w-3 h-3" />
                                                             {link.label}
                                                         </Link>
@@ -303,8 +303,8 @@ const Navbar = () => {
                                     <Link className='flex items-center gap-4 p-2 rounded-lg hover:bg-white hover:shadow-sm transition-all' href={item.href}>
                                         <div className='text-[#D80621]'><item.icon size={24} /></div>
                                         <div>
-                                            <p className='text-xs text-neutral-500'>{item.label}</p>
-                                            <p className='text-sm font-bold text-neutral-800'>{item.content}</p>
+                                            <p className='text-xs text-[#cccccc]'>{item.label}</p>
+                                            <p className='text-sm font-bold text-[#D80621]'>{item.content}</p>
                                         </div>
                                     </Link>
                                 )}
@@ -316,13 +316,13 @@ const Navbar = () => {
             </header>
 
             <div
-                className={`fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-41 transition-transform duration-300 ease-in-out ${showSticky ? 'translate-y-0' : '-translate-y-full' }`}
+                className={`fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-md z-41 transition-transform duration-300 ease-in-out ${showSticky ? 'translate-y-0' : '-translate-y-full'}`}
             >
                 <div className="w-full px-4 sm:px-6 lg:px-10">
                     <div className="flex items-center justify-between gap-4 -pb-4">
                         {/* Sticky Logo */}
                         <Link href={'/'} className="shrink-0">
-                            <Image src={'/CANADA FOUNDRIES.png'} alt='Mega Industries' height={70} width={130} className=" object-contain py-2 h-16 w-auto" />
+                            <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Industries' height={70} width={130} className=" object-contain py-2 h-16 w-auto" />
                         </Link>
 
                         <SearchBar />

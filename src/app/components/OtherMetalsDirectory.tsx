@@ -59,12 +59,12 @@ export default function OtherMetalsDirectory() {
   const [selectedMetal, setSelectedMetal] = useState<MetalProfile>(OTHER_METALS_DATA[0]);
 
   return (
-    <section className="bg-[#D80621] text-white py-24 font-sans border-t border-zinc-950">
+    <section className="bg-[#D80621] text-white py-24 font-sans border-t border-[#cccccc]">
       {/* Absolute strict fluid bounds requested */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
         
         {/* Section Header */}
-        <div className="border-b border-zinc-900 pb-10 mb-16">
+        <div className="border-b border-[#cccccc] pb-10 mb-16">
           <span className="text-xs uppercase tracking-[0.3em] font-black text-[#D80621] block mb-3">
             Secondary & Custom Castings
           </span>
@@ -84,24 +84,24 @@ export default function OtherMetalsDirectory() {
                 <button
                   key={metal.id}
                   onClick={() => setSelectedMetal(metal)}
-                  className={` w-full text-left p-5 transition-all duration-300 rounded-xs border flex items-center justify-between group ${isActive ? "bg-[#D80621] border-[#D80621] text-white shadow-xl" : "bg-[#c0c0c0] border-zinc-900 text-[#D80621] hover:border-zinc-800 hover:text-zinc-300" } `}
+                  className={` w-full text-left p-5 transition-all duration-300 rounded-xs border flex items-center justify-between group ${isActive ? "bg-[#D80621] border-[#D80621] text-white shadow-xl" : "bg-[#c0c0c0] border-[#cccccc] text-[#D80621] hover:border-[#cccccc] hover:text-[#cccccc]" } `}
                 >
                   <div>
-                    <p className={`text-lg font-bold tracking-tight transition-colors ${isActive ? 'text-[#D80621]' : 'text-zinc-400 group-hover:text-white'}`}>
+                    <p className={`text-lg font-bold tracking-tight transition-colors ${isActive ? 'text-[#D80621]' : 'text-[#cccccc] group-hover:text-white'}`}>
                       {metal.name}
                     </p>
                     <p className="text-xs text-[#D80621] mt-0.5 uppercase tracking-wider font-medium">
                       {metal.subtitle}
                     </p>
                   </div>
-                  <ArrowRight className={`w-4 h-4 transition-all duration-300 ${isActive ? 'text-[#D80621] translate-x-1' : 'text-zinc-800 group-hover:text-zinc-400'}`} />
+                  <ArrowRight className={`w-4 h-4 transition-all duration-300 ${isActive ? 'text-[#D80621] translate-x-1' : 'text-[#D80621] group-hover:text-[#cccccc]'}`} />
                 </button>
               );
             })}
           </div>
 
           {/* RIGHT DETAILED SPECTRAL PREVIEW CONTAINER */}
-          <div className="lg:col-span-7 bg-[#D80621] border border-zinc-900 p-8 md:p-12 rounded-sm relative overflow-hidden min-h-[500px] flex flex-col justify-between shadow-2xl">
+          <div className="lg:col-span-7 bg-[#D80621] border border-[#cccccc] p-8 md:p-12 rounded-sm relative overflow-hidden min-h-[500px] flex flex-col justify-between shadow-2xl">
             
             {/* Structural Geometry Overlay Accent */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#D80621]/10 to-transparent pointer-events-none" />
@@ -119,7 +119,7 @@ export default function OtherMetalsDirectory() {
               <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-2">
                 {selectedMetal.name}
               </h3>
-              <p className="text-sm font-mono text-[#D80621] uppercase tracking-widest border-b border-zinc-900 pb-6 mb-6">
+              <p className="text-sm font-mono text-[#D80621] uppercase tracking-widest border-b border-[#cccccc] pb-6 mb-6">
                 {selectedMetal.subtitle}
               </p>
 
@@ -130,14 +130,14 @@ export default function OtherMetalsDirectory() {
             </div>
 
             {/* Technical Analytical Footers */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-zinc-900/80 pt-8 mt-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-[#cccccc] pt-8 mt-auto">
               
               {/* Chemistry/Structure Element Ratio */}
               <div>
                 <span className="flex items-center gap-1.5 text-xs font-bold text-[#D80621] uppercase tracking-wider mb-3">
                   <Activity className="w-3.5 h-3.5 text-[#D80621]" /> Elemental Composition
                 </span>
-                <div className="font-mono text-sm bg-[#D80621] border border-zinc-900 p-3 text-white rounded-xs font-semibold">
+                <div className="font-mono text-sm bg-[#D80621] border border-[#cccccc] p-3 text-white rounded-xs font-semibold">
                   {selectedMetal.composition}
                 </div>
               </div>

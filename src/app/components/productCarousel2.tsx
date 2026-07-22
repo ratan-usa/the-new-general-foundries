@@ -36,7 +36,7 @@ const row2 = [
 
 export default function AssociationsCarousel() {
   return (
-    <section className="w-full py-2 bg-slate-50 overflow-hidden">
+    <section className="w-full py-2 bg-[#ffffff] overflow-hidden">
       <div className="container mx-auto px-4 mb-10 text-center">
         <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-wide">
           Associations & Standards
@@ -99,7 +99,7 @@ export default function AssociationsCarousel() {
 // Helper Component: Card with Shadow
 function LogoCard({ item }: { item: { name: string; src: string } }) {
   return (
-    <div className=" flex items-center justify-center w-[180px] h-[90px] md:w-[220px] md:h-[110px] bg-white border border-gray-100 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] shrink-0 transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer ">
+    <div className=" flex items-center justify-center w-[180px] h-[90px] md:w-[220px] md:h-[110px] bg-white border border-[#cccccc] rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] shrink-0 transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer ">
        <Image 
             src={item.src} 
             alt={item.name} 

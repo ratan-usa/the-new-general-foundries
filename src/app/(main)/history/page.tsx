@@ -31,14 +31,14 @@ export default function HistoryPage() {
     <div className="min-h-screen bg-white text-[#D80621] font-sans">
 
       {/* === HERO SECTION === */}
-      <section className="relative py-24 bg-slate-500 text-[#D80621] overflow-hidden">
+      <section className="relative py-24 bg-[#ffffff] text-[#D80621] overflow-hidden">
         {/* Background Texture */}
         <div className="absolute inset-0 opacity-20 bg-[url('/assets/image13.jpg')]"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-end justify-between gap-8">
           <div className="max-w-2xl">
             <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">
-              Our <span className="text-red-600">Legacy</span>
+              Our <span className="text-[#D80621]">Legacy</span>
             </h1>
             <p className="text-xl text-[#D80621] leading-relaxed">
               For four decades, Canada Foundries has been the silent backbone of modern infrastructure. This is the story of how we built trust, one pour at a time.
@@ -68,16 +68,16 @@ export default function HistoryPage() {
             </p>
 
             <div className="flex items-center gap-4 text-sm font-bold text-[#D80621]">
-              <div className="w-12 h-1 bg-red-600"></div>
+              <div className="w-12 h-1 bg-[#D80621]"></div>
               <span>READ THE CHAPTERS BELOW</span>
             </div>
           </div>
 
           {/* Right: Vintage Image Placeholder */}
-          <div className="relative aspect-[4/3] bg-slate-100 rounded-lg overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
+          <div className="relative aspect-[4/3] bg-[#ffffff] rounded-lg overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
             {/* Grayscale filter for "History" look */}
-            <div className="absolute inset-0 bg-slate-500/10 mix-blend-multiply z-10"></div>
-            <div className="w-full h-full bg-slate-300 flex items-center justify-center text-[#D80621] font-bold">
+            <div className="absolute inset-0 bg-[#ffffff] mix-blend-multiply z-10"></div>
+            <div className="w-full h-full bg-[#ffffff] flex items-center justify-center text-[#D80621] font-bold">
               <Image
                 src={'/assets/image3.jpeg'}
                 alt="Case Study Image"
@@ -96,16 +96,16 @@ export default function HistoryPage() {
       </section>
 
       {/* === ERAS / CHAPTERS === */}
-      <section className="py-20 bg-slate-50 border-t border-slate-200">
+      <section className="py-20 bg-[#ffffff] border-t border-[#cccccc]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
           {ERAS.map((era, index) => (
-            <div key={index} className="group bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-slate-200 hover:shadow-xl hover:border-red-100 transition-all duration-300">
+            <div key={index} className="group bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[#cccccc] hover:shadow-xl hover:border-[#D80621] transition-all duration-300">
               <div className="flex flex-col md:flex-row gap-8">
 
                 {/* Left: Icon & Date */}
-                <div className="md:w-1/4 flex flex-col items-start border-b md:border-b-0 md:border-r border-slate-100 pb-6 md:pb-0 md:pr-6">
-                  <div className="w-12 h-12 bg-red-50 text-red-600 rounded-full flex items-center justify-center mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                <div className="md:w-1/4 flex flex-col items-start border-b md:border-b-0 md:border-r border-[#cccccc] pb-6 md:pb-0 md:pr-6">
+                  <div className="w-12 h-12 bg-[#D80621] text-[#D80621] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#D80621] group-hover:text-white transition-colors">
                     <era.icon className="w-6 h-6" />
                   </div>
                   <span className="text-sm font-bold text-[#D80621] uppercase tracking-wide">{era.period}</span>
@@ -113,14 +113,14 @@ export default function HistoryPage() {
 
                 {/* Right: Content */}
                 <div className="md:w-3/4">
-                  <h3 className="text-2xl font-bold text-[#D80621] mb-4 group-hover:text-red-700 transition-colors">
+                  <h3 className="text-2xl font-bold text-[#D80621] mb-4 group-hover:text-[#D80621] transition-colors">
                     {era.title}
                   </h3>
                   <p className="text-[#D80621] leading-relaxed mb-6">
                     {era.content}
                   </p>
 
-                  <div className="inline-flex items-center gap-2 text-xs font-bold bg-slate-100 px-3 py-1.5 rounded text-[#D80621]">
+                  <div className="inline-flex items-center gap-2 text-xs font-bold bg-[#ffffff] px-3 py-1.5 rounded text-[#D80621]">
                     <TrendingUp className="w-3 h-3" />
                     Key Stat: {era.stat}
                   </div>
@@ -134,14 +134,14 @@ export default function HistoryPage() {
       </section>
 
       {/* === FUTURE TEASER === */}
-      <section className="py-20 bg-slate-500 text-[#D80621] text-center">
+      <section className="py-20 bg-[#ffffff] text-[#D80621] text-center">
         <div className="max-w-3xl mx-auto px-4">
-          <Clock className="w-12 h-12 mx-auto text-red-500 mb-6" />
+          <Clock className="w-12 h-12 mx-auto text-[#D80621] mb-6" />
           <h2 className="text-3xl md:text-4xl font-bold mb-6">The History of Tomorrow</h2>
           <p className="text-[#D80621] text-lg mb-8">
             We aren't done writing our story. Join us as we pioneer the next generation of aerospace composites.
           </p>
-          <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded transition-all">
+          <button className="bg-[#D80621] hover:bg-[#D80621] text-white font-bold py-3 px-8 rounded transition-all">
             See Our Future Vision
           </button>
         </div>

@@ -52,7 +52,7 @@ const BLOG_POSTS: BlogPost[] = [
   }
 ];
 
-export default function MegaBlog() {
+export default function CanadaBlog() {
   const [activeHover, setActiveHover] = useState<string | null>(null);
 
   return (
@@ -125,7 +125,7 @@ export default function MegaBlog() {
 
                 {/* 3. Dynamic Interactive Preview Window */}
                 <div className="lg:col-span-4 mt-6 lg:mt-0 flex items-center justify-end relative h-48 lg:h-auto">
-                  <div className="w-full h-full max-h-[160px] lg:max-h-none lg:w-4/5 rounded-sm overflow-hidden bg-slate-500 border border-white/20 relative shadow-2xl transition-all duration-500 group-hover:border-white group-hover:scale-[1.02]">
+                  <div className="w-full h-full max-h-[160px] lg:max-h-none lg:w-4/5 rounded-sm overflow-hidden bg-[#ffffff] border border-white/20 relative shadow-2xl transition-all duration-500 group-hover:border-white group-hover:scale-[1.02]">
                     {/* Dark gradient overlay matching layout colors */}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#D80621] via-transparent to-transparent z-10 opacity-70" />
                     
@@ -134,7 +134,7 @@ export default function MegaBlog() {
                       alt={post.title}
                       className="w-full h-full object-cover filter grayscale contrast-125 brightness-75 group-hover:grayscale-0 group-hover:brightness-90 transition-all duration-700 ease-in-out"
                       onError={(e) => {
-                        e.currentTarget.src = "https://via.placeholder.com/400x250/141414/D80621?text=Mega+Foundry+Log";
+                        e.currentTarget.src = "https://via.placeholder.com/400x250/141414/D80621?text=Canada+Foundry+Log";
                       }}
                     />
 

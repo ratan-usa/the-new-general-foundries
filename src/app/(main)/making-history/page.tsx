@@ -45,10 +45,10 @@ const STATS = [
 
 export default function MakingHistoryPage() {
   return (
-    <div className="min-h-screen bg-slate-50 text-[#D80621] font-sans">
+    <div className="min-h-screen bg-[#ffffff] text-[#D80621] font-sans">
 
       {/* === HERO SECTION === */}
-      <section className="relative h-[60vh] flex items-center justify-center bg-slate-500 text-[#D80621] overflow-hidden">
+      <section className="relative h-[60vh] flex items-center justify-center bg-[#ffffff] text-[#D80621] overflow-hidden">
         {/* Background Overlay (Simulating industrial dark mode) */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-slate-800 via-slate-950 -[#D80621] opacity-90 z-0"></div>
 
@@ -56,7 +56,7 @@ export default function MakingHistoryPage() {
         <div className="absolute top-0 left-0 w-full h-full opacity-20 bg-[url('/assets/image2.jpeg')]"></div>
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="inline-block mb-4 px-3 py-1 border border-red-600 rounded text-red-500 text-xs font-bold tracking-widest uppercase">
+          <div className="inline-block mb-4 px-3 py-1 border border-[#D80621] rounded text-[#D80621] text-xs font-bold tracking-widest uppercase">
             Since 1985
           </div>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter uppercase mb-6">
@@ -73,13 +73,13 @@ export default function MakingHistoryPage() {
       </section>
 
       {/* === STATS BAR === */}
-      <section className="py-12 bg-white border-b border-slate-200">
+      <section className="py-12 bg-white border-b border-[#cccccc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {STATS.map((stat, idx) => (
               <div key={idx} className="flex flex-col items-center text-center group">
-                <div className="mb-3 p-3 bg-slate-100 rounded-full group-hover:bg-red-50 transition-colors">
-                  <stat.icon className="w-6 h-6 text-[#D80621] group-hover:text-red-600" />
+                <div className="mb-3 p-3 bg-[#ffffff] rounded-full group-hover:bg-[#D80621] transition-colors">
+                  <stat.icon className="w-6 h-6 text-[#D80621] group-hover:text-[#D80621]" />
                 </div>
                 <span className="text-3xl md:text-4xl font-extrabold text-[#D80621]">{stat.value}</span>
                 <span className="text-xs uppercase tracking-wider text-[#D80621] mt-1">{stat.label}</span>
@@ -90,11 +90,11 @@ export default function MakingHistoryPage() {
       </section>
 
       {/* === TIMELINE SECTION === */}
-      <section className="py-20 bg-slate-50 relative">
+      <section className="py-20 bg-[#ffffff] relative">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
 
           {/* Vertical Line (Hidden on mobile, visible on md+) */}
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-slate-300 top-0"></div>
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-[#ffffff] top-0"></div>
 
           <div className="space-y-16 md:space-y-24">
             {HISTORY_DATA.map((item, index) => {
@@ -103,18 +103,18 @@ export default function MakingHistoryPage() {
                 <div key={index} className={`relative flex flex-col md:flex-row items-center ${isEven ? 'md:flex-row-reverse' : ''}`}>
 
                   {/* Timeline Dot (Center) */}
-                  <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-red-600 border-4 border-white rounded-full shadow-lg z-10 mt-1.5 md:mt-0"></div>
+                  <div className="absolute left-4 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 bg-[#D80621] border-4 border-white rounded-full shadow-lg z-10 mt-1.5 md:mt-0"></div>
 
                   {/* Date Badge (Mobile: Top Left, Desktop: Center Axis) */}
-                  <div className={`hidden md:flex absolute left-1/2 transform -translate-x-1/2 -mt-12 md:-mt-0 md:items-center md:justify-center w-16 h-8 bg-slate-500 text-[#D80621] text-xs font-bold rounded px-2 z-20 ${isEven ? 'md:-translate-x-[140%]' : 'md:translate-x-[40%]'}`}>
+                  <div className={`hidden md:flex absolute left-1/2 transform -translate-x-1/2 -mt-12 md:-mt-0 md:items-center md:justify-center w-16 h-8 bg-[#ffffff] text-[#D80621] text-xs font-bold rounded px-2 z-20 ${isEven ? 'md:-translate-x-[140%]' : 'md:translate-x-[40%]'}`}>
                     {item.year}
                   </div>
 
                   {/* Content Half */}
                   <div className="w-full md:w-1/2 md:px-12 pl-12 pr-0">
-                    <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-[#cccccc] hover:shadow-md transition-shadow">
                       {/* Mobile Year Badge */}
-                      <span className="md:hidden inline-block bg-slate-500 text-[#D80621] text-xs font-bold px-2 py-1 rounded mb-3">
+                      <span className="md:hidden inline-block bg-[#ffffff] text-[#D80621] text-xs font-bold px-2 py-1 rounded mb-3">
                         {item.year}
                       </span>
 
@@ -129,9 +129,9 @@ export default function MakingHistoryPage() {
 
                   {/* Image/Visual Half */}
                   <div className="w-full md:w-1/2 md:px-12 mt-6 md:mt-0 pl-12 md:pl-12">
-                    <div className="aspect-video w-full bg-slate-200 rounded-xl overflow-hidden shadow-inner relative group">
+                    <div className="aspect-video w-full bg-[#ffffff] rounded-xl overflow-hidden shadow-inner relative group">
                       {/* Placeholder for Image */}
-                      <div className="absolute inset-0 flex items-center justify-center text-[#D80621] font-medium bg-slate-100">
+                      <div className="absolute inset-0 flex items-center justify-center text-[#D80621] font-medium bg-[#ffffff]">
 
                         <Image
                           src={item.image}
@@ -139,7 +139,7 @@ export default function MakingHistoryPage() {
                           fill />
                       </div>
                       {/* Overlay effect */}
-                      <div className="absolute inset-0 bg-slate-500/0 group-hover:bg-slate-500/10 transition-all duration-300"></div>
+                      <div className="absolute inset-0 bg-[#ffffff] group-hover:bg-[#ffffff] transition-all duration-300"></div>
                     </div>
                   </div>
 
@@ -154,7 +154,7 @@ export default function MakingHistoryPage() {
             <p className="text-[#D80621] mb-8 max-w-lg mx-auto">
               We are constantly evolving. Join us as we forge the next chapter of Canada Foundries.
             </p>
-            <button className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded shadow-lg transition-transform transform hover:-translate-y-1">
+            <button className="bg-[#D80621] hover:bg-[#D80621] text-white font-bold py-3 px-8 rounded shadow-lg transition-transform transform hover:-translate-y-1">
               View Careers
             </button>
           </div>

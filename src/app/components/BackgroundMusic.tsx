@@ -56,7 +56,7 @@ export default function BackgroundMusic() {
       {/* Floating Toggle Button */}
       <button
         onClick={toggleAudio}
-        className=" flex items-center justify-center w-12 h-12 bg-[#D80621] text-white rounded-full shadow-lg border-2 border-white hover:bg-red-700 hover:scale-110 transition-all duration-300 animate-fade-in "
+        className=" flex items-center justify-center w-12 h-12 bg-[#D80621] text-white rounded-full shadow-lg border-2 border-white hover:bg-[#D80621] hover:scale-110 transition-all duration-300 animate-fade-in "
       >
         {isPlaying ? (
           <div className="relative">

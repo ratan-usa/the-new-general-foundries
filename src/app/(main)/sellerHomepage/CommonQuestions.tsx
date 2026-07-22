@@ -6,7 +6,7 @@ import { ChevronRight, ChevronDown } from 'lucide-react';
 const faqData = [
   {
     id: 1,
-    question: "What tools are available for foundries on Mega Portal?",
+    question: "What tools are available for foundries on Canada Portal?",
     answer: "Sellers have access to a full suite of industrial tools including the Product Calculator, Dynamic Pricing Engine for raw material indexing, and a Smart RFQ Manager to handle technical blueprints."
   },
   {
@@ -61,7 +61,7 @@ export default function CommonQuestions() {
                 {/* Question Bar */}
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className={` w-full flex items-center justify-between p-5 text-left transition-all duration-200 bg-gray-50 hover:bg-gray-100 border-l-[6px] ${isOpen ? 'border-[#D80621]' : 'border-[#D80621]'} /* Note: The image shows red border for all items, even closed ones */ `}
+                  className={` w-full flex items-center justify-between p-5 text-left transition-all duration-200 bg-[#ffffff] hover:bg-[#ffffff] border-l-[6px] ${isOpen ? 'border-[#D80621]' : 'border-[#D80621]'} /* Note: The image shows red border for all items, even closed ones */ `}
                 >
                   <span className="text-lg font-medium text-[#D80621]">
                     <span className="font-bold text-[#D80621] mr-2">Q:</span> 

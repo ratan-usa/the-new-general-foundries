@@ -58,12 +58,12 @@ export default function NewProductPage() {
         // === FIX: USE VALID UUIDS ===
         // The server likely tries to parse these strings as GUIDs
         id: newProductId,
-        tenantId: "MEGAFOUNDRY",
+        tenantId: "canadaFOUNDRY",
 
         // Vendor Info (Use real UUIDs)
         vendorId: "3fa85f64-5717-4562-b3fc-2c963f66afa6", // Replace with a REAL vendor ID from your database if possible
-        vendorName: "Mega Vendor",
-        vendorSlug: "mega-vendor",
+        vendorName: "canada Vendor",
+        vendorSlug: "canada-vendor",
 
         // Category Info
         categoryId: "3fa85f64-5717-4562-b3fc-2c963f66afa6", // Use a valid UUID
@@ -117,18 +117,18 @@ export default function NewProductPage() {
     }
   };
   return (
-    <div className="min-h-screen bg-gray-50 pb-20">
+    <div className="min-h-screen bg-[#ffffff] pb-20">
 
       {/* === TOP BAR === */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-30 px-6 py-4 flex items-center justify-between shadow-sm">
+      <div className="bg-white border-b border-[#cccccc] sticky top-0 z-30 px-6 py-4 flex items-center justify-between shadow-sm">
         <div className="flex items-center gap-4">
-          <Link href="/private/member/products" className="p-2 hover:bg-gray-100 rounded-full text-[#D80621]">
+          <Link href="/private/member/products" className="p-2 hover:bg-[#ffffff] rounded-full text-[#D80621]">
             <ChevronLeft className="w-5 h-5" />
           </Link>
           <h1 className="text-xl font-bold text-[#D80621]">Add New Product</h1>
         </div>
         <div className="flex items-center gap-3">
-          <Link href="/private/member/products" className="px-4 py-2 text-sm font-medium text-[#D80621] bg-white border border-gray-300 rounded-lg hover:bg-gray-50">
+          <Link href="/private/member/products" className="px-4 py-2 text-sm font-medium text-[#D80621] bg-white border border-[#cccccc] rounded-lg hover:bg-[#ffffff]">
             Cancel
           </Link>
           <button
@@ -148,7 +148,7 @@ export default function NewProductPage() {
       <div className="max-w-5xl mx-auto px-6 py-8">
 
         {error && (
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg flex items-center gap-2">
+          <div className="mb-6 p-4 bg-[#D80621] border border-[#D80621] text-[#D80621] rounded-lg flex items-center gap-2">
             <X className="w-5 h-5" />
             {error}
           </div>
@@ -160,7 +160,7 @@ export default function NewProductPage() {
           <div className="lg:col-span-2 space-y-6">
 
             {/* 1. BASIC INFO */}
-            <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
               <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
                 <FileText className="w-5 h-5 text-[#D80621]" /> Basic Information
               </h2>
@@ -170,10 +170,10 @@ export default function NewProductPage() {
                   <label className="block text-sm font-medium text-[#D80621] mb-1">Product Name *</label>
                   <input
                     {...register("productName", { required: true })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
+                    className="w-full px-4 py-2 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
                     placeholder="e.g. Industrial Steel Valve"
                   />
-                  {errors.productName && <span className="text-xs text-red-500">Name is required</span>}
+                  {errors.productName && <span className="text-xs text-[#D80621]">Name is required</span>}
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -181,7 +181,7 @@ export default function NewProductPage() {
                     <label className="block text-sm font-medium text-[#D80621] mb-1">SKU *</label>
                     <input
                       {...register("sku", { required: true })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
+                      className="w-full px-4 py-2 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
                       placeholder="INV-001"
                     />
                   </div>
@@ -190,7 +190,7 @@ export default function NewProductPage() {
                     <input
                       {...register("productSlug")}
                       readOnly
-                      className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg text-[#D80621] cursor-not-allowed"
+                      className="w-full px-4 py-2 bg-[#ffffff] border border-[#cccccc] rounded-lg text-[#D80621] cursor-not-allowed"
                     />
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export default function NewProductPage() {
                   <textarea
                     {...register("shortDescription")}
                     rows={4}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
+                    className="w-full px-4 py-2 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
                     placeholder="Brief summary of the product..."
                   />
                 </div>
@@ -208,7 +208,7 @@ export default function NewProductPage() {
             </section>
 
             {/* 2. PRICING */}
-            <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
               <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
                 <DollarSign className="w-5 h-5 text-[#D80621]" /> Pricing
               </h2>
@@ -219,7 +219,7 @@ export default function NewProductPage() {
                   <input
                     type="number" step="0.01"
                     {...register("pricing.unitPrice", { required: true, min: 0 })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
+                    className="w-full px-4 py-2 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
                   />
                 </div>
                 <div>
@@ -227,14 +227,14 @@ export default function NewProductPage() {
                   <input
                     type="number" step="0.01"
                     {...register("pricing.salePrice")}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
+                    className="w-full px-4 py-2 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-[#D80621] mb-1">Currency</label>
                   <select
                     {...register("pricing.currency")}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white"
+                    className="w-full px-4 py-2 border border-[#cccccc] rounded-lg bg-white"
                   >
                     <option value="USD">USD</option>
                     <option value="EUR">EUR</option>
@@ -245,11 +245,11 @@ export default function NewProductPage() {
             </section>
 
             {/* 3. MEDIA (Placeholder for URL) */}
-            <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
               <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
                 <UploadCloud className="w-5 h-5 text-[#D80621]" /> Media
               </h2>
-              <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center bg-gray-50">
+              <div className="border-2 border-dashed border-[#cccccc] rounded-xl p-8 text-center bg-[#ffffff]">
                 <p className="text-sm text-[#D80621] mb-2">Image Upload not fully implemented yet.</p>
                 <p className="text-xs text-[#D80621]">For now, images are handled via external URLs.</p>
               </div>
@@ -261,7 +261,7 @@ export default function NewProductPage() {
           <div className="space-y-6">
 
             {/* 4. STATUS & INVENTORY */}
-            <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
               <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
                 <Package className="w-5 h-5 text-[#D80621]" /> Inventory
               </h2>
@@ -271,7 +271,7 @@ export default function NewProductPage() {
                   <label className="block text-sm font-medium text-[#D80621] mb-1">Status</label>
                   <select
                     {...register("status")}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white"
+                    className="w-full px-4 py-2 border border-[#cccccc] rounded-lg bg-white"
                   >
                     <option value="DRAFT">Draft</option>
                     <option value="PUBLISHED">Published</option>
@@ -279,7 +279,7 @@ export default function NewProductPage() {
                   </select>
                 </div>
 
-                <div className="flex items-center justify-between py-2 border-b border-gray-100">
+                <div className="flex items-center justify-between py-2 border-b border-[#cccccc]">
                   <label className="text-sm font-medium text-[#D80621]">In Stock?</label>
                   <input
                     type="checkbox"
@@ -293,7 +293,7 @@ export default function NewProductPage() {
                   <input
                     type="number"
                     {...register("availability.stockQuantity")}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
+                    className="w-full px-4 py-2 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
                   />
                 </div>
 
@@ -302,14 +302,14 @@ export default function NewProductPage() {
                   <input
                     type="number"
                     {...register("availability.leadTimeDays")}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
+                    className="w-full px-4 py-2 border border-[#cccccc] rounded-lg focus:ring-2 focus:ring-[#D80621] outline-none"
                   />
                 </div>
               </div>
             </section>
 
             {/* 5. DIMENSIONS */}
-            <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+            <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
               <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
                 <Ruler className="w-5 h-5 text-[#D80621]" /> Shipping Specs
               </h2>
@@ -320,7 +320,7 @@ export default function NewProductPage() {
                   <input
                     type="number" step="0.1"
                     {...register("dimensions.weight")}
-                    className="w-full mt-1 px-3 py-1.5 border border-gray-300 rounded text-sm"
+                    className="w-full mt-1 px-3 py-1.5 border border-[#cccccc] rounded text-sm"
                   />
                 </div>
                 <div>
@@ -328,7 +328,7 @@ export default function NewProductPage() {
                   <input
                     type="number" step="0.1"
                     {...register("dimensions.length")}
-                    className="w-full mt-1 px-3 py-1.5 border border-gray-300 rounded text-sm"
+                    className="w-full mt-1 px-3 py-1.5 border border-[#cccccc] rounded text-sm"
                   />
                 </div>
                 <div>
@@ -336,7 +336,7 @@ export default function NewProductPage() {
                   <input
                     type="number" step="0.1"
                     {...register("dimensions.width")}
-                    className="w-full mt-1 px-3 py-1.5 border border-gray-300 rounded text-sm"
+                    className="w-full mt-1 px-3 py-1.5 border border-[#cccccc] rounded text-sm"
                   />
                 </div>
                 <div>
@@ -344,7 +344,7 @@ export default function NewProductPage() {
                   <input
                     type="number" step="0.1"
                     {...register("dimensions.height")}
-                    className="w-full mt-1 px-3 py-1.5 border border-gray-300 rounded text-sm"
+                    className="w-full mt-1 px-3 py-1.5 border border-[#cccccc] rounded text-sm"
                   />
                 </div>
               </div>

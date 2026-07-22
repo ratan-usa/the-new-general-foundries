@@ -19,9 +19,9 @@ export default function IndustryNews() {
             <Link 
               key={article.id} 
               href={`/news/${article.slug}`}
-              className="group flex flex-col h-full border border-gray-400 rounded-lg p-4 hover:shadow-lg transition-shadow duration-300"
+              className="group flex flex-col h-full border border-[#cccccc] rounded-lg p-4 hover:shadow-lg transition-shadow duration-300"
             > 
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md mb-4 bg-gray-100">
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-md mb-4 bg-[#ffffff]">
                 <Image
                   src={article.image}
                   alt={article.title}

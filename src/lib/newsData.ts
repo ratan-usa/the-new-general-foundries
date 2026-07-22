@@ -43,7 +43,7 @@ export const blogPosts = [
     id: 1,
     title: "The Future of Metal Casting: Automation & Robotics",
     slug: "future-of-metal-casting-automation",
-    author: "Mega Editorial Team",
+    author: "canada Editorial Team",
     date: "28 Nov 2025",
     image: "/assets/image15.jpeg",
     excerpt: "How robotic arms and automated molding lines are increasing precision and safety in modern foundries."
@@ -70,7 +70,7 @@ export const blogPosts = [
     id: 4,
     title: "Sustainability in Forging: Reducing Carbon Footprint",
     slug: "sustainability-in-forging",
-    author: "Mega Admin",
+    author: "canada Admin",
     date: "25 Oct 2025",
     image: "/assets/image11.jpg",
     excerpt: "Exploring new electric furnace technologies and sand reclamation processes that are making foundries greener."
@@ -201,7 +201,7 @@ export const newInnovationData = {
     {
       id: 15,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/newInnovation/9013 A Mega.467.mp4",
+      videoUrl: "/video/newInnovation/9013 A canada.467.mp4",
     }
   ]
 };
@@ -213,12 +213,12 @@ export const paving_riser = {
     {
       id: 1,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/paving_riser/9013 A Mega.467.mp4",
+      videoUrl: "/video/paving_riser/9013 A canada.467.mp4",
     },
     {
       id: 2,
       title: "AUXILIARY CABLES (CONTROL)",
-      videoUrl: "/video/paving_riser/FV0 Mega.469.mp4",
+      videoUrl: "/video/paving_riser/FV0 canada.469.mp4",
     }
     ,
     {
@@ -232,7 +232,7 @@ export const paving_riser = {
     }, {
       id: 5,
       title: "Cross Sectional / CORE LV CABLES",
-      videoUrl: "/video/paving_riser/Fire Dumper Mega.470.mp4",
+      videoUrl: "/video/paving_riser/Fire Dumper canada.470.mp4",
     },
     {
       id: 6,

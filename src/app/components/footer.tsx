@@ -63,9 +63,9 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-[#D80621] text-white border-t border-gray-800 font-sans">
+    <footer className="bg-[#D80621] text-white border-t border-[#cccccc] font-sans">
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pt-16 ">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16 border-b border-gray-800 pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16 border-b border-[#cccccc] pb-12">
 
           <div className="flex flex-col justify-evenly gap-16 space-y-6">
             <div>
@@ -82,7 +82,7 @@ const Footer = () => {
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='MEGA METALS' fill className="object-contain" />
+                    <Image src={'/CANADA FOUNDRIES.png'} alt='CANADA METALS' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
@@ -103,7 +103,7 @@ const Footer = () => {
               <p className='mt-4'>
                 <a
                   href="tel:+15127828880"
-                  className="hover:text-gray-200 transition-colors duration-200"
+                  className="hover:text-[#cccccc] transition-colors duration-200"
                 >
                   +1 (512) 782-8880
                 </a>
@@ -117,7 +117,7 @@ const Footer = () => {
             <div className="flex ">
               <div className="bg-white p-2 rounded-lg w-80 h-36 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/CANADA FOUNDRIES.png'} alt='Mega Industries' fill className="object-contain" />
+                  <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Industries' fill className="object-contain" />
                 </Link>
               </div>
             </div>
@@ -139,12 +139,12 @@ const Footer = () => {
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Mega Forge' fill className="object-contain" />
+                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Forge' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Mega Forge' fill className="object-contain" />
+                    <Image src={'/CANADA FOUNDRIES.png'} alt='Canada Forge' fill className="object-contain" />
                   </Link>
                 </div>
               </div>
@@ -161,7 +161,7 @@ const Footer = () => {
               <p className='mt-4'>
                 <a
                   href="tel:+14388059990"
-                  className="hover:text-gray-200 transition-colors duration-200"
+                  className="hover:text-[#cccccc] transition-colors duration-200"
                 >
                   +1 (438) 805-9990
                 </a>
@@ -192,7 +192,7 @@ const Footer = () => {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-xs text-white hover:text-gray-200 transition-colors block"
+                          className="text-xs text-white hover:text-[#cccccc] transition-colors block"
                         >
                           {link.label}
                         </Link>
@@ -202,7 +202,7 @@ const Footer = () => {
 
                   {/* Optional Divider if a column has multiple sections (like Support & Quality) */}
                   {index < col.sections.length - 1 && (
-                    <hr className="border-t border-gray-700 opacity-50 mt-6 mb-2" />
+                    <hr className="border-t border-[#cccccc] opacity-50 mt-6 mb-2" />
                   )}
                 </div>
               ))}
@@ -211,8 +211,8 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="w-full px-4 sm:px-6 lg:px-10 py-2 bg-[#D80621] border-t border-gray-800">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-gray-800 pb-8">
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-2 bg-[#D80621] border-t border-[#cccccc]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-[#cccccc] pb-8">
 
 
           {/* --- COL 2: NEWSLETTER (Centered) --- */}
@@ -222,9 +222,9 @@ const Footer = () => {
               <Input
                 type="email"
                 placeholder="Enter Email Address"
-                className="rounded-r-none border-gray-700 bg-gray-800/50 text-white focus:border-[#D80621] h-10 text-sm"
+                className="rounded-r-none border-[#cccccc] bg-[#ffffff] text-white focus:border-[#D80621] h-10 text-sm"
               />
-              <Button className="rounded-l-none bg-[#D80621] hover:bg-red-700 text-white font-bold h-10 px-6 transition-colors">
+              <Button className="rounded-l-none bg-[#D80621] hover:bg-[#D80621] text-white font-bold h-10 px-6 transition-colors">
                 Submit
               </Button>
             </div>
@@ -232,13 +232,13 @@ const Footer = () => {
 
           {/* --- COL 1: SOCIAL ICONS (Left Aligned) --- */}
           <div className="flex flex-col items-center md:justify-start">
-            <h4 className="text-white text-sm font-semibold mb-3 tracking-wide">info@megafoundries.com</h4>
+            <h4 className="text-white text-sm font-semibold mb-3 tracking-wide">info@canadafoundries.com</h4>
             <div className="flex justify-center items-center md:justify-start gap-3 ">
               {[Linkedin, Facebook, Instagram, Twitter].map((Icon, i) => (
                 <Link
                   key={i}
                   href={'/'}
-                  className='p-2.5 border border-gray-700 rounded-full text-white hover:border-[#D80621] hover:text-gray-200 hover:bg-[#D80621] transition-all duration-300'
+                  className='p-2.5 border border-[#cccccc] rounded-full text-white hover:border-[#D80621] hover:text-[#cccccc] hover:bg-[#D80621] transition-all duration-300'
                 >
                   <Icon className='w-4 h-4' />
                 </Link>
@@ -248,10 +248,10 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="border-t border-red-800 w-full px-4 sm:px-6 lg:px-10 py-6 pb-10 bg-[#D80621]">
+      <div className="border-t border-[#D80621] w-full px-4 sm:px-6 lg:px-10 py-6 pb-10 bg-[#D80621]">
         <div className="flex justify-center items-center">
           <p className="text-lg text-white font-medium">
-            ©1999-2026 Copyright <strong>Mega Industries & Groups</strong> — All Rights Reserved.
+            ©1999-2026 Copyright <strong>Canada Industries & Groups</strong> — All Rights Reserved.
           </p>
         </div>
       </div>

@@ -31,7 +31,7 @@ export const liveChatData: FeatureBlockContent[] = [{
 },
 {
     id: 1,
-    headline: 'Mega Foundations - A Global platform for industrial solutions',
+    headline: 'Canada Foundations - A Global platform for industrial solutions',
     tagline: 'There are no end limits to grow your network & products market.',
     features: [
         {

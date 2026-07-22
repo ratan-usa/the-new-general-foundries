@@ -56,10 +56,10 @@ const AboutSection = () => {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="border-2 border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/95"
+              className="border-2 border-[#cccccc] shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/95"
             >
               <CardHeader className="flex flex-col items-center pt-10 pb-4">
-                <div className="w-12 h-12 rounded-full border-2 border-red-300 bg-red-50 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-full border-2 border-[#D80621] bg-[#D80621] flex items-center justify-center mb-4">
                   <feature.icon className="w-8 h-8 text-[#D80621]" />
                 </div>
                 <CardTitle className="text-[20px] font-semibold text-[#D80621]">

@@ -70,7 +70,7 @@ export default function InventoryPage() {
         
         {/* ✅ Link to the "New Product" page we created */}
         <Link href="/private/member/products/new">
-            <Button className="bg-[#D80621] hover:bg-red-700">
+            <Button className="bg-[#D80621] hover:bg-[#D80621]">
             <Plus className="mr-2 h-4 w-4" /> Add Product
             </Button>
         </Link>
@@ -109,7 +109,7 @@ export default function InventoryPage() {
                       </TableCell>
                       <TableCell>{product.id.substring(0, 8)}...</TableCell>
                       <TableCell>
-                        <span className={`px-2 py-1 rounded-full text-xs font-bold ${ product.status === 'PUBLISHED' ? 'bg-green-100 text-green-700' : product.status === 'DRAFT' ? 'bg-slate-100 text-slate-600' : 'bg-red-50 text-red-600' }`}>
+                        <span className={`px-2 py-1 rounded-full text-xs font-bold ${ product.status === 'PUBLISHED' ? 'bg-green-100 text-green-700' : product.status === 'DRAFT' ? 'bg-[#ffffff] text-[#cccccc]' : 'bg-[#D80621] text-[#D80621]' }`}>
                             {product.status || 'DRAFT'}
                         </span>
                       </TableCell>
@@ -125,7 +125,7 @@ export default function InventoryPage() {
                                 <Edit className="w-4 h-4 text-[#D80621]" />
                             </Button>
                             <Button variant="ghost" size="icon" className="h-8 w-8" onClick={() => handleDelete(product.id)}>
-                                <Trash2 className="w-4 h-4 text-red-500" />
+                                <Trash2 className="w-4 h-4 text-[#D80621]" />
                             </Button>
                         </div>
                       </TableCell>

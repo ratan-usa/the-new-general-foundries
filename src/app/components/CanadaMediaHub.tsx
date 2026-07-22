@@ -34,24 +34,24 @@ const VIDEO_RESOURCES: MediaAsset[] = [
   }
 ];
 
-export default function MegaMediaHub() {
+export default function CanadaMediaHub() {
   const [activeFeed, setActiveFeed] = useState<MediaAsset>(VIDEO_RESOURCES[0]);
 
   return (
-    <section className="bg-white text-black py-4 font-sans border-b border-gray-100 w-full px-4 sm:px-6 lg:px-10">
+    <section className="bg-white text-[#D80621] py-4 font-sans border-b border-[#cccccc] w-full px-4 sm:px-6 lg:px-10">
       <div className="max-w-7xl mx-auto space-y-12">
         
         {/* --- HEADER LOGISTICS SECTION --- */}
-        <div className="border-b border-gray-200 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 w-full">
+        <div className="border-b border-[#cccccc] pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6 w-full">
           <div>
             <span className="text-xs uppercase tracking-[0.4em] font-black text-[#D80621] block mb-3">
               Technical Streaming Terminal
             </span>
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-[#D80621] leading-none">
-              Simulation <span className="text-black">& Lab Feeds</span>
+              Simulation <span className="text-[#D80621]">& Lab Feeds</span>
             </h2>
           </div>
-          <p className="text-gray-600 text-sm font-mono leading-relaxed max-w-sm">
+          <p className="text-[#cccccc] text-sm font-mono leading-relaxed max-w-sm">
             Live infrastructure benchmarks. Real-time rendering streams visualizing hydraulic grate flow intercept dynamics and production tooling cycles.
           </p>
         </div>
@@ -61,7 +61,7 @@ export default function MegaMediaHub() {
           
           {/* Timeline Access Directory Selector List (5 Columns) */}
           <div className="lg:col-span-5 flex flex-col gap-3">
-            <span className="text-[10px] font-mono text-gray-500 uppercase tracking-wider block pl-1">
+            <span className="text-[10px] font-mono text-[#cccccc] uppercase tracking-wider block pl-1">
               Select Active Diagnostic Pipeline Feed
             </span>
             <div className="space-y-3 flex-grow flex flex-col justify-start">
@@ -74,20 +74,20 @@ export default function MegaMediaHub() {
                     className={`w-full text-left p-5 rounded-xl border transition-all duration-300 flex items-center justify-between group relative overflow-hidden ${
                       isSelected
                         ? "bg-[#D80621] border-[#D80621] text-white shadow-md"
-                        : "bg-white border-gray-200 text-black hover:border-[#D80621]"
+                        : "bg-white border-[#cccccc] text-[#D80621] hover:border-[#D80621]"
                     }`}
                   >
                     <div className="flex items-center gap-4 max-w-[85%] relative z-10">
                       <div className={`p-2.5 rounded-lg border transition-colors ${
                         isSelected 
                           ? "bg-white/10 border-white/20 text-white" 
-                          : "bg-gray-50 border-gray-200 text-[#D80621] group-hover:bg-[#D80621]/5"
+                          : "bg-[#ffffff] border-[#cccccc] text-[#D80621] group-hover:bg-[#D80621]/5"
                       }`}>
                         <Tv className="w-5 h-5" />
                       </div>
                       <div className="space-y-0.5 truncate">
                         <span className={`text-[9px] font-mono uppercase tracking-widest block ${
-                          isSelected ? "text-white/70" : "text-gray-400"
+                          isSelected ? "text-white/70" : "text-[#cccccc]"
                         }`}>
                           STREAM NODE 0{index + 1} // {video.badge}
                         </span>
@@ -98,7 +98,7 @@ export default function MegaMediaHub() {
                     </div>
 
                     <ChevronRight className={`w-4 h-4 shrink-0 transition-transform duration-300 relative z-10 ${
-                      isSelected ? "translate-x-1 text-white" : "text-gray-300 group-hover:text-[#D80621] group-hover:translate-x-1"
+                      isSelected ? "translate-x-1 text-white" : "text-[#cccccc] group-hover:text-[#D80621] group-hover:translate-x-1"
                     }`} />
                   </button>
                 );
@@ -107,11 +107,11 @@ export default function MegaMediaHub() {
           </div>
 
           {/* Large Scale Simulation Broadcast Viewport (7 Columns) */}
-          <div className="lg:col-span-7 bg-white border border-gray-200 p-4 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between min-h-[540px]">
+          <div className="lg:col-span-7 bg-white border border-[#cccccc] p-4 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between min-h-[540px]">
             <div className="space-y-6">
               
               {/* Main Embed Display Window Box */}
-              <div className="relative w-full aspect-video bg-black border border-gray-200 overflow-hidden rounded-lg group shadow-inner">
+              <div className="relative w-full aspect-video bg-[#ffffff] border border-[#cccccc] overflow-hidden rounded-lg group shadow-inner">
                 <iframe
                   key={activeFeed.id}
                   src={activeFeed.embedUrl}
@@ -124,7 +124,7 @@ export default function MegaMediaHub() {
                 {/* Technical Raster Overlay Layer */}
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.15)_50%)] bg-[length:100%_4px] pointer-events-none opacity-30" />
                 
-                <div className="absolute bottom-3 left-3 bg-black/80 backdrop-blur border border-neutral-800 px-3 py-1 rounded text-[9px] font-mono tracking-widest text-emerald-400 uppercase flex items-center gap-1.5 pointer-events-none">
+                <div className="absolute bottom-3 left-3 bg-[#ffffff] backdrop-blur border border-[#cccccc] px-3 py-1 rounded text-[9px] font-mono tracking-widest text-emerald-400 uppercase flex items-center gap-1.5 pointer-events-none">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   Live Stream Output
                 </div>
@@ -132,9 +132,9 @@ export default function MegaMediaHub() {
 
               {/* Dynamic Information Specifications Abstract */}
               <div className="space-y-4">
-                <div className="border-b border-gray-200 pb-3 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+                <div className="border-b border-[#cccccc] pb-3 flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                   <div className="space-y-0.5">
-                    <span className="text-[10px] font-mono text-gray-400 uppercase tracking-wider block">
+                    <span className="text-[10px] font-mono text-[#cccccc] uppercase tracking-wider block">
                       Authority: {activeFeed.source}
                     </span>
                     <h4 className="text-xl font-black text-[#D80621] uppercase tracking-tight">
@@ -151,28 +151,28 @@ export default function MegaMediaHub() {
                   </a>
                 </div>
 
-                <p className="text-xs md:text-sm text-gray-700 font-mono leading-relaxed bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <p className="text-xs md:text-sm text-[#cccccc] font-mono leading-relaxed bg-[#ffffff] p-4 rounded-lg border border-[#cccccc]">
                   {activeFeed.description}
                 </p>
               </div>
             </div>
 
             {/* Simulated Live Stream Feed Telemetry Data Row */}
-            <div className="grid grid-cols-3 gap-4 border-t border-gray-200 pt-5 mt-6 font-mono text-xs">
+            <div className="grid grid-cols-3 gap-4 border-t border-[#cccccc] pt-5 mt-6 font-mono text-xs">
               <div className="space-y-1">
-                <span className="text-[9px] uppercase tracking-wider text-gray-400 block">Signal Source</span>
-                <span className="font-bold text-black flex items-center gap-1.5 uppercase">
+                <span className="text-[9px] uppercase tracking-wider text-[#cccccc] block">Signal Source</span>
+                <span className="font-bold text-[#D80621] flex items-center gap-1.5 uppercase">
                   <Youtube className="w-3.5 h-3.5 text-[#D80621]" /> HD Network
                 </span>
               </div>
               <div className="space-y-1">
-                <span className="text-[9px] uppercase tracking-wider text-gray-400 block">Protocol Integrity</span>
-                <span className="font-bold text-black flex items-center gap-1.5 uppercase">
+                <span className="text-[9px] uppercase tracking-wider text-[#cccccc] block">Protocol Integrity</span>
+                <span className="font-bold text-[#D80621] flex items-center gap-1.5 uppercase">
                   <Cpu className="w-3.5 h-3.5 text-[#D80621]" /> Matrix Sync
                 </span>
               </div>
               <div className="space-y-1">
-                <span className="text-[9px] uppercase tracking-wider text-gray-400 block">Telemetry State</span>
+                <span className="text-[9px] uppercase tracking-wider text-[#cccccc] block">Telemetry State</span>
                 <span className="font-bold text-emerald-600 animate-pulse flex items-center gap-1">
                   <Activity className="w-3.5 h-3.5" /> 100% Active
                 </span>

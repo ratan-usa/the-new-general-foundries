@@ -12,7 +12,7 @@ import Image from 'next/image';
 // --- DYNAMIC IMPORT FOR 3D VIEWER ---
 const ModelViewer = dynamic(() => import('./ModelViewer'), {
   ssr: false,
-  loading: () => <div className="h-full flex items-center justify-center bg-gray-100 text-xs">Loading 3D Engine...</div>
+  loading: () => <div className="h-full flex items-center justify-center bg-[#ffffff] text-xs">Loading 3D Engine...</div>
 });
 
 // --- 10 CANADA FOUNDRIES CASTING ASSETS (No Precast) ---
@@ -164,9 +164,9 @@ export default function ProductPage() {
   };
 
   return (
-    <div className="bg-gray-50 pb-4">
+    <div className="bg-[#ffffff] pb-4">
       {/* === 3D ASSET SELECTION === */}
-      <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+      <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
         <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
           <Box className="w-5 h-5 text-[#D80621]" /> Select 3D Casting Model
         </h2>
@@ -174,7 +174,7 @@ export default function ProductPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           {/* 1. PREVIEW WINDOW (The 360 Viewer) */}
-          <div className="h-[300px] bg-gray-100 rounded-xl overflow-hidden border border-gray-200 relative">
+          <div className="h-[300px] bg-[#ffffff] rounded-xl overflow-hidden border border-[#cccccc] relative">
             {previewUrl && mediaType === 'MODEL' ? (
               <ModelViewer src={previewUrl} />
             ) : (
@@ -191,10 +191,10 @@ export default function ProductPage() {
               <div
                 key={asset.id}
                 onClick={() => handleSelectAsset(asset)}
-                className={` flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${selectedAssetId === asset.id ? 'border-blue-600 bg-blue-50 ring-1 ring-blue-600' : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50' } `}
+                className={` flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${selectedAssetId === asset.id ? 'border-blue-600 bg-blue-50 ring-1 ring-blue-600' : 'border-[#cccccc] hover:border-[#cccccc] hover:bg-[#ffffff]' } `}
               >
                 {/* Thumbnail */}
-                <div className="w-12 h-12 bg-gray-200 rounded-md overflow-hidden flex-shrink-0">
+                <div className="w-12 h-12 bg-[#ffffff] rounded-md overflow-hidden flex-shrink-0">
                   <Image width={1200} height={600} src={asset.thumbnail} alt={asset.name} className="w-full h-full object-cover" />
                 </div>
 

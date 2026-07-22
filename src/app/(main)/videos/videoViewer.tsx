@@ -16,8 +16,8 @@ import Image from 'next/image';
 const ModelViewer = dynamic(() => import('./ModelViewer'), {
     ssr: false, // Disables server rendering for this component
     loading: () => (
-        <div className="w-full h-full flex flex-col items-center justify-center bg-gray-50 text-[#D80621]">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mb-2"></div>
+        <div className="w-full h-full flex flex-col items-center justify-center bg-[#ffffff] text-[#D80621]">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#cccccc] mb-2"></div>
             <span className="text-xs">Loading 3D Engine...</span>
         </div>
     )
@@ -108,16 +108,16 @@ export default function NewProductPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 pb-20">
+        <div className="min-h-screen bg-[#ffffff] pb-20">
             {/* Header */}
-            <div className="bg-white border-b border-gray-200 sticky top-0 z-30 px-6 py-4 flex items-center justify-between shadow-sm">
+            <div className="bg-white border-b border-[#cccccc] sticky top-0 z-30 px-6 py-4 flex items-center justify-between shadow-sm">
                 <div className="flex items-center gap-4">
-                    <Link href="/private/member/products" className="p-2 hover:bg-gray-100 rounded-full text-[#D80621]">
+                    <Link href="/private/member/products" className="p-2 hover:bg-[#ffffff] rounded-full text-[#D80621]">
                         <ChevronLeft className="w-5 h-5" />
                     </Link>
                     <h1 className="text-xl font-bold text-[#D80621]">Add New Product</h1>
                 </div>
-                <button onClick={handleSubmit(onSubmit)} className="flex items-center gap-2 px-6 py-2 text-sm font-medium text-white bg-[#D80621] rounded-lg hover:bg-red-700">
+                <button onClick={handleSubmit(onSubmit)} className="flex items-center gap-2 px-6 py-2 text-sm font-medium text-white bg-[#D80621] rounded-lg hover:bg-[#D80621]">
                     <Save className="w-4 h-4" /> Save
                 </button>
             </div>
@@ -129,7 +129,7 @@ export default function NewProductPage() {
                     <div className="lg:col-span-2 space-y-6">
 
                         {/* Basic Info */}
-                        <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
                             <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
                                 <FileText className="w-5 h-5 text-[#D80621]" /> Basic Info
                             </h2>
@@ -146,14 +146,14 @@ export default function NewProductPage() {
                         </section>
 
                         {/* === MEDIA UPLOAD AREA === */}
-                        <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
                             <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
                                 <UploadCloud className="w-5 h-5 text-[#D80621]" /> Product Media
                             </h2>
 
                             <div className="space-y-4">
                                 {mediaPreview ? (
-                                    <div className="relative w-full h-[400px] bg-gray-100 rounded-lg border border-gray-200 overflow-hidden group">
+                                    <div className="relative w-full h-[400px] bg-[#ffffff] rounded-lg border border-[#cccccc] overflow-hidden group">
 
                                         {/* A. 3D VIEWER */}
                                         {mediaType === 'MODEL' ? (
@@ -171,7 +171,7 @@ export default function NewProductPage() {
                                         <button
                                             type="button"
                                             onClick={handleRemoveMedia}
-                                            className="absolute top-2 right-2 p-2 bg-red-600 text-white rounded-full hover:bg-red-700 z-10 shadow-lg"
+                                            className="absolute top-2 right-2 p-2 bg-[#D80621] text-white rounded-full hover:bg-[#D80621] z-10 shadow-lg"
                                         >
                                             <Trash2 className="w-4 h-4" />
                                         </button>
@@ -179,7 +179,7 @@ export default function NewProductPage() {
                                 ) : (
                                     <div
                                         onClick={() => fileInputRef.current?.click()}
-                                        className="border-2 border-dashed border-gray-300 rounded-xl h-64 flex flex-col items-center justify-center text-center bg-gray-50 hover:bg-gray-100 transition-colors cursor-pointer group"
+                                        className="border-2 border-dashed border-[#cccccc] rounded-xl h-64 flex flex-col items-center justify-center text-center bg-[#ffffff] hover:bg-[#ffffff] transition-colors cursor-pointer group"
                                     >
                                         <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-4 group-hover:bg-blue-100 transition-colors">
                                             <Box className="w-8 h-8 text-blue-600" />
@@ -205,7 +205,7 @@ export default function NewProductPage() {
 
                     {/* RIGHT COLUMN */}
                     <div className="space-y-6">
-                        <section className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+                        <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
                             <h2 className="text-lg font-bold mb-4">Pricing</h2>
                             <input type="number" {...register("pricing.unitPrice")} className="w-full border px-4 py-2 rounded-lg" placeholder="0.00" />
                         </section>

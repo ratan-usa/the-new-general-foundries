@@ -121,18 +121,18 @@ export default function HowItWorks() {
         </div>
 
         {/* Start/End Caps */}
-        <div className="absolute left-[-20px] bottom-[80px] w-10 h-10 bg-gray-200 rounded-full border-4 border-white"></div>
-        <div className="absolute right-[-20px] bottom-[80px] w-10 h-10 bg-gray-200 rounded-full border-4 border-white"></div>
+        <div className="absolute left-[-20px] bottom-[80px] w-10 h-10 bg-[#ffffff] rounded-full border-4 border-white"></div>
+        <div className="absolute right-[-20px] bottom-[80px] w-10 h-10 bg-[#ffffff] rounded-full border-4 border-white"></div>
 
       </div>
       <div className="lg:hidden space-y-8 relative pl-4">
-        <div className="absolute left-8 top-0 bottom-0 w-1 bg-gray-100 -z-10"></div>
+        <div className="absolute left-8 top-0 bottom-0 w-1 bg-[#ffffff] -z-10"></div>
         {steps.map((step) => (
           <div key={step.id} className="relative pl-12">
-            <div className="absolute left-0 top-0 w-16 h-16 bg-white border-4 border-gray-100 rounded-2xl flex items-center justify-center text-3xl font-black text-[#D80621] shadow-sm z-10">
+            <div className="absolute left-0 top-0 w-16 h-16 bg-white border-4 border-[#cccccc] rounded-2xl flex items-center justify-center text-3xl font-black text-[#D80621] shadow-sm z-10">
               {step.id}
             </div>
-            <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm">
+            <div className="bg-[#ffffff] p-6 rounded-xl border border-[#cccccc] shadow-sm">
               <h3 className="text-lg font-bold text-[#D80621] mb-2">
                 {step.title}
               </h3>
