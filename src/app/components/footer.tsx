@@ -92,7 +92,7 @@ const Footer = () => {
               </div>
               {/* Category Badge */}
               <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#D80621] bg-white px-3 py-1 rounded-sm shadow-sm">
-                Canada Foundries
+               World Headquarters
               </span>
             </div>
 
@@ -179,7 +179,7 @@ const Footer = () => {
             </div>
             {/* Category Badge */}
             <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#D80621] bg-white px-3 py-1 rounded-sm shadow-sm">
-              Sales Office
+             World Headquarters
             </span>
             {/* Address Details */}
             <div>
