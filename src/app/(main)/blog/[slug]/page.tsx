@@ -85,7 +85,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
 
         {/* Share / Footer of Article */}
-        <div className="mt-12 pt-8 border-t border-[#cccccc] flex justify-between items-center">
+        <div className="mt-12 pt-8 border-t border-[#000000] flex justify-between items-center">
             <p className="text-sm text-[#D80621]">Tags: Foundry, Innovation, Manufacturing</p>
             <button className="flex items-center gap-2 text-sm font-bold text-[#D80621] hover:text-[#D80621]">
                 <Share2 className="w-4 h-4" /> Share Article

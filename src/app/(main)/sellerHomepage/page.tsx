@@ -40,7 +40,7 @@ export default function PartnerProgramPage() {
               <Button className="bg-[#D80621] hover:bg-[#D80621] text-white px-8 py-6 text-lg shadow-lg">
                 Become a Partner
               </Button>
-              <Button variant="outline" className="px-8 py-6 text-lg border-[#cccccc]">
+              <Button variant="outline" className="px-8 py-6 text-lg border-[#000000]">
                 Learn More
               </Button>
             </div>
@@ -109,7 +109,7 @@ export default function PartnerProgramPage() {
         </div>
       </section>
 
-      <section className="py-20 pb-32 bg-[#ffffff] border-t border-[#cccccc]">
+      <section className="py-20 pb-32 bg-[#ffffff] border-t border-[#000000]">
         <div className="max-w-6xl mx-auto px-4 text-center">
 
           <h4 className="text-[#D80621] font-bold text-sm uppercase tracking-wider mb-3">
@@ -126,10 +126,10 @@ export default function PartnerProgramPage() {
 
             <div className="absolute -inset-1 bg-linear-to-r from-red-600 to-red-400 rounded-3xl opacity-20 group-hover:opacity-40 blur-xl transition duration-500"></div>
 
-            <div className="relative bg-[#ffffff] rounded-t-3xl p-[3%] shadow-2xl border-b border-[#cccccc]">
+            <div className="relative bg-[#ffffff] rounded-t-3xl p-[3%] shadow-2xl border-b border-[#000000]">
               <div className="absolute top-3 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#ffffff] rounded-full z-20 shadow-inner"></div>
 
-              <div className="relative bg-white rounded-md overflow-hidden aspect-16/10 border border-[#cccccc]">
+              <div className="relative bg-white rounded-md overflow-hidden aspect-16/10 border border-[#000000]">
                 <Image
                   src="/assets/dashboard-screenshot.jpg"
                   alt="Foundry Management Dashboard"
@@ -145,7 +145,7 @@ export default function PartnerProgramPage() {
               </div>
             </div>
 
-            <div className="relative bg-[#ffffff] h-6 md:h-4 w-full rounded-b-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] mx-auto border-t border-[#cccccc]">
+            <div className="relative bg-[#ffffff] h-6 md:h-4 w-full rounded-b-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] mx-auto border-t border-[#000000]">
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[15%] h-2 bg-[#ffffff] rounded-b-md"></div>
             </div>
 

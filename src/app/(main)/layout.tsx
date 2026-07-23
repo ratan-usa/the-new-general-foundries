@@ -6,6 +6,8 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import TopNavbarr from "../components/top-navbarr";
 import BackgroundMusic from "../components/BackgroundMusic";
+import FixedQuoteBtn from "../components/FixedQuoteBtn";
+import EntrySystem from "../components/EntrySystem";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +40,8 @@ export default function RootLayout({
           <TopNavbar />
         </div>
         <TopNavbarr />
+        <EntrySystem />
+        <FixedQuoteBtn />
         <Navbar />
         {children}
         <Footer />

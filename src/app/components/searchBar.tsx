@@ -28,7 +28,7 @@ const SearchBar = () => {
             <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                     <button
-                        className=" relative h-full shrink-0 pl-3 pr-7 text-xs font-semibold transition-colors duration-200 w-[200px] text-left cursor-pointer focus:outline-none /* === NORMAL STATE === */ bg-white -[#D80621] border-r border-[#CCCCCC] /* === HOVER STATE === */ hover:bg-[#D80621] hover:text-white hover:border-[#D80621] "
+                        className=" relative h-full shrink-0 pl-3 pr-7 text-xs font-semibold transition-colors duration-200 w-[200px] text-left cursor-pointer focus:outline-none /* === NORMAL STATE === */ bg-white -[#D80621] border-r border-[#000000] /* === HOVER STATE === */ hover:bg-[#D80621] hover:text-white hover:border-[#D80621] "
                     >
                         <span className="block w-full truncate">
                             {getSelectedLabel()}
@@ -47,7 +47,7 @@ const SearchBar = () => {
                 {/* Dropdown Content - Square Borders */}
                 <DropdownMenuContent
                     align="start"
-                    className=" w-[200px] max-h-[300px] overflow-y-auto bg-white p-0 shadow-lg border border-[#cccccc] z-[60] rounded-none "
+                    className=" w-[200px] max-h-[300px] overflow-y-auto bg-white p-0 shadow-lg border border-[#000000] z-[60] rounded-none "
                 >
                     {/* "All" Option */}
                     <DropdownMenuItem
@@ -74,7 +74,7 @@ const SearchBar = () => {
             <input
                 type="text"
                 placeholder="Search products..."
-                className="w-full h-full pl-3 pr-4 text-sm text-[#D80621] focus:outline-none placeholder:text-[#cccccc]"
+                className="w-full h-full pl-3 pr-4 text-sm text-[#D80621] focus:outline-none placeholder:text-[#000000]"
             />
 
             {/* === 3. BUTTON === */}

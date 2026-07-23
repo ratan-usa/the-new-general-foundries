@@ -128,7 +128,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
       {/* --- DESKTOP SIDEBAR --- */}
       <aside className="hidden md:flex w-64 flex-col bg-[#ffffff] text-[#D80621] fixed h-full inset-y-0 z-50">
-        <div className="h-16 flex items-center px-6 border-b border-[#cccccc] font-bold text-xl tracking-wider">
+        <div className="h-16 flex items-center px-6 border-b border-[#000000] font-bold text-xl tracking-wider">
           <span className="text-[#D80621]">canada</span>FOUNDRIES
         </div>
 
@@ -137,7 +137,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             const isActive = pathname === item.href;
             return (
               <Link key={item.href} href={item.href}>
-                <span className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${isActive ? 'bg-[#D80621] text-white' : 'text-[#cccccc] hover:text-white hover:bg-[#ffffff]'}`}>
+                <span className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium transition-colors ${isActive ? 'bg-[#D80621] text-white' : 'text-[#000000] hover:text-white hover:bg-[#ffffff]'}`}>
                   <item.icon className="w-4 h-4" />
                   {item.label}
                 </span>
@@ -146,8 +146,8 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           })}
         </nav>
 
-        <div className="p-4 border-t border-[#cccccc]">
-          <div className="bg-[#ffffff] rounded-lg p-3 text-xs text-[#cccccc]">
+        <div className="p-4 border-t border-[#000000]">
+          <div className="bg-[#ffffff] rounded-lg p-3 text-xs text-[#000000]">
             <p className="font-semibold text-white mb-1">Foundry Portal</p>
             <p>v1.2.0 • Enterprise</p>
           </div>
@@ -158,7 +158,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       <div className="flex-1 md:ml-64 flex flex-col min-h-screen">
 
         {/* TOP HEADER */}
-        <header className="h-16 bg-white border-b border-[#cccccc] flex items-center justify-between px-4 sm:px-6 sticky top-0 z-40">
+        <header className="h-16 bg-white border-b border-[#000000] flex items-center justify-between px-4 sm:px-6 sticky top-0 z-40">
 
           {/* Mobile Menu Trigger */}
           <Sheet>
@@ -190,7 +190,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="relative h-9 w-9 rounded-full">
-                  <Avatar className="h-9 w-9 border border-[#cccccc]">
+                  <Avatar className="h-9 w-9 border border-[#000000]">
                     {/* Add User Image URL if you have it in state */}
                     <AvatarImage src="" alt={user.name} />
                     <AvatarFallback className="bg-[#ffffff] text-[#D80621] font-semibold">

@@ -91,7 +91,7 @@ export default function ProductVideoShowcase() {
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
                                     {/* LEFT: Video Section */}
-                                    <div className="relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl border border-[#cccccc] -[#D80621]">
+                                    <div className="relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl border border-[#000000] -[#D80621]">
                                         <video
                                             className="w-full h-full object-cover"
                                             controls
@@ -141,14 +141,14 @@ export default function ProductVideoShowcase() {
                     {/* Arrows */}
                     <button
                         onClick={prevSlide}
-                        className="hidden md:flex absolute top-1/2 -left-4 lg:-left-12 -translate-y-1/2 w-12 h-12 bg-white text-[#D80621] rounded-full shadow-lg items-center justify-center hover:bg-[#D80621] hover:text-white transition-all z-20 border border-[#cccccc]"
+                        className="hidden md:flex absolute top-1/2 -left-4 lg:-left-12 -translate-y-1/2 w-12 h-12 bg-white text-[#D80621] rounded-full shadow-lg items-center justify-center hover:bg-[#D80621] hover:text-white transition-all z-20 border border-[#000000]"
                     >
                         <ChevronLeft className="w-6 h-6" />
                     </button>
 
                     <button
                         onClick={nextSlide}
-                        className="hidden md:flex absolute top-1/2 -right-4 lg:-right-12 -translate-y-1/2 w-12 h-12 bg-white text-[#D80621] rounded-full shadow-lg items-center justify-center hover:bg-[#D80621] hover:text-white transition-all z-20 border border-[#cccccc]"
+                        className="hidden md:flex absolute top-1/2 -right-4 lg:-right-12 -translate-y-1/2 w-12 h-12 bg-white text-[#D80621] rounded-full shadow-lg items-center justify-center hover:bg-[#D80621] hover:text-white transition-all z-20 border border-[#000000]"
                     >
                         <ChevronRight className="w-6 h-6" />
                     </button>

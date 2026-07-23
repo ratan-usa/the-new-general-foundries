@@ -60,7 +60,7 @@ export default function CanadaFoundationPage() {
       </section>
 
       {/* === IMPACT COUNTER === */}
-      <section className="bg-white border-b border-[#cccccc] relative -mt-10 z-20 mx-4 md:mx-auto max-w-7xl rounded-xl shadow-xl overflow-hidden">
+      <section className="bg-white border-b border-[#000000] relative -mt-10 z-20 mx-4 md:mx-auto max-w-7xl rounded-xl shadow-xl overflow-hidden">
         <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-100">
           {IMPACT_STATS.map((stat, idx) => (
             <div key={idx} className="p-8 text-center bg-white group hover:bg-[#ffffff] transition-colors">
@@ -86,7 +86,7 @@ export default function CanadaFoundationPage() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {PILLARS.map((pillar, idx) => (
-            <div key={idx} className="bg-white p-8 rounded-2xl border border-[#cccccc] hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+            <div key={idx} className="bg-white p-8 rounded-2xl border border-[#000000] hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
               <div className={`w-14 h-14 rounded-full flex items-center justify-center ${pillar.color} mb-6`}>
                 <pillar.icon className="w-7 h-7" />
               </div>
@@ -121,7 +121,7 @@ export default function CanadaFoundationPage() {
                 </div>
               </div>
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl border border-[#cccccc] hidden md:block">
+              <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl border border-[#000000] hidden md:block">
                 <div className="flex items-center gap-3">
                   <div className="bg-yellow-100 p-2 rounded-full">
                     <Calendar className="w-5 h-5 text-yellow-700" />

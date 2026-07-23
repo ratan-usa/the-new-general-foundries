@@ -59,7 +59,7 @@ export default function SourcingRequest() {
                                 <Input
                                     type="text"
                                     placeholder="Product Name"
-                                    className="bg-white border-[#cccccc] h-12"
+                                    className="bg-white border-[#000000] h-12"
                                 />
                             </div>
 
@@ -68,11 +68,11 @@ export default function SourcingRequest() {
                                 <Input
                                     type="number"
                                     placeholder="Purchase Quantity"
-                                    className="bg-white border-[#cccccc] h-12"
+                                    className="bg-white border-[#000000] h-12"
                                 />
 
                                 <Select>
-                                    <SelectTrigger className="h-12 border-[#cccccc] text-[#D80621]">
+                                    <SelectTrigger className="h-12 border-[#000000] text-[#D80621]">
                                         <SelectValue placeholder="Unit/Sets" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -88,7 +88,7 @@ export default function SourcingRequest() {
                             <div>
                                 <Textarea
                                     placeholder="Please describe your specific sourcing requirements for product attributes, desired quantity, and any additional services you expect from suppliers"
-                                    className="bg-white border-[#cccccc] min-h-[120px] resize-none"
+                                    className="bg-white border-[#000000] min-h-[120px] resize-none"
                                 />
                             </div>
 
@@ -120,7 +120,7 @@ export default function SourcingRequest() {
                             {benefits.map((item, index) => (
                                 <li key={index} className="flex items-start gap-3">
                                     <CheckCircle2 className="w-6 h-6 text-white shrink-0 mt-0.5" />
-                                    <span className="text-[#cccccc] text-base leading-relaxed">
+                                    <span className="text-[#000000] text-base leading-relaxed">
                                         {item}
                                     </span>
                                 </li>

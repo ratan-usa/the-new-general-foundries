@@ -109,7 +109,7 @@ export default function InventoryPage() {
                       </TableCell>
                       <TableCell>{product.id.substring(0, 8)}...</TableCell>
                       <TableCell>
-                        <span className={`px-2 py-1 rounded-full text-xs font-bold ${ product.status === 'PUBLISHED' ? 'bg-green-100 text-green-700' : product.status === 'DRAFT' ? 'bg-[#ffffff] text-[#cccccc]' : 'bg-[#D80621] text-[#D80621]' }`}>
+                        <span className={`px-2 py-1 rounded-full text-xs font-bold ${ product.status === 'PUBLISHED' ? 'bg-green-100 text-green-700' : product.status === 'DRAFT' ? 'bg-[#ffffff] text-[#000000]' : 'bg-[#D80621] text-[#D80621]' }`}>
                             {product.status || 'DRAFT'}
                         </span>
                       </TableCell>

@@ -14,9 +14,9 @@ const regions = [
   // Priority 3: Quebec Operations
   { name: "Quebec", capital: "Quebec City", x: 780, y: 660, color: "#D80621", isTerritory: false },
  
-  { name: "Yukon", capital: "Whitehorse", x: 140, y: 250, color: "#cccccc", isTerritory: true },
-  { name: "Northwest Territories", capital: "Yellowknife", x: 300, y: 300, color: "#cccccc", isTerritory: true },
-  { name: "Nunavut", capital: "Iqaluit", x: 620, y: 280, color: "#cccccc", isTerritory: true },
+  { name: "Yukon", capital: "Whitehorse", x: 140, y: 250, color: "#000000", isTerritory: true },
+  { name: "Northwest Territories", capital: "Yellowknife", x: 300, y: 300, color: "#000000", isTerritory: true },
+  { name: "Nunavut", capital: "Iqaluit", x: 620, y: 280, color: "#000000", isTerritory: true },
   { name: "New Brunswick", capital: "Fredericton", x: 885, y: 740, color: "#D80621", isTerritory: false },
   { name: "Nova Scotia", capital: "Halifax", x: 925, y: 775, color: "#D80621", isTerritory: false },
   { name: "Prince Edward Island", capital: "Charlottetown", x: 910, y: 730, color: "#D80621", isTerritory: false },
@@ -319,23 +319,23 @@ export default function CanadaFoundriesMap() {
         </div>
 
         {/* Combined Matrix Viewport Panel */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-white border border-[#cccccc] rounded-xl overflow-hidden p-3 lg:p-6 shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-white border border-[#000000] rounded-xl overflow-hidden p-3 lg:p-6 shadow-sm">
           
           {/* Interactive Map Viewport */}
-          <div className="lg:col-span-8 relative rounded-lg border border-[#cccccc] bg-white overflow-hidden group">
+          <div className="lg:col-span-8 relative rounded-lg border border-[#000000] bg-white overflow-hidden group">
             <canvas ref={canvasRef} className="w-full h-[600px] block cursor-crosshair" />
             
-            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur border border-[#cccccc] px-3 py-1.5 rounded text-[10px] font-mono tracking-widest uppercase text-[#D80621] font-bold">
+            <div className="absolute top-4 left-4 bg-white/90 backdrop-blur border border-[#000000] px-3 py-1.5 rounded text-[10px] font-mono tracking-widest uppercase text-[#D80621] font-bold">
               Active Foundry Nodes: <span>{regions.length}</span>
             </div>
           </div>
 
           {/* Real-time Telemetry Control Window */}
-          <div className="lg:col-span-4 flex flex-col justify-between space-y-6 bg-white border border-[#cccccc] p-6 rounded-lg shadow-sm">
+          <div className="lg:col-span-4 flex flex-col justify-between space-y-6 bg-white border border-[#000000] p-6 rounded-lg shadow-sm">
             
             <div className="space-y-6">
-              <div className="border-b border-[#cccccc] pb-4">
-                <span className="text-[10px] font-mono text-[#cccccc] uppercase tracking-widest block mb-1">
+              <div className="border-b border-[#000000] pb-4">
+                <span className="text-[10px] font-mono text-[#000000] uppercase tracking-widest block mb-1">
                   Selected Node Telemetry
                 </span>
                 <h2 className="text-3xl font-black tracking-tight text-[#D80621] uppercase">
@@ -344,8 +344,8 @@ export default function CanadaFoundriesMap() {
               </div>
 
               <div className="grid grid-cols-2 gap-4 font-mono">
-                <div className="bg-white p-3 rounded border border-[#cccccc]">
-                  <div className="flex items-center gap-1.5 text-[#cccccc] text-[10px] uppercase mb-1">
+                <div className="bg-white p-3 rounded border border-[#000000]">
+                  <div className="flex items-center gap-1.5 text-[#000000] text-[10px] uppercase mb-1">
                     <MapPin className="w-3 h-3 text-[#D80621]" />
                     <span>Capital Hub</span>
                   </div>
@@ -354,8 +354,8 @@ export default function CanadaFoundriesMap() {
                   </span>
                 </div>
 
-                <div className="bg-white p-3 rounded border border-[#cccccc]">
-                  <div className="flex items-center gap-1.5 text-[#cccccc] text-[10px] uppercase mb-1">
+                <div className="bg-white p-3 rounded border border-[#000000]">
+                  <div className="flex items-center gap-1.5 text-[#000000] text-[10px] uppercase mb-1">
                     <Thermometer className="w-3 h-3 text-[#D80621]" />
                     <span>Classification</span>
                   </div>
@@ -366,10 +366,10 @@ export default function CanadaFoundriesMap() {
               </div>
 
               <div className="space-y-3 font-mono text-xs">
-                <span className="text-[10px] text-[#cccccc] uppercase tracking-wider block">Solidification Structural Vector</span>
-                <div className="space-y-2 bg-white p-3 rounded border border-[#cccccc]">
+                <span className="text-[10px] text-[#000000] uppercase tracking-wider block">Solidification Structural Vector</span>
+                <div className="space-y-2 bg-white p-3 rounded border border-[#000000]">
                   <div className="flex justify-between text-[11px]">
-                    <span className="text-[#cccccc]">Alloy Density Factor</span>
+                    <span className="text-[#000000]">Alloy Density Factor</span>
                     <span className="text-[#D80621] font-bold">98.42%</span>
                   </div>
                   <div className="w-full bg-[#ffffff] h-2 rounded-full overflow-hidden">
@@ -380,7 +380,7 @@ export default function CanadaFoundriesMap() {
             </div>
 
             <div className="space-y-3">
-              <span className="text-[10px] font-mono text-[#cccccc] uppercase tracking-wider block">
+              <span className="text-[10px] font-mono text-[#000000] uppercase tracking-wider block">
                 Directory Quick Access Matrix
               </span>
               <div className="grid grid-cols-3 gap-1.5">
@@ -391,7 +391,7 @@ export default function CanadaFoundriesMap() {
                     className={`py-2 px-2 text-[10px] font-mono uppercase rounded border transition-all text-center tracking-tighter truncate ${
                       selectedRegion.name === r.name
                         ? "bg-[#D80621] text-white border-[#D80621] font-bold"
-                        : "bg-white text-[#D80621] border-[#cccccc] hover:border-[#D80621] hover:text-[#D80621]"
+                        : "bg-white text-[#D80621] border-[#000000] hover:border-[#D80621] hover:text-[#D80621]"
                     }`}
                   >
                     {r.name.substring(0, 8)}..

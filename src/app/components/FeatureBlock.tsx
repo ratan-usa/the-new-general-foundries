@@ -34,7 +34,7 @@ export function FeatureBlockItem({ data, imageOnLeft = false, className }: Featu
               {data.headline}
             </h2>
             {/* Mobile: text-sm | Desktop: text-base */}
-            <p className='mt-3 md:mt-4 text-sm sm:text-base text-[#cccccc]'>
+            <p className='mt-3 md:mt-4 text-sm sm:text-base text-[#000000]'>
               {data.tagline}
             </p>
           </div>
@@ -57,7 +57,7 @@ export function FeatureBlockItem({ data, imageOnLeft = false, className }: Featu
                     {item.title}
                   </h3>
                   {/* Mobile: text-sm (14px) */}
-                  <p className='mt-1 text-sm text-[#cccccc] leading-relaxed'>
+                  <p className='mt-1 text-sm text-[#000000] leading-relaxed'>
                     {item.description}
                   </p>
                 </div>

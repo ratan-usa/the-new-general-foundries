@@ -60,7 +60,7 @@ export default function InfiniteLiveFeed() {
         {items.map((item) => (
           <div 
             key={item.id} 
-            className=" relative shrink-0 w-[280px] h-[180px] bg-[#ffffff] rounded-lg overflow-hidden border border-[#cccccc] hover:border-[#D80621] group cursor-pointer transition-all "
+            className=" relative shrink-0 w-[280px] h-[180px] bg-[#ffffff] rounded-lg overflow-hidden border border-[#000000] hover:border-[#D80621] group cursor-pointer transition-all "
           >
             {/* === VIDEO LOGIC === */}
             <video

@@ -64,7 +64,7 @@ export default function CustomProjectsPage() {
           </div>
 
           {/* Right: Form */}
-          <div className="bg-[#ffffff] p-8 rounded-2xl border border-[#cccccc] shadow-sm">
+          <div className="bg-[#ffffff] p-8 rounded-2xl border border-[#000000] shadow-sm">
             <h3 className="text-xl font-bold mb-6">Start Your Custom Project</h3>
             <form className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
@@ -88,7 +88,7 @@ export default function CustomProjectsPage() {
                     <Textarea placeholder="Describe dimensions, material requirements, and estimated quantity..." className="h-32" />
                 </div>
 
-                <div className="border-2 border-dashed border-[#cccccc] rounded-lg p-6 text-center hover:bg-[#ffffff] cursor-pointer transition-colors">
+                <div className="border-2 border-dashed border-[#000000] rounded-lg p-6 text-center hover:bg-[#ffffff] cursor-pointer transition-colors">
                     <UploadCloud className="w-8 h-8 text-[#D80621] mx-auto mb-2" />
                     <p className="text-sm text-[#D80621]">Upload Blueprints / CAD Files</p>
                 </div>

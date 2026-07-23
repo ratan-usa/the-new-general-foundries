@@ -16,8 +16,8 @@ const topMenuItems = [
 
 const TopNavbarr = () => {
   return (
-    <div className='w-full border-t border-[#cccccc]'>
-      <nav className="bg-[#D80621] text-[#cccccc] w-full shadow-md">
+    <div className='w-full border-t border-[#000000]'>
+      <nav className="bg-[#D80621] text-[#000000] w-full shadow-md">
 
         <div className="w-full px-2 sm:px-6 lg:px-10">
 

@@ -151,7 +151,7 @@ export function DesignCapabilities() {
             return (
               <div
                 key={item.id}
-                className="group flex flex-row border border-[#cccccc] shadow-xl overflow-hidden hover:shadow-none transition-shadow duration-300 min-h-[240px] bg-white"
+                className="group flex flex-row border border-[#000000] shadow-xl overflow-hidden hover:shadow-none transition-shadow duration-300 min-h-[240px] bg-white"
               >
                 {/* Left Side: Image (Approx 35% width) */}
                 <div className="relative w-[35%] min-w-[35%] bg-[#ffffff]">

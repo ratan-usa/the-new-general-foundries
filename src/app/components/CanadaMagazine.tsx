@@ -96,7 +96,7 @@ export default function canadaMagazine() {
   const currentContent = MAGAZINE_DATA[activeTab] || MAGAZINE_DATA["ductile-iron"];
 
   return (
-    <section className="bg-[#D80621] text-white py-10 font-sans border-t border-[#cccccc]">
+    <section className="bg-[#D80621] text-white py-10 font-sans border-t border-[#000000]">
       {/* Absolute strict fluid full width padding */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
 

@@ -80,7 +80,7 @@ export default function SettingsPage() {
             <CardContent className="space-y-6">
 
               <div className="flex items-center gap-6">
-                <Avatar className="h-20 w-20 border-2 border-[#cccccc]">
+                <Avatar className="h-20 w-20 border-2 border-[#000000]">
                   <AvatarImage src="/placeholder-user.jpg" />
                   <AvatarFallback className="text-lg bg-[#ffffff] text-[#D80621]">RP</AvatarFallback>
                 </Avatar>

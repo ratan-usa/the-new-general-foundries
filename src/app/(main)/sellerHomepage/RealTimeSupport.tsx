@@ -5,7 +5,7 @@ import { MessageSquareText } from 'lucide-react';
 
 export default function RealTimeSupport() {
   return (
-    <section className="py-24 bg-white border-t border-[#cccccc]">
+    <section className="py-24 bg-white border-t border-[#000000]">
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
@@ -47,7 +47,7 @@ export default function RealTimeSupport() {
 
             {/* Header with Icon */}
             <div className="flex items-start gap-4 mb-2">
-              <div className="p-3 bg-[#ffffff] rounded-lg border border-[#cccccc]">
+              <div className="p-3 bg-[#ffffff] rounded-lg border border-[#000000]">
                 <MessageSquareText className="w-8 h-8 text-[#D80621]" strokeWidth={1.5} />
               </div>
               <div>

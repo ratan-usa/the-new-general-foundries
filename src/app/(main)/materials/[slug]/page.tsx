@@ -61,11 +61,11 @@ export default async function MaterialPage({ params }: PageProps) {
             </ul>
           </div>
 
-          <div className="bg-[#ffffff] p-8 rounded-2xl border border-[#cccccc]">
+          <div className="bg-[#ffffff] p-8 rounded-2xl border border-[#000000]">
             <h2 className="text-2xl font-bold text-xl text-[#D80621] mb-6">Common Applications</h2>
             <div className="flex flex-wrap gap-3">
               {data.applications.map((app: string, i: number) => (
-                <span key={i} className="bg-white px-4 text-sm py-2 rounded-full border border-[#cccccc] text-[#D80621] shadow-sm">
+                <span key={i} className="bg-white px-4 text-sm py-2 rounded-full border border-[#000000] text-[#D80621] shadow-sm">
                   {app}
                 </span>
               ))}

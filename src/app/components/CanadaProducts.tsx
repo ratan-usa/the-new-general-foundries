@@ -26,7 +26,7 @@ export const CanadaProducts = () => {
       <div className="max-w-7xl mx-auto space-y-12">
         
         {/* Top Typography Branding Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#cccccc] pb-8 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#000000] pb-8 gap-6">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -77,14 +77,14 @@ export const CanadaProducts = () => {
                     className={`w-full text-left p-5 rounded-xl border transition-all duration-300 flex items-center justify-between group relative overflow-hidden ${
                       isSelected
                         ? "bg-[#D80621] border-[#D80621] text-white shadow-md"
-                        : "bg-white border-[#cccccc] text-[#D80621] hover:border-[#D80621]"
+                        : "bg-white border-[#000000] text-[#D80621] hover:border-[#D80621]"
                     }`}
                   >
                     <div className="flex items-center gap-4 max-w-[85%] relative z-10">
                       <div className={`p-2.5 rounded-lg border transition-colors ${
                         isSelected 
                           ? "bg-white/10 border-white/20 text-white" 
-                          : "bg-white border-[#cccccc] text-[#D80621] group-hover:bg-[#D80621]/5"
+                          : "bg-white border-[#000000] text-[#D80621] group-hover:bg-[#D80621]/5"
                       }`}>
                         <IconComponent className="w-5 h-5" />
                       </div>
@@ -101,7 +101,7 @@ export const CanadaProducts = () => {
                     </div>
 
                     <ArrowRight className={`w-4 h-4 shrink-0 transition-transform duration-300 relative z-10 ${
-                      isSelected ? "translate-x-1 text-white" : "text-[#cccccc] group-hover:text-[#D80621] group-hover:translate-x-1"
+                      isSelected ? "translate-x-1 text-white" : "text-[#000000] group-hover:text-[#D80621] group-hover:translate-x-1"
                     }`} />
                   </motion.button>
                 );
@@ -110,11 +110,11 @@ export const CanadaProducts = () => {
           </div>
 
           {/* Right Live Visual Telemetry Monitor Panel (7 Cols) */}
-          <div className="lg:col-span-7 bg-white border border-[#cccccc] p-4 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between min-h-[520px]">
+          <div className="lg:col-span-7 bg-white border border-[#000000] p-4 lg:p-6 rounded-xl shadow-sm flex flex-col justify-between min-h-[520px]">
             <div className="space-y-6">
               
               {/* Active Media Preview Window Box Container */}
-              <div className="relative rounded-lg border border-[#cccccc] bg-[#ffffff] overflow-hidden h-72 w-full group">
+              <div className="relative rounded-lg border border-[#000000] bg-[#ffffff] overflow-hidden h-72 w-full group">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeSpec.slug}
@@ -150,7 +150,7 @@ export const CanadaProducts = () => {
                 <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.2)_50%)] bg-[length:100%_4px] pointer-events-none opacity-40" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
 
-                <div className="absolute bottom-3 left-3 bg-[#ffffff] backdrop-blur border border-[#cccccc] px-3 py-1 rounded text-[9px] font-mono tracking-widest text-emerald-400 uppercase flex items-center gap-1.5">
+                <div className="absolute bottom-3 left-3 bg-[#ffffff] backdrop-blur border border-[#000000] px-3 py-1 rounded text-[9px] font-mono tracking-widest text-emerald-400 uppercase flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   Live Video Render Matrix
                 </div>
@@ -158,7 +158,7 @@ export const CanadaProducts = () => {
 
               {/* Dynamic Information Block Readings */}
               <div className="space-y-4">
-                <div className="border-b border-[#cccccc] pb-3 flex items-start justify-between gap-4">
+                <div className="border-b border-[#000000] pb-3 flex items-start justify-between gap-4">
                   <div>
                     <span className="text-[10px] font-mono text-[#666666] uppercase tracking-wider block">
                       Active Parameter Diagnostics
@@ -175,14 +175,14 @@ export const CanadaProducts = () => {
                   </Link>
                 </div>
 
-                <p className="text-sm text-[#cccccc] font-mono leading-relaxed bg-[#ffffff] p-4 rounded-lg border border-[#cccccc]">
+                <p className="text-sm text-[#000000] font-mono leading-relaxed bg-[#ffffff] p-4 rounded-lg border border-[#000000]">
                   {activeSpec.description}
                 </p>
               </div>
             </div>
 
             {/* Custom Technical Status Telemetry Metrics Box */}
-            <div className="grid grid-cols-3 gap-4 border-t border-[#cccccc] pt-5 mt-6 font-mono text-xs">
+            <div className="grid grid-cols-3 gap-4 border-t border-[#000000] pt-5 mt-6 font-mono text-xs">
               <div className="space-y-1">
                 <span className="text-[9px] uppercase tracking-wider text-[#666666] block">Alloy Target</span>
                 <span className="font-bold text-[#D80621] flex items-center gap-1.5">

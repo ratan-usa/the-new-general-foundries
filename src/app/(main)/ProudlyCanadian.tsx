@@ -19,7 +19,7 @@ export default function ProudlyCanadian() {
             <div className="lg:col-span-7 space-y-6">
               
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 bg-[#D80621] border border-[#cccccc] px-3 py-1 rounded-full text-xs font-mono font-bold tracking-widest text-[#ffffff] uppercase">
+              <div className="inline-flex items-center gap-2 bg-[#D80621] border border-[#000000] px-3 py-1 rounded-full text-xs font-mono font-bold tracking-widest text-[#ffffff] uppercase">
                 <Heart className="w-3.5 h-3.5 fill-[#ffffff]" />
                 <span>Coast to Coast Quality</span>
               </div>
@@ -28,21 +28,21 @@ export default function ProudlyCanadian() {
               <div className="space-y-2">
                 <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight leading-tight text-[#ffffff]">
                   PROUDLY CANADIAN <br />
-                  <span className="text-[#cccccc]">BUILT TO ENDURE</span>
+                  <span className="text-[#000000]">BUILT TO ENDURE</span>
                 </h2>
-                <p className="text-sm sm:text-base text-[#cccccc] font-medium leading-relaxed max-w-xl pt-2">
+                <p className="text-sm sm:text-base text-[#000000] font-medium leading-relaxed max-w-xl pt-2">
                   Forged for harsh winters, heavy municipal loads, and extreme thermal shifts. Every casting carrying the Canada Foundries mark is engineered locally to support Canada’s growing infrastructure.
                 </p>
               </div>
 
               {/* National Values Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#cccccc] font-mono text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#000000] font-mono text-xs">
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5 text-[#ffffff]">
                     <ShieldCheck className="w-4 h-4" />
                     <span className="font-bold uppercase">OPSD & CSA</span>
                   </div>
-                  <p className="text-[11px] text-[#cccccc] font-medium">Exceeds national municipal standards.</p>
+                  <p className="text-[11px] text-[#000000] font-medium">Exceeds national municipal standards.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -50,7 +50,7 @@ export default function ProudlyCanadian() {
                     <Compass className="w-4 h-4" />
                     <span className="font-bold uppercase">13 Regions</span>
                   </div>
-                  <p className="text-[11px] text-[#cccccc] font-medium">Serving all provinces & territories.</p>
+                  <p className="text-[11px] text-[#000000] font-medium">Serving all provinces & territories.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -58,7 +58,7 @@ export default function ProudlyCanadian() {
                     <Award className="w-4 h-4" />
                     <span className="font-bold uppercase">100% Recyclable</span>
                   </div>
-                  <p className="text-[11px] text-[#cccccc] font-medium">Sustainable local iron casting.</p>
+                  <p className="text-[11px] text-[#000000] font-medium">Sustainable local iron casting.</p>
                 </div>
               </div>
 
@@ -74,7 +74,7 @@ export default function ProudlyCanadian() {
                 className="relative w-full max-w-md aspect-[4/3] rounded-xl overflow-hidden border border-[#ffffff] bg-[#ffffff] p-3 group"
               >
                 {/* Flag Image Viewport */}
-                <div className="relative w-full h-full rounded-lg overflow-hidden border border-[#cccccc] bg-[#cccccc]">
+                <div className="relative w-full h-full rounded-lg overflow-hidden border border-[#000000] bg-[#000000]">
                   <Image
                     src="/assets/canada.png"
                     alt="Canadian Flag - Canada Foundries Heritage"
@@ -86,12 +86,12 @@ export default function ProudlyCanadian() {
                 </div>
 
                 {/* Floating Authenticity Tag */}
-                <div className="absolute bottom-6 left-6 right-6 bg-[#ffffff] border border-[#cccccc] p-3 rounded-lg flex items-center justify-between text-xs font-mono">
+                <div className="absolute bottom-6 left-6 right-6 bg-[#ffffff] border border-[#000000] p-3 rounded-lg flex items-center justify-between text-xs font-mono">
                   <div className="flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-[#D80621]" />
                     <span className="font-bold text-[#D80621] tracking-wider uppercase">Authentic Canadian Grade</span>
                   </div>
-                  <span className="text-[10px] text-[#cccccc] font-bold">EST. CANADA</span>
+                  <span className="text-[10px] text-[#000000] font-bold">EST. CANADA</span>
                 </div>
 
                 {/* Corner Accents */}

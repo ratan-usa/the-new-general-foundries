@@ -30,7 +30,7 @@ const BusinessSolutions = () => {
 
     useEffect(() => {
         const fullText = POPULAR_METALS[metalIndex];
-        
+
         const handleType = () => {
             if (!isDeleting) {
                 // Typing out letters
@@ -39,7 +39,7 @@ const BusinessSolutions = () => {
 
                 if (currentSubText === fullText) {
                     // Pause at full word before starting to delete
-                    setTypingSpeed(2000); 
+                    setTypingSpeed(2000);
                     setIsDeleting(true);
                 }
             } else {
@@ -63,17 +63,17 @@ const BusinessSolutions = () => {
     return (
         <section className="py-2 bg-white">
             {/* Main World of Metals Heading */}
-            {/* <h2 className={` text-[60px] lg:text-[90px] text-center mx-auto leading-none bg-[linear-gradient(to_bottom,#D80621_44%,#ffffff_44%,#ffffff_46%,#c0c0c0_46%)] bg-clip-text text-transparent ${apricotsFont.className} `}>
+            {/* <h2 className={` text-[60px] lg:text-[90px] text-center mx-auto leading-none bg-[linear-gradient(to_bottom,#D80621_44%,#ffffff_44%,#ffffff_46%,#ffffff_46%)] bg-clip-text text-transparent ${apricotsFont.className} `}>
                 World of Metals
             </h2> */}
 
             {/* Dynamic Typewriter Showcase Block */}
             <div className="text-left px-10 mb-12">
                 <p className="text-7xl md:text-5xl font-sans uppercase tracking-[0.1em] text-[#D80621] font-bold inline-block">
-                  All Metals Popular:{" "}
-                  <span className="text-[#D80621] border-r-2 border-[#D80621] pr-1 animate-pulse font-black">
-                     {currentSubText}
-                  </span>
+                    All Metals Popular:{" "}
+                    <span className="text-[#D80621] border-r-2 border-[#D80621] pr-1 animate-pulse font-black">
+                        {currentSubText}
+                    </span>
                 </p>
             </div>
 

@@ -66,10 +66,10 @@ export default function FooterHero({
                         </div>
 
                         {/* RIGHT COLUMN: Sidebar / Product Highlight */}
-                        <div className="lg:w-5/12 bg-[#ffffff] p-8 lg:p-12 border-t lg:border-t-0 lg:border-l border-[#cccccc] relative">
+                        <div className="lg:w-5/12 bg-[#ffffff] p-8 lg:p-12 border-t lg:border-t-0 lg:border-l border-[#000000] relative">
 
                             {/* Decorative Background Icon */}
-                            <Settings className="absolute bottom-[-20px] right-[-20px] w-64 h-64 text-[#cccccc] animate-spin-slow pointer-events-none" />
+                            <Settings className="absolute bottom-[-20px] right-[-20px] w-64 h-64 text-[#000000] animate-spin-slow pointer-events-none" />
 
                             <div className="relative z-10 flex flex-col h-full space-y-8">
 
@@ -86,7 +86,7 @@ export default function FooterHero({
                                 </p>
 
                                 {/* Product Image Card */}
-                                <div className="bg-white rounded-xl p-6 shadow-sm border border-[#cccccc] flex flex-col items-center text-center space-y-4 transition-transform hover:scale-[1.02] duration-300">
+                                <div className="bg-white rounded-xl p-6 shadow-sm border border-[#000000] flex flex-col items-center text-center space-y-4 transition-transform hover:scale-[1.02] duration-300">
                                     <div className="w-full aspect-[4/3] relative flex items-center justify-center">
                                         <Image
                                             width={1200}

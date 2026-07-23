@@ -59,12 +59,12 @@ export default function OtherMetalsDirectory() {
   const [selectedMetal, setSelectedMetal] = useState<MetalProfile>(OTHER_METALS_DATA[0]);
 
   return (
-    <section className="bg-[#D80621] text-white py-24 font-sans border-t border-[#cccccc]">
+    <section className="bg-[#D80621] text-white py-24 font-sans border-t border-[#000000]">
       {/* Absolute strict fluid bounds requested */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
-        
+
         {/* Section Header */}
-        <div className="border-b border-[#cccccc] pb-10 mb-16">
+        <div className="border-b border-[#000000] pb-10 mb-16">
           <span className="text-xs uppercase tracking-[0.3em] font-black text-[#D80621] block mb-3">
             Secondary & Custom Castings
           </span>
@@ -75,7 +75,7 @@ export default function OtherMetalsDirectory() {
 
         {/* Asymmetrical Layout Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* LEFT INDEX SELECTOR PANEL */}
           <div className="lg:col-span-5 flex flex-col gap-3">
             {OTHER_METALS_DATA.map((metal) => {
@@ -84,28 +84,28 @@ export default function OtherMetalsDirectory() {
                 <button
                   key={metal.id}
                   onClick={() => setSelectedMetal(metal)}
-                  className={` w-full text-left p-5 transition-all duration-300 rounded-xs border flex items-center justify-between group ${isActive ? "bg-[#D80621] border-[#D80621] text-white shadow-xl" : "bg-[#c0c0c0] border-[#cccccc] text-[#D80621] hover:border-[#cccccc] hover:text-[#cccccc]" } `}
+                  className={` w-full text-left p-5 transition-all duration-300 rounded-xs border flex items-center justify-between group ${isActive ? "bg-[#D80621] border-[#D80621] text-white shadow-xl" : "bg-[#ffffff] border-[#000000] text-[#D80621] hover:border-[#000000] hover:text-[#000000]"} `}
                 >
                   <div>
-                    <p className={`text-lg font-bold tracking-tight transition-colors ${isActive ? 'text-[#D80621]' : 'text-[#cccccc] group-hover:text-white'}`}>
+                    <p className={`text-lg font-bold tracking-tight transition-colors ${isActive ? 'text-[#D80621]' : 'text-[#000000] group-hover:text-white'}`}>
                       {metal.name}
                     </p>
                     <p className="text-xs text-[#D80621] mt-0.5 uppercase tracking-wider font-medium">
                       {metal.subtitle}
                     </p>
                   </div>
-                  <ArrowRight className={`w-4 h-4 transition-all duration-300 ${isActive ? 'text-[#D80621] translate-x-1' : 'text-[#D80621] group-hover:text-[#cccccc]'}`} />
+                  <ArrowRight className={`w-4 h-4 transition-all duration-300 ${isActive ? 'text-[#D80621] translate-x-1' : 'text-[#D80621] group-hover:text-[#000000]'}`} />
                 </button>
               );
             })}
           </div>
 
           {/* RIGHT DETAILED SPECTRAL PREVIEW CONTAINER */}
-          <div className="lg:col-span-7 bg-[#D80621] border border-[#cccccc] p-8 md:p-12 rounded-sm relative overflow-hidden min-h-[500px] flex flex-col justify-between shadow-2xl">
-            
+          <div className="lg:col-span-7 bg-[#D80621] border border-[#000000] p-8 md:p-12 rounded-sm relative overflow-hidden min-h-[500px] flex flex-col justify-between shadow-2xl">
+
             {/* Structural Geometry Overlay Accent */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#D80621]/10 to-transparent pointer-events-none" />
-            
+
             <div>
               {/* Active Sheet Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#D80621]/10 border border-[#D80621]/20 rounded-full mb-6">
@@ -119,38 +119,38 @@ export default function OtherMetalsDirectory() {
               <h3 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-2">
                 {selectedMetal.name}
               </h3>
-              <p className="text-sm font-mono text-[#D80621] uppercase tracking-widest border-b border-[#cccccc] pb-6 mb-6">
+              <p className="text-sm font-mono text-white uppercase tracking-widest border-b border-[#000000] pb-6 mb-6">
                 {selectedMetal.subtitle}
               </p>
 
               {/* Description Body */}
-              <p className="text-[#D80621] text-base leading-relaxed mb-8 font-light">
+              <p className="text-white text-base leading-relaxed mb-8 font-light">
                 {selectedMetal.description}
               </p>
             </div>
 
             {/* Technical Analytical Footers */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-[#cccccc] pt-8 mt-auto">
-              
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-[#000000] pt-8 mt-auto">
+
               {/* Chemistry/Structure Element Ratio */}
               <div>
-                <span className="flex items-center gap-1.5 text-xs font-bold text-[#D80621] uppercase tracking-wider mb-3">
-                  <Activity className="w-3.5 h-3.5 text-[#D80621]" /> Elemental Composition
+                <span className="flex items-center gap-1.5 text-xs font-bold text-white uppercase tracking-wider mb-3">
+                  <Activity className="w-3.5 h-3.5 text-white" /> Elemental Composition
                 </span>
-                <div className="font-mono text-sm bg-[#D80621] border border-[#cccccc] p-3 text-white rounded-xs font-semibold">
+                <div className="font-mono text-sm bg-[#000000] border border-[#000000] p-3 text-white rounded-xs font-semibold">
                   {selectedMetal.composition}
                 </div>
               </div>
 
               {/* Core Physical Application Properties */}
               <div>
-                <span className="flex items-center gap-1.5 text-xs font-bold text-[#D80621] uppercase tracking-wider mb-3">
-                  <ShieldAlert className="w-3.5 h-3.5 text-[#D80621]" /> Core Mechanical Traits
+                <span className="flex items-center gap-1.5 text-xs font-bold text-white uppercase tracking-wider mb-3">
+                  <ShieldAlert className="w-3.5 h-3.5 text-white" /> Core Mechanical Traits
                 </span>
                 <ul className="space-y-1.5">
                   {selectedMetal.properties.map((prop, idx) => (
-                    <li key={idx} className="text-xs text-[#D80621] flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-[#D80621] rounded-full flex-shrink-0" />
+                    <li key={idx} className="text-xs text-white flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-white rounded-full flex-shrink-0" />
                       {prop}
                     </li>
                   ))}

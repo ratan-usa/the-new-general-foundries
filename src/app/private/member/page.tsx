@@ -210,7 +210,7 @@ export default function DashboardPage() {
 
 // Helper for status colors
 function StatusBadge({ status }: { status: string }) {
-    let styles = "bg-[#ffffff] text-[#cccccc]";
+    let styles = "bg-[#ffffff] text-[#000000]";
     if (status === 'In Production') styles = "bg-blue-100 text-blue-700 border-blue-200 border";
     if (status === 'Shipped') styles = "bg-yellow-100 text-yellow-700 border-yellow-200 border";
     if (status === 'Delivered') styles = "bg-green-100 text-green-700 border-green-200 border";

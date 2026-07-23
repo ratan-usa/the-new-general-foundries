@@ -60,7 +60,7 @@ export default function OntarioStandardsDashboard() {
       <div className="max-w-7xl mx-auto space-y-8">
         
         {/* Top Minimal Typography Heading Layout */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#cccccc] pb-6 gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between border-b border-[#000000] pb-6 gap-4">
           <div>
             <div className="flex items-center gap-3 text-[11px] font-bold tracking-[0.3em] uppercase text-[#D80621]">
               <Activity className="w-3.5 h-3.5 animate-pulse" />
@@ -76,7 +76,7 @@ export default function OntarioStandardsDashboard() {
         </div>
 
         {/* Combined Matrix Viewport Panel */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-[#ffffff] border border-[#cccccc] rounded-xl overflow-hidden p-3 lg:p-6 shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 bg-[#ffffff] border border-[#000000] rounded-xl overflow-hidden p-3 lg:p-6 shadow-sm">
           
           {/* Navigation Matrix Menu Layout (Left Side) */}
           <div className="lg:col-span-5 flex flex-col space-y-3">
@@ -97,12 +97,12 @@ export default function OntarioStandardsDashboard() {
                     className={`w-full text-left p-4 rounded-lg border transition-all flex items-center justify-between group ${
                       isSelected
                         ? "bg-[#D80621] border-[#D80621] text-[#ffffff]"
-                        : "bg-[#ffffff] border-[#cccccc] text-[#ffffff] hover:border-[#D80621]"
+                        : "bg-[#ffffff] border-[#000000] text-[#ffffff] hover:border-[#D80621]"
                     }`}
                   >
                     <div className="flex items-start gap-3.5 max-w-[90%]">
                       <div className={`p-2 rounded mt-0.5 border ${
-                        isSelected ? "bg-white/10 border-white/20 text-white" : "bg-[#ffffff] border-[#cccccc] text-[#D80621]"
+                        isSelected ? "bg-white/10 border-white/20 text-white" : "bg-[#ffffff] border-[#000000] text-[#D80621]"
                       }`}>
                         <IconComponent className="w-4 h-4" />
                       </div>
@@ -118,7 +118,7 @@ export default function OntarioStandardsDashboard() {
                       </div>
                     </div>
                     <ChevronRight className={`w-4 h-4 shrink-0 transition-transform ${
-                      isSelected ? "translate-x-1 text-white" : "text-[#cccccc] group-hover:text-[#D80621]"
+                      isSelected ? "translate-x-1 text-white" : "text-[#000000] group-hover:text-[#D80621]"
                     }`} />
                   </button>
                 );
@@ -126,8 +126,8 @@ export default function OntarioStandardsDashboard() {
             </div>
 
             {/* Simulated Drawing Engineering Context */}
-            <div className="hidden lg:block bg-[#ffffff] border border-[#cccccc] rounded-lg p-4 mt-auto space-y-3 font-mono">
-              <div className="flex items-center gap-2 text-[10px] text-[#666666] uppercase border-b border-[#cccccc] pb-2">
+            <div className="hidden lg:block bg-[#ffffff] border border-[#000000] rounded-lg p-4 mt-auto space-y-3 font-mono">
+              <div className="flex items-center gap-2 text-[10px] text-[#666666] uppercase border-b border-[#000000] pb-2">
                 <Ruler className="w-3.5 h-3.5 text-[#D80621]" />
                 <span>OPSD Technical Blueprint Matrix</span>
               </div>
@@ -140,10 +140,10 @@ export default function OntarioStandardsDashboard() {
           </div>
 
           {/* Interactive Specification Viewport (Right Side) */}
-          <div className="lg:col-span-7 flex flex-col bg-[#ffffff] border border-[#cccccc] p-6 rounded-lg shadow-sm justify-between min-h-[480px]">
+          <div className="lg:col-span-7 flex flex-col bg-[#ffffff] border border-[#000000] p-6 rounded-lg shadow-sm justify-between min-h-[480px]">
             <div className="space-y-6">
               {/* Header Telemetry Metadata Area */}
-              <div className="border-b border-[#cccccc] pb-4 flex items-start justify-between gap-4">
+              <div className="border-b border-[#000000] pb-4 flex items-start justify-between gap-4">
                 <div className="space-y-1">
                   <span className="text-[10px] font-mono text-[#666666] uppercase tracking-widest block">
                     Active Blueprint Matrix Reference
@@ -173,7 +173,7 @@ export default function OntarioStandardsDashboard() {
                       className={`p-3 rounded border text-xs leading-relaxed transition-all cursor-pointer flex gap-3 ${
                         activeNoteIndex === index
                           ? "bg-[#ffffff] border-[#D80621] shadow-sm"
-                          : "bg-[#ffffff] border-[#cccccc] hover:border-[#999999]"
+                          : "bg-[#ffffff] border-[#000000] hover:border-[#999999]"
                       }`}
                     >
                       <span className={`font-mono font-bold text-[11px] shrink-0 ${
@@ -191,7 +191,7 @@ export default function OntarioStandardsDashboard() {
             </div>
 
             {/* Lower Telemetry Summary Message */}
-            <div className="mt-6 pt-4 border-t border-[#cccccc] flex items-center gap-2.5 text-[10px] font-mono text-[#666666] uppercase">
+            <div className="mt-6 pt-4 border-t border-[#000000] flex items-center gap-2.5 text-[10px] font-mono text-[#666666] uppercase">
               <Info className="w-3.5 h-3.5 text-[#D80621] shrink-0" />
               <span>Click any code clause note row item to cross-reference with production validation.</span>
             </div>

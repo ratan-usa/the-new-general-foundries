@@ -122,14 +122,14 @@ const TopNavbar = () => {
         {/* --- MOBILE MENU DROPDOWN --- */}
         {/* Renders conditionally based on state */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-[#ffffff] border-t border-[#cccccc] absolute w-full left-0 top-9 shadow-xl py-4 px-4 flex flex-col gap-4">
+          <div className="lg:hidden bg-[#ffffff] border-t border-[#000000] absolute w-full left-0 top-9 shadow-xl py-4 px-4 flex flex-col gap-4">
 
             {/* Mobile Links Grid */}
             <div className="grid grid-cols-2 gap-3">
               {topMenuItems.map((item) => (
                 <Link
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className='text-xs text-[#cccccc] hover:text-[#D80621] transition-colors'
+                  className='text-xs text-[#000000] hover:text-[#D80621] transition-colors'
                   key={item.label}
                   href={item.href}
                 >

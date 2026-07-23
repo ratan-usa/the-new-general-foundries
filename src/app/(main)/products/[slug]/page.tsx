@@ -23,7 +23,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
         <div className="min-h-screen bg-white pb-20">
 
             {/* === BREADCRUMB === */}
-            <div className="bg-[#ffffff] border-b border-[#cccccc]">
+            <div className="bg-[#ffffff] border-b border-[#000000]">
                 <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
                     <div className="flex items-center text-sm text-[#D80621]">
                         <Link href="/" className="hover:text-[#D80621]">Home</Link>
@@ -40,7 +40,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
                     {/* LEFT: Image */}
-                    <div className="relative aspect-[4/3] w-full bg-[#ffffff] rounded-2xl overflow-hidden border border-[#cccccc]">
+                    <div className="relative aspect-[4/3] w-full bg-[#ffffff] rounded-2xl overflow-hidden border border-[#000000]">
                         {/* Fallback to a placeholder if image path is broken */}
                         <Image
                             src={product.image || '/assets/placeholder.jpg'}
@@ -83,7 +83,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                             <Button className="bg-[#D80621] hover:bg-[#D80621] text-white px-8 py-6 text-lg">
                                 Request Quote
                             </Button>
-                            <Button variant="outline" className="px-8 py-6 text-lg border-[#cccccc]">
+                            <Button variant="outline" className="px-8 py-6 text-lg border-[#000000]">
                                 <FileText className="w-4 h-4 mr-2" /> Download Brochure
                             </Button>
                         </div>
@@ -92,12 +92,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
             </div>
 
             <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 mt-12">
-                <div className="bg-[#ffffff] rounded-2xl p-8 border border-[#cccccc]">
+                <div className="bg-[#ffffff] rounded-2xl p-8 border border-[#000000]">
                     <h2 className="text-2xl font-bold text-[#D80621] mb-6">Technical Specifications</h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12">
                         {product.specifications?.map((spec: any, index: number) => (
-                            <div key={index} className="flex justify-between py-3 border-b border-[#cccccc]">
+                            <div key={index} className="flex justify-between py-3 border-b border-[#000000]">
                                 <span className="font-medium text-[#D80621]">{spec.label}</span>
                                 <span className="font-bold text-[#D80621]">{spec.value}</span>
                             </div>

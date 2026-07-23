@@ -96,15 +96,15 @@ export default function HistoryPage() {
       </section>
 
       {/* === ERAS / CHAPTERS === */}
-      <section className="py-20 bg-[#ffffff] border-t border-[#cccccc]">
+      <section className="py-20 bg-[#ffffff] border-t border-[#000000]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
           {ERAS.map((era, index) => (
-            <div key={index} className="group bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[#cccccc] hover:shadow-xl hover:border-[#D80621] transition-all duration-300">
+            <div key={index} className="group bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-[#000000] hover:shadow-xl hover:border-[#D80621] transition-all duration-300">
               <div className="flex flex-col md:flex-row gap-8">
 
                 {/* Left: Icon & Date */}
-                <div className="md:w-1/4 flex flex-col items-start border-b md:border-b-0 md:border-r border-[#cccccc] pb-6 md:pb-0 md:pr-6">
+                <div className="md:w-1/4 flex flex-col items-start border-b md:border-b-0 md:border-r border-[#000000] pb-6 md:pb-0 md:pr-6">
                   <div className="w-12 h-12 bg-[#D80621] text-[#D80621] rounded-full flex items-center justify-center mb-4 group-hover:bg-[#D80621] group-hover:text-white transition-colors">
                     <era.icon className="w-6 h-6" />
                   </div>

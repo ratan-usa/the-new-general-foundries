@@ -55,16 +55,16 @@ export default function EntrySystem() {
                             className="w-full max-w-xl bg-[#D80621] border border-white/20 rounded-sm overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.1)]"
                         >
                             <div className="relative w-full h-64   overflow-hidden border-b border-white/20">
-                                <video 
-                                    autoPlay 
-                                    loop 
-                                    muted 
+                                <video
+                                    autoPlay
+                                    loop
+                                    muted
                                     playsInline
                                     className="absolute inset-0 w-full h-full object-cover"
                                 >
                                     <source src="/video/282244_small.mp4" type="video/mp4" />
-                                </video> 
- 
+                                </video>
+
                             </div>
 
                             {/* BOTTOM SECTION: TELEMETRY & CONTROLS */}
@@ -83,12 +83,12 @@ export default function EntrySystem() {
 
                                 {/* PROGRESS SYSTEM */}
                                 <div className="w-full space-y-3">
-                                    <div className="flex justify-between font-mono text-[9px] text-[#c0c0c0] uppercase tracking-widest font-bold">
+                                    <div className="flex justify-between font-mono text-[9px] text-[#ffffff] uppercase tracking-widest font-bold">
                                         <span>Sync Status</span>
                                         <span>{progress}%</span>
                                     </div>
-                                    <div className="h-[2px] w-full bg-[#c0c0c0]/30 relative">
-                                        <motion.div 
+                                    <div className="h-[2px] w-full bg-[#ffffff]/30 relative">
+                                        <motion.div
                                             className="absolute top-0 left-0 h-full bg-white"
                                             initial={{ width: 0 }}
                                             animate={{ width: `${progress}%` }}
@@ -112,8 +112,8 @@ export default function EntrySystem() {
                                         </motion.button>
                                     ) : (
                                         <div className="flex gap-6 opacity-30 grayscale">
-                                            <Hammer className="w-5 h-5 text-[#c0c0c0] animate-bounce" />
-                                            <HardHat className="w-5 h-5 text-[#c0c0c0] animate-bounce delay-150" />
+                                            <Hammer className="w-5 h-5 text-[#ffffff] animate-bounce" />
+                                            <HardHat className="w-5 h-5 text-[#ffffff] animate-bounce delay-150" />
                                         </div>
                                     )}
                                 </div>
@@ -131,7 +131,7 @@ export default function EntrySystem() {
             >
                 <button
                     onClick={toggleMute}
-                    className="p-3 text-white hover:text-[#c0c0c0] transition-colors"
+                    className="p-3 text-white hover:text-[#ffffff] transition-colors"
                 >
                     {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                 </button>

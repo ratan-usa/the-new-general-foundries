@@ -168,7 +168,7 @@ export default function LiveStreamCommandCenter() {
               <h3 className="text-[#D80621] text-xs font-bold uppercase tracking-wider mb-4">Grid Load</h3>
               <div className="flex items-center gap-4">
                 {/* Circular "Gauge" using CSS borders */}
-                <div className="relative w-16 h-16 rounded-full border-4 border-[#cccccc] flex items-center justify-center">
+                <div className="relative w-16 h-16 rounded-full border-4 border-[#000000] flex items-center justify-center">
                   <div className="absolute inset-0 border-4 border-[#D80621] rounded-full border-l-transparent border-b-transparent rotate-45"></div>
                   <span className="text-xs font-bold text-white">78%</span>
                 </div>

@@ -63,12 +63,12 @@ export default function NewTechnologiesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {TECH_HIGHLIGHTS.map((tech) => (
-              <div key={tech.id} className="group relative bg-[#ffffff] border border-[#cccccc] p-8 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-colors duration-500">
+              <div key={tech.id} className="group relative bg-[#ffffff] border border-[#000000] p-8 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-colors duration-500">
                 {/* Hover Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-transparent to-red-500/0 group-hover:from-cyan-500/5 group-hover:to-red-500/5 transition-all duration-500"></div>
                 
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-[#ffffff] rounded-lg flex items-center justify-center mb-6 border border-[#cccccc] group-hover:scale-110 transition-transform group-hover:border-cyan-500 group-hover:text-cyan-400">
+                  <div className="w-14 h-14 bg-[#ffffff] rounded-lg flex items-center justify-center mb-6 border border-[#000000] group-hover:scale-110 transition-transform group-hover:border-cyan-500 group-hover:text-cyan-400">
                     <tech.icon className="w-7 h-7" />
                   </div>
                   
@@ -79,7 +79,7 @@ export default function NewTechnologiesPage() {
                     {tech.description}
                   </p>
 
-                  <ul className="space-y-2 border-t border-[#cccccc] pt-6">
+                  <ul className="space-y-2 border-t border-[#000000] pt-6">
                     {tech.specs.map((spec, i) => (
                       <li key={i} className="flex items-center gap-2 text-sm text-[#D80621]">
                         <div className="w-1.5 h-1.5 bg-cyan-500 rounded-full shadow-[0_0_5px_cyan]"></div>
@@ -95,7 +95,7 @@ export default function NewTechnologiesPage() {
       </section>
 
       {/* === THE LAB (R&D) SECTION === */}
-      <section className="py-24 -[#D80621] border-y border-[#cccccc]">
+      <section className="py-24 -[#D80621] border-y border-[#000000]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-16">
           
           <div className="w-full md:w-1/2">
@@ -105,12 +105,12 @@ export default function NewTechnologiesPage() {
             </p>
             
             <div className="grid grid-cols-2 gap-6">
-              <div className="p-4 bg-[#ffffff] rounded border border-[#cccccc]">
+              <div className="p-4 bg-[#ffffff] rounded border border-[#000000]">
                 <Microscope className="w-6 h-6 text-cyan-400 mb-2" />
                 <div className="text-2xl font-bold text-white">45</div>
                 <div className="text-xs text-[#D80621] uppercase">Active Patents</div>
               </div>
-              <div className="p-4 bg-[#ffffff] rounded border border-[#cccccc]">
+              <div className="p-4 bg-[#ffffff] rounded border border-[#000000]">
                 <BarChart3 className="w-6 h-6 text-cyan-400 mb-2" />
                 <div className="text-2xl font-bold text-white">$120M</div>
                 <div className="text-xs text-[#D80621] uppercase">Annual R&D Budget</div>
@@ -120,7 +120,7 @@ export default function NewTechnologiesPage() {
 
           <div className="w-full md:w-1/2 relative">
             {/* Holographic Image Frame */}
-            <div className="relative aspect-video rounded-xl overflow-hidden border border-[#cccccc] bg-[#ffffff]">
+            <div className="relative aspect-video rounded-xl overflow-hidden border border-[#000000] bg-[#ffffff]">
               <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
               
               <div className="absolute inset-0 flex items-center justify-center">

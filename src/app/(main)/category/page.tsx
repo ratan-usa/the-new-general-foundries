@@ -27,7 +27,7 @@ export default function CategoryList() {
             <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
 
                 {categories.map((category) => (
-                    <div key={category.id} className="bg-white rounded-3xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.04)] border border-[#cccccc] flex flex-col lg:flex-row h-auto lg:h-[600px]">
+                    <div key={category.id} className="bg-white rounded-3xl overflow-hidden shadow-[0_2px_20px_rgba(0,0,0,0.04)] border border-[#000000] flex flex-col lg:flex-row h-auto lg:h-[600px]">
  
                         <div className="relative w-full lg:w-[320px] h-64 lg:h-full shrink-0 group">
                             <Image 
@@ -53,7 +53,7 @@ export default function CategoryList() {
                                         className="group flex flex-col h-full hover:-translate-y-1 transition-transform duration-300"
                                     >
                                         {/* Image */}
-                                        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg mb-3 border border-[#cccccc] shadow-sm">
+                                        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg mb-3 border border-[#000000] shadow-sm">
                                             <Image
                                                 src={sub.image || '/assets/placeholder.jpg'}
                                                 alt={sub.name}
@@ -76,7 +76,7 @@ export default function CategoryList() {
                             </div>
 
                             {/* View More Button (Links to Main Category Page e.g. /category/energy) */}
-                            <div className="mt-auto pt-6 flex justify-end border-t border-[#cccccc]">
+                            <div className="mt-auto pt-6 flex justify-end border-t border-[#000000]">
                                 <Link href={`/category/${category.id}`}>
                                     <Button
                                         variant="ghost"

@@ -48,7 +48,7 @@ export default function LiveFactoryFeed() {
             <input 
               type="text" 
               placeholder="Search by Factory or Country..." 
-              className="w-full pl-10 pr-4 py-2 bg-[#ffffff] border border-[#cccccc] rounded-full focus:border-[#D80621] focus:outline-none text-sm transition-colors"
+              className="w-full pl-10 pr-4 py-2 bg-[#ffffff] border border-[#000000] rounded-full focus:border-[#D80621] focus:outline-none text-sm transition-colors"
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
@@ -59,7 +59,7 @@ export default function LiveFactoryFeed() {
           {filteredStreams.map((stream) => (
             <div 
               key={stream.id} 
-              className="group relative bg-[#ffffff] rounded-xl overflow-hidden cursor-pointer border border-[#cccccc] hover:border-[#D80621] transition-all hover:-translate-y-1"
+              className="group relative bg-[#ffffff] rounded-xl overflow-hidden cursor-pointer border border-[#000000] hover:border-[#D80621] transition-all hover:-translate-y-1"
               onClick={() => setSelectedStream(stream)}
             >
               {/* Thumbnail */}
@@ -97,7 +97,7 @@ export default function LiveFactoryFeed() {
 
         {/* VIDEO MODAL (Dialog) */}
         <Dialog open={!!selectedStream} onOpenChange={() => setSelectedStream(null)}>
-          <DialogContent className="-[#D80621] border-[#cccccc] text-white max-w-4xl p-0 overflow-hidden">
+          <DialogContent className="-[#D80621] border-[#000000] text-white max-w-4xl p-0 overflow-hidden">
             <DialogHeader className="p-4 absolute top-0 left-0 z-10 w-full bg-gradient-to-b -[#D80621]/80 to-transparent">
               <DialogTitle className="text-sm font-medium flex items-center gap-2">
                 <span className="w-2 h-2 bg-[#D80621] rounded-full animate-pulse" /> 

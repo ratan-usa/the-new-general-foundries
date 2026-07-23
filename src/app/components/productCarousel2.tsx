@@ -99,7 +99,7 @@ export default function AssociationsCarousel() {
 // Helper Component: Card with Shadow
 function LogoCard({ item }: { item: { name: string; src: string } }) {
   return (
-    <div className=" flex items-center justify-center w-[180px] h-[90px] md:w-[220px] md:h-[110px] bg-white border border-[#cccccc] rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] shrink-0 transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer ">
+    <div className=" flex items-center justify-center w-[180px] h-[90px] md:w-[220px] md:h-[110px] bg-white border border-[#000000] rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)] shrink-0 transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer ">
        <Image 
             src={item.src} 
             alt={item.name} 

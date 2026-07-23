@@ -39,7 +39,7 @@ const EngagementAnalytics = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-                    <div className="w-full bg-white p-4 md:p-8 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-[#cccccc] h-[400px]">
+                    <div className="w-full bg-white p-4 md:p-8 rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-[#000000] h-[400px]">
                         <ResponsiveContainer width="100%" height="100%">
                             <AreaChart
                                 data={data}

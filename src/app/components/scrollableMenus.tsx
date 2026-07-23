@@ -6,7 +6,7 @@ import React from 'react'
 
 const ScrollableMenu = () => {
     return (
-        <div className="border-t border-[#cccccc] bg-[#ffffff]">
+        <div className="border-t border-[#000000] bg-[#ffffff]">
             {/* Reduced outer padding on mobile (px-2) */}
             <div className="w-full px-2 sm:px-6 lg:px-10 flex flex-row items-center justify-between gap-2 md:gap-4">
                 
@@ -23,13 +23,13 @@ const ScrollableMenu = () => {
                                     />
                                     {section.label}
                                 </MenubarTrigger>
-                                <MenubarContent className="bg-white border border-[#cccccc] shadow-xl rounded-md min-w-[220px] p-1">
+                                <MenubarContent className="bg-white border border-[#000000] shadow-xl rounded-md min-w-[220px] p-1">
                                     {section.categories.map((category, index) => (
                                         <MenubarSub key={index}>
                                             <MenubarSubTrigger className="cursor-pointer text-sm py-2 px-3 rounded-sm text-[#D80621] hover:text-[#D80621] hover:bg-[#D80621]">
                                                 {category.name}
                                             </MenubarSubTrigger>
-                                            <MenubarSubContent className="max-h-[400px] overflow-y-auto bg-white border border-[#cccccc] shadow-lg min-w-[200px] p-1 ml-1">
+                                            <MenubarSubContent className="max-h-[400px] overflow-y-auto bg-white border border-[#000000] shadow-lg min-w-[200px] p-1 ml-1">
                                                 {category.items.map((item, i) => (
                                                     <MenubarItem key={i} asChild>
                                                         <Link href={`/products/${item.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`} className="cursor-pointer text-sm py-1.5 px-2 block w-full hover:text-[#D80621] hover:bg-[#D80621]">
@@ -47,8 +47,8 @@ const ScrollableMenu = () => {
                 </div>
 
                 {/* View All Button: Fixed size, shrink-0 prevents it from collapsing */}
-                <div className="flex items-center pl-2 shrink-0 border-l border-[#cccccc] md:border-none">
-                    <Link href="/category/list" className='text-[10px] md:text-[12px] font-semibold text-[#cccccc] flex items-center gap-1.5 hover:text-[#D80621] transition-colors whitespace-nowrap'>
+                <div className="flex items-center pl-2 shrink-0 border-l border-[#000000] md:border-none">
+                    <Link href="/category/list" className='text-[10px] md:text-[12px] font-semibold text-[#000000] flex items-center gap-1.5 hover:text-[#D80621] transition-colors whitespace-nowrap'>
                         <Menu className='h-3 w-3 md:h-3.5 md:w-3.5' /> 
                         <span className="hidden sm:inline">VIEW ALL CATEGORIES</span>
                         <span className="sm:hidden">VIEW ALL</span>

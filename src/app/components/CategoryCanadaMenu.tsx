@@ -89,14 +89,14 @@ export default function CategoryCanadaMenu() {
       {/* === TRIGGER / TOP TABS === */}
       {/* This simulates the navbar links. In a real navbar, you might trigger this on hover of a "Categories" button, 
           but here we show the tabs directly as requested in the image. */}
-      <div className="flex items-center space-x-8 bg-white px-6 py-4 rounded-t-lg border-b border-[#cccccc]">
+      <div className="flex items-center space-x-8 bg-white px-6 py-4 rounded-t-lg border-b border-[#000000]">
         
         {/* Tab 1: Energy */}
         <button
           onMouseEnter={() => handleTabChange('energy')}
-          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'energy' ? 'text-[#D80621]' : 'text-[#cccccc] hover:text-[#cccccc]' }`}
+          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'energy' ? 'text-[#D80621]' : 'text-[#000000] hover:text-[#000000]' }`}
         >
-          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#D80621]' : 'text-[#cccccc]'}`} />
+          <Zap className={`w-5 h-5 ${activeTab === 'energy' ? 'text-[#D80621]' : 'text-[#000000]'}`} />
           Energy
           {/* Red Underline Animation */}
           {activeTab === 'energy' && (
@@ -107,9 +107,9 @@ export default function CategoryCanadaMenu() {
         {/* Tab 2: Power Generation */}
         <button
           onMouseEnter={() => handleTabChange('powerGen')}
-          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'powerGen' ? 'text-[#D80621]' : 'text-[#cccccc] hover:text-[#cccccc]' }`}
+          className={`flex items-center gap-2 pb-2 text-sm font-semibold transition-all relative ${ activeTab === 'powerGen' ? 'text-[#D80621]' : 'text-[#000000] hover:text-[#000000]' }`}
         >
-          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#D80621]' : 'text-[#cccccc]'}`} />
+          <Factory className={`w-5 h-5 ${activeTab === 'powerGen' ? 'text-[#D80621]' : 'text-[#000000]'}`} />
           Power Generation
           {/* Red Underline Animation */}
           {activeTab === 'powerGen' && (
@@ -120,10 +120,10 @@ export default function CategoryCanadaMenu() {
 
 
       {/* === DROPDOWN PANEL === */}
-      <div className="absolute left-0 top-full w-[800px] bg-white shadow-xl border-t border-[#cccccc] rounded-b-lg flex z-50 min-h-[400px]">
+      <div className="absolute left-0 top-full w-[800px] bg-white shadow-xl border-t border-[#000000] rounded-b-lg flex z-50 min-h-[400px]">
         
         {/* --- LEFT COLUMN: CATEGORIES --- */}
-        <div className="w-1/2 py-6 border-r-2 border-[#cccccc]">
+        <div className="w-1/2 py-6 border-r-2 border-[#000000]">
           <ul className="space-y-1">
             {currentData.categories.map((cat, index) => {
               const isActive = index === activeCategoryIndex;
@@ -145,7 +145,7 @@ export default function CategoryCanadaMenu() {
         {/* --- RIGHT COLUMN: SUB-ITEMS --- */}
         <div className="w-1/2 py-6 bg-white">
           {/* Vertical gray line visual (optional, acts as spacer padding) */}
-          <div className="h-full pl-8 border-l-2 border-[#cccccc]">
+          <div className="h-full pl-8 border-l-2 border-[#000000]">
             <ul className="space-y-4">
               {activeSubItems.map((item, index) => (
                 <li key={index}>

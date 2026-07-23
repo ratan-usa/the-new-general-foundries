@@ -176,7 +176,7 @@ export function VerticalAccordion() {
             {/* w-full: Full Width
                 h-[600px]: Fixed height for the bookshelf effect
             */}
-            <div className="flex w-full h-[700px] overflow-hidden border-y border-[#cccccc]">
+            <div className="flex w-full h-[700px] overflow-hidden border-y border-[#000000]">
 
                 {items.map((item) => {
                     const isActive = activeId === item.id;
@@ -187,7 +187,7 @@ export function VerticalAccordion() {
                             key={item.id}
                             onMouseEnter={() => setActiveId(item.id)}
                             className={cn(
-                                "relative transition-all duration-500 ease-in-out border-r border-[#cccccc] last:border-r-0 cursor-pointer overflow-hidden",
+                                "relative transition-all duration-500 ease-in-out border-r border-[#000000] last:border-r-0 cursor-pointer overflow-hidden",
                                 // Active: Grow to flex-5 (takes up 5x space) with RED background
                                 // Inactive: Shrink to flex-1 (takes up 1x space) with BLACK background (No Blue)
                                 isActive
@@ -219,7 +219,7 @@ export function VerticalAccordion() {
                                 {/* Text Content Section */}
                                 <div className="flex flex-col px-6 py-6 text-white h-[45%] bg-gradient-to-t -[#D80621]/20 to-transparent">
                                     <div className="flex items-center gap-2 mb-2 opacity-80">
-                                        <span className="text-xs font-bold tracking-widest uppercase border border-white/30 px-2 py-1 rounded">
+                                        <span className="text-xs  font-bold tracking-widest uppercase border border-white/30 px-2 py-1 rounded">
                                             {item.category}
                                         </span>
                                     </div>
@@ -244,11 +244,10 @@ export function VerticalAccordion() {
                                 )}
                             >
                                 <h3
-                                    className="text-white/60 hover:text-white whitespace-nowrap text-sm font-bold tracking-[0.2em] uppercase transition-colors"
+                                    className="text-[#000000] hover:text-[#D80621] whitespace-nowrap text-sm font-bold tracking-[0.2em] uppercase transition-colors"
                                     style={{
                                         writingMode: 'vertical-rl',
-                                        transform: 'rotate(180deg)',
-                                        textShadow: '0px 0px 10px rgba(0,0,0,0.5)'
+                                        transform: 'rotate(180deg)', 
                                     }}
                                 >
                                     {item.category}

@@ -160,7 +160,7 @@ export default function LoginPage({ params }: { params: Promise<{ type: string }
                 <InputOTP maxLength={6} value={otp} onChange={(val) => setOtp(val)}>
                   <InputOTPGroup>
                     {[0, 1, 2, 3, 4, 5].map((idx) => (
-                      <InputOTPSlot key={idx} index={idx} className="w-10 h-10 sm:w-12 sm:h-12 text-lg border-[#cccccc]" />
+                      <InputOTPSlot key={idx} index={idx} className="w-10 h-10 sm:w-12 sm:h-12 text-lg border-[#000000]" />
                     ))}
                   </InputOTPGroup>
                 </InputOTP>

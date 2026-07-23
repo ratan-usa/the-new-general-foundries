@@ -58,7 +58,7 @@ const DEPARTMENTS = [
     title: "Corporate & Admin",
     roleCount: 4,
     desc: "HR, Finance, and Sales roles supporting the global mission.",
-    color: "bg-[#ffffff] text-[#cccccc]"
+    color: "bg-[#ffffff] text-[#000000]"
   }
 ];
 
@@ -106,7 +106,7 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {BENEFITS.map((item, idx) => (
-              <div key={idx} className="p-6 bg-[#ffffff] rounded-xl border border-[#cccccc] hover:shadow-lg transition-shadow text-left">
+              <div key={idx} className="p-6 bg-[#ffffff] rounded-xl border border-[#000000] hover:shadow-lg transition-shadow text-left">
                 <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-sm mb-4 text-[#D80621]">
                   <item.icon className="w-6 h-6" />
                 </div>
@@ -121,7 +121,7 @@ export default function CareersPage() {
       </section>
 
       {/* === DEPARTMENTS / JOB CATEGORIES === */}
-      <section className="py-20 bg-[#ffffff] border-y border-[#cccccc]">
+      <section className="py-20 bg-[#ffffff] border-y border-[#000000]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <div>
@@ -135,7 +135,7 @@ export default function CareersPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {DEPARTMENTS.map((dept, idx) => (
-              <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center bg-white p-6 rounded-xl border border-[#cccccc] hover:border-[#D80621] hover:shadow-md transition-all cursor-pointer group">
+              <div key={idx} className="flex flex-col sm:flex-row items-start sm:items-center bg-white p-6 rounded-xl border border-[#000000] hover:border-[#D80621] hover:shadow-md transition-all cursor-pointer group">
                 {/* Icon Box */}
                 <div className={`w-14 h-14 rounded-lg flex items-center justify-center shrink-0 ${dept.color} mb-4 sm:mb-0 sm:mr-6`}>
                   <Briefcase className="w-6 h-6" />
@@ -177,7 +177,7 @@ export default function CareersPage() {
 
             {/* Image Side */}
             <div className="w-full md:w-1/2">
-              <div className="relative aspect-square md:aspect-[4/3] bg-[#ffffff] rounded-xl overflow-hidden border border-[#cccccc] shadow-2xl">
+              <div className="relative aspect-square md:aspect-[4/3] bg-[#ffffff] rounded-xl overflow-hidden border border-[#000000] shadow-2xl">
                 <div className="absolute inset-0 flex items-center justify-center text-[#D80621]">
                   <Image
                     src={'/assets/image8.jpeg'}

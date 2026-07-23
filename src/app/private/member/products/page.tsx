@@ -75,27 +75,27 @@ export default function AdminProductList() {
       </div>
 
       {/* FILTERS */}
-      <div className="bg-white p-4 rounded-xl shadow-sm border border-[#cccccc] mb-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
+      <div className="bg-white p-4 rounded-xl shadow-sm border border-[#000000] mb-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
         <div className="relative w-full sm:w-96">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#D80621]" />
           <input 
             type="text" 
             placeholder="Search products..." 
-            className="w-full pl-10 pr-4 py-2 border border-[#cccccc] rounded-lg outline-none focus:ring-2 focus:ring-[#D80621]"
+            className="w-full pl-10 pr-4 py-2 border border-[#000000] rounded-lg outline-none focus:ring-2 focus:ring-[#D80621]"
           />
         </div>
-        <button className="flex items-center gap-2 px-4 py-2 text-[#D80621] border border-[#cccccc] rounded-lg hover:bg-[#ffffff]">
+        <button className="flex items-center gap-2 px-4 py-2 text-[#D80621] border border-[#000000] rounded-lg hover:bg-[#ffffff]">
           <Filter className="w-4 h-4" />
           Filters
         </button>
       </div>
 
       {/* TABLE */}
-      <div className="bg-white border border-[#cccccc] rounded-xl shadow-sm overflow-hidden">
+      <div className="bg-white border border-[#000000] rounded-xl shadow-sm overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-[#ffffff] text-xs font-semibold text-[#D80621] uppercase tracking-wider border-b border-[#cccccc]">
+              <tr className="bg-[#ffffff] text-xs font-semibold text-[#D80621] uppercase tracking-wider border-b border-[#000000]">
                 <th className="px-6 py-4">Product</th>
                 <th className="px-6 py-4">Category</th>
                 <th className="px-6 py-4">Stock</th>
@@ -129,7 +129,7 @@ export default function AdminProductList() {
                   <tr key={product.id} className="hover:bg-[#ffffff] transition-colors group">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 shrink-0 bg-[#ffffff] rounded-lg overflow-hidden border border-[#cccccc]">
+                        <div className="w-12 h-12 shrink-0 bg-[#ffffff] rounded-lg overflow-hidden border border-[#000000]">
                            {/* eslint-disable-next-line @next/next/no-img-element */}
                            <Image 
                              width={1200}
@@ -163,7 +163,7 @@ export default function AdminProductList() {
                       ${product.unitPrice?.toFixed(2) || '0.00'}
                     </td>
                     <td className="px-6 py-4">
-                      <span className={` inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold border ${product.status === 'PUBLISHED' ? 'bg-green-50 text-green-700 border-green-200' : ''} ${product.status === 'DRAFT' ? 'bg-[#ffffff] text-[#D80621] border-[#cccccc]' : ''} ${product.status === 'ARCHIVED' ? 'bg-amber-50 text-amber-700 border-amber-200' : ''} `}>
+                      <span className={` inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold border ${product.status === 'PUBLISHED' ? 'bg-green-50 text-green-700 border-green-200' : ''} ${product.status === 'DRAFT' ? 'bg-[#ffffff] text-[#D80621] border-[#000000]' : ''} ${product.status === 'ARCHIVED' ? 'bg-amber-50 text-amber-700 border-amber-200' : ''} `}>
                         {product.status || 'DRAFT'}
                       </span>
                     </td>
@@ -185,7 +185,7 @@ export default function AdminProductList() {
         </div>
 
         {/* PAGINATION FOOTER */}
-        <div className="bg-white border-t border-[#cccccc] px-6 py-4 flex items-center justify-between">
+        <div className="bg-white border-t border-[#000000] px-6 py-4 flex items-center justify-between">
           <span className="text-sm text-[#D80621]">
             Showing <span className="font-medium">{page * PAGE_SIZE + 1}</span> to <span className="font-medium">{Math.min((page + 1) * PAGE_SIZE, totalElements)}</span> of <span className="font-medium">{totalElements}</span> results
           </span>
@@ -193,7 +193,7 @@ export default function AdminProductList() {
             <button 
               onClick={() => handlePageChange(page - 1)}
               disabled={page === 0}
-              className="p-2 border border-[#cccccc] rounded-lg hover:bg-[#ffffff] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-2 border border-[#000000] rounded-lg hover:bg-[#ffffff] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -203,7 +203,7 @@ export default function AdminProductList() {
             <button 
               onClick={() => handlePageChange(page + 1)}
               disabled={page >= totalPages - 1}
-              className="p-2 border border-[#cccccc] rounded-lg hover:bg-[#ffffff] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="p-2 border border-[#000000] rounded-lg hover:bg-[#ffffff] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <ChevronRight className="w-4 h-4" />
             </button>

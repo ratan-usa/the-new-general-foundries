@@ -31,7 +31,7 @@ const OfficeCard = ({
     <div className="bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.05)] p-6 md:p-8 flex flex-col items-center text-center border-t-4 border-transparent hover:border-[#D80621] transition-all duration-300 relative mt-8">
       {/* Circular Flag Container overlapping top border */}
       <div className="absolute -top-8 p-1 bg-white rounded-full shadow-sm">
-        <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#cccccc] relative">
+        <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#000000] relative">
           {/* Replace src with actual flag image assets */}
           <Image width={1200} height={600} src={flagSrc} alt={`${title} flag`} className="w-full h-full object-cover" />
         </div>
@@ -197,7 +197,7 @@ const ContactUs = () => {
                         type="text"
                         id="name"
                         placeholder="Name"
-                        className="bg-[#ffffff] border-[#cccccc]"
+                        className="bg-[#ffffff] border-[#000000]"
                       />
                     </div>
                     <div>
@@ -205,7 +205,7 @@ const ContactUs = () => {
                         type="email"
                         id="email"
                         placeholder="Email"
-                        className="bg-[#ffffff] border-[#cccccc]"
+                        className="bg-[#ffffff] border-[#000000]"
                       />
                     </div>
                   </div>
@@ -215,7 +215,7 @@ const ContactUs = () => {
                       type="text"
                       id="subject"
                       placeholder="Subject"
-                      className="bg-[#ffffff] border-[#cccccc] "
+                      className="bg-[#ffffff] border-[#000000] "
                     />
                   </div>
 
@@ -223,7 +223,7 @@ const ContactUs = () => {
                     <Textarea
                       id="message"
                       placeholder="Your Message"
-                      className="min-h-[150px] bg-[#ffffff] border-[#cccccc] resize-none"
+                      className="min-h-[150px] bg-[#ffffff] border-[#000000] resize-none"
                     />
                   </div>
 
@@ -248,3 +248,4 @@ const ContactUs = () => {
 
 
 export default ContactUs
+

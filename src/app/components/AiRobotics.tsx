@@ -68,9 +68,9 @@ export default function AiRobotics() {
               viewport={{ once: true }}
               className="text-5xl font-black tracking-tighter mb-6 uppercase text-white"
             >
-              The Future is <span className="text-[#c0c0c0]">Automated</span>
+              The Future is <span className="text-[#ffffff]">Automated</span>
             </motion.h2>
-            <p className="text-[#c0c0c0] text-lg mb-12 leading-relaxed">
+            <p className="text-[#ffffff] text-lg mb-12 leading-relaxed">
               Canada Foundries is leading the transition to Industry 4.0. We integrate neural networks and robotic precision to eliminate human error and maximize casting efficiency.
             </p>
 
@@ -82,14 +82,14 @@ export default function AiRobotics() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: tech.delay }}
                   viewport={{ once: true }}
-                  className="flex gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#c0c0c0]/50 transition-colors group"
+                  className="flex gap-6 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#ffffff]/50 transition-colors group"
                 >
-                  <div className="text-[#c0c0c0] group-hover:scale-110 transition-transform">
+                  <div className="text-[#ffffff] group-hover:scale-110 transition-transform">
                     {tech.icon}
                   </div>
                   <div>
                     <h4 className="text-xl font-bold mb-1 tracking-tight text-white">{tech.title}</h4>
-                    <p className="text-[#c0c0c0] text-sm leading-relaxed">{tech.desc}</p>
+                    <p className="text-[#ffffff] text-sm leading-relaxed">{tech.desc}</p>
                   </div>
                 </motion.div>
               ))}

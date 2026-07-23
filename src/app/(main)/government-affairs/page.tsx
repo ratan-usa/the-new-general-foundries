@@ -40,7 +40,7 @@ export default function GovernmentAffairsPage() {
       </section>
 
       {/* === COMPLIANCE BAR === */}
-      <div className="bg-[#ffffff] border-b border-[#cccccc] py-6">
+      <div className="bg-[#ffffff] border-b border-[#000000] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center md:justify-between items-center gap-6 text-[#D80621] text-sm font-bold uppercase tracking-wider">
             <span className="flex items-center gap-2"><ShieldCheck className="w-5 h-5 text-[#D80621]" /> ITAR Registered</span>
@@ -65,7 +65,7 @@ export default function GovernmentAffairsPage() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Card 1 */}
-          <div className="bg-[#ffffff] border border-[#cccccc] p-8 rounded-xl hover:shadow-lg transition-shadow">
+          <div className="bg-[#ffffff] border border-[#000000] p-8 rounded-xl hover:shadow-lg transition-shadow">
             <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
               <Building2 className="w-6 h-6 text-blue-700" />
             </div>
@@ -76,7 +76,7 @@ export default function GovernmentAffairsPage() {
           </div>
 
           {/* Card 2 */}
-          <div className="bg-[#ffffff] border border-[#cccccc] p-8 rounded-xl hover:shadow-lg transition-shadow">
+          <div className="bg-[#ffffff] border border-[#000000] p-8 rounded-xl hover:shadow-lg transition-shadow">
             <div className="w-12 h-12 bg-[#D80621] rounded-lg flex items-center justify-center mb-6">
               <ShieldCheck className="w-6 h-6 text-[#D80621]" />
             </div>
@@ -87,7 +87,7 @@ export default function GovernmentAffairsPage() {
           </div>
 
           {/* Card 3 */}
-          <div className="bg-[#ffffff] border border-[#cccccc] p-8 rounded-xl hover:shadow-lg transition-shadow">
+          <div className="bg-[#ffffff] border border-[#000000] p-8 rounded-xl hover:shadow-lg transition-shadow">
             <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
               <Gavel className="w-6 h-6 text-green-700" />
             </div>
@@ -104,7 +104,7 @@ export default function GovernmentAffairsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
           <div className="w-full md:w-1/2">
              {/* Placeholder for an image of a bridge or tank */}
-            <div className="aspect-[4/3] bg-[#ffffff] rounded-xl overflow-hidden relative border border-[#cccccc]">
+            <div className="aspect-[4/3] bg-[#ffffff] rounded-xl overflow-hidden relative border border-[#000000]">
                <div className="absolute inset-0 flex items-center justify-center text-[#D80621] font-bold">
                  <Image
                    src={'/assets/image6.jpeg'}
@@ -145,7 +145,7 @@ export default function GovernmentAffairsPage() {
           <p className="text-[#D80621] mb-8">
             For inquiries regarding RFPs, capabilities briefings, or legislative tours, please contact our Government Affairs team directly.
           </p>
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-[#cccccc] inline-block w-full md:w-auto text-left">
+          <div className="bg-white p-8 rounded-xl shadow-sm border border-[#000000] inline-block w-full md:w-auto text-left">
             <div className="space-y-2">
                <p className="text-sm text-[#D80621] uppercase font-bold tracking-wide">Primary Point of Contact</p>
                <p className="text-xl font-bold text-[#D80621]">Ben</p>

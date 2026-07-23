@@ -76,7 +76,7 @@ const MaterialsHelpCenter = () => {
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight">
             Leading Edge & Advanced Technologies
           </h1>
-          <p className="text-[#cccccc] text-lg md:text-xl">
+          <p className="text-[#000000] text-lg md:text-xl">
             Join the futuristic metal industries. Search our capabilities below.
           </p>
 
@@ -92,7 +92,7 @@ const MaterialsHelpCenter = () => {
             <Link
               key={item.title}
               href={item.href}
-              className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 border border-[#cccccc] flex flex-col items-start"
+              className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 border border-[#000000] flex flex-col items-start"
             >
               <div className="mb-6 p-3 bg-[#D80621] rounded-lg group-hover:bg-[#D80621] transition-colors duration-300">
                 <item.icon className="w-8 h-8 text-[#D80621] group-hover:text-white transition-colors duration-300" />

@@ -6,7 +6,7 @@ import { Hammer, ShieldAlert, Lock, Activity } from "lucide-react";
 
 export default function CanadaFeaShowcase() {
   return (
-    <section className="bg-white text-[#D80621] py-24 font-sans border-b border-[#cccccc] w-full">
+    <section className="bg-white text-[#D80621] py-24 font-sans border-b border-[#000000] w-full">
       {/* Absolute strict fluid full width padding bounds */}
       <div className="w-full px-4 sm:px-6 lg:px-10 space-y-24">
         
@@ -39,7 +39,7 @@ export default function CanadaFeaShowcase() {
 
           {/* Right Visual FEA Heat Map Column (5 Columns Wide) */}
           <div className="lg:col-span-5 w-full flex justify-end">
-            <div className="relative w-full max-w-[480px] aspect-[4/3] bg-[#ffffff] border border-[#cccccc] p-4 shadow-md rounded-xs group hover:border-[#D80621] transition-colors duration-300">
+            <div className="relative w-full max-w-[480px] aspect-[4/3] bg-[#ffffff] border border-[#000000] p-4 shadow-md rounded-xs group hover:border-[#D80621] transition-colors duration-300">
               <Image
                 src="/assets/image2.jpeg" // Replace with your FEA color heat map simulation image
                 alt="Finite Element Analysis Structural Heat Map Simulation"
@@ -55,7 +55,7 @@ export default function CanadaFeaShowcase() {
         </div>
 
         {/* --- BOTTOM ROW: KEY FEATURES & BENEFITS WITH GRAPHIC --- */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pt-16 border-t border-[#cccccc] w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start pt-16 border-t border-[#000000] w-full">
           
           {/* Left Features List Stack (7 Columns Wide) */}
           <div className="lg:col-span-7 space-y-10 w-full">
@@ -71,7 +71,7 @@ export default function CanadaFeaShowcase() {
             <div className="space-y-8 w-full">
               {/* Feature 1 */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#ffffff] border border-[#cccccc] flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
+                <div className="w-10 h-10 bg-[#ffffff] border border-[#000000] flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
                   <Hammer className="w-5 h-5" />
                 </div>
                 <div className="space-y-1">
@@ -86,7 +86,7 @@ export default function CanadaFeaShowcase() {
 
               {/* Feature 2 */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#ffffff] border border-[#cccccc] flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
+                <div className="w-10 h-10 bg-[#ffffff] border border-[#000000] flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
                   <ShieldAlert className="w-5 h-5" />
                 </div>
                 <div className="space-y-1">
@@ -101,7 +101,7 @@ export default function CanadaFeaShowcase() {
 
               {/* Feature 3 */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-[#ffffff] border border-[#cccccc] flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
+                <div className="w-10 h-10 bg-[#ffffff] border border-[#000000] flex items-center justify-center text-[#D80621] shrink-0 rounded-xs">
                   <Lock className="w-5 h-5" />
                 </div>
                 <div className="space-y-1">
@@ -118,7 +118,7 @@ export default function CanadaFeaShowcase() {
 
           {/* Right Product Close-up Image Column (5 Columns Wide) */}
           <div className="lg:col-span-5 w-full flex justify-end">
-            <div className="relative w-full max-w-[480px] aspect-[4/3] bg-[#ffffff] border border-[#cccccc] p-4 shadow-md rounded-xs group hover:border-[#D80621] transition-colors duration-300">
+            <div className="relative w-full max-w-[480px] aspect-[4/3] bg-[#ffffff] border border-[#000000] p-4 shadow-md rounded-xs group hover:border-[#D80621] transition-colors duration-300">
               <Image
                 src="/assets/image2.jpeg" // Replace with your close-up product casting macro image
                 alt="Canada High-Precision Iron Casting Surface View"

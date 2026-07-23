@@ -80,7 +80,7 @@ export function CanadaStories() {
 
       {/* === INDUSTRIAL BOOKSHELF CONTAINER === */}
       {/* 1. The Outer Frame (Simulates the Shelf Unit) */}
-      <div className="border-[6px] border-[#cccccc] bg-[#ffffff] shadow-2xl relative">
+      <div className="border-[6px] border-[#000000] bg-[#ffffff] shadow-2xl relative">
 
         {/* 2. The Horizontal Header (Requested by Client) */}
         <div className="w-full bg-[#ffffff] text-white py-4 px-6 mb-6">
@@ -100,7 +100,7 @@ export function CanadaStories() {
 
 {/* === HERO PRODUCT (Volume 1) === */}
             <div className="md:col-span-2 md:row-span-2 h-full min-h-[400px]">
-              <Card className="h-full w-full p-20 overflow-hidden group border-2 border-[#cccccc] shadow-sm relative rounded-none bg-white cursor-pointer flex flex-col items-center justify-center">
+              <Card className="h-full w-full p-20 overflow-hidden group border-2 border-[#000000] shadow-sm relative rounded-none bg-white cursor-pointer flex flex-col items-center justify-center">
 
                 {/* === VIDEO CONTAINER (Reduced Size) === */}
                 {/* w-[85%] h-[55%] makes it smaller than the card, leaving white space */}
@@ -118,7 +118,7 @@ export function CanadaStories() {
                 </div>
 
                 {/* Content Wrapper */}
-                <div className="absolute bottom-0 left-0 pt-8 z-20 w-full bg-white/90 backdrop-blur-sm border-t border-[#cccccc]">
+                <div className="absolute bottom-0 left-0 pt-8 z-20 w-full bg-white/90 backdrop-blur-sm border-t border-[#000000]">
                   <div className="flex justify-between items-start">
                     <Badge className="mb-2 bg-transparent border border-[#D80621] text-[#D80621] hover:bg-[#D80621] hover:text-white rounded-none px-2 py-0.5">
                       TOP SELLER
@@ -129,7 +129,7 @@ export function CanadaStories() {
                     {heroProduct.title}
                   </h3>
                   
-                  <div className="flex items-center justify-between border-t border-[#cccccc] pt-3 mt-2">
+                  <div className="flex items-center justify-between border-t border-[#000000] pt-3 mt-2">
                      <span className="text-xs font-bold text-[#D80621] uppercase tracking-widest">
                         Volume 01
                      </span>
@@ -150,7 +150,7 @@ export function CanadaStories() {
               const Icon = product.icon
 
               return (
-                <Card key={product.id} className="group flex flex-col overflow-hidden border-2 border-[#cccccc] hover:border-[#cccccc] shadow-none hover:shadow-xl transition-all h-[320px] rounded-none">
+                <Card key={product.id} className="group flex flex-col overflow-hidden border-2 border-[#000000] hover:border-[#000000] shadow-none hover:shadow-xl transition-all h-[320px] rounded-none">
                   <div className="relative h-48 w-full overflow-hidden bg-[#ffffff]">
                     <Image
                       src={imageSrc}
@@ -172,7 +172,7 @@ export function CanadaStories() {
                         {product.title}
                       </h4>
                     </div>
-                    <div className="flex items-center justify-between text-xs text-muted-foreground mt-3 pt-3 border-t border-[#cccccc]">
+                    <div className="flex items-center justify-between text-xs text-muted-foreground mt-3 pt-3 border-t border-[#000000]">
                       <span className="font-medium -[#D80621] flex items-center gap-1">
                         <Icon className="h-3 w-3" /> {product.brand}
                       </span>
@@ -188,7 +188,7 @@ export function CanadaStories() {
         </div>
 
         {/* 4. The Bottom Shelf Lip (Visual Anchor) */}
-        <div className="h-4 bg-[#ffffff] w-full border-t border-[#cccccc]"></div>
+        <div className="h-4 bg-[#ffffff] w-full border-t border-[#000000]"></div>
       </div>
 
       <div className="mt-12 text-center pb-8">

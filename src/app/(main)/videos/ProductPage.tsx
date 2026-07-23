@@ -166,7 +166,7 @@ export default function ProductPage() {
   return (
     <div className="bg-[#ffffff] pb-4">
       {/* === 3D ASSET SELECTION === */}
-      <section className="bg-white p-6 rounded-xl shadow-sm border border-[#cccccc]">
+      <section className="bg-white p-6 rounded-xl shadow-sm border border-[#000000]">
         <h2 className="text-lg font-bold text-[#D80621] mb-4 flex items-center gap-2">
           <Box className="w-5 h-5 text-[#D80621]" /> Select 3D Casting Model
         </h2>
@@ -174,7 +174,7 @@ export default function ProductPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           {/* 1. PREVIEW WINDOW (The 360 Viewer) */}
-          <div className="h-[300px] bg-[#ffffff] rounded-xl overflow-hidden border border-[#cccccc] relative">
+          <div className="h-[300px] bg-[#ffffff] rounded-xl overflow-hidden border border-[#000000] relative">
             {previewUrl && mediaType === 'MODEL' ? (
               <ModelViewer src={previewUrl} />
             ) : (
@@ -191,7 +191,7 @@ export default function ProductPage() {
               <div
                 key={asset.id}
                 onClick={() => handleSelectAsset(asset)}
-                className={` flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${selectedAssetId === asset.id ? 'border-blue-600 bg-blue-50 ring-1 ring-blue-600' : 'border-[#cccccc] hover:border-[#cccccc] hover:bg-[#ffffff]' } `}
+                className={` flex items-center gap-3 p-3 rounded-lg border cursor-pointer transition-all ${selectedAssetId === asset.id ? 'border-blue-600 bg-blue-50 ring-1 ring-blue-600' : 'border-[#000000] hover:border-[#000000] hover:bg-[#ffffff]' } `}
               >
                 {/* Thumbnail */}
                 <div className="w-12 h-12 bg-[#ffffff] rounded-md overflow-hidden flex-shrink-0">

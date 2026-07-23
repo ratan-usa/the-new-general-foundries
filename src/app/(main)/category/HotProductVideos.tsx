@@ -65,7 +65,7 @@ export default function HotProductVideos({ title, videos, videoUrl, videoName }:
   };
 
   return (
-    <section className="py-12 bg-white border-t border-[#cccccc] overflow-hidden">
+    <section className="py-12 bg-white border-t border-[#000000] overflow-hidden">
       <div className="w-full px-4 sm:px-6 lg:px-10 mx-auto">
 
         <h2 className="text-xl md:text-2xl font-bold text-[#D80621] mb-6 border-l-4 border-[#D80621] pl-3">
@@ -100,7 +100,7 @@ export default function HotProductVideos({ title, videos, videoUrl, videoName }:
                 }}
               >
                 {/* Thumbnail Container */}
-                <div className="relative aspect-square w-full rounded-lg overflow-hidden border border-[#cccccc] -[#D80621] mb-3 shadow-sm hover:shadow-md transition-all">
+                <div className="relative aspect-square w-full rounded-lg overflow-hidden border border-[#000000] -[#D80621] mb-3 shadow-sm hover:shadow-md transition-all">
                   <video
                     src={video.videoUrl}
                     muted

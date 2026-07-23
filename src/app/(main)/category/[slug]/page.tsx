@@ -89,7 +89,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {mainCategory.categories.map((sub, index) => (
               <Link href={`/category/${sub.slug}`} key={index} className="group block h-full">
-                <div className="bg-white rounded-xl overflow-hidden border border-[#cccccc] shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                <div className="bg-white rounded-xl overflow-hidden border border-[#000000] shadow-sm hover:shadow-lg transition-all duration-300 h-full flex flex-col">
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
                       src={sub.image || '/assets/placeholder.jpg'}
@@ -160,7 +160,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
                 <Link
                   key={index}
                   href={`/products/${item.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')}`}
-                  className="bg-white p-6 rounded-xl border border-[#cccccc] hover:border-[#D80621] hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="bg-white p-6 rounded-xl border border-[#000000] hover:border-[#D80621] hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div className='flex justify-evenly'>
                     <div>
@@ -183,7 +183,7 @@ export default async function CategoryDetailPage({ params }: PageProps) {
                 </Link>
               ))
             ) : (
-              <div className="col-span-full py-12 text-center bg-white rounded-xl border border-dashed border-[#cccccc]">
+              <div className="col-span-full py-12 text-center bg-white rounded-xl border border-dashed border-[#000000]">
                 <p className="text-[#D80621]">No specific products listed under this category yet.</p>
                 <Link href="/contact" className="text-[#D80621] font-bold mt-2 inline-block">Contact us for custom requirements &rarr;</Link>
               </div>

@@ -63,7 +63,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-[#D80621] text-white border-t border-[#cccccc] font-sans">
+    <footer className="bg-[#D80621] text-white border-t border-[#000000] font-sans">
       <div className="w-full px-4 sm:px-6 lg:px-10 py-3 pt-16 ">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16 border-b border-white/10 pb-12">
 
@@ -76,22 +76,22 @@ const Footer = () => {
               <div className="flex gap-4">
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse Industries' fill className="object-contain" />
+                    <Image src={'/the new general foundries.png'} alt='Metalverse Industries' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse METALS' fill className="object-contain" />
+                    <Image src={'/the new general foundries.png'} alt='Metalverse METALS' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Fabricators' fill className="object-contain" />
+                    <Image src={'/the new general foundries.png'} alt='Fabricators' fill className="object-contain" />
                   </Link>
                 </div>
               </div>
               {/* Category Badge */}
-              <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#B31942] bg-white px-3 py-1 rounded-sm shadow-sm">
+              <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#D80621] bg-white px-3 py-1 rounded-sm shadow-sm">
                 Canada Foundries
               </span>
             </div>
@@ -99,15 +99,22 @@ const Footer = () => {
             {/* Address Details */}
             <div>
               <div className="text-sm space-y-1 text-white/70 font-light">
-                <p className="font-semibold text-white">777 DUNSMUIR STREET, 17TH FLOOR</p>
-                <p>VANCOUVER, BC V7Y 1K4</p>
+                <p className="font-semibold text-white">3171 Route 9 North</p>
+                <p>Suite 320</p>
+                <p>Old Bridge, NJ 08857</p>
               </div>
               <div className="mt-4 flex flex-col gap-1 text-sm text-white/80 font-mono">
                 <a
-                  href="tel:6042000616"
-                  className="hover:text-[#B31942] transition-colors duration-200"
+                  href="tel:4164610921"
+                  className="hover:text-[#D80621] transition-colors duration-200"
                 >
-                  Ph: 604 200 0616
+                  PH: 416 461 0921 / 917 670 3144
+                </a>
+                <a
+                  href="tel:3023943409"
+                  className="hover:text-[#D80621] transition-colors duration-200"
+                >
+                  Cell: 302 394 3409
                 </a>
               </div>
             </div>
@@ -121,11 +128,11 @@ const Footer = () => {
               {/* Main Corporate Logo */}
               <div className="bg-white p-3 rounded-lg w-72 h-32 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <Link href={'/'} className="w-full h-full relative">
-                  <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse Industries' fill className="object-contain" />
+                  <Image src={'/the new general foundries.png'} alt='Metalverse Industries' fill className="object-contain" />
                 </Link>
               </div>
               {/* Category Badge */}
-              <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#B31942] bg-white px-3 py-1 rounded-sm shadow-sm">
+              <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#D80621] bg-white px-3 py-1 rounded-sm shadow-sm">
                 World Headquarters
               </span>
             </div>
@@ -138,7 +145,7 @@ const Footer = () => {
               <div className="mt-4 flex flex-col gap-1 text-sm text-white/80 font-mono">
                 <a
                   href="tel:4168146157"
-                  className="hover:text-[#B31942] transition-colors duration-200"
+                  className="hover:text-[#D80621] transition-colors duration-200"
                 >
                   Ph: 416 814 6157
                 </a>
@@ -155,23 +162,23 @@ const Footer = () => {
               <div className="flex gap-4 justify-start lg:justify-end">
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='MWA' fill className="object-contain" />
+                    <Image src={'/the new general foundries.png'} alt='MWA' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse Forge' fill className="object-contain" />
+                    <Image src={'/the new general foundries.png'} alt='Metalverse Forge' fill className="object-contain" />
                   </Link>
                 </div>
                 <div className="bg-white p-2 rounded-lg w-28 h-24 flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                   <Link href={'/'} className="w-full h-full relative">
-                    <Image src={'/CANADA FOUNDRIES.png'} alt='Metalverse Forge' fill className="object-contain" />
+                    <Image src={'/the new general foundries.png'} alt='Metalverse Forge' fill className="object-contain" />
                   </Link>
                 </div>
               </div>
             </div>
             {/* Category Badge */}
-            <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#B31942] bg-white px-3 py-1 rounded-sm shadow-sm">
+            <span className="inline-block text-[10px] font-mono font-bold uppercase tracking-[0.2em] text-[#D80621] bg-white px-3 py-1 rounded-sm shadow-sm">
               Sales Office
             </span>
             {/* Address Details */}
@@ -183,7 +190,7 @@ const Footer = () => {
               <div className="mt-4 text-sm text-white/80 font-mono">
                 <a
                   href="tel:6314581111"
-                  className="hover:text-[#B31942] transition-colors duration-200"
+                  className="hover:text-[#D80621] transition-colors duration-200"
                 >
                   Ph: 631 458 1111
                 </a>
@@ -214,7 +221,7 @@ const Footer = () => {
                       <li key={link.href}>
                         <Link
                           href={link.href}
-                          className="text-xs text-white hover:text-[#cccccc] transition-colors block"
+                          className="text-xs text-white hover:text-[#000000] transition-colors block"
                         >
                           {link.label}
                         </Link>
@@ -224,7 +231,7 @@ const Footer = () => {
 
                   {/* Optional Divider if a column has multiple sections (like Support & Quality) */}
                   {index < col.sections.length - 1 && (
-                    <hr className="border-t border-[#cccccc] opacity-50 mt-6 mb-2" />
+                    <hr className="border-t border-[#000000] opacity-50 mt-6 mb-2" />
                   )}
                 </div>
               ))}
@@ -233,8 +240,8 @@ const Footer = () => {
 
         </div>
       </div>
-      <div className="w-full px-4 sm:px-6 lg:px-10 py-2 bg-[#D80621] border-t border-[#cccccc]">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-[#cccccc] pb-8">
+      <div className="w-full px-4 sm:px-6 lg:px-10 py-2 bg-[#D80621] border-t border-[#000000]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-[#000000] pb-8">
 
 
           {/* --- COL 2: NEWSLETTER (Centered) --- */}
@@ -244,7 +251,7 @@ const Footer = () => {
               <Input
                 type="email"
                 placeholder="Enter Email Address"
-                className="rounded-r-none border-[#cccccc] bg-[#ffffff] text-white focus:border-[#D80621] h-10 text-sm"
+                className="rounded-r-none border-[#000000] bg-[#ffffff] text-white focus:border-[#D80621] h-10 text-sm"
               />
               <Button className="rounded-l-none bg-[#D80621] hover:bg-[#D80621] text-white font-bold h-10 px-6 transition-colors">
                 Submit
@@ -260,7 +267,7 @@ const Footer = () => {
                 <Link
                   key={i}
                   href={'/'}
-                  className='p-2.5 border border-[#cccccc] rounded-full text-white hover:border-[#D80621] hover:text-[#cccccc] hover:bg-[#D80621] transition-all duration-300'
+                  className='p-2.5 border border-[#000000] rounded-full text-white hover:border-[#D80621] hover:text-[#000000] hover:bg-[#D80621] transition-all duration-300'
                 >
                   <Icon className='w-4 h-4' />
                 </Link>
@@ -282,3 +289,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

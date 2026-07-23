@@ -9,7 +9,7 @@ interface SeriesCardProps {
 
 export default function SeriesCard({ title, items }: SeriesCardProps) {
   return (
-    <div className="flex flex-col h-full bg-[#ffffff] rounded-xl overflow-hidden shadow-sm border border-[#cccccc] relative group hover:shadow-md transition-shadow duration-300">
+    <div className="flex flex-col h-full bg-[#ffffff] rounded-xl overflow-hidden shadow-sm border border-[#000000] relative group hover:shadow-md transition-shadow duration-300">
       
       {/* Header */}
       <div className="bg-[#D80621] text-white font-bold text-lg py-2 px-4 uppercase tracking-wider">

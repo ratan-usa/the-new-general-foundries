@@ -73,7 +73,7 @@ export default function MakingHistoryPage() {
       </section>
 
       {/* === STATS BAR === */}
-      <section className="py-12 bg-white border-b border-[#cccccc]">
+      <section className="py-12 bg-white border-b border-[#000000]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {STATS.map((stat, idx) => (
@@ -112,7 +112,7 @@ export default function MakingHistoryPage() {
 
                   {/* Content Half */}
                   <div className="w-full md:w-1/2 md:px-12 pl-12 pr-0">
-                    <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-[#cccccc] hover:shadow-md transition-shadow">
+                    <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-[#000000] hover:shadow-md transition-shadow">
                       {/* Mobile Year Badge */}
                       <span className="md:hidden inline-block bg-[#ffffff] text-[#D80621] text-xs font-bold px-2 py-1 rounded mb-3">
                         {item.year}

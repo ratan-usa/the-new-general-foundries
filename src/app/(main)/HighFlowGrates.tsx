@@ -21,12 +21,12 @@ export default function HighFlowGrates() {
   };
 
   return (
-    <section className="bg-white text-[#D80621] py-24 font-sans border-t border-[#cccccc]">
+    <section className="bg-white text-[#D80621] py-24 font-sans border-t border-[#000000]">
       {/* Strict Fluid Layout Bounds */}
       <div className="w-full px-4 sm:px-6 lg:px-10">
         
         {/* Section Heading Banner */}
-        <div className="border-b border-[#cccccc] pb-8 mb-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
+        <div className="border-b border-[#000000] pb-8 mb-16 flex flex-col md:flex-row items-start md:items-end justify-between gap-4">
           <div>
             <span className="text-xs uppercase tracking-[0.3em] font-black text-[#D80621] block mb-3">
               Hydraulic Performance Logs
@@ -45,7 +45,7 @@ export default function HighFlowGrates() {
             <div 
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
-              className="relative group rounded-sm overflow-hidden border border-[#cccccc] bg-[#ffffff] aspect-video flex flex-col justify-between shadow-lg p-4 cursor-pointer"
+              className="relative group rounded-sm overflow-hidden border border-[#000000] bg-[#ffffff] aspect-video flex flex-col justify-between shadow-lg p-4 cursor-pointer"
             >
               {/* Dynamic Video Element */}
               <video
@@ -90,8 +90,8 @@ export default function HighFlowGrates() {
           <div className="lg:col-span-7 flex flex-col gap-6">
             
             {/* Feature 1 */}
-            <div className="flex items-start gap-4 p-5 bg-[#ffffff] border border-[#cccccc] rounded-xs group hover:border-[#D80621] hover:bg-white transition-all duration-300 shadow-sm">
-              <div className="w-10 h-10 bg-white border border-[#cccccc] flex items-center justify-center flex-shrink-0 group-hover:border-[#D80621]/40 transition-colors">
+            <div className="flex items-start gap-4 p-5 bg-[#ffffff] border border-[#000000] rounded-xs group hover:border-[#D80621] hover:bg-white transition-all duration-300 shadow-sm">
+              <div className="w-10 h-10 bg-white border border-[#000000] flex items-center justify-center flex-shrink-0 group-hover:border-[#D80621]/40 transition-colors">
                 <Droplet className="w-5 h-5 text-[#D80621]" />
               </div>
               <div>
@@ -105,8 +105,8 @@ export default function HighFlowGrates() {
             </div>
 
             {/* Feature 2 */}
-            <div className="flex items-start gap-4 p-5 bg-[#ffffff] border border-[#cccccc] rounded-xs group hover:border-[#D80621] hover:bg-white transition-all duration-300 shadow-sm">
-              <div className="w-10 h-10 bg-white border border-[#cccccc] flex items-center justify-center flex-shrink-0 group-hover:border-[#D80621]/40 transition-colors">
+            <div className="flex items-start gap-4 p-5 bg-[#ffffff] border border-[#000000] rounded-xs group hover:border-[#D80621] hover:bg-white transition-all duration-300 shadow-sm">
+              <div className="w-10 h-10 bg-white border border-[#000000] flex items-center justify-center flex-shrink-0 group-hover:border-[#D80621]/40 transition-colors">
                 <Activity className="w-5 h-5 text-[#D80621]" />
               </div>
               <div>
@@ -120,8 +120,8 @@ export default function HighFlowGrates() {
             </div>
 
             {/* Feature 3 */}
-            <div className="flex items-start gap-4 p-5 bg-[#ffffff] border border-[#cccccc] rounded-xs group hover:border-[#D80621] hover:bg-white transition-all duration-300 shadow-sm">
-              <div className="w-10 h-10 bg-white border border-[#cccccc] flex items-center justify-center flex-shrink-0 group-hover:border-[#D80621]/40 transition-colors">
+            <div className="flex items-start gap-4 p-5 bg-[#ffffff] border border-[#000000] rounded-xs group hover:border-[#D80621] hover:bg-white transition-all duration-300 shadow-sm">
+              <div className="w-10 h-10 bg-white border border-[#000000] flex items-center justify-center flex-shrink-0 group-hover:border-[#D80621]/40 transition-colors">
                 <ShieldCheck className="w-5 h-5 text-[#D80621]" />
               </div>
               <div>
@@ -138,14 +138,14 @@ export default function HighFlowGrates() {
         </div>
 
         {/* BOTTOM ROW: Casting Specs Matrix showing remaining 4 product images */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-[#cccccc]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-[#000000]">
           
           {/* IMAGE 2 slot: Standard Flat Matrix */}
-          <div className="bg-[#ffffff] border border-[#cccccc] p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#D80621] transition-all duration-300">
+          <div className="bg-[#ffffff] border border-[#000000] p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#D80621] transition-all duration-300">
             <span className="text-[10px] font-mono tracking-widest text-[#D80621] uppercase font-bold block mb-4">
               Casting Spec 01 // Inline Profile
             </span>
-            <div className="w-full h-32 relative bg-white border border-[#cccccc] rounded-xs overflow-hidden mb-4 p-2">
+            <div className="w-full h-32 relative bg-white border border-[#000000] rounded-xs overflow-hidden mb-4 p-2">
               <Image 
                 src="/assets/image5.jpeg" 
                 alt="Standard Flat High Flow Grate"
@@ -159,11 +159,11 @@ export default function HighFlowGrates() {
           </div>
 
           {/* IMAGE 3 slot: Single Rear Hood */}
-          <div className="bg-[#ffffff] border border-[#cccccc] p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#D80621] transition-all duration-300">
+          <div className="bg-[#ffffff] border border-[#000000] p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#D80621] transition-all duration-300">
             <span className="text-[10px] font-mono tracking-widest text-[#D80621] uppercase font-bold block mb-4">
               Casting Spec 02 // Rear Hood
             </span>
-            <div className="w-full h-32 relative bg-white border border-[#cccccc] rounded-xs overflow-hidden mb-4 p-2">
+            <div className="w-full h-32 relative bg-white border border-[#000000] rounded-xs overflow-hidden mb-4 p-2">
               <Image 
                 src="/assets/image14.jpeg" 
                 alt="Rear-Curb Deflection Casting"
@@ -177,11 +177,11 @@ export default function HighFlowGrates() {
           </div>
 
           {/* IMAGE 4 slot: Multi-Window Curb Port */}
-          <div className="bg-[#ffffff] border border-[#cccccc] p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#D80621] transition-all duration-300">
+          <div className="bg-[#ffffff] border border-[#000000] p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#D80621] transition-all duration-300">
             <span className="text-[10px] font-mono tracking-widest text-[#D80621] uppercase font-bold block mb-4">
               Casting Spec 03 // Ported Curb
             </span>
-            <div className="w-full h-32 relative bg-white border border-[#cccccc] rounded-xs overflow-hidden mb-4 p-2">
+            <div className="w-full h-32 relative bg-white border border-[#000000] rounded-xs overflow-hidden mb-4 p-2">
               <Image 
                 src="/assets/image18.jpeg" 
                 alt="High-Velocity Integrated Weir Unit"
@@ -195,11 +195,11 @@ export default function HighFlowGrates() {
           </div>
 
           {/* IMAGE 5 slot: Heavy-Duty Structural Installation Assembly */}
-          <div className="bg-[#ffffff] border border-[#cccccc] p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#D80621] transition-all duration-300">
+          <div className="bg-[#ffffff] border border-[#000000] p-6 flex flex-col justify-between group rounded-xs min-h-[280px] shadow-sm hover:bg-white hover:border-[#D80621] transition-all duration-300">
             <span className="text-[10px] font-mono tracking-widest text-[#D80621] uppercase font-bold block mb-4">
               Casting Spec 04 // Complete Assembly
             </span>
-            <div className="w-full h-32 relative bg-white border border-[#cccccc] rounded-xs overflow-hidden mb-4 p-2">
+            <div className="w-full h-32 relative bg-white border border-[#000000] rounded-xs overflow-hidden mb-4 p-2">
               <Image 
                 src="/assets/image2.jpeg" 
                 alt="Complete High Flow Catch Basin Assembly Frame"
