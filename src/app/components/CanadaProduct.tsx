@@ -139,7 +139,7 @@ const CanadaProduct = () => {
           {categories.map((cat, index) => (
             <button
               key={index}
-              className="px-3 py-2 border border-[#000000] bg-[#D80621] hover:bg-[#D80621] hover:border-[#D80621] text-[#000000] hover:text-white transition-all duration-200 rounded-sm"
+              className="px-3 py-2 text-sm bg-[#D80621] hover:bg-[#D80621] hover:border-[#D80621] text-white hover:text-white transition-all duration-200 rounded-sm"
             >
               {cat}
             </button>
